@@ -1,0 +1,37 @@
+<!-- Front -->
+
+<div id="front" class="card-2">
+	<h1 class="syntax">
+	    {{^Syntax}}Syntax{{/Syntax}}
+	    {{#Syntax}}{{ Syntax }}{{/Syntax}}
+	    {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
+	</h1>
+	<p class="title"><em>What does this {{Syntax}} do?</em></p>
+</div>
+
+<!-- Back -->
+
+{{FrontSide}}
+
+<!-- Examples of syntax in use -->
+
+<div id="answer" class="container card-2">
+	<div class="sample-code">
+		<div class="img">{{Sample code image}}</div>
+		<p class="title">{{Title}}</p>
+	</div>
+	<div class="box">
+		<div class="key-point">
+			<div class="key-point-img">
+			    {{#Key point image }}
+			    {{ Key point image }}
+			    {{/Key point image }}
+			</div>
+			<pre><code>{{Key point}}</code></pre>
+		</div>
+		<p class="key-point-notes">{{Key point notes}}</p>
+	</div>
+	<div class="footer">
+		{{#Other notes}}{{Other notes}}{{/Other notes}}
+	</div>
+</div>
