@@ -6,7 +6,9 @@
 	    {{#Syntax}}{{ Syntax }}{{/Syntax}}
 	    {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
 	</h1>
-	<p class="title"><em>What does this {{Syntax}} do?</em></p>
+	<p class="title">
+	    <em>What does {{^Syntax}}this{{/Syntax}}{{Syntax}} do?</em>
+	</p>
 </div>
 
 <!-- Back -->
