@@ -2,6 +2,8 @@
 ## Anki theme for programming snippets
 
 
+![Preview image](./img/preview.png)
+
 ## Fields:
 
 1. Title
