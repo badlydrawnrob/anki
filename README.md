@@ -40,7 +40,7 @@ There's 3 cards here:
 
 ### 1. What's the answer?
 
-A simple question/answer. From the `2. syntax`, `3. syntax code` and the `title`, guess the answer.
+A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer.
 
 ### 2. What does this symbol do?
 
