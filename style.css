@@ -1,0 +1,139 @@
+/* Global
+   ======================================== */
+
+.card { }
+.card-1 { }
+.card-2 { }
+.card-3 { }
+.container { }
+
+.center{
+    display:inline-block;
+}
+.card {
+    background-color: white;
+}
+
+
+/* Typography 
+   ======================================== */
+
+body {
+    color: black;
+    font-family: arial;
+    font-size: 14px;
+    text-align: center;
+}
+h1 {
+    font-size: 1.5em;
+}
+p {
+    margin: 0.5em; padding: 0;
+}
+.title,
+.footer {
+    color: #777;
+    font-size: 1em;
+    font-style: italic;
+}
+.box {
+    font-size:1.4em;
+}
+
+
+/* Front
+   ======================================== */
+
+#front {
+    padding-bottom: 1em;
+}
+.sample-code {
+
+}
+
+
+/* Reverse
+   ======================================== */
+
+#answer {
+    padding-top: 1.5em;
+    border-top: 1px solid #999;
+}
+#answer .sample-code {
+    margin-bottom: 1em;
+}
+.box {
+    border:2px solid black;
+}
+.key-point {
+    display: block;
+    background: #666;
+}
+.key-point-img {
+
+}
+.key-point-notes {
+    padding: 0.25em 0.5em;
+}
+.footer {
+    margin: 1em;
+}
+
+
+/* Code blocks
+   ======================================== */
+
+pre {
+    margin: 0; padding: 0;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 1em;
+    line-height: 1.4;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}       
+
+code {
+    padding: 2px;
+    background: #ddd;
+    border-radius: 4px;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 1em;
+    font-style: normal;
+    line-height: 1.4;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    
+}
+
+pre code {
+    color: #f8f8f8;
+    display: block;
+    padding: 0.5em 1em;
+    background: #222;
+    border-radius: 0;
+}
+
+/* Code colors
+   ----------------------------------------------------------------- */
+
+code span,
+code .blue { color: #70d8ef } /* <span> for `def` etc */
+code strong,
+code .pink { color: #f12056 } /* <strong> for `=` and `print` */
+code em,
+code .purple { color: #a877ff } /* <em> for numbers */
+
+/* Code comments 
+   --------------------------------------------------------------------- */
+
+code small { color: #777 } /* Use `small` for comments */
+
+/* Other colours
+   -------------------------------------------------------------------- */
+code .green { color: #aae626 }
+code .yellow { color: #e5de73 }
+code .orange { color: #ec7b20 }
