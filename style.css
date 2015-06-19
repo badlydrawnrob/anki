@@ -122,8 +122,10 @@ pre code {
 
 code span,
 code .blue { color: #70d8ef } /* <span> for `def` etc */
+code b,
 code strong,
 code .pink { color: #f12056 } /* <strong> for `=` and `print` */
+code i,
 code em,
 code .purple { color: #a877ff } /* <em> for numbers */
 
