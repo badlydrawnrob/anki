@@ -7,7 +7,12 @@
 	    {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
 	</h1>
 	<p class="title">
-	    <em>What does {{^Syntax}}this{{/Syntax}}{{Syntax}} do?</em>
+	    {{#Syntax code}}
+		<em>What does <strong>{{ Syntax code }}</strong> do?</em>
+	    {{/Syntax code}}
+	    {{^Syntax code}}
+		<em>What does this do?</em>
+	    {{/Syntax code}}
 	</p>
 </div>
 
