@@ -31,7 +31,8 @@ p {
     margin: 0.5em; padding: 0;
 }
 .title,
-.footer {
+.footer,
+.puzzle-hint {
     color: #777;
     font-size: 1em;
     font-style: italic;
@@ -55,29 +56,38 @@ p {
 /* Reverse
    ======================================== */
 
-#answer {
-    padding-top: 1.5em;
+#answer,
+hr.divider {
+    margin-top: .75em;
+    padding-top: 2em;
+    border-top: 1px solid #999;
+}
+hr.divider {
+    border: 0; height: 0;
+    margin: 2em 0; padding: 0; width: 100%;
     border-top: 1px solid #999;
 }
 #answer .sample-code {
     margin-bottom: 1em;
 }
-.box {
-    border:2px solid black;
-}
-.key-point {
-    display: block;
-    background: #666;
-}
-.key-point-img {
-
-}
-.key-point-notes {
-    padding: 0.25em 0.5em;
-}
 .footer {
     margin: 1em;
 }
+
+
+/* Puzzle
+   ======================================== */
+
+.puzzle-title {
+
+}
+.puzzle-hint {
+
+}
+.puzzle-answer {
+
+}
+
 
 
 /* Code blocks
@@ -106,13 +116,12 @@ code {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
-    
 }
-
 code i,
 code b,
 code em,
 code strong {
+    /* Explicitly remove defaults */
     font-style: normal;
     font-weight: normal;
 }
@@ -124,6 +133,23 @@ pre code {
     background: #222;
     border-radius: 0;
 }
+.box {
+    border:2px solid black;
+}
+.reference .box {
+    
+}
+.box-code {
+    display: block;
+    background: #666;
+}
+.box-img {
+
+}
+.box-notes {
+    padding: 0.25em 0.5em;
+}
+
 
 /* Code colors
    ----------------------------------------------------------------- */
