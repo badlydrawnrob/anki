@@ -63,15 +63,15 @@ It's easy for to become too complex here, so sometimes it's easier splitting out
 
 I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` or `<pre><code>` so all you need to do is add the symbol, class or function. You can quickly add colours in the `Key point` field by wrapping elements:
 
-#### Monokai theme:
-It's a bit dirty, but I'm utilising simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) for styling code.
+#### Monokai theme (default):
+These are kind of abitrary and it's a bit dirty, but I'm utilising simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) for styling code.
 
 - Default colour is white
 - `<b>` or `<strong>` for major symbols (`if`, `print` etc)
 - `<i>` or `<em>` for an integer or float
-- `<s>` for a string
-- `<span>` for a minor hightlights (`function`, `class`)
-- `<var>` for minor higlights (`args`, `variables`)
+- `<s>` or `<u>` for a string
+- `<span>` or `<sup>` for minor hightlights (`function`, `class`)
+- `<var>` or `<sub>` for minor higlights (`args`, `variables`)
 - `<small>` for comments.
 
 - `<q>` wildcard (could be used for css `class` for instance)
