@@ -117,13 +117,16 @@ code {
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
 }
-code i,
-code b,
-code em,
-code strong {
+code i, code em,
+code b,code strong,
+code sup, code sub, code var, code small,
+code s, code u, code q, code mark {
     /* Explicitly remove defaults */
-    font-style: normal;
-    font-weight: normal;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    line-height: 1.4; vertical-align: bottom;
 }
 
 pre code {
@@ -154,22 +157,13 @@ pre code {
 /* Code colors
    ----------------------------------------------------------------- */
 
-code span,
-code .blue { color: #70d8ef } /* <span> for `def` etc */
-code b,
-code strong,
-code .pink { color: #f12056 } /* <strong> for `=` and `print` */
-code i,
-code em,
-code .purple { color: #a877ff; } /* <em> for numbers */
+code span, code sup { color: #70d8ef } /* blue: def, class */
+code b, code strong { color: #f12056 } /* pink: if, and, >=, print */
+code i, code em     { color: #a877ff } /* purple: int, float */
+code s, code u      { color: #e5de73 } /* yellow: string */
+code var, code sub  { color: #aae626 } /* green: variable */
+code small          { color: #777 }    /* grey: comments */
 
-/* Code comments 
-   --------------------------------------------------------------------- */
-
-code small { color: #777 } /* Use `small` for comments */
-
-/* Other colours
-   -------------------------------------------------------------------- */
-code .green { color: #aae626 }
-code .yellow { color: #e5de73 }
-code .orange { color: #ec7b20 }
+/* Wildcard colors (rarely used) */
+code q              { color: #ec7b20 } /* orange */
+code mark           { color: #ec7b20 } /* orange */

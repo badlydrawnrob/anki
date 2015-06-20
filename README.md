@@ -19,7 +19,7 @@
   - What's the main takeaway from this flashcard? (Small statement or snippet of code)
   - This will be wrapped in `<pre><code>`
   - You can colour code using:
-    - `span` for blue,
+    - `<span>` for blue,
     - `<strong>` or `<b>` for pink,
     - `<em>` or `<i>` for purple,
     - `<small>` for comments
@@ -32,7 +32,7 @@
   - If the card is suitable for a puzzle-style question, add a title
 9. **Puzzle hint** – *optional*
   - Something that might give us some clues as to the puzzle
-10. **Puzzle answer** (code) – *optional*
+10. **Puzzle answer (code)** – *optional*
   - Same as `key point (code)` for the puzzle question
 11. **Puzzle answer notes** – *optional*
   - Same as `Key point notes` for the puzzle question
@@ -52,7 +52,7 @@ A simple question/answer. From the `syntax`, `syntax code` and the `title`, gues
 
 A slight variation on the 1st card. From the `syntax` and `syntax` code, guess the function or symbol's uses. Must have at least `Key point` and `Key point notes` filled.
 
-### 3. Puzzle question *optional*
+### 3. Puzzle question (optional)
 
 Here we can get creative. As we don't have `syntax` or `syntax code`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
 
@@ -61,7 +61,22 @@ It's easy for to become too complex here, so sometimes it's easier splitting out
 
 ## Styling code
 
-I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` or `<pre><code>` so all you need to do is add the symbol, class or function. You can quickly add colours in the `Key point` field by wrapping elements in a `span` for blue, `strong` for pink, `em` for purple and a `small` for comments. See `style.css` for all colour classes (just wrap element in a `span.orange` for example) — the quick defaults should be enough for most cases.
+I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` or `<pre><code>` so all you need to do is add the symbol, class or function. You can quickly add colours in the `Key point` field by wrapping elements:
+
+#### Monokai theme:
+It's a bit dirty, but I'm utilising simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) for styling code.
+
+- Default colour is white
+- `<b>` or `<strong>` for major symbols (`if`, `print` etc)
+- `<i>` or `<em>` for an integer or float
+- `<s>` for a string
+- `<span>` for a minor hightlights (`function`, `class`)
+- `<var>` for minor higlights (`args`, `variables`)
+- `<small>` for comments.
+
+- `<q>` wildcard (could be used for css `class` for instance)
+- `<mark>` wildcard (could be used for a specific `highlight`)
+
 
 ## Notes
 
