@@ -3,7 +3,7 @@
 {{#Puzzle}}
 <div id="front" class="container card-3">
 	<h1 class="puzzle">{{ Puzzle }}</h1>
-	<p class="title">{{ Puzzle hint }}</p>
+	<p class="puzzle-hint">{{ Puzzle hint }}</p>
 </div>
 {{/Puzzle}}
 
@@ -16,20 +16,33 @@
 <div id="answer" class="container card-3">
 	<div class="sample-code">
 		<div class="img">{{Sample code image}}</div>
-		<p class="title">{{Title}}</p>
 	</div>
+	<hr class="divider">
 	<div class="box">
-		<div class="key-point">
-			<div class="key-point-img">
-			    {{#Key point image }}
-			    {{ Key point image }}
-			    {{/Key point image }}
-			</div>
-			<pre><code>{{Key point}}</code></pre>
+		<div class="box-point">
+			{{#Puzzle answer (code)}}
+			    <pre><code>{{Puzzle answer (code)}}</code></pre>
+			{{/Puzzle answer (code)}}
 		</div>
-		<p class="key-point-notes">{{Key point notes}}</p>
+		{{#Puzzle answer notes}}
+		<p class="box-notes">{{Puzzle answer notes}}</p>
+		{{/Puzzle answer notes}}
 	</div>
-	<div class="footer">
-		{{#Other notes}}{{Other notes}}{{/Other notes}}
+	<div class="reference">
+		<h2>Reference:</h2>
+		<div class="box">
+			<div class="box-point">
+				<div class="box-img">
+			    	    {{#Key point image }}
+			    	    {{ Key point image }}
+			    	    {{/Key point image }}
+				</div>
+				<pre><code>{{Key point (code)}}</code></pre>
+			</div>
+			<p class="box-notes">{{Key point notes}}</p>
+		</div>
+		<div class="footer">
+			{{#Other notes}}{{Other notes}}{{/Other notes}}
+		</div>
 	</div>
 </div>
