@@ -109,6 +109,14 @@ code {
     
 }
 
+code i,
+code b,
+code em,
+code strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
 pre code {
     color: #f8f8f8;
     display: block;
@@ -127,7 +135,7 @@ code strong,
 code .pink { color: #f12056 } /* <strong> for `=` and `print` */
 code i,
 code em,
-code .purple { color: #a877ff } /* <em> for numbers */
+code .purple { color: #a877ff; } /* <em> for numbers */
 
 /* Code comments 
    --------------------------------------------------------------------- */
