@@ -1,8 +1,10 @@
 # Anki theme
 ## Anki theme for programming snippets
 
+This is a template for all your Anki development decks. Should work well with front-end and back-end programming languages such as `html`, `css`, `python`, `ruby`, `php`, `jquery`, `javascript` and whatever else you want to throw at it. Comes with inline and code block styling using the beautiful `Monokai` and `Tomorrow` themes I personally use in Sublime Text.
 
 ![Preview image](./img/preview.png)
+*Anki theme card #01 preview image*
 
 ## Fields:
 
