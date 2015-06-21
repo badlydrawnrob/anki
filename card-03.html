@@ -14,28 +14,35 @@
 <!-- Puzzle-related useful information -->
 
 <div id="answer" class="container card-3">
-	<div class="sample-code">
-		<div class="img">{{Sample code image}}</div>
-	</div>
-	<hr class="divider">
 	<div class="box">
 		<div class="box-point">
 			{{#Puzzle answer (code)}}
-			    <pre><code>{{Puzzle answer (code)}}</code></pre>
+			  <pre><code>{{Puzzle answer (code)}}</code></pre>
+			{{/Puzzle answer (code)}}
+			{{^Puzzle answer (code)}}
+			<div class="sample-code">
+		    <div class="img">{{Sample code image}}</div>
+			</div>
 			{{/Puzzle answer (code)}}
 		</div>
 		{{#Puzzle answer notes}}
 		<p class="box-notes">{{Puzzle answer notes}}</p>
 		{{/Puzzle answer notes}}
 	</div>
+	<hr class="divider">
 	<div class="reference">
 		<h2>Reference:</h2>
+		{{#Puzzle answer (code)}}
+		<div class="sample-code">
+		  <div class="img">{{Sample code image}}</div>
+		</div>
+		{{/Puzzle answer (code)}}
 		<div class="box">
 			<div class="box-point">
 				<div class="box-img">
-			    	    {{#Key point image }}
-			    	    {{ Key point image }}
-			    	    {{/Key point image }}
+			    {{#Key point image }}
+			    {{ Key point image }}
+			    {{/Key point image }}
 				</div>
 				<pre><code>{{Key point (code)}}</code></pre>
 			</div>

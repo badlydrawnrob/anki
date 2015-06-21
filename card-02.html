@@ -2,17 +2,17 @@
 
 <div id="front" class="card-2">
 	<h1 class="syntax">
-	    {{^Syntax}}Syntax{{/Syntax}}
-	    {{#Syntax}}{{ Syntax }}{{/Syntax}}
-	    {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
+	  {{^Syntax}}Syntax{{/Syntax}}
+	  {{#Syntax}}{{ Syntax }}{{/Syntax}}
+	  {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
 	</h1>
 	<p class="title">
-	    {{#Syntax code}}
+	  {{#Syntax code}}
 		<em>What does <strong>{{ Syntax code }}</strong> do?</em>
-	    {{/Syntax code}}
-	    {{^Syntax code}}
+	  {{/Syntax code}}
+	  {{^Syntax code}}
 		<em>What does this do?</em>
-	    {{/Syntax code}}
+	  {{/Syntax code}}
 	</p>
 </div>
 
@@ -30,9 +30,9 @@
 	<div class="box">
 		<div class="box-point">
 			<div class="box-img">
-			    {{#Key point image }}
-			    {{ Key point image }}
-			    {{/Key point image }}
+			  {{#Key point image }}
+			  {{ Key point image }}
+			  {{/Key point image }}
 			</div>
 			<pre><code>{{Key point (code)}}</code></pre>
 		</div>
