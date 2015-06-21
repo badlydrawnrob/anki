@@ -127,25 +127,29 @@ code s, code u, code q, code mark {
     font-weight: inherit;
     text-decoration: none;
     line-height: 1.4; vertical-align: bottom;
+    background: none;
 }
 
 pre code {
     color: #f8f8f8;
     display: block;
     padding: 0.5em 1em;
-    background: #222;
+    background: #272822;
     border-radius: 0;
 }
 .box {
     border:2px solid black;
 }
+.box .sample-code {
+    background: #272822
+}
 .reference .box {
     
 }
-.box-code {
+/*.box-code {
     display: block;
     background: #666;
-}
+}*/
 .box-img {
 
 }
@@ -154,16 +158,31 @@ pre code {
 }
 
 
-/* Code colors
+/* Inline Code Colors: Tomorrow theme (light, modified)
    ----------------------------------------------------------------- */
 
-code span, code sup { color: #70d8ef } /* blue: def, class */
-code b, code strong { color: #f12056 } /* pink: if, and, >=, print */
-code i, code em     { color: #a877ff } /* purple: int, float */
-code s, code u      { color: #e5de73 } /* yellow: string */
-code var, code sub  { color: #aae626 } /* green: variable */
-code small          { color: #777 }    /* grey: comments */
+code span, code sup { color: #4271ae } /* blue: def, class */
+code b, code strong { color: #602a7d } /* purple: if, and, >=, print */
+code i, code em     { color: #e75905 } /* orange: int, float */
+code s, code u      { color: #497d00 } /* green: string */
+code var, code sub  { color: #000    } /* black: variable */
+code small          { color: #ccc    } /* grey: comments */
 
 /* Wildcard colors (rarely used) */
-code q              { color: #ec7b20 } /* orange */
-code mark           { color: #ec7b20 } /* orange */
+code q              { color: #000    } /* black */
+code mark           { color: #cb2829 } /* red */
+
+
+/* Block Code Colors: Monokai theme (dark)
+   ----------------------------------------------------------------- */
+
+pre code span, pre code sup { color: #70d8ef } /* blue: def, class */
+pre code b, pre code strong { color: #f12056 } /* pink: if, and, >=, print */
+pre code i, pre code em     { color: #a877ff } /* purple: int, float */
+pre code s, pre code u      { color: #e5de73 } /* yellow: string */
+pre code var, pre code sub  { color: #aae626 } /* green: variable */
+pre code small              { color: #777    } /* grey: comments */
+
+/* Wildcard colors (rarely used) */
+pre code q              { color: #ec7b20 } /* orange */
+pre code mark           { color: #ec7b20 } /* orange */

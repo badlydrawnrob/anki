@@ -56,14 +56,17 @@ A slight variation on the 1st card. From the `syntax` and `syntax` code, guess t
 
 Here we can get creative. As we don't have `syntax` or `syntax code`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
 
-It's easy for to become too complex here, so sometimes it's easier splitting out into another card set.
+This template is a little complex so may have to be revisited, it assumes the following:
+
+1. If the `Puzzle hint (code)` is filled out, don't show the `Sample code image` but add it as a reference below.
+2. If `Puzzle hint (code)` is not filled out, it assumes that the `Sample code image` is the answer so displays it above any `Puzzle answer notes`.
 
 
 ## Styling code
 
 I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` or `<pre><code>` so all you need to do is add the symbol, class or function. You can quickly add colours in the `Key point` field by wrapping elements:
 
-#### Monokai theme (default):
+#### Tomorrow theme (inline), Monokai theme (code block):
 These are kind of abitrary and it's a bit dirty, but I'm utilising simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) for styling code.
 
 - Default colour is white
@@ -81,3 +84,5 @@ These are kind of abitrary and it's a bit dirty, but I'm utilising simple [HTML5
 ## Notes
 
 Fields marked **optional** can be left blank and the template will ignore them. If all fields are used, 3 cards will be generated.
+
+You can reference fields within fields. For instance, {{Syntax code}} or {{Key point (code)}} (if you use these, select *Edit HTML* in Wysiwig and wrap in `<code>`). It'll be rendered as an inline code block.
