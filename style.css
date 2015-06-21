@@ -49,7 +49,7 @@ p {
     padding-bottom: 1em;
 }
 .sample-code {
-
+    margin-bottom: 1em;
 }
 
 
@@ -66,9 +66,6 @@ hr.divider {
     border: 0; height: 0;
     margin: 2em 0; padding: 0; width: 100%;
     border-top: 1px solid #999;
-}
-#answer .sample-code {
-    margin-bottom: 1em;
 }
 .footer {
     margin: 1em;
@@ -141,7 +138,8 @@ pre code {
     border:2px solid black;
 }
 .box .sample-code {
-    background: #272822
+    background: #272822;
+    margin-bottom: 0;
 }
 .reference .box {
     
