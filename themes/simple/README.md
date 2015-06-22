@@ -1,7 +1,7 @@
 # Anki theme: Simple
 ## Anki complex theme for programming snippets
 
-A simple question/answer card. If you need more flexibility the [complex theme](../simple/README.md) may be more appropriate.
+A simple question/answer card. If you need more flexibility the [complex theme](../complex/README.md) may be more appropriate.
 
 ## Fields:
 
