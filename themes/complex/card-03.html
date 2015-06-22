@@ -3,6 +3,11 @@
 {{#Puzzle}}
 <div id="front" class="container card-3">
 	<h1 class="puzzle">{{ Puzzle }}</h1>
+	{{#Puzzle image}}
+	<div class="sample-code">
+	    <div class="img">{{Puzzle image}}</div>
+	</div>
+	{{/Puzzle image}}
 	<p class="puzzle-hint">{{ Puzzle hint }}</p>
 </div>
 {{/Puzzle}}
