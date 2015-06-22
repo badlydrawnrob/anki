@@ -29,13 +29,16 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
   - For any key functions or symbols, wrap in `<code>`
 8. **Puzzle** – *optional*
   - If the card is suitable for a puzzle-style question, add a title
-9. **Puzzle hint** – *optional*
+9. **Puzzle image** - *optional*
+  - Sometimes it can be useful to display an image with the puzzle question
+  - We can reference `{{Sample code image}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
+10. **Puzzle hint** – *optional*
   - Something that might give us some clues as to the puzzle
-10. **Puzzle answer (code)** – *optional*
+11. **Puzzle answer (code)** – *optional*
   - Same as `key point (code)` for the puzzle question
-11. **Puzzle answer notes** – *optional*
+12. **Puzzle answer notes** – *optional*
   - Same as `Key point notes` for the puzzle question
-12. **Other notes** – *optional*
+13. **Other notes** – *optional*
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
 
 
