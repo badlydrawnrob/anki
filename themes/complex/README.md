@@ -60,8 +60,9 @@ Here we can get creative. As we don't have `syntax` or `syntax code`, create a p
 
 This template is a little complex so may have to be revisited, it assumes the following:
 
-1. If the `Puzzle hint (code)` is filled out, don't show the `Sample code image` but add it as a reference below.
-2. If `Puzzle hint (code)` is not filled out, it assumes that the `Sample code image` is the answer so displays it above any `Puzzle answer notes`.
+1. If the `Puzze image` is filled out, we display it below the `Puzzle title`. 90% of the time you'll probably want to reference the `{{Sample code image}}` in this field.
+2. If the `Puzzle hint (code)` is filled out, don't show `Sample code image` but add it as a reference below.
+3. If `Puzzle hint (code)` is not filled out, it assumes that the `Sample code image` is the answer so displays it above any `Puzzle answer notes`.
 
 
 ## Notes
