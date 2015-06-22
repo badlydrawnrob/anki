@@ -1,7 +1,7 @@
 # Anki theme
 ## Anki theme for programming snippets
 
-This is a template for all your Anki development decks. Should work well with front-end and back-end programming languages such as `html`, `css`, `python`, `ruby`, `php`, `jquery`, `javascript` and whatever else you want to throw at it. Comes with inline and code block styling using the beautiful `Monokai` and `Tomorrow` themes I personally use in Sublime Text.
+This is a template for all your Anki development decks, which was inspired by the excellent [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html). Works with both front-end and back-end programming languages such as `html`, `css`, `python`, `ruby`, `php`, `jquery`, `javascript` and whatever else you want to throw at it. Comes with inline and code block styling using the beautiful `Monokai` and `Tomorrow` themes I personally use in [Sublime Text](http://www.sublimetext.com).
 
 ![Preview image](./img/preview.png)
 
@@ -49,11 +49,11 @@ There's 3 cards here:
 
 ### 1. What's the answer?
 
-A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer. Must have at least `Key point` and `Key point notes` filled.
+A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer. Must have at least `Key point (code)` or `Key point notes` filled.
 
 ### 2. What does this symbol do?
 
-A slight variation on the 1st card. From the `syntax` and `syntax` code, guess the function or symbol's uses. Must have at least `Key point` and `Key point notes` filled.
+A slight variation on the 1st card. From the `syntax` and `syntax` code, guess the function or symbol's uses. Must have at least `Key point (code)` or `Key point notes` filled.
 
 ### 3. Puzzle question (optional)
 
