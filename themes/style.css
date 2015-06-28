@@ -73,6 +73,12 @@ hr.divider {
 .footer {
     margin: 1em;
 }
+.footer ul {
+    text-align: left;
+}
+.footer ul li {
+    padding-bottom: 1em;
+}
 
 
 /* Puzzle
