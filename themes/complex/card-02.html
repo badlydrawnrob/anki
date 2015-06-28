@@ -1,5 +1,6 @@
 <!-- Front -->
 
+{{#What does this syntax do?}}
 <div id="front" class="card-2">
 	<h1 class="syntax">
 	  {{^Syntax}}Syntax{{/Syntax}}
@@ -7,14 +8,10 @@
 	  {{#Syntax code}}: <code>{{ Syntax code }}{{/Syntax code}}</code>
 	</h1>
 	<p class="title">
-	  {{#Syntax code}}
-		<em>What does <strong>{{ Syntax code }}</strong> do?</em>
-	  {{/Syntax code}}
-	  {{^Syntax code}}
-		<em>What does this do?</em>
-	  {{/Syntax code}}
+	  <em>{{#What does this syntax do?}}</em>
 	</p>
 </div>
+{{/What does this syntax do?}}
 
 <!-- Back -->
 
