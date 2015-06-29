@@ -73,6 +73,12 @@ hr.divider {
 .footer {
     margin: 1em;
 }
+.footer ul {
+    text-align: left;
+}
+.footer ul li {
+    padding-bottom: 1em;
+}
 
 
 /* Puzzle
@@ -133,9 +139,10 @@ code s, code u, code q, code mark {
 pre code {
     color: #f8f8f8;
     display: block;
-    padding: 0.5em 1em;
+    padding: 0.75em 1em;
     background: #272822;
     border-radius: 0;
+    text-align: left;
 }
 .box {
     border:2px solid black;
@@ -147,15 +154,11 @@ pre code {
 .reference .box {
     
 }
-/*.box-code {
-    display: block;
-    background: #666;
-}*/
 .box-img {
 
 }
 .box-notes {
-    padding: 0.25em 0.5em;
+    padding: 0.75em 0.5em;
 }
 
 

@@ -1,29 +1,23 @@
 <!-- Front -->
 
 {{#What does this syntax do?}}
-<div id="front" class="card-2">
+<div id="front" class="container card-1">
 	<h1 class="syntax">
 	  {{^Syntax}}Syntax{{/Syntax}}
 	  {{#Syntax}}{{ Syntax }}{{/Syntax}}
 	  {{#Syntax code}}: <code>{{ Syntax code }}</code>{{/Syntax code}}
+	  {{#What does this syntax do? (code)}}: <code>{{ What does this syntax do? (code) }}</code>{{/What does this syntax do? (code)}}
 	</h1>
-	<p class="title">
-	  <em>{{#What does this syntax do?}}</em>
-	</p>
+	<div class="img">{{Sample code image}}</div>
+	<p class="title">{{What does this syntax do?}}</p>
 </div>
 {{/What does this syntax do?}}
 
-<!-- Back -->
+<!-- Reverse -->
 
 {{FrontSide}}
 
-<!-- Examples of syntax in use -->
-
-<div id="answer" class="container card-2">
-	<div class="sample-code">
-		<div class="img">{{Sample code image}}</div>
-		<p class="title">{{Title}}</p>
-	</div>
+<div id="answer" class="container card-1">
 	<div class="box">
 		<div class="box-point">
 			<div class="box-img">

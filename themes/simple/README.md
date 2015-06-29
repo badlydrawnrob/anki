@@ -27,30 +27,25 @@ A simple question/answer card. If you need more flexibility the [complex theme](
 7. **Key point notes**
   - A short explanation of what we're trying to learn
   - For any key functions or symbols, wrap in `<code>`
-8. **Other notes** – *optional*
+8. **What does this syntax code do?** — **optional**
+  - If you want a reverse of the question (i.e. giving the specific syntax and asking what it does), enter a question here.
+9. **What does this syntax code do? (code)** — **optional**
+  - Sometimes you won't want to give away the `syntax code` as you're supposed to be guessing it. If the `syntax code` isn't filled, you can enter it here to be displayed if `What does this syntax code do?` is used.
+10. **Other notes** – *optional*
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
 
 
 ## Cards
 
-There's 3 cards here:
+There's 2 cards here:
 
 ### 1. What's the answer?
 
-A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer. Must have at least `Key point (code)` or `Key point notes` filled.
+A simple question/answer. From the `title` question, guess the answer — sometimes you won't want to display `syntax` or `syntax code`, as it might not be relevant or you don't want to make it too obvious. Must have at least `Key point (code)` or `Key point notes` filled.
 
-### 2. What does this symbol do?
+### 2. What does this symbol do? (optional)
 
-A slight variation on the 1st card. From the `syntax` and `syntax` code, guess the function or symbol's uses. Must have at least `Key point (code)` or `Key point notes` filled.
-
-### 3. Puzzle question (optional)
-
-Here we can get creative. As we don't have `syntax` or `syntax code`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
-
-This template is a little complex so may have to be revisited, it assumes the following:
-
-1. If the `Puzzle hint (code)` is filled out, don't show the `Sample code image` but add it as a reference below.
-2. If `Puzzle hint (code)` is not filled out, it assumes that the `Sample code image` is the answer so displays it above any `Puzzle answer notes`.
+If you want to have a sort of reverse card, where you have to guess what the `syntax` or `syntax code` does, fill in `What does this symbol do?` field. If `syntax` isn't set, you can fill in the `What does this syntax code do? (code)` field. Must have at least `Key point (code)` or `Key point notes` filled.
 
 
 ## Notes

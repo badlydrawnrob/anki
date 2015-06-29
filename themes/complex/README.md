@@ -27,18 +27,20 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
 7. **Key point notes**
   - A short explanation of what we're trying to learn
   - For any key functions or symbols, wrap in `<code>`
-8. **Puzzle** – *optional*
+9. **What does this syntax do?** — *optional*
+  - Give a title for a question without the `sample code image`
+10. **Puzzle** – *optional*
   - If the card is suitable for a puzzle-style question, add a title
-9. **Puzzle image** - *optional*
+11. **Puzzle image** - *optional*
   - Sometimes it can be useful to display an image with the puzzle question
   - We can reference `{{Sample code image}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
-10. **Puzzle hint** – *optional*
+12. **Puzzle hint** – *optional*
   - Something that might give us some clues as to the puzzle
-11. **Puzzle answer (code)** – *optional*
+13. **Puzzle answer (code)** – *optional*
   - Same as `key point (code)` for the puzzle question
-12. **Puzzle answer notes** – *optional*
+14. **Puzzle answer notes** – *optional*
   - Same as `Key point notes` for the puzzle question
-13. **Other notes** – *optional*
+15. **Other notes** – *optional*
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
 
 
@@ -50,9 +52,9 @@ There's 3 cards here:
 
 A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer. Must have at least `Key point (code)` or `Key point notes` filled.
 
-### 2. What does this symbol do?
+### 2. What does this syntax do? (optional)
 
-A slight variation on the 1st card. From the `syntax` and `syntax` code, guess the function or symbol's uses. Must have at least `Key point (code)` or `Key point notes` filled.
+A slight variation on the 1st card. From the `syntax` and `syntax code`, guess the function or symbol's uses. Must have `What does this syntax do?` filled in with a sensible question, and either `Key point (code)` or `Key point notes` filled.
 
 ### 3. Puzzle question (optional)
 
@@ -60,7 +62,7 @@ Here we can get creative. As we don't have `syntax` or `syntax code`, create a p
 
 This template is a little complex so may have to be revisited, it assumes the following:
 
-1. If the `Puzze image` is filled out, we display it below the `Puzzle title`. 90% of the time you'll probably want to reference the `{{Sample code image}}` in this field.
+1. If the `Puzzle image` is filled out, we display it below the `Puzzle title`. 90% of the time you'll probably want to reference the `{{Sample code image}}` in this field.
 2. If the `Puzzle hint (code)` is filled out, don't show `Sample code image` but add it as a reference below.
 3. If `Puzzle hint (code)` is not filled out, it assumes that the `Sample code image` is the answer so displays it above any `Puzzle answer notes`.
 
