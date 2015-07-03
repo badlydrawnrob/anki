@@ -1,15 +1,15 @@
 <!-- Front -->
 
 {{#What does this syntax do?}}
-<div id="front" class="card-2">
+<div id="front" class="container card-2">
 	<h1 class="syntax">
 	  {{^Syntax}}Syntax{{/Syntax}}
 	  {{#Syntax}}{{ Syntax }}{{/Syntax}}
 	  {{#Syntax code}}: <code>{{ Syntax code }}</code>{{/Syntax code}}
+	  <!-- {{#What does this syntax do? (code)}}: <code>{{ What does this syntax do? (code) }}</code>{{/What does this syntax do? (code)}} -->
 	</h1>
-	<p class="title">
-	  <em>{{#What does this syntax do?}}</em>
-	</p>
+	<!-- <div class="img">{{Sample code image}}</div> -->
+	<p class="title">{{What does this syntax do?}}</p>
 </div>
 {{/What does this syntax do?}}
 

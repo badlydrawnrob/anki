@@ -29,6 +29,7 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
   - For any key functions or symbols, wrap in `<code>`
 9. **What does this syntax do?** — *optional*
   - Give a title for a question without the `sample code image`
+  - Optional, explicitly set title if you want a reverse question.
 10. **Puzzle** – *optional*
   - If the card is suitable for a puzzle-style question, add a title
 11. **Puzzle image** - *optional*
