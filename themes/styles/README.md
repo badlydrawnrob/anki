@@ -37,9 +37,10 @@ I considered using highlight.js within Anki theme cards, but it would prove prob
 
 #### Using the theme:
 
-To use the theme you'll need to know about fenced code blocks with Markdown. They look something like this:
+To use the theme you'll need to know about [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) with Markdown. They look something like this:
 
-<pre><code>```def function(args):
+<pre><code>```
+def function(args):
   pass
 ```</code></pre>
 
