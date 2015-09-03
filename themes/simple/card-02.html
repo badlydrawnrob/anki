@@ -6,7 +6,7 @@
 	  {{^Syntax}}Syntax{{/Syntax}}
 	  {{#Syntax}}{{ Syntax }}{{/Syntax}}
 	  {{#Syntax code}}: <code>{{ Syntax code }}</code>{{/Syntax code}}
-	  {{#What does this syntax do? (code)}}: <code>{{ What does this syntax do? (code) }}</code>{{/What does this syntax do? (code)}}
+	  {{#What does this syntax do? (inline code)}}: <code>{{ What does this syntax do? (inline code) }}</code>{{/What does this syntax do? (inline code)}}
 	</h1>
 	<div class="img">{{Sample code image}}</div>
 	<p class="title">{{What does this syntax do?}}</p>
@@ -25,7 +25,7 @@
 			  {{ Key point image }}
 			  {{/Key point image }}
 			</div>
-			<pre><code>{{Key point (code)}}</code></pre>
+			<div class="box-code">{{Key point (code block)}}</div>
 		</div>
 		{{#Key point notes}}
 		<div class="box-notes">{{Key point notes}}</div>

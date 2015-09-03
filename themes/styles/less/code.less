@@ -1,0 +1,71 @@
+//
+// Code
+// =============================================
+
+// Base ========================================
+// * Styles imported
+// * Base highlight.js styles
+
+pre {
+  margin: 0; padding: 0;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 1em;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}       
+
+code {
+  padding: 2px;
+  background: @theme-light-background;
+  border-radius: 4px;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+code i, code em,
+code b,code strong,
+code sup, code sub, code var, code small,
+code s, code u, code q, code mark {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  line-height: 1.4; vertical-align: bottom;
+  background: none;
+}
+
+pre code,
+pre .hljs {
+  color: @theme-dark-base;
+  display: block;
+  overflow-x: auto;
+  padding: 0.75em 1em;
+  background: @theme-dark-background;
+  border-radius: 0;
+  text-align: left;
+  -webkit-text-size-adjust: none;
+}
+
+// Box ========================================
+
+.box {
+  border: 2px solid black;
+
+  .sample-code {
+    background: @theme-dark-background;
+    margin-bottom: 0;
+  }
+}
+
+.box-notes {
+  padding: 0.75em 0.5em;
+}

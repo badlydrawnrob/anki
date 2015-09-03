@@ -8,7 +8,7 @@ This is a template for all your Anki development decks, which was inspired by th
 *Anki theme card #01 preview image*
 
 ## Card Types
-There are currently two types of card, a simple card and a complex card. Both share the `themes/style.css` file.
+There are currently two types of card, a simple card and a complex card. Both share the `themes/styles/main.css` file.
 
 1. [Simple](themes/simple/README.md)
   - A basic question/answer card: e.g. What is the shortcut for `X`?
@@ -18,18 +18,11 @@ There are currently two types of card, a simple card and a complex card. Both sh
 
 ## Styling fields, inline code fields and code blocks
 
-I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` or `<pre><code>` so all you need to do is add the symbol, class or function. You can quickly add colours in the `Key point` field by wrapping elements:
+I've included some nice default styles for code; some fields will be automatically wrapped in `<code>` so all you need to do is add the symbol, class or function. The main `(code blocks)` need to be wrapped in a `<pre><code>`.
 
-#### Tomorrow theme (inline), Monokai theme (code block):
-These are kind of abitrary and it's a bit dirty, but I'm utilising simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) for styling code.
+- **[Using themes](themes/styles/README.md)**
 
-- Default colour is white
-- `<b>` or `<strong>` for major symbols (`if`, `print` etc)
-- `<i>` or `<em>` for an integer or float
-- `<s>` or `<u>` for a string
-- `<span>` or `<sup>` for minor hightlights (`function`, `class`)
-- `<var>` or `<sub>` for minor higlights (`args`, `variables`)
-- `<small>` for comments.
 
-- `<q>` wildcard (could be used for css `class` for instance)
-- `<mark>` wildcard (could be used for a specific `highlight`)
+## Notes
+
+I'm trying to keep updates from breaking existing cards, but unfortunately with Anki's structure this can be tricky. View commits for any major changes to the card's structure.
