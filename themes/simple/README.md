@@ -25,8 +25,9 @@ A simple question/answer card. If you need more flexibility the [complex theme](
   - For any key functions or symbols, wrap in `<code>`
 8. **What does this syntax code do?** — **optional**
   - If you want a reverse of the question (i.e. giving the specific syntax and asking what it does), enter a question here.
-9. **What does this syntax code do? (code)** — **optional**
+9. **What does this syntax code do? (inline code)** — **optional**
   - Sometimes you won't want to give away the `syntax code` as you're supposed to be guessing it. If the `syntax code` isn't filled, you can enter it here to be displayed if `What does this syntax code do?` is used.
+  - This will be wrapped in `<code>`
 10. **Other notes** – *optional*
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
 11. **Markdown** - *optional*
