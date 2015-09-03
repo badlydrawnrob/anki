@@ -37,21 +37,26 @@ I considered using highlight.js within Anki theme cards, but it would prove prob
 
 #### Using the theme:
 
+To use the theme you'll need to know about fenced code blocks with Markdown. They look something like this:
+
+<pre><code>```def function(args):
+  pass
+```</code></pre>
+
+You can also specify a language:
+
+<pre></code>```less
+.class {
+    color: #fff;
+    .inner-class {
+        color: #000;
+    }
+}
+```</code></pre>
+
 1. Get the [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html), or find an [online markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/)
 2. Write your code in Markdown using a [fenced code block](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) in your editor.
-    ```
-    def function(args):
-        pass
-    ```
-  - Fenced code block syntax should be auto-detected, but you can be specific if you prefer:
-    ```less
-    .class {
-        color: #fff;
-        .inner-class {
-            color: #000;
-        }
-    }
-    ```
+  - The syntax should be detected automatically, but you can be specify a language if you prefer
 3. View the source code with *inspect element*, or output the html
 4. Copy and paste into your `Key point (code block)` or `Puzzle answer (code block)`
    - You'll need everything from `<pre>` to `</pre>`
