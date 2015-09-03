@@ -16,19 +16,17 @@
 
 {{FrontSide}}
 
-<!-- Puzzle-related useful information -->
-
 <div id="answer" class="container card-3">
 	<div class="box">
 		<div class="box-point">
-			{{#Puzzle answer (code)}}
-			  <pre><code>{{Puzzle answer (code)}}</code></pre>
-			{{/Puzzle answer (code)}}
-			{{^Puzzle answer (code)}}
+			{{#Puzzle answer (code block)}}
+			  <pre><code>{{Puzzle answer (code block)}}</code></pre>
+			{{/Puzzle answer (code block)}}
+			{{^Puzzle answer (code block)}}
 			<div class="sample-code">
 		    <div class="img">{{Sample code image}}</div>
 			</div>
-			{{/Puzzle answer (code)}}
+			{{/Puzzle answer (code block)}}
 		</div>
 		{{#Puzzle answer notes}}
 		<p class="box-notes">{{Puzzle answer notes}}</p>
@@ -37,11 +35,11 @@
 	<hr class="divider">
 	<div class="reference">
 		<h2>Reference:</h2>
-		{{#Puzzle answer (code)}}
+		{{#Puzzle answer (code block)}}
 		<div class="sample-code">
 		  <div class="img">{{Sample code image}}</div>
 		</div>
-		{{/Puzzle answer (code)}}
+		{{/Puzzle answer (code block)}}
 		<div class="box">
 			<div class="box-point">
 				<div class="box-img">
@@ -49,7 +47,7 @@
 			    {{ Key point image }}
 			    {{/Key point image }}
 				</div>
-				<pre><code>{{Key point (code)}}</code></pre>
+				<div class="box-code">{{Key point (code block)}}</div>
 			</div>
 			{{#Key point notes}}
 			<div class="box-notes">{{Key point notes}}</div>
