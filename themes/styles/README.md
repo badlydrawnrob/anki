@@ -20,6 +20,8 @@ For basic styling of your html, css, python or your programming language of choi
 - `<q>` wildcard (could be used for css `class` for instance)
 - `<mark>` wildcard (could be used for a specific `highlight`)
 
+These are also handy in `<pre><code>` blocks, as you can highlight specific syntax that you're studying for clarity.
+
 
 ### Super-charged code blocks
 
