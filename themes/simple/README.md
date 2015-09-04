@@ -23,10 +23,10 @@ A simple question/answer card. If you need more flexibility the [complex theme](
 7. **Key point notes**
   - A short explanation of what we're trying to learn
   - For any key functions or symbols, wrap in `<code>`
-8. **What does this syntax code do?** — **optional**
+8. **What does this syntax do?** — **optional**
   - If you want a reverse of the question (i.e. giving the specific syntax and asking what it does), enter a question here.
-9. **What does this syntax code do? (inline code)** — **optional**
-  - Sometimes you won't want to use `Syntax (inline code)` as you'll make it too easy; you're supposed to be guessing it! You can use this field instead to make it harder (and leave `Syntax (inline code)` field empty)
+9. **What does this syntax do? (inline code)** — **optional**
+  - If you want to drill yourself on syntax, you might want to leave the `Syntax (inline code)` field empty. You can use this field on your reverse question card to make the syntax viewable.
   - This will be wrapped in `<code>`
 10. **Other notes** – *optional*
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
@@ -43,9 +43,9 @@ There's 2 cards here:
 
 A simple question/answer. From the `title` question, guess the answer — sometimes you won't want to display `syntax` or `Syntax (inline code)`, as it might not be relevant or you don't want to make it too obvious. Must have at least `Key point (code block)` or `Key point notes` filled.
 
-### 2. What does this symbol do? (optional)
+### 2. What does this syntax do? (optional)
 
-If you want to have a sort of reverse card, where you have to guess what the `syntax` or `Syntax (inline code)` does, fill in `What does this symbol do?` field. If `syntax` isn't set, you can fill in the `What does this syntax code do? (code)` field. Must have at least `Key point (code block)` or `Key point notes` filled.
+If you want to have a sort of reverse card, where you have to guess what the `syntax` or `Syntax (inline code)` does, fill in `What does this syntax do?` field — this gives you a question header. If `syntax` isn't set, you can fill in the `What does this syntax code do? (inline code)` field. Must have at least `Key point (code block)` or `Key point notes` filled.
 
 
 ## Notes
