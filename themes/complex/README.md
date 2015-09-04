@@ -9,7 +9,7 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
   - The main question, statement or fact
 2. **Syntax** – *(optional)*
   - The main `syntax` we're learning
-3. **Syntax code**
+3. **Syntax (inline code)**
   - The actual function or symbol, i.e. `len()`
   - This will be wrapped in `<code>`
 4. **Sample code image**
@@ -50,15 +50,15 @@ There's 3 cards here:
 
 ### 1. What's the answer?
 
-A simple question/answer. From the `syntax`, `syntax code` and the `title`, guess the answer. Must have at least `Key point (code block)` or `Key point notes` filled.
+A simple question/answer. From the `syntax`, `Syntax (inline code)` and the `title`, guess the answer. Must have at least `Key point (code block)` or `Key point notes` filled.
 
 ### 2. What does this syntax do? (optional)
 
-A slight variation on the 1st card. From the `syntax` and `syntax code`, guess the function or symbol's uses. Must have `What does this syntax do?` filled in with a sensible question, and either `Key point (code block)` or `Key point notes` filled.
+A slight variation on the 1st card. From the `syntax` and `Syntax (inline code)`, guess the function or symbol's uses. Must have `What does this syntax do?` filled in with a sensible question, and either `Key point (code block)` or `Key point notes` filled.
 
 ### 3. Puzzle question (optional)
 
-Here we can get creative. As we don't have `syntax` or `syntax code`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
+Here we can get creative. As we don't have `syntax` or `Syntax (inline code)`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
 
 This template is a little complex so may have to be revisited, it assumes the following:
 
@@ -71,7 +71,7 @@ This template is a little complex so may have to be revisited, it assumes the fo
 
 1. [Style fields, inline code and code blocks](../styles/README.md)
 2. Fields marked **optional** can be left blank and the template will ignore them. If all fields are used, 3 cards will be generated.
-3. You can reference fields within fields. For instance, `{{Syntax code}}` or `{{Key point (code block)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you'll need to select *Edit HTML* in Wysiwig and wrap in `<code>`, it'll be rendered as an inline code block.
+3. You can reference fields within fields. For instance, `{{Syntax (inline code)}}` or `{{Key point (code block)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you'll need to select *Edit HTML* in Wysiwig and wrap in `<code>`, it'll be rendered as an inline code block.
 
 
 ##### Quick links
