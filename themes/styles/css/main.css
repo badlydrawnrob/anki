@@ -255,6 +255,7 @@ pre code mark {
   color: #70d8ef;
 }
 .hljs-variable,
+.hljs-template_tag,
 .hljs-params,
 .hljs-class .hljs-title,
 .hljs-aspect .hljs-title {
@@ -286,6 +287,7 @@ pre code mark {
   color: #e5de73;
 }
 .hljs-comment,
+.hljs-template_comment,
 .hljs-annotation,
 .hljs-decorator,
 .hljs-pi,

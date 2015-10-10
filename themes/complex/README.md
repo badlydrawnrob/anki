@@ -7,7 +7,7 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
 
 1. **Title**
   - The main question, statement or fact
-2. **Syntax** – *(optional)*
+2. **Syntax** – ***(optional)***
   - The main `syntax` we're learning
 3. **Syntax (inline code)**
   - The actual function or symbol, i.e. `len()`
@@ -18,45 +18,45 @@ A more fully-rounded set of cards: an simple question, a symbol question and a p
   - What's the main takeaway from this flashcard? (Small statement or snippet of code)
   - You will need to wrap in `<pre><code>`
   - You can colour code [using the included themes](../styles/README.md)
-6. **Key point image** – *optional*
+6. **Key point image** – ***(optional)***
   - Complementary image
 7. **Key point notes**
   - A short explanation of what we're trying to learn
   - For any key functions or symbols, wrap in `<code>`
-9. **What does this syntax do?** — *optional*
+9. **What does this syntax do?** – ***(optional)***
   - Give a title for a question without the `sample code image`
   - Optional, explicitly set title if you want a reverse question.
-10. **Puzzle** – *optional*
+10. **Puzzle** – ***(optional)***
   - If the card is suitable for a puzzle-style question, add a title
-11. **Puzzle image** - *optional*
+11. **Puzzle image** – ***(optional)***
   - Sometimes it can be useful to display an image with the puzzle question
   - We can reference `{{Sample code image}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
-12. **Puzzle hint** – *optional*
+12. **Puzzle hint** – ***(optional)***
   - Something that might give us some clues as to the puzzle
-13. **Puzzle answer (code block)** – *optional*
+13. **Puzzle answer (code block)** – ***(optional)***
   - Same as `Key point (code block)` for the puzzle question
-14. **Puzzle answer notes** – *optional*
+14. **Puzzle answer notes** – ***(optional)***
   - Same as `Key point notes` for the puzzle question
-15. **Other notes** – *optional*
+15. **Other notes** – ***(optional)***
   - A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
-16. **Markdown** - *optional*
+16. **Markdown** – ***(optional)***
   - Store raw `.md` for quick editing
   - Also allows you to [quickly generate highlight.js styles](../styles/README.md) from raw fenced `(code blocks)`
 
 
 ## Cards
 
-There's 3 cards here:
+There's 16 fields which will output 3 cards (some fields are optional):
 
 ### 1. What's the answer?
 
 A simple question/answer. From the `syntax`, `Syntax (inline code)` and the `title`, guess the answer. Must have at least `Key point (code block)` or `Key point notes` filled.
 
-### 2. What does this syntax do? (optional)
+### 2. What does this syntax do? *(optional)*
 
 A slight variation on the 1st card. From the `syntax` and `Syntax (inline code)`, guess the function or symbol's uses. Must have `What does this syntax do?` filled in with a sensible question, and either `Key point (code block)` or `Key point notes` filled.
 
-### 3. Puzzle question (optional)
+### 3. Puzzle question *(optional)*
 
 Here we can get creative. As we don't have `syntax` or `Syntax (inline code)`, create a puzzle question which forces you to guess how to solve a specific problem and with what function you'd need to do so. Must have at least `Puzzle` and `Puzzle answer notes` filled — often `Sample code image` and `Key points (code)` give enough examples to know if you've solved the puzzle properly.
 
