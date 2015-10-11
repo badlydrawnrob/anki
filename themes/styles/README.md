@@ -25,19 +25,11 @@ These are also handy in `<pre><code>` blocks, as you can highlight specific synt
 
 ## Super-charged automatic syntax highlighting
 
-Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. Enter `highlight.js`!
+Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. Enter [highlight.js](https://highlightjs.org/!
 
-Using javascript within Anki theme cards [can be problematic](http://ankisrs.net/docs/manual.html#javascript), so instead we can use highlight.js with a third-party tool; copy and paste the results; then style them with CSS. So, in order for this to work:
+Using javascript within Anki theme cards [can be problematic](http://ankisrs.net/docs/manual.html#javascript), so instead we can use *highlight.js* with a third-party tool; copy and paste the results; then style them with CSS.
 
-### Setting up the theme:
-
-1. Download your prefered theme from [highlight.js](https://highlightjs.org/download/) or [here](http://jmblog.github.io/color-themes-for-highlightjs/)
-2. Replace the `less/highlight.less` file with your chosen theme
-  - Or, change the `less/variables.less` `theme-dark-` colors
-3. Recompile the `css/main.css`
-4. Done!
-
-### Using the theme:
+### Using the highlight.js theme:
 
 To use the theme you'll need to know about [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) with Markdown. They look something like this:
 
@@ -59,12 +51,20 @@ You can also specify a language:
 
 1. Get the [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html), or find an [online markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/)
 2. Write your code in Markdown using a [fenced code block](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) in your editor.
-  - The syntax should be detected automatically, but you can be specify a language if you prefer
+  - The syntax should be detected automatically, but you can specify a language if you prefer
 3. View the source code with *inspect element*, or output the html
 4. Copy and paste into your `Key point (code block)` or `Puzzle answer (code block)`
    - You'll need everything from `<pre>` to `</pre>`
 
 It's wise to keep a backup for easy editing, so I've added a `Markdown` field in both the [Simple](../simple/README.md) and [Complex](../complex/README.md) themes — here you can store raw markdown or a link to the original code (Github gist for example).
+
+### Changing the theme:
+
+1. Download your prefered theme from [highlight.js](https://highlightjs.org/download/)
+2. Replace the `less/highlight.less` file with your chosen theme
+  - Or, change the `less/variables.less` `@theme-dark-` colors
+3. Recompile the `css/main.css`
+4. Done!
 
 
 ##### Quick links

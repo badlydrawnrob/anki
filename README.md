@@ -1,5 +1,5 @@
 # Anki themes
-## Anki cards, themes, templates for programming snippets
+## Anki cards, themes, templates for programming
 
 Want to learn how to program with Anki? This template will help make your Anki development decks a little more fun to work with. Inspired by the excellent [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html), it's perfect for front-end and back-end programmers, beginner to experienced.
 
