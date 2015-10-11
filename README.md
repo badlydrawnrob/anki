@@ -12,9 +12,9 @@ The template is built in html and css, with [syntax highlighting](themes/styles/
 ## Card Types
 There are currently two types of card, a simple card and a complex card. Both share the `themes/styles/main.css` file.
 
-1. [Simple](themes/simple/README.md)
+1. **[Simple](themes/simple/README.md)**
   - A basic question/answer card: e.g. What is the shortcut for `X`?
-2. [Complex](themes/complex/README.md)
+2. **[Complex](themes/complex/README.md)**
   - A more fully-rounded set of cards: an simple question, a symbol question and a puzzle question. Very flexible.
 
 
