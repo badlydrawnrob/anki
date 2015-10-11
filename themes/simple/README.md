@@ -1,14 +1,14 @@
 # Anki theme: Simple
 ## Anki simple theme for programming snippets
 
-A simple question/answer card. If you need more flexibility the [complex theme](../complex/README.md) may be more appropriate. The simple theme has 10 fields which will output 2 cards — fields marked ***[required]*** must be filled.
+A simple question/answer card. The simple theme has 10 fields which will output 2 cards — fields marked ***[required]*** must be filled. If you need more flexibility the [complex theme](../complex/README.md) may be more appropriate.
 
 
 ## Card 01: What's the answer? (Fields 1-7)
 
 A simple question/answer. From the `Title` question, guess the answer.
 
-Sometimes you won't want to display `Syntax` or `Syntax (inline code)`, as it might not be relevant or you don't want to make it too obvious. If so, you can [create a reverse card](#card02whatdoesthissyntaxdofields8-9) to drill yourself on syntax.
+Sometimes you won't want to display `Syntax` or `Syntax (inline code)`, as it might not be relevant or you don't want to make it too obvious. If so, you can [create a reverse card](#card-02-what-does-this-syntax-do-fields-8-9-optional) to drill yourself on syntax.
 
 **1. Title** ***— [required]***
 
@@ -16,7 +16,7 @@ Sometimes you won't want to display `Syntax` or `Syntax (inline code)`, as it mi
 
 **2. Syntax**
   
-- The main `syntax` we're learning
+- The main `Syntax` we're learning
 
 **3. Syntax (inline code)**
 
@@ -46,9 +46,9 @@ Sometimes you won't want to display `Syntax` or `Syntax (inline code)`, as it mi
 
 ## Card 02: What does this syntax do? (Fields 8-9) *— [optional]*
 
-If you want to have a reverse card, where you have to guess what the `Syntax` or `Syntax (inline code)` does, fill in `What does this syntax do?` field — this gives you a question header. If you've left the `Syntax` field empty, you can also fill in the `What does this syntax code do? (inline code)` field.
+If you want a reverse card, where you have to guess what the `Syntax` or `Syntax (inline code)` does, fill in `What does this syntax do?` field — this gives you a question header. If you've left the `Syntax` field empty, you can also fill in the `What does this syntax code do? (inline code)` field.
 
-**8. What does this syntax do?**
+**8. What does this syntax do?** ***— [required to generate Card 02]***
 
 - If you want a reverse of the question (i.e. giving the specific syntax and asking what it does), enter a question here.
 
@@ -59,7 +59,7 @@ If you want to have a reverse card, where you have to guess what the `Syntax` or
 
 
 
-## Notes (Fields 10-11) *— [optional]*
+## Extra fields (Fields 10-11) *— [optional]*
 
 **10. Other notes**
 
@@ -76,7 +76,7 @@ If you want to have a reverse card, where you have to guess what the `Syntax` or
 ## Notes
 
 1. [Style fields, inline code and code blocks](../styles/README.md)
-2. Fields that aren't required can be left blank and the template will ignore them. If all fields are used, 3 cards will be generated.
+2. Fields that aren't required can be left blank and the template will ignore them. If all fields are used, 2 cards will be generated.
 3. You can reference fields within fields. For instance, `{{Syntax (inline code)}}` or `{{Key point (code block)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you'll need to select *Edit HTML* in Wysiwig and wrap in `<code>`, it'll be rendered as an inline code block.
 
 
