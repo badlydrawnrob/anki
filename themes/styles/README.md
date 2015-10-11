@@ -5,7 +5,7 @@
 
 I'm using `Less` to generate the `css/main.css` file — refer to code and comments there. Quickly change the colour scheme by changing or creating your own variables in `less/theme.less` and recompiling the css file.
 
-### Basic styling
+## Basic styling
 
 For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code.
 
@@ -23,13 +23,13 @@ For basic styling of your html, css, python or your programming language of choi
 These are also handy in `<pre><code>` blocks, as you can highlight specific syntax that you're studying for clarity.
 
 
-### Super-charged code blocks with syntax highlighting
+## Super-charged automatic syntax highlighting
 
-Using HTML5 tags is pretty efficient using the Anki wysiwyg, but can get a little tedious when working with larger code blocks. Enter `http://highlightjs.org/`!
+Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. Enter `highlight.js`!
 
-I considered using highlight.js within Anki theme cards, but it would prove problematic including javascript [depending on the Anki client](http://ankisrs.net/docs/manual.html#javascript) — far simpler to use a third-party tool, copy and paste the results, then style them with CSS (my js isn't great anyway!). So, in order for this to work:
+Using javascript within Anki theme cards [can be problematic](http://ankisrs.net/docs/manual.html#javascript), so instead we can use highlight.js with a third-party tool; copy and paste the results; then style them with CSS. So, in order for this to work:
 
-#### Setting up the theme:
+### Setting up the theme:
 
 1. Download your prefered theme from [highlight.js](https://highlightjs.org/download/) or [here](http://jmblog.github.io/color-themes-for-highlightjs/)
 2. Replace the `less/highlight.less` file with your chosen theme
@@ -37,7 +37,7 @@ I considered using highlight.js within Anki theme cards, but it would prove prob
 3. Recompile the `css/main.css`
 4. Done!
 
-#### Using the theme:
+### Using the theme:
 
 To use the theme you'll need to know about [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) with Markdown. They look something like this:
 

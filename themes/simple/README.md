@@ -63,7 +63,7 @@ If you want a reverse card, where you have to guess what the `Syntax` or `Syntax
 
 **10. Other notes**
 
-- A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
+- A more in-depth explanation of what we're trying to learn, or any supplementary notes.
 
 **11. Markdown**
 

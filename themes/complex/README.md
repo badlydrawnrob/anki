@@ -88,7 +88,7 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 
 **14. Other notes**
 
-- A more in-depth explanation of what we're trying to learn, or any supplementary notes for either `Key points` or `Puzzle`
+- A more in-depth explanation of what we're trying to learn, or any supplementary notes.
 
 **15. Markdown**
 
