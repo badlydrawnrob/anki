@@ -7,7 +7,7 @@ A more fully-rounded set of cards: a simple question, a symbol question and a pu
 
 ## Card 01: What's the answer? (Fields 1-7)
 
-A simple question/answer. From the `Syntax`, `Syntax (inline code)` and the `title`, guess the answer. Must have at least `Key point (code block)` or `Key point notes` filled.
+A simple question/answer. From the `Title`, `Syntax` and `Syntax (inline code)`, guess the answer.
 
 **1. Title** ***— [required]***
 
@@ -45,7 +45,7 @@ A simple question/answer. From the `Syntax`, `Syntax (inline code)` and the `tit
 
 ## Card 02: What does this syntax do? (Field 8) *— [optional]*
 
-A slight variation on the 1st card. This hides `Sample code image` so you'll have to guess what `Syntax` or `Syntax (inline code)` does from just the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
+A slight variation on the 1st card. This hides `Sample code image` so you'll have to guess what `Syntax` or `Syntax (inline code)` does by looking at the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
 
 **8. What does this syntax do?** ***— [required to generate Card 02]***
 
@@ -56,7 +56,7 @@ A slight variation on the 1st card. This hides `Sample code image` so you'll hav
 
 ## Card 03: Puzzle question (Fields 10-13) *— [optional]*
 
-Here we can get creative. This hides `Syntax`, `Syntax (inline code)`, `Sample code image` and generates a puzzle question, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample code image` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
+Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (inline code)` and `Sample code image`, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample code image` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
 
 **9. Puzzle** 
 
@@ -107,7 +107,7 @@ Here we can get creative. This hides `Syntax`, `Syntax (inline code)`, `Sample c
 
 ##### Quick links
 
-- [Home](../../README.md)
-- [Simple theme](../simple/README.md)
-- [Complex theme](../complex/README.md)
+- [Anki Themes](../../README.md)
+- [Simple Anki theme](../simple/README.md)
+- [Complex Anki theme](../complex/README.md)
 - [Deck example](../../deck/README.md)

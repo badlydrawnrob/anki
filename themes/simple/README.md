@@ -82,7 +82,7 @@ If you want a reverse card, where you have to guess what the `Syntax` or `Syntax
 
 ##### Quick links
 
-- [Home](../../README.md)
-- [Simple theme](../simple/README.md)
-- [Complex theme](../complex/README.md)
+- [Anki Themes](../../README.md)
+- [Simple Anki theme](../simple/README.md)
+- [Complex Anki theme](../complex/README.md)
 - [Deck example](../../deck/README.md)

@@ -23,7 +23,7 @@ For basic styling of your html, css, python or your programming language of choi
 These are also handy in `<pre><code>` blocks, as you can highlight specific syntax that you're studying for clarity.
 
 
-### Super-charged code blocks
+### Super-charged code blocks with syntax highlighting
 
 Using HTML5 tags is pretty efficient using the Anki wysiwyg, but can get a little tedious when working with larger code blocks. Enter `http://highlightjs.org/`!
 
@@ -69,9 +69,9 @@ It's wise to keep a backup for easy editing, so I've added a `Markdown` field in
 
 ##### Quick links
 
-- [Home](../../README.md)
-- [Simple theme](../simple/README.md)
-- [Complex theme](../complex/README.md)
+- [Anki Themes](../../README.md)
+- [Simple Anki theme](../simple/README.md)
+- [Complex Anki theme](../complex/README.md)
 - [Deck example](../../deck/README.md)
 
 

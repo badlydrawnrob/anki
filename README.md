@@ -1,7 +1,9 @@
-# Anki theme
-## Anki theme for programming snippets
+# Anki themes
+## Anki cards, themes, templates for programming snippets
 
-This is a template for all your Anki development decks, which was inspired by the excellent [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html). Works with both front-end and back-end programming languages such as `html`, `css`, `python`, `ruby`, `php`, `jquery`, `javascript` and whatever else you want to throw at it. Comes with inline and code block styling using the beautiful `Monokai` and `Tomorrow` themes I personally use in [Sublime Text](http://www.sublimetext.com).
+Want to learn how to program with Anki? This template will help make your Anki development decks a little more fun to work with. Inspired by the excellent [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html), it's perfect for front-end and back-end programmers, beginner to experienced.
+
+Built in html and css, with [syntax highlighting](themes/styles/less/README.md) for inline and code blocks using the beautiful `Monokai` and `Tomorrow` themes I personally use in [Sublime Text](http://www.sublimetext.com). Supports developer languages such as **html**, **css**, **python**, **ruby**, **php**, **jquery**, **javascript** and whatever else you want to throw at it!
 
 ![Preview image](./img/preview.png)
 
