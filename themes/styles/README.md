@@ -23,7 +23,7 @@ For basic styling of your html, css, python or your programming language of choi
 These are also handy in `<pre><code>` blocks, as you can highlight specific syntax that you're studying for clarity.
 
 
-## Super-charged automatic syntax highlighting
+## Automatic syntax highlighting with highlight.js
 
 ![Marked App syntax highlighting with highlight.js](../../img/marked-app-inspector.png)
 
@@ -53,7 +53,7 @@ You can also specify a language:
 
 1. Get the [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html) which works with any editor for Mac. If you're on Linux or PC, you can use an [any markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/).
 2. Write your code in Markdown using a [fenced code block](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
-3. View the preview in Marked. The syntax should be detected automatically, but you can specify a language if you prefer.
+3. View the [Marked preview](#automatic-syntax-highlighting-with-highlight-js). The syntax should be detected automatically, but you can specify a language if you prefer.
 4. The quickest way to grab the `highlight.js` code we need is to:
   - View the source code with *inspect element*
   - Remove the `<pre>` and `<code>` inline styles: in console type `$('pre, code').removeAttr('style');` ([screenshot here](../../img/marked-app-console.png))
