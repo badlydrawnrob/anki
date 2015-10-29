@@ -4,9 +4,7 @@
 <div id="front" class="container card-3">
 	<h1 class="puzzle">{{ Puzzle }}</h1>
 	{{#Puzzle image}}
-	<div class="sample-code">
-	    <div class="img">{{Puzzle image}}</div>
-	</div>
+	<div class="sample-code">{{Puzzle image}}</div>
 	{{/Puzzle image}}
 	<p class="puzzle-hint">{{ Puzzle hint }}</p>
 </div>
@@ -24,7 +22,7 @@
 			{{/Puzzle answer (code block)}}
 			{{^Puzzle answer (code block)}}
 			<div class="sample-code">
-		    <div class="img">{{Sample code image}}</div>
+        {{Sample (code block or image)}}
 			</div>
 			{{/Puzzle answer (code block)}}
 		</div>
@@ -37,7 +35,7 @@
 		<h2>Reference:</h2>
 		{{#Puzzle answer (code block)}}
 		<div class="sample-code">
-		  <div class="img">{{Sample code image}}</div>
+      {{Sample (code block or image)}}
 		</div>
 		{{/Puzzle answer (code block)}}
 		<div class="box">

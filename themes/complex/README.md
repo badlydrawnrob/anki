@@ -22,7 +22,7 @@ A simple question/answer. From the `Title`, `Syntax` and `Syntax (inline code)`,
 - The actual function or symbol, i.e. `len()`
 - This will be wrapped in `<code>`
 
-**4. Sample code image**
+**4. Sample (code block or image)**
 
   - Upload a snapshot of the code we're learning
 
@@ -45,18 +45,18 @@ A simple question/answer. From the `Title`, `Syntax` and `Syntax (inline code)`,
 
 ## Card 02: What does this syntax do? (Field 8) *— [optional]*
 
-A slight variation on the 1st card. This hides `Sample code image` so you'll have to guess what `Syntax` or `Syntax (inline code)` does by looking at the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
+A slight variation on the 1st card. This hides `Sample (code block or image)` so you'll have to guess what `Syntax` or `Syntax (inline code)` does by looking at the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
 
 **8. What does this syntax do?** ***— [required to generate Card 02]***
 
-- Give a title for a question without the `sample code image`
+- Give a title for a question without the `Sample (code block or image)`
 - Optional, explicitly set title if you want a reverse question.
 
 
 
 ## Card 03: Puzzle question (Fields 10-13) *— [optional]*
 
-Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (inline code)` and `Sample code image`, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample code image` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
+Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (inline code)` and `Sample (code block or image)`, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample (code block or image)` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
 
 **9. Puzzle** 
 
@@ -65,8 +65,8 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 **10. Puzzle image**
 
 - Sometimes it can be useful to display an image with the puzzle question
-- If the `Puzzle image` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample code image}}` in this field.
-- We can reference `{{Sample code image}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
+- If the `Puzzle image` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample (code block or image)}}` in this field.
+- We can reference `{{Sample (code block or image)}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
 
 **11. Puzzle hint**
 
@@ -75,8 +75,8 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 **12. Puzzle answer (code block)**
 
 - Same as `Key point (code block)` for the puzzle question answer
-- If filled out `Puzzle answer (code block)`, don't display `Sample code image` but add it as a reference below.
-- If not filled out `Puzzle answer (code block)`, assume that the `Sample code image` is the answer and display it above any `Puzzle answer notes`.
+- If filled out `Puzzle answer (code block)`, don't display `Sample (code block or image)` but add it as a reference below.
+- If not filled out `Puzzle answer (code block)`, assume that the `Sample (code block or image)` is the answer and display it above any `Puzzle answer notes`.
 
 **13. Puzzle answer notes** ***— [required to generate Card 03]***
 

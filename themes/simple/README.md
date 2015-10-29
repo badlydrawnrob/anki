@@ -23,7 +23,7 @@ Sometimes you won't want to display `Syntax` or `Syntax (inline code)`, as it mi
 - The actual function or symbol, i.e. `len()`
 - This will be wrapped in `<code>`
 
-**4. Sample code image**
+**4. Sample (code block or image)**
 
 - Upload a snapshot of the code we're learning
 
