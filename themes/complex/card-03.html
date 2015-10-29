@@ -17,12 +17,12 @@
 <div id="answer" class="container card-3">
 	<div class="box">
 		<div class="box-point">
-			{{#Puzzle answer (code block)}}
-			  <pre><code>{{Puzzle answer (code block)}}</code></pre>
-			{{/Puzzle answer (code block)}}
-			{{^Puzzle answer (code block)}}
+			{{#Puzzle answer (code block or image)}}
+			  <pre><code>{{Puzzle answer (code block or image)}}</code></pre>
+			{{/Puzzle answer (code block or image)}}
+			{{^Puzzle answer (code block or image)}}
 			<div class="sample-code">{{Sample (code block or image)}}</div>
-			{{/Puzzle answer (code block)}}
+			{{/Puzzle answer (code block or image)}}
 		</div>
 		{{#Puzzle answer notes}}
 		<p class="box-notes">{{Puzzle answer notes}}</p>
@@ -31,9 +31,9 @@
 	<hr class="divider">
 	<div class="reference">
 		<h2>Reference:</h2>
-		{{#Puzzle answer (code block)}}
+		{{#Puzzle answer (code block or image)}}
 		<div class="sample-code">{{Sample (code block or image)}}</div>
-		{{/Puzzle answer (code block)}}
+		{{/Puzzle answer (code block or image)}}
 		<div class="box">
 			<div class="box-point">
 				<div class="box-code">{{Key point (code block or image)}}</div>

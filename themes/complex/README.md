@@ -74,11 +74,11 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 
 - Something that might give us some clues for the puzzle question
 
-**12. Puzzle answer (code block)**
+**12. Puzzle answer (code block or image)**
 
 - Same as `Key point (code block or image)` for the puzzle question answer
-- If filled out `Puzzle answer (code block)`, don't display `Sample (code block or image)` but add it as a reference below.
-- If not filled out `Puzzle answer (code block)`, assume that the `Sample (code block or image)` is the answer and display it above any `Puzzle answer notes`.
+- If filled out `Puzzle answer (code block or image)`, don't display `Sample (code block or image)` but add it as a reference below.
+- If not filled out `Puzzle answer (code block or image)`, assume that the `Sample (code block or image)` is the answer and display it above any `Puzzle answer notes`.
 
 **13. Puzzle answer notes** ***— [required to generate Card 03]***
 
