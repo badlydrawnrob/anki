@@ -48,6 +48,16 @@ hr.divider {
   width: 100%;
   border-top: 1px solid #999;
 }
+.box {
+  border: 2px solid black;
+}
+.box .sample-code {
+  background: #272822;
+  margin-bottom: 0;
+}
+.box-notes {
+  padding: 0.75em 0.5em;
+}
 .footer {
   margin: 1em;
 }
@@ -70,7 +80,7 @@ pre {
 }
 code {
   padding: 2px;
-  background: #dddddd;
+  background: #ddd;
   border-radius: 4px;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 1em;
@@ -112,16 +122,6 @@ pre .hljs {
   text-align: left;
   -webkit-text-size-adjust: none;
 }
-.box {
-  border: 2px solid black;
-}
-.box .sample-code {
-  background: #272822;
-  margin-bottom: 0;
-}
-.box-notes {
-  padding: 0.75em 0.5em;
-}
 code b,
 code strong {
   color: #602a7d;
@@ -140,13 +140,13 @@ code sup {
 }
 code var,
 code sub {
-  color: #000000;
+  color: #000;
 }
 code small {
-  color: #cccccc;
+  color: #ccc;
 }
 code q {
-  color: #000000;
+  color: #000;
 }
 code mark {
   color: #cb2829;
@@ -172,7 +172,7 @@ pre code sub {
   color: #aae626;
 }
 pre code small {
-  color: #777777;
+  color: #777;
 }
 pre code q {
   color: #ec7b20;
@@ -296,7 +296,7 @@ pre code mark {
 .hljs-shebang,
 .apache .hljs-sqbracket,
 .tex .hljs-formula {
-  color: #777777;
+  color: #777;
 }
 .coffeescript .javascript,
 .javascript .xml,
