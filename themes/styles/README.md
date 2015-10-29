@@ -58,7 +58,7 @@ You can also specify a language:
   - View the source code with *inspect element*
   - Remove the `<pre>` and `<code>` inline styles: in console type `$('pre, code').removeAttr('style');` ([screenshot here](../../img/marked-app-console.png))
     - Alternatively you can do this manually after *step 5* below
-5. Copy and paste into `Key point (code block)` or `Puzzle answer (code block)` fields
+5. Copy and paste into `Key point (code block or image)` or `Puzzle answer (code block)` fields
    - Including everything from `<pre>` to `</pre>`
 
 It's wise to keep a backup for easy editing, so I've added a `Markdown` field in both the [Simple](../simple/README.md) and [Complex](../complex/README.md) themes — here you can store raw markdown or a link to the original code (Github gist for example).
