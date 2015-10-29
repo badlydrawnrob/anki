@@ -22,15 +22,17 @@ A simple question/answer. From the `Title`, `Syntax` and `Syntax (inline code)`,
 - The actual function or symbol, i.e. `len()`
 - This will be wrapped in `<code>`
 
-**4. Sample code image**
+**4. Sample (code block or image)**
 
-  - Upload a snapshot of the code we're learning
+- A sample of the code we're learning
+  - Enter a `<pre><code>` block
+  - Or if you're feeling lazy, upload a snapshot
 
-**5. Key point (code block)**  ***— [required]***
+**5. Key point (code block or image)**  ***— [required]***
 
 - What's the main takeaway from this flashcard? (Small statement or snippet of code)
-- You will need to wrap in `<pre><code>`
-- You can colour code [using the included themes](../styles/README.md)
+  - Enter a `<pre><code>` block
+  - Syntax highlighting [using the included themes](../styles/README.md)
 
 **6. Key point image**
 
@@ -45,38 +47,38 @@ A simple question/answer. From the `Title`, `Syntax` and `Syntax (inline code)`,
 
 ## Card 02: What does this syntax do? (Field 8) *— [optional]*
 
-A slight variation on the 1st card. This hides `Sample code image` so you'll have to guess what `Syntax` or `Syntax (inline code)` does by looking at the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
+A slight variation on the 1st card. This hides `Sample (code block or image)` so you'll have to guess what `Syntax` or `Syntax (inline code)` does by looking at the symbol or function. Add a helpful question to `What does this syntax do?` field to generate the card.
 
 **8. What does this syntax do?** ***— [required to generate Card 02]***
 
-- Give a title for a question without the `sample code image`
+- Give a title for a question without the `Sample (code block or image)`
 - Optional, explicitly set title if you want a reverse question.
 
 
 
 ## Card 03: Puzzle question (Fields 10-13) *— [optional]*
 
-Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (inline code)` and `Sample code image`, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample code image` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
+Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (inline code)` and `Sample (code block or image)`, forcing you to figure out how to solve a specific problem and which function you'd need to do so. The answer will return a reference guide including `Sample (code block or image)` and `Key points (code)` — this is often enough to know if you've solved the puzzle properly.
 
 **9. Puzzle** 
 
 - If the card is suitable for a puzzle-style question, add a title
 
-**10. Puzzle image**
+**10. Puzzle (code block or image)**
 
-- Sometimes it can be useful to display an image with the puzzle question
-- If the `Puzzle image` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample code image}}` in this field.
-- We can reference `{{Sample code image}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
+- Sometimes it can be useful to display a different code with a puzzle question
+- If the `Puzzle (code block or image)` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample (code block or image)}}` in this field.
+- We can reference `{{Sample (code block or image)}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
 
 **11. Puzzle hint**
 
-- Something that might give us some clues as to the puzzle
+- Something that might give us some clues for the puzzle question
 
-**12. Puzzle answer (code block)**
+**12. Puzzle answer (code block or image)**
 
-- Same as `Key point (code block)` for the puzzle question answer
-- If filled out `Puzzle answer (code block)`, don't display `Sample code image` but add it as a reference below.
-- If not filled out `Puzzle answer (code block)`, assume that the `Sample code image` is the answer and display it above any `Puzzle answer notes`.
+- Same as `Key point (code block or image)` for the puzzle question answer
+- If filled out `Puzzle answer (code block or image)`, don't display `Sample (code block or image)` but add it as a reference below.
+- If not filled out `Puzzle answer (code block or image)`, assume that the `Sample (code block or image)` is the answer and display it above any `Puzzle answer notes`.
 
 **13. Puzzle answer notes** ***— [required to generate Card 03]***
 
@@ -102,7 +104,7 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 
 1. [Style fields, inline code and code blocks](../styles/README.md)
 2. Fields that aren't required can be left blank and the template will ignore them. If all fields are used, 3 cards will be generated.
-3. You can reference fields within fields. For instance, `{{Syntax (inline code)}}` or `{{Key point (code block)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you'll need to select *Edit HTML* in Wysiwig and wrap in `<code>`, it'll be rendered as an inline code block.
+3. You can reference fields within fields. For instance, `{{Syntax (inline code)}}` or `{{Key point (code block or image)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you'll need to select *Edit HTML* in Wysiwig and wrap in `<code>`, it'll be rendered as an inline code block.
 
 
 ##### Quick links
