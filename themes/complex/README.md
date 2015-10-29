@@ -64,15 +64,15 @@ Here we can get creative with a puzzle question. This hides `Syntax`, `Syntax (i
 
 - If the card is suitable for a puzzle-style question, add a title
 
-**10. Puzzle image**
+**10. Puzzle (code block or image)**
 
-- Sometimes it can be useful to display an image with the puzzle question
-- If the `Puzzle image` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample (code block or image)}}` in this field.
+- Sometimes it can be useful to display a different code with a puzzle question
+- If the `Puzzle (code block or image)` is filled out, we display it below the `Puzzle` title. 90% of the time you'll probably want to reference the `{{Sample (code block or image)}}` in this field.
 - We can reference `{{Sample (code block or image)}}` or add a related one that helps to clarify the `{{Syntax}}` we're learning.
 
 **11. Puzzle hint**
 
-- Something that might give us some clues as to the puzzle
+- Something that might give us some clues for the puzzle question
 
 **12. Puzzle answer (code block)**
 
