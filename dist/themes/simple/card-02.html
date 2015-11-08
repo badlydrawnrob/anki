@@ -1,15 +1,28 @@
 <!-- Front: What does this syntax do? -->
-<!-- For syntax highlighting include: ../js/highlight.js -->
 
 {{#What does this syntax do?}}
 <div id="front" class="container card-2">
   <h1 class="syntax">
     {{^Syntax}}Syntax{{/Syntax}}
     {{#Syntax}}{{ Syntax }}{{/Syntax}}
-    {{#Syntax (inline code)}}: <code>{{ Syntax (inline code) }}</code>{{/Syntax (inline code)}}
-    {{#What does this syntax do? (inline code)}}: <code>{{ What does this syntax do? (inline code) }}</code>{{/What does this syntax do? (inline code)}}
+
+    {{#→ Hide: Syntax (inline code)}}
+    <div class="hide">
+    {{/→ Hide: Syntax (inline code)}}
+      {{#Syntax (inline code)}}:
+      <code>{{ Syntax (inline code) }}</code>
+      {{/Syntax (inline code)}}
+    {{#→ Hide: Syntax (inline code)}}
+    </div>
+    {{/→ Hide: Syntax (inline code)}}
   </h1>
-  <div class="sample-code">{{Sample (code block or image)}}</div>
+  {{#→ Hide: Sample (code block or image)}}
+  <div class="hide">
+  {{/→ Hide: Sample (code block or image)}}
+    <div class="sample-code">{{Sample (code block or image)}}</div>
+  {{#→ Hide: Sample (code block or image)}}
+  </div>
+  {{/→ Hide: Sample (code block or image)}}
   <p class="title">{{What does this syntax do?}}</p>
 </div>
 {{/What does this syntax do?}}
@@ -28,7 +41,18 @@
     <div class="box-notes">{{Key point notes}}</div>
     {{/Key point notes}}
   </div>
-  <div class="footer">
-    {{#Other notes}}{{Other notes}}{{/Other notes}}
+  <hr class="divider">
+  <div class="reference">
+    <h2>Reference:
+      {{#→ Hide: Syntax (inline code)}}
+      <code>{{ Syntax (inline code) }}</code>
+      {{/→ Hide: Syntax (inline code)}}
+    </h2>
+    {{#→ Hide: Sample (code block or image)}}
+    <div class="sample-code">{{Sample (code block or image)}}</div>
+    {{/→ Hide: Sample (code block or image)}}
+    <div class="footer">
+      {{#Other notes}}{{Other notes}}{{/Other notes}}
+    </div>
   </div>
 </div>
