@@ -6,22 +6,12 @@
     {{^Syntax}}Syntax{{/Syntax}}
     {{#Syntax}}{{ Syntax }}{{/Syntax}}
 
-    {{#→ Hide: Syntax (inline code)}}
-    <div class="hide">
-    {{/→ Hide: Syntax (inline code)}}
-      {{#Syntax (inline code)}}:
-      <code>{{ Syntax (inline code) }}</code>
-      {{/Syntax (inline code)}}
-    {{#→ Hide: Syntax (inline code)}}
-    </div>
+    {{^→ Hide: Syntax (inline code)}}
+    <code>{{ Syntax (inline code) }}</code>
     {{/→ Hide: Syntax (inline code)}}
   </h1>
-  {{#→ Hide: Sample (code block or image)}}
-  <div class="hide">
-  {{/→ Hide: Sample (code block or image)}}
-    <div class="sample-code">{{Sample (code block or image)}}</div>
-  {{#→ Hide: Sample (code block or image)}}
-  </div>
+  {{^→ Hide: Sample (code block or image)}}
+  <div class="sample-code">{{Sample (code block or image)}}</div>
   {{/→ Hide: Sample (code block or image)}}
   <p class="title">{{What does this syntax do?}}</p>
 </div>
