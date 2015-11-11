@@ -21,17 +21,26 @@ hr.divider {
 // Box ========================================
 
 .box {
-  border: 2px solid black;
-
+  // border: 2px solid black; //!= Box shadow?
+  
+  // != Remove box-point and tidy up Puzzle card
+  .box-point {}
+  // != Pull this outside of box notes and ALWAYS under "reference" section
   .sample-code {
     background: @theme-dark-background;
     margin-bottom: 0;
   }
+  
+  .box-code {
+    margin: -18px -18px 0; // Flush with .box
+  }
+
+  .box-notes {
+
+  }
 }
 
-.box-notes {
-  padding: 0.75em 0.5em;
-}
+
 
 // Footer ======================================
 

@@ -1,0 +1,442 @@
+// =============================================================================
+// Base -> Variables
+// =============================================================================
+
+//
+// Variables
+//
+// This file contains all of the variables used in this framework. You should
+// not modify these variables directly. Instead, you should create your own LESS
+// file (e.g. `my-project.less`) that imports this framework, then create
+// your own variable overrides file (e.g. `variables-custom.less`), and import
+// your variables file after you've imported this framework so that LESS
+// processes your variables overrides instead of the default variables.
+//
+// @link http://cbrac.co/1LNVWut
+//
+
+//
+// Colors -> Grayscale
+//
+
+@color-black:         #000000;
+@color-gray-darkest:  lighten(@color-black, 13.5%);  // #222222
+@color-gray-darker:   lighten(@color-black, 26.5%);  // #444444
+@color-gray-dark:     lighten(@color-black, 46.7%);  // #777777
+@color-gray:          lighten(@color-black, 66.5%);  // #aaaaaa
+@color-gray-light:    lighten(@color-black, 87%);    // #dedede
+@color-gray-lighter:  lighten(@color-black, 93.75%); // #efefef
+@color-gray-lightest: lighten(@color-black, 97.25%); // #f8f8f8
+@color-white:         #ffffff;
+
+//
+// Colors -> Brand
+//
+
+@color-primary: #1fa3ec;
+
+//
+// Typography -> Font Sizes
+//
+
+// Typography -> Font Sizes -> Base
+
+@font-size: 16;
+
+// Typography -> Font Sizes -> Smaller
+
+@font-size-small: (@font-size - 1);
+@font-size-x-small: (@font-size - 2);
+@font-size-xx-small: (@font-size - 3);
+@font-size-xxx-small: (@font-size - 4);
+
+// Typography -> Font Sizes -> Larger
+
+@font-size-large: (@font-size + 1);
+@font-size-x-large: (@font-size + 2);
+@font-size-xx-large: (@font-size + 3);
+@font-size-xxx-large: (@font-size + 4);
+
+// Typography -> Font Sizes -> 100%
+
+@font-size-100: 100%;
+
+// Typography -> Font Sizes -> 0
+
+@font-size-0: 0;
+
+//
+// Typography -> Headings
+//
+
+@font-size-heading-1: 36;
+@font-size-heading-2: 30;
+@font-size-heading-3: 24;
+@font-size-heading-4: 20;
+@font-size-heading-5: 16;
+@font-size-heading-6: 14;
+
+//
+// Typography -> Line height
+//
+
+@line-height: 24;
+@line-height-ratio: (@line-height / @font-size);
+
+//
+// Typography -> Fonts
+//
+
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+@font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+@font-family-monospace: Monaco, Consolas, "Liberation Mono", Courier, monospace;
+
+//
+// Spacing -> Base
+//
+// The base spacing unit is set equal to the `line-height` by default. This helps
+// create a consistent vertical rhythm throughout the framework.
+//
+
+@spacing-base: @line-height;
+
+//
+// Spacing -> Smaller
+//
+
+// Spacing -> Half
+@spacing-half: (@spacing-base / 2);
+
+// Spacing -> Thirds
+@spacing-third: (@spacing-base / 3);
+@spacing-two-thirds: (@spacing-third * 2);
+
+// Spacing -> Fourths
+@spacing-fourth: (@spacing-base / 4);
+@spacing-three-fourths: (@spacing-fourth * 3);
+
+// Spacing -> Fifths
+@spacing-fifth: (@spacing-base / 5);
+@spacing-two-fifths: (@spacing-fifth * 2);
+@spacing-three-fifths: (@spacing-fifth * 3);
+@spacing-four-fifths: (@spacing-fifth * 4);
+
+// Spacing -> Sixths
+@spacing-sixth: (@spacing-base / 6);
+@spacing-five-sixths: (@spacing-sixth * 5);
+
+// Spacing -> Micro
+@spacing-micro: 2;
+
+// Spacing -> 1px
+
+@spacing-1px: 1;
+
+//
+// Spacing -> Larger
+//
+
+// Spacing -> + Half
+@spacing-base-plus-half: (@spacing-base + @spacing-half);
+
+// Spacing -> + Thirds
+@spacing-base-plus-third: (@spacing-base + @spacing-third);
+@spacing-base-plus-two-thirds: (@spacing-base + (@spacing-third * 2));
+
+// Spacing -> + Fourths
+@spacing-base-plus-fourth: (@spacing-base + @spacing-fourth);
+@spacing-base-plus-three-fourths: (@spacing-base + (@spacing-fourth * 3));
+
+// Spacing -> + Fifths
+@spacing-base-plus-fifth: (@spacing-base + @spacing-fifth);
+@spacing-base-plus-two-fifths: (@spacing-base + (@spacing-fifth * 2));
+@spacing-base-plus-three-fifths: (@spacing-base + (@spacing-fifth * 3));
+@spacing-base-plus-four-fifths: (@spacing-base + (@spacing-fifth * 4));
+
+// Spacing -> + Sixths
+@spacing-base-plus-sixth: (@spacing-base + @spacing-sixth);
+@spacing-base-plus-five-sixths: (@spacing-base + (@spacing-sixth * 5));
+
+// Spacing -> + Micro
+@spacing-base-plus-micro: (@spacing-base + 2);
+
+// Spacing -> + 1px
+@spacing-base-plus-1px: (@spacing-base + 1);
+
+// Spacing -> Double
+@spacing-double: (@spacing-base * 2);
+
+// Spacing -> Triple
+@spacing-triple: (@spacing-base * 3);
+
+// Spacing -> Quadruple
+@spacing-quadruple: (@spacing-base * 4);
+
+// Spacing -> Macro
+@spacing-macro: (@spacing-base * 8);
+
+// Spacing -> None (0)
+@spacing-none: 0;
+
+//
+// Breakpoints -> Base
+//
+
+@screen-xs: 480px;
+@screen-sm: 600px;
+@screen-md: 768px;
+@screen-lg: 960px;
+@screen-xl: 1140px;
+@screen-xxl: 1380px;
+
+//
+// Breakpoints -> Min-width
+//
+
+@screen-xs-min: @screen-xs;
+@screen-sm-min: @screen-sm;
+@screen-md-min: @screen-md;
+@screen-lg-min: @screen-lg;
+@screen-xl-min: @screen-xl;
+@screen-xxl-min: @screen-xxl;
+
+//
+// Breakpoints -> Max-width
+//
+
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@screen-lg-max: (@screen-xl-min - 1);
+@screen-xl-max: (@screen-xxl-min - 1);
+
+//
+// Borders -> Border Radius
+//
+
+@border-radius-base: 3;
+
+//
+// Z-Index
+//
+
+@z-index-1: 100;
+@z-index-2: 200;
+@z-index-3: 300;
+@z-index-4: 400;
+@z-index-5: 500;
+@z-index-6: 600;
+@z-index-7: 700;
+@z-index-8: 800;
+@z-index-9: 900;
+@z-index-10: 1000;
+
+//
+// Base -> Root
+//
+
+@root-background-color: @color-white;
+@root-text-color: @color-gray-darker;
+@root-focus-outline-fallback-width: @spacing-1px;
+@root-focus-outline-fallback-style: dotted;
+@root-focus-outline-fallback-color: @color-gray-darkest;
+@root-focus-outline-width: 5;
+@root-focus-outline-style: auto;
+@root-focus-outline-color: -webkit-focus-ring-color;
+
+//
+// Base -> Selections
+//
+
+@selection-background-color: #b3d4fc;
+@selection-inactive-background-color: @color-gray-light;
+
+//
+// Base -> Anchors
+//
+
+@anchor-text-color: #069;
+
+
+//
+// Base -> Text Elements
+//
+
+@text-del-font-style: italic;
+@text-del-text-decoration: line-through;
+@text-del-text-color: @color-gray-dark;
+@text-dt-font-weight: 700;
+@text-dt-text-color: @color-gray-darkest;
+@text-highlights-bg-color: #ff9;
+@text-highlights-text-color: @color-gray-darkest;
+
+//
+// Base -> Headings
+//
+
+@heading-font-family: @font-family-sans-serif;
+@heading-font-weight: 700;
+@heading-text-color: @color-gray-darkest;
+
+//
+// Base -> Blockquotes
+//
+
+@blockquote-font-family: @font-family-serif;
+@blockquote-font-style: italic;
+@blockquote-font-size: @font-size-heading-3;
+@blockquote-text-color: @color-gray-dark;
+@blockquote-margin-left: @spacing-base;
+@blockquote-padding-left: @spacing-base;
+@blockquote-border-width: @spacing-fourth;
+@blockquote-border-style: solid;
+@blockquote-border-color: @color-gray-light;
+@blockquote-cite-font-family: @font-family-sans-serif;
+@blockquote-cite-font-style: normal;
+@blockquote-cite-font-size: @font-size-x-small;
+@blockquote-cite-text-color: @color-gray-dark;
+@blockquote-cite-anchor-color: @color-gray-dark;
+
+//
+// Base -> Lists
+//
+
+@definition-lists-font-weight: 700;
+@definition-lists-text-color: @color-gray-darkest;
+@list-item-margin-left: @spacing-base;
+
+//
+// Base -> Horizontal Rules
+//
+
+@hr-border-width: @spacing-1px;
+@hr-border-style: solid;
+@hr-border-color: @color-gray-light;
+
+//
+// Base -> Code
+//
+
+@code-font-size: @font-size-x-small;
+@code-font-style: normal;
+@code-text-color: @color-gray-darkest;
+@code-background-color: @color-gray-lightest;
+@code-border-width: @spacing-1px;
+@code-border-style: solid;
+@code-border-color: @color-gray-light;
+@code-border-radius: @border-radius-base;
+@code-padding: (@spacing-micro) (@spacing-fourth);
+@code-pre-padding: @spacing-base;
+@code-pre-text-color: @color-gray-darker;
+@code-pre-background-color: @color-gray-lightest;
+
+//
+// Base -> Embedded Content
+//
+
+@figcaption-text-color: @color-gray-dark;
+@figcaption-margin-top: @spacing-third;
+
+//
+// Base -> Form elements
+//
+
+@form-legend-text-color: @color-gray-darkest;
+
+//
+// Base -> Print
+//
+
+@print-text-color: @color-black;
+
+//
+// Layout -> Wrappers
+//
+
+@wrapper-width: 94%;
+@wrapper-max-width: 1024;
+
+//
+// Layout -> Grids
+//
+
+@grid-gutter-base: @spacing-base;
+@grid-gutter-half: @spacing-half;
+@grid-gutter-double: @spacing-double;
+@grid-gutter-1px: @spacing-1px;
+
+//
+// Layout -> Boxes
+//
+
+@box-padding: @spacing-base;
+@box-bg-color: @color-gray-lighter;
+@box-border-width: @spacing-1px;
+@box-border-style: solid;
+@box-border-color: @color-gray-light;
+@box-border-radius: @border-radius-base;
+@box-raise-box-shadow-blur: @spacing-third;
+@box-sink-box-shadow-blur: @spacing-third;
+
+//
+// Objects -> Buttons
+//
+
+@btn-font-family: inherit;
+@btn-font-weight: 700;
+@btn-line-height: @line-height-ratio;
+@btn-padding: 10 14;
+@btn-text-color: @color-gray-darker;
+@btn-background-color: @color-gray-light;
+@btn-border-radius: @border-radius-base;
+@btn-focus-outline-width: thin;
+@btn-focus-outline-style: dotted;
+@btn-focus-outline-color: @color-gray-darkest;
+@btn-xs-font-size: @font-size-xxx-small;
+@btn-xs-padding: @spacing-sixth @spacing-third;
+@btn-sm-font-size: @font-size-xx-small;
+@btn-sm-padding: @spacing-fourth 10;
+@btn-lg-font-size: @font-size-xxx-large;
+@btn-lg-padding: @spacing-two-thirds @spacing-base;
+@btn-primary-text-color: @color-white;
+@btn-primary-bg-color: @color-primary;
+@btn-group-margin: @spacing-none @spacing-micro;
+@btn-lg-group-margin: @spacing-none @spacing-sixth;
+
+//
+// Objects -> Forms
+//
+
+@form-label-margin: @spacing-sixth;
+@form-input-line-height: @line-height-ratio;
+@form-input-height: 44;
+@form-input-padding: @spacing-third;
+@form-input-text-color: @color-gray-darkest;
+@form-input-border-width: @spacing-1px;
+@form-input-border-style: solid;
+@form-input-border-color: @color-gray-light;
+@form-input-border-radius: @border-radius-base;
+@form-input-focus-border-color: @color-primary;
+@form-select-padding: 10;
+@form-select-background-color: @color-gray-lightest;
+
+//
+// Objects -> Lists
+//
+
+@list-inline-delimiter-content: ",\00A0"; // Comma
+
+//
+// Objects -> Tables
+//
+
+@table-caption-font-style: italic;
+@table-caption-font-weight: 700;
+@table-header-footer-text-color: @color-gray-darkest;
+@table-header-footer-bg-color: @color-gray-lighter;
+@table-caption-padding-bottom: @spacing-sixth;
+@table-cell-padding: @spacing-third;
+@table-border-width: @spacing-1px;
+@table-border-style: solid;
+@table-border-color: @color-gray-light;
+@table-stripe-background-color: @color-gray-lightest;

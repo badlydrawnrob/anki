@@ -1,0 +1,68 @@
+/* ========================================================================== *\
+   Base -> Code ($base-code)
+\* ========================================================================== */
+
+/**
+ * 1. Correct `font-family` set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-monospace; /* 1 */
+  .to-rem(font-size, @code-font-size);
+  font-style: @code-font-style;
+  color: @code-text-color;
+}
+
+code {
+  margin: 0;
+  .to-rem(padding, @code-padding);
+  white-space: nowrap;
+  .to-rem(border, @code-border-width, @code-border-style @code-border-color);
+  .to-rem(border-radius, @code-border-radius);
+  background-color: @code-background-color;
+}
+
+kbd {
+  position: relative;
+  top: -1px;
+  margin-bottom: 1px;
+  .to-rem(padding, @code-padding);
+  white-space: nowrap;
+  .to-rem(border, @code-border-width, @code-border-style @code-border-color);
+  .to-rem(border-radius, @code-border-radius);
+  background-color: @code-background-color;
+  box-shadow: 0 1px 0 @code-border-color, inset 0 0 0 1px @color-white;
+}
+
+pre {
+  position: relative;
+  overflow: auto;
+  .to-rem(padding, @code-pre-padding);
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none;
+  color: @code-pre-text-color;
+  background: @code-pre-background-color;
+
+  /**
+   * Reset the above <code> styles when nested inside <pre> tags.
+   */
+
+  code {
+    display: block;
+    overflow: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+}

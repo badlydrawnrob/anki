@@ -1,0 +1,27 @@
+// =============================================================================
+// Base -> Mixins -> Clearing
+// =============================================================================
+
+//
+// Clearfix
+//
+// 1. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+// 2. The space content is one way to avoid an Opera bug when the
+//    `contenteditable` attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+//
+// @link http://cbrac.co/1FT6aqC
+//
+
+.clearfix() {
+  &:before,
+  &:after {
+    display: table; // 1
+    content: " ";   // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

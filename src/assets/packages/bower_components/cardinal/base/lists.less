@@ -1,0 +1,57 @@
+/* ========================================================================== *\
+   Base -> Lists ($base-lists)
+\* ========================================================================== */
+
+/**
+ * Set some basic styles for definition lists.
+ */
+
+dl {
+  dt {
+    font-weight: @definition-lists-font-weight;
+    color: @definition-lists-text-color;
+  }
+  dd {
+    margin: 0;
+  }
+}
+
+/**
+ * Reset the left margin for <ol> and <ul> elements.
+ */
+
+ol,
+ul {
+  li {
+    .to-rem(margin-left, @list-item-margin-left);
+  }
+}
+
+/**
+ * Set nested `list-style` types for ordered lists.
+ */
+
+ol {
+  list-style: decimal;
+  & & {
+    list-style: upper-alpha;
+  }
+  & & & {
+    list-style: lower-roman;
+  }
+  & & & & {
+    list-style: lower-alpha;
+  }
+}
+
+/**
+ * Remove `margin-bottom` on nested lists.
+ */
+
+ol,
+ul {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}

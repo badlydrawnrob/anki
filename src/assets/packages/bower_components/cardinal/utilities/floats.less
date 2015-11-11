@@ -1,0 +1,137 @@
+/* ========================================================================== *\
+   Utilities -> Floats ($utilities-floats)
+\* ========================================================================== */
+
+//
+// Floats
+//
+// f = float
+// l = left
+// r = right
+// n = none
+//
+
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}
+
+.fn {
+  float: none !important;
+}
+
+.screens({
+  .xs-fl {
+    float: left !important;
+  }
+
+  .xs-fr {
+    float: right !important;
+  }
+
+  .xs-fn {
+    float: none !important;
+  }
+},{
+  .sm-fl {
+    float: left !important;
+  }
+
+  .sm-fr {
+    float: right !important;
+  }
+
+  .sm-fn {
+    float: none !important;
+  }
+},{
+  .md-fl {
+    float: left !important;
+  }
+
+  .md-fr {
+    float: right !important;
+  }
+
+  .md-fn {
+    float: none !important;
+  }
+},{
+  .lg-fl {
+    float: left !important;
+  }
+
+  .lg-fr {
+    float: right !important;
+  }
+
+  .lg-fn {
+    float: none !important;
+  }
+},{
+  .xl-fl {
+    float: left !important;
+  }
+
+  .xl-fr {
+    float: right !important;
+  }
+
+  .xl-fn {
+    float: none !important;
+  }
+},{
+  .xxl-fl {
+    float: left !important;
+  }
+
+  .xxl-fr {
+    float: right !important;
+  }
+
+  .xxl-fn {
+    float: none !important;
+  }
+});
+
+/**
+ * Clearfix
+ *
+ * 1. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ * 2. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ *
+ * @link http://cbrac.co/1FT6aqC
+ */
+
+.cf {
+  &:before,
+  &:after {
+    display: table; // 1
+    content: " ";   // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Clear floats with an extra markup element
+ *
+ * @link http://cbrac.co/SFv1Ua
+ */
+
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
