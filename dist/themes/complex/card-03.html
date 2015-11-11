@@ -1,10 +1,10 @@
 <!-- Front: Puzzle question -->
 
 {{#Puzzle}}
-<div id="front" class="container card-3">
+<div id="front" class="container card-3 pb">
   <h1 class="puzzle">{{ Puzzle }}</h1>
   {{#Puzzle (code block or image)}}
-  <div class="sample-code">{{Puzzle (code block or image)}}</div>
+  <div class="sample-code mb">{{Puzzle (code block or image)}}</div>
   {{/Puzzle (code block or image)}}
   <p class="puzzle-hint">{{ Puzzle hint }}</p>
 </div>
@@ -22,7 +22,7 @@
         <pre><code>{{Puzzle answer (code block or image)}}</code></pre>
       {{/Puzzle answer (code block or image)}}
       {{^Puzzle answer (code block or image)}}
-        <div class="sample-code">{{Sample (code block or image)}}</div>
+        <div class="sample-code mb">{{Sample (code block or image)}}</div>
       {{/Puzzle answer (code block or image)}}
     </div>
     {{#Puzzle answer notes}}
@@ -33,7 +33,7 @@
   <div class="reference">
     <h2>Reference:</h2>
     {{#Puzzle answer (code block or image)}}
-    <div class="sample-code">{{Sample (code block or image)}}</div>
+    <div class="sample-code mb">{{Sample (code block or image)}}</div>
     {{/Puzzle answer (code block or image)}}
     <div class="box">
       <div class="box-point">

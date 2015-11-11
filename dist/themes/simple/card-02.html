@@ -1,7 +1,7 @@
 <!-- Front: What does this syntax do? -->
 
 {{#What does this syntax do?}}
-<div id="front" class="container card-2">
+<div id="front" class="container card-2 pb">
   <h1 class="syntax">
     {{^Syntax}}Syntax{{/Syntax}}
     {{#Syntax}}{{ Syntax }}{{/Syntax}}
@@ -11,7 +11,7 @@
     {{/→ Hide: Syntax (inline code)}}
   </h1>
   {{^→ Hide: Sample (code block or image)}}
-  <div class="sample-code">{{Sample (code block or image)}}</div>
+  <div class="sample-code mb">{{Sample (code block or image)}}</div>
   {{/→ Hide: Sample (code block or image)}}
   <p class="title">{{What does this syntax do?}}</p>
 </div>
@@ -39,7 +39,7 @@
       {{/→ Hide: Syntax (inline code)}}
     </h2>
     {{#→ Hide: Sample (code block or image)}}
-    <div class="sample-code">{{Sample (code block or image)}}</div>
+    <div class="sample-code mb">{{Sample (code block or image)}}</div>
     {{/→ Hide: Sample (code block or image)}}
     <div class="footer mv">
       {{#Other notes}}{{Other notes}}{{/Other notes}}

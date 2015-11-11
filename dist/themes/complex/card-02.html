@@ -1,7 +1,7 @@
 <!-- Front: What does this syntax do? -->
 
 {{#What does this syntax do?}}
-<div id="front" class="container card-2">
+<div id="front" class="container card-2 pb">
   <h1 class="syntax">
     {{^Syntax}}Syntax{{/Syntax}}
     {{#Syntax}}{{ Syntax }}{{/Syntax}}
@@ -17,7 +17,7 @@
 {{FrontSide}}
 
 <div id="answer" class="container card-2 mt pt+">
-  <div class="sample-code">
+  <div class="sample-code mb">
     {{Sample (code block or image)}}
     <p class="title">{{Title}}</p>
   </div>
@@ -29,7 +29,7 @@
     <div class="box-notes">{{Key point notes}}</div>
     {{/Key point notes}}
   </div>
-  <div class="footer">
+  <div class="footer mv">
     {{#Other notes}}{{Other notes}}{{/Other notes}}
   </div>
 </div>
