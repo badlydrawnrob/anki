@@ -17,14 +17,12 @@
 
 <div id="answer" class="container card-3 mt pt+">
   <div class="box">
-    <div class="box-point">
-      {{#Puzzle answer (code block or image)}}
-        <pre><code>{{Puzzle answer (code block or image)}}</code></pre>
-      {{/Puzzle answer (code block or image)}}
-      {{^Puzzle answer (code block or image)}}
-        <div class="sample-code mb">{{Sample (code block or image)}}</div>
-      {{/Puzzle answer (code block or image)}}
-    </div>
+    {{#Puzzle answer (code block or image)}}
+      <pre><code>{{Puzzle answer (code block or image)}}</code></pre>
+    {{/Puzzle answer (code block or image)}}
+    {{^Puzzle answer (code block or image)}}
+      <div class="sample-code mb">{{Sample (code block or image)}}</div>
+    {{/Puzzle answer (code block or image)}}
     {{#Puzzle answer notes}}
     <p class="box-notes">{{Puzzle answer notes}}</p>
     {{/Puzzle answer notes}}
@@ -36,9 +34,7 @@
     <div class="sample-code mb">{{Sample (code block or image)}}</div>
     {{/Puzzle answer (code block or image)}}
     <div class="box">
-      <div class="box-point">
-      	<div class="box-code">{{Key point (code block or image)}}</div>
-      </div>
+    	<div class="box-code">{{Key point (code block or image)}}</div>
       {{#Key point notes}}
       <div class="box-notes">{{Key point notes}}</div>
       {{/Key point notes}}
