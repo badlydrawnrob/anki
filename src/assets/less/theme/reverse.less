@@ -2,23 +2,17 @@
 // Reverse
 // =============================================
 
-#answer,
-hr.divider {
-  margin-top: .75em;
-  padding-top: 2em;
-  border-top: 1px solid #999;
-}
+#answer {
+  .to-rem(border-top, @hr-border-width, @hr-border-style @hr-border-color);
 
-hr.divider {
-  border: 0;
-  height: 0;
-  margin: 2em 0;
-  padding: 0;
-  width: 100%;
-  border-top: 1px solid #999;
-}
+  ul {
+    text-align: left;
 
-// Box ========================================
+    li {
+      .to-rem(padding-bottom, @spacing-base);
+    }
+  }
+}
 
 .box {
   // border: 2px solid black; //!= Box shadow?
@@ -32,26 +26,14 @@ hr.divider {
   }
   
   .box-code {
-    margin: -18px -18px 0; // Flush with .box
+    .to-rem(margin, -(@box-padding) -(@box-padding) 0); // Flush with .box
   }
 
-  .box-notes {
-
-  }
+  .box-notes {}
 }
 
-
-
-// Footer ======================================
-
-.footer {
-  margin: 1em;
-
-  ul {
-    text-align: left;
-
-    li {
-      padding-bottom: 1em;
-    }
-  }
+.footer,
+.puzzle-hint {
+  color: @color-gray-dark;
+  font-style: italic;
 }
