@@ -1,0 +1,614 @@
+/* ========================================================================== *\
+   Layout -> Grids ($layout-grids)
+\* ========================================================================== */
+
+/**
+ * Grid containers
+ * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
+ * 2. Default gutter width.
+ * 3. Hack to remove `inline-block` whitespace. This causes some issues on pre-
+ *    Jellybean and Jellybean versions of Android (http://cbrac.co/1xh3hs0).
+      @link http://cbrac.co/16xcjcl
+ */
+
+.grid {
+  margin: 0;                                /* 1 */
+  .to-rem(margin-left, -@grid-gutter-base); /* 2 */
+  padding: 0;                               /* 1 */
+  list-style: none;                         /* 1 */
+  font-size: @font-size-0;                  /* 3 */
+}
+
+/**
+ * Grid items
+ * 1. Remove default styles in case `.grid-item` is on an <li> element.
+ * 2. `.grid-item` elements are 100% width by default.
+ * 3. Default gutter width = @grid-gutter-base.
+ * 4. Ensure `.grid-item` is aligned to the top of its container.
+ * 5. Reset font size to the global default.
+ */
+
+.grid-item {
+  display: inline-block;
+  margin-left: 0;                           /* 1 */
+  width: 100%;                              /* 2 */
+  .to-rem(padding-left, @grid-gutter-base); /* 3 */
+  vertical-align: top;                      /* 4 */
+  .to-rem(font-size, @font-size);           /* 5 */
+}
+
+/**
+ * Grid items rendering order
+ * .grid-ltr = left-to-right (default)
+ * .grid-rtl = right-to-left
+ */
+
+.grid-ltr {
+  direction: ltr;
+  text-align: left;
+
+  > .grid-item {
+    direction: rtl;
+    text-align: left;
+  }
+}
+
+.grid-rtl {
+  direction: rtl;
+  text-align: left;
+
+  > .grid-item {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+.screens({
+  .xs-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .xs-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+},{
+  .sm-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .sm-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+},{
+  .md-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .md-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+},{
+  .lg-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .lg-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+},{
+  .xl-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .xl-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+},{
+  .xxl-grid-ltr {
+    direction: ltr;
+    text-align: left;
+
+    > .grid-item {
+      direction: rtl;
+      text-align: left;
+    }
+  }
+
+  .xxl-grid-rtl {
+    direction: rtl;
+    text-align: left;
+
+    > .grid-item {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+});
+
+/**
+ * Grid gutters
+ */
+
+// No gutters
+.gutter-0,
+.gutter-none {
+  margin-left: 0;
+}
+
+.gutter-0 > .grid-item,
+.gutter-none > .grid-item {
+  padding-left: 0;
+}
+
+// 1px gutters
+.gutter-1px {
+  .to-rem(margin-left, -@grid-gutter-1px);
+}
+
+.gutter-1px > .grid-item {
+  .to-rem(padding-left, @grid-gutter-1px);
+}
+
+// Half gutters
+[class~="gutter-1/2"],
+.gutter-half {
+  .to-rem(margin-left, -@grid-gutter-half);
+}
+
+[class~="gutter-1/2"] > .grid-item,
+.gutter-half > .grid-item {
+  .to-rem(padding-left, @grid-gutter-half);
+}
+
+// Whole gutters
+.gutter-1,
+.gutter-whole {
+  .to-rem(margin-left, -@grid-gutter-base);
+}
+
+.gutter-1 > .grid-item,
+.gutter-whole > .grid-item {
+  .to-rem(padding-left, @grid-gutter-half);
+}
+
+// Double gutters
+.gutter-2,
+.gutter-double {
+  .to-rem(margin-left, -@grid-gutter-double);
+}
+
+.gutter-2 > .grid-item,
+.gutter-double > .grid-item {
+  .to-rem(padding-left, @grid-gutter-double);
+}
+
+.screens({
+  // No gutters
+  .xs-gutter-0,
+  .xs-gutter-none {
+    margin-left: 0;
+  }
+
+  .xs-gutter-0 > .grid-item,
+  .xs-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .xs-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .xs-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="xs-gutter-1/2"],
+  .xs-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="xs-gutter-1/2"] > .grid-item,
+  .xs-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .xs-gutter-1,
+  .xs-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .xs-gutter-1 > .grid-item,
+  .xs-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .xs-gutter-2,
+  .xs-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .xs-gutter-2 > .grid-item,
+  .xs-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+},{
+  // No gutters
+  .sm-gutter-0,
+  .sm-gutter-none {
+    margin-left: 0;
+  }
+
+  .sm-gutter-0 > .grid-item,
+  .sm-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .sm-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .sm-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="sm-gutter-1/2"],
+  .sm-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="sm-gutter-1/2"] > .grid-item,
+  .sm-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .sm-gutter-1,
+  .sm-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .sm-gutter-1 > .grid-item,
+  .sm-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .sm-gutter-2,
+  .sm-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .sm-gutter-2 > .grid-item,
+  .sm-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+},{
+  // No gutters
+  .md-gutter-0,
+  .md-gutter-none {
+    margin-left: 0;
+  }
+
+  .md-gutter-0 > .grid-item,
+  .md-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .md-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .md-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="md-gutter-1/2"],
+  .md-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="md-gutter-1/2"] > .grid-item,
+  .md-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .md-gutter-1,
+  .md-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .md-gutter-1 > .grid-item,
+  .md-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .md-gutter-2,
+  .md-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .md-gutter-2 > .grid-item,
+  .md-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+},{
+  // No gutters
+  .lg-gutter-0,
+  .lg-gutter-none {
+    margin-left: 0;
+  }
+
+  .lg-gutter-0 > .grid-item,
+  .lg-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .lg-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .lg-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="lg-gutter-1/2"],
+  .lg-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="lg-gutter-1/2"] > .grid-item,
+  .lg-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .lg-gutter-1,
+  .lg-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .lg-gutter-1 > .grid-item,
+  .lg-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .lg-gutter-2,
+  .lg-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .lg-gutter-2 > .grid-item,
+  .lg-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+},{
+  // No gutters
+  .xl-gutter-0,
+  .xl-gutter-none {
+    margin-left: 0;
+  }
+
+  .xl-gutter-0 > .grid-item,
+  .xl-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .xl-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .xl-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="xl-gutter-1/2"],
+  .xl-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="xl-gutter-1/2"] > .grid-item,
+  .xl-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .xl-gutter-1,
+  .xl-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .xl-gutter-1 > .grid-item,
+  .xl-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .xl-gutter-2,
+  .xl-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .xl-gutter-2 > .grid-item,
+  .xl-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+},{
+  // No gutters
+  .xxl-gutter-0,
+  .xxl-gutter-none {
+    margin-left: 0;
+  }
+
+  .xxl-gutter-0 > .grid-item,
+  .xxl-gutter-none > .grid-item {
+    padding-left: 0;
+  }
+
+  // 1px gutters
+  .xxl-gutter-1px {
+    .to-rem(margin-left, -@grid-gutter-1px);
+  }
+
+  .xxl-gutter-1px > .grid-item {
+    .to-rem(padding-left, @grid-gutter-1px);
+  }
+
+  // Half gutters
+  [class~="xxl-gutter-1/2"],
+  .xxl-gutter-half {
+    .to-rem(margin-left, -@grid-gutter-half);
+  }
+
+  [class~="xxl-gutter-1/2"] > .grid-item,
+  .xxl-gutter-half > .grid-item {
+    .to-rem(padding-left, @grid-gutter-half);
+  }
+
+  // Whole gutters
+  .xxl-gutter-1,
+  .xxl-gutter-whole {
+    .to-rem(margin-left, -@grid-gutter-base);
+  }
+
+  .xxl-gutter-1 > .grid-item,
+  .xxl-gutter-whole > .grid-item {
+    .to-rem(padding-left, @grid-gutter-base);
+  }
+
+  // Double gutters
+  .xxl-gutter-2,
+  .xxl-gutter-double {
+    .to-rem(margin-left, -@grid-gutter-double);
+  }
+
+  .xxl-gutter-2 > .grid-item,
+  .xxl-gutter-double > .grid-item {
+    .to-rem(padding-left, @grid-gutter-double);
+  }
+});
+
+
+/**
+ * Grid item alignment
+ */
+
+.grid-align-top > .grid-item {
+  vertical-align: top;
+}
+
+.grid-align-middle > .grid-item {
+  vertical-align: middle;
+}
+
+.grid-align-bottom > .grid-item {
+  vertical-align: bottom;
+}
+
+.grid-align-left {
+  text-align: left;
+
+  > .grid-item {
+    text-align: left;
+  }
+}
+
+.grid-align-center {
+  text-align: center;
+
+  > .grid-item {
+    text-align: left;
+  }
+}
+
+.grid-align-right {
+  text-align: right;
+
+  > .grid-item {
+    text-align: left;
+  }
+}
+
+/**
+ * Grid item "shrink wrap"
+ *
+ * Force `.grid-item` to be the width of its content.
+ */
+
+.grid-shrink-wrap > .grid-item {
+  width: auto;
+}

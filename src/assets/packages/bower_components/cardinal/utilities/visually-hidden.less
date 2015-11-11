@@ -1,0 +1,43 @@
+/* ========================================================================== *\
+   Utilities -> Visually Hidden ($utilities-visually-hidden)
+\* ========================================================================== */
+
+//
+// Visually Hidden
+//
+// vh = visually hidden
+//
+
+/**
+ * Hide only visually, but have it available for screenreaders.
+ *
+ * @link http://cbrac.co/TUcUgH
+ */
+
+.vh {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+/**
+ * Extends the `.vh` class to allow the element to be focusable when navigated
+ * to via the keyboard.
+ *
+ * @link http://cbrac.co/RR8gO6
+ */
+
+.vh.focusable:active,
+.vh.focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    width: auto;
+    height: auto;
+}

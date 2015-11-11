@@ -1,0 +1,30 @@
+/* ========================================================================== *\
+   Layout -> Wrappers ($layout-wrappers)
+\* ========================================================================== */
+
+.wrapper {
+  width: @wrapper-width;
+  .to-rem(max-width, @wrapper-max-width);
+  margin: 0 auto;
+
+  @media print {
+    width: auto;
+  }
+}
+
+/**
+ * Force `.wrapper` to sit flush with its parent.
+ */
+
+.wrapper-flush {
+  width: 100%;
+}
+
+/**
+ * Remove any width constraints from the `.wrapper`.
+ */
+
+.wrapper-full-bleed {
+  width: auto;
+  max-width: none;
+}
