@@ -1,46 +1,53 @@
-<!-- Front: What does this syntax do? -->
+<!-- ==========================================
+   - Card: What does this syntax do?
+     - Must fill ✔ What does this syntax do?
+       to generate card.
+   - Info: Drill yourself on syntax
+   - Key: ★ Required
+          ☆ Optional (recommended)
+          ✄ Optional (explicitly hide fields)
+          ✎ Optional (Notes)
+=============================================== -->
 
-{{#What does this syntax do?}}
+{{#✔ What does this syntax do?}}
 <div id="front" class="container card-2 pb">
   <h1 class="syntax">
-    {{^Syntax}}Syntax{{/Syntax}}
-    {{#Syntax}}{{ Syntax }}{{/Syntax}}
-
-    {{^→ Hide: Syntax (inline code)}}
-    <code>{{ Syntax (inline code) }}</code>
-    {{/→ Hide: Syntax (inline code)}}
+    {{^☆ Syntax}}Syntax{{/☆ Syntax}}
+    {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}<!-- !=  HIDE this as well? -->
+    <!-- Explicitly hide inline code -->
+    {{^----✄-- Hide: Syntax (inline code)}}
+    <code>{{☆ Syntax (inline code)}}</code>
+    {{/----✄-- Hide: Syntax (inline code)}}
   </h1>
-  {{^→ Hide: Sample (code block or image)}}
-  <div class="sample-code mb">{{Sample (code block or image)}}</div>
-  {{/→ Hide: Sample (code block or image)}}
-  <p class="title">{{What does this syntax do?}}</p>
+  {{^----✄-- Hide: Sample (code block or image)}}
+  <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
+  {{/----✄-- Hide: Sample (code block or image)}}
+  <p class="title">{{✔ What does this syntax do?}}</p>
 </div>
-{{/What does this syntax do?}}
+{{/✔ What does this syntax do?}}
 
-
-<!-- Reverse: What does this syntax do?  -->
+<!-- ========================================== -->
 
 {{FrontSide}}
 
-<div id="answer" class="container card-2 mt pt+">
+<div id="back" class="container card-2 mt pt+">
   <div class="box">
-    <div class="box-code">{{Key point (code block or image)}}</div>
-    {{#Key point notes}}
-    <div class="box-notes">{{Key point notes}}</div>
-    {{/Key point notes}}
+    <div class="box-code">{{★ Key point (code block or image)}}</div>
+    <div class="box-notes">{{★ Key point notes}}</div>
   </div>
   <hr class="divider mv+">
   <div class="reference">
     <h2>Reference:
-      {{#→ Hide: Syntax (inline code)}}
-      <code>{{ Syntax (inline code) }}</code>
-      {{/→ Hide: Syntax (inline code)}}
+      {{#----✄-- Hide: Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+      {{/----✄-- Hide: Syntax (inline code)}}
     </h2>
-    {{#→ Hide: Sample (code block or image)}}
-    <div class="sample-code mb">{{Sample (code block or image)}}</div>
-    {{/→ Hide: Sample (code block or image)}}
+    {{#----✄-- Hide: Sample (code block or image)}}
+    <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
+    {{/----✄-- Hide: Sample (code block or image)}}
+    <p class="title">{{★ Title}}</p>
     <div class="footer mv">
-      {{#Other notes}}{{Other notes}}{{/Other notes}}
+      {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
     </div>
   </div>
 </div>
