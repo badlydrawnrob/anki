@@ -3,10 +3,10 @@
 
 - [Home](../../../README.md)
   - **THEME**
-    - [Simple Anki theme](../README.md#basic-field-template)
-    - [Complex Anki theme](../README.md#complex-field-template)
+    - [Simple Anki theme](../#basic-field-template)
+    - [Complex Anki theme](../#complex-field-template)
       - **Deck example**
-      - [Notes](../README.md#notes)
+      - [Notes](../#notes)
   - **THEME COLOURS**
     - [Basic highlighting](#)
     - [Automatic highlighting](#automatic-syntax-highlighting-with-highlight-js)

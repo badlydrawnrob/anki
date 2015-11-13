@@ -4,11 +4,11 @@
   - **THEME**
     - [Simple Anki theme](#basic-field-template)
     - [Complex Anki theme](#complex-field-template)
-      - [Deck example](../../../dist/deck/README.md)
+      - [Deck example](../../dist/deck/README.md)
       - [Notes](#notes)
   - **THEME COLOURS**
-    - [Basic highlighting](../assets/css/README.md)
-    - [Automatic highlighting](../assets/css/README.md#automatic-syntax-highlighting-with-highlight-js)
+    - [Basic highlighting](./assets/css/README.md)
+    - [Automatic highlighting](./assets/css/#automatic-syntax-highlighting-with-highlight-js)
 
 
 
