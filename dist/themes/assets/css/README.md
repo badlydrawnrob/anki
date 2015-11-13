@@ -1,13 +1,24 @@
 # Anki theme: Styles
 ## Tomorrow light and Monokai
 
+- [Home](../../../README.md)
+  - **THEME**
+    - [Simple Anki theme](../README.md#basic-field-template)
+    - [Complex Anki theme](../README.md#complex-field-template)
+      - **Deck example**
+      - [Notes](../README.md#notes)
+  - **THEME COLOURS**
+    - [Basic highlighting](#)
+    - [Automatic highlighting](#automatic-syntax-highlighting-with-highlight-js)
+
+
 ### Less
 
 I'm using `Less` to generate the `css/main.css` file from `src/assets/less/main.less` — refer to code and comments there. Quickly change the colour scheme by changing or creating your own variables in `src/assets/less/theme.less` and recompiling the css file.
 
 ## Basic styling
 
-For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code.
+For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code. These work out of the box with `(inline code)`, as they're already wrapped in `<code>` tag. For all other code you want to be highlighted, wrap in `<code>` or `<pre><code>` to get the pretty colours!
 
 - Default colour is white
 - `<b>` or `<strong>` for major symbols (`if`, `and`, `>=`, `print` etc)
@@ -20,48 +31,27 @@ For basic styling of your html, css, python or your programming language of choi
 - `<q>` wildcard (could be used for css `class` for instance)
 - `<mark>` wildcard (could be used for a specific `highlight`)
 
-These are also handy in `<pre><code>` blocks, as you can highlight specific syntax that you're studying for clarity.
 
 
 ## Automatic syntax highlighting with highlight.js
+**BETA** Currently works reliably on iOS. You'll need to add the code in `js/highlight.js` on every card in the ***front*** section. You'll need to wrap it in `<script> ... </script>` tags.
 
 ![Marked App syntax highlighting with highlight.js](../../img/marked-app-inspector.png)
 
 *Quickly generate syntax highlighting with Marked App*
 
-Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. **Enter [highlight.js](https://highlightjs.org/)**! Using javascript within Anki theme cards [can be problematic](http://ankisrs.net/docs/manual.html#javascript), so instead we can use ***highlight.js*** with a third-party tool; copy and paste the results; then style them with CSS.
+Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. **Enter [highlight.js](https://highlightjs.org/)**! It's as easy as 1, 2, 3:
 
-### Using the highlight.js theme:
+1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
+2. Generate the HTML with [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html)
+  - If you're on Linux or PC, you can use an [any markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/)
+  - The syntax should be detected automatically, but you can specify a language if you prefer using the following syntax: <pre><code>```python```</pre></code>
+3. Copy and paste into any `* (code block or image)` field.
+   - Including everything from `<pre><code>` to `<code></pre>`
 
-To use the theme you'll need to know about [fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) with Markdown. They look something like this:
+It's wise to keep a backup for easy editing, so I've added a `✎ Markdown` field in both the **Simple** and **Complex** themes — here you can store raw markdown or a link to the original code (Github gist for example).
 
-<pre><code>```
-def function(args):
-  pass
-```</code></pre>
 
-You can also specify a language:
-
-<pre></code>```less
-.class {
-    color: #fff;
-    .inner-class {
-        color: #000;
-    }
-}
-```</code></pre>
-
-1. Get the [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html) which works with any editor for Mac. If you're on Linux or PC, you can use an [any markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/).
-2. Write your code in Markdown using a [fenced code block](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
-3. View the [Marked preview](#automatic-syntax-highlighting-with-highlight-js). The syntax should be detected automatically, but you can specify a language if you prefer.
-4. The quickest way to grab the `highlight.js` code we need is to:
-  - View the source code with *inspect element*
-  - Remove the `<pre>` and `<code>` inline styles: in console type `$('pre, code').removeAttr('style');` ([screenshot here](../../img/marked-app-console.png))
-    - Alternatively you can do this manually after *step 5* below
-5. Copy and paste into `Key point (code block or image)` or `Puzzle answer (code block or image)` fields
-   - Including everything from `<pre>` to `</pre>`
-
-It's wise to keep a backup for easy editing, so I've added a `Markdown` field in both the [Simple](../simple/README.md) and [Complex](../complex/README.md) themes — here you can store raw markdown or a link to the original code (Github gist for example).
 
 ### Changing the theme:
 
@@ -70,13 +60,3 @@ It's wise to keep a backup for easy editing, so I've added a `Markdown` field in
   - Or, change the `less/variables.less` `@theme-dark-` colors
 3. Recompile the `css/main.css`
 4. Done!
-
-
-##### Quick links
-
-- [Anki Themes](../../../README.md)
-- [Simple Anki theme](../simple/README.md)
-- [Complex Anki theme](../complex/README.md)
-- [Deck example](../../../dist/deck/README.md)
-
-

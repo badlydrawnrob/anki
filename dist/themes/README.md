@@ -1,6 +1,6 @@
 # Anki Themes: How to add content to cards
 
-- [Home](../../../README.md)
+- [Home](../../README.md)
   - **THEME**
     - [Simple Anki theme](#basic-field-template)
     - [Complex Anki theme](#complex-field-template)

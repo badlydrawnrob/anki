@@ -1,11 +1,15 @@
 # Example deck
 
-Install this on Anki and follow the guidelines in `/README.md`
+- [Home](../../README.md)
+  - **THEME**
+    - [Simple Anki theme](../themes/README.md#basic-field-template)
+    - [Complex Anki theme](../themes/README.md#complex-field-template)
+      - **Deck example**
+      - [Notes](../themes/README.md#notes)
+  - **THEME COLOURS**
+    - [Basic highlighting](../themes/assets/css/README.md)
+    - [Automatic highlighting](../themes/assets/css/README.md#automatic-syntax-highlighting-with-highlight-js)
 
+## How to install
 
-##### Quick links
-
-- [Anki Themes](../../README.md)
-- [Simple Anki theme](../simple/README.md)
-- [Complex Anki theme](../complex/README.md)
-- [Deck example](../../deck/README.md)
+To safely install and test on your Anki install, create a new profile and import this deck.
