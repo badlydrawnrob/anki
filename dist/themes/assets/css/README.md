@@ -45,7 +45,7 @@ Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
 2. Generate the HTML with [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html)
   - If you're on Linux or PC, you can use an [any markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/)
-  - The syntax should be detected automatically, but you can specify a language if you prefer using the following syntax: <pre><code>```python```</pre></code>
+  - The syntax should be detected automatically, but you can specify a language if you prefer like this: **```python**
 3. Copy and paste into any `* (code block or image)` field.
    - Including everything from `<pre><code>` to `<code></pre>`
 
