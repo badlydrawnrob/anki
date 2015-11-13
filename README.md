@@ -16,7 +16,7 @@ There are currently two types of card, a simple card and a complex card. Both sh
 1. **[Simple](./dist/themes/README.md)**
   - What's the answer?
   - What does this syntax do?
-2. **[Complex](./dist/themes/README.md#puzzle-field-template)**
+2. **[Complex](./dist/themes/README.md#complex-theme)**
   - Everything in **Simple** theme
   - **+** Puzzle question
 

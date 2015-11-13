@@ -3,7 +3,7 @@
 - [Home](../../README.md)
   - **THEME**
     - [Simple Anki theme](#basic-field-template)
-    - [Complex Anki theme](#complex-field-template)
+    - [Complex Anki theme](#complex-theme)
       - [Deck example](../deck/README.md)
       - [Notes](#notes)
   - **THEME COLOURS**
@@ -14,7 +14,7 @@
 
 ## Simple theme
 
-Both the **Simple theme** and **[Complex theme](#complex-field-template)** share the same basic fields. This content will be used to output two cards:
+Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same basic fields. This content will be used to output two cards:
 
 1. **What's the answer?**
   - What does the following code do?
@@ -90,7 +90,7 @@ Both the **Simple theme** and **[Complex theme](#complex-field-template)** share
 
 -----
 
-## Complex field template
+## Complex theme
 
 <img align="right" src="https://media.giphy.com/media/C47AAXrd7EIz6/giphy.gif">
 
