@@ -30,6 +30,5 @@
   },
   "_source": "git://github.com/cbracco/cardinal.git",
   "_target": "~3.2.6",
-  "_originalSource": "cardinal",
-  "_direct": true
+  "_originalSource": "cardinal"
 }
