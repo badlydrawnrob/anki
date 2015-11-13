@@ -2,13 +2,13 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](../themes/#basic-field-template)
-    - [Complex Anki theme](../themes/#complex-field-template)
+    - [Simple Anki theme](../themes/README.md#basic-field-template)
+    - [Complex Anki theme](../themes/README.md#complex-field-template)
       - **Deck example**
-      - [Notes](../themes/#notes)
+      - [Notes](../themes/README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](../themes/assets/css/README.md)
-    - [Automatic highlighting](../themes/assets/css/#automatic-syntax-highlighting-with-highlight-js)
+    - [Automatic highlighting](../themes/assets/css/README.md#automatic-syntax-highlighting-with-highlightjs)
 
 ## How to install
 

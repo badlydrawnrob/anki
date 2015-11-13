@@ -3,13 +3,13 @@
 
 - [Home](../../../README.md)
   - **THEME**
-    - [Simple Anki theme](../#basic-field-template)
-    - [Complex Anki theme](../#complex-field-template)
+    - [Simple Anki theme](../README.md#basic-field-template)
+    - [Complex Anki theme](../README.md#complex-field-template)
       - **Deck example**
-      - [Notes](../#notes)
+      - [Notes](../README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](#)
-    - [Automatic highlighting](#automatic-syntax-highlighting-with-highlight-js)
+    - [Automatic highlighting](#automatic-syntax-highlighting-with-highlightjs)
 
 
 ### Less
@@ -36,9 +36,9 @@ For basic styling of your html, css, python or your programming language of choi
 ## Automatic syntax highlighting with highlight.js
 **BETA** Currently works reliably on iOS. You'll need to add the code in `js/highlight.js` on every card in the ***front*** section. You'll need to wrap it in `<script> ... </script>` tags.
 
-![Marked App syntax highlighting with highlight.js](../../img/marked-app-inspector.png)
+<!-- ![Marked App syntax highlighting with highlight.js](../../img/marked-app-inspector.png)
 
-*Quickly generate syntax highlighting with Marked App*
+*Quickly generate syntax highlighting with Marked App* -->
 
 Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. **Enter [highlight.js](https://highlightjs.org/)**! It's as easy as 1, 2, 3:
 

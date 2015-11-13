@@ -8,7 +8,7 @@
       - [Notes](#notes)
   - **THEME COLOURS**
     - [Basic highlighting](./assets/css/README.md)
-    - [Automatic highlighting](./assets/css/#automatic-syntax-highlighting-with-highlight-js)
+    - [Automatic highlighting](./assets/css/README.md#automatic-syntax-highlighting-with-highlightjs)
 
 
 
@@ -48,15 +48,15 @@ Both the **Simple theme** and **[Complex theme](#complex-field-template)** share
 - A sample of the code we're learning:
   - Enter a `<pre><code>` block
     - or if you're feeling lazy, upload a snapshot
-  - Syntax highlighting [using the included themes](../assets/css/README.md).
+  - Syntax highlighting [using the included themes](./assets/css/README.md).
 
-#### ★ Key point (code block or image)** ***— [required]***
+#### ★ Key point (code block or image)**
 
 - What's the main takeaway from this flashcard?
   - Snippet of code, or output.
   - Enter a `<pre><code>` block
     - or if you're feeling lazy, upload a snapshot
-  - Syntax highlighting [using the included themes](../assets/css/README.md).
+  - Syntax highlighting [using the included themes](./assets/css/README.md).
 
 #### ★ Key point notes
 
@@ -65,10 +65,10 @@ Both the **Simple theme** and **[Complex theme](#complex-field-template)** share
 
 
 ## Card 02: What does this syntax do? (Fields 7-9)
-**Important:** Must fill `✔ What does this syntax do?` to generate card.
 **Key:** ✄ Optional (explicitly hide fields)
 
 #### ✔ What does this syntax do?
+**Important:** Must fill `✔ What does this syntax do?` to generate card.
 
 - An alternative question to drill the syntax.
 
@@ -102,10 +102,10 @@ The complex theme extends the [Simple theme](#basic-field-template) to allow us 
   - Add a new function to the mix.
 
 ## Card 03: Puzzle question (Fields 10-18)
-**Important:** Must fill `♞ Puzzle` to generate card.
 **Key:** ♞ Required / ✄ Optional (explicitly hide fields) / ♘ Optional (Only if ✄ is used)
 
 #### 9. Puzzle
+**Important:** Must fill `♞ Puzzle` to generate card.
 
 - The puzzle question. Be creative!
 
@@ -160,7 +160,7 @@ Use sparingly, as it's always best to be succinct with Anki. Simple is easier to
 #### ✎ Markdown
 
 - Store raw `.md` for quicker editing
-- Also allows you to [quickly generate highlight.js styles](../assets/css/README.md) from raw fenced `(code blocks)`
+- Also allows you to [quickly generate highlight.js styles](./assets/css/README.md) from raw fenced `(code blocks)`
 
 
 
@@ -168,7 +168,7 @@ Use sparingly, as it's always best to be succinct with Anki. Simple is easier to
 
 ## Notes
 
-1. [Style fields, inline code and code blocks](../assets/css/README.md)
+1. [Style fields, inline code and code blocks](./assets/css/README.md)
 2. Fields marked **☆✄✎ Optional** can be left blank and the template will ignore them. **✔** and **♞** fields are required in order for a card to be generated.
 3. You can reference fields within fields. For instance, `{{☆ Syntax (inline code)}}` or `{{★ Key point (code block or image)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you may need to select *Edit HTML* in the editor and wrap in `<code>` or `<pre><code>` to render correctly.
   - Keep in mind that any referenced fields will have to be manually edited if the field name is ever changed.
