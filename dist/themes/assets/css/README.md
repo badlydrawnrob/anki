@@ -1,11 +1,11 @@
 # Anki theme: Styles
 ## Tomorrow light and Monokai
 
-- [Home](../../../README.md)
+- [Home](../../../../README.md)
   - **THEME**
-    - [Simple Anki theme](../README.md#basic-field-template)
-    - [Complex Anki theme](../README.md#complex-field-template)
-      - **Deck example**
+    - [Simple Anki theme](../../README.md#basic-field-template)
+    - [Complex Anki theme](../../README.md#complex-field-template)
+      - [Deck example](../../../dist/deck/README.md)
       - [Notes](../README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](#)
