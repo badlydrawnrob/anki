@@ -39,4 +39,4 @@ Not sure what all the fuss is about Anki? Read on my friend ...
 
 ### Versioning
 
-This is a major overhaul from the original. In future I'll try to stick to [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately with Anki this can be tricky, so view commits for any major changes to the card's structure or Anki fields. The easiest way to test the `dist/deck/*.apkg` is to import into a [new Anki profile](http://ankisrs.net/docs/manual.html#profiles-&-preferences).
+This is a major overhaul from the original. In future I'll try to stick to **minor.major.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately with Anki this can be tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/READEME.md) for the easiest way to test the `dist/deck/*.apkg` before updating your current version.
