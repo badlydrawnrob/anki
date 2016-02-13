@@ -31,15 +31,15 @@ If you like living life on the edge, I've also included the amazing **highlight.
 
 There's some nice default colour schemes; some fields are automatically wrapped in `<code>` so all you need to do is add the symbol, class or function. The main `(code blocks ..)` need to be wrapped in `<pre><code>`. See [fields documentation](./dist/themes/README.md) for more details
 
-##### Why use Anki Themes instead of an Anki plugin?
+#### Why use Anki Themes instead of an Anki plugin?
 
-**Because it's plain html.**
+***Because it's plain `html`!***
 
 There's a few Anki syntax highlighting plugins around, but as far I'm aware these all involve solutions like [Pygments](http://pygments.org). Call me old fashioned, but cramming your code with `spans` or inline css feels icky to me. 
 
-With **Anki themes**, you use pure html/Markdown/js and *easily customisable* css. If *highlight.js* dies tomorrow, I can swap it out for another javascript alternative. Granted, it currently works best on mobile, but I use [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html) 90% of the time anyway!
+With **Anki themes**, you use a pure html/Markdown/js workflow and *easily customisable* css. If *highlight.js* dies tomorrow, I can swap it out for another javascript alternative. Granted, it currently works best on mobile, but I use [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html) 90% of the time anyway!
 
-Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, documented, stable software wherever possible[^2].
+Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, well documented, stable software wherever possible[^2].
 
 
 ## Notes
