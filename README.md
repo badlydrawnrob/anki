@@ -7,7 +7,7 @@ The template is built in html and css, with [syntax highlighting](./dist/themes/
 
 ![Preview image](./preview.png)
 
-*Anki Themes: 'Simple' preview image<sup>**[1](#other-notes)**</sup>*
+*Anki Themes: 'Simple' preview image* <sup>***[1](#other-notes)***</sup>
 
 
 ## Card Types
