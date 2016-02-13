@@ -92,7 +92,7 @@ These mixins correspond to the screen sizes declared in `variables.less`. Overri
 
 ### Usage
 
-There are mixins for both `min-width` and `max-width` query scenarios, as well as specific intervals (e.g. "Small only").
+There are mixins for both `min-width and up` query scenarios and specific intervals (e.g. "Small only"). `max-width` mixins exist for backwards compatibility, but they have been **deprecated** and will be removed in the next major version.
 
 ```
 // Small only
@@ -113,16 +113,9 @@ There are mixins for both `min-width` and `max-width` query scenarios, as well a
     color: blue;
   }
 });
-
-// Extra-large and down
-.screen-xl-max({
-  .selector {
-    color: green;
-  }
-});
 ```
 
-If you want to change the styles for a selector at all the declared screen sizes, you can use the `.screen()` mixin to chain these `@media` queries together, like so:
+If you want to change the styles for a selector at all of the declared screen sizes, you can use the `.screen()` mixin to chain these `@media` queries together, like so:
 
 ```
 .my-element {

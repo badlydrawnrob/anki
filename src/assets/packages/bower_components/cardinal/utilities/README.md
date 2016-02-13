@@ -20,6 +20,7 @@ Utilities are typically used for rapid prototyping, or a last resort when needin
   - [Font Sizes](#font-sizes)
   - [Widths](#widths)
   - [Z-Index](#z-index)
+- [Credits](#credits)
 
 # Overview
 
@@ -181,3 +182,13 @@ Z-Index utilities allow you to manipulate the `z-index` property of a given elem
 <!-- Change the given element’s z-index from 1 to 7 on devices small and up -->
 <div class="z1 sm-z7">My z-index changes from 1 to 7 on devices small and up!</div>
 ```
+
+# Credits
+
+Cardinal’s utilities are influenced by the following projects, organizations, and individuals:
+
+- [inuit.css](https://github.com/inuitcss/) ([@csswizardry](https://github.com/csswizardry/))
+- [TACHYONS](http://tachyons.io/) ([@mrmrs](https://github.com/mrmrs/))
+- [Scally](https://github.com/chris-pearce/scally/) ([@chris-pearce](https://github.com/chris-pearce/))
+
+Many thanks for your hard work and great ideas!

@@ -1,3 +1,46 @@
+# 3.5.1 (Jannuary 18, 2016)
+
+- Remove `outline: 0 none;` from form components.
+
+# 3.5.0 (Jannuary 18, 2016)
+
+- Hardcode the value of `@to-rem-font-size` to 16 so that `@font-size` can be overridden.
+
+# 3.4.1 (January 11, 2016)
+
+- Fix incorrect variable used in the grid system.
+- Fix `height: auto !important;` from preventing `<textarea>` resizing in latest Chrome, Safari, and Firefox.
+
+# 3.3.1 (January 7, 2016)
+
+- Add back `max-width` mixins removed in 3.3.0 because they caused major breaking changes.
+- Add deprecation messages to `max-width` mixins (thanks @lukechilds).
+- Deprecate v3.3.0.
+
+# 3.3.0 (December 21, 2015)
+
+- Remove mixins that are not aligned with the “mobile-first” methodology (thanks @mrmrs for calling me out).
+
+# 3.2.9 (December 19, 2015)
+
+- fix incorrect URL (typo) in `README.md`.
+
+# 3.2.8 (December 19, 2015)
+
+- Had to bump version number because I pushed 3.2.7 to npm too soon, and had to unpublish it since version numbers in the CSS files were incorrect.
+
+# 3.2.7 (December 19, 2015)
+
+- Adding credit where credit is due. I cannot believe I forgot to do this (thank you @mrmrs for calling me out).
+- Updated code comments.
+- Removed some commented-out code.
+- Add npm/Bower badges to `README.md`.
+
+# 3.2.6 (September 29, 2015)
+
+- Update `gulp-less` to latest version.
+- Update `gulpfile.js`.
+
 # 3.2.5 (August 5, 2015)
 
 - Update some variables to use the `@spacing-*` equivalent value set previously, instead of hard-coded integers.

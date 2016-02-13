@@ -9,14 +9,17 @@
 //
 
 .font-face(@ff-name, @ff-file, @ff-weight:normal, @ff-style:normal) {
-  font-family: "@{ff-name}";
-  src: url("@{ff-file}.eot");
-  src: url("@{ff-file}.eot?#iefix") format("embedded-opentype"),
-       url("@{ff-file}.woff") format("woff"),
-       url("@{ff-file}.ttf") format("truetype"),
-       url("@{ff-file}.svg#@{ff-name}") format("svg");
-  font-weight: @ff-weight;
-  font-style: @ff-style;
+  @font-face {
+    font-family: "@{ff-name}";
+    src: url("@{ff-file}.eot");
+    src: url("@{ff-file}.eot?#iefix") format("embedded-opentype"),
+         url("@{ff-file}.woff2") format("woff2"),
+         url("@{ff-file}.woff") format("woff"),
+         url("@{ff-file}.ttf") format("truetype"),
+         url("@{ff-file}.svg#@{ff-name}") format("svg");
+    font-weight: @ff-weight;
+    font-style: @ff-style;
+  }
 
   //
   // Chrome for Windows rendering fix

@@ -21,14 +21,15 @@
     "package.json",
     "CONTRIBUTING.md"
   ],
-  "version": "3.2.6",
-  "_release": "3.2.6",
+  "version": "3.6.1",
+  "_release": "3.6.1",
   "_resolution": {
     "type": "version",
-    "tag": "3.2.6",
-    "commit": "0af4b6c8a09715541a019a4b114f08e6b8f52f73"
+    "tag": "3.6.1",
+    "commit": "6bd0696bec6f19196a0ff130ac9c375dff3f3d1e"
   },
   "_source": "git://github.com/cbracco/cardinal.git",
-  "_target": "~3.2.6",
-  "_originalSource": "cardinal"
+  "_target": "^3.6.1",
+  "_originalSource": "cardinal",
+  "_direct": true
 }

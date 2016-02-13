@@ -3,12 +3,21 @@
 \* ========================================================================== */
 
 /**
+ * Grid System
+ * Hat tip to @csswizardry for the `display: inline-block` grid technique.
+ *
+ * @link http://cbrac.co/1RvPb53
+ */
+
+/**
  * Grid containers
  * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
  * 2. Default gutter width.
  * 3. Hack to remove `inline-block` whitespace. This causes some issues on pre-
- *    Jellybean and Jellybean versions of Android (http://cbrac.co/1xh3hs0).
-      @link http://cbrac.co/16xcjcl
+ *    Jellybean and Jellybean versions of Android
+ *
+ *    @link http://cbrac.co/1xh3hs0
+ *    @link http://cbrac.co/16xcjcl
  */
 
 .grid {
@@ -228,7 +237,7 @@
 
 .gutter-1 > .grid-item,
 .gutter-whole > .grid-item {
-  .to-rem(padding-left, @grid-gutter-half);
+  .to-rem(padding-left, @grid-gutter-base);
 }
 
 // Double gutters

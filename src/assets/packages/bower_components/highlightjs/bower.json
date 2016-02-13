@@ -1,6 +1,6 @@
 {
   "name": "highlightjs",
-  "version": "8.9.1",
+  "version": "9.1.0",
   "main": [
     "highlight.pack.js",
     "styles/default.css"

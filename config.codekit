@@ -1226,6 +1226,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/arduino-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/arduino-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/arta.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1240,6 +1249,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/ascetic.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-cave-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-cave-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-cave-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-cave-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1262,6 +1289,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune.dark.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1276,6 +1321,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-dune.light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-estuary-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-estuary-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-estuary-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-estuary-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1298,6 +1361,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest.dark.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1312,6 +1393,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-forest.light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-heath-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-heath-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-heath-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-heath-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1334,6 +1433,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside.dark.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1348,6 +1465,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-lakeside.light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-plateau-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-plateau-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-plateau-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-plateau-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1370,6 +1505,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna.dark.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1384,6 +1537,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-savanna.light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-seaside-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-seaside-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-seaside-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-seaside-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1406,6 +1577,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-sulphurpool-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-sulphurpool-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-sulphurpool-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-sulphurpool-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/atelier-sulphurpool.dark.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1423,6 +1612,26 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown-paper.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown-paper.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown-papersq.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18198,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown-papersq.png",
+		"outputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown-papersq.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/brown_paper.css": {
 		"fileType": 16,
@@ -1579,6 +1788,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/ir-black.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/ir-black.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/ir_black.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1624,6 +1842,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/monokai-sublime.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/monokai-sublime.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/monokai.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1647,6 +1874,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/obsidian.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/paraiso-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/paraiso-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/paraiso-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/paraiso-light.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1707,6 +1952,26 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school-book.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school-book.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school-book.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 486,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school-book.png",
+		"outputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school-book.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/school_book.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1726,6 +1991,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/solarized-dark.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/solarized-dark.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/solarized-light.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/solarized-light.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/src\/assets\/packages\/bower_components\/highlightjs\/styles\/solarized_dark.css": {
 		"fileType": 16,
