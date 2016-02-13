@@ -65,26 +65,36 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 
 
 ## Card 02: What does this syntax do? (Fields 7-9)
-**Key:** ✄ Optional (explicitly hide fields)
+**Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 #### ✔ What does this syntax do?
 **Important:** Must fill `✔ What does this syntax do?` to generate card.
 
 - An alternative question to drill the syntax.
 
-#### ----✄-- Hide: Syntax (inline code)
+#### ----✄-- Hide on front: Syntax (inline code)
 
 - Optionally hide the [inline code sample](#☆-syntax-inline-code).
   - Simply enter any text to hide field, i.e. `true`.
   - Great for questions that force you to remember the syntax, where you don't want any giveaways.
-- Will be displayed as a **Reference guide** if hidden.
 
-#### ----✄-- Hide: Sample (code block or image)
+#### »»♻»» Show as reference: Syntax (inline code)
 
-- Optionally hide the [inline code sample](#☆-syntax-code-block-or-image).
+- Optionally show the [inline code sample](#☆-syntax-inline-code)
+  - Simply enter any text to hide field, i.e. `true`.
+  - Will be displayed as a **Reference guide**.
+
+#### ----✄-- Hide on front: Sample (code block or image)
+
+- Optionally hide the main [sample code block](#☆-sample-code-block-or-image).
   - Simply enter any text to hide field, i.e. `true`.
   - Depending on the sample code, you may want to hide this if it makes the answer too obvious.
-- Will be displayed as a **Reference guide** if hidden.
+
+#### »»♻»» Show as reference: Sample (code block or image)
+
+- Optionally show the main [sample code block](#☆-sample-code-block-or-image)
+  - Simply enter any text to hide field, i.e. `true`.
+  - Will be displayed as a **Reference guide**.
 
 
 
@@ -102,32 +112,41 @@ The complex theme extends the [Simple theme](#basic-field-template) to allow us 
   - Add a new function to the mix.
 
 ## Card 03: Puzzle question (Fields 10-18)
-**Key:** ♞ Required / ✄ Optional (explicitly hide fields) / ♘ Optional (Only if ✄ is used)
+**Key:** ♞ Required / / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
 #### 9. Puzzle
 **Important:** Must fill `♞ Puzzle` to generate card.
 
 - The puzzle question. Be creative!
 
-#### –--✄--- Hide: Syntax (inline code)
+#### –--✄--- Hide on front: Syntax (inline code)
 
 - Optionally hide the [inline code sample](#☆-syntax-inline-code).
+
+#### »»♻«« Show as reference: Syntax (inline code)
+
+- Optionally show the [inline code sample](#☆-syntax-inline-code)
+  - Will be displayed as a **Reference guide**
+
+#### –--✄--- Hide on front: Sample (code block or image)
+
+- Optionally hide the [sample code block](#☆-sample-code-block-or-image)
 - Will be displayed as a **Reference guide** if hidden.
 
-#### –--✄--- Hide: Sample (code block or image)
+#### »»♻«« Show as reference: Sample (code block or image)
 
-- Optionally hide the [inline code sample](#☆-syntax-code-block-or-image)
-- Will be displayed as a **Reference guide** if hidden.
+- Optionally show the main [sample code block](#☆-sample-code-block-or-image)
+  - Will be displayed as a **Reference guide**.
 
 #### ♘ Puzzle (inline code)
 
 - Sometimes it can be useful to display a different syntax, one that is an extension of, or complementary of the original.
-  - Requires `–--✄--- Hide: Syntax (inline code)` to be `true`
+  - Requires `–--✄--- Hide on front: Syntax (inline code)` to be `true`
 
 #### ♘ Puzzle (code block or image)
 
 - Sometimes it can be useful to display a different code example, for instance using the original syntax with an extra function, or generating a different output.
-  - Requires `–--✄--- Hide: Sample (code block or image)` to be `true`
+  - Requires `–--✄--- Hide on front: Sample (code block or image)` to be `true`
 
 #### ♘ Puzzle hint
 
@@ -169,6 +188,6 @@ Use sparingly, as it's always best to be succinct with Anki. Simple is easier to
 ## Notes
 
 1. [Style fields, inline code and code blocks](./assets/css/README.md)
-2. Fields marked **☆✄✎ Optional** can be left blank and the template will ignore them. **✔** and **♞** fields are required in order for a card to be generated.
+2. Fields marked **☆✄♻✎ Optional** can be left blank and the template will ignore them. **✔** and **♞** fields are required in order for a card to be generated.
 3. You can reference fields within fields. For instance, `{{☆ Syntax (inline code)}}` or `{{★ Key point (code block or image)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you may need to select *Edit HTML* in the editor and wrap in `<code>` or `<pre><code>` to render correctly.
-  - Keep in mind that any referenced fields will have to be manually edited if the field name is ever changed.
+  - Keep in mind that any referenced fields will have to be manually edited if the field name is ever changed, which can be a huge pita.

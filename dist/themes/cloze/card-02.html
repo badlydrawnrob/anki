@@ -1,5 +1,5 @@
 <!-- ==========================================
-     Simple Theme
+     Cloze Theme
 
    - Card: What does this syntax do?
    - Info: Drill yourself on syntax
@@ -8,7 +8,6 @@
    - Key:  ★ Required
            ☆ Optional (recommended)
            ✄ Optional (explicitly hide fields)
-           ♻ Optional (explicitly show reference fields)
            ✎ Optional (Notes)
 =============================================== -->
 
@@ -20,13 +19,11 @@
 
     <!-- Explicitly hide inline code -->
     {{^----✄-- Hide on front: Syntax (inline code)}}
-      <code>{{☆ Syntax (inline code)}}</code>
+    <code>{{☆ Syntax (inline code)}}</code>
     {{/----✄-- Hide on front: Syntax (inline code)}}
   </h1>
   {{^----✄-- Hide on front: Sample (code block or image)}}
-    <div class="sample-code mb">
-      {{☆ Sample (code block or image)}}
-    </div>
+  <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
   {{/----✄-- Hide on front: Sample (code block or image)}}
   <p class="title">{{✔ What does this syntax do?}}</p>
 </div>
@@ -37,24 +34,21 @@
 {{FrontSide}}
 
 <div id="answer" class="container card-2 pt+">
-  <div class="box-code">{{★ Key point (code block or image)}}</div>
-  <div class="box-notes">{{★ Key point notes}}</div>
-  <div class="reference">
-    {{#»»♻»» Show as reference: Syntax (inline code)}}
-      <div class="reference-syntax pt-">
-        <h4 class="mb-">Original syntax:
-          <code>{{☆ Syntax (inline code)}}</code>
-        </h4>
-      </div>
-    {{/»»♻»» Show as reference: Syntax (inline code)}}
-    {{#»»♻»» Show as reference: Sample (code block or image)}}
-      <div class="reference-sample-code mb pt-">
-        <h4 class="mb-">Original sample code:</h4>
-        {{☆ Sample (code block or image)}}
-      </div>
-    {{/»»♻»» Show as reference: Sample (code block or image)}}
+  <div class="box mb">
+    <div class="box-code">{{★ Key point (code block or image)}}</div>
+    <div class="box-notes">{{★ Key point notes}}</div>
   </div>
-  <div class="footer mt pb">
-    {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
+  <div class="reference pb">
+    <div class="h2">Reference:
+      {{#»»♻»» Show as reference: Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+      {{/»»♻»» Show as reference: Syntax (inline code)}}
+    </div>
+    {{#»»♻»» Show as reference: Sample (code block or image)}}
+    <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
+    {{/»»♻»» Show as reference: Sample (code block or image)}}
+    <div class="footer">
+      {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
+    </div>
   </div>
 </div>

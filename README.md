@@ -32,11 +32,11 @@ I've included some nice default styles for code; some fields will be automatical
 
 ### Further reading
 
-Not sure what all the fuss is about Anki? Read on my friend ...
+Not sure what all the fuss is about Anki? Some great reading material below ...
 
 - [Anki essentials](http://alexvermeer.com/anki-essentials/)
 - [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html)
 
 ### Versioning
 
-This is a major overhaul from the original. In future I'll try to stick to **minor.major.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately with Anki this can be tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/READEME.md) for the easiest way to test the `dist/deck/*.apkg` before updating your current version.
+This is a major overhaul from the original, so it's not compatible with earlier versions. In future I'll try to stick to **minor.major.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/README.md) for the easiest way to test the [.apkg package](./dist/deck) before updating future versions.

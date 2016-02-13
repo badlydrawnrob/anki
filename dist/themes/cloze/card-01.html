@@ -1,5 +1,5 @@
 <!-- ==========================================
-     Complex Theme
+     Cloze theme
 
    - Card: What's the answer?
    - Info: Question about the code example
@@ -14,8 +14,7 @@
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
     <code>{{☆ Syntax (inline code)}}</code>
   </h1>
-  <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
-  <p class="title">{{★ Title}}</p>
+  <div class="sample-code mb">{{cloze:☆ Sample (code block)}}</div>
 </div>
 
 <!-- ========================================== -->
@@ -23,9 +22,13 @@
 {{FrontSide}}
 
 <div id="answer" class="container card-1 pt+">
-  <div class="box-code">{{★ Key point (code block or image)}}</div>
-  <div class="box-notes">{{★ Key point notes}}</div>
-  <div class="footer mt pb">
-    {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
+  <div class="box mb">
+    <!-- <div class="box-code">{{★ Key point (code block or image)}}</div> -->
+    <div class="box-notes">{{★ Key point notes}}</div>
+  </div>
+  <div class="reference pb">
+    <div class="footer">
+      {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
+    </div>
   </div>
 </div>

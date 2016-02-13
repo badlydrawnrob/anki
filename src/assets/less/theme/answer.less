@@ -14,22 +14,34 @@
   }
 }
 
-.box {
-  .box-code {
-    .to-rem(margin, -(@box-padding) -(@box-padding) 0); // Flush with .box
+.box-code {}
 
-    &:empty {
-      margin: 0;
-    }
-  }
-
-  .box-notes {}
+.box-notes:not(:empty) {
+  .box;
 }
 
-// Reference ====================================
 
-.footer,
-.puzzle-hint {
+// Reference ====================================
+// #1: Whitespace bug, tags must be ajoined
+//     otherwise the container can be seen
+
+.reference {
+  .to-rem(border-radius, @border-radius-base @border-radius-base 0 0);
+
+  background: lighten(yellow, 30%);
+
+  &-syntax {
+    border-bottom: 1px solid fade(#000, 20%);
+  }
+
+  &-sample-code {
+
+  }
+}
+
+// Footer =======================================
+
+.footer {
   color: @color-gray-dark;
   font-style: italic;
 }
