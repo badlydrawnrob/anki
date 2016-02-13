@@ -1,0 +1,154 @@
+/* ========================================================================== *\
+   Base -> Debug ($base-debug)
+\* ========================================================================== */
+
+//
+// DO NOT USE THIS STYLESHEET IN PRODUCTION!
+//
+// This stylesheet is for developers only. It can help you visually detect any
+// nesting issues, invalid markup, or inaccessible code in your project.
+//
+// @link http://cbrac.co/1C01g8C
+//
+// DO NOT USE THIS STYLESHEET IN PRODUCTION!
+//
+
+@debug-outline-width: 5px;
+@debug-outline-style: solid;
+@debug-outline-color-error: red;
+@debug-outline-color-warning: yellow;
+
+//
+// Debug
+//
+// red    = error
+// yellow = warning
+// none   = no issues
+//
+
+/**
+ * Images require `alt` attributes, empty `alt` is fine but should be
+ * double-checked, no `alt` is bad.
+ */
+
+img {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-error !important;
+}
+
+img[alt] {
+  outline: none !important;
+}
+
+img[alt=""] {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+/**
+ * Double-check any links whose `href` is something questionable.
+ */
+
+a[href=""],
+a[href="#"],
+a[href*="javascript"] {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+/**
+ * Try to avoid using the `target` attribute.
+ */
+
+a[target] {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+
+/**
+ * Ensure any lists only contain <li> as children.
+ */
+
+ul,
+ol {
+  > *:not(li) {
+    outline: @debug-outline-width @debug-outline-style @debug-outline-color-error !important;
+  }
+}
+
+/**
+ * It's always nice to give <th> the `scope` attribute.
+ */
+
+th {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+th[scope] {
+  outline: none !important;
+}
+
+
+/**
+ * <tr> as child of <table> ain't great, did you need a <thead> or <tbody>?
+ */
+
+table > tr {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+
+/**
+ * `tfoot` needs to come *before* `tbody`.
+ */
+
+tbody + tfoot {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}
+
+
+/**
+ * Forms require `action` attributes.
+ */
+
+form {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-error !important;
+}
+
+form[action] {
+  outline: none !important;
+}
+
+
+/**
+ * Various form-field types have required attributes. <input> needs a `type`
+ * attribute, <textarea> needs `rows` and `cols` attributes, and submit buttons
+ * need a `value` attribute.
+ */
+
+textarea,
+input {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-error !important;
+}
+
+input[type] {
+  outline: none !important;
+}
+
+textarea[rows][cols] {
+  outline: none !important;
+}
+
+input[type=submit] {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-error !important;
+}
+
+input[type=submit][value] {
+  outline: none !important;
+}
+
+
+/**
+ * Avoid inline styles wherever possible.
+ */
+
+[style] {
+  outline: @debug-outline-width @debug-outline-style @debug-outline-color-warning !important;
+}

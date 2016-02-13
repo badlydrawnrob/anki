@@ -1,0 +1,107 @@
+/* ========================================================================== *\
+   Base -> Root ($base-root)
+\* ========================================================================== */
+
+/**
+ * The <html> element.
+ *
+ * 1. Set the default `font-size` and `line-height` for the project based on
+      variables set previously. The `font-size` is represented in `rem`s, and
+      the `line-height` is represented as a unitless value.
+*
+ * 2. Force a vertical scrollbar.
+ *
+ *    @link http://cbrac.co/163MspB
+ *
+ * 3. Ensure the <html> element's `height` is at least the viewport height.
+ *
+ * NOTES:
+ *
+ * - Use `text-rendering` with caution.
+ *
+ *   @link http://cbrac.co/SJt8p1
+ *
+ * - Avoid the webkit anti-aliasing trap.
+ *
+ *   @link http://cbrac.co/TAdhbH
+ *
+ * - IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the viewport
+ *   <meta> tag is used.
+ *
+ *   @link http://cbrac.co/1cFrAvl
+ */
+
+html {
+  font-family: @font-family-sans-serif;
+  .to-rem(font-size, @font-size);  /* 1 */
+  line-height: @line-height-ratio; /* 1 */
+  overflow-y: scroll;              /* 2 */
+  height: 100%;                    /* 3 */
+  background-color: @root-background-color;
+  color: @root-text-color;
+}
+
+/**
+ * The <body> element.
+ *
+ * 1. Ensure the <body> element's `min-height` is at least the viewport height.
+ */
+
+body {
+  min-height: 100%; /* 1 */
+}
+
+/**
+ * Set a consistent margin for common elements to maintain vertical rhythm.
+ */
+
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+hr,
+menu,
+ol,
+p,
+pre,
+summary,
+table,
+ul {
+  .to-rem(margin-bottom, @spacing-base);
+}
+
+/**
+ * Add word wrapping and basic hyphenation to common elements.
+ */
+
+caption,
+p,
+table,
+td,
+textarea,
+th {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/**
+ * NOTE: Do not remove :focus styles! It’s an accessibility no-no.
+ *
+ * @link http://cbrac.co/1cNYD2l
+ */
+
+:focus {
+  .to-rem(outline, @root-focus-outline-fallback-width, @root-focus-outline-fallback-style @root-focus-outline-fallback-color);
+  .to-rem(outline, @root-focus-outline-width, @root-focus-outline-style @root-focus-outline-color);
+}

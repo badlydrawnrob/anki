@@ -1,0 +1,355 @@
+/* ========================================================================== *\
+   Utilities -> Display ($utilities-display)
+\* ========================================================================== */
+
+//
+// d    = display
+// n    = none
+// i    = inline
+// b    = block
+// ib   = inline-block
+// it   = inline-table
+// t    = table
+// tr   = table-row
+// trg  = table-row-group
+// tc   = table-cell
+// col  = table-column
+// colg = table-column-group
+//
+
+.dn {
+  display: none !important;
+}
+
+.di {
+  display: inline !important;
+}
+
+.db {
+  display: block !important;
+}
+
+/**
+ * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+ *    parent styled `inline-block` displays at its default size, not 100% of the
+ *    parent container.
+ */
+
+.dib {
+  display: inline-block !important;
+  max-width: 100% !important; /* 1 */
+}
+
+.dit {
+  display: inline-table !important;
+}
+
+.dt {
+  display: table !important;
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+
+.dtr {
+  display: table-row !important;
+}
+
+.dtrg {
+  display: table-row-group !important;
+}
+
+.dtc {
+  display: table-cell !important;
+}
+
+.dtcol {
+  display: table-column !important;
+}
+
+.dtcolg {
+  display: table-column-group !important;
+}
+
+.screens({
+  .xs-dn {
+    display: none !important;
+  }
+
+  .xs-di {
+    display: inline !important;
+  }
+
+  .xs-db {
+    display: block !important;
+  }
+
+  .xs-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .xs-dit {
+    display: inline-table !important;
+  }
+
+  .xs-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .xs-dtr {
+    display: table-row !important;
+  }
+
+  .xs-dtrg {
+    display: table-row-group !important;
+  }
+
+  .xs-dtc {
+    display: table-cell !important;
+  }
+
+  .xs-dtcol {
+    display: table-column !important;
+  }
+
+  .xs-dtcolg {
+    display: table-column-group !important;
+  }
+},{
+  .sm-dn {
+    display: none !important;
+  }
+
+  .sm-di {
+    display: inline !important;
+  }
+
+  .sm-db {
+    display: block !important;
+  }
+
+  .sm-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .sm-dit {
+    display: inline-table !important;
+  }
+
+  .sm-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .sm-dtr {
+    display: table-row !important;
+  }
+
+  .sm-dtrg {
+    display: table-row-group !important;
+  }
+
+  .sm-dtc {
+    display: table-cell !important;
+  }
+
+  .sm-dtcol {
+    display: table-column !important;
+  }
+
+  .sm-dtcolg {
+    display: table-column-group !important;
+  }
+},{
+  .md-dn {
+    display: none !important;
+  }
+
+  .md-di {
+    display: inline !important;
+  }
+
+  .md-db {
+    display: block !important;
+  }
+
+  .md-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .md-dit {
+    display: inline-table !important;
+  }
+
+  .md-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .md-dtr {
+    display: table-row !important;
+  }
+
+  .md-dtrg {
+    display: table-row-group !important;
+  }
+
+  .md-dtc {
+    display: table-cell !important;
+  }
+
+  .md-dtcol {
+    display: table-column !important;
+  }
+
+  .md-dtcolg {
+    display: table-column-group !important;
+  }
+},{
+  .lg-dn {
+    display: none !important;
+  }
+
+  .lg-di {
+    display: inline !important;
+  }
+
+  .lg-db {
+    display: block !important;
+  }
+
+  .lg-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .lg-dit {
+    display: inline-table !important;
+  }
+
+  .lg-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .lg-dtr {
+    display: table-row !important;
+  }
+
+  .lg-dtrg {
+    display: table-row-group !important;
+  }
+
+  .lg-dtc {
+    display: table-cell !important;
+  }
+
+  .lg-dtcol {
+    display: table-column !important;
+  }
+
+  .lg-dtcolg {
+    display: table-column-group !important;
+  }
+},{
+  .xl-dn {
+    display: none !important;
+  }
+
+  .xl-di {
+    display: inline !important;
+  }
+
+  .xl-db {
+    display: block !important;
+  }
+
+  .xl-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .xl-dit {
+    display: inline-table !important;
+  }
+
+  .xl-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .xl-dtr {
+    display: table-row !important;
+  }
+
+  .xl-dtrg {
+    display: table-row-group !important;
+  }
+
+  .xl-dtc {
+    display: table-cell !important;
+  }
+
+  .xl-dtcol {
+    display: table-column !important;
+  }
+
+  .xl-dtcolg {
+    display: table-column-group !important;
+  }
+},{
+  .xxl-dn {
+    display: none !important;
+  }
+
+  .xxl-di {
+    display: inline !important;
+  }
+
+  .xxl-db {
+    display: block !important;
+  }
+
+  .xxl-dib {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+
+  .xxl-dit {
+    display: inline-table !important;
+  }
+
+  .xxl-dt {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  .xxl-dtr {
+    display: table-row !important;
+  }
+
+  .xxl-dtrg {
+    display: table-row-group !important;
+  }
+
+  .xxl-dtc {
+    display: table-cell !important;
+  }
+
+  .xxl-dtcol {
+    display: table-column !important;
+  }
+
+  .xxl-dtcolg {
+    display: table-column-group !important;
+  }
+});

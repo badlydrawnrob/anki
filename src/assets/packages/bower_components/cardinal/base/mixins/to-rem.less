@@ -1,0 +1,76 @@
+// =============================================================================
+// Base -> Mixins -> to-REM
+// =============================================================================
+
+@to-rem-font-size: 16;
+
+//
+// Convert unitless pixel values to rem.
+//
+// Usage
+//
+// .selector {
+//   .to-rem(left, 1);
+//   .to-rem(padding, 10 5 12);
+//   .to-rem(border, 1, solid green);
+//   .to-rem(box-shadow, 1 1 0 -1, rgba(0, 0, 0, 0.3));
+//   .to-rem(margin, 30 auto 0);
+// }
+//
+// @link http://cbrac.co/15UAPWx
+//
+
+.to-rem(@property, @size-values, @rest-link-params : false) {
+
+  @property-rem: ~'/*rem*/'@property;
+  @property-px: ~'/*px*/'@property;
+
+  .to-rem-loop();
+
+  .to-rem-loop(@amount : length(@size-values), @i : 1) when (@i =< @amount) {
+
+    @size-value: extract(@size-values, @i);
+
+    & when (iskeyword(@size-value)) {
+      @px-value  : @size-value;
+      @rem-value : @size-value;
+      @{property-px}+_ : ~"@{px-value}";
+      @{property-rem}+_ : ~"@{rem-value}";
+    }
+
+    & when not (iskeyword(@size-value)) {
+
+      @px-value  : @size-value;
+      @rem-value : @size-value / @to-rem-font-size;
+
+      & when not (@px-value = 0) {
+        @{property-px}+_ : ~"@{px-value}px";
+      }
+
+      & when (@px-value = 0) {
+        @{property-px}+_ : @px-value;
+      }
+
+      & when not (@rem-value = 0) {
+        @{property-rem}+_ : ~"@{rem-value}rem";
+      }
+
+      & when (@rem-value = 0) {
+        @{property-rem}+_ : @rem-value;
+      }
+
+    }
+
+    .to-rem-loop(@amount, (@i + 1));
+
+  }
+
+  & when not (@rest-link-params = false) {
+    @{property-px}+_ : @rest-link-params;
+  }
+
+  & when not (@rest-link-params = false) {
+    @{property-rem}+_ : @rest-link-params;
+  }
+
+}

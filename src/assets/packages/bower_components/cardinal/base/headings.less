@@ -1,0 +1,51 @@
+/* ========================================================================== *\
+   Base -> Headings ($base-headings)
+\* ========================================================================== */
+
+/**
+ * NOTE: Use the `text-rendering` property with caution.
+ *
+ * @link http://cbrac.co/SJt8p1
+ * @link http://cbrac.co/1Fjv7IR
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: @heading-font-family;
+  font-weight: @heading-font-weight;
+  color: @heading-text-color;
+}
+
+h1,
+.h1 {
+  .to-rem(font-size, @font-size-heading-1);
+}
+
+h2,
+.h2 {
+  .to-rem(font-size, @font-size-heading-2);
+}
+
+h3,
+.h3 {
+  .to-rem(font-size, @font-size-heading-3);
+}
+
+h4,
+.h4 {
+  .to-rem(font-size, @font-size-heading-4);
+}
+
+h5,
+.h5 {
+  .to-rem(font-size, @font-size-heading-5);
+}
+
+h6,
+.h6 {
+  .to-rem(font-size, @font-size-heading-6);
+}

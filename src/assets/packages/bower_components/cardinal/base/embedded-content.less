@@ -1,0 +1,90 @@
+/* ========================================================================== *\
+   Base -> Embedded Content ($base-embedded-content)
+\* ========================================================================== */
+
+/**
+ * Remove the gap between audio, canvas, iframes, images, videos and the bottom
+ * of their containers.
+ *
+ * @link http://cbrac.co/Q6smqV
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * Fluid-width <audio>, <canvas>, & <video> elements.
+ */
+
+audio,
+canvas,
+video {
+  width: 100%;
+  &:focus {
+    outline: 1px dotted @color-black;
+  }
+}
+
+/**
+ * Fluid-width media elements that maintain their aspect ratios.
+ */
+
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+embed,
+object {
+  height: 100%;
+}
+
+/**
+ * Reset `margin` for figure elements.
+ */
+
+figure {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/**
+ * Set <img> elements as block-level inside <figure> elements.
+ */
+
+figure > img {
+  display: block;
+}
+
+/**
+ * Give <figcaption> elements some default styles.
+ */
+
+figcaption {
+  .to-rem(font-size, @font-size-xx-small);
+  font-style: italic;
+  .to-rem(margin-top, @figcaption-margin-top);
+  color: @figcaption-text-color;
+}
+
+/**
+ * 1. If images do not load, the `alt` text will be visually offset and more
+ *    noticeable.
+ * 2. Improve image resize rendering in IE6/7.
+ *
+ *    @link http://cbrac.co/11ciIZL
+ */
+
+img {
+  font-style: italic;              /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}

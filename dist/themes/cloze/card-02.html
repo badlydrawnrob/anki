@@ -1,0 +1,54 @@
+<!-- ==========================================
+     Cloze Theme
+
+   - Card: What does this syntax do?
+   - Info: Drill yourself on syntax
+           ✔ What does this syntax do?
+             required to generate card.
+   - Key:  ★ Required
+           ☆ Optional (recommended)
+           ✄ Optional (explicitly hide fields)
+           ✎ Optional (Notes)
+=============================================== -->
+
+{{#✔ What does this syntax do?}}
+<div id="front" class="container card-2 pb">
+  <h1 class="syntax">
+    {{^☆ Syntax}}Syntax{{/☆ Syntax}}
+    {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
+
+    <!-- Explicitly hide inline code -->
+    {{^----✄-- Hide on front: Syntax (inline code)}}
+    <code>{{☆ Syntax (inline code)}}</code>
+    {{/----✄-- Hide on front: Syntax (inline code)}}
+  </h1>
+  {{^----✄-- Hide on front: Sample (code block or image)}}
+  <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
+  {{/----✄-- Hide on front: Sample (code block or image)}}
+  <p class="title">{{✔ What does this syntax do?}}</p>
+</div>
+{{/✔ What does this syntax do?}}
+
+<!-- ========================================== -->
+
+{{FrontSide}}
+
+<div id="answer" class="container card-2 pt+">
+  <div class="box mb">
+    <div class="box-code">{{★ Key point (code block or image)}}</div>
+    <div class="box-notes">{{★ Key point notes}}</div>
+  </div>
+  <div class="reference pb">
+    <div class="h2">Reference:
+      {{#»»♻»» Show as reference: Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+      {{/»»♻»» Show as reference: Syntax (inline code)}}
+    </div>
+    {{#»»♻»» Show as reference: Sample (code block or image)}}
+    <div class="sample-code mb">{{☆ Sample (code block or image)}}</div>
+    {{/»»♻»» Show as reference: Sample (code block or image)}}
+    <div class="footer">
+      {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
+    </div>
+  </div>
+</div>

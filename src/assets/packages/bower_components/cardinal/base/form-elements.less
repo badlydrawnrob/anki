@@ -1,0 +1,119 @@
+/* ========================================================================== *\
+   Base -> Form Elements ($base-form-elements)
+\* ========================================================================== */
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where [2] destroys native
+ *    <audio> and <video> controls.
+ * 2. Improve usability and consistency of cursor style between
+ *    image-type <input> and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"],
+input[type="reset"],
+input[type="submit"],
+label,
+select {
+  cursor: pointer;         /* 2 */
+}
+
+/**
+ * Fix vertical alignment inconsistencies with certain form inputs.
+ */
+
+input[type="color"],
+input[type="range"] {
+  vertical-align: middle;
+}
+
+/**
+ * 1. Set `min-width` to 0 to avoid overflow issues in Chrome.
+ * 2. Remove default `margin`, `padding`, and `border` across browsers.
+ */
+
+fieldset {
+  min-width: 0; /* 1 */
+  margin: 0;    /* 2 */
+  padding: 0;   /* 2 */
+  border: 0;    /* 2 */
+}
+
+/**
+ * 1. Set checkbox, image, and radio inputs to `inline-block`, by default.
+ */
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  display: inline-block; /* 1 */
+  width: auto;
+}
+
+/**
+ * 1. Constrict `max-width` for file inputs to avoid overflow issues.
+ */
+
+input[type="file"] {
+  max-width: 100%; /* 1 */
+  cursor: pointer;
+}
+
+/**
+ * 1. Set search inputs to `border-box` by default. This overrides the
+ *    `content-box` value set by normalize.css.
+ * 2. Remove rounded corners from iOS search inputs by overriding `appearance:
+ *    textfield` from normalize.css.
+ *
+ *    @link http://cbrac.co/1xgTke2
+ */
+
+input[type="search"] {
+  box-sizing: border-box; /* 1 */
+  appearance: none;       /* 2 */
+}
+
+/**
+ * Remove rounded corners that iOS and Chrome apply to <input> buttons and
+ * <select> menus.
+ */
+
+input[type="submit"],
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+select {
+  border-radius: 0;
+}
+
+/**
+ * 1. Force Safari to give <legend> elements 100% width.
+ * 2. Remove `padding` so people aren't caught out if they zero out <fieldset>.
+ * 3. Correct `color` not being inherited in IE 8/9.
+ */
+
+legend {
+  font-weight: 700;
+  width: 100%;                    /* 1 */
+  padding: 0;                     /* 2 */
+  color: @form-legend-text-color; /* 3 */
+  border: 0;
+}
+
+/**
+ * 1. Restrict width to 100% of its parent to avoid horizontal overflow issues.
+ * 2. Force `height: auto;` for <textarea> across browsers.
+ * 3. <textarea> elements should only resize vertically.
+ */
+
+textarea {
+  max-width: 100%;  /* 1 */
+  height: auto;     /* 2 */
+  resize: vertical; /* 3 */
+}
+
+
