@@ -7,7 +7,7 @@ The template is built in html and css, with [syntax highlighting](./dist/themes/
 
 ![Preview image](./preview.png)
 
-*Anki theme card #01 preview image*
+*Anki Themes: 'Simple' preview image[^1]*
 
 
 ## Card Types
@@ -39,7 +39,7 @@ There's a few Anki syntax highlighting plugins around, but as far I'm aware thes
 
 With **Anki themes**, you use pure html/Markdown/js and *easily customisable* css. If *highlight.js* dies tomorrow, I can swap it out for another javascript alternative. Granted, it currently works best on mobile, but I use [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html) 90% of the time anyway!
 
-Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, documented, stable software wherever possible[^1].
+Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, documented, stable software wherever possible[^2].
 
 
 ## Notes
@@ -57,4 +57,5 @@ This is a major overhaul from the original, so it's not compatible with earlier 
 
 <!-- NOTES -->
 
-[1]: I'm no ludite, the popular [Power format pack](https://ankiweb.net/shared/info/162313389) could complement Anki themes and make for a nice workflow. I generally work with Sublime/Atom and render html with Marked App but this plugin could save you some hassle.
+[^1]: Icons courtesy of [@kompa](http://devicon.fr)
+[^2]: I'm no ludite, the popular [Power format pack](https://ankiweb.net/shared/info/162313389) could complement Anki themes and make for a nice workflow. I generally work with Sublime/Atom and render html with Marked App but this plugin could save you some hassle.
