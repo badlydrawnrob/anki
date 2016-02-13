@@ -7,7 +7,7 @@ The template is built in html and css, with [syntax highlighting](./dist/themes/
 
 ![Preview image](./preview.png)
 
-*Anki Themes: 'Simple' preview image<sup>[1](#other-notes)</sup>*
+*Anki Themes: 'Simple' preview image<sup>**[1](#other-notes)**</sup>*
 
 
 ## Card Types
@@ -39,7 +39,7 @@ There's a few Anki syntax highlighting plugins around, but as far I'm aware thes
 
 With **Anki themes**, you use a pure html/Markdown/js workflow and *easily customisable* css. If *highlight.js* dies tomorrow, I can swap it out for another javascript alternative. Granted, it currently works best on mobile, but I use [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html) 90% of the time anyway!
 
-Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, well documented, stable software wherever possible<sup>[2](#other-notes)</sup>.
+Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, well documented, stable software wherever possible<sup>**[2](#other-notes)**</sup>.
 
 
 ## Notes
