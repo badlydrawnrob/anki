@@ -2,7 +2,7 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](#basic-field-template)
+    - [Simple Anki theme](#simple-theme)
     - [Complex Anki theme](#complex-theme)
       - [Deck example](../deck/README.md)
       - [Notes](#notes)
@@ -64,7 +64,7 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 - For any key functions or symbols, wrap in `<code>`.
 
 
-## Card 02: What does this syntax do? (Fields 7-9)
+## Card 02: What does this syntax do? (Fields 7-11)
 **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 #### ✔ What does this syntax do?
@@ -104,17 +104,17 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 
 <img align="right" src="https://media.giphy.com/media/C47AAXrd7EIz6/giphy.gif">
 
-The complex theme extends the [Simple theme](#basic-field-template) to allow us to get a little creative.
+The complex theme extends the [Simple theme](#simple-theme) to allow us to get a little creative.
 
 1. **Puzzle question**
   - Drill yourself in a different way.
   - Try a different result with the syntax you're learning.
   - Add a new function to the mix.
 
-## Card 03: Puzzle question (Fields 10-18)
-**Key:** ♞ Required / / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
+## Card 03: Puzzle question (Fields 12-21)
+**Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
-#### 9. Puzzle
+#### ♞ Puzzle
 **Important:** Must fill `♞ Puzzle` to generate card.
 
 - The puzzle question. Be creative!

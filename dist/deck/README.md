@@ -2,7 +2,7 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](../themes/README.md#basic-field-template)
+    - [Simple Anki theme](../themes/README.md#simple-theme)
     - [Complex Anki theme](../themes/README.md#complex-theme)
       - **Deck example**
       - [Notes](../themes/README.md#notes)

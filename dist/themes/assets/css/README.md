@@ -3,7 +3,7 @@
 
 - [Home](../../../../README.md)
   - **THEME**
-    - [Simple Anki theme](../../README.md#basic-field-template)
+    - [Simple Anki theme](../../README.md#simple-theme)
     - [Complex Anki theme](../../README.md#complex-theme)
       - [Deck example](../../../dist/deck/README.md)
       - [Notes](../README.md#notes)

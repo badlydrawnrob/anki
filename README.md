@@ -60,4 +60,4 @@ This is a major overhaul from the original, so it's not compatible with earlier 
 ### Other notes
 
 1. Icons courtesy of [@kompa](http://devicon.fr)
-2. I'm no ludite, the popular [Power format pack](https://ankiweb.net/shared/info/162313389) could complement Anki themes and make for a nice workflow. I generally work with Sublime/Atom and render html with Marked App but this plugin could save you some hassle.
+2. I'm no luddite, the popular [Power format pack](https://ankiweb.net/shared/info/162313389) could complement Anki themes and make for a nice workflow. I generally work with Sublime/Atom and render html with Marked App but this plugin could save you some hassle.
