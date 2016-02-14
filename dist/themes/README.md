@@ -68,8 +68,8 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 #### ✔ What does this syntax do?
-**Important:** Must fill `✔ What does this syntax do?` to generate card.
 
+- **Important:** Must fill `✔ What does this syntax do?` to generate card.
 - An alternative question to drill the syntax.
 
 #### ----✄-- Hide on front: Syntax (inline code)
@@ -115,8 +115,8 @@ The complex theme extends the [Simple theme](#simple-theme) to allow us to get a
 **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
 #### ♞ Puzzle
-**Important:** Must fill `♞ Puzzle` to generate card.
 
+- **Important:** Must fill `♞ Puzzle` to generate card.
 - The puzzle question. Be creative!
 
 #### –--✄--- Hide on front: Syntax (inline code)
