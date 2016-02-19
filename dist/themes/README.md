@@ -76,25 +76,25 @@ The simple theme introduces a way to add a *syntax reminder* question:
 
 #### ----✄-- Hide on front: Syntax (inline code)
 
-- Optionally hide the [inline code sample](#☆-syntax-inline-code).
+- Optionally hide the [inline code sample](#☆-syntax-inline-code) on the ***front of the card***.
   - Simply enter any text to hide field, i.e. `true`.
   - Great for questions that force you to remember the syntax, where you don't want any giveaways.
 
 #### »»♻«« Show as reference: Syntax (inline code)
 
-- Optionally show the [inline code sample](#☆-syntax-inline-code)
+- Optionally show the [inline code sample](#☆-syntax-inline-code) on the ***back of the card***.
   - Simply enter any text to hide field, i.e. `true`.
   - Will be displayed as a **Reference guide**.
 
 #### ----✄-- Hide on front: Sample (code block or image)
 
-- Optionally hide the main [sample code block](#☆-sample-code-block-or-image).
+- Optionally hide the main [sample code block](#☆-sample-code-block-or-image) on the ***front of the card***.
   - Simply enter any text to hide field, i.e. `true`.
   - Depending on the sample code, you may want to hide this if it makes the answer too obvious.
 
 #### »»♻«« Show as reference: Sample (code block or image)
 
-- Optionally show the main [sample code block](#☆-sample-code-block-or-image)
+- Optionally show the main [sample code block](#☆-sample-code-block-or-image) on the ***back of the card***.
   - Simply enter any text to hide field, i.e. `true`.
   - Will be displayed as a **Reference guide**.
 
@@ -121,21 +121,20 @@ The puzzle theme extends the *'What's the answer?'* fields (shared with the [Sim
 
 #### –--✄--- Hide on front: Syntax (inline code)
 
-- Optionally hide the [inline code sample](#☆-syntax-inline-code).
+- Optionally hide the [inline code sample](#☆-syntax-inline-code) on the **front of the card**.
 
 #### »»♻«« Show as reference: Syntax (inline code)
 
-- Optionally show the [inline code sample](#☆-syntax-inline-code)
+- Optionally show the [inline code sample](#☆-syntax-inline-code) on the ***back of the card***.
   - Will be displayed as a **Reference guide**
 
 #### –--✄--- Hide on front: Sample (code block or image)
 
-- Optionally hide the [sample code block](#☆-sample-code-block-or-image)
-- Will be displayed as a **Reference guide** if hidden.
+- Optionally hide the [sample code block](#☆-sample-code-block-or-image) on the **front of the card**.
 
 #### »»♻«« Show as reference: Sample (code block or image)
 
-- Optionally show the main [sample code block](#☆-sample-code-block-or-image)
+- Optionally show the main [sample code block](#☆-sample-code-block-or-image) on the ***back of the card***.
   - Will be displayed as a **Reference guide**.
 
 #### ♘ Puzzle (inline code)
