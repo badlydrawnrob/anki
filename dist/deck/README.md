@@ -3,7 +3,7 @@
 - [Home](../../README.md)
   - **THEME**
     - [Simple Anki theme](../themes/README.md#simple-theme)
-    - [Complex Anki theme](../themes/README.md#complex-theme)
+    - [Puzzle Anki theme](../themes/README.md#puzzle-theme)
       - **Deck example**
       - [Notes](../themes/README.md#notes)
   - **THEME COLOURS**

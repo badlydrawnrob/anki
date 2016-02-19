@@ -3,7 +3,7 @@
 - [Home](../../README.md)
   - **THEME**
     - [Simple Anki theme](#simple-theme)
-    - [Complex Anki theme](#complex-theme)
+    - [Puzzle Anki theme](#puzzle-theme)
       - [Deck example](../deck/README.md)
       - [Notes](#notes)
   - **THEME COLOURS**
@@ -12,23 +12,17 @@
 
 
 
-## Simple theme
+## Card #01 (shared)
+### Simple theme
+### Puzzle theme
 
-Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same basic fields. This content will be used to output two cards:
+Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What's the answer?'* fields and card:
 
 1. **What's the answer?**
   - What does the following code do?
   - How can we use the syntax examples and what would be the result?
-2. **What does this syntax do?**
-  - Ask another question about the code sample, or
-  - Drill on the specific uses for the function, or
-  - Remember the syntax:
-    - What function or method is this?
-    - And what will it achieve?
 
-
-## Card 01: What's the answer? (Fields 1-6)
-**Key:** ★ Required / ☆ Optional (recommended)
+> **Key:** ★ Required / ☆ Optional (recommended)
 
 #### ★ Title
 
@@ -64,8 +58,19 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 - For any key functions or symbols, wrap in `<code>`.
 
 
-## Card 02: What does this syntax do? (Fields 7-11)
-**Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
+## Card #02
+### Simple theme
+
+The simple theme introduces a way to add a *syntax reminder* question:
+
+2. **What does this syntax do?**
+  - Ask another question about the code sample, or
+  - Drill on the specific uses for the function, or
+  - Remember the syntax:
+    - What function or method is this?
+    - And what will it achieve?
+
+> **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 #### ✔ What does this syntax do?
 
@@ -78,7 +83,7 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
   - Simply enter any text to hide field, i.e. `true`.
   - Great for questions that force you to remember the syntax, where you don't want any giveaways.
 
-#### »»♻»» Show as reference: Syntax (inline code)
+#### »»♻«« Show as reference: Syntax (inline code)
 
 - Optionally show the [inline code sample](#☆-syntax-inline-code)
   - Simply enter any text to hide field, i.e. `true`.
@@ -90,7 +95,7 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
   - Simply enter any text to hide field, i.e. `true`.
   - Depending on the sample code, you may want to hide this if it makes the answer too obvious.
 
-#### »»♻»» Show as reference: Sample (code block or image)
+#### »»♻«« Show as reference: Sample (code block or image)
 
 - Optionally show the main [sample code block](#☆-sample-code-block-or-image)
   - Simply enter any text to hide field, i.e. `true`.
@@ -100,19 +105,17 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 
 -----
 
-## Complex theme
+## Card #02
+### Puzzle theme
 
-<img align="right" src="https://media.giphy.com/media/C47AAXrd7EIz6/giphy.gif">
+The puzzle theme extends the *'What's the answer?'* fields (shared with the [Simple theme](#simple-theme)) to allow us to get a little creative.
 
-The complex theme extends the [Simple theme](#simple-theme) to allow us to get a little creative.
-
-1. **Puzzle question**
+2. **Puzzle question**
   - Drill yourself in a different way.
   - Try a different result with the syntax you're learning.
   - Add a new function to the mix.
 
-## Card 03: Puzzle question (Fields 12-21)
-**Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
+> **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
 #### ♞ Puzzle
 
@@ -170,7 +173,7 @@ The complex theme extends the [Simple theme](#simple-theme) to allow us to get a
 
 #### ✎ Other notes
 
-Use sparingly, as it's always best to be succinct with Anki. Simple is easier to remember than complex, so think of this as more of a 'reference' for future use.
+Use sparingly, as it's always best to be succinct with Anki. Simple is easier to remember than puzzle, so think of this as more of a 'reference' for future use.
 
 - Links to documentation
 - Supplementary notes

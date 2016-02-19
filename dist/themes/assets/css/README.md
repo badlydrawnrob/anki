@@ -4,7 +4,7 @@
 - [Home](../../../../README.md)
   - **THEME**
     - [Simple Anki theme](../../README.md#simple-theme)
-    - [Complex Anki theme](../../README.md#complex-theme)
+    - [Puzzle Anki theme](../../README.md#puzzle-theme)
       - [Deck example](../../../dist/deck/README.md)
       - [Notes](../README.md#notes)
   - **THEME COLOURS**
@@ -53,7 +53,7 @@ Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but 
 3. Copy and paste into any `* (code block or image)` field:
    - Including everything from `<pre><code>` to `<code></pre>`.
 
-It's wise to keep a backup for easy editing, so I've added a `✎ Markdown` field in both the **Simple** and **Complex** themes — here you can store raw markdown or a link to the original code (Github gist for example).
+It's wise to keep a backup for easy editing, so I've added a `✎ Markdown` field in both the **Simple** and **Puzzle** themes — here you can store raw markdown or a link to the original code (Github gist for example).
 
 #### Disable highlighting
 
