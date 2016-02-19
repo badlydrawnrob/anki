@@ -13,9 +13,9 @@
 
 
 ## Card #01 (Simple & Puzzle theme)
-### Simple theme
-
 > **Key:** ★ Required / ☆ Optional (recommended)
+
+### Simple theme
 
 Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What's the answer?'* fields and card:
 
@@ -58,7 +58,6 @@ Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What
 
 
 ## Card #02 (Simple theme)
-
 > **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 The simple theme introduces a way to add a *syntax reminder* question:
@@ -104,9 +103,9 @@ The simple theme introduces a way to add a *syntax reminder* question:
 -----
 
 ## Card #02 (Puzzle theme only)
-### Puzzle theme
-
 > **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
+
+### Puzzle theme
 
 The puzzle theme extends the *'What's the answer?'* fields (shared with the [Simple theme](#simple-theme)) to allow us to get a little creative.
 
