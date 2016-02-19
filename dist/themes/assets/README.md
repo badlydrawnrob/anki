@@ -1,6 +1,16 @@
 # Anki theme: Styles
 ## Tomorrow light and Monokai
 
+- [Home](../../../README.md)
+  - **THEME**
+    - [Simple Anki theme](../../README.md#simple-theme)
+    - [Puzzle Anki theme](../../README.md#puzzle-theme)
+      - [Deck example](../../../deck/README.md)
+      - [Notes](../../README.md#notes)
+  - **THEME COLOURS**
+    - [Basic highlighting](../css/README.md)
+    - [Automatic highlighting](../css/README.md#automatic-syntax-highlighting-with-highlightjs)
+
 ### Less
 
 I'm using `Less` to generate the `main.css` file from `src/assets/less/main.less` — refer to code and comments there. Quickly change the colour scheme by changing or creating your own variables in `src/assets/less/theme.less` and recompiling the css file.
@@ -61,7 +71,7 @@ You can also specify a language:
 5. Copy and paste into `Key point (code block or image)` or `Puzzle answer (code block or image)` fields
    - Including everything from `<pre>` to `</pre>`
 
-It's wise to keep a backup for easy editing, so I've added a `Markdown` field in both the [Simple](../../simple/README.md) and [Complex](../../complex/README.md) themes — here you can store raw markdown or a link to the original code (Github gist for example).
+It's wise to keep a backup for easy editing, so I've added a `Markdown` field in both the [Simple](../../simple/README.md) and [Puzzle](../../puzzle/README.md) themes — here you can store raw markdown or a link to the original code (Github gist for example).
 
 ### Changing the theme:
 
@@ -76,7 +86,7 @@ It's wise to keep a backup for easy editing, so I've added a `Markdown` field in
 
 - [Anki Themes](../../../README.md)
 - [Simple Anki theme](../../simple/README.md)
-- [Complex Anki theme](../../complex/README.md)
+- [Puzzle Anki theme](../../puzzle/README.md)
 - [Deck example](../../../dist/deck/README.md)
 
 

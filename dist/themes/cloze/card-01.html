@@ -1,34 +1,54 @@
 <!-- ==========================================
      Cloze theme
 
-   - Card: What's the answer?
-   - Info: Question about the code example
-   - Key:  ★ Required
-           ☆ Optional (recommended)
-           ✎ Optional (Notes)
+   - Card #1: What's the answer?
+   - Info:    Syntax (inline or code block) field:
+              - {{c1::codeContents::hint}}
+                - Will also display: ★ Title
+
+   - Card #2: What does this syntax do?
+   - Info:    Syntax (inline or code block) field:
+              - {{c2::preCodeContents::hint}}
+              - {{c2::preCodeContentsExtra::hint}}
+                - Will also display:
+                  ✔ What does this syntax do?
+
+   - Key:     ★ Required
+              ☆ Optional (recommended)
+              ✎ Optional (Notes)
 =============================================== -->
 
 <div id="front" class="container card-1 pb">
   <h1 class="syntax">
     {{^☆ Syntax}}Syntax{{/☆ Syntax}}
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
-    <code>{{☆ Syntax (inline code)}}</code>
+    <code>{{cloze:☆ Syntax (inline code)}}</code>
   </h1>
-  <div class="sample-code mb">{{cloze:☆ Sample (code block)}}</div>
+  <div class="sample-code mb">
+    {{cloze:★ Syntax (code block)}}
+  </div>
+  {{#c1}}
+    <p class="title">{{✔ What does this syntax do?}}</p>
+  {{/c1}}
+  {{#c2}}
+    <p class="title">{{★ Title}}</p>
+  {{/c2}}
 </div>
 
 <!-- ========================================== -->
 
-{{FrontSide}}
 
 <div id="answer" class="container card-1 pt+">
-  <div class="box mb">
-    <!-- <div class="box-code">{{★ Key point (code block or image)}}</div> -->
-    <div class="box-notes">{{★ Key point notes}}</div>
+  <h1 class="syntax">
+    {{^☆ Syntax}}Syntax{{/☆ Syntax}}
+    {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
+    <code>{{cloze:☆ Syntax (inline code)}}</code>
+  </h1>
+  <div class="box-code">
+    {{cloze:★ Syntax (code block)}}
   </div>
-  <div class="reference pb">
-    <div class="footer">
-      {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
-    </div>
+  <div class="box-notes">{{★ Key point notes}}</div>
+  <div class="footer mt pb">
+    {{#✎ Other notes}}{{✎ Other notes}}{{/✎ Other notes}}
   </div>
 </div>

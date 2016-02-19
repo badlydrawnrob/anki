@@ -2,8 +2,8 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](#basic-field-template)
-    - [Complex Anki theme](#complex-theme)
+    - [Simple Anki theme](#simple-theme)
+    - [Puzzle Anki theme](#puzzle-theme)
       - [Deck example](../deck/README.md)
       - [Notes](#notes)
   - **THEME COLOURS**
@@ -12,23 +12,16 @@
 
 
 
-## Simple theme
+## Card #01 (Simple & Puzzle theme)
+> **Key:** ★ Required / ☆ Optional (recommended)
 
-Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same basic fields. This content will be used to output two cards:
+### Simple theme
+
+Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What's the answer?'* fields and card:
 
 1. **What's the answer?**
   - What does the following code do?
   - How can we use the syntax examples and what would be the result?
-2. **What does this syntax do?**
-  - Ask another question about the code sample, or
-  - Drill on the specific uses for the function, or
-  - Remember the syntax:
-    - What function or method is this?
-    - And what will it achieve?
-
-
-## Card 01: What's the answer? (Fields 1-6)
-**Key:** ★ Required / ☆ Optional (recommended)
 
 #### ★ Title
 
@@ -64,12 +57,21 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 - For any key functions or symbols, wrap in `<code>`.
 
 
-## Card 02: What does this syntax do? (Fields 7-9)
-**Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
+## Card #02 (Simple theme)
+> **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
+
+The simple theme introduces a way to add a *syntax reminder* question:
+
+2. **What does this syntax do?**
+  - Ask another question about the code sample, or
+  - Drill on the specific uses for the function, or
+  - Remember the syntax:
+    - What function or method is this?
+    - And what will it achieve?
 
 #### ✔ What does this syntax do?
-**Important:** Must fill `✔ What does this syntax do?` to generate card.
 
+- **Important:** Must fill `✔ What does this syntax do?` to generate card.
 - An alternative question to drill the syntax.
 
 #### ----✄-- Hide on front: Syntax (inline code)
@@ -78,7 +80,7 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
   - Simply enter any text to hide field, i.e. `true`.
   - Great for questions that force you to remember the syntax, where you don't want any giveaways.
 
-#### »»♻»» Show as reference: Syntax (inline code)
+#### »»♻«« Show as reference: Syntax (inline code)
 
 - Optionally show the [inline code sample](#☆-syntax-inline-code)
   - Simply enter any text to hide field, i.e. `true`.
@@ -90,7 +92,7 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
   - Simply enter any text to hide field, i.e. `true`.
   - Depending on the sample code, you may want to hide this if it makes the answer too obvious.
 
-#### »»♻»» Show as reference: Sample (code block or image)
+#### »»♻«« Show as reference: Sample (code block or image)
 
 - Optionally show the main [sample code block](#☆-sample-code-block-or-image)
   - Simply enter any text to hide field, i.e. `true`.
@@ -100,23 +102,21 @@ Both the **Simple theme** and **[Complex theme](#complex-theme)** share the same
 
 -----
 
-## Complex theme
+## Card #02 (Puzzle theme only)
+> **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
-<img align="right" src="https://media.giphy.com/media/C47AAXrd7EIz6/giphy.gif">
+### Puzzle theme
 
-The complex theme extends the [Simple theme](#basic-field-template) to allow us to get a little creative.
+The puzzle theme extends the *'What's the answer?'* fields (shared with the [Simple theme](#simple-theme)) to allow us to get a little creative.
 
-1. **Puzzle question**
+2. **Puzzle question**
   - Drill yourself in a different way.
   - Try a different result with the syntax you're learning.
   - Add a new function to the mix.
 
-## Card 03: Puzzle question (Fields 10-18)
-**Key:** ♞ Required / / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
+#### ♞ Puzzle
 
-#### 9. Puzzle
-**Important:** Must fill `♞ Puzzle` to generate card.
-
+- **Important:** Must fill `♞ Puzzle` to generate card.
 - The puzzle question. Be creative!
 
 #### –--✄--- Hide on front: Syntax (inline code)
@@ -166,11 +166,11 @@ The complex theme extends the [Simple theme](#basic-field-template) to allow us 
 -----
 
 ## Extra fields
-**Key:** ✎ Optional
+> **Key:** ✎ Optional
 
 #### ✎ Other notes
 
-Use sparingly, as it's always best to be succinct with Anki. Simple is easier to remember than complex, so think of this as more of a 'reference' for future use.
+Use sparingly, as it's always best to be succinct with Anki. Simple is easier to remember than puzzle, so think of this as more of a 'reference' for future use.
 
 - Links to documentation
 - Supplementary notes
@@ -188,6 +188,6 @@ Use sparingly, as it's always best to be succinct with Anki. Simple is easier to
 ## Notes
 
 1. [Style fields, inline code and code blocks](./assets/css/README.md)
-2. Fields marked **☆✄♻✎ Optional** can be left blank and the template will ignore them. **✔** and **♞** fields are required in order for a card to be generated.
+2. Fields marked **Optional** fields (☆ ✄ ♻ ✎) can be left blank and the template will ignore them. **Required** fields (✔ and ♞) are required in order for a card to be generated.
 3. You can reference fields within fields. For instance, `{{☆ Syntax (inline code)}}` or `{{★ Key point (code block or image)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you may need to select *Edit HTML* in the editor and wrap in `<code>` or `<pre><code>` to render correctly.
   - Keep in mind that any referenced fields will have to be manually edited if the field name is ever changed, which can be a huge pita.
