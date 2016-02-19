@@ -2,8 +2,8 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](../themes/README.md#basic-field-template)
-    - [Complex Anki theme](../themes/README.md#complex-theme)
+    - [Simple Anki theme](../themes/README.md#simple-theme)
+    - [Puzzle Anki theme](../themes/README.md#puzzle-theme)
       - **Deck example**
       - [Notes](../themes/README.md#notes)
   - **THEME COLOURS**
