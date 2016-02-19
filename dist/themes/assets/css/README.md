@@ -5,8 +5,8 @@
   - **THEME**
     - [Simple Anki theme](../../README.md#simple-theme)
     - [Puzzle Anki theme](../../README.md#puzzle-theme)
-      - [Deck example](../../../dist/deck/README.md)
-      - [Notes](../README.md#notes)
+      - [Deck example](../../../deck/README.md)
+      - [Notes](../../README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](#)
     - [Automatic highlighting](#automatic-syntax-highlighting-with-highlightjs)
@@ -14,7 +14,7 @@
 
 ## Basic styling
 
-For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code. These work out of the box with `(inline code)`, as they're already wrapped in `<code>` tag. For all other code you want to be highlighted, wrap in `<code>` or `<pre><code>` to get the pretty colours!
+For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code. These work out of the box with `☆ Syntax (inline code)` and `♘ Puzzle (inline code)` (you don't need to add a `<code>` tag to these fields). For all other code you want to highlight, wrap in `<code>` or `<pre><code>` to get the pretty colours!
 
 - Default colour is white
 - `<b>` or `<strong>` for major symbols (`if`, `and`, `>=`, `print` etc)
@@ -39,10 +39,6 @@ I'm using `Less` to generate the `main.css` file from `src/assets/less/main.less
 
 ## Automatic syntax highlighting with highlight.js
 **BETA** Currently works reliably on iOS. You'll need to add the code in `js/highlight.js`, wrapped in `<script> ... </script>` tags, on every card in the ***front*** section after the template code.
-
-<!-- ![Marked App syntax highlighting with highlight.js](../../img/marked-app-inspector.png)
-
-*Quickly generate syntax highlighting with Marked App* -->
 
 Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. **Enter [highlight.js](https://highlightjs.org/)**! It's as easy as 1, 2, 3:
 

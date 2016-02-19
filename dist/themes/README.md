@@ -12,17 +12,16 @@
 
 
 
-## Card #01 (shared)
+## Card #01 (Simple & Puzzle theme)
 ### Simple theme
-### Puzzle theme
+
+> **Key:** ★ Required / ☆ Optional (recommended)
 
 Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What's the answer?'* fields and card:
 
 1. **What's the answer?**
   - What does the following code do?
   - How can we use the syntax examples and what would be the result?
-
-> **Key:** ★ Required / ☆ Optional (recommended)
 
 #### ★ Title
 
@@ -58,8 +57,9 @@ Both the **Simple theme** and **[Puzzle theme](#puzzle-theme)** share the *'What
 - For any key functions or symbols, wrap in `<code>`.
 
 
-## Card #02
-### Simple theme
+## Card #02 (Simple theme)
+
+> **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 The simple theme introduces a way to add a *syntax reminder* question:
 
@@ -69,8 +69,6 @@ The simple theme introduces a way to add a *syntax reminder* question:
   - Remember the syntax:
     - What function or method is this?
     - And what will it achieve?
-
-> **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 #### ✔ What does this syntax do?
 
@@ -105,8 +103,10 @@ The simple theme introduces a way to add a *syntax reminder* question:
 
 -----
 
-## Card #02
+## Card #02 (Puzzle theme only)
 ### Puzzle theme
+
+> **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
 The puzzle theme extends the *'What's the answer?'* fields (shared with the [Simple theme](#simple-theme)) to allow us to get a little creative.
 
@@ -114,8 +114,6 @@ The puzzle theme extends the *'What's the answer?'* fields (shared with the [Sim
   - Drill yourself in a different way.
   - Try a different result with the syntax you're learning.
   - Add a new function to the mix.
-
-> **Key:** ♞ Required / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields) / ♘ Optional (Only if ✄ is used)
 
 #### ♞ Puzzle
 
@@ -169,7 +167,7 @@ The puzzle theme extends the *'What's the answer?'* fields (shared with the [Sim
 -----
 
 ## Extra fields
-**Key:** ✎ Optional
+> **Key:** ✎ Optional
 
 #### ✎ Other notes
 
@@ -191,6 +189,6 @@ Use sparingly, as it's always best to be succinct with Anki. Simple is easier to
 ## Notes
 
 1. [Style fields, inline code and code blocks](./assets/css/README.md)
-2. Fields marked **☆✄♻✎ Optional** can be left blank and the template will ignore them. **✔** and **♞** fields are required in order for a card to be generated.
+2. Fields marked **Optional** fields (☆ ✄ ♻ ✎) can be left blank and the template will ignore them. **Required** fields (✔ and ♞) are required in order for a card to be generated.
 3. You can reference fields within fields. For instance, `{{☆ Syntax (inline code)}}` or `{{★ Key point (code block or image)}}` - this will pick up all the HTML from those fields. If you want the fancy code styles, you may need to select *Edit HTML* in the editor and wrap in `<code>` or `<pre><code>` to render correctly.
   - Keep in mind that any referenced fields will have to be manually edited if the field name is ever changed, which can be a huge pita.
