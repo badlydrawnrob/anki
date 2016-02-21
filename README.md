@@ -39,7 +39,7 @@ There's a few Anki syntax highlighting plugins around, but as far I'm aware thes
 
 With **Anki themes**, you use a pure html/Markdown/js workflow and *easily customisable* css. If *highlight.js* dies tomorrow, I can swap it out for another javascript alternative. Granted, it currently works best on mobile, but I use [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html) 90% of the time anyway!
 
-Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, well documented, stable software wherever possible<sup>**[2](#other-notes)**</sup>.
+Having ditched Wordpress for [Craft](https://craftcms.com), I'm also skeptical of plugins and try to use supported, well documented, stable software wherever possible. That said, ***Power format pack***<sup>***[2](#other-notes)***</sup> is a solid Markdown plugin for Anki — it compliments *Anki themes* and makes for a nice workflow.
 
 
 ## Notes
@@ -60,4 +60,4 @@ This is a major overhaul from the original, so it's not compatible with earlier 
 ### Other notes
 
 1. Icons courtesy of [@kompa](http://devicon.fr)
-2. I'm no luddite, the popular [Power format pack](https://ankiweb.net/shared/info/162313389) could complement Anki themes and make for a nice workflow. I generally work with Sublime/Atom and render html with Marked App but this plugin could save you some hassle.
+2. I generally work with Sublime/Atom and render html with Marked App, but I'm no luddite! This plugin saves a lot of hassle; your html is safe if your uninstall it, too. [Get it here](https://ankiweb.net/shared/info/162313389) :)
