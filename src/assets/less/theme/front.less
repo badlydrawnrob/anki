@@ -11,3 +11,11 @@
   color: @color-gray-dark;
   font-style: italic;
 }
+
+// Cloze =======================================
+// - If {{✔ What does this syntax do?}} is
+//   displayed, hide {{★ Title}}
+
+.title + .title {
+  display: none;
+}

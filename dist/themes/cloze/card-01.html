@@ -1,17 +1,18 @@
 <!-- ==========================================
      Cloze theme
 
-   - Card #1: What's the answer?
-   - Info:    Syntax (inline or code block) field:
-              - {{c1::codeContents::hint}}
-                - Will also display: ★ Title
+   - {{c1}}:  What does this syntax do? (optional)
+   - Field:    ☆ Syntax (inline code):
+               - {{c1::range()::hint}}
+   - Info:     Also requires:
+               - ✔ What does this syntax do?
 
-   - Card #2: What does this syntax do?
-   - Info:    Syntax (inline or code block) field:
-              - {{c2::preCodeContents::hint}}
-              - {{c2::preCodeContentsExtra::hint}}
-                - Will also display:
-                  ✔ What does this syntax do?
+   - {{c2}}: What's the answer?
+   - Field:    ★ Syntax (code block)
+               - {{c2::preCodeContents::hint}}
+               - {{c2::preCodeContentsExtra::hint}}
+   - Info:     Also requires:
+               - ★ Title
 
    - Key:     ★ Required
               ☆ Optional (recommended)
@@ -30,9 +31,7 @@
   {{#c1}}
     <p class="title">{{✔ What does this syntax do?}}</p>
   {{/c1}}
-  {{#c2}}
-    <p class="title">{{★ Title}}</p>
-  {{/c2}}
+  <p class="title">{{★ Title}}</p>
 </div>
 
 <!-- ========================================== -->
