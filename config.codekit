@@ -144,26 +144,6 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/src\/assets\/less\/theme\/front.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/src\/assets\/less\/theme\/front.less",
-		"outputAbbreviatedPath": "\/src\/assets\/less\/css\/front.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
 	"\/src\/assets\/less\/theme\/highlight.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
