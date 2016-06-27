@@ -1,36 +1,33 @@
 <!-- ==========================================
      Cloze theme
 
-   - {{c1}}:  What does this syntax do? (optional)
-   - Field:    ☆ Syntax (inline code):
-               - {{c1::range()::hint}}
-   - Info:     Also requires:
-               - ✔ What does this syntax do?
-
-   - {{c2}}: What's the answer?
-   - Field:    ★ Syntax (code block)
-               - {{c2::preCodeContents::hint}}
-               - {{c2::preCodeContentsExtra::hint}}
-   - Info:     Also requires:
-               - ★ Title
-
+   - {{c1}}:  What's the answer?
+   - Fields:  ★ Syntax (code block)
+              - {{c1::preCodeContents::hint}}
+              - {{c1::preCodeContentsExtra::hint}}
+   - Info:    Also requires:
+              - ★ Title
    - Key:     ★ Required
               ☆ Optional (recommended)
               ✎ Optional (Notes)
+
+     If you'd like to quiz yourself on syntax,
+     you can add another cloze, like this:
+
+   - {{c2:://::What is the floor symbol?}}
 =============================================== -->
 
 <div id="front" class="container card-1 pb">
   <h1 class="syntax">
     {{^☆ Syntax}}Syntax{{/☆ Syntax}}
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
-    <code>{{cloze:☆ Syntax (inline code)}}</code>
+    {{#☆ Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+    {{/☆ Syntax (inline code)}}
   </h1>
   <div class="sample-code mb">
     {{cloze:★ Syntax (code block)}}
   </div>
-  {{#c1}}
-    <p class="title">{{✔ What does this syntax do?}}</p>
-  {{/c1}}
   <p class="title">{{★ Title}}</p>
 </div>
 
@@ -41,7 +38,9 @@
   <h1 class="syntax">
     {{^☆ Syntax}}Syntax{{/☆ Syntax}}
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
-    <code>{{cloze:☆ Syntax (inline code)}}</code>
+    {{#☆ Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+    {{/☆ Syntax (inline code)}}
   </h1>
   <div class="box-code">
     {{cloze:★ Syntax (code block)}}
