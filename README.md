@@ -36,11 +36,11 @@ There's some nice default colour schemes; some fields are automatically wrapped 
 
 ***Practicality beats purity***
 
-Ideally, we'd use [highlight.js](https://highlightjs.org/) or one of the many javascript syntax highlighters out there. In practice, however, it's proved far too difficult to make this happen with Anki, so Pygments is a far more pragmatic solution.
+> Ideally, we'd use [highlight.js](https://highlightjs.org/) or one of the many javascript syntax highlighters out there. In practice, however, it's proved far too difficult to make this happen with Anki, so Pygments is a far more pragmatic solution.
 
 There's a few Anki syntax highlighting plugins around — call me old fashioned, but cramming your code with inline css feels icky to me. With **Anki themes**, you use a pure(ish) `Markdown > HTML` workflow and *easily customisable* css. It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android). 
 
-I generally prefer to use supported, well documented, stable software wherever possible. However, ***Power format pack***<sup>***[2](#other-notes)***</sup> is a solid Markdown plugin for Anki — it compliments *Anki themes* and makes for a nice workflow. If you prefer using stock Anki, [see these notes](./dist/themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments).
+***Power format pack*** is a solid Markdown plugin for Anki — it compliments *Anki themes* and makes for a nice workflow. If you prefer using stock Anki, [see these notes](./dist/themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments). I generally prefer to use supported, well documented, stable software wherever possible — minus the plugins — but **PFP** really speeds things up.
 
 If ever Anki allows external javascript files, I can swap Pygments out for another alternative like _highlight.js_.
 
