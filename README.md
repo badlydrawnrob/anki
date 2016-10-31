@@ -34,8 +34,8 @@ There's some nice default colour schemes; some fields are automatically wrapped 
 
 #### Why use Anki Themes instead of an Anki plugin?
 
-***Practicality beats purity***
-
+> ***Practicality beats purity***
+>
 > Ideally, we'd use [highlight.js](https://highlightjs.org/) or one of the many javascript syntax highlighters out there. In practice, however, it's proved far too difficult to make this happen with Anki, so Pygments is a far more pragmatic solution.
 
 There's a few Anki syntax highlighting plugins around — call me old fashioned, but cramming your code with inline css feels icky to me. With **Anki themes**, you use a pure(ish) `Markdown > HTML` workflow and *easily customisable* css. It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android). 
