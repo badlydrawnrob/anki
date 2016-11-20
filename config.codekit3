@@ -21,135 +21,16 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/dist\/deck\/anki-themes-1.0.0-beta-3.apkg": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/deck\/anki-themes-1.0.0-beta-3.apkg",
+	"\/dist\/deck": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/dist\/deck",
 		"oF": 0
 		},
-	"\/dist\/deck\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/dist\/deck\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/dist\/themes\/assets\/css\/main.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/assets\/css\/main-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/dist\/themes\/assets\/css\/main.css.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/assets\/css\/main.css.map",
-		"oF": 0
-		},
-	"\/dist\/themes\/assets\/css\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/dist\/themes\/assets\/css\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/dist\/themes\/assets\/img\/marked-app-console.png": {
-		"ft": 32768,
-		"iS": 47487,
-		"oA": 0,
-		"oAP": "\/dist\/themes\/assets\/img\/marked-app-console.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/dist\/themes\/assets\/img\/marked-app-inspector.png": {
-		"ft": 32768,
-		"iS": 201260,
-		"oA": 0,
-		"oAP": "\/dist\/themes\/assets\/img\/marked-app-inspector.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/dist\/themes\/assets\/js\/highlight.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/dist\/themes\/assets\/js\/min\/highlight-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/dist\/themes\/cloze\/card-01.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/cloze\/card-01.html",
-		"oF": 0
-		},
-	"\/dist\/themes\/puzzle\/card-01.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/puzzle\/card-01.html",
-		"oF": 0
-		},
-	"\/dist\/themes\/puzzle\/card-02.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/puzzle\/card-02.html",
-		"oF": 0
-		},
-	"\/dist\/themes\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/dist\/themes\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/dist\/themes\/simple\/card-01.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/simple\/card-01.html",
-		"oF": 0
-		},
-	"\/dist\/themes\/simple\/card-02.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/dist\/themes\/simple\/card-02.html",
+	"\/dist\/themes": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/dist\/themes",
 		"oF": 0
 		},
 	"\/preview.png": {
@@ -4251,7 +4132,7 @@
 	"languageDefaultsUserDefined": [
 		],
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/dist\/themes, \/dist\/deck",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
