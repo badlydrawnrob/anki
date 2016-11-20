@@ -1,0 +1,6 @@
+anki:
+  title: "anki"
+  paths: [
+    "/Users/rob/Sites/anki"
+  ]
+  template: "global-template"
