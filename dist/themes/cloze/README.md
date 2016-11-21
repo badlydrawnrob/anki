@@ -39,7 +39,7 @@ You'll recognise some of these fields from the [Puzzle](../simple/README.md) and
 
 #### ☆ Sample (code block or image)
 
-- Here we create our cloze deletions, allowing us to hide/show code easily — You can [learn more about clozes in the Anki documentation](http://ankisrs.net/docs/manual.html#cloze-deletion). _[See notes](#notes) about known bug in Anki Power Format Pack plugin._
+- Here we create our cloze deletions, allowing us to hide/show code easily — You can [learn more about clozes in the Anki documentation](http://ankisrs.net/docs/manual.html#cloze-deletion). _See [notes about known bug](#notes) in Anki Power Format Pack plugin._
   - Enter a `<pre>` block with a cloze tag:
     - `x.{{c1::is_integer()::x is a float, check if int}}`
   - You can use multiple cloze tags on the same card:
