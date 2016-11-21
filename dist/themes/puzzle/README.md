@@ -75,20 +75,20 @@ The puzzle theme allows us to get a little creative. We ask ourselves a puzzle q
 
 #### –--✄--- Hide on front: Syntax (inline code)
 
-- Optionally hide the [inline code sample](#☆-syntax-inline-code) on the **front of the card**.
+- Optionally hide the [inline code sample](#-syntax-inline-code) on the **front of the card**.
 
 #### »»♻«« Show as reference: Syntax (inline code)
 
-- Optionally show the [inline code sample](#☆-syntax-inline-code) on the ***back of the card***.
+- Optionally show the [inline code sample](#-syntax-inline-code) on the ***back of the card***.
   - Will be displayed as a **Reference guide**
 
 #### –--✄--- Hide on front: Sample (code block or image)
 
-- Optionally hide the [sample code block](#☆-sample-code-block-or-image) on the **front of the card**.
+- Optionally hide the [sample code block](#-sample-code-block-or-image) on the **front of the card**.
 
 #### »»♻«« Show as reference: Sample (code block or image)
 
-- Optionally show the main [sample code block](#☆-sample-code-block-or-image) on the ***back of the card***.
+- Optionally show the main [sample code block](#-sample-code-block-or-image) on the ***back of the card***.
   - Will be displayed as a **Reference guide**.
 
 #### ♘ Puzzle (inline code)
