@@ -9,7 +9,7 @@
       - [Notes](../../README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](#)
-    - [Automatic highlighting](#automatic-syntax-highlighting-with-highlightjs)
+    - [Automatic highlighting](#automatic-syntax-highlighting-with-pygments)
 
 
 ## Basic styling
@@ -17,11 +17,11 @@
 For basic styling of your html, css, python or your programming language of choice, you can use simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code. These work out of the box with `☆ Syntax (inline code)` and `♘ Puzzle (inline code)` (you don't need to add a `<code>` tag to these fields). For all other code you want to highlight, wrap in `<code>` or `<pre><code>` to get the pretty colours!
 
 - Default colour is white
-- `<b>` or `<strong>` for major symbols (`if`, `and`, `>=`, `print` etc)
+- `<b>` or `<strong>` for operators (`if`, `and`, `>=`, `print` etc)
 - `<i>` or `<em>` for an `int` or `float`
 - `<s>` or `<u>` for a `string`
-- `<span>` or `<sup>` for minor highlights (`function`, `class`)
-- `<var>` or `<sub>` for minor higlights (`args`, `variables`)
+- `<span>` or `<sup>` for keywords (`function`, `class`)
+- `<var>` or `<sub>` for arguments (`args`, `variables`)
 - `<small>` for `# comments`
 
 - `<q>` wildcard (could be used for css `class` for instance)
@@ -37,36 +37,36 @@ I'm using `Less` to generate the `main.css` file from `src/assets/less/main.less
 
 
 
-## Automatic syntax highlighting with highlight.js
-**BETA** Currently works reliably on iOS. You'll need to add the code in `js/highlight.js`, wrapped in `<script> ... </script>` tags, on every card in the ***front*** section after the template code.
+## Automatic syntax highlighting with Pygments
 
-Styling our code with HTML5 tags is pretty efficient with the Anki wysiwyg, but can get a little tedious when working with larger code blocks. **Enter [highlight.js](https://highlightjs.org/)**! It's as easy as 1, 2, 3:
+_Previous versions of **Anki Theme** used [highlight.js](https://highlightjs.org/). It's an amazing plugin, but [proved too unreliable](https://github.com/badlydrawnrob/anki/issues/21) to be useful. ["Practicality beats purity"](https://www.python.org/dev/peps/pep-0020/#id3)._
+
+Anki Theme now provides styles for use with [Pygments](http://pygments.org/). You can either convert Markdown to pygments [with a plugin](https://ankiweb.net/shared/info/162313389), or [via the command line](https://pythonhosted.org/Markdown/extensions/code_hilite.html).
+
+### Step 1
+
+1. Download the [power format pack](https://ankiweb.net/shared/info/162313389) for Anki. It's a great plugin that speeds up your workflow, allowing you to quickly convert Markdown to HTML.
+2. By default, the plugin uses inline styles, not the standard Pygments classes. Follow [this guide](https://github.com/Neftas/supplementary-buttons-anki/issues/87) to force pygments to output properly.
+
+> If you prefer using stock Anki, you can use [Python Markdown](https://pythonhosted.org/Markdown/) and it's [codehilite plugin](https://pythonhosted.org/Markdown/extensions/code_hilite.html) to generate your code blocks.
+
+### Step 2
+
+Ok, so that's the hard part over. Next, it's as simple as ...
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
-2. Generate the HTML with [Marked App](http://marked2app.com/help/Special_Features/For_Programmers.html).
-  - If you're on Linux or PC, you can use an [any markdown editor that utilises highlight.js](http://jbt.github.io/markdown-editor/).
-  - The syntax should be detected automatically, but you can specify a language if you prefer like this: **```python**.
-3. Copy and paste into any `* (code block or image)` field:
-   - Including everything from `<pre><code>` to `<code></pre>`.
+2. Hit the Markdown button <kbd>M↓</kbd> on your new plugin's control panel.
+3. That's it. You're done. Did you expect more steps?!
 
-It's wise to keep a backup for easy editing, so I've added a `✎ Markdown` field in both the **Simple** and **Puzzle** themes — here you can store raw markdown or a link to the original code (Github gist for example).
-
-#### Disable highlighting
-
-Some fields may contain code with [Basic styling](#basic-styling), which `highlight.js` may intefere with. To disable styling for individual code blocks, use the `nohighlight` class:
-
-```html
-<pre><code class="nohighlight">...</code></pre>
-```
+You don't have to keep a backup, as Power Format Pack handles this for you (using a checksum, so even if you delete the plugin, your code is safe!). You can always keep a backup in the `✎ Markdown` field provided — here you can store raw markdown or a link to the original code (Github gist for example).
 
 
+### Changing the Pygments theme:
 
-### Changing the highlight.js theme:
+See [Changing the default theme](#changing-the-default-theme). If you have specific needs, you can create your own `pygments.less` file:
 
-See [Changing the default theme](#changing-the-default-theme). If you have specific needs, you can create your own `highlight.less` file:
-
-1. Download your prefered theme from [highlight.js](https://highlightjs.org)
-2. Replace the `less/highlight.less` file with `my-highlight.less`.
+1. Compile your prefered theme [via the command line with Pygments](http://pygments.org/docs/cmdline/#generating-styles)
+2. Rename the file to `my-pygments.less`, add to `src/assets/less/theme/` folder
   - Add in the `@theme-dark-` variables if required.
-3. Recompile `main.css`.
+3. Recompile `main.less`.
 4. Done!

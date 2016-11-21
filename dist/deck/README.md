@@ -2,13 +2,14 @@
 
 - [Home](../../README.md)
   - **THEME**
-    - [Simple Anki theme](../themes/README.md#simple-theme)
-    - [Puzzle Anki theme](../themes/README.md#puzzle-theme)
+    - [Simple Anki theme](../themes/simple/README.md)
+    - [Puzzle Anki theme](../themes/puzzle/README.md)
+    - [Cloze Anki theme](../themes/cloze/README.md)
       - **Deck example**
       - [Notes](../themes/README.md#notes)
   - **THEME COLOURS**
     - [Basic highlighting](../themes/assets/css/README.md)
-    - [Automatic highlighting](../themes/assets/css/README.md#automatic-syntax-highlighting-with-highlightjs)
+    - [Automatic highlighting](../themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments)
 
 ## How to install
 

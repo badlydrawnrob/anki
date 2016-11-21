@@ -1,38 +1,34 @@
 <!-- ==========================================
      Cloze theme
 
-   - Card #1: What's the answer?
-   - Info:    Syntax (inline or code block) field:
-              - {{c1::codeContents::hint}}
-                - Will also display: ★ Title
-
-   - Card #2: What does this syntax do?
-   - Info:    Syntax (inline or code block) field:
-              - {{c2::preCodeContents::hint}}
-              - {{c2::preCodeContentsExtra::hint}}
-                - Will also display:
-                  ✔ What does this syntax do?
-
+   - {{c1}}:  What's the answer?
+   - Fields:  ★ Syntax (code block)
+              - {{c1::preCodeContents::hint}}
+              - {{c1::preCodeContentsExtra::hint}}
+   - Info:    Also requires:
+              - ★ Title
    - Key:     ★ Required
               ☆ Optional (recommended)
               ✎ Optional (Notes)
+
+     If you'd like to quiz yourself on syntax,
+     you can add another cloze, like this:
+
+   - {{c2:://::What is the floor symbol?}}
 =============================================== -->
 
 <div id="front" class="container card-1 pb">
   <h1 class="syntax">
     {{^☆ Syntax}}Syntax{{/☆ Syntax}}
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
-    <code>{{cloze:☆ Syntax (inline code)}}</code>
+    {{#☆ Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+    {{/☆ Syntax (inline code)}}
   </h1>
   <div class="sample-code mb">
     {{cloze:★ Syntax (code block)}}
   </div>
-  {{#c1}}
-    <p class="title">{{✔ What does this syntax do?}}</p>
-  {{/c1}}
-  {{#c2}}
-    <p class="title">{{★ Title}}</p>
-  {{/c2}}
+  <p class="title">{{★ Title}}</p>
 </div>
 
 <!-- ========================================== -->
@@ -42,7 +38,9 @@
   <h1 class="syntax">
     {{^☆ Syntax}}Syntax{{/☆ Syntax}}
     {{#☆ Syntax}}{{☆ Syntax}}{{/☆ Syntax}}
-    <code>{{cloze:☆ Syntax (inline code)}}</code>
+    {{#☆ Syntax (inline code)}}
+      <code>{{☆ Syntax (inline code)}}</code>
+    {{/☆ Syntax (inline code)}}
   </h1>
   <div class="box-code">
     {{cloze:★ Syntax (code block)}}

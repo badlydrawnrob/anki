@@ -6,10 +6,14 @@
 @theme-light-background: #ddd;
 
 @theme-light-base:         #000; // != Not in use
-@theme-light-if:        #602a7d; // Purple
+
+@theme-dark-op:        #602a7d; // Purple
+
 @theme-light-int:       #e75905; // Orange
 @theme-light-str:       #497d00; // Green
-@theme-light-def:       #4271ae; // Blue
+
+@theme-dark-key:       #4271ae; // Blue
+
 @theme-light-var:          #000; // Black
 @theme-light-comment:      #ccc; // Grey
 @theme-light-lowlight:     #000; // Black (Wildcard color)
@@ -41,10 +45,10 @@ code s, code u, code q, code mark {
   background: none;
 }
 
-code b, code strong { color: @theme-light-if;  }
+code b, code strong { color: @theme-dark-op;  }
 code i, code em     { color: @theme-light-int; }
 code s, code u      { color: @theme-light-str; }
-code span, code sup { color: @theme-light-def; }
+code span, code sup { color: @theme-dark-key; }
 code var, code sub  { color: @theme-light-var; }
 code small          { color: @theme-light-comment; }
 
