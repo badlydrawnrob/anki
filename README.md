@@ -16,13 +16,13 @@ The template is built in html and css, with [syntax highlighting](./dist/themes/
 There are three types of cards to choose from:
 
 1. **[Simple](./dist/themes/simple/README.md)**
-  - What's the answer?
-  - What does this syntax do?
+    - What's the answer?
+    - What does this syntax do?
 2. **[Puzzle](./dist/themes/puzzle/README.md)**
-  - What's the answer?
-  - **+** Puzzle question
+    - What's the answer?
+    - **+** Puzzle question
 3. **[Cloze](./dist/themes/cloze/README.md)**
-  - Freeform show/hide question/answer
+    - Freeform show/hide question/answer
 
 
 

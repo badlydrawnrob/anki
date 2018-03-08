@@ -2,14 +2,14 @@
 ## Tomorrow light and Monokai
 
 - [Home](../../README.md)
-  - **THEME**
-    - [Simple Anki theme](./simple/README.md)
-    - [Puzzle Anki theme](./puzzle/README.md)
-      - [Deck example](../deck/README.md)
-      - [Notes](../README.md#notes)
-  - **THEME COLOURS**
-    - [Basic highlighting](#basic-highlighing)
-    - [Automatic highlighting](#automatic-syntax-highlighting-with-pygments)
+    - **THEMES**
+        - [Simple Anki theme](./simple/README.md)
+        - [Puzzle Anki theme](./puzzle/README.md)
+        - [Deck example](../deck/README.md)
+        - [Notes](../README.md#notes)
+    - **THEME COLOURS**
+        - [Basic highlighting](#basic-highlighing)
+        - [Automatic highlighting](#automatic-syntax-highlighting-with-pygments)
 
 
 ## Basic highlighting
@@ -21,19 +21,19 @@ For all other code you want to highlight, wrap in `<code>` or `<pre><code>` to g
 Default colour is white.
 
 1. **Operators** [`if`, `and`, `>=`, `print`]:
-  + `<b>` or `<strong>`
+    + `<b>` or `<strong>`
 2. **Strings** and **numbers**:
-  + `<i>` or `<em>` [`int`, `float`]
-  + `<s>` or `<u>` [`string`]
+    + `<i>` or `<em>` [`int`, `float`]
+    + `<s>` or `<u>` [`string`]
 3. **Keywords** [`function`, `class`]:
-  + `<span>` or `<sup>`
+    + `<span>` or `<sup>`
 4. **Arguments** [`args`, `variables`]:
-  + `<var>` or `<sub>`
+    + `<var>` or `<sub>`
 5. **Comments**:
-  + `<small>` for `# comments`
+    + `<small>` for `# comments`
 6. **Other**:
-  + `<q>` wildcard (could be used for css `class` for instance)
-  + `<mark>` wildcard (could be used for a specific `highlight`)
+    + `<q>` wildcard (could be used for css `class` for instance)
+    + `<mark>` wildcard (could be used for a specific `highlight`)
 
 ### Changing the default theme
 
@@ -54,10 +54,10 @@ Anki Theme provides styles for use with [Pygments](http://pygments.org/). You ca
 
 1. Download the [power format pack](https://ankiweb.net/shared/info/162313389) (_PFP_) for Anki. It's a great plugin that speeds up your workflow, allowing you to quickly convert Markdown to HTML.
 2. By default, the plugin uses inline styles, not the standard Pygments classes. To make sure the default styles work properly:
-  1. Select `Tools` from the Anki menu
-  2. Select `Power format pack` > `options...`
-  3. Select `Markdown`
-  4. Select the `Use user stylesheet for styling code blocks` option.
+    1. Select `Tools` from the Anki menu
+    2. Select `Power format pack` > `options...`
+    3. Select `Markdown`
+    4. Select the `Use user stylesheet for styling code blocks` option.
 
 > If you'd like to use Markdown, but prefer using stock Anki, try [Python Markdown](https://pythonhosted.org/Markdown/) with it's [codehilite plugin](https://pythonhosted.org/Markdown/extensions/code_hilite.html) to generate your code blocks.
 
@@ -78,6 +78,6 @@ See [Changing the default theme](#changing-the-default-theme). If you have speci
 
 1. Compile your prefered theme [via the command line with Pygments](http://pygments.org/docs/cmdline/#generating-styles)
 2. Rename the file to `pygments-custom.stylus`, add to `src/assets/stylus/theme/` folder
-  - Add in the `@theme-dark-` variables if required.
+    - Add in the `@theme-dark-` variables if required.
 3. Recompile `main.stylus`.
 4. Done!
