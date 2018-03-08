@@ -1,0 +1,22 @@
+{
+  "name": "anki-programming-themes",
+  "version": "2.0.0",
+  "description": "Learning to code with Anki: Themes, cards, templates & syntax highlighting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://badlydrawnrob@github.com/badlydrawnrob/anki.git"
+  },
+  "author": "Rob McDonald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badlydrawnrob/anki/issues"
+  },
+  "homepage": "https://github.com/badlydrawnrob/anki#readme",
+  "dependencies": {
+    "cardinal-stylus": "github:badlydrawnrob/cardinal-stylus"
+  }
+}
