@@ -10,6 +10,7 @@ The template is built in html and css, with [syntax highlighting](./dist/themes/
 *Anki Themes: 'Simple' preview image* <sup><strong><em>[1](#other-notes)</em></strong></sup>
 
 
+
 ## Card Types
 
 There are three types of cards to choose from:
@@ -22,6 +23,7 @@ There are three types of cards to choose from:
   - **+** Puzzle question
 3. **[Cloze](./dist/themes/cloze/README.md)**
   - Freeform show/hide question/answer
+
 
 
 ## Anki syntax highlighting with Markdown
@@ -70,6 +72,7 @@ I generally prefer to limit plugin use wherever possible, but in my experience _
 If you'd prefer to use stock Anki, [see these notes](./dist/themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments).
 
 
+
 ## Further reading
 
 Not sure what all the fuss is about Anki? Some great reading material below ...
@@ -82,13 +85,14 @@ Not sure what all the fuss is about Anki? Some great reading material below ...
 This is a major overhaul from the original (pre-beta), so it's not compatible with earlier versions. In future I'll try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/README.md) for the easiest way to test the [.apkg package](./dist/deck) before updating future versions.
 
 
+
 ## License
 
 Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 
-<!-- NOTES -->
 
-### Other notes
+## Thanks to ...
 
 1. Icons courtesy of [@kompa](http://devicon.fr)
+2. Original Cardinal framework by [@cbracco](https://github.com/cbracco)
