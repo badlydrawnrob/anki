@@ -1,3 +1,2 @@
-# Sublime files #
-#################
 *.sublime-project
+*.project.cson
