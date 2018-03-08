@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
   "dependencies": {
-    "cardinal-stylus": "github:badlydrawnrob/cardinal-stylus"
+    "cardinal-stylus": "github:badlydrawnrob/cardinal-stylus",
+    "nunjucks": "^3.1.2"
   }
 }
