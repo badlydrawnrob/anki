@@ -3,10 +3,10 @@
 
 - [Home](../../README.md)
     - **THEMES**
-        - [Simple Anki theme](./cards/simple/README.md)
-        - [Puzzle Anki theme](./cards/puzzle/README.md)
-        - [Cloze Anki theme](./cards/cloze/README.md)
-        - [Deck example](../deck/README.md)
+        - [Simple Anki theme](../themes/cards/simple/README.md)
+        - [Puzzle Anki theme](../themes/puzzle/README.md)
+        - [Cloze Anki theme](../themes/cloze/README.md)
+        - [Deck example](../themes/deck/README.md)
     - **THEME COLOURS**
         - [Basic highlighting](#basic-highlighing)
         - [Automatic highlighting](#automatic-syntax-highlighting-with-pygments)

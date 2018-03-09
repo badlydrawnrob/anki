@@ -1,0 +1,47 @@
+// Notes ====================================================================
+// Some simple styles to mock the Anki app
+
+.gl-Card
+  // pass
+
+.gl-Card-Front
+  margin-bottom: $spacing.eight
+
+.gl-Card-Reverse
+  // pass
+
+.gl-Card-Button
+  display: inline-block
+  margin: ($spacing.quarter + $spacing.micro) $spacing.half
+  padding: $spacing.half
+  min-width: $spacing.four
+  color: inherit
+  font-family: $font.family.base
+  font-weight: 700
+  font-size: $font.size.m
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: normal
+  line-height: $line.height.mm  // #1
+  vertical-align: middle
+  white-space: nowrap
+  cursor: pointer
+  background-color: $color.lll
+  border: 0 none
+  border-radius: $border.radius
+  box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%)
+
+  &:hover
+    background-color: $color.lll
+  &:active
+    background-color: $color.llll
+    box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%)
+  &:active:focus
+    outline: 0 none
+  &:disabled
+    color: $color.bb
+    cursor: not-allowed
+    pointer-events: none
+    box-shadow: none
+    text-shadow: none

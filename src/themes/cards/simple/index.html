@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../../../stylus/main.css">
+  </head>
+  <body class="gl-Wrapper">
+    <section class="gl-Card">
+      <div class="gl-Card-Front">
+
+<div id="front" class="container card-1 pb">
+  <p class="title">What will this print out?</p>
+  <h1 class="syntax">
+    
+    Anonymous functions
+    <code>filter(<b>lambda</b>...)</code>
+  </h1>
+  <div class="sample-code mb"><pre class="codehilite"><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">my_list</span><span class="p">))</span></pre></div>
+</div>
+        <a class="gl-Card-Button" href="#answer">See answer</a>
+      </div>
+      <div class="gl-Card-Reverse">
+
+<div id="front" class="container card-1 pb">
+  <p class="title">What will this print out?</p>
+  <h1 class="syntax">
+    
+    Anonymous functions
+    <code>filter(<b>lambda</b>...)</code>
+  </h1>
+  <div class="sample-code mb"><pre class="codehilite"><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">my_list</span><span class="p">))</span></pre></div>
+</div>
+  
+
+<div id="answer" class="container card-1 pt+">
+  <div class="box-code"><pre>[0, 3, 6, 9, 12, 15]</pre></div>
+  <div class="box-notes"><ul>
+    <li><strong>Lambda</strong> is an <strong>anonymous function</strong>.
+      <ul>
+        <li>It's <strong>comparable to a regular <code>def</code> function</strong>.</li>
+      </ul>
+    </li>
+    <li>As a single function, <code>x</code> would be passed an <code>int</code> and return <code>True</code> if divisible by 3.</li>
+    <li><code>filter(function, iterable)</code> accepts a function as an argument, and something like <code>my_list</code> to iterate over.</li>
+    <li>Using <code>filter(lambda x: x % 3 == 0, my_list)</code> is the same as using <strong>list comprehension</strong></li>
+  </ul></div>
+  <div class="footer mt pb">
+    This is an example of <strong>functional programming</strong>. You're passing the anonymous <code>lambda</code> function to the&nbsp;<code>filter()</code> function. However, Python was <a href="http://bit.ly/2FEwUTy">never intended as a functional language</a>, and is said by some to <a href="http://bit.ly/2p2dA8I">not be very good at it</a>.
+  </div>
+</div>
+      </div>
+    </section>
+  </body>
+</html>
