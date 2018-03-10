@@ -5,6 +5,9 @@
   position: relative
   display: flex
   flex-wrap: wrap
+  text-align: center
+  justify-content: space-evenly
+  align-items: baseline
   background: $color.theme.card.s
   border: $spacing.px solid $color.theme.card.s
   border-bottom: $spacing.px solid $color.b
@@ -12,8 +15,7 @@
   border-top-right-radius: $border.radius
 
 .card-SimpleHeader_Title
-  flex: 0 0 60%
-  min-height: $spacing.increment
+  flex: 0 0 100%
   margin: 0 0 $spacing.one
   padding: $spacing.half
   font-weight: 700
@@ -25,10 +27,7 @@
   background: $color.l
 
 .card-SimpleHeader_Syntax
-  flex: 0 0 40%
-  order: -1
-  height: $spacing.increment
-  margin: 0 0 $spacing.one
+  margin: 0 0 $spacing.half
   padding: $spacing.half
   font-weight: normal
   font-size: $font.size.base
@@ -36,12 +35,12 @@
   text-transform: none
   letter-spacing: normal
   background: $color.theme.card.s
-  border-bottom: $spacing.px solid $color.b
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
 
 .card-SimpleHeader_Code
-  margin: 0 auto $spacing.one
+  margin: 0 0 $spacing.half 0
+  padding: $spacing.half
 
 .card-Simple_Sample
   // pass

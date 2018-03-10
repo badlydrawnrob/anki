@@ -13,7 +13,7 @@
 
 
 
-## Card #01
+## Card 01
 > **Key:** ★ Required / ☆ Optional (recommended)
 
 ### What's the answer?
@@ -61,7 +61,7 @@ These fields are shared with the [Puzzle theme](../puzzle/README.md)). The purpo
 -----
 
 
-## Card #02
+## Card 02
 > **Key:** ✔ Optional / ✄ Optional (explicitly *hide* fields) / ♻ Optional (explicity *show* fields)
 
 ### What does this syntax do?

@@ -1,13 +1,17 @@
 # Simple card demo
 
+
 ## ★ Title
 What will this print out?
+
 
 ## ☆ Syntax
 Anonymous functions
 
+
 ## ☆ Syntax (inline code)
 `filter(<b>lambda</b>...)``
+
 
 ## ☆ Sample (code block or image)
 ```python
@@ -15,10 +19,12 @@ my_list = range(16)
 print(filter(lambda x: x % 3 == 0, my_list))
 ```
 
+
 ## ★ Key point (code block or image)
 ```text
 [0, 3, 6, 9, 12, 15]
 ```
+
 
 ## ★ Key point notes
 - **Lambda** is an **anonymous function**.
@@ -35,20 +41,26 @@ def by_three(x):
     return x % 3 == 0
 ```
 
+
 ## ---✄-- Hide on front: Syntax (inline code)"
 false
+
 
 ## »»♻«« Show as reference: Syntax (inline code)
 false
 
+
 ## ----✄-- Hide on front: Sample (code block or image)"
 false
+
 
 ## »»♻«« Show as reference: Sample (code block or image)"
 false
 
+
 ## ✎ Other notes
 This is an example of **functional programming**. You're passing the anonymous `lambda` function to the `filter()` function. However, Python was [never intended as a functional language](http://bit.ly/2FEwUTy), and is said by some to [not be very good at it](http://bit.ly/2p2dA8I).
+
 
 ## ✎ Markdown
 false
