@@ -1,0 +1,28 @@
+{{! To compile =================================================================
+    1. cd into this folder on your terminal
+    2. Enter the following:
+       ```
+       mustache -p card-01-front.mustache -p card-01-reverse.mustache cards.json cards.mustache > ../../../../build/themes/cards/simple/index.html
+       ```
+    3. View in your browser!
+============================================================================= }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+  </head>
+  <body class="gl-Anki">
+    <section class="gl-AnkiCard">
+      <div class="gl-AnkiCard-Front">
+        {{>card-01-front}}
+        <a class="gl-AnkiCard-Button" href="#answer">See answer</a>
+      </div>
+      <div class="gl-AnkiCard-Reverse">
+        {{>card-01-front}}
+        {{>card-01-reverse}}
+      </div>
+    </section>
+  </body>
+</html>

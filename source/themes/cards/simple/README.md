@@ -12,9 +12,6 @@
     - [Automatic highlighting](../../../assets/css/README.md#automatic-syntax-highlighting-with-pygments)
 
 
-```
-mustache -p card-01-front.mustache -p card-01-reverse.mustache cards.json cards.mustache > index.html
-```
 
 ## Card #01
 > **Key:** ★ Required / ☆ Optional (recommended)

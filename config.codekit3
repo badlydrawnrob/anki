@@ -13,14 +13,20 @@
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.editorconfig",
+		"oAP": "\/build\/.editorconfig",
 		"oF": 0
 		},
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.gitignore",
+		"oAP": "\/build\/.gitignore",
+		"oF": 0
+		},
+	"\/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/build",
 		"oF": 0
 		},
 	"\/dist\/deck": {
@@ -44,7 +50,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/license.html",
+		"oAP": "\/build\/license.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -62,7 +68,7 @@
 	"\/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/package-lock-min.json",
+		"oAP": "\/build\/package-lock-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -70,7 +76,7 @@
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/package-min.json",
+		"oAP": "\/build\/package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -79,7 +85,7 @@
 		"ft": 32768,
 		"iS": 71000,
 		"oA": 0,
-		"oAP": "\/preview.png",
+		"oAP": "\/build\/preview.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -95,7 +101,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/README.html",
+		"oAP": "\/build\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -104,7 +110,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/assets\/less\/base\/cardinal.less": {
+	"\/source\/assets\/less\/base\/cardinal.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -113,7 +119,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/cardinal.css",
+		"oAP": "\/build\/assets\/less\/css\/cardinal.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -121,7 +127,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/base\/variables.less": {
+	"\/source\/assets\/less\/base\/variables.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -130,7 +136,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/variables.css",
+		"oAP": "\/build\/assets\/less\/css\/variables.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -138,7 +144,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/main.less": {
+	"\/source\/assets\/less\/main.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -147,7 +153,7 @@
 		"iI": 0,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/dist\/themes\/assets\/css\/main.css",
+		"oAP": "\/build\/dist\/themes\/assets\/css\/main.css",
 		"oF": 2,
 		"oS": 1,
 		"rU": 0,
@@ -155,7 +161,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/answer.less": {
+	"\/source\/assets\/less\/theme\/answer.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -164,7 +170,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/answer.css",
+		"oAP": "\/build\/assets\/less\/css\/answer.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -172,7 +178,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/base.less": {
+	"\/source\/assets\/less\/theme\/base.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -181,7 +187,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/base.css",
+		"oAP": "\/build\/assets\/less\/css\/base.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -189,7 +195,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/code.less": {
+	"\/source\/assets\/less\/theme\/code.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -198,7 +204,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/code.css",
+		"oAP": "\/build\/assets\/less\/css\/code.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -206,7 +212,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/front.less": {
+	"\/source\/assets\/less\/theme\/front.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -215,7 +221,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/front.css",
+		"oAP": "\/build\/assets\/less\/css\/front.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -223,7 +229,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/pre.less": {
+	"\/source\/assets\/less\/theme\/pre.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -232,7 +238,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/pre.css",
+		"oAP": "\/build\/assets\/less\/css\/pre.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -240,7 +246,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/puzzle.less": {
+	"\/source\/assets\/less\/theme\/puzzle.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -249,7 +255,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/puzzle.css",
+		"oAP": "\/build\/assets\/less\/css\/puzzle.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -257,7 +263,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/theme\/pygments.less": {
+	"\/source\/assets\/less\/theme\/pygments.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -266,7 +272,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/pygments.css",
+		"oAP": "\/build\/assets\/less\/css\/pygments.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -274,7 +280,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/assets\/less\/utilities\/curly-brackets.less": {
+	"\/source\/assets\/less\/utilities\/curly-brackets.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -283,7 +289,7 @@
 		"iI": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/assets\/less\/css\/curly-brackets.css",
+		"oAP": "\/build\/assets\/less\/css\/curly-brackets.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -291,7 +297,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/stylus\/config.styl": {
+	"\/source\/stylus\/config.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -299,22 +305,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/css\/config.css",
+		"oAP": "\/build\/css\/config.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/main.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/src\/stylus\/main-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/src\/stylus\/main.styl": {
+	"\/source\/stylus\/main.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -322,12 +318,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/src\/stylus\/main.css",
+		"oAP": "\/build\/themes\/assets\/css\/main.css",
 		"oF": 2,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/modules\/variables\/colors.styl": {
+	"\/source\/stylus\/modules\/variables\/colors.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -335,12 +331,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/stylus\/modules\/css\/colors.css",
+		"oAP": "\/build\/stylus\/modules\/css\/colors.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/partials\/curly-brackets.styl": {
+	"\/source\/stylus\/modules\/variables\/typography.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -348,12 +344,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/stylus\/css\/curly-brackets.css",
+		"oAP": "\/build\/stylus\/modules\/css\/typography.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/partials\/dark.styl": {
+	"\/source\/stylus\/partials\/_root.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -361,12 +357,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/stylus\/css\/dark.css",
+		"oAP": "\/build\/stylus\/css\/_root.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/partials\/light.styl": {
+	"\/source\/stylus\/partials\/curly-brackets.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -374,12 +370,38 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/stylus\/css\/light.css",
+		"oAP": "\/build\/stylus\/css\/curly-brackets.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/stylus\/README.md": {
+	"\/source\/stylus\/partials\/dark.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/css\/dark.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/partials\/light.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/stylus\/css\/light.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/stylus\/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -387,9 +409,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/src\/stylus\/README.html",
-		"oF": 0,
+		"oA": 2,
+		"oAP": "\/build\/themes\/assets\/css\/README.md",
+		"oF": 3,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -397,7 +419,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/stylus\/vendor\/pygments.styl": {
+	"\/source\/stylus\/vendor\/pygments.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -405,55 +427,48 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/stylus\/css\/pygments.css",
+		"oAP": "\/build\/stylus\/css\/pygments.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/src\/themes\/cards\/simple\/card-01-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/card-01-front.mustache",
-		"oF": 1
-		},
-	"\/src\/themes\/cards\/simple\/card-01-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/card-01-reverse.mustache",
-		"oF": 1
-		},
-	"\/src\/themes\/cards\/simple\/card-02-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/card-02-front.mustache",
-		"oF": 1
-		},
-	"\/src\/themes\/cards\/simple\/card-02-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/card-02-reverse.mustache",
-		"oF": 1
-		},
-	"\/src\/themes\/cards\/simple\/cards.html": {
+	"\/source\/themes\/cards\/puzzle\/card-01-front.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/src\/themes\/cards\/simple\/cards.html",
+		"oAP": "\/build\/themes\/cards\/puzzle\/card-01-front.mustache",
 		"oF": 0
 		},
-	"\/src\/themes\/cards\/simple\/cards.json": {
+	"\/source\/themes\/cards\/puzzle\/card-01-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/puzzle\/card-01-reverse.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/puzzle\/card-02-front.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/puzzle\/card-02-front.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/puzzle\/card-02-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/puzzle\/card-02-reverse.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/puzzle\/cards.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/cards-min.json",
+		"oAP": "\/build\/themes\/cards\/puzzle\/cards-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/src\/themes\/cards\/simple\/cards.md": {
+	"\/source\/themes\/cards\/puzzle\/cards.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -462,7 +477,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/src\/themes\/cards\/simple\/cards.html",
+		"oAP": "\/build\/themes\/cards\/puzzle\/cards.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -471,21 +486,93 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/themes\/cards\/simple\/cards.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/src\/themes\/cards\/simple\/cards.mustache",
-		"oF": 1
-		},
-	"\/src\/themes\/cards\/simple\/index.html": {
+	"\/source\/themes\/cards\/puzzle\/cards.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/src\/themes\/cards\/simple\/index.html",
+		"oAP": "\/build\/themes\/cards\/puzzle\/cards.mustache",
 		"oF": 0
 		},
-	"\/src\/themes\/cards\/simple\/README.md": {
+	"\/source\/themes\/cards\/puzzle\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/build\/themes\/cards\/puzzle\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/source\/themes\/cards\/simple\/card-01-front.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/card-01-front.mustache",
+		"oF": 1
+		},
+	"\/source\/themes\/cards\/simple\/card-01-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/card-01-reverse.mustache",
+		"oF": 1
+		},
+	"\/source\/themes\/cards\/simple\/card-02-front.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/card-02-front.mustache",
+		"oF": 1
+		},
+	"\/source\/themes\/cards\/simple\/card-02-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/card-02-reverse.mustache",
+		"oF": 1
+		},
+	"\/source\/themes\/cards\/simple\/cards.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/cards-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/source\/themes\/cards\/simple\/cards.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/build\/themes\/cards\/simple\/cards.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/source\/themes\/cards\/simple\/cards.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/simple\/cards.mustache",
+		"oF": 1
+		},
+	"\/source\/themes\/cards\/simple\/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -494,7 +581,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 2,
-		"oAP": "\/src\/themes\/cards\/simple\/README.md",
+		"oAP": "\/build\/themes\/cards\/simple\/README.md",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -503,7 +590,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/themes\/components\/_demo\/anki.styl": {
+	"\/source\/themes\/components\/_demo\/anki.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -511,7 +598,7 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/themes\/components\/css\/anki.css",
+		"oAP": "\/build\/themes\/components\/css\/anki.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
@@ -781,7 +868,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"buildFolderActive": 0,
+	"buildFolderActive": 1,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
 	"coffeeLintFlags2": {
@@ -2677,7 +2764,7 @@
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": ""
+	"websiteRelativeRoot": "\/build"
 	},
 "settingsFileVersion": "3"
 }
