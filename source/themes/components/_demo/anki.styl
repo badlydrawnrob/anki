@@ -2,8 +2,11 @@
 // Some simple styles to mock the Anki app
 
 .gl-Anki
-  width: 60%
-  margin: 0 auto
+  margin: $spacing.one
+
+  @media (min-width: $screen.md)
+    width: 60%
+    margin: 0 auto
 
 .gl-AnkiCard-Front
   margin-bottom: $spacing.eight

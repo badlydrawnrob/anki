@@ -1,0 +1,27 @@
+{{! Simple theme ===============================================================
+
+    - Card: What's the answer?
+    - Info: Question about the code example
+    - Key:  ★ Required
+      ☆ Optional (recommended)
+      ✎ Optional (Notes)
+
+============================================================================= }}
+
+<section id="front" class="card-Simple">
+  <header class="card-SimpleHeader">
+    <h1 class="card-SimpleHeader_Title">
+      ★ {{{★ Title}}}
+    </h1>
+    <h2 class="card-SimpleHeader_Syntax">
+      {{^☆ Syntax}}Syntax{{/☆ Syntax}}
+      {{#☆ Syntax}}{{{☆ Syntax}}}{{/☆ Syntax}}
+    </h2>
+    <p class="card-SimpleHeader_Code">
+      <code>{{{☆ Syntax (inline code)}}}</code>
+    </p>
+  </header>
+  <div class="card-Simple_Sample">
+    {{{☆ Sample (code block or image)}}}
+  </div>
+</section>
