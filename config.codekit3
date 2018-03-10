@@ -438,6 +438,13 @@
 		"oAP": "\/src\/themes\/cards\/simple\/card-02-reverse.mustache",
 		"oF": 1
 		},
+	"\/src\/themes\/cards\/simple\/cards.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/themes\/cards\/simple\/cards.html",
+		"oF": 0
+		},
 	"\/src\/themes\/cards\/simple\/cards.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -445,6 +452,24 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/src\/themes\/cards\/simple\/cards.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/src\/themes\/cards\/simple\/cards.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/src\/themes\/cards\/simple\/cards.mustache": {
 		"cB": 0,
@@ -478,7 +503,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/themes\/components\/_global\/card.styl": {
+	"\/src\/themes\/components\/_demo\/anki.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -486,20 +511,7 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/src\/themes\/components\/css\/card.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/src\/themes\/components\/_global\/wrappers.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/src\/themes\/components\/css\/wrappers.css",
+		"oAP": "\/src\/themes\/components\/css\/anki.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
