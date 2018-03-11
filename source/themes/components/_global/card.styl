@@ -1,7 +1,13 @@
-.card-Simple
+.card
   border-radius: 10px
 
-.card-SimpleHeader
+  &-front
+    // pass
+
+  &-reverse
+    // pass
+
+.card-Header
   position: relative
   display: flex
   flex-wrap: wrap
@@ -14,7 +20,7 @@
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
 
-.card-SimpleHeader_Title
+.card-Header_Title
   flex: 0 0 100%
   margin: 0 0 $spacing.one
   padding: $spacing.half
@@ -26,7 +32,7 @@
   border-bottom: $spacing.px solid $color.b
   background: $color.l
 
-.card-SimpleHeader_Syntax
+.card-Header_Syntax
   margin: 0 0 $spacing.half
   padding: $spacing.half
   font-weight: normal
@@ -38,21 +44,23 @@
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
 
-.card-SimpleHeader_Code
+.card-Header_Code
   margin: 0 0 $spacing.half 0
   padding: $spacing.half
 
-.card-Simple_Sample
+.card-Sample
   // pass
 
-.card-Simple_KeyPoint
+.card-KeyPoint_Code
   // pass
 
-.card-Simple_KeyPointNotes
+.card-KeyPoint_Notes
   margin-bottom: $spacing.base
   padding: $spacing.base $spacing.half
   background: $color.theme.card.s
 
-.card-Simple_OtherNotes
+.card-Notes
   color: $color.theme.card.sss
+  font-size: $font.size.m
   font-style: italic
+  line-height: $line.height.m
