@@ -629,18 +629,31 @@
 		"oAP": "\/build\/themes\/cards\/simple\/simple.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/simple\/simple.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
+	"\/source\/themes\/cards\/syntax\/simple.json": {
+		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/css\/simple.css",
+		"oAP": "\/build\/themes\/cards\/syntax\/simple-min.json",
 		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/source\/themes\/cards\/syntax\/simple.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/build\/themes\/cards\/syntax\/simple.html",
+		"oF": 0,
+		"oFM": 0,
 		"oS": 0,
-		"rrU": 0
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/source\/themes\/components\/_demo\/anki.styl": {
 		"aP": 0,
@@ -651,6 +664,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/themes\/components\/css\/anki.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/themes\/components\/_global\/card.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/themes\/components\/css\/card.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
