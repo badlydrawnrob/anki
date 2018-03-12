@@ -1,13 +1,15 @@
 // Main ========================================================================
-// #1: The main styles to import for base Cardinal and Pygments themes
-// #2: Dev mode only (uncomment when working with live demo files)
-// #3: Individual card templates
-
-@import './config'
-@import 'vendor/*'
+// #1: Import the configuration files
+// #2: Default card theme
+// #3: Your custom card theme (be specific, NO wildcards)
+//     + Otherwise you'd include `themes/vendor/colors.styl` twice!
+//       + it's already included in `config.styl`
 
 // #1
-@import '../themes/components/_demo/*'
+@import './config'
 
 // #2
-@import '../themes/components/_global/*'
+@import '../themes/components/partials/*'
+
+// #3
+@import '../themes/components/vendor/config-theme.styl'

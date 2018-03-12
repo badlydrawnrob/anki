@@ -1,5 +1,5 @@
 // Pygments ====================================================================
-// Default theme: Monokai
+// Default dark theme: Monokai
 //
 // #1: `.p` and `.m` helper class conflict
 // #2: `error` - not sure where this would be used!
@@ -8,7 +8,13 @@
 // # Notes
 // - Sublime Text flavoured
 // - $color variables can be found here:
-//   + `stylus/modules/variables/colors.styl`
+//   + `source/stylus/modules/variables/colors.styl`
+
+.codehilite
+  pre,
+  pre code
+    color: $color.theme.dark.base
+    background: $color.theme.dark.background
 
 .codehilite .p
   padding: 0 !important  // #1
@@ -17,8 +23,8 @@
   margin: 0 !important  // #1
 
 .codehilite .err
-  color: #960050
-  background-color: #1e0010  // #2
+  color: $color.theme.dark.error
+  background-color: $color.theme.dark.background  // #2
 
 .codehilite .c
   color: $color.theme.dark.comment  // Comment

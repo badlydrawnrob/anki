@@ -8,20 +8,22 @@
 
 ============================================================================= }}
 
-<section id="front" class="card card-front">
-  <header class="card-Header">
-    <h1 class="card-Header_Title">
-      ★ {{{★ Title}}}
-    </h1>
-    <h2 class="card-Header_Syntax">
-      {{^☆ Syntax}}Syntax{{/☆ Syntax}}
-      {{#☆ Syntax}}{{{☆ Syntax}}}{{/☆ Syntax}}
-    </h2>
-    <p class="card-Header_Code">
-      <code>{{{☆ Syntax (inline code)}}}</code>
-    </p>
-  </header>
-  <div class="card-Sample">
-    {{{☆ Sample (code block or image)}}}
-  </div>
-</section>
+<div id="front" class="anki-Front">
+  <section class="card card-front">
+    <header class="card-Header">
+      <h1 class="card-Header_Title">
+        ★ {{{★ Title}}}
+      </h1>
+      <h2 class="card-Header_Syntax">
+        {{^☆ Syntax}}Syntax{{/☆ Syntax}}
+        {{#☆ Syntax}}{{{☆ Syntax}}}{{/☆ Syntax}}
+      </h2>
+      <p class="card-Header_Code">
+        <code>{{{☆ Syntax (inline code)}}}</code>
+      </p>
+    </header>
+    <div class="card-Sample">
+      {{{☆ Sample (code block or image)}}}
+    </div>
+  </section>
+</div>

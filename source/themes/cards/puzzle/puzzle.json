@@ -1,54 +1,54 @@
 {
   "★ Title": "If <strong>-14<\/strong> is the argument passed, what will be returned?",
-  
+
 
   "☆ Syntax": "Absolute value and type",
-  
+
 
   "☆ Syntax (inline code)": "abs()",
-  
 
-  "☆ Sample (code block or image)": "<pre class=\"codehilite\"><span class=\"k\">def<\/span> <span class=\"nf\">distance_from_zero<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">):<\/span>\r\n    <span class=\"k\">if<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span> <span class=\"o\">==<\/span> <span class=\"nb\">int<\/span> <span class=\"ow\">or<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span> <span class=\"o\">==<\/span> <span class=\"nb\">float<\/span><span class=\"p\">:<\/span>\r\n        <span class=\"k\">return<\/span> <span class=\"nb\">abs<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span>\r\n    <span class=\"k\">else<\/span><span class=\"p\">:<\/span>\r\n        <span class=\"k\">return<\/span> <span class=\"s\">\"Nope\"<\/span><\/pre>",
-  
 
-  "★ Key point (code block or image)": "<pre class=\"codehilite\"><span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"n\">absolute<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">abs<\/span><span class=\"p\">(<\/span><span class=\"o\">-<\/span><span class=\"mi\">14<\/span><span class=\"p\">)<\/span>\r\n<span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"k\">print<\/span><span class=\"p\">(<\/span><span class=\"n\">absolute<\/span><span class=\"p\">)<\/span>\r\n<span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"mi\">14<\/span><\/pre>",
-  
+  "☆ Sample (code block or image)": "<div class=\"codehilite\"><pre><span class=\"k\">def<\/span> <span class=\"nf\">distance_from_zero<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">):<\/span>\r\n    <span class=\"k\">if<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span> <span class=\"o\">==<\/span> <span class=\"nb\">int<\/span> <span class=\"ow\">or<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span> <span class=\"o\">==<\/span> <span class=\"nb\">float<\/span><span class=\"p\">:<\/span>\r\n        <span class=\"k\">return<\/span> <span class=\"nb\">abs<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span>\r\n    <span class=\"k\">else<\/span><span class=\"p\">:<\/span>\r\n        <span class=\"k\">return<\/span> <span class=\"s\">\"Nope\"<\/span><\/pre><\/div>",
+
+
+  "★ Key point (code block or image)": "<div class=\"codehilite\"><pre><span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"n\">absolute<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">abs<\/span><span class=\"p\">(<\/span><span class=\"o\">-<\/span><span class=\"mi\">14<\/span><span class=\"p\">)<\/span>\r\n<span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"k\">print<\/span><span class=\"p\">(<\/span><span class=\"n\">absolute<\/span><span class=\"p\">)<\/span>\r\n<span class=\"o\">&gt;&gt;&gt;<\/span> <span class=\"mi\">14<\/span><\/pre><\/div>",
+
 
   "★ Key point notes": "Returns absolute value of <code>number<\/code>, the (positive) distance between <strong>x<\/strong>and <strong>zero<\/strong>",
-  
+
 
   "♞ Puzzle": "What are we using <code>type()<\/code> for?",
-  
+
 
   "---✄-- Hide on front: Syntax (inline code)": true,
-  
+
 
   "»»♻«« Show as reference: Syntax (inline code)": false,
-  
+
 
   "----✄-- Hide on front: Sample (code block or image)": false,
-  
+
 
   "»»♻«« Show as reference: Sample (code block or image)": false,
-  
+
 
   "♘ Puzzle (inline code)": false,
-  
+
 
   "♘ Puzzle (code block or image)": false,
-  
+
 
   "♘ Puzzle hint": false,
-  
 
-  "♞ Puzzle answer (code block or image)": "<pre class=\"codehilite\">&gt;&gt;&gt; <span class=\"nv\">n<\/span> <span class=\"o\">=<\/span> 7\r\n&gt;&gt;&gt; <span class=\"nb\">type<\/span><span class=\"o\">(<\/span>n<span class=\"o\">)<\/span>\r\n&lt;class <span class=\"s1\">'int'<\/span>&gt;<\/pre>",
-  
+
+  "♞ Puzzle answer (code block or image)": "<div class=\"codehilite\"><pre>&gt;&gt;&gt; <span class=\"nv\">n<\/span> <span class=\"o\">=<\/span> 7\r\n&gt;&gt;&gt; <span class=\"nb\">type<\/span><span class=\"o\">(<\/span>n<span class=\"o\">)<\/span>\r\n&lt;class <span class=\"s1\">'int'<\/span>&gt;<\/pre><\/div>",
+
 
   "♞ Puzzle answer notes": "<code>type()<\/code>&nbsp;returns the&nbsp;<em><strong>type<\/strong><\/em>&nbsp;of an&nbsp;<em><strong>object<\/strong>:<\/em>&nbsp;a&nbsp;<code>str<\/code>,&nbsp;<code>int<\/code>&nbsp;or&nbsp;<code>float<\/code>",
-  
+
 
   "✎ Other notes": "The <strong><code>abs()<\/code><\/strong> argument may be a plain or long integer or a floating point number.",
-  
+
 
   "✎ Markdown": false
 }

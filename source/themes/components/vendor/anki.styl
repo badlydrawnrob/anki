@@ -1,20 +1,21 @@
 // Notes ====================================================================
 // Some simple styles to mock the Anki app
 
-.gl-Anki
+.test-Anki
   margin: $spacing.one
 
   @media (min-width: $screen.md)
     width: 60%
     margin: 0 auto
 
-.gl-AnkiCard-Front
+.test-AnkiCard-Front
   margin-bottom: $spacing.eight
 
-.gl-AnkiCard-Reverse
-  // pass
+.test-AnkiCard-Reverse
+  .card-Sample
+    @require 'pygments-light.styl'
 
-.gl-AnkiCard-Button
+.test-AnkiCard-Button
   display: inline-block
   margin: ($spacing.quarter + $spacing.micro) 0
   padding: $spacing.half

@@ -1,4 +1,17 @@
-@import '../../node_modules/cardinal-stylus/source/stylus/cardinal.styl'
+// Config ======================================================================
+// Here we set up the base framework and variables
 
+@import '../../node_modules/cardinal-stylus/source/stylus/cardinal'
 @import 'modules/variables/*'
+
+
+// Custom variables ============================================================
+// To override default variables, your custom theme colors must go here!
+
+@require '../themes/components/vendor/config-colors'
+
+
+// Partials ====================================================================
+// These files extend the base framework and import Pygments
+
 @import 'partials/*'

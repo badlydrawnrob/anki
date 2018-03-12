@@ -1,17 +1,19 @@
-{{FrontSide}}  {{! Anki only }}
+<div class="anki-Reverse">
+  {{FrontSide}}  {{! Anki only }}
 
-<section id="answer" class="card card-reverse">
-  <div class="card-KeyPoint">
-    <div class="card-KeyPoint_Code">
-      {{{★ Key point (code block or image)}}}
+  <section id="answer" class="card card-reverse">
+    <div class="card-KeyPoint">
+      <div class="card-KeyPoint_Code">
+        {{{★ Key point (code block or image)}}}
+      </div>
+      <div class="card-KeyPoint_Notes">
+        {{{★ Key point notes}}}
+      </div>
     </div>
-    <div class="card-KeyPoint_Notes">
-      {{{★ Key point notes}}}
-    </div>
-  </div>
-  {{#✎ Other notes}}
-    <footer class="card-Notes">
-      {{{✎ Other notes}}}
-    </footer>
-  {{/✎ Other notes}}
-</section>
+    {{#✎ Other notes}}
+      <footer class="card-Notes">
+        {{{✎ Other notes}}}
+      </footer>
+    {{/✎ Other notes}}
+  </section>
+</div>

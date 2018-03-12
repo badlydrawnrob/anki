@@ -1,7 +1,12 @@
 // Theme colors =================================================================
-// card: Material design
-// light: Tomorrow light
-// dark: Monokai (modified)
+// Card: Material design
+// Light: Tomorrow light
+// Dark: Monokai (modified)
+//
+// Theme color variable notes:
+//    + $color.theme.x.base: default font-color
+//    + $color.theme.x.lowlight: wildcard dark color
+//    + $color.theme.x.highlight: wildcard stand-out color
 
 $color['theme'] = {
   card: {
@@ -18,25 +23,27 @@ $color['theme'] = {
   light: {
     background: #ddd,
     base: #000,
-    op: #602a7d,
-    int: #e75905,
-    str: #497d00,
-    key: #4271ae,
-    var: #000,
     comment: #ccc,
+    error: #93A1A1,
+    highlight: #cb2829,
+    int: #e75905,
+    key: #4271ae,
     lowlight: #000,
-    highlight: #cb2829
+    op: #602a7d,
+    str: #497d00,
+    var: #000
   },
   dark: {
     background: #272822,
     base: #f8f8f8,
-    op: #f12056,
-    int: #a877ff,
-    str: #e5de73,
-    key: #70d8ef,
-    var: #aae626,
     comment: #777,
+    error: #960050,
+    highlight: #ec7b20,
+    int: #a877ff,
+    key: #70d8ef,
     lowlight: #ec7b20,
-    highlight: #ec7b20
+    op: #f12056,
+    str: #e5de73,
+    var: #aae626
   }
 }

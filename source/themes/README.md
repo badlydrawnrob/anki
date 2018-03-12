@@ -3,13 +3,78 @@
 
 - [Home](../../README.md)
     - **THEMES**
-        - [Simple Anki theme](../themes/cards/simple/README.md)
-        - [Puzzle Anki theme](../themes/puzzle/README.md)
-        - [Cloze Anki theme](../themes/cloze/README.md)
-        - [Deck example](../themes/deck/README.md)
+        - [Simple Anki theme](./cards/simple/README.md)
+        - [Puzzle Anki theme](./puzzle/README.md)
+        - [Cloze Anki theme](./cloze/README.md)
+        - [Deck example](./deck/README.md)
     - **THEME COLOURS**
         - [Basic highlighting](#basic-highlighing)
         - [Automatic highlighting](#automatic-syntax-highlighting-with-pygments)
+
+
+## Folder structure
+
+Loosely follows the following design patterns:
+
+- [How to structure a SASS project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+- [Enduring CSS](https://github.com/badlydrawnrob/ecss) component naming conventions
+- [@mdo code guide](http://codeguide.co/)
+
+The default files for syntax highlighting and typography can be found here. These should **not** be edited. We're using [Stylus](stylus-lang.com) to compile css:
+
+```text
+stylus
+│   config.styl
+│   main.styl    
+│
+└───modules
+│   │
+│   │
+│   └─── variables
+│           colors.styl
+│           typography.styl
+│           ...
+│
+└───partials
+      dark.styl
+      light.styl
+      ...
+```
+
+You'll find the cards and theme css in `source/themes`. You can extend the theme, create your own cards, or change the syntax highlighting here. To prevent breaking changes, please add your custom code where you see the `vendor` folder (marked with `**`). Once you've created your files, you can compile into `build/themes` and add them to Anki!
+
+I'm using [Mustache.js](https://mustache.github.io/) to compile the local demos:
+
+```text
+themes    
+│
+└───cards
+│   │
+│   │
+│   └───[card type]
+│       │   *.mustache
+│       │   *.json
+│       │   *.md
+│       │
+│       └───vendor **
+│               ...
+│
+└───components
+    │
+    │
+    └───card
+    │     card.styl
+    │
+    └───vendor **
+          anki.styl
+          config-colors-demo.styl
+          config-theme-demo.styl
+          pygments-dark.styl
+          pygments-light.styl
+          card.styl
+          ...
+```
+
 
 
 ## Basic highlighting
@@ -37,12 +102,14 @@ Default colour is white.
 
 ### Changing the default theme
 
-I'm using `Stylus` to generate the `main.css` file from `src/assets/stylus/main.stylus` — refer to code and comments there. The colour scheme is set with variables in `src/assets/stylus/theme/code.stylus` and `src/assets/stylus/theme/pre.stylus`, it's best to create your own variables file to avoid losing changes when updating the theme:
+I'm using `Stylus` to generate the `main.css` file from `source/stylus/main.styl`. To create your own theme, override the css in `source/themes/components/vendor/*`.
+
+The colour scheme is set with variables in `source/stylus/modules/variables/colors.styl` and the base themese set in `source/stylus/partials/dark.styl` and `source/stylus/partials/light.styl`. It's best to create your own variables file to avoid losing changes when updating the theme:
 
 1. Make sure you have the [required dependencies](../../README.md/#requirements) installed.
-2. Copy `@theme-dark-` and `@theme-light-` variables into `my-variables.stylus`.
-3. Add `variables-custom.stylus` as the last @include in `main.stylus`.
-4. Recompile the `main.css` file using [Codekit](https://incident57.com/codekit/) (or [Gulp](http://gulpjs.com)).
+2. Copy the `config-colors-demo.styl` file in `themes/components/vendor` and rename to `config-colors.styl`
+3. Reset any colours required
+4. Recompile the `build/themes/assets/css/main.css` file using [Codekit](https://incident57.com/codekit/) (or [Gulp](http://gulpjs.com)).
 
 
 
@@ -76,8 +143,9 @@ You don't have to keep a backup, as Power Format Pack handles this for you (usin
 
 See [Changing the default theme](#changing-the-default-theme). If you have specific needs, you can create your own `pygments.stylus` file:
 
-1. Compile your prefered theme [via the command line with Pygments](http://pygments.org/docs/cmdline/#generating-styles)
-2. Rename the file to `pygments-custom.stylus`, add to `src/assets/stylus/theme/` folder
-    - Add in the `@theme-dark-` variables if required.
-3. Recompile `main.stylus`.
-4. Done!
+1. Select the Pygments template you'd like to use in `source/themes/components/vendor/config-colors.styl` and set your colour variables.
+    1. I've given you an example in `anki.styl` of how this can be extended. For instance, changing the color from `pygments-dark` to `pygments-light` if viewing on the `card-Reverse`.
+2. Recompile `source/stylus/main.stylus`
+3. Done!
+
+> You can always compile your prefered theme [via the command line with Pygments](http://pygments.org/docs/cmdline/#generating-styles) or extend the colour variables with more syntax colours.

@@ -1,0 +1,57 @@
+// Color config ================================================================
+// Choose your own colour theme!
+// - First, create a `config-colors.styl` file.
+//   + Use this great plugin for Atom:
+//     https://atom.io/packages/pigments
+//
+// #1: Set your theme colours (e.g):
+//     + Remove the dictionaries you don't want to change
+//     + Examples of extending the colours:
+//       - Card: https://www.materialpalette.com/
+//       - Light: Solarized light http://bit.ly/2p9RtNp
+//       - Dark: Solarized dark http://bit.ly/2p9RtNp
+//
+// #2: Pick your version of Pygments to use
+
+$color['theme']['card'] = {
+  ppp: #FFEB3B,
+  pp: #FBC02D,
+  p: #FFF9C4,
+
+  s: #ECEFF1,
+  ss: #BDBDBD,
+  sss: #757575,
+  ssss: #607D8B,
+  sssss: #212121
+}
+
+$color['theme']['light'] = {
+  background: #ffffcc,
+  base: #93A1A1,
+  comment: #586E75,
+  error: #93A1A1,
+  highlight: #dc322f,
+  int: #2AA198,
+  key: #859900,
+  lowlight: #268BD2,
+  op: #859900,
+  str: #2AA198,
+  var: #268BD2
+}
+
+$color['theme']['dark'] = {
+  background: #002b36,
+  base: #93a1a1,
+  comment: #586e75,
+  error: #93a1a1,
+  highlight: #dc322f,
+  int: #2aa198,
+  key: #268bd2,
+  lowlight: #ec7b20,
+  op: #859900,
+  str: #2aa198,
+  var: #268bd2
+}
+
+@require 'pygments-dark.styl'
+// @require 'pygments-light.styl'
