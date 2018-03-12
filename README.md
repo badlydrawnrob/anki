@@ -72,27 +72,28 @@ I generally prefer to limit plugin use wherever possible, but in my experience _
 If you'd prefer to use stock Anki, [see these notes](./dist/themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments).
 
 
-
-## Further reading
-
-Not sure what all the fuss is about Anki? Some great reading material below ...
-
-- [Anki essentials](http://alexvermeer.com/anki-essentials/)
-- [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html)
-
 ### Installation
 
 This is a major overhaul from the original (pre-beta), so it's not compatible with earlier versions. In future I'll try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/README.md) for the easiest way to test the [.apkg package](./dist/deck) before updating future versions.
 
 
 
-## Licensed under MIT
+## Licensed under MIT
 
 Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 
 
 ## Thanks to ...
+
+### Further reading
+
+Not sure what all the fuss is about Anki? Some great reading material below ...
+
+- [Anki essentials](http://alexvermeer.com/anki-essentials/)
+- [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html)
+
+### Credits
 
 1. Icons courtesy of [@kompa](http://devicon.fr)
 2. Original Cardinal framework by [@cbracco](https://github.com/cbracco)
