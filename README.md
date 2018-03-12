@@ -39,7 +39,7 @@ Some fields are already wrapped with inline `<code>` tag, so all you need to do 
 Each theme has [documentation](./dist/themes/simple/README.md), with further instructions.
 
 
-#### Why use Anki Themes instead of an Anki plugin?
+### Why use Anki Themes instead of an Anki plugin?
 
 With **Anki themes**, you can use a `Markdown > HTML` workflow with *easily customisable* css. It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
 
@@ -86,7 +86,7 @@ This is a major overhaul from the original (pre-beta), so it's not compatible wi
 
 
 
-## License
+## Licensed under MIT
 
 Anki themes are licensed under the [MIT Open Source License](./license.md)
 
