@@ -17,21 +17,6 @@
   "★ Key point notes": "<ul>\r\n    <li><strong>Lambda<\/strong> is an <strong>anonymous function<\/strong>.\r\n      <ul>\r\n        <li>It's <strong>comparable to a regular <code>def<\/code> function<\/strong>.<\/li>\r\n      <\/ul>\r\n    <\/li>\r\n    <li>As a single function, <code>x<\/code> would be passed an <code>int<\/code> and return <code>True<\/code> if divisible by 3.<\/li>\r\n    <li><code>filter(function, iterable)<\/code> accepts a function as an argument, and something like <code>my_list<\/code> to iterate over.<\/li>\r\n    <li>Using <code>filter(lambda x: x % 3 == 0, my_list)<\/code> is the same as using <strong>list comprehension<\/strong><\/li>\r\n  <\/ul>",
 
 
-  "✔ What does this syntax do?": "What is <code>lambda<\/code> comparable to?",
-
-
-  "---✄-- Hide on front: Syntax (inline code)": false,
-
-
-  "»»♻«« Show as reference: Syntax (inline code)": false,
-
-
-  "----✄-- Hide on front: Sample (code block or image)": false,
-
-
-  "»»♻«« Show as reference: Sample (code block or image)": false,
-
-
   "✎ Other notes": "This is an example of <strong>functional programming<\/strong>. You're passing the anonymous <code>lambda<\/code> function to the&nbsp;<code>filter()<\/code> function. However, Python was <a href=\"http:\/\/bit.ly\/2FEwUTy\">never intended as a functional language<\/a>, and is said by some to <a href=\"http:\/\/bit.ly\/2p2dA8I\">not be very good at it<\/a>.",
 
 

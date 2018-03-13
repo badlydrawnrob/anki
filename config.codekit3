@@ -537,32 +537,18 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/themes\/cards\/simple\/simple-01-front.mustache": {
+	"\/source\/themes\/cards\/simple\/simple-front.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-01-front.mustache",
+		"oAP": "\/build\/themes\/cards\/simple\/simple-front.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/simple\/simple-01-reverse.mustache": {
+	"\/source\/themes\/cards\/simple\/simple-reverse.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-01-reverse.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/simple\/simple-02-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-02-front.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/simple\/simple-02-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-02-reverse.mustache",
+		"oAP": "\/build\/themes\/cards\/simple\/simple-reverse.mustache",
 		"oF": 1
 		},
 	"\/source\/themes\/cards\/simple\/simple.json": {
