@@ -9,21 +9,24 @@
 ============================================================================= }}
 
 <div id="front" class="anki-Front">
-  <section class="card card-front">
-    <header class="card-Header">
-      <h1 class="card-Header_Title">
+  <section class="simple simple-front">
+    <header class="simple-Header">
+      <h1 class="simple-Header_Title">
         ★ {{{★ Title}}}
       </h1>
-      <h2 class="card-Header_Syntax">
-        {{^☆ Syntax}}Syntax{{/☆ Syntax}}
-        {{#☆ Syntax}}{{{☆ Syntax}}}{{/☆ Syntax}}
-      </h2>
-      <p class="card-Header_Code">
-        <code>{{{☆ Syntax (inline code)}}}</code>
-      </p>
+      {{#☆ Syntax}}
+        <h2 class="simple-Header_Syntax">
+          {{{☆ Syntax}}}
+        </h2>
+      {{/☆ Syntax}}
+      {{#☆ Syntax (inline code)}}
+        <p class="simple-Header_Code">
+          <code>{{{☆ Syntax (inline code)}}}</code>
+        </p>
+      {{/☆ Syntax (inline code)}}
     </header>
-    <div class="card-Sample">
-      {{{☆ Sample (code block or image)}}}
+    <div class="simple-Sample">
+      {{{★ Sample (code block or image)}}}
     </div>
   </section>
 </div>

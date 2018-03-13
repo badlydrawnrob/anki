@@ -1,5 +1,10 @@
+// Anki helper classes =========================================================
+// #1: This won't work on local (due to not rendering {{FrontSide}} properly)
+//     + I've mocked it up in `source/themes/components/vendor/anki.styl`
+
 .anki-Front
   // pass
 
 .anki-Reverse
-  // pass
+  .simple-Sample
+    @require '../vendor/pygments-light.styl'

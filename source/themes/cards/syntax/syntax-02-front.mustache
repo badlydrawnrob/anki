@@ -1,0 +1,31 @@
+{{! Simple theme ===============================================================
+
+    - Card: What's the answer?
+    - Info: Question about the code example
+    - Key:  ★ Required
+      ☆ Optional (recommended)
+      ✎ Optional (Notes)
+
+============================================================================= }}
+
+{{#♻ Reverse the card?}}
+  <div id="front" class="anki-Front">
+    <section class="syntax syntax-front syntax-02">
+      <header class="syntax-Header">
+        <h1 class="syntax-Header_Title">
+          ⚑ What syntax matches this description?
+        </h1>
+        {{#⚐ Syntax}}
+          <h2 class="syntax-Header_Syntax">
+            {{{⚐ Syntax}}}
+          </h2>
+        {{/⚐ Syntax}}
+      </header>
+      <div class="syntax-KeyPoint">
+        <div class="syntax-KeyPoint_Notes">
+          {{{⚑ Key point notes}}}
+        </div>
+      </div>
+    </section>
+  </div>
+{{/♻ Reverse the card?}}

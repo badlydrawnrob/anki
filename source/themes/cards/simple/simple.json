@@ -8,7 +8,7 @@
   "☆ Syntax (inline code)": "filter(<b>lambda</b>...)",
 
 
-  "☆ Sample (code block or image)": "<div class=\"codehilite\"><pre><span class=\"n\">my_list<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">range<\/span><span class=\"p\">(<\/span><span class=\"mi\">16<\/span><span class=\"p\">)<\/span>\r\n<span class=\"k\">print<\/span><span class=\"p\">(<\/span><span class=\"nb\">filter<\/span><span class=\"p\">(<\/span><span class=\"k\">lambda<\/span> <span class=\"n\">x<\/span><span class=\"p\">:<\/span> <span class=\"n\">x<\/span> <span class=\"o\">%<\/span> <span class=\"mi\">3<\/span> <span class=\"o\">==<\/span> <span class=\"mi\">0<\/span><span class=\"p\">,<\/span> <span class=\"n\">my_list<\/span><span class=\"p\">))<\/span><\/pre><\/div>",
+  "★ Sample (code block or image)": "<div class=\"codehilite\"><pre><span class=\"n\">my_list<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">range<\/span><span class=\"p\">(<\/span><span class=\"mi\">16<\/span><span class=\"p\">)<\/span>\r\n<span class=\"k\">print<\/span><span class=\"p\">(<\/span><span class=\"nb\">filter<\/span><span class=\"p\">(<\/span><span class=\"k\">lambda<\/span> <span class=\"n\">x<\/span><span class=\"p\">:<\/span> <span class=\"n\">x<\/span> <span class=\"o\">%<\/span> <span class=\"mi\">3<\/span> <span class=\"o\">==<\/span> <span class=\"mi\">0<\/span><span class=\"p\">,<\/span> <span class=\"n\">my_list<\/span><span class=\"p\">))<\/span><\/pre><\/div>",
 
 
   "★ Key point (code block or image)": "<pre>[0, 3, 6, 9, 12, 15]<\/pre>",

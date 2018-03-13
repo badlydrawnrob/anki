@@ -1,4 +1,4 @@
-# Anki Simple Theme: How to add content to cards
+# Anki Syntax Theme: How to add content to cards
 
 - [Home](../../README.md)
   - **THEME**
@@ -13,48 +13,46 @@
 
 
 
-## Simple card
-> **Key:** ★ Required / ☆ Optional (recommended)
+## Syntax card
+> **Key:** ⚑ Required / ⚐ Optional (recommended)
 
-### What does this code do?
+### What does this syntax do?
 
-A simple question/answer card. It's purpose is to ask "What does the following code do?":
+Quiz yourself on syntax. It's purpose is to ask "What does this syntax do?":
 
-- A function with an output you have to guess.
-- A class with a method that you need to call.
+- Guess the function's description from it's name.
+- Guess the function's name from it's description.
 
-#### ★ Title
+#### ⚑ Title
 
 - The main question, statement or fact.
 
-#### ☆ Syntax
+#### ⚐ Syntax
 
 - The type of `Syntax` we're learning.
 
-#### ☆ Syntax (inline code)
+#### ⚑ Syntax (inline code)
 
 - The actual function or symbol, i.e. `len()`.
 - This will be wrapped in `<code>`.
 
-#### ★ Sample (code block or image)
+#### ⚐ Sample (code block or image)
 
-- A sample of the code we're learning:
+- A sample of the syntax we're learning, in context:
     - Enter a `<pre>` block
         - or if you're feeling lazy, upload a snapshot
     - Syntax highlighting [using the included themes](../../README.md).
 
-#### ★ Key point (code block or image)**
+#### ⚑ Key point notes
 
-- What's the main takeaway from this flashcard?
-    - Snippet of code, or output.
-    - Enter a `<pre>` block
-        - or if you're feeling lazy, upload a snapshot
-    - Syntax highlighting [using the included themes](../../README.md).
+- A short explanation of the syntax.
+    - If you're using `{{♻ Reverse the card?}}` be careful!
+        - Don't give too much away in the description.
 
-#### ★ Key point notes
+#### ♻ Reverse the card?
 
-- A short explanation of what we're trying to learn.
-- For any key functions or symbols, wrap in `<code>`.
+- Create an extra card which reverses the question:
+    - Guess the syntax from the `{{⚑ Key point notes}}` description.
 
 
 
@@ -85,7 +83,7 @@ Use sparingly, as it's always best to be succinct with Anki. Think of this as a 
 
 ## Notes
 
-1. Fields marked **Optional** can be left blank and the template will ignore them.
+1. Fields marked **Optional** fields (☆ ✄ ♻ ✎) can be left blank and the template will ignore them. **Required** fields (✔ and ♞) are required in order for a card to be generated.
 2. You can reference fields within fields. For instance:
   - `{{☆ Syntax (inline code)}}` or `{{★ Key point (code block or image)}}`. This will pick up all the HTML from those fields.
   - Keep in mind any referenced fields will have to be manually edited if the field name is ever changed, which can be a huge pita.

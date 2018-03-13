@@ -1,0 +1,27 @@
+{{! Simple theme ===============================================================
+
+    - Card: What's the answer?
+    - Info: Question about the code example
+    - Key:  ★ Required
+      ☆ Optional (recommended)
+      ✎ Optional (Notes)
+
+============================================================================= }}
+
+<div id="front" class="anki-Front">
+  <section class="syntax syntax-front syntax-01">
+    <header class="syntax-Header">
+      <h1 class="syntax-Header_Title">
+        ⚑ What does this syntax do?
+      </h1>
+      {{#⚐ Syntax}}
+        <h2 class="syntax-Header_Syntax">
+          {{{⚐ Syntax}}}
+        </h2>
+      {{/⚐ Syntax}}
+      <p class="syntax-Header_Code">
+        <code>{{{⚑ Syntax (inline code)}}}</code>
+      </p>
+    </header>
+  </section>
+</div>

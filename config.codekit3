@@ -584,15 +584,7 @@
 		"oAP": "\/build\/themes\/cards\/simple\/simple.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/syntax\/simple.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/syntax\/simple-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/source\/themes\/cards\/syntax\/simple.md": {
+	"\/source\/themes\/cards\/syntax\/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -601,7 +593,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/build\/themes\/cards\/syntax\/simple.html",
+		"oAP": "\/build\/themes\/cards\/syntax\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -609,6 +601,67 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax-01-front.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax-01-front.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax-01-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax-01-reverse.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax-02-front.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax-02-front.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax-02-reverse.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax-02-reverse.mustache",
+		"oF": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/source\/themes\/cards\/syntax\/syntax.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/source\/themes\/cards\/syntax\/syntax.mustache": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/build\/themes\/cards\/syntax\/syntax.mustache",
+		"oF": 1
 		},
 	"\/source\/themes\/cards\/vendor\/README.md": {
 		"cB": 0,
@@ -641,7 +694,7 @@
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/themes\/components\/partials\/card.styl": {
+	"\/source\/themes\/components\/partials\/simple.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -649,7 +702,20 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/card.css",
+		"oAP": "\/build\/themes\/components\/css\/simple.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"\/source\/themes\/components\/partials\/syntax.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/themes\/components\/css\/syntax.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0

@@ -2,7 +2,7 @@
     1. cd into this folder on your terminal
     2. Enter the following:
        ```
-       mustache -p simple-front.mustache -p simple-reverse.mustache simple.json simple.mustache > ../../../../build/themes/cards/simple/index.html
+       mustache -p syntax-01-front.mustache -p syntax-01-reverse.mustache -p syntax-02-front.mustache -p syntax-02-reverse.mustache syntax.json syntax.mustache > ../../../../build/themes/cards/syntax/index.html
        ```
     3. View in your browser!
 ============================================================================= }}
@@ -15,13 +15,25 @@
   </head>
   <body class="test-Anki">
     <section class="test-AnkiCard">
+      <h2>Card 01</h2>
       <div class="test-AnkiCard-Front">
-        {{>simple-front}}
+        {{>syntax-01-front}}
         <a class="test-AnkiCard-Button" href="#answer">See answer</a>
       </div>
       <div class="test-AnkiCard-Reverse">
-        {{>simple-front}}
-        {{>simple-reverse}}
+        {{>syntax-01-front}}
+        {{>syntax-01-reverse}}
+      </div>
+    </section>
+    <section class="test-AnkiCard">
+      <h2>Card 02</h2>
+      <div class="test-AnkiCard-Front">
+        {{>syntax-02-front}}
+        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+      </div>
+      <div class="test-AnkiCard-Reverse">
+        {{>syntax-02-front}}
+        {{>syntax-02-reverse}}
       </div>
     </section>
   </body>
