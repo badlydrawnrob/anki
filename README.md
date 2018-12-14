@@ -1,5 +1,5 @@
 # Anki themes
-## Learning to code with Anki: Themes, cards, templates & syntax highlighting
+## Learning to code with Anki — themes, cards, templates and syntax highlighting
 
 Want to learn how to code? This Anki programming theme will help make your Anki development decks a little more fun to work with. Inspired by the excellent [Janki method](#further-reading), spaced repetition software is a helpful learning tool for front-end and back-end programmers, beginner to experienced.
 
@@ -53,12 +53,14 @@ With **Anki themes**, you can use a `Markdown > HTML` workflow with *easily cust
 
 ### NPM dependencies
 
-If you're considering extending the theme, you'll need to install the required dependencies with [npm](https://www.npmjs.com/).
+If you're considering extending the theme, you'll need to install the required dependencies with [npm](https://www.npmjs.com/) and .
 
 `cd` into the `anki` folder, then:
 
 ```node
 npm install
+npm run simple
+npm run cloze
 ```
 
 This will install [cardinal stylus](https://github.com/badlydrawnrob/cardinal-stylus) and any other dependencies.

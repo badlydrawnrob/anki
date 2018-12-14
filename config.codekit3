@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,41 +7,29 @@
 		"uuidString": "5C709E25-144F-4FAE-93D7-7301EA4214D2"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "28905",
 "files": {
-	"\/.editorconfig": {
+	"/.editorconfig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/.editorconfig",
+		"oAP": "/build/.editorconfig",
 		"oF": 0
 		},
-	"\/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/.gitignore",
+		"oAP": "/build/.gitignore",
 		"oF": 0
 		},
-	"\/build": {
+	"/build": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/build",
+		"oAP": "/build/build",
 		"oF": 0
 		},
-	"\/dist\/deck": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/dist\/deck",
-		"oF": 0
-		},
-	"\/dist\/themes": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/dist\/themes",
-		"oF": 0
-		},
-	"\/license.md": {
+	"/license.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -50,7 +38,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/build\/license.html",
+		"oAP": "/build/license.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -59,40 +47,300 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/node_modules": {
+	"/node_modules": {
 		"ft": 65536,
 		"oA": 2,
-		"oAP": "\/build\/node_modules",
+		"oAP": "/build/node_modules",
 		"oF": 0
 		},
-	"\/package-lock.json": {
+	"/node_modules/cardinal-stylus/source/stylus/cardinal.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/css/cardinal.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/modules/mixins/baseline-grid.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/modules/css/baseline-grid.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/modules/variables/colors.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/modules/css/colors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/modules/variables/defaults.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/modules/css/defaults.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/modules/variables/grid.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/modules/css/grid.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/modules/variables/typography.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/modules/css/typography.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/_normalize.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/_normalize.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/_reset.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/_reset.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/_root.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/_root.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/blockquotes.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/blockquotes.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/buttons.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/buttons.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/code.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/code.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/embedded-content.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/embedded-content.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/form-elements.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/form-elements.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/headings.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/headings.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/horizontal-rules.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/horizontal-rules.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/lists.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/lists.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/print.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/print.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/tables.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/tables.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/node_modules/cardinal-stylus/source/stylus/partials/text-elements.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/node_modules/cardinal-stylus/source/stylus/css/text-elements.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/package-lock-min.json",
+		"oAP": "/build/package-lock-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/package.json": {
+	"/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/package-min.json",
+		"oAP": "/build/package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/preview.png": {
+	"/preview.png": {
 		"ft": 32768,
 		"iS": 71000,
 		"oA": 0,
-		"oAP": "\/build\/preview.png",
+		"oAP": "/build/preview.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/README.md": {
+	"/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -100,204 +348,17 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/build\/README.html",
-		"oF": 0,
+		"oA": 1,
+		"oAP": "/build/README.html",
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
 		"pME": 1,
-		"rFN": 0,
+		"rFN": 1,
 		"uCM": 0
 		},
-	"\/source\/assets\/less\/base\/cardinal.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/cardinal.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/base\/variables.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/variables.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/main.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/build\/dist\/themes\/assets\/css\/main.css",
-		"oF": 2,
-		"oS": 1,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/answer.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/answer.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/base.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/base.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/code.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/code.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/front.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/front.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/pre.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/pre.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/puzzle.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/puzzle.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/theme\/pygments.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/pygments.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/assets\/less\/utilities\/curly-brackets.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/assets\/less\/css\/curly-brackets.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/source\/stylus\/config.styl": {
+	"/source/stylus/config.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -305,12 +366,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/css\/config.css",
+		"oAP": "/build/css/config.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/main.styl": {
+	"/source/stylus/main.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -318,12 +379,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/build\/themes\/assets\/css\/main.css",
+		"oAP": "/build/main.css",
 		"oF": 2,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/modules\/variables\/colors.styl": {
+	"/source/stylus/modules/variables/colors.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -331,12 +392,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/modules\/css\/colors.css",
+		"oAP": "/build/stylus/modules/css/colors.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/modules\/variables\/grid.styl": {
+	"/source/stylus/modules/variables/grid.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -344,12 +405,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/modules\/css\/grid.css",
+		"oAP": "/build/stylus/modules/css/grid.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/modules\/variables\/typography.styl": {
+	"/source/stylus/modules/variables/typography.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -357,12 +418,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/modules\/css\/typography.css",
+		"oAP": "/build/stylus/modules/css/typography.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/partials\/_root.styl": {
+	"/source/stylus/partials/_root.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -370,12 +431,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/css\/_root.css",
+		"oAP": "/build/stylus/css/_root.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/partials\/dark.styl": {
+	"/source/stylus/partials/dark.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -383,12 +444,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/css\/dark.css",
+		"oAP": "/build/stylus/css/dark.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/partials\/light.styl": {
+	"/source/stylus/partials/light.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -396,12 +457,12 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/css\/light.css",
+		"oAP": "/build/stylus/css/light.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/stylus\/partials\/utilities.styl": {
+	"/source/stylus/partials/utilities.styl": {
 		"aP": 0,
 		"bl": 0,
 		"dS": 0,
@@ -409,20 +470,20 @@
 		"iC": 0,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/stylus\/css\/utilities.css",
+		"oAP": "/build/stylus/css/utilities.css",
 		"oF": 0,
 		"oS": 0,
 		"rrU": 0
 		},
-	"\/source\/themes\/cards\/cloze\/cloze.json": {
+	"/source/themes/cards/cloze/cloze.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/cloze\/cloze-min.json",
+		"oAP": "/build/themes/cards/cloze/cloze-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/source\/themes\/cards\/cloze\/cloze.md": {
+	"/source/themes/cards/cloze/cloze.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -431,7 +492,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/cloze\/cloze.html",
+		"oAP": "/build/themes/cards/cloze/cloze.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -440,43 +501,47 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/themes\/cards\/puzzle\/puzzle-01-front.mustache": {
+	"/source/themes/cards/simple/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "/build/themes/cards/simple/README.md",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/source/themes/cards/simple/simple-front.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle-01-front.mustache",
+		"oAP": "/build/themes/cards/simple/simple-front.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/puzzle\/puzzle-01-reverse.mustache": {
+	"/source/themes/cards/simple/simple-reverse.mustache": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle-01-reverse.mustache",
+		"oAP": "/build/themes/cards/simple/simple-reverse.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/puzzle\/puzzle-02-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle-02-front.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/puzzle\/puzzle-02-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle-02-reverse.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/puzzle\/puzzle.json": {
+	"/source/themes/cards/simple/simple.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle-min.json",
+		"oAP": "/build/themes/cards/simple/simple-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/source\/themes\/cards\/puzzle\/puzzle.md": {
+	"/source/themes/cards/simple/simple.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -485,7 +550,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle.html",
+		"oAP": "/build/themes/cards/simple/simple.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -494,72 +559,169 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/themes\/cards\/puzzle\/puzzle.mustache": {
+	"/source/themes/cards/simple/simple.mustache": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/puzzle.mustache",
-		"oF": 0
-		},
-	"\/source\/themes\/cards\/puzzle\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/puzzle\/README.md",
-		"oF": 1,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/cards\/simple\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/README.md",
-		"oF": 1,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/cards\/simple\/simple-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-front.mustache",
+		"oA": 1,
+		"oAP": "/build/themes/cards/simple/simple.mustache",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/simple\/simple-reverse.mustache": {
+	"/source/themes/cards/vendor/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "/build/themes/cards/vendor/README.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/source/themes/components/partials/anki.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/anki.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/partials/simple.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/simple.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/partials/syntax.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/syntax.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-reverse.mustache",
+		"oA": 1,
+		"oAP": "/build/themes/components/vendor/.gitignore",
 		"oF": 1
 		},
-	"\/source\/themes\/cards\/simple\/simple.json": {
-		"ft": 524288,
+	"/source/themes/components/vendor/anki.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/simple\/simple-min.json",
+		"oAP": "/build/themes/components/css/anki.css",
 		"oF": 0,
-		"oO": 0,
-		"oS": 1
+		"oS": 0,
+		"rrU": 0
 		},
-	"\/source\/themes\/cards\/simple\/simple.md": {
+	"/source/themes/components/vendor/config-colors-demo.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/config-colors-demo.css",
+		"oF": 1,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/config-colors.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/config-colors.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/config-theme-demo.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/config-theme-demo.css",
+		"oF": 1,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/config-theme.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/config-theme.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/pygments-dark.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/pygments-dark.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/pygments-light.styl": {
+		"aP": 0,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/themes/components/css/pygments-light.css",
+		"oF": 0,
+		"oS": 0,
+		"rrU": 0
+		},
+	"/source/themes/components/vendor/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -568,7 +730,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/simple\/simple.html",
+		"oAP": "/build/themes/components/vendor/README.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -577,266 +739,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/source\/themes\/cards\/simple\/simple.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/simple\/simple.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/syntax\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/build\/themes\/cards\/syntax\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax-01-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax-01-front.mustache",
-		"oF": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax-01-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax-01-reverse.mustache",
-		"oF": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax-02-front.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax-02-front.mustache",
-		"oF": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax-02-reverse.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax-02-reverse.mustache",
-		"oF": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/source\/themes\/cards\/syntax\/syntax.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax.html",
-		"oF": 1,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/cards\/syntax\/syntax.mustache": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/syntax\/syntax.mustache",
-		"oF": 1
-		},
-	"\/source\/themes\/cards\/vendor\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 1,
-		"oAP": "\/build\/themes\/cards\/vendor\/README.html",
-		"oF": 1,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/components\/partials\/anki.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/anki.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/partials\/simple.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/simple.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/partials\/syntax.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/syntax.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/vendor\/.gitignore",
-		"oF": 1
-		},
-	"\/source\/themes\/components\/vendor\/anki.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/anki.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/config-colors-demo.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/config-colors-demo.css",
-		"oF": 1,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/config-colors.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/config-colors.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/config-theme-demo.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/config-theme-demo.css",
-		"oF": 1,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/config-theme.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/config-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/pygments-dark.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/pygments-dark.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/pygments-light.styl": {
-		"aP": 0,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/css\/pygments-light.css",
-		"oF": 0,
-		"oS": 0,
-		"rrU": 0
-		},
-	"\/source\/themes\/components\/vendor\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 1,
-		"oAP": "\/build\/themes\/components\/vendor\/README.html",
-		"oF": 1,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/source\/themes\/README.md": {
+	"/source/themes/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -845,7 +748,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 2,
-		"oAP": "\/build\/themes\/README.md",
+		"oAP": "/build/themes/README.md",
 		"oF": 3,
 		"oFM": 0,
 		"oS": 0,
@@ -863,148 +766,102 @@
 	"creationDate": 500152083,
 	"displayValue": "anki",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_green"
+	"iconImageName": "brackets_green",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -1016,7 +873,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -1028,7 +906,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -1064,61 +960,55 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
-	"bowerAbbreviatedPath": "src\/assets\/packages\/bower_components",
+	"bowerAbbreviatedPath": "src/assets/packages/bower_components",
 	"bowerAutoCreateInfoFile": 1,
 	"bowerInstallDevDependencies": 0,
 	"bowerSaveDependencies": 1,
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 1,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -1476,6 +1366,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -1487,6 +1381,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -1532,6 +1430,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -1550,10 +1452,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -1752,9 +1650,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -2108,6 +2010,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -2136,6 +2042,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -2143,6 +2053,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 0,
@@ -2198,7 +2112,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -2258,7 +2172,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2653,7 +2567,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -2666,12 +2579,13 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
@@ -2703,19 +2617,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -2771,7 +2685,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -2800,7 +2714,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -2824,36 +2738,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 0,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/dist\/themes, \/dist\/deck",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /dist/themes, /dist/deck",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2861,11 +2809,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2889,6 +2837,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -2905,7 +2857,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2913,20 +2873,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -2941,6 +2913,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -2949,12 +2929,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -2965,12 +2953,20 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
-			"active": 0,
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -2981,23 +2977,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3009,13 +3033,21 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "\/build\/themes"
+	"websiteRelativeRoot": "/build"
 	},
 "settingsFileVersion": "3"
 }

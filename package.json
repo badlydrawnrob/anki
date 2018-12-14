@@ -1,10 +1,12 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.0.0",
+  "version": "2.0.0-beta.1",
   "description": "Learning to code with Anki: Themes, cards, templates & syntax highlighting",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
+    "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html"
   },
   "repository": {
     "type": "git",
