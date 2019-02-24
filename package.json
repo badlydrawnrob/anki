@@ -1,10 +1,11 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "mkdir -p build/",
     "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
     "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html"
   },
@@ -18,8 +19,10 @@
     "url": "https://github.com/badlydrawnrob/anki/issues"
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
-  "dependencies": {
-    "cardinal-stylus": "github:badlydrawnrob/cardinal-stylus",
-    "mustache": "^2.3.0"
+  "dependencies": {},
+  "devDependencies": {
+    "mustache": "^3.0.1",
+    "print-first-css": "github:badlydrawnrob/print-first-css",
+    "stylus": "^0.54.5"
   }
 }
