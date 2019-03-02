@@ -1,17 +1,20 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0-beta.4",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "mkdir -p build/",
     "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
-    "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html"
+    "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html",
+    "print-first-css": "npx stylus node_modules/print-first-css/source/stylus/print-first.styl --out build/",
+    "anki-css": "npx stylus source/stylus/main.styl --out build/",
+    "build": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://badlydrawnrob@github.com/badlydrawnrob/anki.git"
+    "url": "github:badlydrawnrob/anki"
   },
   "author": "Rob McDonald",
   "license": "MIT",

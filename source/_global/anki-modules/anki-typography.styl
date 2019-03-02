@@ -1,0 +1,15 @@
+// Typography ==================================================================
+// Set defaults to fall back depending on OS
+
+@css {
+    --ios: 'San Francisco';
+    --android: 'Noto', 'Roboto';
+    --ios-mono: 'San Francisco Mono';
+    --android-mono: 'Noto Mono', 'Roboto Mono';
+
+    --font-family-base: --ios, --android, sans-serif;
+    --font-family-mono: --ios-mono, --android-mono, monospace;
+
+    font-family: var(--font-family-base);
+}
+

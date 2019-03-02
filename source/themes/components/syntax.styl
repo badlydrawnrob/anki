@@ -14,9 +14,9 @@
   text-align: center
   justify-content: space-evenly
   align-items: baseline
-  background: $color.theme.card.s
-  border: $spacing.px solid $color.theme.card.s
-  border-bottom: $spacing.px solid $color.b
+  background: var(--color-card-s)
+  border: $spacing.px solid var(--color-card-s)
+  border-bottom: $spacing.px solid var(--color-b)
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
 
@@ -29,8 +29,8 @@
   line-height: $line.height.base
   text-transform: none
   letter-spacing: normal
-  border-bottom: $spacing.px solid $color.b
-  background: $color.l
+  border-bottom: $spacing.px solid var(--color-b)
+  background: var(--color-l)
 
 .syntax-Header_Syntax
   margin: 0 0 $spacing.half
@@ -40,7 +40,7 @@
   line-height: $line.height.base
   text-transform: none
   letter-spacing: normal
-  background: $color.theme.card.s
+  background: var(--color-card-s)
   border-top-left-radius: $border.radius
   border-top-right-radius: $border.radius
 
@@ -57,7 +57,7 @@
 .syntax-KeyPoint_Notes
   margin-bottom: $spacing.base
   padding: $spacing.base $spacing.one
-  background: $color.theme.card.s
+  background: var(--color-card-s)
 
   ul > li,
   ol > li
@@ -65,7 +65,7 @@
 
 .syntax-Notes
   margin-bottom: $spacing.base
-  color: $color.theme.card.sss
+  color: var(--color-card-sss)
   font-size: $font.size.m
   font-style: italic
   line-height: $line.height.m
