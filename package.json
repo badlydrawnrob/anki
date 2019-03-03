@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.0.0-beta.4",
+  "version": "2.0.0-beta.5",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "setup": "mkdir -p build/",
     "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
     "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html",
-    "print-first-css": "npx stylus node_modules/print-first-css/source/stylus/print-first.styl --out build/",
-    "anki-css": "npx stylus source/stylus/main.styl --out build/",
+    "css": "npx lessc source/_global/main.less ./build/main.css",
     "build": ""
   },
   "repository": {
@@ -24,8 +23,8 @@
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
   "dependencies": {},
   "devDependencies": {
+    "less": "^3.9.0",
     "mustache": "^3.0.1",
-    "print-first-css": "github:badlydrawnrob/print-first-css",
-    "stylus": "^0.54.5"
+    "print-first-css": "github:badlydrawnrob/print-first-css"
   }
 }

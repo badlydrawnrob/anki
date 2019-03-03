@@ -1,16 +1,18 @@
 // Config ======================================================================
 // Sets up the `print-first-css` framework and variables: https://bit.ly/2TpdSaL
 
-@import '../../node_modules/print-first-css/source/stylus/print-first.styl'
+@import (less) "../../node_modules/print-first-css/build/stylus/print-first.css";
 
 
 // Modules =====================================================================
 // Next, let's set our own variables!
 
-@require 'anki-modules/root.styl'
+@import "./modules/_root";
 
 
 // Partials ====================================================================
 // Extends `print-first-css`
 
-@require 'anki-partials/*'
+@import "./partials/dark";
+@import "./partials/light";
+@import "./partials/utilities";

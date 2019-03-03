@@ -1,0 +1,83 @@
+.syntax {
+  border-radius: 10px;
+
+  &-front {
+    margin-top: var(--spacing-base);
+  }
+
+  &-reverse {
+    // pass
+  }
+}
+
+.syntax-Header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: var(--color-card-s);
+  border: var(--spacing-px) solid var(--color-card-s);
+  border-bottom: var(--spacing-px) solid var(--color-b);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.syntax-Header_Title {
+  flex: 0 0 100%;
+  margin: 0 0 var(--spacing-one);
+  padding: var(--spacing-half);
+  font-weight: 700;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-base);
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: var(--spacing-px) solid var(--color-b);
+  background: var(--color-l);
+}
+
+.syntax-Header_Syntax {
+  margin: 0 0 var(--spacing-half);
+  padding: var(--spacing-half);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  text-transform: none;
+  letter-spacing: normal;
+  background: var(--color-card-s);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.syntax-Header_Code {
+  margin: 0 0 var(--spacing-half) 0;
+  padding: var(--spacing-half);
+}
+
+.syntax-Sample {
+  // pass
+}
+
+.syntax-KeyPoint_Code {
+  // pass
+}
+
+.syntax-KeyPoint_Notes {
+  margin-bottom: var(--spacing-base);
+  padding: var(--spacing-base) var(--spacing-one);
+  background: var(--color-card-s);
+
+  ul > li,
+  ol > li {
+    margin-left: 1rem;
+  }
+}
+
+.syntax-Notes {
+  margin-bottom: var(--spacing-base);
+  color: var(--color-card-sss);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  line-height: var(--line-height-one);
+}

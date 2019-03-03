@@ -1,0 +1,36 @@
+// Typography ==================================================================
+// Set defaults to fall back depending on OS
+
+--ios: 'San Francisco';
+--android: 'Noto', 'Roboto';
+--ios-mono: 'San Francisco Mono';
+--android-mono: 'Noto Mono', 'Roboto Mono';
+
+--font-family-base: --ios, --android, sans-serif;
+--font-family-mono: --ios-mono, --android-mono, monospace;
+
+font-family: var(--font-family-base);
+
+--font-family-size-pppppp: calc((96 / 16) * 1rem);  // h1
+--font-family-size-ppppp:  calc((60 / 16) * 1rem);  // h2
+--font-family-size-pppp:   calc((48 / 16) * 1rem);  // h3
+--font-family-size-ppp:    calc((34 / 16) * 1rem);  // h4
+--font-family-size-pp:     calc((24 / 16) * 1rem);  // h5
+--font-family-size-p:      calc((20 / 16) * 1rem);  // h6
+--font-family-size:        calc((16 / 16) * 1rem);  // subtitle 1, body 1
+--font-family-size-m:      calc((14 / 16) * 1rem);  // subtitle 2, body 2, button
+--font-family-size-mm:     calc((12 / 16) * 1rem);  // caption
+--font-family-size-mmm:    calc((10 / 16) * 1rem);  // overline
+
+--line-height-eight:   calc(--spacing-pppppppp);  // 8rem,    --spacing-eight
+--line-height-seven:   calc(--spacing-ppppppp);   // 7rem,    --spacing-seven
+--line-height-six:     calc(--spacing-pppppp);    // 6rem,    --spacing-six
+--line-height-five:    calc(--spacing-ppppp);     // 5rem,    --spacing-five
+--line-height-four:    calc(--spacing-pppp);      // 4rem,    --spacing-four
+--line-height-three:   calc(--spacing-ppp);       // 3rem,    --spacing-three
+--line-height-two:     calc(--spacing-pp);        // 2rem,    --spacing-two
+--line-height-base:    calc(--spacing-p);         // 1.5rem,  --spacing-one
+--line-height-one:     calc(--spacing);           // 1rem     --spacing-base
+--line-height-half:    calc(--spacing-m);         // 0.5rem,  --spacing-half
+--line-height-quarter: calc(--spacing-mm);        // 0.25rem, --spacing-quarter
+

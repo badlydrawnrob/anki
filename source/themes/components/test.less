@@ -1,0 +1,63 @@
+// Notes ====================================================================
+// Some simple styles to mock the Anki app
+
+.test-Anki {
+  margin: var(--spacing-one);
+
+  @media (min-width: 840px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.test-AnkiCard-Front {
+  margin-bottom: var(--spacing-eight);
+}
+
+.test-AnkiCard-Reverse {
+  // pass
+}
+
+.test-AnkiCard-Button {
+  display: inline-block;
+  margin: calc(var(--spacing-quarter) + var(--spacing-micro)) 0;
+  padding: var(--spacing-half);
+  width: 100%;
+  color: inherit;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: var(--font-size-m);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: normal;
+  line-height: var(--line-height-half);  // #1
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 0 none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%);
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:active {
+    background-color: #e0e0e0;
+    box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%);
+  }
+
+  &:active:focus {
+    outline: 0 none;
+  }
+
+  &:disabled {
+    color: var(--color-bb);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
