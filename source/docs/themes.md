@@ -28,7 +28,7 @@ Works with any `<pre>` or `<code>` blocks:
 
 Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/). 
 
-1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
+1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
 2. Convert [Markdown to HTML online](https://bit.ly/2XURJkd)
 3. Add it to your card
 
@@ -36,10 +36,12 @@ That's it. You're done. Did you expect more steps?!
 
 ### The "proper" way
 
-Install [Anki theme](../../README.md#advanced) to build automatically, or:
+[Install Anki theme](../../README.md#advanced) to build automatically, or:
 
-- `brew install pandoc`
-- `pandoc`
+1. In a `file.md`, write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
+2. `brew install pandoc`
+3. `pandoc file.md`
+4. Add it to your card
 
 ### Always backup
 
