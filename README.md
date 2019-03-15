@@ -47,11 +47,9 @@ There's two types of cards to choose from:
 
 ## Anki syntax highlighting
 
-- **[Themes](./source/docs/themes.md)**
-
 ### Basic syntax highlighting
 
-Basic syntax highlighting can be achieve with `<b>`, `<strong>`, `<i>` or `<em>`, inside `<code>` or `<pre>` blocks. Works nicely with Anki's editor buttons.
+[Basic syntax highlighting](./source/docs/themes.md#basic-highlighting) can be achieve with `<b>`, `<strong>`, `<i>` or `<em>`, inside `<code>` or `<pre>` blocks. Works nicely with Anki's editor buttons.
 
 ### Full syntax highlighting (Markdown)
 
