@@ -1,83 +1,133 @@
 # Anki themes
 ## Learning to code with Anki — themes, cards, templates and syntax highlighting
 
-Want to learn how to code? This Anki programming theme will help make your Anki development decks a little more fun to work with. Inspired by the excellent [Janki method](#further-reading), spaced repetition software is a helpful learning tool for front-end and back-end programmers, beginner to experienced.
+Want to learn how to code?
 
-The template is built in html and css, with [syntax highlighting](./dist/themes/assets/css/README.md) for inline code and code blocks using the beautiful `Monokai` and `Tomorrow` themes — but fully customisable with [your own theme](http://color-themes.com/). Supports developer languages such as **html**, **css**, **python**, **elm**, **ruby**, **php**, **jquery**, **javascript** and whatever else you want to throw at it!
+Anki helps you learn and remember quickly. The default cards aren't great for programming, so these flashcards and themes make it fun to learn.
 
-![Preview image](./preview.png)
+- Suitable for all learning levels
+- Perfect for frontend and backend programmers
+- Popular languages supported
+- Syntax highlighting colours
+- Fully customisable (create your own themes and cards!)
 
-*Anki Themes: 'Simple' preview image* <sup><strong><em>[1](#other-notes)</em></strong></sup>
+Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started?
+
+Let's begin.
+
+![Simple card preview](./preview.png)
 
 
+## Keep it simple, stupid!
 
-## Card Types
+> Simple is better
 
-There are three types of cards to choose from:
+Remember, when creating your cards, simple is better. 
 
-1. **[Simple](./dist/themes/simple/README.md)**
+- One idea per card
+- Trim the fat (less is more)
+- Keep it relevant (reduce cognitive load)
+
+Try not to pack a card with facts. Test yourself on a function, concept, or snippet, add some links to documentation if you like, but if you're spending more than a minute reviewing each card, there's probably too much information on there. Better to have 100 cards with one idea each, than 10 cards with 100 ideas.
+
+Reduce! Simplify it!
+
+
+### Cards
+
+There's two types of cards to choose from:
+
+1. **[Simple](./source/docs/simple.md)**
     - What's the answer?
     - What does this syntax do?
-2. **[Puzzle](./dist/themes/puzzle/README.md)**
-    - What's the answer?
-    - **+** Puzzle question
-3. **[Cloze](./dist/themes/cloze/README.md)**
-    - Freeform show/hide question/answer
+2. **[Cloze](./source/docs/cloze.md)**
+    - A question with a `[…]` word
+    - A question with a `[missing]` word
+
+
+## Anki syntax highlighting
+
+- **[Themes](./source/docs/themes.md)**
+
+### Basic syntax highlighting
+
+Basic syntax highlighting can be achieve with `<b>`, `<strong>`, `<i>` or `<em>`, inside `<code>` or `<pre>` blocks. Works nicely with Anki's editor buttons.
+
+### Full syntax highlighting (Markdown)
+
+- **Default themes**
+    - [Monokai](https://www.monokai.pro)
+    - [Solarized](https://ethanschoonover.com/solarized/) (light)
+- **[Create your own themes](./source/docs/themes.md#customising-themes)**
+
+If you like pretty code blocks, you're in luck: themes work with Pandoc to convert Markdown into HTML with full syntax highlighting (a replacement for Power Format Pack which used Pygments — [see below](#dependency-hell))
 
 
 
-## Anki syntax highlighting with Markdown
+## Quick start
 
-- **[Anki syntax highlighting and themes](./dist/themes/assets/README.md)**
+1. Download the [latest desk (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
+2. Open Anki. Select `File > Import ...`
+3. Import the deck
+4. Add card
+5. Select `Anki theme` type
+6. Get creative!
 
-Basic syntax highlighting can be achieved simply by wrapping `<code>` with html tags, such as `<b>`, `<i>`. This works nicely with Anki's editor buttons for quick code blocks or inline code. The included *Monokai* and *Tomorrow light* themes can be easily customised with [`stylus`](http://stylus-lang.com/).
+Next, you'll probably want to add some pretty colours.
 
-If you like pretty code blocks, you're in luck: our themes work with [Pygments](http://pygments.org/)! You'll need to install a [required](#requirements) plugin, or [get your hands dirty with terminal](http://pygments.org/docs/cmdline/) if that's your thing.
-
-Some fields are already wrapped with inline `<code>` tag, so all you need to do is add your code (i.e: symbol, class, function). The main `(code blocks ..)` will need to be wrapped with `<pre><code>`.
-
-Each theme has [documentation](./dist/themes/simple/README.md), with further instructions.
+- [Themes](./source/docs/themes.md)
 
 
-### Why use Anki Themes instead of an Anki plugin?
 
-With **Anki themes**, you can use a `Markdown > HTML` workflow with *easily customisable* css. It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
+## Advanced
+
+- Offline syntax highlighting
+- Convert Markdown to HTML
+- Select your theme colors
+
+You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https://brew.sh) installed.
+
+1. Install Homebrew
+2. Install [Node](https://nodejs.org/): `brew install node`
+3. Add this [`package.json`](#) to your project folder
+4. `npm install`
+
+Next, follow the instructions for custom theme colours:
+
+- [Themes](./source/docs/themes.md)
+
+You can also create custom cards!
+
+
+
+## Dependency hell
 
 > ***Practicality beats purity***
 >
-> Until Anki mobile allows javascript includes, it's safer to use Pygments than [a javascript equivalent](https://highlightjs.org/).
+> It may look cool, but [shit breaks](https://en.wikipedia.org/wiki/Dependency_hell).
+
+### Why Anki Themes instead of a plugin?
+
+If you're new to programming, let me explain. I previously used [Power Format Pack](https://gitlab.com/neftas/supplementary-buttons-anki/issues/96), [Stylus](http://stylus-lang.com) and [Highlight.js](https://highlightjs.org/) — all of which are great, until ...
+
+1. One is dead, one dying.
+2. One just doesn't work with Anki.
+3. It happens _all the time_ in tech.
+4. Be extra careful what you depend on.
+
+I've worked hard so you can:
+
+- Use Anki themes as they are,
+- Or use the excellent `Markdown > HTML` workflow,
+- You can edit the css to your hearts content.
+
+It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
 
 
 
-## Requirements
+### Versions
 
-### NPM dependencies
-
-If you're considering extending the theme, you'll need to install the required dependencies with [npm](https://www.npmjs.com/) and .
-
-`cd` into the `anki` folder, then:
-
-```node
-npm install
-npm run simple
-npm run cloze
-```
-
-This will install [cardinal stylus](https://github.com/badlydrawnrob/cardinal-stylus) and any other dependencies.
-
-### Power format pack
-
-You'll probably want to install **Power format pack** (_PFP_), a solid Markdown plugin for Anki — it compliments *Anki themes* and makes for a nice workflow.
-
-I generally prefer to limit plugin use wherever possible, but in my experience _PFP_ really speeds things up.
-
-If you'd prefer to use stock Anki, [see these notes](./dist/themes/assets/css/README.md#automatic-syntax-highlighting-with-pygments).
-
-
-### Installation
-
-This is a major overhaul from the original (pre-beta), so it's not compatible with earlier versions. In future I'll try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. [Follow the instructions](./dist/deck/README.md) for the easiest way to test the [.apkg package](./dist/deck) before updating future versions.
-
+I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. Always backup your deck for safety, before installing the new one.
 
 
 ## Licensed under MIT
@@ -85,17 +135,17 @@ This is a major overhaul from the original (pre-beta), so it's not compatible wi
 Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 
-
 ## Thanks to ...
 
-### Further reading
+### Inspiration
 
-Not sure what all the fuss is about Anki? Some great reading material below ...
+So what's all the fuss about Anki? Some inspiration below ...
 
 - [Anki essentials](http://alexvermeer.com/anki-essentials/)
 - [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html)
 
 ### Credits
 
-1. Icons courtesy of [@kompa](http://devicon.fr)
-2. Original Cardinal framework by [@cbracco](https://github.com/cbracco)
+1. [@kompa](https://konpa.github.io/devicon/) icons
+2. [Enduring CSS](http://ecss.io) component naming conventions
+3. [@mdo code guide](http://codeguide.co/)
