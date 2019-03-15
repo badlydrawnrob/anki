@@ -73,9 +73,7 @@ If you like pretty code blocks, you're in luck: themes work with Pandoc to conve
 5. Select `Anki theme` type
 6. Get creative!
 
-Next, you'll probably want to add some pretty colours.
-
-- [Themes](./source/docs/themes.md)
+Next, you'll probably want to [add some pretty colours](./source/docs/themes.md).
 
 
 
@@ -84,6 +82,7 @@ Next, you'll probably want to add some pretty colours.
 - Offline syntax highlighting
 - Convert Markdown to HTML
 - Select your theme colors
+- Create custom cards!
 
 You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https://brew.sh) installed.
 
@@ -92,21 +91,17 @@ You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https
 3. Add this [`package.json`](#) to your project folder
 4. `npm install`
 
-Next, follow the instructions for custom theme colours:
-
-- [Themes](./source/docs/themes.md)
-
-You can also create custom cards!
+Next, follow the instructions for [custom theme colours](./source/docs/themes.md):
 
 
 
-## Dependency hell
+## Why Anki Themes instead of a plugin?
 
 > ***Practicality beats purity***
 >
 > It may look cool, but [shit breaks](https://en.wikipedia.org/wiki/Dependency_hell).
 
-### Why Anki Themes instead of a plugin?
+### Dependency hell
 
 If you're new to programming, let me explain. I previously used [Power Format Pack](https://gitlab.com/neftas/supplementary-buttons-anki/issues/96), [Stylus](http://stylus-lang.com) and [Highlight.js](https://highlightjs.org/) — all of which are great, until ...
 
@@ -127,7 +122,9 @@ It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.
 
 ### Versions
 
-I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme. Always backup your deck for safety, before installing the new one.
+I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme.
+
+**Always backup your deck** for safety before installing the new one.
 
 
 ## Licensed under MIT

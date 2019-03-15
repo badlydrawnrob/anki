@@ -97,6 +97,7 @@ Follow installation directions on [custom theme](../../README.md#advanced) first
 
 You're mostly on your own here, for now. But if you're a skilled dev, you'll figure it out :)
 
+- Follow the [installation instructions](../../README.md#advanced) first.
 - Use the `source/themes/cards/...` as a starting point
 - Create your own HTML and [Less](http://lesscss.org)
 - Preview with [Mustache](https://www.npmjs.com/package/mustache)
