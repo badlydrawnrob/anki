@@ -29,7 +29,7 @@ Works with any `<pre>` or `<code>` blocks:
 Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/). 
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks).
-2. Convert Markdown to HTML online
+2. Convert [Markdown to HTML online](https://bit.ly/2XURJkd)
 3. Add it to your card
 
 That's it. You're done. Did you expect more steps?!
