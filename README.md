@@ -64,7 +64,7 @@ If you like pretty code blocks, you're in luck: themes work with Pandoc to conve
 
 ## Quick start
 
-1. Download the [latest desk (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
+1. Download the [latest deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
 2. Open Anki. Select `File > Import ...`
 3. Import the deck
 4. Add card
