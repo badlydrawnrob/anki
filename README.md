@@ -20,17 +20,27 @@ Let's begin.
 
 ## Keep it simple, stupid!
 
-> Simple is better
+> Simple is better.
 
-Remember, when creating your cards, simple is better. 
+When you create your flashcards, simple is better:
 
 - One idea per card
 - Trim the fat (less is more)
 - Keep it relevant (reduce cognitive load)
 
-Try not to pack a card with facts. Test yourself on a function, concept, or snippet, add some links to documentation if you like, but if you're spending more than a minute reviewing each card, there's probably too much information on there. Better to have 100 cards with one idea each, than 10 cards with 100 ideas.
+Try not to stuff a card with facts, as it can overload the brain. You're generally trying to learn:
 
-Reduce! Simplify it!
+- A theme, or idea
+- A function, or code snippet
+- Syntax, or high-level documentation
+
+Think of it like a tweet. If you only had 280 characters, what would you say? Write like you'd code; imagine you're stupid, writing for your stupid future self.
+
+You'll probably want a descriptive title (or intro), a clear question and answer, with your key learning point. It's sometimes helpful to add supporting notes (in bullet point form), or links to articles/documentation — but that's about it!
+
+100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41) each, is better than 10 cards with 100 ideas. If you're spending more than a minute reviewing each card — reduce! Simpify it!
+
+Unless you've given yourself a super hard question, one idea per card, one minute per review.
 
 
 ### Cards
@@ -49,7 +59,7 @@ There's two types of cards to choose from:
 
 ### Basic syntax highlighting
 
-[Basic syntax highlighting](./source/docs/themes.md#basic-highlighting) can be achieve with `<b>`, `<strong>`, `<i>` or `<em>`, inside `<code>` or `<pre>` blocks. Works nicely with Anki's editor buttons.
+[Basic syntax highlighting](./source/docs/themes.md#basic-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
 
 ### Full syntax highlighting (Markdown)
 
