@@ -36,7 +36,18 @@ Try not to stuff a card with facts, as it can overload the brain. You're general
 
 Think of it like a tweet. If you only had 280 characters, what would you say? Write like you'd code; imagine you're stupid, writing for your stupid future self.
 
-You'll probably want a descriptive title (or intro), a clear question and answer, with your key learning point. It's sometimes helpful to add supporting notes (in bullet point form), or links to articles/documentation — but that's about it!
+You'll probably want:
+
+1. A descriptive title (or intro)
+2. A clear question and answer
+3. Your key learning point
+
+It's sometimes helpful to add:
+
+4. Supporting notes (in bullet point form)
+5. Links to articles/documentation
+
+But that's about it!
 
 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41) each, is better than 10 cards with 100 ideas. If you're spending more than a minute reviewing each card — reduce! Simpify it!
 
