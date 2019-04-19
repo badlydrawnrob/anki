@@ -1,8 +1,8 @@
 .simple {
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 
   &-front {
-    margin-top: var(--spacing-base);
+    margin-top: var(--spacing);
   }
 
   &-reverse {
@@ -17,9 +17,9 @@
   text-align: center;
   justify-content: space-evenly;
   align-items: baseline;
-  background: var(--color-card-s);
-  border: var(--spacing-px) solid var(--color-card-s);
-  border-bottom: var(--spacing-px) solid var(--color-card-base);
+  background: var(--color-card-ll);
+  border: var(--spacing-px) solid var(--color-card-ll);
+  border-bottom-color: transparent;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -30,22 +30,22 @@
   padding: var(--spacing-half);
   font-weight: 700;
   font-size: var(--font-size-p);
-  line-height: var(--line-height-base);
+  line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  border-bottom: var(--spacing-px) solid var(--color-card-base);
-  background: var(--color-l);
+  border-bottom: var(--spacing-px) solid var(--color-card-lll);
+  background: var(--color-card-l);
 }
 
 .simple-Header_Syntax {
   margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
   font-weight: normal;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  background: var(--color-card-s);
+  background: var(--color-card-ll);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -64,19 +64,19 @@
 }
 
 .simple-KeyPoint_Notes {
-  margin-bottom: var(--spacing-base);
-  padding: var(--spacing-base) var(--spacing-one);
-  background: var(--color-card-s);
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-ll);
 
   ul > li,
   ol > li {
-    margin-left: 1rem;
+    margin-left: var(--spacing-one);
   }
 }
 
 .simple-Notes {
-  margin-bottom: var(--spacing-base);
-  color: var(--color-card-sss);
+  margin-bottom: var(--spacing);
+  color: var(--color-card-llll);
   font-size: var(--font-size-m);
   font-style: italic;
   line-height: var(--line-height-one);
