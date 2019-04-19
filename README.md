@@ -38,20 +38,20 @@ Try not to stuff a card with facts, as it can overload the brain. You're general
 
 > 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41) each, is better than 10 cards with 100 ideas.
 
-Think of it like a tweet. If you only had 280 characters, what would you say? Just like writing code, it's good practice to make your flashcards clear, so when you look back on them it makes sense.
+Think of it like a tweet. If you only had 280 characters, what would you say? Just like writing code, it's good practice to make your flashcards clear, so when you look back on them they make sense.
 
-| You'll probably want: | Sometimes helpful: |
-|-----------------------|-----------|
-| A descriptive title (or intro) | Supporting notes (in bullet point form) |
-| A clear question and answer | Links to articles/docs |
-| Your key learning point | |
+#### You'll probably want
 
-That should be all you need! Unless its a super hard question, if you're spending more than a minute reviewing each card, you should probably:
+1. A descriptive title (or intro)
+2. A clear question and answer
+3. Your key learning point
 
-- Reduce!
-- Simpify it!
-- One idea per card
-- One minute per review
+#### It's sometimes helpful to add
+
+4. Supporting notes (in bullet point form)
+5. Links to articles or documentation
+
+That should be all you need! Unless its a super hard question, if you're spending more than a minute reviewing each card — reduce, reduce, reduce. Simplify it!
 
 
 ## Cards
@@ -131,11 +131,11 @@ If you're new to programming, let me explain. I previously used [Power Format Pa
 
 I've worked hard so you can:
 
-- Use Anki themes as they are,
-- Or use the excellent `Markdown > HTML` workflow,
-- You can edit the css to your hearts content.
+- Use Anki themes as they are ...
+- Use the excellent `Markdown > HTML` workflow
+- Customise the css to your hearts content.
 
-It works on all platforms, too: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
+Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
 
 
 
