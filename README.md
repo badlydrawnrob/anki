@@ -11,11 +11,11 @@ Anki helps you learn and remember quickly. The default cards aren't great for pr
 - Syntax highlighting colours
 - Fully customisable (create your own themes and cards!)
 
-Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started?
+Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](./#inspiration); otherwise ... let's begin!
 
-Let's begin.
 
 ![Simple card preview](./preview.png)
+
 
 
 ## Keep it simple, stupid!
@@ -34,27 +34,27 @@ Try not to stuff a card with facts, as it can overload the brain. You're general
 - A function, or code snippet
 - Syntax, or high-level documentation
 
-Think of it like a tweet. If you only had 280 characters, what would you say? Write like you'd code; imagine you're stupid, writing for your stupid future self.
+### Imagine you're stupid, writing for your stupid future self
 
-You'll probably want:
+> 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41) each, is better than 10 cards with 100 ideas.
 
-1. A descriptive title (or intro)
-2. A clear question and answer
-3. Your key learning point
+Think of it like a tweet. If you only had 280 characters, what would you say? Just like writing code, it's good practice to make your flashcards clear, so when you look back on them it makes sense.
 
-It's sometimes helpful to add:
+| You'll probably want: | Sometimes helpful: |
+|-----------------------|-----------|
+| A descriptive title (or intro) | Supporting notes (in bullet point form) |
+| A clear question and answer | Links to articles/docs |
+| Your key learning point | |
 
-4. Supporting notes (in bullet point form)
-5. Links to articles/documentation
+That should be all you need! Unless its a super hard question, if you're spending more than a minute reviewing each card, you should probably:
 
-But that's about it!
-
-100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41) each, is better than 10 cards with 100 ideas. If you're spending more than a minute reviewing each card — reduce! Simpify it!
-
-Unless you've given yourself a super hard question, one idea per card, one minute per review.
+- Reduce!
+- Simpify it!
+- One idea per card
+- One minute per review
 
 
-### Cards
+## Cards
 
 There's two types of cards to choose from:
 
@@ -86,7 +86,7 @@ If you like pretty code blocks, you're in luck: themes work with Pandoc to conve
 ## Quick start
 
 1. Download the [latest deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
-2. Open Anki. Select `File > Import ...`
+2. Open [Anki](https://apps.ankiweb.net). Select `File > Import ...`
 3. Import the deck
 4. Add card
 5. Select `Anki theme` type
