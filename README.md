@@ -11,7 +11,7 @@ Anki helps you learn and remember quickly. The default cards aren't great for pr
 - Syntax highlighting colours
 - Fully customisable (create your own themes and cards!)
 
-Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](./#inspiration); otherwise ... let's begin!
+Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](#inspiration); otherwise ... let's begin!
 
 
 ![Simple card preview](./preview.png)
@@ -51,7 +51,7 @@ Think of it like a tweet. If you only had 280 characters, what would you say? Ju
 4. Supporting notes (in bullet point form)
 5. Links to articles or documentation
 
-That should be all you need! Unless its a super hard question, if you're spending more than a minute reviewing each card — reduce, reduce, reduce. Simplify it!
+Unless its a super hard question, if you're spending more than a minute reviewing each card — reduce, reduce, reduce. Simplify it!
 
 
 ## Cards
