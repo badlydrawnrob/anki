@@ -5,7 +5,7 @@
   "☆ Syntax": "Anonymous functions",
 
 
-  "☆ Syntax (inline code)": "filter(<b>lambda</b>...)",
+  "☆ Syntax (inline code)": "filter(<b>lambda<\/b>...)",
 
 
   "★ Sample (code block or image)": "<div class=\"codehilite\"><pre><span class=\"n\">my_list<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">range<\/span><span class=\"p\">(<\/span><span class=\"mi\">16<\/span><span class=\"p\">)<\/span>\r\n<span class=\"k\">print<\/span><span class=\"p\">(<\/span><span class=\"nb\">filter<\/span><span class=\"p\">(<\/span><span class=\"k\">lambda<\/span> <span class=\"n\">x<\/span><span class=\"p\">:<\/span> <span class=\"n\">x<\/span> <span class=\"o\">%<\/span> <span class=\"mi\">3<\/span> <span class=\"o\">==<\/span> <span class=\"mi\">0<\/span><span class=\"p\">,<\/span> <span class=\"n\">my_list<\/span><span class=\"p\">))<\/span><\/pre><\/div>",
@@ -14,10 +14,10 @@
   "★ Key point (code block or image)": "<pre>[0, 3, 6, 9, 12, 15]<\/pre>",
 
 
-  "★ Key point notes": "<ul>\r\n    <li><strong>Lambda<\/strong> is an <strong>anonymous function<\/strong>.\r\n      <ul>\r\n        <li>It's <strong>comparable to a regular <code>def<\/code> function<\/strong>.<\/li>\r\n      <\/ul>\r\n    <\/li>\r\n    <li>As a single function, <code>x<\/code> would be passed an <code>int<\/code> and return <code>True<\/code> if divisible by 3.<\/li>\r\n    <li><code>filter(function, iterable)<\/code> accepts a function as an argument, and something like <code>my_list<\/code> to iterate over.<\/li>\r\n    <li>Using <code>filter(lambda x: x % 3 == 0, my_list)<\/code> is the same as using <strong>list comprehension<\/strong><\/li>\r\n  <\/ul>",
+  "★ Key point notes": "<ul>\r\n<li><strong>Lambda<\/strong> is an <strong>anonymous function<\/strong>.\r\n<ul>\r\n<li>Similar to a <strong>regular <code>def<\/code> function<\/strong>.<br \/>\r\n<\/li>\r\n<\/ul><\/li>\r\n<li><code>x<\/code> receives an <code>int<\/code> and returns <code>True<\/code> if divisible by 3.<\/li>\r\n<li><code>filter(function, iterable)<\/code><\/li>\r\n<li>See also: <a href=\"https:\/\/stackoverflow.com\/a\/3013686\">Filter <em>-vs-<\/em> list comprehension<\/a><\/li>\r\n<\/ul>\r\n<div class=\"sourceCode\" id=\"cb3\"><pre class=\"sourceCode python\"><code class=\"sourceCode python\"><a class=\"sourceLine\" id=\"cb3-1\" title=\"1\"><span class=\"kw\">lambda<\/span> x: x <span class=\"op\">%<\/span> <span class=\"dv\">3<\/span> <span class=\"op\">==<\/span> <span class=\"dv\">0<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-2\" title=\"2\"><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-3\" title=\"3\"><span class=\"co\"># similar to ...<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-4\" title=\"4\"><span class=\"kw\">def<\/span> by_three(x):<\/a>\r\n<a class=\"sourceLine\" id=\"cb3-5\" title=\"5\">    <span class=\"cf\">return<\/span> x <span class=\"op\">%<\/span> <span class=\"dv\">3<\/span> <span class=\"op\">==<\/span> <span class=\"dv\">0<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-6\" title=\"6\"><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-7\" title=\"7\"><span class=\"co\"># and ...<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb3-8\" title=\"8\">[x <span class=\"cf\">for<\/span> x <span class=\"kw\">in<\/span> <span class=\"bu\">range<\/span>(<span class=\"dv\">16<\/span>) <span class=\"cf\">if<\/span> x <span class=\"op\">%<\/span> <span class=\"dv\">3<\/span> <span class=\"op\">==<\/span> <span class=\"dv\">0<\/span>]<\/a><\/code><\/pre><\/div>",
 
 
-  "✎ Other notes": "This is an example of <strong>functional programming<\/strong>. You're passing the anonymous <code>lambda<\/code> function to the&nbsp;<code>filter()<\/code> function. However, Python was <a href=\"http:\/\/bit.ly\/2FEwUTy\">never intended as a functional language<\/a>, and is said by some to <a href=\"http:\/\/bit.ly\/2p2dA8I\">not be very good at it<\/a>.",
+  "✎ Other notes": "<p>Example of <strong>functional programming<\/strong>. Python was <a href=\"http:\/\/bit.ly\/2FEwUTy\">never intended as a functional language<\/a>, and some say it\u2019s <a href=\"http:\/\/bit.ly\/2p2dA8I\">not very good at it<\/a>.<\/p>",
 
 
   "✎ Markdown": false
