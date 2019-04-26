@@ -6,12 +6,16 @@
     - [Syntax highlighting](./themes.md)
 
 
-**A simple question/answer card:** asking "what does this code do?", e.g:
+> **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
+
+## A simple question/answer card
+
+We're asking the question: "what does this code do?", e.g:
 
 - A function with an output you have to guess.
 - A class with a method that you need to call.
 
-> **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
+
 
 
 ----
