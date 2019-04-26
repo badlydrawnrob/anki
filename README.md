@@ -143,13 +143,13 @@ Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), M
 
 ### Upgrading your deck
 
-> **Always backup your deck** for safety before installinga new version!
+> ⚠️ **Always backup your deck** for safety before installing a new version!
 
 I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Unfortunately Anki makes this tricky, so view commits for any major changes to the theme.
 
 ### Creating your flashcards
 
-**Only use [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27).
+> ⚠️ **Only use [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27).
 
 
 ## Licensed under MIT
