@@ -59,7 +59,7 @@ For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provide
 
 ## Customising themes
 
-The repo should be _extended_ with `npm`, **not** edited directly.
+Anki themes should be _extended_ with `npm`, **not** edited directly.
 
 ### Change colors
 
@@ -78,11 +78,9 @@ source
           typography.less
 ```
 
-#### CSS variables
+#### The easy way
 
-##### The easy way
-
-Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (see `colors.less` and `typography.less`) in Anki:
+Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (see `colors.less` and `typography.less`) — in Anki:
 
 - `Browse`
 - Select `Anki theme ...`
@@ -92,7 +90,7 @@ Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Us
 
 You'll need to do this everytime you install the deck.
 
-##### The "proper" way
+#### The "proper" way
 
 Follow installation directions on [custom theme](../../../README.md#advanced) first.
 
