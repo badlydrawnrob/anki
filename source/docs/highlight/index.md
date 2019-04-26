@@ -48,7 +48,7 @@ That's it. You're done. Simple, right?!
 3. `pandoc file.md`
 4. Follow steps `3—6` above
 
-If you've [installed the Anki theme](../../README.md#advanced), <s>!= do something</s>
+If you've [installed the Anki theme](../../../README.md#advanced), <s>!= do something</s>
 
 
 ## Backup your code
@@ -94,7 +94,7 @@ You'll need to do this everytime you install the deck.
 
 ##### The "proper" way
 
-Follow installation directions on [custom theme](../../README.md#advanced) first.
+Follow installation directions on [custom theme](../../../README.md#advanced) first.
 
 1. Copy `config.less` and `main.less` to your own repo
 2. Copy `colors.less` and any others you'd like to change
@@ -107,7 +107,7 @@ Follow installation directions on [custom theme](../../README.md#advanced) first
 
 You're mostly on your own here, for now. But if you're a skilled dev, you'll figure it out :)
 
-- Follow the [installation instructions](../../README.md#advanced) first.
+- Follow the [installation instructions](../../../README.md#advanced) first.
 - Use the `source/themes/cards/...` as a starting point
 - Create your own HTML and [Less](http://lesscss.org)
 - Preview with [Mustache](https://www.npmjs.com/package/mustache)

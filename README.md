@@ -70,7 +70,7 @@ There's two types of cards to choose from:
 
 ### Basic syntax highlighting
 
-[Basic syntax highlighting](./source/docs/themes/index.md#basic-syntax-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
+[Basic syntax highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
 
 ### Full syntax highlighting (Markdown)
 
@@ -92,7 +92,7 @@ If you like pretty code blocks, you're in luck: themes work with Pandoc to conve
 5. Select `Anki theme` type
 6. Get creative!
 
-Next, you'll probably want to [add some pretty colors](./source/docs/themes/index.md).
+Next, you'll probably want to [add some pretty colors](./source/docs/highlight/index.md).
 
 
 
@@ -109,7 +109,7 @@ You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https
 2. <s>Add this [`package.json`](#) to your project folder</s>
 3. `npm install`
 
-Next, follow the instructions for [custom theme colors](./source/docs/themes/index.md):
+Next, follow the instructions for [custom theme colors](./source/docs/highlight//index.md):
 
 
 
