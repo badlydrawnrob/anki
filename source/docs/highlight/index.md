@@ -1,19 +1,21 @@
-# Anki theme: Styles
+# Themes
 
-- [Home](../../README.md)
-    - [Simple](./simple.md)
-    - [Cloze](./cloze.md)
-    - [Syntax highlighting](./themes.md)
-
-**Default colors**: Solarized light and Monokai (modified)
-
+- [Home](../../../README.md)
+    - Cards
+      + [Simple](../simple/index.md)
+      + [Cloze](../cloze/index.md)
+    - **Themes**
 
 
-## Basic highlighting
+> **Default colors**: [Solarized light](https://ethanschoonover.com/solarized/) and [Monokai](https://www.monokai.pro)
+
+
+
+## Basic syntax highlighting
 
 This allows you to highlight code quickly, but is not [full highlighting](#full-syntax-highlighting). It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code.
 
-Works with any `<pre>` or `<code>` blocks:
+Works with any `<pre>` or `<code>` block:
 
 1. **Highlight**:
     + `<b>` or `<strong>`
@@ -26,26 +28,32 @@ Works with any `<pre>` or `<code>` blocks:
 
 ### The easy way
 
-Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/). 
+Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/), to generate full color syntax highlighting: 
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
 2. Convert [Markdown to HTML online](https://bit.ly/2XURJkd)
-3. Add it to your card
+3. Add a card in Anki
+4. Choose a field and navigate to: `☰ -> Edit html`
+5. Paste your code, then close `Edit html`
+6. Repeat the process — save your card!
 
-That's it. You're done. Did you expect more steps?!
+That's it. You're done. Simple, right?!
 
 ### The "proper" way
 
-[Install Anki theme](../../README.md#advanced) to build automatically, or:
+> Requires [Homebrew](https://brew.sh) and [Pandoc](https://pandoc.org/).
 
-1. In a `file.md`, write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
+1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) in a `file.md`
 2. `brew install pandoc`
 3. `pandoc file.md`
-4. Add it to your card
+4. Follow steps `3—6` above
 
-### Always backup
+If you've [installed the Anki theme](../../README.md#advanced), <s>!= do something</s>
 
-For the risk-averse, you can keep a backup in the `✎ Markdown` field provided — here you can store raw markdown or a link to the original code (Github gist for example).
+
+## Backup your code
+
+For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provided — here you can store raw markdown, or a link to the original code (Github gist for example).
 
 
 

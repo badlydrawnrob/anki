@@ -1,9 +1,9 @@
 # Simple card
 
-- [Home](../../README.md)
-    - [Simple](./simple.md)
-    - [Cloze](./cloze.md)
-    - [Syntax highlighting](./themes.md)
+- [Home](../../../README.md)
+    - **Simple**
+    - [Cloze](../cloze/cloze.md)
+    - [Syntax highlighting](../highlight/index.md)
 
 
 > **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
@@ -35,7 +35,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 
 ## ☆ Syntax (inline code)
 
-> ⤷ [string](https://github.com/badlydrawnrob/anki/blob/develop/source/docs/themes.md#basic-highlighting)
+> ⤷ [string](../highlight/index.md#basic-syntax-highlighting)
 
 - A short line of code
 - The actual function or symbol, i.e. `len()`.
@@ -44,7 +44,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 
 ## ★ Sample (code block or image)
 
-> ⤷ [pre block](./themes.md#full-syntax-highlighting), or image
+> ⤷ [pre block](../highlight/index.md#full-syntax-highlighting), or image
 
 - A sample of the code we're learning:
 - If you're feeling lazy, a snapshot image
@@ -52,7 +52,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 
 ## ★ Key point (code block or image)
 
-> ⤷ [pre block](./themes.md#full-syntax-highlighting), inline code, or image
+> ⤷ [pre block](../highlight/index.md#full-syntax-highlighting), inline code, or image
 
 - The answer or key learning point
 - If you're feeling lazy, a snapshot image

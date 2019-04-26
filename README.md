@@ -8,7 +8,7 @@ Anki helps you learn and remember quickly. The default cards aren't great for pr
 - Suitable for all learning levels
 - Perfect for frontend and backend programmers
 - Popular languages supported
-- Syntax highlighting colours
+- Syntax highlighting colors
 - Fully customisable (create your own themes and cards!)
 
 Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](#inspiration); otherwise ... let's begin!
@@ -70,14 +70,14 @@ There's two types of cards to choose from:
 
 ### Basic syntax highlighting
 
-[Basic syntax highlighting](./source/docs/themes.md#basic-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
+[Basic syntax highlighting](./source/docs/themes/index.md#basic-syntax-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
 
 ### Full syntax highlighting (Markdown)
 
 - **Default themes**
     - [Monokai](https://www.monokai.pro)
-    - [Solarized](https://ethanschoonover.com/solarized/) (light)
-- **[Create your own themes](./source/docs/themes.md#customising-themes)**
+    - [Solarized light](https://ethanschoonover.com/solarized/)
+- **[Custom themes](./source/docs/highlight/index.md#customising-themes)**
 
 If you like pretty code blocks, you're in luck: themes work with Pandoc to convert Markdown into HTML with full syntax highlighting (a replacement for Power Format Pack which used Pygments — [see below](#dependency-hell))
 
@@ -92,7 +92,7 @@ If you like pretty code blocks, you're in luck: themes work with Pandoc to conve
 5. Select `Anki theme` type
 6. Get creative!
 
-Next, you'll probably want to [add some pretty colours](./source/docs/themes.md).
+Next, you'll probably want to [add some pretty colors](./source/docs/themes/index.md).
 
 
 
@@ -105,12 +105,11 @@ Next, you'll probably want to [add some pretty colours](./source/docs/themes.md)
 
 You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https://brew.sh) installed.
 
-1. Install Homebrew
-2. Install [Node](https://nodejs.org/): `brew install node`
-3. Add this [`package.json`](#) to your project folder
-4. `npm install`
+1. [`brew install node`](https://nodejs.org/)
+2. <s>Add this [`package.json`](#) to your project folder</s>
+3. `npm install`
 
-Next, follow the instructions for [custom theme colours](./source/docs/themes.md):
+Next, follow the instructions for [custom theme colors](./source/docs/themes/index.md):
 
 
 
