@@ -151,6 +151,10 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 > ⚠️ **Only use [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27).
 
+### Formatting problems
+
+> ⚠️ It's better to use the **[plain html](./source/docs/highlight/#full-syntax-highlighting)** as `copy->paste` in Anki often breaks formatting (adds messy `br` or `div`). Choose a field and navigate to: `☰ -> Edit html` to correct any formatting issues.
+
 
 ## Licensed under MIT
 

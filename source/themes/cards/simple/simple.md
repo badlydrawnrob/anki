@@ -10,7 +10,7 @@ Anonymous functions
 
 
 ## ☆ Syntax (inline code)
-`filter(<b>lambda</b>...)`
+filter(<b>lambda</b>...)
 
 
 ## ★ Sample (code block or image)
