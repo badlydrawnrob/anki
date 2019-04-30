@@ -27,6 +27,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 > ⤷ string
 
 - The main question, statement or fact.
+- Automatically wrapped with a `H1` tag
 
 
 ## ☆ Subtitle
@@ -36,6 +37,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 - A helpful tip or guide
 - A group of related cards
 - The type of `syntax` we're learning
+- Automatically wrapped with a `H2` tag
 
 
 ## ☆ Syntax (inline code)
