@@ -99,6 +99,8 @@ Next, you'll probably want to [add some pretty colors](./source/docs/highlight/i
 
 ## Advanced
 
+> ⚠️ != Coming soon
+
 - Offline syntax highlighting
 - Convert Markdown to HTML
 - Select your theme colors
@@ -107,7 +109,7 @@ Next, you'll probably want to [add some pretty colors](./source/docs/highlight/i
 You'll know your way around [Git](https://git-scm.com) and have [Homebrew](https://brew.sh) installed.
 
 1. [`brew install node`](https://nodejs.org/)
-2. <s>Add this [`package.json`](#) to your project folder</s>
+2. Add this [`package.json`](#) to your project folder
 3. `npm install`
 
 Next, follow the instructions for [custom theme colors](./source/docs/highlight//index.md):
