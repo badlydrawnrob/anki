@@ -1,0 +1,30 @@
+{
+  "name": "anki-programming-themes",
+  "version": "2.0.0-beta.7",
+  "description": "Learning to code with Anki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "mkdir -p build/",
+    "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
+    "missing": "npx mustache -p source/themes/cards/missing/missing-front.mustache -p source/themes/cards/missing/missing-reverse.mustache source/themes/cards/missing/missing.json source/themes/cards/missing/missing.mustache > build/missing.html",
+    "css": "npx lessc source/_global/main.less ./build/main.css",
+    "build": "npm run setup && npm run simple && npm run missing && npm run css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:badlydrawnrob/anki"
+  },
+  "author": "Rob McDonald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badlydrawnrob/anki/issues"
+  },
+  "homepage": "https://github.com/badlydrawnrob/anki#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "less": "^3.9.0",
+    "mustache": "^3.0.1",
+    "print-first-css": "github:badlydrawnrob/print-first-css"
+  }
+}

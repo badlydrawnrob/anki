@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body class="test-Anki">
+    <section class="test-AnkiCard">
+      <div class="test-AnkiCard-Front">
+        {{>simple-front}}
+        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+      </div>
+      <div class="test-AnkiCard-Reverse">
+        {{>simple-front}}
+        {{>simple-reverse}}
+      </div>
+    </section>
+  </body>
+</html>

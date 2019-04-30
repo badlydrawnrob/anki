@@ -1,0 +1,111 @@
+// Cloze card ==================================================================
+// #1: `.anki-` styles are for Anki Deck (replicated hack in `test.less`)
+//     + Local demos don't render {{FrontSide}}
+// #2: `.cloze` is an Anki-specific class for cloze deletion types
+
+.anki-Front {
+  // #1
+}
+
+.anki-Reverse {
+  // #1
+}
+
+.missing {
+  border-radius: var(--border-radius);
+
+  &-front {
+    margin-top: var(--spacing);
+  }
+
+  &-reverse {
+    // pass
+  }
+
+  // #2
+  .cloze {
+    color: var(--color-code-dark-op) !important;
+    font-weight: 700;
+    background: var(--color-code-light-background);
+    padding: var(--spacing-quarter);
+    border-radius: var(--border-radius);
+  }
+}
+  
+.missing-Header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: var(--color-card-ll);
+  border: var(--spacing-px) solid var(--color-card-ll);
+  border-bottom-color: transparent;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.missing-Header_Title {
+  flex: 0 0 100%;
+  margin: 0 0 var(--spacing-one);
+  padding: var(--spacing-half);
+  font-weight: 700;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: var(--spacing-px) solid var(--color-card-lll);
+  background: var(--color-card-l);
+
+  &::before {
+    content: '★';
+  }
+}
+
+.missing-Header_Subtitle {
+  margin: 0 0 var(--spacing-half);
+  padding: var(--spacing-half);
+  font-weight: normal;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
+  background: var(--color-card-ll);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.missing-Header_Code {
+  margin: 0 0 var(--spacing-half) 0;
+  padding: var(--spacing-half);
+}
+
+.missing-KeyPoint {
+  // pass
+}
+
+.missing-KeyPoint_Code {
+  pre {
+    margin: 0
+  }
+}
+
+.missing-KeyPoint_Notes {
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-ll);
+
+  ul > li,
+  ol > li {
+    margin-left: var(--spacing-one);
+  }
+}
+
+.missing-Notes {
+  margin-bottom: var(--spacing);
+  color: var(--color-card-llll);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  line-height: var(--line-height-one);
+}
