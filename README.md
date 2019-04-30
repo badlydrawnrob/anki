@@ -58,10 +58,10 @@ Unless its a super hard question, if you're spending more than a minute reviewin
 
 There's two types of cards to choose from:
 
-1. **[Simple](./source/docs/simple.md)**
+1. **[Simple](./source/docs/simple/index.md)**
     - What's the answer?
     - What does this syntax do?
-2. **[Cloze](./source/docs/cloze.md)**
+2. <s>!= **[Cloze](./source/docs/cloze/index.md)**</s>
     - A question with a `[…]` word
     - A question with a `[missing]` word
 
