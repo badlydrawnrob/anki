@@ -1,0 +1,32 @@
+<div id="front" class="anki-Front">
+  <section class="cloze cloze-front">
+    <header class="cloze-Header">
+      <h1 class="cloze-Header_Title">
+        ★ {{{★ Title}}}
+      </h1>
+      {{#☆ Subtitle}}
+        <h2 class="cloze-Header_Subtitle">
+          {{{☆ Subtitle}}}
+        </h2>
+      {{/☆ Subtitle}}
+      {{#☆ Syntax (inline code)}}
+        <p class="cloze-Header_Code">
+          <code>{{{☆ Syntax (inline code)}}}</code>
+        </p>
+      {{/☆ Syntax (inline code)}}
+    </header>
+    <div class="cloze-KeyPoint">
+      <div class="cloze-KeyPoint_Code">
+        {{{★ Key point (code block or image)}}}
+      </div>
+      <div class="cloze-KeyPoint_Notes">
+        {{{★ Key point notes}}}
+      </div>
+    </div>
+    {{#✎ Other notes}}
+      <footer class="cloze-Notes">
+        {{{✎ Other notes}}}
+      </footer>
+    {{/✎ Other notes}}
+  </section>
+</div>

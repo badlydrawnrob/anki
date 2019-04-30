@@ -1,3 +1,17 @@
+// Simple card =================================================================
+// #1: `.anki-` styles are for Anki Deck (replicated hack in `test.less`)
+//     + Local demos don't render {{FrontSide}}
+
+.anki-Front {
+  // #1
+}
+
+.anki-Reverse {
+  .simple-Sample pre {
+    margin-bottom: 0  // #1
+  }
+}
+
 .simple {
   border-radius: var(--border-radius);
 
@@ -59,8 +73,14 @@
   // pass
 }
 
-.simple-KeyPoint_Code {
+.simple-KeyPoint {
   // pass
+}
+
+.simple-KeyPoint_Code {
+  pre {
+    margin: 0
+  }
 }
 
 .simple-KeyPoint_Notes {
