@@ -1,7 +1,7 @@
-{{! Simple theme ===============================================================
+{{! Simple card ================================================================
 
-    - Card: What's the answer?
-    - Info: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple.md
+    - Type: What's the answer?
+    - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple.md
     - Key:  ★ Required
             ☆ Optional (recommended)
             ✎ Optional (notes, markdown)
@@ -14,11 +14,11 @@
       <h1 class="simple-Header_Title">
         ★ {{{★ Title}}}
       </h1>
-      {{#☆ Syntax}}
-        <h2 class="simple-Header_Syntax">
-          {{{☆ Syntax}}}
+      {{#☆ Subtitle}}
+        <h2 class="simple-Header_Subtitle">
+          {{{☆ Subtitle}}}
         </h2>
-      {{/☆ Syntax}}
+      {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
         <p class="simple-Header_Code">
           <code>{{{☆ Syntax (inline code)}}}</code>

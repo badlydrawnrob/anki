@@ -21,16 +21,19 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 ----
 
 ## ★ Title
+
 > ⤷ string
 
 - The main question, statement or fact.
 
 
-## ☆ Syntax
+## ☆ Subtitle
 
 > ⤷ string
 
-- The type of `Syntax` we're learning.
+- A helpful tip or guide
+- A group of related cards
+- The type of `syntax` we're learning
 
 
 ## ☆ Syntax (inline code)
@@ -69,7 +72,7 @@ A simple `question->answer` card; we're asking the question: _"what does this co
 
 > ⤷ rich html
 
-A short reference if needed. Remember to [KISS](#keep-it-simple-stupid)!
+A short reference if needed. Remember to [KISS](../../../#keep-it-simple-stupid)!
 
 - Links to documentation
 - Supplementary notes

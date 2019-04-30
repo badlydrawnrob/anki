@@ -5,7 +5,7 @@
 What will this print out?
 
 
-## ☆ Syntax
+## ☆ Subtitle
 Anonymous functions
 
 

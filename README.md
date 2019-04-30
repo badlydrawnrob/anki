@@ -48,8 +48,9 @@ Think of it like a tweet. If you only had 280 characters, what would you say? Ju
 
 #### It's sometimes helpful to add
 
-4. Supporting notes (in bullet point form)
-5. Links to articles or documentation
+4. A subtitle or tags (to group cards)
+5. Supporting notes (in bullet point form)
+6. Links to articles or documentation
 
 Unless its a super hard question, if you're spending more than a minute reviewing each card — reduce, reduce, reduce. Simplify it!
 

@@ -5,7 +5,7 @@
 A `method` and a `function` are missing here. What are they?
 
 
-## ☆ Syntax
+## ☆ Subtitle
 for loops, strings, lists
 
 
