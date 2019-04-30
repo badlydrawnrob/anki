@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "mkdir -p build/",
     "simple": "npx mustache -p source/themes/cards/simple/simple-front.mustache -p source/themes/cards/simple/simple-reverse.mustache source/themes/cards/simple/simple.json source/themes/cards/simple/simple.mustache > build/simple.html",
-    "cloze": "npx mustache -p source/themes/cards/cloze/cloze-front.mustache -p source/themes/cards/cloze/cloze-reverse.mustache source/themes/cards/cloze/cloze.json source/themes/cards/cloze/cloze.mustache > build/cloze.html",
+    "missing": "npx mustache -p source/themes/cards/missing/missing-front.mustache -p source/themes/cards/missing/missing-reverse.mustache source/themes/cards/missing/missing.json source/themes/cards/missing/missing.mustache > build/missing.html",
     "css": "npx lessc source/_global/main.less ./build/main.css",
-    "build": "npm run setup && npm run simple && npm run cloze && npm run css"
+    "build": "npm run setup && npm run simple && npm run missing && npm run css"
   },
   "repository": {
     "type": "git",

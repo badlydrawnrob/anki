@@ -1,9 +1,11 @@
 # Simple card
 
 - [Home](../../../README.md)
-    - **Simple**
-    - [Cloze](../cloze/cloze.md)
-    - [Syntax highlighting](../highlight/index.md)
+    - Cards
+      + **[Simple](../simple/index.md)**
+      + [Missing](../missing/index.md)
+    - Themes
+      + [Syntax highlighting](../highlight/index.md)
 
 
 > **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type

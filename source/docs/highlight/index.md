@@ -3,8 +3,9 @@
 - [Home](../../../README.md)
     - Cards
       + [Simple](../simple/index.md)
-      + [Cloze](../cloze/index.md)
-    - **Themes**
+      + [Missing](../missing/index.md)
+    - Themes
+      + **[Syntax highlighting](../highlight/index.md)**
 
 
 > **Default colors**: [Solarized light](https://ethanschoonover.com/solarized/) and [Monokai](https://www.monokai.pro)

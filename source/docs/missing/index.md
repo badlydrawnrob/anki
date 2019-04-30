@@ -1,16 +1,18 @@
-# Simple card
+# Missing card
 
 - [Home](../../../README.md)
-    - **Simple**
-    - [Cloze](../cloze/cloze.md)
-    - [Syntax highlighting](../highlight/index.md)
+    - Cards
+      + [Simple](../simple/index.md)
+      + **[Missing](../missing/index.md)**
+    - Themes
+      + [Syntax highlighting](../highlight/index.md)
 
 
 > **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
 
 ## A question with a [missing] word
 
-A [`cloze->answer`](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) card; we're hiding one or more words to guess the answer:
+A [`missing->answer`](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) card; we're hiding one or more words to guess the answer:
 
 - A missing function or expression you have to guess
 - A missing input or output to remember

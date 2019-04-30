@@ -10,89 +10,88 @@
   // #1
 }
 
-.cloze {
-    border-radius: var(--border-radius);
-  
-    &-front {
-      margin-top: var(--spacing);
-    }
-  
-    &-reverse {
-      // pass
-    }
-  }
-  
-  .cloze-Header {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: baseline;
-    background: var(--color-card-ll);
-    border: var(--spacing-px) solid var(--color-card-ll);
-    border-bottom-color: transparent;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-  }
-  
-  .cloze-Header_Title {
-    flex: 0 0 100%;
-    margin: 0 0 var(--spacing-one);
-    padding: var(--spacing-half);
-    font-weight: 700;
-    font-size: var(--font-size-p);
-    line-height: var(--line-height);
-    text-transform: none;
-    letter-spacing: normal;
-    border-bottom: var(--spacing-px) solid var(--color-card-lll);
-    background: var(--color-card-l);
-  }
-  
-  .cloze-Header_Subtitle {
-    margin: 0 0 var(--spacing-half);
-    padding: var(--spacing-half);
-    font-weight: normal;
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    text-transform: none;
-    letter-spacing: normal;
-    background: var(--color-card-ll);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-  }
-  
-  .cloze-Header_Code {
-    margin: 0 0 var(--spacing-half) 0;
-    padding: var(--spacing-half);
-  }
-  
-  .cloze-KeyPoint {
-    // pass
+.missing {
+  border-radius: var(--border-radius);
+
+  &-front {
+    margin-top: var(--spacing);
   }
 
-  .cloze-KeyPoint_Code {
-    pre {
-      margin: 0
-    }
+  &-reverse {
+    // pass
   }
+}
   
-  .cloze-KeyPoint_Notes {
-    margin-bottom: var(--spacing);
-    padding: var(--spacing) var(--spacing-one);
-    background: var(--color-card-ll);
-  
-    ul > li,
-    ol > li {
-      margin-left: var(--spacing-one);
-    }
+.missing-Header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: var(--color-card-ll);
+  border: var(--spacing-px) solid var(--color-card-ll);
+  border-bottom-color: transparent;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.missing-Header_Title {
+  flex: 0 0 100%;
+  margin: 0 0 var(--spacing-one);
+  padding: var(--spacing-half);
+  font-weight: 700;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: var(--spacing-px) solid var(--color-card-lll);
+  background: var(--color-card-l);
+}
+
+.missing-Header_Subtitle {
+  margin: 0 0 var(--spacing-half);
+  padding: var(--spacing-half);
+  font-weight: normal;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
+  background: var(--color-card-ll);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.missing-Header_Code {
+  margin: 0 0 var(--spacing-half) 0;
+  padding: var(--spacing-half);
+}
+
+.missing-KeyPoint {
+  // pass
+}
+
+.missing-KeyPoint_Code {
+  pre {
+    margin: 0
   }
-  
-  .cloze-Notes {
-    margin-bottom: var(--spacing);
-    color: var(--color-card-llll);
-    font-size: var(--font-size-m);
-    font-style: italic;
-    line-height: var(--line-height-one);
+}
+
+.missing-KeyPoint_Notes {
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-ll);
+
+  ul > li,
+  ol > li {
+    margin-left: var(--spacing-one);
   }
-  
+}
+
+.missing-Notes {
+  margin-bottom: var(--spacing);
+  color: var(--color-card-llll);
+  font-size: var(--font-size-m);
+  font-style: italic;
+  line-height: var(--line-height-one);
+}
