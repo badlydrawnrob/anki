@@ -19,7 +19,7 @@ def censor(text, word):
     text = {{c1::text.split()}}  # Convert to list
     word_length = len(word)  # For our ****
 
-    for i, item in {{c1::enumerate(text)}}:
+    for i, item in <b class="cloze">{{c1::enumerate(text)}}</b>:
         if item == word:
             asterix = '*' * word_length
             text[i] = asterix
