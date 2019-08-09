@@ -48,6 +48,7 @@ That's it. You're done. Simple, right?!
 2. `brew install pandoc`
 3. `pandoc file.md`
 4. Follow steps `3—6` above
+5. View available languages with `pandoc --list-highlight-languages`
 
 If you've [installed the Anki theme](../../../README.md#advanced), <s>!= do something</s>
 
