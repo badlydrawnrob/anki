@@ -1,7 +1,9 @@
 // Config ======================================================================
 // Sets up the `print-first-css` framework and variables: https://bit.ly/2TpdSaL
+// #1: pull in the mixins file, too
 
-@import (less) "../../node_modules/print-first-css/build/stylus/print-first.css";
+@import (less) "../../node_modules/print-first-css/source/style/modules/mixins/grid-baseline";  // #1
+@import (less) "../../node_modules/print-first-css/build/style/print-first.css";
 
 
 // Modules =====================================================================
