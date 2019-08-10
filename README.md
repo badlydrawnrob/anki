@@ -71,7 +71,7 @@ There's two types of cards to choose from:
 
 ### Basic syntax highlighting
 
-[Basic syntax highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting) can be achieve by marking the selecting `<code>` or `<pre>` blocks with the **bold** or _**italic**_ buttons in the Anki editor (or the equivalent HTML tags).
+You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the Anki editor for [basic syntax highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting) (or the equivalent HTML tags).
 
 ### Full syntax highlighting (Markdown)
 
