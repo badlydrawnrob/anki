@@ -15,10 +15,8 @@ code {
   }
 }
 
-code i, code em,
 code b, code strong,
-code sup, code sub, code var, code small,
-code s, code u, code q, code mark {
+code i, code em {
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
@@ -26,34 +24,12 @@ code s, code u, code q, code mark {
   background: none;
 }
 
-code b, code strong {
-  color: var(--color-code-light-op);
-}
-
-code i, code em {
-  color: var(--color-code-light-int);
-}
-
-code s, code u {
-  color: var(--color-code-light-str);
-}
-
-code span, code sup {
-  color: var(--color-code-light-key);
-}
-
-code var, code sub {
-  color: var(--color-code-light-var);
-}
-
-code small {
-  color: var(--color-code-light-comment);
-}
-
-code q {
-  color: var(--color-code-light-lowlight);
-}
-
-code mark {
+code b,
+code strong {
   color: var(--color-code-light-highlight);
+}
+
+code i,
+code em {
+  color: var(--color-code-light-lowlight);
 }
