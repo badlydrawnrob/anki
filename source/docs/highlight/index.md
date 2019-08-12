@@ -14,9 +14,7 @@
 
 ## Basic syntax highlighting
 
-You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code (for [full highlighting](#full-syntax-highlighting) with `<pre>` code blocks, see below.
-
-Works with any `<code>` tag:
+You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code (for [full highlighting](#full-syntax-highlighting) with `<pre>` code blocks, see below).
 
 1. **Highlight**:
     + `<b>` or `<strong>`
