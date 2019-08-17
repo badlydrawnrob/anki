@@ -1,26 +1,29 @@
 # Missing card
 
 - [Home](../../../README.md)
-    - Cards
-      + [Simple](../simple/index.md)
-      + **[Missing!](../missing/index.md)**
-    - Themes
-      + [Syntax highlighting](../highlight/index.md)
+    - **Cards**
+        + [Simple](../simple/index.md)
+        + **[Missing!](../missing/index.md)**
+    - **Themes**
+        + [Syntax highlighting](../highlight/index.md)
 
-
-> **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
 
 ## A question with a [missing] word
 
-A [`missing->answer`](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) card; we're hiding one or more words to guess the answer:
+> ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
+
+**A [`missing->answer`](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) card;** we're hiding one or more words to guess the answer:
 
 - A missing function or expression you have to guess
 - A missing input or output to remember
 
+| You'll probably want: | It's helpful to add: |
+| --------------------- | ------------------------------ |
+| A descriptive title (or intro) | A subtitle or tags |
+| A clear question and answer | Supporting notes (bullet points) |
+| Your key learning point | Links to articles or documentation |
 
 
-
-----
 
 ## ★ Title
 

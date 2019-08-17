@@ -1,26 +1,28 @@
 # Simple card
 
 - [Home](../../../README.md)
-    - Cards
-      + **[Simple](../simple/index.md)**
-      + [Missing!](../missing/index.md)
-    - Themes
-      + [Syntax highlighting](../highlight/index.md)
+    - **Cards**
+        + **[Simple](../simple/index.md)**
+        + [Missing!](../missing/index.md)
+    - **Themes**
+        + [Syntax highlighting](../highlight/index.md)
 
-
-> **Key:** ★ Required / ☆ ✎ Optional / ⤷ Field Type
 
 ## What's the answer?
+
+> ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
 
 A simple `question->answer` card; we're asking the question: _"what does this code do?"_, e.g:
 
 - A function with an output you have to guess.
 - A class with a method that you need to call.
 
+| You'll probably want: | It's helpful to add: |
+| --------------------- | ------------------------------ |
+| A descriptive title (or intro) | A subtitle or tags |
+| A clear question and answer | Supporting notes (bullet points) |
+| Your key learning point | Links to articles or documentation |
 
-
-
-----
 
 ## ★ Title
 

@@ -2,52 +2,44 @@
 
 
 ## ★ Title
-What will this print out?
+What will each residents[<b>'key'</b>] print out?
 
 
 ## ☆ Subtitle
-Anonymous functions
+Dictionaries
 
 
 ## ☆ Syntax (inline code)
-filter(<b>lambda</b>...)
+d = {<b>'key'</b>: <i>value</i>}
 
 
 ## ★ Sample (code block or image)
 ```python
-my_list = range(16)
-print(filter(lambda x: x % 3 == 0, my_list))
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
+
+print(residents['Puffin'])
+print(residents['Sloth'])
+print(residents['Burmese Python'])
 ```
 
 
 ## ★ Key point (code block or image)
 ```text
-[0, 3, 6, 9, 12, 15]
+104
+105
+106
 ```
 
 
 ## ★ Key point notes
-- **Lambda** is an **anonymous function**.
-    - Similar to a **regular `def` function**.  
-- `x` receives an `int` and returns `True` if divisible by 3.
-- `filter(function, iterable)`
-- See also: [Filter _-vs-_ list comprehension](https://stackoverflow.com/a/3013686)
+Access a **dictionary** item with it's `key`, which returns it's `value`.
 
-```python
-lambda x: x % 3 == 0
-
-# similar to ...
-def by_three(x):
-    return x % 3 == 0
-
-# and ...
-[x for x in range(16) if x % 3 == 0]
-```
+A dictionary is similar to a list, but you access values by looking up a key instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces `{ }`.
 
 
 
 ## ✎ Other notes
-Example of **functional programming**. Python was [never intended as a functional language](http://bit.ly/2FEwUTy), and some say it's [not very good at it](http://bit.ly/2p2dA8I).
+**Warning:** [Never search for a value in a dictionary using a for loop](https://jeffknupp.com/blog/2015/08/30/python-dictionaries)!
 
 
 ## ✎ Markdown
