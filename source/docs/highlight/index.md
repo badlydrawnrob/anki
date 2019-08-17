@@ -83,12 +83,12 @@ Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Us
 - Add your changes in `Styling` field (at the bottom)
 - Repeat for each Card Type
 
-You'll need to do this everytime you install the deck.
+You'll need to do this everytime you install the deck. If you'd like to make your changes permanent, you'll need to do things ...
 
 
-#### The professional way ...
+#### The professional way!
 
-If you'd like to:
+So you want to:
 
 - Highlight your code blocks offline
 - Convert Markdown to HTML automatically

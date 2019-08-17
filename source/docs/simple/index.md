@@ -12,7 +12,7 @@
 
 > ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
 
-A simple `question->answer` card; we're asking the question: _"what does this code do?"_, e.g:
+**A simple `question->answer` card;** we're asking the question: _"what does this code do?"_, e.g:
 
 - A function with an output you have to guess.
 - A class with a method that you need to call.
