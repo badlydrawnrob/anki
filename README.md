@@ -120,7 +120,7 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Formatting problems
 
-> ⚠️ If you're having formatting problems, make sure you're **[following the guide](./source/docs/highlight/#full-syntax-highlighting)** and clicking `☰ -> Edit html` in the editor, then enter plain html. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
+> ⚠️ If you're having formatting problems, make sure you're **[following the guide](./source/docs/highlight/index.md#full-syntax-highlighting)** and clicking `☰ -> Edit html` in the editor, then enter plain html. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
 
 
 ## Licensed under MIT
