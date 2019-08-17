@@ -57,7 +57,7 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 ### Full syntax highlighting (Markdown)
 
-> Life is best in full colour
+> Life is better in full colour!
 
 - **Starter themes**
     - [Monokai](https://www.monokai.pro)
