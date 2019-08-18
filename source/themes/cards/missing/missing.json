@@ -1,21 +1,21 @@
 {
-  "★ Title": "A <code>method<\/code> and a <code>function<\/code> are missing here. What are they?",
+  "★ Title": "What type of condition group do these symbols belong to?",
 
 
-  "☆ Subtitle": "for loops, strings, lists",
+  "☆ Subtitle": "Conditions",
 
 
-  "☆ Syntax (inline code)": "",
+  "☆ Syntax (inline code)": false,
 
 
-  "★ Key point (code block or image)": "<div class=\"sourceCode\" id=\"cb1\"><pre class=\"sourceCode python\"><code class=\"sourceCode python\"><a class=\"sourceLine\" id=\"cb1-1\" title=\"1\"><span class=\"kw\">def<\/span> censor(text, word):<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-2\" title=\"2\">    text <span class=\"op\">=<\/span> <b class=\"cloze\">{{c1::text.split()}}<\/b>  <span class=\"co\"># Convert to list<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb1-3\" title=\"3\">    word_length <span class=\"op\">=<\/span> <span class=\"bu\">len<\/span>(word)  <span class=\"co\"># For our ****<\/span><\/a>\r\n<a class=\"sourceLine\" id=\"cb1-4\" title=\"4\"><\/a>\r\n<a class=\"sourceLine\" id=\"cb1-5\" title=\"5\">    <span class=\"cf\">for<\/span> i, item <span class=\"kw\">in<\/span> <b class=\"cloze\">{{c1::enumerate(text)}}<\/b>:<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-6\" title=\"6\">        <span class=\"cf\">if<\/span> item <span class=\"op\">==<\/span> word:<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-7\" title=\"7\">            asterix <span class=\"op\">=<\/span> <span class=\"st\">&#39;*&#39;<\/span> <span class=\"op\">*<\/span> word_length<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-8\" title=\"8\">            text[i] <span class=\"op\">=<\/span> asterix<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-9\" title=\"9\">            <span class=\"bu\">print<\/span>(<span class=\"st\">&quot;<\/span><span class=\"sc\">{}<\/span><span class=\"st\"> yup! &#39;<\/span><span class=\"sc\">{}<\/span><span class=\"st\">&#39; is the same as &#39;<\/span><span class=\"sc\">{}<\/span><span class=\"st\">&#39;&quot;<\/span>.<span class=\"bu\">format<\/span>(i, item, word))<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-10\" title=\"10\">            <span class=\"bu\">print<\/span>(<span class=\"st\">&#39;Replacing <\/span><span class=\"sc\">{}<\/span><span class=\"st\"> with <\/span><span class=\"sc\">{}<\/span><span class=\"st\">&#39;<\/span>.<span class=\"bu\">format<\/span>(i, asterix))<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-11\" title=\"11\">        <span class=\"cf\">else<\/span>:<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-12\" title=\"12\">            <span class=\"bu\">print<\/span>(<span class=\"st\">&#39;<\/span><span class=\"sc\">{}<\/span><span class=\"st\"> is not <\/span><span class=\"sc\">{}<\/span><span class=\"st\">&#39;<\/span>.<span class=\"bu\">format<\/span>(i, word))<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-13\" title=\"13\"><\/a>\r\n<a class=\"sourceLine\" id=\"cb1-14\" title=\"14\">    <span class=\"cf\">return<\/span> <span class=\"st\">&#39; &#39;<\/span>.join(text)<\/a>\r\n<a class=\"sourceLine\" id=\"cb1-15\" title=\"15\"><\/a>\r\n<a class=\"sourceLine\" id=\"cb1-16\" title=\"16\"><span class=\"bu\">print<\/span>(censor(<span class=\"st\">&#39;this is a sentence&#39;<\/span>, <span class=\"st\">&#39;sentence&#39;<\/span>))<\/a><\/code><\/pre><\/div>",
+  "★ Key point (code block or image)": "<pre class=\"text\"><code>[0, 20] # <span class=\"cloze\">{{c1::&gt;= 0, &lt;= 20}}<\/span>\r\n\r\n(0, 20] # <span class=\"cloze\">{{c1::&gt; 0, &lt;= 20}}<\/span>\r\n\r\n(0, 20) # <span class=\"cloze\">{{c1::&gt; 0, &lt; 20}}<\/span>\r\n\r\n[0, 20) # <span class=\"cloze\">{{c1::&gt;= 0, &lt; 20}}<\/span><\/code><\/pre>",
 
 
-  "★ Key point notes": "<ol type=\"1\">\r\n<li><code>split()<\/code> converts a <code>string<\/code> to a <code>[]<\/code><\/li>\r\n<li><code>enumerate()<\/code> allows us to return the index of a list<\/li>\r\n<\/ol>\r\n<p>Another, surprisingly simple method to achieve this is with <code>.replace()<\/code> method:<\/p>\r\n<div class=\"sourceCode\" id=\"cb2\"><pre class=\"sourceCode python\"><code class=\"sourceCode python\"><a class=\"sourceLine\" id=\"cb2-1\" title=\"1\"><span class=\"kw\">def<\/span> censor(text, word):<\/a>\r\n<a class=\"sourceLine\" id=\"cb2-2\" title=\"2\">           <span class=\"cf\">return<\/span> text.replace(word, <span class=\"st\">&#39;@&#39;<\/span> <span class=\"op\">*<\/span> <span class=\"bu\">len<\/span>(word))<\/a><\/code><\/pre><\/div>\r\n<blockquote>\r\n<p>Uhm, it\u2019s really nice, but this will replace parts of a word too. So \u2018gnopg nop foo\u2019 with \u2018nop\u2019 will become \u2018g@<span class=\"citation\" data-cites=\"g\">@g<\/span> @@ foo\u2019 \u2014 <a href=\"http:\/\/bit.ly\/2e0SwLl\">see more<\/a><\/p>\r\n<\/blockquote>",
+  "★ Key point notes": "<p>An example of <a href=\"https:\/\/www.mathsisfun.com\/sets\/intervals.html\">intervals<\/a>.<\/p>\r\n<ul>\r\n<li><code>[<\/code> symbol means <strong>include<\/strong> the number.<\/li>\r\n<li><code>(<\/code> symbol means <strong>exclude<\/strong> the number.<\/li>\r\n<\/ul>",
 
 
-  "✎ Other notes": "<p>This assumes that all letters are lowercase (<code>split()<\/code> by default seperates by whitespace). See other methods of <a href=\"http:\/\/treyhunner.com\/2016\/04\/how-to-loop-with-indexes-in-python\/\">accessing the index within the loop<\/a> (such as <code>range(len(our_list))<\/code>)<\/p>",
+  "✎ Other notes": "<p>More <a href=\"https:\/\/www.mathsisfun.com\/sets\/intervals.html\">ways to think about intervals<\/a><\/p>",
 
 
-  "✎ Markdown": false
+  "✎ Markdown": "The online Pandoc convertor seems to ouput the cloze properly:\r\n\r\n```bash\r\n[0, 20] # {{c1::>= 0, <= 20}}\r\n\r\n(0, 20] # {{c1::> 0, <= 20}}\r\n\r\n(0, 20) # {{c1::> 0, < 20}}\r\n\r\n[0, 20) # {{c1::>= 0, < 20}}\r\n```"
 }
