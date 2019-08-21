@@ -44,12 +44,6 @@ Once you've levelled up your programming skills, you can try your hand at doing 
 
 
 
-## Backup your code
-
-For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provided — here you can store raw markdown, or a link to the original code (Github gist for example).
-
-
-
 ## Customising themes
 
 ### The easy way

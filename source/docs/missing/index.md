@@ -84,4 +84,6 @@ A short reference if needed. Remember to [KISS](../../../#keep-it-simple-stupid)
 
 > ⤷ raw text
 
+For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provided — here you can store raw markdown, or a link to the original code (Github gist for example).
+
 - Store raw `.md` for future editing, if necessary
