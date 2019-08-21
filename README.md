@@ -59,12 +59,14 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 > Life is better in full colour!
 
+Anki themes come with a light- and dark-theme:
+
 - **Starter themes**
     - [Monokai](https://www.monokai.pro)
     - [Solarized light](https://ethanschoonover.com/solarized/)
-- **[Create your own](./source/docs/highlight/index.md#customising-themes)**
+- **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
-If you like pretty code blocks, you're in luck: themes work with Pandoc to convert Markdown into HTML with full syntax highlighting (a replacement for Power Format Pack which used Pygments — [see below](#dependency-hell))
+Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way)
 
 
 ## Quick start

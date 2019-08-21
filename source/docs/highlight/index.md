@@ -38,17 +38,10 @@ Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/), to ge
 
 That's it. You're done. Simple, right?!
 
-### The "proper" way
+### So, you want more?
 
-> Requires [Homebrew](https://brew.sh) and [Pandoc](https://pandoc.org/).
+Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](#the-professional-way-)
 
-1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks) in a `file.md`
-2. `brew install pandoc`
-3. `pandoc file.md`
-4. Follow steps `3—6` above
-5. View available languages with `pandoc --list-highlight-languages`
-
-If you've [installed the Anki theme](../../../README.md#advanced), <s>!= do something</s>
 
 
 ## Backup your code
@@ -59,7 +52,7 @@ For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provide
 
 ## Customising themes
 
-### Change colors
+### The easy way
 
 For quick customisations, view these files:
 
@@ -73,7 +66,7 @@ source
           typography.less
 ```
 
-#### The easy way
+#### Change colors
 
 Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (see `colors.less` and `typography.less`) — in Anki:
 
@@ -86,7 +79,7 @@ Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Us
 You'll need to do this everytime you install the deck. If you'd like to make your changes permanent, you'll need to do things ...
 
 
-#### The professional way!
+### The professional way ...
 
 So you want to:
 

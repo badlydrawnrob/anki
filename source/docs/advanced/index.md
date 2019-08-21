@@ -3,16 +3,28 @@
 > ⚠️ A work in progress, you're on your own for now ...
 > ⚠️ Extend Anki themes with `npm`, don't edit directly
 
-You'll know your way around Git and have Homebrew installed.
+You'll know your way around Git and have [Homebrew](https://brew.sh) installed.
 
-1. `brew install node`
-2. Add this `package.json` to your project folder
-3. `npm install`
+1. [`brew install node`](https://nodejs.org/en/)
+2. [`brew install pandoc`](https://pandoc.org)
+3. Add this repo's `package.json` to your project folder
+4. `npm install`
 
-Create your custom colors below!
+
+## Using Pandoc
+
+Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
+
+1. `npm run pandoc`
+2. Add a card in Anki
+3. Choose a field and navigate to: `☰ -> Edit html`
+4. Paste your code, then close `Edit html`
+5. Repeat the process for any other code blocks you need
+
+To view available languages, type `pandoc --list-highlight-languages` into the terminal. This is a replacement for [Power Format Pack](../error/index.md) and Pygments, in [older versions](https://github.com/badlydrawnrob/anki/releases/tag/1.0.0).
 
 
-#### The "proper" way to highlight code
+## Creating your own theme
 
 1. Copy `config.less` and `main.less` to your own repo
 2. Copy `colors.less` and any others you'd like to change
@@ -21,7 +33,7 @@ Create your custom colors below!
 4. Add to card type as [shown above](#css-variables)
 
 
-### Create your own card or theme
+## Create custom cards
 
 ```text
 source
