@@ -59,7 +59,7 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 > Life is better in full colour!
 
-Anki themes come with a light- and dark-theme:
+Anki themes come in light and dark, with [full syntax highlighting](./source/docs/highlight/index.md#full-syntax-highlighting):
 
 - **Starter themes**
     - [Monokai](https://www.monokai.pro)
