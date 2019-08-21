@@ -66,7 +66,7 @@ Anki themes come in light and dark, with [full syntax highlighting](./source/doc
     - [Solarized light](https://ethanschoonover.com/solarized/)
 - **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way)
+Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way-)
 
 
 ## Quick start
