@@ -8,6 +8,7 @@ If you're new to programming, let me explain. I previously used [Power Format Pa
 2. One just doesn't work with Anki.
 3. It happens _all the time_ in tech.
 4. Be extra careful what you depend on.
+5. This is commonly known as **[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)**
 
 
 ## Proceed with caution!
