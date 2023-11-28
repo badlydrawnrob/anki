@@ -9,9 +9,6 @@ You'll know your way around Git and have [Homebrew](https://brew.sh) installed.
 2. [`brew install pandoc`](https://pandoc.org)
 3. Add this repo's `package.json` to your project folder
 4. `npm install`
-5. `npm update print-first-css`<sup>¶</sup>
-
-> ¶: Sometimes [`print-first-css` doesn't load properly](https://github.com/badlydrawnrob/anki/issues/65), so make sure to `npm update print-first-css`. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
 
 
 ## Using Pandoc
