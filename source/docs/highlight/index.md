@@ -54,10 +54,19 @@ source
     │
     └───modules
           colors.less
-          typography.less
 ```
 
+The easiest way to change the colors for the `code string` and `pre block` fields is to edit the `--color-code-light` and `--color-code-dark` variables in your Anki cards. This will overwrite the defaults.
+
 #### Change colors
+
+1. Make sure you have the latest [Anki themes release](https://github.com/badlydrawnrob/anki/releases).
+2. In the Anki app menu, go to `Manage Note Types`.
+3. Select the `Anki themes: ...` Note Type.
+4. Select the `Cards` button.
+5. Select the `Styling` option.
+6. Use the search box and search for `--color-code` variables
+7. You can find an example of a code highlight 
 
 In your own repository, create a new `source/` folder and `package.json` and link them to the `Anki themes` clone files. Copy the [relevant files](https://github.com/badlydrawnrob/anki/issues/67) to override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in your new `source/` folder (see `colors.less` and `typography.less`).
 

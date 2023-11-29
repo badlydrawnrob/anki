@@ -1,0 +1,26 @@
+// Notes =================================================================
+// 1. Light theme as default
+// 2. See :root variables for color themes
+// 3. Add --color-code-dark to the pre blocks!
+
+code,
+kbd {
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+
+  &:empty {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+pre,
+pre code {
+  text-align: left;
+  color: var(--color-code-dark-base);
+  font-family: var(--font-family-mono);
+  background: var(--color-code-dark-background);
+}
