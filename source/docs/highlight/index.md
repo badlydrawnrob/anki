@@ -27,21 +27,18 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 ### The easy way
 
-Anki Theme provides styles for use with [Pandoc](https://pandoc.org/try/), to generate full color syntax highlighting: 
+> Currently using [Solarized light and Monokai](../../source/_global/variables/colors.less) themes.
+
+Anki Theme provides styles for use with [Pandoc](https://pandoc.org/MANUAL.html#syntax-highlighting), to generate full color syntax highlighting: 
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
-2. Convert [Markdown to HTML online](https://bit.ly/2XURJkd)
+2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea)
 3. Add a card in Anki
-4. Choose a field and navigate to: `☰ -> Edit html`
-5. Paste your code, then close `Edit html`
+4. Choose a `html` field and enter your code
+5. Use the [toggle button](https://github.com/badlydrawnrob/anki/issues/62) to view a live preview of your code
 6. Repeat the process — save your card!
 
 That's it. You're done. Simple, right?!
-
-### So, you want more?
-
-Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](#the-professional-way-)
-
 
 
 ## Customising themes
@@ -62,24 +59,23 @@ source
 
 #### Change colors
 
-Override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (see `colors.less` and `typography.less`) — in Anki:
+In your own repository, create a new `source/` folder and `package.json` and link them to the `Anki themes` clone files. Copy the [relevant files](https://github.com/badlydrawnrob/anki/issues/67) to override the [css variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in your new `source/` folder (see `colors.less` and `typography.less`).
 
-- `Browse`
-- Select `Anki theme ...`
-- Press `Cards...` button
-- Add your changes in `Styling` field (at the bottom)
-- Repeat for each Card Type
+> There's a bit of a [???] missing how-to guide here, but hopefully it's not too difficult to figure out, until I update things.
 
-You'll need to do this everytime you install the deck. If you'd like to make your changes permanent, you'll need to do things ...
+Go to the terminal and type `npm run build`; make any changes to your `.css` files and `npm run css` to compile the `build/main.css` file; next you'll want to go back into Anki app, and do the following:
+
+- Navigate to `Tools -> Manage Note Types`,
+- Select `Anki themes: ...` that you'd like to edit,
+- Press `Cards` button, select `Styling` option,
+- Add your changes in `Styling` field (at the bottom),
+- Repeat for each Card Type you'd like to edit.
+
+You'll need to do this everytime you [install the deck from Github Anki Themes Releases](https://github.com/badlydrawnrob/anki/releases). Your changes will be permanent on your local computer if you follow the instructions to [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository), and create your own, linking the two.
+
+You'll always have to update your themes on the Anki app manually.
 
 
-### The professional way ...
+## So, you want more?
 
-So you want to:
-
-- Highlight your code blocks offline
-- Convert Markdown to HTML automatically
-- Select your theme colors
-- Create custom cards
-
-Then [enter the world](../advanced/index.md) of the professional developer!
+Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](../advanced/index.md)

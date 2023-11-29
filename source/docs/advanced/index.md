@@ -1,20 +1,17 @@
-# Advanced installation
+# Becoming a professional programmer!
+## The advanced way to generate Anki code and themes ...
 
-> ⚠️ A work in progress, you're on your own for now ...
-> ⚠️ Extend Anki themes with `npm`, don't edit directly
+If you'd like to:
 
-You'll know your way around Git and have [Homebrew](https://brew.sh) installed.
+- Highlight your code blocks offline
+- Convert Markdown to HTML automatically
+- Select your theme colors
+- Create custom cards
 
-1. [`brew install node`](https://nodejs.org/en/)
-2. [`brew install pandoc`](https://pandoc.org)
-3. Add this repo's `package.json` to your project folder
-4. `npm install`
-5. `npm update print-first-css`<sup>¶</sup>
-
-> ¶: Sometimes [`print-first-css` doesn't load properly](https://github.com/badlydrawnrob/anki/issues/65), so make sure to `npm update print-first-css`. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
+Then enter the world of the professional developer!
 
 
-## Using Pandoc
+### Using Pandoc
 
 Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
 
@@ -34,6 +31,28 @@ To view available languages, type `pandoc --list-highlight-languages` into the t
 2. Change the [css variables](../source/_global/_root.less)
 3. Recompile the css with `npm run css`
 4. Add to card type as [shown above](#css-variables)
+
+
+### Build your Anki themes from scratch
+
+> ⚠️ A work in progress, you're on your own for now ...
+> ⚠️ Extend Anki themes with `npm`, don't edit directly
+
+You'll know your way around Git and have [Homebrew](https://brew.sh) installed (or install `node` and `pandoc` individually) ..
+
+1. [`brew install node`](https://nodejs.org/en/)
+2. [`brew install pandoc`](https://pandoc.org)
+3. Download [project files](https://github.com/badlydrawnrob/anki/releases) and create a repository
+4. Run `npm install`
+
+> ¶: Sometimes [`print-first-css` doesn't load properly](https://github.com/badlydrawnrob/anki/issues/65), so make sure to `npm update print-first-css`. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
+
+If you're updating your repository, it's best to also:
+
+1. Run `npm update`
+2. Run `npm update print-first-css`<sup>¶</sup>
+
+You may run into some dependency errors and have to `npm audit`.
 
 
 ## Create custom cards

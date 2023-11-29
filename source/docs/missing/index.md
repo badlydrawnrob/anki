@@ -45,7 +45,7 @@
 
 ## ☆ Syntax (inline code)
 
-> ⤷ **[`string``](../highlight/index.md#basic-syntax-highlighting)**
+> ⤷ **[`code string`](../highlight/index.md#basic-syntax-highlighting)**
 >    (Automatically wrapped with `<code>` tag)
 
 - A short line of code

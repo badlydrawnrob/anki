@@ -15,7 +15,16 @@ Anki helps you learn and remember quickly. The default cards aren't great for pr
 
 Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](#inspiration); otherwise ... let's begin!
 
+## Quick start
 
+1. Download the [latest Anki deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
+2. Open [Anki](https://apps.ankiweb.net). Select `File > Import ...`
+3. Import the Anki deck
+4. Add a new card
+5. Select the `Anki themes` type
+6. Get creative!
+
+Next, you'll probably want to [add some pretty colors](./source/docs/highlight/index.md#basic-syntax-highlighting) to your code.
 
 ## Keep it simple, stupid!
 
@@ -66,31 +75,7 @@ Anki themes come in light and dark, with [full syntax highlighting](./source/doc
     - [Solarized light](https://ethanschoonover.com/solarized/)
 - **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way-)
-
-
-## Quick start
-
-1. Download the [latest deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
-2. Open [Anki](https://apps.ankiweb.net). Select `File > Import ...`
-3. Import the deck
-4. Add a card
-5. Select `Anki theme` type
-6. Get creative!
-
-Next, you'll probably want to [add some pretty colors](./source/docs/highlight/index.md#basic-syntax-highlighting).
-
-
-## The professional way ...
-
-If you'd like to:
-
-- Highlight your code blocks offline
-- Convert Markdown to HTML automatically
-- Select your theme colors
-- Create custom cards
-
-Then [enter the world](./source/docs/advanced/index.md) of the professional developer!
+Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way-)
 
 
 
