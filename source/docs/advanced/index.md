@@ -24,7 +24,7 @@ Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
 To view available languages, type `pandoc --list-highlight-languages` into the terminal. This is a replacement for [Power Format Pack](../error/index.md) and Pygments, in [older versions](https://github.com/badlydrawnrob/anki/releases/tag/1.0.0).
 
 
-## Creating your own theme
+### Creating your own theme
 
 1. Copy `config.less` and `main.less` to your own repo
 2. Copy `colors.less` and any others you'd like to change
@@ -74,7 +74,7 @@ source
           components
 ```
 
-If you're a skilled dev, you'll figure it out :)
+If you're a skilled dev, you'll figure it out! :)
 
 - Use the `source/themes/cards/...` as a starting point
 - Create your own HTML and [Less](http://lesscss.org)
