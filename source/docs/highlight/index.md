@@ -14,7 +14,7 @@
 
 ## Basic syntax highlighting
 
-You can mark any inline [`code string`](../simple/index.md#-syntax-inline-code) field with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code (for [full highlighting](#full-syntax-highlighting) with a [`pre block`](../simple/index.md#-sample-code-block-or-image) field, see below).
+You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code)** field with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code (for [full highlighting](#full-syntax-highlighting) with a **[`pre block`](../simple/index.md#-sample-code-block-or-image)** field, see below).
 
 1. **Highlight**:
     + `<b>` or `<strong>`
@@ -27,9 +27,9 @@ You can mark any inline [`code string`](../simple/index.md#-syntax-inline-code) 
 
 ### The easy way
 
-> Currently using [Solarized light and Monokai](../../source/style/variables/colors.less) themes.
+> Currently using [Solarized light and Monokai](../../source/style/modules/variables/colors.less) themes.
 
-Wherever you see a `pre block`, Anki Theme provides colours (CSS) to use with [Pandoc](https://pandoc.org/MANUAL.html#syntax-highlighting), to generate colourful syntax highlighting: 
+Wherever you see a `pre block`, Anki Theme provides colours (CSS) to use with [Pandoc](https://pandoc.org/demo/example18f.html), to generate colourful syntax highlighting: 
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea)
@@ -45,7 +45,7 @@ That's it. You're done. Simple, right?!
 
 ### The easy way
 
-For quick customisations, view these files:
+For quick customisations, view this file:
 
 ```text
 source
@@ -53,7 +53,9 @@ source
 └───style
     │
     └───modules
-          colors.less
+        │
+        └───variables
+              colors.less
 ```
 
 The easiest way to change the colors for the `code string` and `pre block` fields is to edit the `--color-code-light` and `--color-code-dark` variables in your Anki cards. This will overwrite the defaults.
@@ -68,6 +70,7 @@ The easiest way to change the colors for the `code string` and `pre block` field
 6. Use the search box and search for `--color-code` variables
 7. <s>You can find an example of a code highlight </s>
 
+**Note:** Your changes will be lost every time you download a new release of Anki Themes and import the Note Types to your deck.
 
 -----
 
@@ -75,6 +78,8 @@ The easiest way to change the colors for the `code string` and `pre block` field
 
 > **A hot tip for beginners is ... just use CSS!**
 > I'm using [Less.js](https://lesscss.org) simply as it's [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). There's plenty of time for preprocessors, fancy frameworks, and whatever else takes your fancy **later in your career**. Find yourself [a good book](https://www.goodreads.com/en/book/show/10361330) and get learning.[^1]
+
+Anki (the app) only allows a certain amount of flexibiltiy to keep things from breaking on every new Anki Theme release; you'll almost certainly need to add your colour them (CSS) changes back in every time you import a new release. . It's can be tricky to keep things from breaking when new releases a little hard to keep things from breaking as I make chanIf you'd like to preserve your colour theme changes, the best thing to do is update your Note Types 
 
 > There's a bit of a [???] missing how-to guide here, but hopefully it's not too difficult to figure out, until I update things.
 
