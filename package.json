@@ -22,10 +22,9 @@
     "url": "https://github.com/badlydrawnrob/anki/issues"
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
-  "dependencies": {},
   "devDependencies": {
     "less": "^3.9.0",
     "mustache": "^3.0.1",
-    "print-first-css": "github:badlydrawnrob/print-first-css#3f2954a"
+    "print-first-css": "github:badlydrawnrob/print-first-css#2ab6105"
   }
 }
