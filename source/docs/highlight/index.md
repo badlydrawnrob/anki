@@ -27,7 +27,7 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 ### The easy way
 
-> Currently using [Solarized light and Monokai](../../source/_global/variables/colors.less) themes.
+> Currently using [Solarized light and Monokai](../../source/style/variables/colors.less) themes.
 
 Anki Theme provides styles for use with [Pandoc](https://pandoc.org/MANUAL.html#syntax-highlighting), to generate full color syntax highlighting: 
 
@@ -50,7 +50,7 @@ For quick customisations, view these files:
 ```text
 source
 │
-└───_global
+└───style
     │
     └───modules
           colors.less

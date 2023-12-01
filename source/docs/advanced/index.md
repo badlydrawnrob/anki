@@ -28,7 +28,7 @@ To view available languages, type `pandoc --list-highlight-languages` into the t
 
 1. Copy `config.less` and `main.less` to your own repo
 2. Copy `colors.less` and any others you'd like to change
-2. Change the [css variables](../source/_global/_root.less)
+2. Change the [css variables](../source/style/_root.less)
 3. Recompile the css with `npm run css`
 4. Add to card type as [shown above](#css-variables)
 
@@ -60,7 +60,7 @@ You may run into some dependency errors and have to `npm audit`.
 ```text
 source
 │
-└───_global
+└───style
     │   config.less
     │   main.less
     │
