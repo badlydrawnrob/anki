@@ -70,73 +70,22 @@ The easiest way to change the colors for the `code string` and `pre block` field
 6. Use the search box and search for `--color-code` variables
 7. <s>You can find an example of a code highlight </s>
 
-**Note:** Your changes will be lost every time you download a new release of Anki Themes and import the Note Types to your deck.
+**Note:** Your changes will be lost every time you download a new release of Anki Themes, and import the Note Types to your deck.
 
 -----
 
 ### The (slightly) harder way
 
-> **A hot tip for beginners is ... just use CSS!**
-> I'm using [Less.js](https://lesscss.org) simply as [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). Just learn CSS.[^1] Trust me, I've been around the block a few times![^2]
+> **A hot tip for beginners is ... just use CSS!**[^1]
+> I'm simply using [Less.js](https://lesscss.org) as [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). Trust me, I've been around the block a few times![^2]
 
-Anki (the app) is a little flexible to help keep Anki Theme releases from any major breaking changes; however you'll almost certainly need to add your (CSS) colour theme changes back in every time. I try to release [semantic changes](https://semver.org) to the code, but it's best to save your CSS changes somewhere.
+Anki (the app) has some flexibility to help keep Anki Theme releases from major breaking changes; however you'll almost certainly need to add your (CSS) colour theme changes back in every time. I try to release [semantic changes](https://semver.org) to the code, but it's best to save your CSS changes somewhere.
 
 1. You can fork this repository and make changes there.
 2. You can create a child theme with it's own `package.json` file.
 
-I'll cover **option 1** for now.
 
-### Get started with NPM
-
-You should familiarise yourself with [Github Desktop](https://desktop.github.com), [NPM](https://www.npmjs.com) and the command line (I use [Terminal](https://tinyurl.com/4w8p4wnx)).
-
-
-#### Step 1
-[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repos) Anki Themes and [clone it to your computer](https://tinyurl.com/46bx4bj5) using Github Desktop.
-
-#### Step 2
-Once you've cloned the repository, check your files and the `package.json`, they should be up-to-date. You can find `"devDependencies"` in the `.json` file which you'll need to install. [Print First CSS] may need to be [updated manually](https://github.com/badlydrawnrob/anki/issues/54).
-
-#### Step 3
-Install the packages we need with [`npm install`](https://docs.npmjs.com/cli/v8/commands/npm-install). You can then create a `build/` folder, along with the `main.css` CSS file with the following command:
-
-> `npm run build`
-
-This will also create a demo [Simple](../simple/index.md) and [Missing](../missing/index.md) file, which look the same as the Note Type Cards in the `.apkg` release you've uploaded to Anki app. Drag and drop each file into your browser/editor to view.
-
-- The `main.css` file is what's in your Note Type Cards in Anki.
-- The `build/*.html` files are just for demo purposes.
-- To view the Note Type Cards, head to `source/themes/cards`
-
-To create your own colour scheme, you _could_ simply change the `source/style/modules/variables/colors.less` file and run `npm run css` to update the `main.css` CSS file. However it's better to create your own file:
-
-```text
-source
-│
-└───style
-    │
-    └───modules
-        │
-        └───variables
-              ...
-              custom.less
-```
-
-Here you could add your own `--color-code` variables, and `@include` it into `style/modules/variables/_root.less` — then `npm run build` to re-compile your `main.css` CSS file.
-
-Finally, go back into your Anki app and:
-
-2. Go to `Manage Note Types`.
-3. Select the `Anki themes: ...` Note Type.
-4. Select the `Cards` button.
-5. Select the `Styling` option.
-6. Delete the CSS and add your own from `main.css`.
-7. Repeat for each Card Type you'd like to edit.
-
-You could also go ahead and mess around with the other `.less` files, but every time your forked repo needs updating (to grab changes from Anki Themes) you'd run into problems with outdated files.
-
-
-## So, you want more?
+## So, how do I do that then?
 
 Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](../advanced/index.md)
 
