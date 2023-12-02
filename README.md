@@ -80,7 +80,7 @@ Anki themes come in light and dark, with [full syntax highlighting](./source/doc
 
 ## Custom colors and a child theme
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme [the professional way](../advanced/index.md)
+Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](../advanced/index.md)**
 
 ### Why Anki Themes instead of a plugin?
 
@@ -112,7 +112,7 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Formatting problems
 
-> ⚠️ If you're having formatting problems, make sure you're **[following the guide](./source/docs/highlight/index.md#full-syntax-highlighting)** and clicking `☰ -> Edit html` in the editor, then enter plain html. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
+> ⚠️ If you're having formatting problems, make sure you're **[following the guide](./source/docs/highlight/index.md#full-syntax-highlighting)** and clicking `Toggle Visual Editor ⌘⇧X` / `Toggle HTML Editor ⌘⇧X` in the editor to view/edit the changes. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
 
 
 ## Licensed under MIT
