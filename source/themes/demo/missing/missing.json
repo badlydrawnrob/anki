@@ -1,0 +1,22 @@
+{
+  "★ Title": "What type of condition group do these symbols belong to?",
+
+
+  "☆ Subtitle": "Conditions",
+
+
+  "☆ Syntax (inline code)": false,
+
+
+  "★ Key point (code block or image) — cloze front": "<div class=\"sourceCode\" id=\"cb2\"><pre\r\nclass=\"sourceCode python\"><code class=\"sourceCode python\"><span id=\"cb2-1\"><a href=\"#cb2-1\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>[<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>] <span class=\"co\"># <span class=\"cloze\">[ ... ]<\/span><\/span><\/span>\r\n<span id=\"cb2-2\"><a href=\"#cb2-2\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-3\"><a href=\"#cb2-3\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>(<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>] <span class=\"co\"># <span class=\"cloze\">[ ... ]<\/span><\/span><\/span>\r\n<span id=\"cb2-4\"><a href=\"#cb2-4\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-5\"><a href=\"#cb2-5\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>(<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>) <span class=\"co\"># <span class=\"cloze\">[ ... ]<\/span><\/span><\/span>\r\n<span id=\"cb2-6\"><a href=\"#cb2-6\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-7\"><a href=\"#cb2-7\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>[<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>) <span class=\"co\"># <span class=\"cloze\">[ ... ]<\/span><\/span><\/span><\/code><\/pre><\/div>",
+  "★ Key point (code block or image) — cloze reverse": "<div class=\"sourceCode\" id=\"cb2\"><pre\r\nclass=\"sourceCode python\"><code class=\"sourceCode python\"><span id=\"cb2-1\"><a href=\"#cb2-1\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>[<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>] <span class=\"co\"># &gt;= 0, &lt;= 20<\/span><\/span>\r\n<span id=\"cb2-2\"><a href=\"#cb2-2\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-3\"><a href=\"#cb2-3\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>(<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>] <span class=\"co\"># &gt; 0, &lt;= 20<\/span><\/span>\r\n<span id=\"cb2-4\"><a href=\"#cb2-4\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-5\"><a href=\"#cb2-5\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>(<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>) <span class=\"co\"># &gt; 0, &lt; 20<\/span><\/span>\r\n<span id=\"cb2-6\"><a href=\"#cb2-6\" aria-hidden=\"true\" tabindex=\"-1\"><\/a><\/span>\r\n<span id=\"cb2-7\"><a href=\"#cb2-7\" aria-hidden=\"true\" tabindex=\"-1\"><\/a>[<span class=\"dv\">0<\/span>, <span class=\"dv\">20<\/span>) <span class=\"co\"># &gt;= 0, &lt; 20<\/span><\/span><\/code><\/pre><\/div>",
+
+  
+  "★ Key point notes": "<p>An example of <a href=\"https:\/\/www.mathsisfun.com\/sets\/intervals.html\">intervals<\/a>.<\/p>\r\n<ul>\r\n<li><code>[<\/code> symbol means <strong>include<\/strong> the number.<\/li>\r\n<li><code>(<\/code> symbol means <strong>exclude<\/strong> the number.<\/li>\r\n<\/ul>",
+
+
+  "✎ Other notes": "<p>More <a href=\"https:\/\/www.mathsisfun.com\/sets\/intervals.html\">ways to think about intervals<\/a><\/p>",
+
+
+  "✎ Markdown": "The online Pandoc convertor seems to ouput the cloze properly:\r\n\r\n```bash\r\n[0, 20] # {{c1::>= 0, <= 20}}\r\n\r\n(0, 20] # {{c1::> 0, <= 20}}\r\n\r\n(0, 20) # {{c1::> 0, < 20}}\r\n\r\n[0, 20) # {{c1::>= 0, < 20}}\r\n```"
+}
