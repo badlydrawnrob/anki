@@ -77,53 +77,71 @@ The easiest way to change the colors for the `code string` and `pre block` field
 ### The (slightly) harder way
 
 > **A hot tip for beginners is ... just use CSS!**
-> I'm using [Less.js](https://lesscss.org) simply as it's [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). There's plenty of time for preprocessors, fancy frameworks, and whatever else takes your fancy **later in your career**. Find yourself [a good book](https://www.goodreads.com/en/book/show/10361330) and get learning.[^1]
+> I'm using [Less.js](https://lesscss.org) simply as [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). Just learn CSS.[^1] Trust me, I've been around the block a few times![^2]
 
-Anki (the app) only allows a certain amount of flexibiltiy to keep things from breaking on every new Anki Theme release; you'll almost certainly need to add your colour them (CSS) changes back in every time you import a new release. . It's can be tricky to keep things from breaking when new releases a little hard to keep things from breaking as I make chanIf you'd like to preserve your colour theme changes, the best thing to do is update your Note Types 
+Anki (the app) is a little flexible to help keep Anki Theme releases from any major breaking changes; however you'll almost certainly need to add your (CSS) colour theme changes back in every time. I try to release [semantic changes](https://semver.org) to the code, but it's best to save your CSS changes somewhere.
 
-> There's a bit of a [???] missing how-to guide here, but hopefully it's not too difficult to figure out, until I update things.
+1. You can fork this repository and make changes there.
+2. You can create a child theme with it's own `package.json` file.
 
-1. [Clone the repository](https://tinyurl.com/46bx4bj5) to your computer (I use [Github Desktop](https://desktop.github.com))
-2. You should be familiar with **[NPM](https://www.npmjs.com)**.
+I'll cover **option 1** for now.
 
-Once you've cloned the repository, make sure your files and the `package.json` are up-to-date. Check `"devDependencies"` in the `.json` file and make sure they're the same as the Anki Themes repo. [Print First CSS] may need to be [updated manually](https://github.com/badlydrawnrob/anki/issues/54).
+### Get started with NPM
 
-You can create the necessary CSS files and a `build/` folder with the following command:
+You should familiarise yourself with [Github Desktop](https://desktop.github.com), [NPM](https://www.npmjs.com) and the command line (I use [Terminal](https://tinyurl.com/4w8p4wnx)).
+
+
+#### Step 1
+[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repos) Anki Themes and [clone it to your computer](https://tinyurl.com/46bx4bj5) using Github Desktop.
+
+#### Step 2
+Once you've cloned the repository, check your files and the `package.json`, they should be up-to-date. You can find `"devDependencies"` in the `.json` file which you'll need to install. [Print First CSS] may need to be [updated manually](https://github.com/badlydrawnrob/anki/issues/54).
+
+#### Step 3
+Install the packages we need with [`npm install`](https://docs.npmjs.com/cli/v8/commands/npm-install). You can then create a `build/` folder, along with the `main.css` CSS file with the following command:
 
 > `npm run build`
 
-This will generate the `main.css` file and the demo [Simple](../simple/index.md) and [Missing](../missing/index.md) themes; you can drag and drop each file into your browser/editor to view.
+This will also create a demo [Simple](../simple/index.md) and [Missing](../missing/index.md) file, which look the same as the Note Type Cards in the `.apkg` release you've uploaded to Anki app. Drag and drop each file into your browser/editor to view.
 
-- The `main.css` file is what's in your Note Types in Anki.
-- The `build/*.html` files are just for show
+- The `main.css` file is what's in your Note Type Cards in Anki.
+- The `build/*.html` files are just for demo purposes.
 - To view the Note Type Cards, head to `source/themes/cards`
 
-To create your own colour scheme, you _could_ simply change the `source/style/modules/variables/colors.less` file and run `npm run css` to update the `main.css` CSS file.
+To create your own colour scheme, you _could_ simply change the `source/style/modules/variables/colors.less` file and run `npm run css` to update the `main.css` CSS file. However it's better to create your own file:
 
-You could also go ahead and mess around with the other `.less` files, bearing in mind that I'm simply using Less.js to compile the files and **nothing more**.
+```text
+source
+│
+└───style
+    │
+    └───modules
+        │
+        └───variables
+              ...
+              custom.less
+```
 
+Here you could add your own `--color-code` variables, and `@include` it into `style/modules/variables/_root.less` — then `npm run build` to re-compile your `main.css` CSS file.
 
+Finally, go back into your Anki app and:
 
+2. Go to `Manage Note Types`.
+3. Select the `Anki themes: ...` Note Type.
+4. Select the `Cards` button.
+5. Select the `Styling` option.
+6. Delete the CSS and add your own from `main.css`.
+7. Repeat for each Card Type you'd like to edit.
 
-Go to the terminal and type `npm run build`; make any changes to your `.css` files and `npm run css` to compile the `build/main.css` file; next you'll want to go back into Anki app, and do the following:
-
-- Navigate to `Tools -> Manage Note Types`,
-- Select `Anki themes: ...` that you'd like to edit,
-- Press `Cards` button, select `Styling` option,
-- Add your changes in `Styling` field (at the bottom),
-- Repeat for each Card Type you'd like to edit.
-
-You'll need to do this everytime you [install the deck from Github Anki Themes Releases](https://github.com/badlydrawnrob/anki/releases). Your changes will be permanent on your local computer if you follow the instructions to [clone a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository), and create your own, linking the two.
-
-You'll always have to update your themes on the Anki app manually.
-
------
+You could also go ahead and mess around with the other `.less` files, but every time your forked repo needs updating (to grab changes from Anki Themes) you'd run into problems with outdated files.
 
 
 ## So, you want more?
 
 Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](../advanced/index.md)
 
-[^1]: **There and back again:** I've actually come full circle; cut my teeth with regular CSS (even some dirty [Dreamweaver websites(https://tinyurl.com/mr48e7yk)], with _images and tables_ in 2003!); graduated to [Bootstrap frameworks](https://web.archive.org/web/20130308110613/http://twitter.github.com/bootstrap/); created my own framework (with [some help](https://cardinalcss.com)) through [Less](https://lesscss.org); then [Stylus](https://stylus-lang.com); then Less — again — 'cos Stylus [died](https://github.com/stylus/stylus/issues/2282 (subsequently [resurrected](https://stylus-lang.com/docs/compare.html)); now scrapping it all to go back to (mostly) [vanilla CSS](https://github.com/badlydrawnrob/print-first-css).
 
-It's still a royal PITA, but technology is ever-evolving and, in some ways, circular 💩🔄❤️
+
+[^1]: There's plenty of time for preprocessors, fancy frameworks, and whatever else takes your fancy **later in your career**. Find yourself [a good book](https://www.goodreads.com/en/book/show/10361330) and get learning!
+
+[^2]: **There and back again:** I've actually come full circle; cut my teeth with regular CSS (even some dirty [Dreamweaver websites(https://tinyurl.com/mr48e7yk)], with _images and tables_ in 2003!); graduated to [Bootstrap frameworks](https://web.archive.org/web/20130308110613/http://twitter.github.com/bootstrap/); created my own framework (with [some help](https://cardinalcss.com)) through [Less](https://lesscss.org); then [Stylus](https://stylus-lang.com); then Less — again — 'cos Stylus [died](https://github.com/stylus/stylus/issues/2282 (subsequently [resurrected](https://stylus-lang.com/docs/compare.html)); now scrapping it all to go back to (mostly) [vanilla CSS](https://github.com/badlydrawnrob/print-first-css). It's still a royal PITA, but technology is ever-evolving and, in some ways, circular 💩🔄❤️

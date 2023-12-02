@@ -22,27 +22,7 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 3. Import the Anki deck
 4. Add a new card
 5. Select the `Anki themes` type
-6. Get creative!
-
-Next, you'll probably want to [add some pretty colors](./source/docs/highlight/index.md#basic-syntax-highlighting) to your code.
-
-## Keep it simple, stupid!
-
-> 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41)&nbsp; >&nbsp; 10 cards with 100 ideas
-
-Simple is better. If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code; as clear as possible. Imagine you're stupid, writing for your stupid future self — when you look back on your flashcards, they'll make sense.
-
-- One idea per card
-- Trim the fat (less is more)
-- Keep it relevant (reduce cognitive load)
-
-A card stuffed with facts will overload the brain. I imagine you're trying to learn:
-
-- A theme, or idea
-- A function, or code snippet
-- Syntax, or high-level documentation
-
-So, unless its a super hard question, if you're spending more than a minute reviewing each card — reduce, reduce, reduce. Simplify it!
+6. Get creative with your cards!
 
 
 ## Cards
@@ -56,6 +36,26 @@ There's two types of cards to choose from:
     - A question with a `[…]` word
     - A question with a `[missing]` word
 
+Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) to your code. But first, a quick tip on how to keep your Anki deck nice and organised ...
+
+
+## Keep it simple, stupid!
+
+> 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41)&nbsp; >&nbsp; 10 cards with 100 ideas
+
+Simple is better. If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code; as clear as possible. Imagine you're stupid, writing for your stupid future self — when you look back on your flashcards, they'll make sense.
+
+- One idea per card
+- Less is more (trim the fat)
+- Keep it concise and relevant (reduce cognitive load)
+
+A card stuffed with facts will overload the brain. I imagine you're trying to learn:
+
+- A theme, or idea
+- A function, or code snippet
+- Syntax, or high-level documentation
+
+That's great! But. Keep your questions clear — perhaps split a hard question into three easy cards — if you're spending more than a minute reviewing each card; reduce, reduce, reduce. Simplify it!
 
 
 ## Add color to your code
