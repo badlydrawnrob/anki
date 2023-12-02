@@ -68,7 +68,7 @@ The easiest way to change the colors for the `code string` and `pre block` field
 4. Select the `Cards` button.
 5. Select the `Styling` option.
 6. Use the search box and search for `--color-code` variables
-7. <s>You can find an example of a code highlight </s>
+7. Edit them with your own colour theme
 
 **Note:** Your changes will be lost every time you download a new release of Anki Themes, and import the Note Types to your deck.
 
@@ -84,10 +84,7 @@ Anki (the app) has some flexibility to help keep Anki Theme releases from major 
 1. You can fork this repository and make changes there.
 2. You can create a child theme with it's own `package.json` file.
 
-
-## So, how do I do that then?
-
-Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](../advanced/index.md)
+It's a little advanced, but both options are possible. Once you've levelled up your programming skills, you can try your hand at doing things [the professional way](../advanced/index.md)
 
 
 

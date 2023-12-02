@@ -75,11 +75,14 @@ Anki themes come in light and dark, with [full syntax highlighting](./source/doc
     - [Solarized light](https://ethanschoonover.com/solarized/)
 - **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and [more ...](./source/docs/highlight/index.md#the-professional-way-)
 
 
 
-## Why Anki Themes instead of a plugin?
+## Custom colors and a child theme
+
+Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme [the professional way](../advanced/index.md)
+
+### Why Anki Themes instead of a plugin?
 
 I've spent a lot of time so you can:
 
@@ -88,6 +91,8 @@ I've spent a lot of time so you can:
 - Customise the css to your hearts content.
 
 Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
+
+#### Dependency hell
 
 There _are_ other plugins out there that are fun to use, but [beware of dependency hell](./source/docs/error/index.md)!
 
