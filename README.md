@@ -1,3 +1,6 @@
+[![GitHub Repo stars](https://img.shields.io/github/stars/badlydrawnrob/anki?style=social)](https://github.com/badlydrawnrob/anki/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 # Anki themes
 ## Learning to code with Anki — themes, cards, templates and syntax highlighting
 
