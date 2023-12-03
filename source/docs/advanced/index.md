@@ -100,33 +100,33 @@ Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
 
 ## Creating your own child theme
 
-> ⚠️ A work in progress, you're on your own for now ...
-> ⚠️ Extend Anki themes with `npm`, don't edit directly
+> ⚠️ A work in progress, you're mostly on your own for now ...
+> ⚠️ I think it's better to [extend Anki themes](https://github.com/badlydrawnrob/anki/issues/42), not edit the clone/fork directly.
 
-
+There's a [couple of ways](https://github.com/badlydrawnrob/anki/issues/42#issuecomment-1834381594) we can achieve this. Currently one of our dependencies is in our `package.json` dependencies; the other one (Anki Themes) can be cloned or forked. So ...
 
 1. First clone the Anki Themes repository, or fork it.
-2. Next create a new empty repository (and link it to Github)
+2. Create a new empty repository (and link it to Github)
 3. In your empty repository, create a new `source/` folder and `package.json`. 
-4. Make sure you have `print-first-css` and `anki` (themes) repositories in your `devDependencies`. Make sure they're installed.
+4. Make sure you have `print-first-css` (at least) as a dependency. You _could_ add `anki` (themes) as a dependency also (although this [requires changes to the code base](https://github.com/badlydrawnrob/anki/issues/42#issuecomment-1834381594))
 5. Copy `main.less`, `config.less`, `_root.less`, `colors.less` files to your repo (and any others you want to change)
 6. Override any CSS [`--variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) you want, and `@include` others from the original Anki themes repo.
-7. Change the `"scripts"` in `package.json` to point to the correct files/folders.
+7. Make sure the `"scripts"` in `package.json` point to the correct files/folders.
     - This will be either the original Anki themes ...
     - or your own folders.
 8. Compile all the files needed with `npm <command>`
     - `npm run build`
     - `npm run css`
+    - ...
 
 Finally, you can go into the Anki app, and add any changes to your Note Type Card(s).
 
 
-### Build your Anki themes from scratch
+### Build your Anki cards from scratch
 
-> ⚠️ A work in progress, you're on your own for now ...
-> ⚠️ Extend Anki themes with `npm`, don't edit directly
+> 🔗 Some useful information [here](https://github.com/badlydrawnrob/anki/issues/54) and [here](https://github.com/badlydrawnrob/print-first-css/issues/25).
 
-If you're a skilled dev, you should be able to figure this out without too much guidance> You may run into some dependency errors and have to `npm audit`. The main files you'll want to change are below — feel free to copy and edit them.
+If you're a skilled dev, you should be able to figure this out without too much guidance. You may run into some dependency errors and have to `npm audit`. The main files you'll want to change are below — feel free to copy and edit them in your child theme.
 
 
 ## Create custom cards
@@ -144,9 +144,10 @@ source
     └───themes
           cards
           components
+          demo
 ```
 
-We're using [Mustache](https://www.npmjs.com/package/mustache) to preview the card themes.
+We're using [Mustache](https://www.npmjs.com/package/mustache) to preview the card themes in the demo version compiled to `build/` folder. There's been some [problems with compatibility](https://github.com/badlydrawnrob/anki/issues/56) in the Anki app, so this might be discontinued eventually.
 
 
 [^1]: Sometimes [`print-first-css` doesn't load properly](https://github.com/badlydrawnrob/anki/issues/65), so make sure to `npm update print-first-css` with the correct commit number. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
