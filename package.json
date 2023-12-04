@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
   "devDependencies": {
-    "less": "^3.9.0",
-    "mustache": "^3.0.1",
+    "less": "^4.2.0",
+    "mustache": "^4.2.0",
     "print-first-css": "github:badlydrawnrob/print-first-css#2ab6105"
   }
 }
