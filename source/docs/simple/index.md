@@ -54,7 +54,7 @@
 ## ★ Sample (code block or image)
 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
->    (requires [`markdown -> html`]((../highlight/index.md#full-syntax-highlighting) conversion)
+>    (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - A sample of the code we're learning:
 - If you're feeling lazy, a snapshot image
@@ -62,8 +62,8 @@
 
 ## ★ Key point (code block or image)
 
-> ⤷ **[`pre block | string | image`](../highlight/index.md#full-syntax-highlighting)**
->     (requires [`markdown -> html`]((../highlight/index.md#full-syntax-highlighting) conversion)
+> ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
+>     (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - The answer or key learning point
 - If you're feeling lazy, a snapshot image
