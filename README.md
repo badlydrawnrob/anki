@@ -128,4 +128,4 @@ Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 ### Inspiration
 
-I've had a lot of inspiration from [Anki essentials](http://alexvermeer.com/anki-essentials/), [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html), [Enduring CSS](http://ecss.io) component naming conventions, [@mdo code guide](http://codeguide.co/) and [@cbracco](https://github.com/cbracco) ... so, thanks!
+I've had a lot of inspiration from [Anki essentials](http://alexvermeer.com/anki-essentials/), [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html), [Enduring CSS](https://tinyurl.com/yc4pnxyr) component naming conventions, [@mdo code guide](http://codeguide.co/) and [@cbracco](https://github.com/cbracco) ... so, thanks!
