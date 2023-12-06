@@ -1,1 +1,21 @@
-// Nothing here yet.
+// Theme typography ============================================================
+// There are some annoying "bugs" when trying to specify San Francisco
+// fonts: See issue #12
+//
+// #1: Inherited from print-first-css:
+//     - `--system-ui`, `--system-mono`, `--fallback-mono`
+//     - Add your custom font variable and @font-face
+// #2: Customise the font stack!
+//     - Use the variables in `../../partials/..`
+//     - Override print-first-css files
+
+// #1
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    src: url("_DejaVuSansMono.ttf");
+}
+
+--my-font: "DejaVu Sans Mono";
+
+// #2
+--font-family-mono: var(--my-font), var(--system-mono), var(--fallback-mono);
