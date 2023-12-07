@@ -1,5 +1,7 @@
 // Notes ====================================================================
 // Some simple styles to mock the Anki app
+//
+// #1: View the baseline grid
 
 .test-Anki {
   margin: var(--spacing-one);
@@ -8,6 +10,10 @@
     width: 60%;
     margin: 0 auto;
   }
+}
+
+.test-AnkiCard {
+  // .grid-baseline(@depth: 1; @align: 0);  // #1
 }
 
 .test-AnkiCard-Front {
@@ -33,7 +39,7 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: normal;
-  line-height: var(--line-height-half);  // #1
+  line-height: var(--line-height-half);  // #2
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
