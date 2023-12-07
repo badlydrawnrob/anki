@@ -1,0 +1,16 @@
+// Headings ====================================================================
+// Inherited `system-ui` from print-first-css
+// - Override styles with new DejaVu font with this trick:
+//   https://www.hacksoft.io/blog/using-multiple-font-files-the-right-way
+//
+// - Where's the best place to update these? See issue #27
+//   - For instance, header's `font-weight` set in `../../themes/..` folder
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-header);
+}
