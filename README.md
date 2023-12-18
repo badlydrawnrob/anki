@@ -77,8 +77,8 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 Anki themes come in light and dark, with [full syntax highlighting](./source/docs/highlight/index.md#full-syntax-highlighting):
 
 - 🖌️ **Starter themes**
-    - [Monokai](https://www.monokai.pro)
-    - [Solarized light](https://ethanschoonover.com/solarized/)
+    - 🌃 [Monokai](https://www.monokai.pro)
+    - 🌅 [Solarized light](https://ethanschoonover.com/solarized/)
 - 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
 
