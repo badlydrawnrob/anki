@@ -3,11 +3,11 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/badlydrawnrob/anki?style=social)](https://github.com/badlydrawnrob/anki/stargazers)
 
 # Anki themes
-## Learning to code with Anki — themes, cards, templates and syntax highlighting
+## Learning to code with Anki — themes, cards, templates, syntax highlighting
 
 <img align="right" width="250" height="auto" src="./source/media/preview.png" style="padding-left: 20px;">
 
-Want to learn how to code?
+💻 Want to learn how to code?
 
 Anki helps you learn and remember quickly. The default cards aren't great for programming, so these flashcards and themes make it fun to learn.
 
@@ -33,10 +33,10 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 
 There's two types of cards to choose from:
 
-1. **[Simple](./source/docs/simple/index.md)**
+1. 💡 **[Simple](./source/docs/simple/index.md)**
     - What's the answer?
     - What does this syntax do?
-2. **[Missing!](./source/docs/missing/index.md)**
+2. 🔎 **[Missing!](./source/docs/missing/index.md)**
     - A question with a `[…]` word
     - A question with a `[missing]` word
 
@@ -45,7 +45,7 @@ Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) 
 
 ## Keep it simple, stupid!
 
-> 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41)&nbsp; >&nbsp; 10 cards with 100 ideas
+> ☝️ 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41)&nbsp; >&nbsp; 10 cards with 100 ideas
 
 Simple is better. If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code; as clear as possible. Imagine you're stupid, writing for your stupid future self — when you look back on your flashcards, they'll make sense.
 
@@ -70,14 +70,14 @@ You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the An
 
 ### Full syntax highlighting (Markdown)
 
-> Life is better in full colour!
+> 🎨 Life is better in full colour!
 
 Anki themes come in light and dark, with [full syntax highlighting](./source/docs/highlight/index.md#full-syntax-highlighting):
 
-- **Starter themes**
+- 🖌️ **Starter themes**
     - [Monokai](https://www.monokai.pro)
     - [Solarized light](https://ethanschoonover.com/solarized/)
-- **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
+- 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
 
 
@@ -112,11 +112,11 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Creating your flashcards
 
-> ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27).
+> ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). There's some helpful guides on how to use the software from [Anki essentials](http://alexvermeer.com/anki-essentials/) and the [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html).
 
 ### Formatting problems
 
-> ⚠️ If you're having formatting problems, make sure you're **[following the guide](./source/docs/highlight/index.md#full-syntax-highlighting)** and clicking `Toggle Visual Editor ⌘⇧X` / `Toggle HTML Editor ⌘⇧X` in the editor to view/edit the changes. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
+> ⚠️ If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle Visual Editor ⌘⇧X` / `Toggle HTML Editor ⌘⇧X` in the editor to view/edit the changes. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
 
 
 ## Licensed under MIT
@@ -128,4 +128,4 @@ Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 ### Inspiration
 
-I've had a lot of inspiration from [Anki essentials](http://alexvermeer.com/anki-essentials/), [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html), [Enduring CSS](https://tinyurl.com/yc4pnxyr) component naming conventions, [@mdo code guide](http://codeguide.co/) and [@cbracco](https://github.com/cbracco) ... so, thanks!
+I've had a lot of inspiration from [Enduring CSS](https://tinyurl.com/yc4pnxyr) for component naming conventions, [@mdo code guide](http://codeguide.co/) for HTML/CSS and [@cbracco](https://github.com/cbracco) for sane frameworks ... so, thanks!
