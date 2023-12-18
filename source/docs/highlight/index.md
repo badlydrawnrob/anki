@@ -25,9 +25,7 @@ You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code
 
 ## Full syntax highlighting
 
-### The easy way
-
-> Currently using [Solarized light and Monokai](../../source/style/modules/variables/colors.less) themes.
+> Currently using [Solarized light and Monokai](../../source/style/modules/variables/colors.less) themes. Here's the easy way to generate highlights, but you can automate the process ([🧑‍🎓 the professional way](../advanced/index.md))
 
 Basic colours are fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next. Wherever you see a **[`pre block`](../simple/index.md#-sample-code-block-or-image)**, Anki Theme provides pretty colours (CSS) to use with Markdown and [Pandoc](https://pandoc.org/demo/example18f.html) to generate your code. 
 
