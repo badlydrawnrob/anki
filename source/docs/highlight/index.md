@@ -64,7 +64,7 @@ The easiest way to change the colors for the `code string` and `pre block` field
 4. Select the `Cards` button.
 5. Select the `Styling` option.
 6. Use the search box and search for `--color-code` variables
-7. Copy the variables, add to bottom of the css, [edit them](https://github.com/badlydrawnrob/anki/issues/73).
+7. Copy the variables, add to bottom of the css, [edit them](https://github.com/badlydrawnrob/anki/issues/78).
 
 **Note:** Your changes will be lost every time you download a new release of Anki Themes, and import the Note Types to your deck.
 
