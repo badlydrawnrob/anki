@@ -29,12 +29,12 @@ You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code
 
 > Currently using [Solarized light and Monokai](../../source/style/modules/variables/colors.less) themes.
 
-Wherever you see a `pre block`, Anki Theme provides colours (CSS) to use with [Pandoc](https://pandoc.org/demo/example18f.html), to generate colourful syntax highlighting: 
+Wherever you see a **[`pre block`](../simple/index.md#-sample-code-block-or-image)**, Anki Theme provides colours (CSS) to use with [Pandoc](https://pandoc.org/demo/example18f.html), to generate colourful syntax highlighting: 
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks)
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea)
 3. Add a card in Anki
-4. Choose a `html` field and enter your code
+4. Choose a `pre block` field and add your HTML
 5. Use the [toggle button](https://github.com/badlydrawnrob/anki/issues/62) to view a live preview of your code
 6. Repeat the process — save your card!
 

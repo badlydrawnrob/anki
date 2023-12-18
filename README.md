@@ -66,19 +66,15 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 
 ## Add color to your code
 
-### Basic syntax highlighting
-
-You can mark any inline `<code>` with **bold** or _**italic**_ buttons in the Anki editor for [basic syntax highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting) (or the equivalent HTML tags).
-
-### Full syntax highlighting (Markdown)
+### Syntax highlighting
 
 > 🎨 Life is better in full colour!
 
-Anki themes come in light and dark, with [full syntax highlighting](./source/docs/highlight/index.md#full-syntax-highlighting):
+Anki themes come in light and dark. Highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
 
 - 🖌️ **Starter themes**
-    - 🌃 [Monokai](https://www.monokai.pro)
     - 🌅 [Solarized light](https://ethanschoonover.com/solarized/)
+    - 🌃 [Monokai](https://www.monokai.pro)
 - 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
 
 
