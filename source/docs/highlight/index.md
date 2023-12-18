@@ -2,10 +2,10 @@
 
 - [Home](../../../README.md)
     - Cards
-      + [Simple](../simple/index.md)
-      + [Missing!](../missing/index.md)
+      + 💡 [Simple](../simple/index.md)
+      + 🔎 [Missing!](../missing/index.md)
     - Themes
-      + **[Syntax highlighting](../highlight/index.md)**
+      + 🧑‍🎨 **[Syntax highlighting](../highlight/index.md)**
 
 
 > **Default colors**: [Solarized light](https://ethanschoonover.com/solarized/) and [Monokai](https://www.monokai.pro)
