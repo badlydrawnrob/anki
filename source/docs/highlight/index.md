@@ -39,9 +39,7 @@ Basic colours are fine for small lines of code, but you'll probably want to go [
 That's it. You're done. Simple, right?!
 
 
-## Customising themes
-
-### The easy way
+## Customising themes (the easy way)
 
 For quick customisations, view this file:
 
@@ -58,7 +56,7 @@ source
 
 The easiest way to change the colors for the `code string` and `pre block` fields is to edit the `--color-code-light` and `--color-code-dark` variables in your Anki cards. This will overwrite the defaults.
 
-#### Change colors
+### Change colors
 
 1. You'll have the latest [Anki themes release](https://github.com/badlydrawnrob/anki/releases).
 2. In the Anki app menu, go to `Manage Note Types`.
@@ -70,19 +68,20 @@ The easiest way to change the colors for the `code string` and `pre block` field
 
 **Note:** Your changes will be lost every time you download a new release of Anki Themes, and import the Note Types to your deck.
 
------
 
-### The (slightly) harder way
 
-> **A hot tip for beginners is ... just use CSS!**[^1]
-> I'm simply using [Less.js](https://lesscss.org) as [a nice way to lay out the files](https://github.com/badlydrawnrob/print-first-css/issues/42). Trust me, I've been around the block a few times![^2]
 
-Anki (the app) has some flexibility to help keep Anki Theme releases from major breaking changes; however you'll almost certainly need to add your (CSS) colour theme changes back in every time. I try to release [semantic changes](https://semver.org) to the code, but it's best to save your CSS changes somewhere.
+## Customising themes (the better way)
 
-1. You can fork this repository and make changes there.
-2. You can create a child theme with it's own `package.json` file.
+> 🔥 **Hot tip: Unless you know what your're doing, just use CSS!**[^1]
+> [Less.js](https://lesscss.org) is a css preprocessor; it's [a nice way to organise and compile CSS files](https://github.com/badlydrawnrob/print-first-css/issues/42) but I use it very sparingly. Trust me, I've been around the block a few times![^2]
 
-It's a little advanced, but both options are possible. Once you've levelled up your programming skills, you can try your hand at doing things **[🧑‍🎓 the professional way](../advanced/index.md)**
+This is the (slightly) harder way to create your own highlighting theme. Updating your Anki deck with CSS will generally be safe, and I use [semantic versioning](https://semver.org) to avoid breaking changes. However, you'll almost certainly need to add your (CSS) colour theme changes every time you update Anki themes. It's best to save your CSS changes somewhere.
+
+1. Fork this repository to keep a local version of Anki Themes for reference.
+2. Create a child theme with it's own `package.json` file.
+
+Once you've levelled up your programming skills and the thought of using [terminal](https://en.wikipedia.org/wiki/Command-line_interface) doesn't scare you, you're ready to try your hand at doing things **[🧑‍🎓 the professional way](../advanced/index.md)**.
 
 
 
