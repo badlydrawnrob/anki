@@ -14,7 +14,7 @@
 
 ## Basic syntax highlighting
 
-You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code)** field with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code (for [full highlighting](#full-syntax-highlighting) with a **[`pre block`](../simple/index.md#-sample-code-block-or-image)** field, see below).
+You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code)** field with **bold** or _**italic**_ buttons in the Anki editor for basic highlighting. It uses simple [HTML5 tags](https://developer.mozilla.org/en/docs/Web/HTML/Element) to add colour to your code. That's fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next (see below).
 
 1. **Highlight**:
     + `<b>` or `<strong>`
