@@ -75,7 +75,7 @@ They say code is an art form. Anki themes comes with both a light and dark colou
 - 🖌️ **Starter themes**
     - 🌅 [Solarized light](https://ethanschoonover.com/solarized/)
     - 🌃 [Monokai](https://www.monokai.pro)
-- 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes)**
+- 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes-the-easy-way)**
 
 
 
