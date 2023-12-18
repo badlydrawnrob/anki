@@ -45,9 +45,11 @@ Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) 
 
 ## Keep it simple, stupid!
 
-> ☝️ 100 cards with [one idea](https://github.com/badlydrawnrob/anki/issues/41)&nbsp; >&nbsp; 10 cards with 100 ideas
+> ☝️ [One idea](https://github.com/badlydrawnrob/anki/issues/41) per card. Just one.
 
-Simple is better. If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code; as clear as possible. Imagine you're stupid, writing for your stupid future self — when you look back on your flashcards, they'll make sense.
+**Simple is better.** If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code — as clear as possible. Those 10 cards you wrote with 100 related ideas? Sifting through those will become a chore; 100 cards with one idea is just better!
+
+If you imagine you're stupid, writing for your stupid future self; you'll look back on your flashcards and they'll make perfect sense.
 
 - One idea per card
 - Less is more (trim the fat)
