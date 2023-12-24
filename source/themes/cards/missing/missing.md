@@ -10,10 +10,12 @@ Conditions
 
 
 ## ☆ Syntax (inline code)
+
 false
 
 
 ## ★ Key point (code block or image)
+
 ```text
 [0, 20] # <span class="cloze">{{c1::>= 0, <= 20}}</span>
 
@@ -26,6 +28,7 @@ false
 
 
 ## ★ Key point notes
+
 An example of [intervals](https://www.mathsisfun.com/sets/intervals.html).
 
 - `[` symbol means **include** the number.
@@ -33,10 +36,12 @@ An example of [intervals](https://www.mathsisfun.com/sets/intervals.html).
 
 
 ## ✎ Other notes
+
 More [ways to think about intervals](https://www.mathsisfun.com/sets/intervals.html)
 
 
 ## ✎ Markdown
+
 The online Pandoc convertor seems to ouput the cloze properly:
 
 ```text
