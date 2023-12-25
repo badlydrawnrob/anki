@@ -115,7 +115,7 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Formatting problems
 
-> ⚠️ If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle Visual Editor ⌘⇧X` / `Toggle HTML Editor ⌘⇧X` in the editor to view/edit the changes. Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
+> ⚠️ If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle Visual Editor ⌘⇧X` / `Toggle HTML Editor ⌘⇧X` in the editor to view/edit the changes. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
 
 
 ## Licensed under MIT
