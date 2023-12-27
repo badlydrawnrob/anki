@@ -82,7 +82,7 @@ They say code is an art form. Anki themes comes with both a light and dark colou
 
 ## Custom colors and a child theme
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](./source/docs/advanced/index.md)**
+Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](./source/docs/advanced/index.md)**.
 
 
 ### Why Anki Themes instead of a plugin?
@@ -95,7 +95,9 @@ I've spent a lot of time so you can:
 
 Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
 
-#### Dependency hell
+### Dependency hell
+
+> 🕰️ A tool or a piece of software that's still around in 5 years, without any serious changes, [is a good thing](https://github.com/badlydrawnrob/anki/issues/53)
 
 There _are_ other plugins out there that are fun to use, but [beware of dependency hell](./source/docs/error/index.md)!
 
