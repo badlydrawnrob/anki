@@ -44,7 +44,7 @@ More [ways to think about intervals](https://www.mathsisfun.com/sets/intervals.h
 
 ## ✎ Markdown
 
-Generate with Pandoc. Add the resulting code to `★ Key point (code block or image)`, making sure to add the cloze fields that you need (for instance, all of the commented answers below). You'll need to toggle the visual editor and add your cloze fields there.
+Generate with Pandoc. Add the resulting code to `★ Key point (code block or image)`, making sure to add the cloze fields that you need (for instance, all of the commented answers below). You'll need to `Toggle HTML Editor ⌘⇧X` (`‹›`) and add your cloze fields in the rich text preview.
 
 ```python
 [0, 20] # >= 0, <= 20

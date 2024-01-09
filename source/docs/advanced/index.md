@@ -91,7 +91,7 @@ Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
 1. `npm run pandoc`,
 2. Add a card in Anki,
 3. Choose a `pre block` field and add the HTML,
-4. Press the "Toggle visual editor" to preview your HTML,
+4. Press the `Toggle HTML Editor ⌘⇧X` (`‹›`) to preview your HTML,
 5. Repeat the process for any other code blocks you need!
 
 

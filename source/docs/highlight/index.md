@@ -33,7 +33,7 @@ Basic colours are fine for small lines of code, but you'll probably want to go [
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea)
 3. Add a card in Anki
 4. Choose a `pre block` field and add your HTML
-5. Use the [toggle button](https://github.com/badlydrawnrob/anki/issues/62) to view a live preview of your code
+5. Use the [`Toggle HTML Editor ⌘⇧X` (`‹›`)](https://github.com/badlydrawnrob/anki/issues/62) to view a live preview of your code
 6. Repeat the process — save your card!
 
 That's it. You're done. Simple, right?!
