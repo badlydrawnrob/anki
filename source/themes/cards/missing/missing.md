@@ -1,4 +1,6 @@
-# Cloze card demo
+---
+title: Missing! Card data
+---
 
 
 ## ★ Title

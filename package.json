@@ -9,7 +9,10 @@
     "simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/simple.html",
     "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/missing.html",
     "css": "npx lessc source/style/main.less ./build/main.css",
-    "pandoc": "pandoc source/pandoc/pre.md -o ./build/pre.html",
+    "pandoc": "npm run pandoc-pre && npm run simple-data && npm run missing-data",
+    "pandoc-pre": "pandoc source/pandoc/pre.md -o ./build/pre.html",
+    "simple-data": "pandoc --from markdown --to html source/themes/cards/simple/simple.md -s -o ./build/simple-data.html",
+    "missing-data": "pandoc --from markdown --to html source/themes/cards/missing/missing.md -s -o ./build/missing-data.html",
     "build": "npm run setup && npm run simple && npm run missing && npm run css"
   },
   "repository": {

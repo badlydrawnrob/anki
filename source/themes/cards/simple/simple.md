@@ -1,4 +1,6 @@
-# Simple card demo
+---
+title: Simple Card data
+---
 
 
 ## ★ Title
