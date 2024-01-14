@@ -58,6 +58,10 @@
   border-bottom: var(--spacing-px) solid var(--color-card-lll);
   background: var(--color-card-l);
 
+  &:only-child {
+    margin-bottom: 0;
+  }
+  
   &::before {
     content: '★';
   }
@@ -98,9 +102,13 @@
   font-size: var(--font-size-m);
   text-align: left;
 
-  ul > li,
-  ol > li {
+  ul, ol {
     margin-left: var(--spacing-one);
+    text-align: left;
+
+    > li {
+      margin-left: var(--spacing-one);
+    }
   }
 }
 

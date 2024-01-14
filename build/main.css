@@ -1172,7 +1172,7 @@ img {
 }
 .simple-Header_Title {
   flex: 0 0 100%;
-  margin: 0;
+  margin: 0 0 var(--spacing-one);
   padding: var(--spacing-half);
   font-weight: 700;
   font-size: var(--font-size-p);
@@ -1182,11 +1182,14 @@ img {
   border-bottom: var(--spacing-px) solid var(--color-card-lll);
   background: var(--color-card-l);
 }
+.simple-Header_Title:only-child {
+  margin-bottom: 0;
+}
 .simple-Header_Title::before {
   content: '★';
 }
 .simple-Header_Subtitle {
-  margin: var(--spacing-one) 0 var(--spacing-half);
+  margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
   font-weight: normal;
   font-size: var(--font-size);
@@ -1198,7 +1201,7 @@ img {
   border-top-right-radius: var(--border-radius);
 }
 .simple-Header_Code {
-  margin: var(--spacing-one) 0 var(--spacing-half) 0;
+  margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
 .simple-KeyPoint_Code pre {
@@ -1210,6 +1213,11 @@ img {
   background: var(--color-card-ll);
   font-size: var(--font-size-m);
   text-align: center;
+}
+.simple-KeyPoint_Notes ul,
+.simple-KeyPoint_Notes ol {
+  margin-left: var(--spacing-one);
+  text-align: left;
 }
 .simple-KeyPoint_Notes ul > li,
 .simple-KeyPoint_Notes ol > li {
@@ -1260,6 +1268,9 @@ img {
   border-bottom: var(--spacing-px) solid var(--color-card-lll);
   background: var(--color-card-l);
 }
+.missing-Header_Title:only-child {
+  margin-bottom: 0;
+}
 .missing-Header_Title::before {
   content: '★';
 }
@@ -1287,6 +1298,11 @@ img {
   padding: var(--spacing) var(--spacing-one);
   background: var(--color-card-ll);
   font-size: var(--font-size-m);
+  text-align: left;
+}
+.missing-KeyPoint_Notes ul,
+.missing-KeyPoint_Notes ol {
+  margin-left: var(--spacing-one);
   text-align: left;
 }
 .missing-KeyPoint_Notes ul > li,

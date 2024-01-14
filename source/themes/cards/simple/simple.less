@@ -40,7 +40,7 @@
 
 .simple-Header_Title {
   flex: 0 0 100%;
-  margin: 0;
+  margin: 0 0 var(--spacing-one);
   padding: var(--spacing-half);
   font-weight: 700;
   font-size: var(--font-size-p);
@@ -50,13 +50,17 @@
   border-bottom: var(--spacing-px) solid var(--color-card-lll);
   background: var(--color-card-l);
 
+  &:only-child {
+    margin-bottom: 0;
+  }
+  
   &::before {
     content: '★';
   }
 }
 
 .simple-Header_Subtitle {
-  margin: var(--spacing-one) 0 var(--spacing-half);
+  margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
   font-weight: normal;
   font-size: var(--font-size);
@@ -69,7 +73,7 @@
 }
 
 .simple-Header_Code {
-  margin: var(--spacing-one) 0 var(--spacing-half) 0;
+  margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
 
@@ -94,9 +98,13 @@
   font-size: var(--font-size-m);
   text-align: center;
 
-  ul > li,
-  ol > li {
+  ul, ol {
     margin-left: var(--spacing-one);
+    text-align: left;
+
+    > li {
+      margin-left: var(--spacing-one);
+    }
   }
 }
 
