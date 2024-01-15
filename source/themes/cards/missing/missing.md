@@ -20,6 +20,8 @@ false
 
 ## ★ Key point (code block or image)
 
+> Once you've generated your code, you'll need to add the `{{c1::cloze tag}}` somewhere in the code. To do this, press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to enter rich text mode, then press `[...]` or `[...]+` button to add the cloze deletion tags.
+
 ```python
 [0, 20] # {{c1::>= 0, <= 20}}
 
@@ -46,7 +48,7 @@ More [ways to think about intervals](https://www.mathsisfun.com/sets/intervals.h
 
 ## ✎ Markdown
 
-Generate with Pandoc. Add the resulting code to `★ Key point (code block or image)`, making sure to add the cloze fields that you need (for instance, all of the commented answers below). You'll need to `Toggle HTML Editor ⌘⇧X` (`‹›`) and add your cloze fields in the rich text preview.
+> Beware when saving your card! If you have `{{c1::cloze tags}}` in the Markdown field, Anki will complain!
 
 ```python
 [0, 20] # >= 0, <= 20
