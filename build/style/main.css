@@ -973,6 +973,8 @@ code.sourceCode > span > a:first-child::before {
   --color-code-dark-operator: #f12056;
   --color-code-dark-string: #e5de73;
   --color-code-dark-variable: #aae626;
+  --color-code-dark-control-flow: #70d8ef;
+  --color-code-dark-data-type: #70d8ef;
   --dejavu: "DejaVu Sans";
   --dejavu-mono: "DejaVu Sans Mono";
   --font-family: 'Verdana', var(--system-ui);
@@ -1069,7 +1071,7 @@ code.sourceCode > span > a:first-child::before {
   color: var(--color-code-dark-number);
 }
 .sourceCode .cf {
-  color: var(--color-code-dark-variable);
+  color: var(--color-code-dark-control-flow);
   font-weight: bold;
 }
 .sourceCode .ch {
@@ -1091,7 +1093,7 @@ code.sourceCode > span > a:first-child::before {
   font-style: italic;
 }
 .sourceCode .dt {
-  color: var(--color-code-dark-keyword);
+  color: var(--color-code-dark-data-type);
 }
 .sourceCode .dv {
   color: var(--color-code-dark-number);
