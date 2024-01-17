@@ -12,7 +12,7 @@
     "pandoc-pre": "pandoc source/pandoc/pre.md -o ./build/data/pre.html",
     "simple-data": "pandoc --from markdown --to html source/themes/cards/simple/simple.md -s -o ./build/data/simple-data.html",
     "missing-data": "pandoc --from markdown --to html source/themes/cards/missing/missing.md -s -o ./build/data/missing-data.html",
-    "build": "npm run setup && npm run simple && npm run missing && npm run css"
+    "build": "npm run simple && npm run missing && npm run css"
   },
   "repository": {
     "type": "git",
