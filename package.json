@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "mkdir -p build/",
     "simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
     "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
