@@ -54,7 +54,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 ## ★ Sample (code block or image)
 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
->    (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
+>    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - A sample of the code we're learning
 - If you're feeling lazy, a snapshot image
@@ -63,7 +63,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 ## ★ Key point (code block or image)
 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
->     (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
+>     (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - The answer or key learning point
 - If you're feeling lazy, a snapshot image

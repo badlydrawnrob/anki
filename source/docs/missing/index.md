@@ -53,7 +53,7 @@
 ## ★ Key point (code block or image)
 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
->    (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
+>    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 Create your code, add one or more [cloze deletion](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) types to hide a selected word or phrase:
 

@@ -82,7 +82,7 @@ They say code is an art form. Anki themes comes with both a light and dark colou
 
 ## Custom colors and a child theme
 
-Once you've got the basics down, you can get _really_ fancy with offline `markdown -> html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](./source/docs/advanced/index.md)**.
+Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](./source/docs/advanced/index.md)**.
 
 
 ### Why Anki Themes instead of a plugin?
@@ -90,7 +90,7 @@ Once you've got the basics down, you can get _really_ fancy with offline `markdo
 I've spent a lot of time so you can:
 
 - Use Anki themes as they are ...
-- Use the excellent `Markdown > HTML` workflow
+- Use the excellent `markdown->html` workflow
 - Customise the css to your hearts content.
 
 Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
