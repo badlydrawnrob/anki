@@ -1,10 +1,13 @@
 <!-- Simple card ====
 
     - Type: What's the answer?
+            A simple `question->answer` card;
+            we're asking the question: "what does this code do?"
     - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple/index.md
     - Key:  ★ Required
             ☆ Optional (recommended)
             ✎ Optional (notes, markdown)
+            ⤷ Field Type
 
 ===== -->
 
@@ -12,21 +15,21 @@
   <section class="simple simple-front">
     <header class="simple-Header">
       <h1 class="simple-Header_Title">
-        {{★ Title}}
+        {{★ Title}}  <!-- ⤷ `string` (automatically wrapped in `h1`) -->
       </h1>
       {{#☆ Subtitle}}
         <h2 class="simple-Header_Subtitle">
-          {{☆ Subtitle}}
+          {{☆ Subtitle}}  <!-- ⤷ `string` (automatically wrapped in `h2`) -->
         </h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
         <p class="simple-Header_Code">
-          <code>{{☆ Syntax (inline code)}}</code>
-        </p>
+          <code>{{☆ Syntax (inline code)}}</code>  <!-- ⤷ `code string` -->
+        </p>                                       <!-- (automatically wrapped in `<p><code>`) -->
       {{/☆ Syntax (inline code)}}
     </header>
     <div class="simple-Sample">
-      {{★ Sample (code block or image)}}
-    </div>
+      {{★ Sample (code block or image)}} <!-- ⤷ `pre code | image` -->
+    </div>                               <!-- (requires `markdown->html` conversion) -->
   </section>
 </div>
