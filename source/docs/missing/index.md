@@ -1,13 +1,10 @@
 # Missing card
 
 - [Home](../../../README.md)
-    - **Cards**
-        + 💡 [Simple](../simple/index.md)
-        + 🔎 **[Missing!](../missing/index.md)**
-    - **Themes**
-        + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
-    - **Advanced**
-        + 🧑‍🎓 [The professional way](../advanced/index.md)
+    + 💡 [Simple](../simple/index.md) card
+    + 🔎 **[Missing!](../missing/index.md) card**
+    + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
+    + 🧑‍🎓 [The professional way](../advanced/index.md)
 
 
 ## A question with a [missing] word
