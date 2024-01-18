@@ -1,13 +1,10 @@
 # Simple card
 
 - [Home](../../../README.md)
-    - Cards
-        + 💡 **[Simple](../simple/index.md)**
-        + 🔎 [Missing!](../missing/index.md)
-    - Themes
-        + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
-    - Advanced
-        + 🧑‍🎓 [The professional way](../advanced/index.md)
+    + 💡 **[Simple](../simple/index.md)**
+    + 🔎 [Missing!](../missing/index.md)
+    + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
+    + 🧑‍🎓 [The professional way](../advanced/index.md)
 
 
 ## What's the answer?
