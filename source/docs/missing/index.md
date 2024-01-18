@@ -27,26 +27,24 @@
 
 ## ★ Title
 
-> ⤷ **`string`**
+> ⤷ **`string`** (automatically wrapped with a `H1` tag)
 
 - The main question, statement or fact.
-- Automatically wrapped with a `H1` tag
 
 
 ## ☆ Subtitle
 
-> ⤷ **`string`**
+> ⤷ **`string`** (automatically wrapped with a `H2` tag)
 
 - A helpful tip or guide
 - A group of related cards
 - The type of `syntax` we're learning
-- Automatically wrapped with a `H2` tag
 
 
 ## ☆ Syntax (inline code)
 
 > ⤷ **[`code string`](../highlight/index.md#basic-syntax-highlighting)**
->    (Automatically wrapped with `<code>` tag)
+>    (automatically wrapped with `<p><code>` tag)
 
 - A short line of code
 - The actual function or symbol, i.e. `len()`.
@@ -55,7 +53,7 @@
 ## ★ Key point (code block or image)
 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
->    (Requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
+>    (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 Create your code, add one or more [cloze deletion](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) types to hide a selected word or phrase:
 

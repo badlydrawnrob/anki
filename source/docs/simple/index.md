@@ -28,26 +28,24 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 ## ★ Title
 
-> ⤷ **`string`**
+> ⤷ **`string`** (automatically wrapped with a `H1` tag)
 
 - The main question, statement or fact.
-- Automatically wrapped with a `H1` tag
 
 
 ## ☆ Subtitle
 
-> ⤷ **`string`**
+> ⤷ **`string`** (automatically wrapped with a `H2` tag)
 
 - A helpful tip or guide
 - A group of related cards
 - The type of `syntax` we're learning
-- Automatically wrapped with a `H2` tag
 
 
 ## ☆ Syntax (inline code)
 
 > ⤷ **[`code string`](../highlight/index.md#basic-syntax-highlighting)**
->    (automatically wrapped with `<code>` tag)
+>    (automatically wrapped with `<p><code>` tag)
 
 - A short line of code
 - The actual function or symbol, i.e. `len()`.
@@ -58,7 +56,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 > ⤷ **[`pre block | image`](../highlight/index.md#full-syntax-highlighting)**
 >    (requires [`markdown -> html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
-- A sample of the code we're learning:
+- A sample of the code we're learning
 - If you're feeling lazy, a snapshot image
 
 
