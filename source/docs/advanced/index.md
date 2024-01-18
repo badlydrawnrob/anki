@@ -1,4 +1,15 @@
 # Becoming a professional programmer!
+
+- [Home](../../../README.md)
+    - **Cards**
+        + 💡 [Simple](../simple/index.md)
+        + 🔎 [Missing!](../missing/index.md)
+    - **Themes**
+        + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
+    - **Advanced**
+        + 🧑‍🎓 **[The professional way](../advanced/index.md)**
+
+
 ## The advanced way to generate Anki code and themes ...
 
 > You'll know your way around Git and have [Homebrew](https://brew.sh) installed (or install `node` and `pandoc` individually) ..
@@ -108,7 +119,7 @@ There's a [couple of ways](https://github.com/badlydrawnrob/anki/issues/42#issue
 
 1. First clone the Anki Themes repository, or fork it.
 2. Create a new empty repository (and link it to Github)
-3. In your empty repository, create a new `source/` folder and `package.json`. 
+3. In your empty repository, create a new `source/` folder and `package.json`.
 4. Make sure you have `print-first-css` (at least) as a dependency. You _could_ add `anki` (themes) as a dependency also (although this [requires changes to the code base](https://github.com/badlydrawnrob/anki/issues/42#issuecomment-1834381594))
 5. Copy `main.less`, `config.less`, `_root.less`, `colors.less` files to your repo (and any others you want to change)
 6. Override any CSS [`--variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) you want, and `@include` others from the original Anki themes repo.
@@ -140,7 +151,7 @@ source
     │   main.less
     │
     └───modules
-          ...  
+          ...
     │
     └───themes
           cards

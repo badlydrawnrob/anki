@@ -6,6 +6,8 @@
         + 🔎 **[Missing!](../missing/index.md)**
     - **Themes**
         + 🧑‍🎨 [Syntax highlighting](../highlight/index.md)
+    - **Advanced**
+        + 🧑‍🎓 [The professional way](../advanced/index.md)
 
 
 ## A question with a [missing] word
