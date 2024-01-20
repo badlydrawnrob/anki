@@ -13,6 +13,7 @@ card key: |
 docs:
   http://tinyurl.com/anki-missing-card
 notes:
+  Compile with `npm run pandoc`.
   View compiled file in your text editor or a Chrome-type browser.
   The `## H2` titles represent Anki text fields, with the contents below.
 css: ../style/main.css

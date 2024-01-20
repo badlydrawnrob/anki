@@ -14,7 +14,8 @@ card key: |
   ⤷ Field Type.
 docs:
   http://tinyurl.com/anki-simple-card
-notes:
+notes: |
+  Compile with `npm run pandoc`.
   View compiled file in your text editor or a Chrome-type browser.
   The `## H2` titles represent Anki text fields, with the contents below.
 css: ../style/main.css
