@@ -90,7 +90,7 @@ See below for [creating your own child theme](#creating-your-own-child-theme)!
 -----
 
 
-## Using Pandoc for `pre block`
+## Using Pandoc for `code block`
 
 > This is a replacement for [Power Format Pack](../error/index.md) and Pygments, in [older versions](https://github.com/badlydrawnrob/anki/releases/tag/1.0.0).
 
@@ -98,7 +98,7 @@ Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
 
 1. `npm run pandoc`,
 2. Add a card in Anki,
-3. Choose a `pre block` field,
+3. Choose a `code block` field,
 4. Make sure the field is in [HTML mode](https://github.com/badlydrawnrob/anki/issues/62) (not rich text),
 5. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code,
 6. Repeat the process for any other code blocks you need!

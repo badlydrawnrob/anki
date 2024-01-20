@@ -10,7 +10,8 @@
     "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
     "pandoc": "npm run pandoc-pre && npm run simple-data && npm run missing-data",
-    "pandoc-pre": "pandoc source/pandoc/pre.md -o ./build/data/pre.html",
+    "pandoc-code": "pandoc source/pandoc/code.md -o ./build/data/code.html",
+    "pandoc-code-reverse": "pandoc source/pandoc/code.html -o ./build/data/code.md",
     "simple-data": "pandoc --from markdown --to html source/themes/cards/simple/simple.md -s -o ./build/data/simple-data.html",
     "missing-data": "pandoc --from markdown --to html source/themes/cards/missing/missing.md -s -o ./build/data/missing-data.html",
     "build": "npm run setup && npm run simple && npm run missing && npm run css"

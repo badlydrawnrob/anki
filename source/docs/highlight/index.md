@@ -24,12 +24,12 @@ You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code
 
 > Currently using [Solarized light and Monokai](../../source/style/modules/variables/colors.less) themes. Here's the easy way to generate highlights, but you can automate the process ([🧑‍🎓 the professional way](../advanced/index.md))
 
-Basic colours are fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next. Wherever you see a **[`pre block`](../simple/index.md#-sample-code-block-or-image)**, Anki Theme provides pretty colours (CSS) to use with Markdown and [Pandoc](https://pandoc.org/demo/example18f.html) to generate your code.
+Basic colours are fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block-or-image)**, Anki Theme provides pretty colours (CSS) to use with Markdown and [Pandoc](https://pandoc.org/demo/example18f.html) to generate your code.
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks),
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea),
 3. Add a card in Anki,
-4. Choose a `pre block` field,
+4. Choose a `code block` field,
 5. Add your HTML,
 6. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code,
 7. Repeat the process — save your card!
@@ -52,7 +52,7 @@ source
               colors.less
 ```
 
-The easiest way to change the colors for the `code string` and `pre block` fields is to edit the `--color-code-light` and `--color-code-dark` variables in your Anki cards. This will overwrite the defaults.
+The easiest way to change the colors for the `code string` and `code block` fields is to edit the `--color-code-light` and `--color-code-dark` variables in your Anki cards. This will overwrite the defaults.
 
 ### Change colors
 

@@ -15,6 +15,6 @@ I feel that a tool or a piece of software that's still around in 5 years, withou
 
 ## Proceed with caution!
 
-> ⚠️ I'd advise [sticking with Pandoc](../highlight/index.md) for `pre block` fields. This converts fenced code blocks into highlighted code.
+> ⚠️ I'd advise [sticking with Pandoc](../highlight/index.md) for `code block` fields. This converts fenced code blocks into highlighted code.
 
 A plugin can seriously speed up your workflow, so if you want to use Markdown as much as possible, here are some [alternatives to Pandoc](https://github.com/badlydrawnrob/anki/issues/34#issuecomment-522243468) — **these are unsupported**, so you're on your own.
