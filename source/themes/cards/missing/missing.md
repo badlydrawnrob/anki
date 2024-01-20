@@ -1,23 +1,77 @@
 ---
-title: Missing! Card data
+title:
+  Missing! Card Data
+card type: |
+  A question with a [missing] word;
+  - A missing function or expression you have to guess,
+  - A missing input or output to remember.
+card key: |
+  ★ Required,
+  ☆ Optional (recommended),
+  ✎ Optional (notes, markdown),
+  ⤷ Field Type.
+docs:
+  http://tinyurl.com/anki-missing-card
+notes:
+  View compiled file in your text editor or a Chrome-type browser.
+  The `## H2` titles represent Anki text fields, with the contents below.
+css: ../style/main.css
 ---
 
 
+<!-- -------------------------------------------------------------------------
+    ★ Title
+
+    ⤷ `string` (auto wrapped with a `H1` tag)
+-------------------------------------------------------------------------- -->
 ## ★ Title
 
 What type of condition group do these symbols belong to?
 
 
+<!-- -------------------------------------------------------------------------
+    ☆ Subtitle
+
+    ⤷ `string` (auto wrapped with a `H2` tag)
+-------------------------------------------------------------------------- -->
 ## ☆ Subtitle
 
 Conditions
 
 
+<!-- -------------------------------------------------------------------------
+    ☆ Syntax (inline code)
+
+    ⤷ `code string` (auto wrapped with <p><code> tag)
+-------------------------------------------------------------------------- -->
 ## ☆ Syntax (inline code)
 
 false
 
 
+<!-- -------------------------------------------------------------------------
+    ★ Key point (code block or image)
+
+    ⤷ `code block | image`
+
+      | Requires `markdown` fenced code block;
+      | Requires `{{c1:cloze}}` tag(s))
+
+      A markdown fenced code block that will compile to our highlighted
+      code with Pandoc. Make sure to add at least one cloze deletion:
+
+        `{{c1:the answer:HINT TEXT}}`
+
+      Here's an example cloze card:
+
+        @ https://codepen.io/testuser-247585903/pen/BabRjvb
+
+      You can add cloze deletion tags to the fenced code block and
+      they should work fine in Anki. You can also:
+
+      1. `Toggle HTML Editor ⌘⇧X` (`‹›`) to enable rich text preview
+      2. Press the `[...]` or `[...]+` button to add a cloze deletion
+-------------------------------------------------------------------------- -->
 ## ★ Key point (code block or image)
 
 > Once you've generated your code, you'll need to add the `{{c1::cloze tag}}` somewhere in the code. To do this, press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to enter rich text mode, then press `[...]` or `[...]+` button to add the cloze deletion tags.
@@ -33,6 +87,11 @@ false
 ```
 
 
+<!-- -------------------------------------------------------------------------
+    ★ Key point notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
 ## ★ Key point notes
 
 An example of [intervals](https://www.mathsisfun.com/sets/intervals.html).
@@ -41,11 +100,33 @@ An example of [intervals](https://www.mathsisfun.com/sets/intervals.html).
 - `(` symbol means **exclude** the number.
 
 
+<!-- -------------------------------------------------------------------------
+    ✎ Other notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
 ## ✎ Other notes
 
 More [ways to think about intervals](https://www.mathsisfun.com/sets/intervals.html)
 
 
+<!-- -------------------------------------------------------------------------
+    ✎ Markdown
+
+    ⤷ `raw text`
+
+      Do not add the compiled HTML to your card, rather, use the raw text
+      Markdown fenced code block. This makes for easier editing of a card
+      later on.
+
+      Please be careful:
+
+        Warning: remove all `{{c1:cloze}}` cloze deletion tags!
+
+      If you save your card with cloze deletion tags in the `✎ Markdown`
+      field, Anki will throw an error, and you might not be able to save
+      your card.
+-------------------------------------------------------------------------- -->
 ## ✎ Markdown
 
 > Beware when saving your card! If you have `{{c1::cloze tags}}` in the Markdown field, Anki will complain!
