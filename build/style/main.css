@@ -1324,6 +1324,15 @@ img {
 .missing-Notes ol > li {
   margin-left: var(--spacing-half);
 }
+.data-Anki {
+  margin: var(--spacing-one);
+}
+@media (min-width: 840px) {
+  .data-Anki {
+    width: 60%;
+    margin: var(--spacing-two) auto;
+  }
+}
 .test-Anki {
   margin: var(--spacing-one);
 }
