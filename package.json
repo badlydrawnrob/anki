@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
     "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "pandoc": "npm run pandoc-pre && npm run simple-data && npm run missing-data",
+    "pandoc": "npm run pandoc-code && npm run simple-data && npm run missing-data",
     "pandoc-code": "pandoc source/pandoc/code.md -o ./build/data/code.html",
     "pandoc-code-reverse": "pandoc source/pandoc/code.html -o ./build/data/code.md",
     "simple-data": "pandoc --from markdown --to html source/themes/cards/simple/simple.md -s -o ./build/data/simple-data.html",
