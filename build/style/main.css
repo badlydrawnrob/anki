@@ -1234,9 +1234,9 @@ img {
 }
 .simple-Notes {
   margin-bottom: var(--spacing);
+  padding: 0 var(--spacing-one);
   color: var(--color-card-llll);
   font-size: var(--font-size-m);
-  font-style: italic;
   line-height: var(--line-height-one);
 }
 .missing {
@@ -1320,10 +1320,9 @@ img {
 }
 .missing-Notes {
   margin-bottom: var(--spacing);
-  padding: 0 var(--spacing);
+  padding: 0 var(--spacing-one);
   color: var(--color-card-llll);
   font-size: var(--font-size-m);
-  font-style: italic;
   line-height: var(--line-height-one);
   text-align: left;
 }
