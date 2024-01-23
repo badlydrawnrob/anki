@@ -981,6 +981,13 @@ code.sourceCode > span > a:first-child::before {
   --font-family-header: var(--dejavu), var(--system-ui);
   --font-family-mono: var(--dejavu-mono), var(--system-mono), var(--fallback-mono);
 }
+body {
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background: transparent;
+}
 @font-face {
   font-family: "DejaVu Sans";
   src: url("_DejaVuSans.ttf");

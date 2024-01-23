@@ -2,42 +2,24 @@
 // There are some annoying "bugs" when trying to specify San Francisco
 // fonts, also take care when naming them: See issue #12
 //
-// #1: @font-face should live outside of :root, but for now,
-//     the less compiler does that for us ... see issue #12
-// 
-//     Inherited from print-first-css:
-//     - `--system-ui`, `--system-mono`, `--fallback-mono`
-//     - Add your custom font variable and @font-face
-//     - https://www.hacksoft.io/blog/using-multiple-font-files-the-right-way
+// #1: DejaVu and Verdana (small) font stack
 //
-// #2: DejaVu and Verdana (small) font stack
+//     Inherited from print-first-css:
+//
+//     - `--system-ui`, `--system-mono`, `--fallback-mono`
+//
 //
 //     ⟳ Switch to Verdana as our base font! (works better with DejaVu)
-//       than system-ui but — Verdana is a wee bit too big for my liking,
-//       reduce size for Anki Cards (but not global): see issue #12
+//       Verdana is a wee bit too big for my liking, so try to
+//       reduce size for Anki Cards (but not globally): see issue #12
 //
 //     ⇾ Also change the variables in `../../partials/..`
 //     ⟳ Override print-first-css files
 
-// #1
-@font-face {
-  font-family: "DejaVu Sans";
-  src: url("_DejaVuSans.ttf");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "DejaVu Sans Mono";
-  src: url("_DejaVuSansMono.ttf");
-  font-style: normal;
-  font-weight: 400;
-}
-
 --dejavu: "DejaVu Sans";
 --dejavu-mono: "DejaVu Sans Mono";
 
-// #2
+// #1
 --font-family: 'Verdana', var(--system-ui);
 --font-family-header: var(--dejavu), var(--system-ui);
 --font-family-mono: var(--dejavu-mono), var(--system-mono), var(--fallback-mono);
