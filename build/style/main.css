@@ -1197,6 +1197,9 @@ img {
 .simple-Header_Title::before {
   content: '★';
 }
+.simple-Header_Title code {
+  font-size: var(--font-size-p);
+}
 .simple-Header_Subtitle {
   margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
@@ -1282,6 +1285,9 @@ img {
 }
 .missing-Header_Title::before {
   content: '★';
+}
+.missing-Header_Title code {
+  font-size: var(--font-size-p);
 }
 .missing-Header_Subtitle {
   margin: 0 0 var(--spacing-half);
