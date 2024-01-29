@@ -7,6 +7,7 @@
 
 <img align="right" width="250" height="auto" src="./source/media/preview.png" style="padding-left: 20px;">
 
+
 💻 Want to learn how to code?
 
 Anki helps you learn and remember quickly. The default cards aren't great for programming, so these flashcards and themes make it fun to learn.
@@ -17,7 +18,7 @@ Anki helps you learn and remember quickly. The default cards aren't great for pr
 - Add color to your code
 - Fully customisable (create your own themes and cards!)
 
-Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **R** — or just getting started? If you're new to Anki, [read these guides first](#inspiration); otherwise ... let's begin!
+Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **lisp**, **elm**, **R** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
 
 ## Quick start
 
@@ -113,7 +114,7 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Creating your flashcards
 
-> ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). There's some helpful guides on how to use the software from [Anki essentials](http://alexvermeer.com/anki-essentials/) and the [Janki method](http://www.jackkinsella.ie/2011/12/05/janki-method.html).
+> ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
 
 ### Formatting problems
 
