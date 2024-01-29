@@ -56,12 +56,12 @@ false
     ⤷ `code block | image`
 
       | Requires `markdown` fenced code block;
-      | Requires `{{c1:cloze}}` tag(s))
+      | Requires `{{c1::cloze}}` tag(s))
 
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. Make sure to add at least one cloze deletion:
 
-        `{{c1:the answer:HINT TEXT}}`
+        `{{c1::the answer::HINT TEXT}}`
 
       Here's an example cloze card:
 
