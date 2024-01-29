@@ -1,4 +1,4 @@
-/*! v3.2
+/*!
  * == Print First CSS ===========================================
  * MIT License | https://github.com/badlydrawnrob/print-first-css
  * == Based on Cardinal CSS by @cbracco: http://bit.ly/2iDzOZi ==
@@ -52,7 +52,7 @@
   --spacing-px: calc(var(--spacing-mmmm) * 1rem);
   --system-ui: system-ui, sans-serif;
   --system-mono: ui-monospace;
-  --fallback-mono: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+  --fallback-mono: 'Roboto Mono', monospace, monospace;
   --font-color: var(--color-bbbb);
   --font-family: var(--system-ui);
   --font-family-mono: var(--system-mono), var(--fallback-mono);
@@ -551,24 +551,6 @@ kbd {
     background-color: var(--color-lll);
   }
 }
-code b,
-code strong,
-code i,
-code em {
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  background: none;
-}
-code b,
-code strong {
-  color: var(--color-code-light-highlight);
-}
-code i,
-code em {
-  color: var(--color-code-light-lowlight);
-}
 pre {
   position: relative;
   overflow: auto;
@@ -1012,6 +994,28 @@ kbd:empty {
   padding: 0;
   background: transparent;
   border-color: transparent;
+}
+code b,
+kbd b,
+code strong,
+kbd strong,
+code i,
+kbd i,
+code em,
+kbd em {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  background: none;
+}
+code b,
+code strong {
+  color: var(--color-code-light-highlight);
+}
+code i,
+code em {
+  color: var(--color-code-light-lowlight);
 }
 pre,
 pre code {

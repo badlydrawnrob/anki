@@ -18,6 +18,7 @@ You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code
 2. **Lowlight**:
     + `<i>` or `<em>`
 
+For regular fields, such as `★ Title` you can highlight a code section like so: `<code>(<b>aFunctionAndIts</b> <i>variable</i>)</code>`
 
 
 ## Full syntax highlighting
