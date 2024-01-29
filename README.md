@@ -94,7 +94,7 @@ I've spent a lot of time so you can:
 - Use the excellent `markdown->html` workflow
 - Customise the css to your hearts content.
 
-Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), MacOS and [Android](https://github.com/ankidroid/Anki-Android).
+Works on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Qt6) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki; stable software, no add-ons required, with a simple setup.
 
 ### Dependency hell
 
