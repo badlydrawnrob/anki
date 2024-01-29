@@ -59,7 +59,8 @@ false
       | Requires `{{c1::cloze}}` tag(s))
 
       A markdown fenced code block that will compile to our highlighted
-      code with Pandoc. Make sure to add at least one cloze deletion:
+      code with Pandoc. Once you've compiled your code block, be sure to
+      add at least one cloze deletion in your Anki card:
 
         `{{c1::the answer::HINT TEXT}}`
 
@@ -67,11 +68,11 @@ false
 
         @ https://codepen.io/testuser-247585903/pen/BabRjvb
 
-      You can add cloze deletion tags to the fenced code block and
-      they should work fine in Anki. You can also:
+      Here's how to do it in the Anki editor:
 
       1. `Toggle HTML Editor ⌘⇧X` (`‹›`) to enable rich text preview
-      2. Press the `[...]` or `[...]+` button to add a cloze deletion
+      2. Highlight the text that you'd like to convert to a cloze.
+      3. Press the `[...]` or `[...]+` button to add the cloze deletion
 -------------------------------------------------------------------------- -->
 ## ★ Key point (code block or image)
 
