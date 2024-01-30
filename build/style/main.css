@@ -1167,9 +1167,6 @@ img {
 .simple {
   border-radius: var(--border-radius);
 }
-.simple-front {
-  margin-top: var(--spacing);
-}
 .simple-Header {
   position: relative;
   display: flex;
@@ -1248,9 +1245,6 @@ img {
 }
 .missing {
   border-radius: var(--border-radius);
-}
-.missing-front {
-  margin-top: var(--spacing);
 }
 .missing .cloze {
   color: var(--color-code-dark-operator) !important;
@@ -1357,6 +1351,9 @@ img {
     width: 60%;
     margin: 0 auto;
   }
+}
+.test-AnkiCard {
+  margin-top: var(--spacing);
 }
 .test-AnkiCard-Front {
   margin-bottom: calc(var(--spacing-eight) * 4);
