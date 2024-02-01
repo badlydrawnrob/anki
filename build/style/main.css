@@ -957,6 +957,7 @@ code.sourceCode > span > a:first-child::before {
   --color-code-dark-variable: #aae626;
   --color-code-dark-control-flow: #70d8ef;
   --color-code-dark-data-type: #70d8ef;
+  --color-code-dark-built-in: #70d8ef;
   --dejavu: "DejaVu Sans";
   --dejavu-mono: "DejaVu Sans Mono";
   --font-family: 'Verdana', var(--system-ui);
@@ -1080,6 +1081,9 @@ code.sourceCode > span > a:first-child::before {
 }
 .sourceCode .bn {
   color: var(--color-code-dark-number);
+}
+.sourceCode .bu {
+  color: var(--color-code-dark-built-in);
 }
 .sourceCode .cf {
   color: var(--color-code-dark-control-flow);
