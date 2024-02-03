@@ -1251,11 +1251,14 @@ img {
   border-radius: var(--border-radius);
 }
 .missing .cloze {
-  color: var(--color-code-dark-operator) !important;
+  color: var(--color-code-dark-operator);
   font-weight: 700;
   background: var(--color-code-light-background);
   padding: var(--spacing-quarter);
   border-radius: var(--border-radius);
+}
+.missing .cloze > span {
+  filter: brightness(65%) contrast(220%);
 }
 .missing-Header {
   position: relative;
