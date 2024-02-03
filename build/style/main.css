@@ -1221,6 +1221,9 @@ img {
   margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
+.simple-Sample pre {
+  margin: 0;
+}
 .simple-KeyPoint_Code pre {
   margin: 0;
 }
