@@ -10,32 +10,70 @@
 ## The advanced way to generate Anki code and themes ...
 
 > You'll know your way around Git and have [Homebrew](https://brew.sh) installed (or install `node` and `pandoc` individually) ..
->
-> 1. [`brew install node`](https://nodejs.org/en/)
-> 2. [`brew install pandoc`](https://pandoc.org)
-> 3. You'll have the `.apkg` downloaded already
-> You'll know how to create and manage a Github/local repository
-> 4. You'll know what "Run `npm install`" means :)
+
+You should familiarise yourself with [Github Desktop](https://desktop.github.com), [NPM](https://www.npmjs.com) and the command line (I use [Terminal](https://tinyurl.com/4w8p4wnx)). You can find the main color files here:
 
 
-If you'd like to:
+1. [`brew install node`](https://nodejs.org/en/)
+2. [`brew install pandoc`](https://pandoc.org)
+3. You'll have the `.apkg` downloaded already and uploaded to Anki
+4. You'll know how to create and manage a Github/local repository
+5. You'll know what "Run `npm install`" means :)
 
-- Change the theme's code colors
-- Highlight your code blocks offline
+
+### If you'd like to:
+
+- Automatically compile `code blocks`
 - Convert Markdown to HTML automatically
+- Highlight your code blocks offline
+- Change the theme's code colors
 - Create custom cards
 
 Then enter the world of the professional developer!
 
 
+-----
+
+## Introducing the `Anki Child Theme` repo
+
+> The [Anki Child Theme](https://github.com/badlydrawnrob/anki-child-theme) is a safe playground to test out Pandoc's features, as well as creating your own code colours, or theme, that won't be overriden by Anki theme updates.
+
+1. Clone the [Anki Child Theme](https://github.com/badlydrawnrob/anki-child-theme) repo on your local device.
+2. Run `npm install` to add dependencies
+3. Also run `npm setup` for Github repo dependencies[^1]
+
+-----
+
+## Using Pandoc for `code block`s
+
+> This is a replacement for [Power Format Pack](../error/index.md) and Pygments, in [older versions](https://github.com/badlydrawnrob/anki/releases/tag/1.0.0).
+
+Write your code as Markdown fenced code blocks in `source/pandoc/code.md` which is great for _small_ pieces of code that will fit into a `code block`.
+
+1. `npm run build`,
+2. Add a card in Anki,
+3. Choose a `code block` field,
+4. Make sure the field is in [HTML mode](https://github.com/badlydrawnrob/anki/issues/62) (not rich text),
+6. Add your compiled highlighted code,
+5. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code,
+6. Repeat the process for any other code blocks you need!
+
+### Generating card data from Markdown
+
+There are two other options for generating your card field data from Markdown, with Pandoc:
+
+1. `npm run build` to generate `build/data/*.html` files. You can preview these in the browser to see how your Anki card will look:
+    - Edit `source/themes/cards/simple/simple.md` and recompile.
+    - Edit `source/themes/cards/missing/missing.md` and recompile.
+2. `npm run pandoc-stripped` to generate simplified HTML files. These are in the same location as the `simple.md` and `missing.md` files.
+    - `*-stripped.md` makes it far easier to view/copy your data quickly (once compiled)
+    - It does, however, comes [with tradeoffs](https://github.com/badlydrawnrob/anki/issues/98).[^2]
+
+
+-----
+
 
 ## Creating a custom color theme
-
-### Get started with NPM
-
-> Some dependencies, such as [Print First CSS](https://github.com/badlydrawnrob/print-first-css) may need to be [updated manually](https://github.com/badlydrawnrob/anki/issues/54): `npm update print-first-css`.[^1]
-
-You should familiarise yourself with [Github Desktop](https://desktop.github.com), [NPM](https://www.npmjs.com) and the command line (I use [Terminal](https://tinyurl.com/4w8p4wnx)). You can find the main color files here:
 
 ```text
 source
@@ -48,16 +86,12 @@ source
               colors.less  // original file
 ```
 
-
-#### Step 1
-[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repos) Anki Themes and [clone it to your computer](https://tinyurl.com/46bx4bj5) using Github Desktop.
-
-#### Step 2
-Once you've cloned the repository, check your files and the `package.json`; they should be up-to-date. You can find `"devDependencies"` in the `.json` file which you'll need to install (see the note above on `print-first-css`). Install the packages we need with:
+### Step 1
+You have a cloned `Anki Child Theme` repository, and have followed the instructions in earlier check your files and the `package.json`; they should be up-to-date. You can find `"devDependencies"` in the `.json` file which you'll need to install (see the note above on `print-first-css`). Install the packages we need with:
 
 [`npm install`](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
-#### Step 3
+### Step 3
 You can then create a `build/` folder, along with the `main.css` CSS file with the following command:
 
 > `npm run build`
@@ -85,23 +119,6 @@ Finally, go back into your Anki app and:
 You could also go ahead and mess around with the other `.less` files, but every time your forked repo needs updating (to grab changes from Anki Themes) you'd run into problems with outdated files.
 
 See below for [creating your own child theme](#creating-your-own-child-theme)!
-
-
------
-
-
-## Using Pandoc for `code block`
-
-> This is a replacement for [Power Format Pack](../error/index.md) and Pygments, in [older versions](https://github.com/badlydrawnrob/anki/releases/tag/1.0.0).
-
-Write your code as Markdown fenced code blocks in `source/pandoc/pre.md` ...
-
-1. `npm run pandoc`,
-2. Add a card in Anki,
-3. Choose a `code block` field,
-4. Make sure the field is in [HTML mode](https://github.com/badlydrawnrob/anki/issues/62) (not rich text),
-5. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code,
-6. Repeat the process for any other code blocks you need!
 
 
 -----
@@ -159,4 +176,6 @@ source
 We're using [Mustache](https://www.npmjs.com/package/mustache) to preview the card themes in the demo version compiled to `build/` folder. There's been some [problems with compatibility](https://github.com/badlydrawnrob/anki/issues/56) in the Anki app, so this might be discontinued eventually.
 
 
-[^1]: Sometimes [`print-first-css` doesn't load properly](https://github.com/badlydrawnrob/anki/issues/65), so make sure to `npm update print-first-css` with the correct commit number. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
+[^1]: There's an issue with `npm update <package>` in which [`print-first-css` and other Github repos don't update properly](https://github.com/badlydrawnrob/anki/issues/65). Make sure to `npm install print-first-css` with the correct commit number. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
+
+[^2]: Because Safari defaults to `latin1` it won't render some characters (especially Unicode like `★`) properly without specifying `UTF-8` in the HTML `<header>`. `*-stripped.md` files compile to HTML without a header. Easier to read the HTML, but don't look as nice in the browser.
