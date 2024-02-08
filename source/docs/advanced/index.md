@@ -44,7 +44,8 @@ You should familiarise yourself with [Github Desktop](https://desktop.github.com
 2. Run `npm install` to add dependencies
 3. Also run `npm setup` for Github repo dependencies[^1]
 
------
+
+
 
 ## 2) Using Pandoc for `code block`s
 
@@ -62,7 +63,7 @@ Write your code as Markdown fenced code blocks in `source/pandoc/code.md` which 
 
 ### Generating card data from Markdown
 
-There are two other options for generating your card field data from Markdown, with Pandoc:
+> **There are two other options** for generating your card field data from Markdown, with Pandoc:
 
 1. `npm run build` to generate `build/data/*.html` files. You can preview these in the browser to see how your Anki card will look:
     - Edit `source/themes/cards/simple/simple.md` and recompile.
@@ -77,9 +78,12 @@ There are two other options for generating your card field data from Markdown, w
 ## 3) Creating a custom color theme
 
 > 🔥 **Hot tip: Unless you know what your're doing, just use CSS!**[^3]
+>
 > [Less.js](https://lesscss.org) is a css preprocessor; it's [a nice way to organise and compile CSS files](https://github.com/badlydrawnrob/print-first-css/issues/42) but I use it very sparingly. Trust me, I've been around the block a few times![^4]
 
 ```text
+/node_modules/print-first-css/*
+
 /node_modules/anki/build/style/main.css
 /node_modules/anki/source/style/modules/variables/*.less
 /node_modules/anki/source/style/partials/*.less
@@ -95,9 +99,9 @@ source
 ```
 
 
-This is the (slightly) harder way to create your own `code block`  highlight theme, or just make some changes to how Anki themes looks. Updating your Anki deck with CSS will generally be safe, and I use [semantic versioning](https://semver.org) to avoid breaking changes. However, you'll almost certainly need to add your Child Theme changes every time you update Anki themes.
+**This is the (slightly) harder way** to create your own `code block`  highlight theme, or just make some changes to how Anki themes looks. Updating your Anki deck with CSS will generally be safe, and I use [semantic versioning](https://semver.org) to avoid breaking changes. However, you'll almost certainly need to add your Child Theme changes every time you update Anki themes.
 
-It's best to save your CSS changes somewhere:
+#### It's best to save your CSS changes somewhere:
 
 1. You'll have followed [(1)](#1-introducing-the-anki-child-theme-repo) and [(2)](#2-using-pandoc-for-code-blocks) to keep a local version of Anki Child Themes.
 2. Your `package.json` file will be up-to-date.
@@ -107,17 +111,16 @@ It's best to save your CSS changes somewhere:
 You'll already know about `--color-code-light` and `--color-code-dark` variables. You can also find other variables in [`print-first-css`](https://github.com/badlydrawnrob/print-first-css) and `anki`. In your Anki Child Theme, you can override those variables in `:root`. See the `"devDependencies"` in the `package.json` file.
 
 ### Step 2
-You compile into the `build/` folder, and to the `main.css` CSS file with the following command:
 
 > `npm run build`
 
-This will also create a demo [Simple](../simple/index.md) and [Missing](../missing/index.md) file, which give preview of the Anki Cards [in the release](https://github.com/badlydrawnrob/anki/releases) you'll upload to Anki app. Drag and drop each file into your browser/editor to view.
+You compile into the `build/` folder, and to the `main.css` CSS file.
+
+This will also create a demo [Simple](../simple/index.md) and [Missing](../missing/index.md) file, which give a preview of the Anki Cards field data; from here you can copy/paste the data to your Anki card. Drag and drop each file into your browser/editor to view.
 
 - The `main.css` file is what's in your Anki Cards `Note Type(s)`.
 - The `build/data/*.html` files are just for demo purposes.
-- You can find the original HTML for each of the Anki Cards `Note Type`:
-    - `node_modules/anki/source/themes/cards/*/*-front.mustache`
-    - `node_modules/anki/source/themes/cards/*/*-reverse.mustache`
+
 
 ### Step 3
 
@@ -153,7 +156,13 @@ If there are any issues, [create an issue](https://github.com/badlydrawnrob/anki
 
 > 🔗 Some useful information [here](https://github.com/badlydrawnrob/anki/issues/54) and [here](https://github.com/badlydrawnrob/print-first-css/issues/25).
 
+- You can find the original HTML for each of the Anki Cards `Note Type`:
+    - `node_modules/anki/source/themes/cards/*/*-front.mustache`
+    - `node_modules/anki/source/themes/cards/*/*-reverse.mustache`
+
 If you're a skilled dev, you should be able to figure this out without too much guidance. You may run into some dependency errors and have to `npm audit`. The main files you'll want to change are below — feel free to copy and edit them in your child theme.
+
+⚠️ Remember, Anki templates [_are not the same_](https://github.com/badlydrawnrob/anki/issues/34) as [Moustache.js](https://mustache.github.io/mustache.5.html) templates. Beware of dependency hell!
 
 
 ## Create custom cards
