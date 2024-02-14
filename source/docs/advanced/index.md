@@ -134,7 +134,7 @@ You can follow the structure of `anki` files for the most part, but core files s
 
 If you want to be safe, you can create your own `custom-*.less` files.
 
-### Step 4
+### Step 4
 
 Currently the Anki `main.css` file is being imported, not the individual `*.less` files. You can change that if you prefer and `@import` the `*.less` files.
 
