@@ -79,7 +79,7 @@ Write your code as Markdown fenced code blocks in `source/pandoc/code.md` which 
 
 ## 3) Creating a custom color theme
 
-> 🔥 **Hot tip: Unless you know what your're doing, just use CSS!**[^3]
+> 🔥 **Hot tip: Unless you know what your're doing, [just use CSS](https://github.com/badlydrawnrob/anki/issues/38)!**[^3]
 >
 > [Less.js](https://lesscss.org) is a css preprocessor; it's [a nice way to organise and compile CSS files](https://github.com/badlydrawnrob/print-first-css/issues/42) but I use it very sparingly. Trust me, I've been around the block a few times![^4]
 
