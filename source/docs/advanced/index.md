@@ -190,7 +190,7 @@ source
 In the main Anki themes repo, we're using [Mustache](https://www.npmjs.com/package/mustache) to preview the card themes in the demo version compiled to `build/demo/...` folder. There's been some [problems with compatibility](https://github.com/badlydrawnrob/anki/issues/56) in the Anki app, so this might be discontinued eventually.
 
 
-[^1]: There's an issue with `npm update <package>` in which [`print-first-css` and other Github repos don't update properly](https://github.com/badlydrawnrob/anki/issues/65). Make sure to `npm install print-first-css` with the correct commit number. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
+[^1]: There's an issue with `npm update <package>` in which [`print-first-css` and other Github repos don't update properly](https://github.com/badlydrawnrob/anki/issues/65). I'll make sure they're kept up-to-date with the latest release, but for bleeding-edge versions, you'll need to make sure `devDependencies` are pointing to the correct commit number and `npm install <repo>`. You might also have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to make sure dependencies have no errors. Follow the prompts.
 
 [^2]: Because Safari defaults to `latin1` it won't render some characters (especially Unicode like `★`) properly without specifying `UTF-8` in the HTML `<header>`. `*-stripped.md` files compile to HTML without a header. Easier to read the HTML, but don't look as nice in the browser.
 
