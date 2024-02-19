@@ -12,17 +12,47 @@
   --color-ll: #ddd;
   --color-lll: #f1f1f1;
   --color-llll: #fff;
-  --color-code-light-background: #ffffcc;
-  --color-code-light-base: #586e75;
-  --color-code-light-comment: #93a1a1;
-  --color-code-light-error: #93a1a1;
-  --color-code-light-highlight: #dc322f;
-  --color-code-light-keyword: #859900;
-  --color-code-light-lowlight: #268bd2;
-  --color-code-light-number: #2aa198;
-  --color-code-light-operator: #859900;
-  --color-code-light-string: #2aa198;
-  --color-code-light-variable: #268bd2;
+  --color-code-light-palette-01: #93a1a1;
+  --color-code-light-palette-02: #586e75;
+  --color-code-light-palette-03: #ffffcc;
+  --color-code-light-palette-04: #859900;
+  --color-code-light-palette-05: #2aa198;
+  --color-code-light-palette-06: #dc322f;
+  --color-code-light-palette-07: #268bd2;
+  --color-code-light-background: var(--color-code-light-palette-03);
+  --color-code-light-base: var(--color-code-light-palette-02);
+  --color-code-light-error: var(--color-code-light-palette-01);
+  --color-code-light-highlight: var(--color-code-light-palette-06);
+  --color-code-light-lowlight: var(--color-code-light-palette-07);
+  --color-code-light-number: var(--color-code-light-palette-05);
+  --color-code-light-alert: var(--color-code-light-palette-01);
+  --color-code-light-annotation: var(--color-code-light-palette-01);
+  --color-code-light-attribute: var(--color-code-light-palette-07);
+  --color-code-light-base-n: var(--color-code-light-palette-05);
+  --color-code-light-built-in: var(--color-code-light-palette-04);
+  --color-code-light-control-flow: var(--color-code-light-palette-04);
+  --color-code-light-char: var(--color-code-light-palette-05);
+  --color-code-light-constant: var(--color-code-light-palette-04);
+  --color-code-light-comment: var(--color-code-light-palette-01);
+  --color-code-light-comment-var: var(--color-code-light-palette-01);
+  --color-code-light-documentation: var(--color-code-light-palette-04);
+  --color-code-light-data-type: var(--color-code-light-palette-04);
+  --color-code-light-dec-val: var(--color-code-light-palette-05);
+  --color-code-light-error: var(--color-code-light-palette-01) --color-code-light-extension: yellow;
+  --color-code-light-float: var(--color-code-light-palette-05);
+  --color-code-light-function: var(--color-code-light-palette-07);
+  --color-code-light-import: yellow;
+  --color-code-light-information: var(--color-code-light-palette-01);
+  --color-code-light-keyword: var(--color-code-light-palette-04);
+  --color-code-light-operator: var(--color-code-light-palette-04);
+  --color-code-light-other: var(--color-code-light-palette-07);
+  --color-code-light-preprocessor: var(--color-code-light-palette-07);
+  --color-code-light-special-char: var(--color-code-light-palette-05);
+  --color-code-light-special-string: var(--color-code-light-palette-05);
+  --color-code-light-string: var(--color-code-light-palette-05);
+  --color-code-light-variable: var(--color-code-light-palette-07);
+  --color-code-light-verbatim-string: var(--color-code-light-palette-05);
+  --color-code-light-warning: var(--color-code-light-palette-01);
   --spacing-increment: calc(var(--spacing-pp) * 1rem);
   --spacing-pppppppp: 128 / 16;
   --spacing-ppppppp: 112 / 16;
@@ -849,81 +879,90 @@ code.sourceCode > span > a:first-child::before {
   text-decoration: underline;
 }
 .sourceCode .al {
-  color: var(--color-code-light-error);
+  color: var(--color-code-light-alert);
   font-weight: bold;
 }
 .sourceCode .an {
-  color: var(--color-code-light-comment);
+  color: var(--color-code-light-annotation);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .at {
-  color: var(--color-code-light-variable);
+  color: var(--color-code-light-attribute);
 }
 .sourceCode .bn {
-  color: var(--color-code-light-number);
+  color: var(--color-code-light-base-n);
+}
+.sourceCode .bu {
+  color: var(--color-code-light-built-in);
 }
 .sourceCode .cf {
-  color: var(--color-code-light-variable);
+  color: var(--color-code-light-control-flow);
   font-weight: bold;
 }
 .sourceCode .ch {
-  color: var(--color-code-light-string);
+  color: var(--color-code-light-char);
 }
 .sourceCode .cn {
-  color: var(--color-code-light-keyword);
+  color: var(--color-code-light-constant);
 }
 .sourceCode .co {
   color: var(--color-code-light-comment);
 }
 .sourceCode .cv {
-  color: var(--color-code-light-comment);
+  color: var(--color-code-light-comment-var);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .do {
-  color: var(--color-code-light-keyword);
+  color: var(--color-code-light-documentation);
   font-style: italic;
 }
 .sourceCode .dt {
-  color: var(--color-code-light-keyword);
+  color: var(--color-code-light-data-type);
 }
 .sourceCode .dv {
-  color: var(--color-code-light-number);
+  color: var(--color-code-light-dec-val);
 }
 .sourceCode .er {
   color: var(--color-code-light-error);
   font-weight: bold;
 }
+.sourceCode .ex {
+  color: var(--color-code-light-extension);
+}
 .sourceCode .fl {
-  color: var(--color-code-light-number);
+  color: var(--color-code-light-float);
 }
 .sourceCode .fu {
   color: var(--color-code-light-variable);
 }
+.sourceCode .im {
+  color: var(--color-code-light-import);
+}
 .sourceCode .in {
-  color: var(--color-code-light-comment);
+  color: var(--color-code-light-information);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .kw {
-  color: var(--color-code-light-operator);
+  color: var(--color-code-light-keyword);
   font-weight: bold;
 }
 .sourceCode .op {
   color: var(--color-code-light-operator);
 }
 .sourceCode .ot {
-  color: var(--color-code-light-variable);
+  color: var(--color-code-light-other);
 }
 .sourceCode .pp {
-  color: var(--color-code-light-lowlight);
+  color: var(--color-code-light-preprocessor);
 }
 .sourceCode .sc {
-  color: var(--color-code-light-string);
+  color: var(--color-code-light-special-char);
 }
 .sourceCode .ss {
-  color: var(--color-code-light-string);
+  color: var(--color-code-light-special-string);
 }
 .sourceCode .st {
   color: var(--color-code-light-string);
@@ -932,10 +971,10 @@ code.sourceCode > span > a:first-child::before {
   color: var(--color-code-light-variable);
 }
 .sourceCode .vs {
-  color: var(--color-code-light-string);
+  color: var(--color-code-light-verbatim-string);
 }
 .sourceCode .wa {
-  color: var(--color-code-light-comment);
+  color: var(--color-code-light-warning);
   font-weight: bold;
   font-style: italic;
 }
@@ -944,20 +983,51 @@ code.sourceCode > span > a:first-child::before {
   --color-card-ll: #eceff1;
   --color-card-lll: #bdbdbd;
   --color-card-llll: #757575;
-  --color-code-dark-background: #272822;
-  --color-code-dark-base: #f8f8f8;
-  --color-code-dark-comment: #777777;
-  --color-code-dark-error: #960050;
-  --color-code-dark-highlight: #ec7b20;
-  --color-code-dark-keyword: #70d8ef;
-  --color-code-dark-lowlight: #fed76f;
-  --color-code-dark-number: #a877ff;
-  --color-code-dark-operator: #f12056;
-  --color-code-dark-string: #e5de73;
-  --color-code-dark-variable: #aae626;
-  --color-code-dark-control-flow: #70d8ef;
-  --color-code-dark-data-type: #70d8ef;
-  --color-code-dark-built-in: #70d8ef;
+  --color-code-dark-palette-01: #f8f8f8;
+  --color-code-dark-palette-02: #777777;
+  --color-code-dark-palette-03: #272822;
+  --color-code-dark-palette-04: #fed76f;
+  --color-code-dark-palette-05: #70d8ef;
+  --color-code-dark-palette-06: #aae626;
+  --color-code-dark-palette-07: #a877ff;
+  --color-code-dark-palette-08: #960050;
+  --color-code-dark-palette-09: #f12056;
+  --color-code-dark-palette-10: #ec7b20;
+  --color-code-dark-background: var(--color-code-dark-palette-03);
+  --color-code-dark-base: var(--color-code-dark-palette-01);
+  --color-code-dark-error: var(--color-code-dark-palette-08);
+  --color-code-dark-highlight: var(--color-code-dark-palette-10);
+  --color-code-dark-keyword: var(--color-code-dark-palette-05);
+  --color-code-dark-lowlight: var(--color-code-dark-palette-04);
+  --color-code-dark-number: var(--color-code-dark-palette-07);
+  --color-code-dark-alert: var(--color-code-dark-palette-08);
+  --color-code-dark-annotation: var(--color-code-dark-palette-02);
+  --color-code-dark-attribute: var(--color-code-dark-palette-06);
+  --color-code-dark-base-n: var(--color-code-dark-palette-07);
+  --color-code-dark-built-in: var(--color-code-dark-palette-05);
+  --color-code-dark-control-flow: var(--color-code-dark-palette-05);
+  --color-code-dark-char: var(--color-code-dark-palette-04);
+  --color-code-dark-constant: var(--color-code-dark-palette-05);
+  --color-code-dark-comment: var(--color-code-dark-palette-02);
+  --color-code-dark-comment-var: var(--color-code-dark-palette-02);
+  --color-code-dark-documentation: var(--color-code-dark-palette-05);
+  --color-code-dark-data-type: var(--color-code-dark-palette-05);
+  --color-code-dark-dec-val: var(--color-code-dark-palette-07);
+  --color-code-dark-error: var(--color-code-dark-palette-08) --color-code-dark-extension: yellow;
+  --color-code-dark-float: var(--color-code-dark-palette-07);
+  --color-code-dark-function: var(--color-code-dark-palette-06);
+  --color-code-dark-import: yellow;
+  --color-code-dark-information: var(--color-code-dark-palette-02);
+  --color-code-dark-keyword: var(--color-code-dark-palette-09);
+  --color-code-dark-operator: var(--color-code-dark-palette-09);
+  --color-code-dark-other: var(--color-code-dark-palette-06);
+  --color-code-dark-preprocessor: var(--color-code-dark-palette-04);
+  --color-code-dark-special-char: var(--color-code-dark-palette-04);
+  --color-code-dark-special-string: var(--color-code-dark-palette-04);
+  --color-code-dark-string: var(--color-code-dark-palette-04);
+  --color-code-dark-variable: var(--color-code-dark-palette-06);
+  --color-code-dark-verbatim-string: var(--color-code-dark-palette-04);
+  --color-code-dark-warning: var(--color-code-dark-palette-02);
   --dejavu: "DejaVu Sans";
   --dejavu-mono: "DejaVu Sans Mono";
   --font-family: 'Verdana', var(--system-ui);
@@ -995,35 +1065,6 @@ kbd:empty {
   padding: 0;
   background: transparent;
   border-color: transparent;
-}
-code b,
-kbd b,
-code strong,
-kbd strong,
-code i,
-kbd i,
-code em,
-kbd em {
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  background: none;
-}
-code b,
-code strong {
-  color: var(--color-code-light-highlight);
-}
-code i,
-code em {
-  color: var(--color-code-light-lowlight);
-}
-pre,
-pre code {
-  text-align: left;
-  color: var(--color-code-dark-base);
-  font-family: var(--font-family-mono);
-  background: var(--color-code-dark-background);
 }
 h1,
 h2,
@@ -1068,19 +1109,19 @@ code.sourceCode > span > a:first-child::before {
   text-decoration: underline;
 }
 .sourceCode .al {
-  color: var(--color-code-dark-error);
+  color: var(--color-code-dark-alert);
   font-weight: bold;
 }
 .sourceCode .an {
-  color: var(--color-code-dark-comment);
+  color: var(--color-code-dark-annotation);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .at {
-  color: var(--color-code-dark-variable);
+  color: var(--color-code-dark-attribute);
 }
 .sourceCode .bn {
-  color: var(--color-code-dark-number);
+  color: var(--color-code-dark-base-n);
 }
 .sourceCode .bu {
   color: var(--color-code-dark-built-in);
@@ -1090,62 +1131,68 @@ code.sourceCode > span > a:first-child::before {
   font-weight: bold;
 }
 .sourceCode .ch {
-  color: var(--color-code-dark-string);
+  color: var(--color-code-dark-char);
 }
 .sourceCode .cn {
-  color: var(--color-code-dark-keyword);
+  color: var(--color-code-dark-constant);
 }
 .sourceCode .co {
   color: var(--color-code-dark-comment);
 }
 .sourceCode .cv {
-  color: var(--color-code-dark-comment);
+  color: var(--color-code-dark-comment-var);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .do {
-  color: var(--color-code-dark-keyword);
+  color: var(--color-code-dark-documentation);
   font-style: italic;
 }
 .sourceCode .dt {
   color: var(--color-code-dark-data-type);
 }
 .sourceCode .dv {
-  color: var(--color-code-dark-number);
+  color: var(--color-code-dark-dec-val);
 }
 .sourceCode .er {
   color: var(--color-code-dark-error);
   font-weight: bold;
 }
+.sourceCode .ex {
+  color: var(--color-code-dark-extension);
+}
 .sourceCode .fl {
-  color: var(--color-code-dark-number);
+  color: var(--color-code-dark-float);
 }
 .sourceCode .fu {
-  color: var(--color-code-dark-variable);
+  color: var(--color-code-dark-function);
+}
+.sourceCode .im {
+  color: var(--color-code-dark-import);
 }
 .sourceCode .in {
-  color: var(--color-code-dark-comment);
+  color: var(--color-code-dark-information);
   font-weight: bold;
   font-style: italic;
 }
 .sourceCode .kw {
-  color: var(--color-code-dark-operator);
+  color: var(--color-code-dark-keyword);
   font-weight: bold;
 }
 .sourceCode .op {
   color: var(--color-code-dark-operator);
 }
 .sourceCode .ot {
-  color: var(--color-code-dark-variable);
+  color: var(--color-code-dark-other);
 }
 .sourceCode .pp {
   color: var(--color-code-dark-lowlight);
 }
 .sourceCode .sc {
-  color: var(--color-code-dark-string);
+  color: var(--color-code-dark-special-char);
 }
 .sourceCode .ss {
-  color: var(--color-code-dark-string);
+  color: var(--color-code-dark-special-string);
 }
 .sourceCode .st {
   color: var(--color-code-dark-string);
@@ -1154,10 +1201,10 @@ code.sourceCode > span > a:first-child::before {
   color: var(--color-code-dark-variable);
 }
 .sourceCode .vs {
-  color: var(--color-code-dark-string);
+  color: var(--color-code-dark-verbatim-string);
 }
 .sourceCode .wa {
-  color: var(--color-code-dark-comment);
+  color: var(--color-code-dark-warning);
   font-weight: bold;
   font-style: italic;
 }
@@ -1204,6 +1251,49 @@ img {
 }
 .simple-Header_Title code {
   font-size: var(--font-size-p);
+}
+.simple-Header_Title code b,
+.simple-Header_Subtitle code b,
+.simple-Header_Code code b,
+.simple-Header_Title code strong,
+.simple-Header_Subtitle code strong,
+.simple-Header_Code code strong,
+.simple-Header_Title code i,
+.simple-Header_Subtitle code i,
+.simple-Header_Code code i,
+.simple-Header_Title code em,
+.simple-Header_Subtitle code em,
+.simple-Header_Code code em {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  background: none;
+}
+.simple-Header_Title code b,
+.simple-Header_Subtitle code b,
+.simple-Header_Code code b,
+.simple-Header_Title code strong,
+.simple-Header_Subtitle code strong,
+.simple-Header_Code code strong {
+  color: var(--color-code-light-highlight);
+}
+.simple-Header_Title code i,
+.simple-Header_Subtitle code i,
+.simple-Header_Code code i,
+.simple-Header_Title code em,
+.simple-Header_Subtitle code em,
+.simple-Header_Code code em {
+  color: var(--color-code-light-lowlight);
+}
+.simple-Sample pre,
+.simple-Sample pre code,
+.simple-KeyPoint_Code pre,
+.simple-KeyPoint_Code pre code {
+  text-align: left;
+  color: var(--color-code-dark-base);
+  font-family: var(--font-family-mono);
+  background: var(--color-code-dark-background);
 }
 .simple-Header_Subtitle {
   margin: 0 0 var(--spacing-half);
@@ -1262,6 +1352,47 @@ img {
 }
 .missing .cloze > span {
   filter: brightness(65%) contrast(220%);
+}
+.missing-Header_Title code b,
+.missing-Header_Subtitle code b,
+.missing-Header_Code code b,
+.missing-Header_Title code strong,
+.missing-Header_Subtitle code strong,
+.missing-Header_Code code strong,
+.missing-Header_Title code i,
+.missing-Header_Subtitle code i,
+.missing-Header_Code code i,
+.missing-Header_Title code em,
+.missing-Header_Subtitle code em,
+.missing-Header_Code code em {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  background: none;
+}
+.missing-Header_Title code b,
+.missing-Header_Subtitle code b,
+.missing-Header_Code code b,
+.missing-Header_Title code strong,
+.missing-Header_Subtitle code strong,
+.missing-Header_Code code strong {
+  color: var(--color-code-light-highlight);
+}
+.missing-Header_Title code i,
+.missing-Header_Subtitle code i,
+.missing-Header_Code code i,
+.missing-Header_Title code em,
+.missing-Header_Subtitle code em,
+.missing-Header_Code code em {
+  color: var(--color-code-light-lowlight);
+}
+.missing-KeyPoint_Code pre,
+.missing-KeyPoint_Code pre code {
+  text-align: left;
+  color: var(--color-code-dark-base);
+  font-family: var(--font-family-mono);
+  background: var(--color-code-dark-background);
 }
 .missing-Header {
   position: relative;

@@ -1,0 +1,78 @@
+// Theme colors ================================================================
+// #1: Inherited from print-first-css:
+//     - Base colors: `--color-b` etc
+//     - Solarized light: `--color-code-light` etc
+// #2: Card colors
+// #3: Monokai dark color palette (slightly modified)
+//     - #! Numbers are harder to rearrange than color names
+//     - @ http://tinyurl.com/visual-studio-code-colorize
+// #4: Sets up base code sections
+//     a) Sets up default colour
+//     b) Sets up bright contrast color (i.e: code string)
+//     c) Sets up muted contrast color (i.e: code string)
+// #5: Skylighting classes
+//     - Using Pandoc Skylighting `../partials/skylighting.less`
+//     - Other code defaults set in `partials/code`
+
+// #2
+--color-card-l: #fff;
+--color-card-ll: #eceff1;
+--color-card-lll: #bdbdbd;
+--color-card-llll: #757575;
+
+// #3
+--color-code-dark-palette-01: #f8f8f8;
+--color-code-dark-palette-02: #777777;
+--color-code-dark-palette-03: #272822;
+--color-code-dark-palette-04: #fed76f;
+--color-code-dark-palette-05: #70d8ef;
+--color-code-dark-palette-06: #aae626;
+--color-code-dark-palette-07: #a877ff;
+--color-code-dark-palette-08: #960050;
+--color-code-dark-palette-09: #f12056;
+--color-code-dark-palette-10: #ec7b20;
+
+
+// #4
+--color-code-dark-background: var(--color-code-dark-palette-03);
+--color-code-dark-base: var(--color-code-dark-palette-01);        // #4a
+--color-code-dark-comment: var(--color-code-dark-palette-02);
+--color-code-dark-error: var(--color-code-dark-palette-08);
+--color-code-dark-highlight: var(--color-code-dark-palette-10);   // #4b
+--color-code-dark-keyword: var(--color-code-dark-palette-05);
+--color-code-dark-lowlight: var(--color-code-dark-palette-04);    // #4c
+--color-code-dark-number: var(--color-code-dark-palette-07);
+--color-code-dark-operator: var(--color-code-dark-palette-09);
+--color-code-dark-string: var(--color-code-dark-palette-04);
+--color-code-dark-variable: var(--color-code-dark-palette-06);
+
+// #5
+--color-code-dark-alert: var(--color-code-dark-palette-08);            // #! Alert
+--color-code-dark-annotation: var(--color-code-dark-palette-02);       // Annotation
+--color-code-dark-attribute: var(--color-code-dark-palette-06);        // Attribute
+--color-code-dark-base-n: var(--color-code-dark-palette-07);           // BaseN
+--color-code-dark-built-in: var(--color-code-dark-palette-05);         // BuiltIn
+--color-code-dark-control-flow: var(--color-code-dark-palette-05);     // ControlFlow
+--color-code-dark-char: var(--color-code-dark-palette-04);             // Char
+--color-code-dark-constant: var(--color-code-dark-palette-05);         // Constant
+--color-code-dark-comment: var(--color-code-dark-palette-02);          // Comment
+--color-code-dark-comment-var: var(--color-code-dark-palette-02);      // CommentVar
+--color-code-dark-documentation: var(--color-code-dark-palette-05);    // Documentation
+--color-code-dark-data-type: var(--color-code-dark-palette-05);        // DataType
+--color-code-dark-dec-val: var(--color-code-dark-palette-07);          // DecVal
+--color-code-dark-error: var(--color-code-dark-palette-08)             // #! Error
+--color-code-dark-extension: yellow;                                   // #! Extension
+--color-code-dark-float: var(--color-code-dark-palette-07);            // Float
+--color-code-dark-function: var(--color-code-dark-palette-06);         // Function
+--color-code-dark-import: yellow;                                      // #! Import
+--color-code-dark-information: var(--color-code-dark-palette-02);      // Information
+--color-code-dark-keyword: var(--color-code-dark-palette-09);          // Keyword
+--color-code-dark-operator: var(--color-code-dark-palette-09);         // Operator
+--color-code-dark-other: var(--color-code-dark-palette-06);            // #! Other
+--color-code-dark-preprocessor: var(--color-code-dark-palette-04);     // #! Preprocessor
+--color-code-dark-special-char: var(--color-code-dark-palette-04);     // SpecialChar
+--color-code-dark-special-string: var(--color-code-dark-palette-04);   // SpecialString
+--color-code-dark-string: var(--color-code-dark-palette-04);           // String
+--color-code-dark-variable: var(--color-code-dark-palette-06);         // Variable
+--color-code-dark-verbatim-string: var(--color-code-dark-palette-04);  // VerbatimString
+--color-code-dark-warning: var(--color-code-dark-palette-02);          // #! Warning

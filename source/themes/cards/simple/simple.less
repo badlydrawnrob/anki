@@ -4,6 +4,11 @@
 // #2: #! Set the appropriate `font-size` for heading code
 //     reverses the Goldilocks hack in `print-first-css`:
 //     @ https://tinyurl.com/2p9xpevw
+// #3: Moved the main code css to individual cards:
+//     - This allows using the `print-first-css` light theme for
+//       everywhere else except the main `code block`s
+//     - We're also targetting specific `code block` in
+//       `partials/skylighting.less`
 
 .anki-Front {
   // #1
@@ -65,6 +70,47 @@
     font-size: var(--font-size-p);  // #2
   }
 }
+
+// #3 --------------------------------------------------------------------------
+
+code {
+  .simple-Header_Title &,
+  .simple-Header_Subtitle &,
+  .simple-Header_Code & {
+
+    b, strong,
+    i, em {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+      background: none;
+    }
+
+    b,
+    strong {
+      color: var(--color-code-light-highlight);
+    }
+
+    i,
+    em {
+      color: var(--color-code-light-lowlight);
+    }
+  }
+}
+
+pre,
+pre code {
+  .simple-Sample &,
+  .simple-KeyPoint_Code & {
+    text-align: left;
+    color: var(--color-code-dark-base);
+    font-family: var(--font-family-mono);
+    background: var(--color-code-dark-background);
+  }
+}
+
+// -----------------------------------------------------------------------------
 
 .simple-Header_Subtitle {
   margin: 0 0 var(--spacing-half);

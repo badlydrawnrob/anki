@@ -28,6 +28,6 @@
   "devDependencies": {
     "less": "^4.2.0",
     "mustache": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#83067a1"
+    "print-first-css": "github:badlydrawnrob/print-first-css#01c2c62"
   }
 }
