@@ -1344,6 +1344,11 @@ img {
 .simple-Header_Code code em {
   color: var(--color-code-light-lowlight);
 }
+.simple-KeyPoint_Notes code {
+  color: var(--color-bbb);
+  background: var(--color-lll);
+  padding: var(--spacing-micro) var(--spacing-half);
+}
 .simple-Sample pre,
 .simple-Sample pre code,
 .simple-KeyPoint_Code pre,
@@ -1396,7 +1401,6 @@ img {
   padding: 0 var(--spacing-one);
   color: var(--color-card-llll);
   font-size: var(--font-size-m);
-  line-height: var(--line-height-one);
 }
 .missing {
   border-radius: var(--border-radius);
@@ -1444,6 +1448,11 @@ img {
 .missing-Header_Subtitle code em,
 .missing-Header_Code code em {
   color: var(--color-code-light-lowlight);
+}
+.missing-KeyPoint_Notes code {
+  color: var(--color-bbb);
+  background: var(--color-lll);
+  padding: var(--spacing-micro) var(--spacing-half);
 }
 .missing-KeyPoint_Code pre,
 .missing-KeyPoint_Code pre code {
@@ -1526,7 +1535,6 @@ img {
   padding: 0 var(--spacing-one);
   color: var(--color-card-llll);
   font-size: var(--font-size-m);
-  line-height: var(--line-height-one);
   text-align: left;
 }
 .missing-Notes ul > li,
