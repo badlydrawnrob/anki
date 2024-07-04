@@ -5,7 +5,7 @@
  */
 :root {
   --color-bbbb: #000;
-  --color-bbb: #000;
+  --color-bbb: #333;
   --color-bb: #ccc;
   --color-b: #f9f9f9;
   --color-l: #ccc;
@@ -20,11 +20,6 @@
   --color-code-light-palette-06: #dc322f;
   --color-code-light-palette-07: #268bd2;
   --color-code-light-background: var(--color-code-light-palette-03);
-  --color-code-light-base: var(--color-code-light-palette-02);
-  --color-code-light-error: var(--color-code-light-palette-01);
-  --color-code-light-highlight: var(--color-code-light-palette-06);
-  --color-code-light-lowlight: var(--color-code-light-palette-07);
-  --color-code-light-number: var(--color-code-light-palette-05);
   --color-code-light-alert: var(--color-code-light-palette-01);
   --color-code-light-annotation: var(--color-code-light-palette-01);
   --color-code-light-attribute: var(--color-code-light-palette-07);
@@ -590,7 +585,7 @@ pre {
   word-break: normal;
   tab-size: 4;
   hyphens: none;
-  border: var(--spacing-px) solid var(--font-color);
+  border: var(--spacing-px) solid var(--color-bbb);
 }
 @media screen {
   pre {
@@ -995,11 +990,6 @@ code.sourceCode > span > a:first-child::before {
   --color-code-dark-palette-10: #ec7b20;
   --color-code-dark-background: var(--color-code-dark-palette-03);
   --color-code-dark-base: var(--color-code-dark-palette-01);
-  --color-code-dark-error: var(--color-code-dark-palette-08);
-  --color-code-dark-highlight: var(--color-code-dark-palette-10);
-  --color-code-dark-keyword: var(--color-code-dark-palette-05);
-  --color-code-dark-lowlight: var(--color-code-dark-palette-04);
-  --color-code-dark-number: var(--color-code-dark-palette-07);
   --color-code-dark-alert: var(--color-code-dark-palette-08);
   --color-code-dark-annotation: var(--color-code-dark-palette-02);
   --color-code-dark-attribute: var(--color-code-dark-palette-06);
