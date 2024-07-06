@@ -5,6 +5,8 @@
 # Anki themes
 ## Learning to code with Anki — themes, cards, templates, syntax highlighting
 
+******Create a new image. Simplify where possible. Add examples where possible.******
+
 <img align="right" width="250" height="auto" src="./source/media/preview.png" style="padding-left: 20px;">
 
 
