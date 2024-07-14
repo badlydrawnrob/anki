@@ -1,4 +1,6 @@
 // Notes ==================================================================
+// There seems to be a trend for massive font sizes: See issue #75
+//
 // #1: Anki (app) sets default `body` styles and `:root` doesn't override this.
 //     Might have to override all the styles in print-first-css `:root`?
 //     @ https://github.com/badlydrawnrob/anki/issues/117
@@ -19,15 +21,7 @@ body {
 
 // #2
 @font-face {
-  font-family: "DejaVu Sans";
-  src: url("_DejaVuSans.ttf");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "DejaVu Sans Mono";
-  src: url("_DejaVuSansMono.ttf");
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Recursive';
+  src: url('_RecursiveVariableFont.woff2') format('woff2-variations');
+  font-weight: 300 1000;
 }

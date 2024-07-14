@@ -12,13 +12,13 @@
   --color-ll: #ddd;
   --color-lll: #f1f1f1;
   --color-llll: #fff;
-  --color-code-light-palette-01: #93a1a1;
-  --color-code-light-palette-02: #586e75;
-  --color-code-light-palette-03: #ffffcc;
-  --color-code-light-palette-04: #859900;
-  --color-code-light-palette-05: #2aa198;
-  --color-code-light-palette-06: #dc322f;
-  --color-code-light-palette-07: #268bd2;
+  --color-code-light-palette-01: var(--color-bbbb);
+  --color-code-light-palette-02: var(--color-bbbb);
+  --color-code-light-palette-03: var(--color-bbbb);
+  --color-code-light-palette-04: var(--color-bbbb);
+  --color-code-light-palette-05: var(--color-bbbb);
+  --color-code-light-palette-06: var(--color-bbbb);
+  --color-code-light-palette-07: var(--color-bbbb);
   --color-code-light-background: var(--color-code-light-palette-03);
   --color-code-light-alert: var(--color-code-light-palette-01);
   --color-code-light-annotation: var(--color-code-light-palette-01);
@@ -33,10 +33,10 @@
   --color-code-light-documentation: var(--color-code-light-palette-04);
   --color-code-light-data-type: var(--color-code-light-palette-04);
   --color-code-light-dec-val: var(--color-code-light-palette-05);
-  --color-code-light-error: var(--color-code-light-palette-01) --color-code-light-extension: yellow;
+  --color-code-light-error: var(--color-code-light-palette-01) --color-code-light-extension: var(--color-code-light-palette-01);
   --color-code-light-float: var(--color-code-light-palette-05);
   --color-code-light-function: var(--color-code-light-palette-07);
-  --color-code-light-import: yellow;
+  --color-code-light-import: var(--color-code-light-palette-01);
   --color-code-light-information: var(--color-code-light-palette-01);
   --color-code-light-keyword: var(--color-code-light-palette-04);
   --color-code-light-operator: var(--color-code-light-palette-04);
@@ -558,10 +558,17 @@ kbd,
 pre,
 samp {
   font-family: var(--font-family-mono);
-  font-size: calc(var(--font-size) - var(--spacing-px));
+  font-size: var(--font-size);
   font-style: normal;
   line-height: var(--line-height);
-  background: var(--color-code-light-background);
+}
+@media screen {
+  code,
+  kbd,
+  pre,
+  samp {
+    background: var(--color-code-light-background);
+  }
 }
 code,
 kbd {
@@ -842,7 +849,7 @@ cite {
 pre.sourceCode .numberSource {
   margin-left: 3em;
   padding-left: 4px;
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid var(--color-bbb);
 }
 pre.sourceCode .numberSource code {
   counter-reset: source-line 0;
@@ -859,7 +866,7 @@ pre.sourceCode .numberSource code > span > a:first-child::before {
   display: inline-block;
   width: 4em;
   padding: 0 4px;
-  color: #aaaaaa;
+  color: var(--color-bbb);
   text-align: right;
   vertical-align: baseline;
   border: none;
@@ -874,103 +881,39 @@ code.sourceCode > span > a:first-child::before {
   text-decoration: underline;
 }
 .sourceCode .al {
-  color: var(--color-code-light-alert);
-  font-weight: bold;
+  font-weight: 700;
 }
 .sourceCode .an {
-  color: var(--color-code-light-annotation);
-  font-weight: bold;
   font-style: italic;
 }
-.sourceCode .at {
-  color: var(--color-code-light-attribute);
-}
-.sourceCode .bn {
-  color: var(--color-code-light-base-n);
-}
-.sourceCode .bu {
-  color: var(--color-code-light-built-in);
-}
 .sourceCode .cf {
-  color: var(--color-code-light-control-flow);
-  font-weight: bold;
-}
-.sourceCode .ch {
-  color: var(--color-code-light-char);
-}
-.sourceCode .cn {
-  color: var(--color-code-light-constant);
+  font-weight: 700;
 }
 .sourceCode .co {
-  color: var(--color-code-light-comment);
+  font-style: italic;
 }
 .sourceCode .cv {
-  color: var(--color-code-light-comment-var);
-  font-weight: bold;
   font-style: italic;
 }
 .sourceCode .do {
-  color: var(--color-code-light-documentation);
   font-style: italic;
 }
 .sourceCode .dt {
-  color: var(--color-code-light-data-type);
-}
-.sourceCode .dv {
-  color: var(--color-code-light-dec-val);
+  text-decoration: underline;
 }
 .sourceCode .er {
-  color: var(--color-code-light-error);
-  font-weight: bold;
-}
-.sourceCode .ex {
-  color: var(--color-code-light-extension);
-}
-.sourceCode .fl {
-  color: var(--color-code-light-float);
-}
-.sourceCode .fu {
-  color: var(--color-code-light-variable);
-}
-.sourceCode .im {
-  color: var(--color-code-light-import);
+  font-weight: 700;
 }
 .sourceCode .in {
-  color: var(--color-code-light-information);
-  font-weight: bold;
   font-style: italic;
 }
 .sourceCode .kw {
-  color: var(--color-code-light-keyword);
-  font-weight: bold;
-}
-.sourceCode .op {
-  color: var(--color-code-light-operator);
-}
-.sourceCode .ot {
-  color: var(--color-code-light-other);
+  font-weight: 700;
 }
 .sourceCode .pp {
-  color: var(--color-code-light-preprocessor);
-}
-.sourceCode .sc {
-  color: var(--color-code-light-special-char);
-}
-.sourceCode .ss {
-  color: var(--color-code-light-special-string);
-}
-.sourceCode .st {
-  color: var(--color-code-light-string);
-}
-.sourceCode .va {
-  color: var(--color-code-light-variable);
-}
-.sourceCode .vs {
-  color: var(--color-code-light-verbatim-string);
+  font-weight: 700;
 }
 .sourceCode .wa {
-  color: var(--color-code-light-warning);
-  font-weight: bold;
   font-style: italic;
 }
 :root {
@@ -1018,11 +961,10 @@ code.sourceCode > span > a:first-child::before {
   --color-code-dark-variable: var(--color-code-dark-palette-06);
   --color-code-dark-verbatim-string: var(--color-code-dark-palette-04);
   --color-code-dark-warning: var(--color-code-dark-palette-02);
-  --dejavu: "DejaVu Sans";
-  --dejavu-mono: "DejaVu Sans Mono";
-  --font-family: 'Verdana', var(--system-ui);
-  --font-family-header: var(--dejavu), var(--system-ui);
-  --font-family-mono: var(--dejavu-mono), var(--system-mono), var(--fallback-mono);
+  --recursive: "Recursive";
+  --font-family: var(--recursive), var(--system-ui);
+  --font-family-header: var(--recursive), var(--system-ui);
+  --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
 }
 body {
   color: var(--font-color);
@@ -1032,22 +974,16 @@ body {
   background: transparent;
 }
 @font-face {
-  font-family: "DejaVu Sans";
-  src: url("_DejaVuSans.ttf");
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "DejaVu Sans Mono";
-  src: url("_DejaVuSansMono.ttf");
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Recursive';
+  src: url('_RecursiveVariableFont.woff2') format('woff2-variations');
+  font-weight: 300 1000;
 }
 code,
 kbd {
   padding: 0;
   background: transparent;
   border-color: transparent;
+  font-variation-settings: 'MONO' 1;
 }
 code:empty,
 kbd:empty {

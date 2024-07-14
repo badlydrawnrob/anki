@@ -2,7 +2,7 @@
 [![Release](https://img.shields.io/github/release/badlydrawnrob/anki)](https://github.com/badlydrawnrob/anki/releases)
 [![GitHub Repo stars](https://img.shields.io/github/stars/badlydrawnrob/anki?style=social)](https://github.com/badlydrawnrob/anki/stargazers)
 
-# Anki themes
+# Anki programming themes
 ## Learning to code with Anki — themes, cards, templates, syntax highlighting
 
 ******Create a new image. Simplify where possible. Add examples where possible.******
