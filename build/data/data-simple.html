@@ -1,0 +1,110 @@
+<!-- Front of card ===========================================================
+
+    Simple Card Data
+
+    - Type:
+        What's the answer?
+        A simple question->answer card;
+        we're asking the question: "what does this code do?", e.g:
+
+        - A function with an output you have to guess.
+        - A class with a method that you need to call.
+
+    - Docs:
+        http://tinyurl.com/anki-simple-card
+
+    - Key:
+        ★ Required
+        ☆ Optional (recommended)
+        ✎ Optional (notes, markdown)
+        ⤷ Field Type
+
+    - Notes:
+        Where fields are auto-wrapped with an HTML tag, copy/paste the compiled
+        data _within_ those tags in your Anki fields, otherwise you'll have
+        formatting issues. For example:
+
+            `★ Title` field:
+
+            <h1>What happens is we type <code>Model</code> in the repl?</h1>
+                -------------------------------------------------------
+            xxxx                                                       xxxxx
+
+        Compiled data is simple meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+
+========================================================================== -->
+<!-- -------------------------------------------------------------------------
+    ★ Title
+
+    ⤷ `string` (auto wrapped with a `H1` tag)
+-------------------------------------------------------------------------- -->
+<h1>What happens if we type <code>Model</code> in the repl?</h1>
+<!-- -------------------------------------------------------------------------
+    ☆ Subtitle
+
+    ⤷ `string` (auto wrapped with a `H2` tag)
+-------------------------------------------------------------------------- -->
+<h2>Type Alias</h2>
+<!-- -------------------------------------------------------------------------
+    ☆ Syntax (inline code)
+
+    ⤷ `code string` (auto wrapped with <p><code> tag)
+-------------------------------------------------------------------------- -->
+<p><code>type alias Model</code></p>
+<!-- -------------------------------------------------------------------------
+    ★ Sample (code block or image)
+
+    ⤷ `pre block`
+
+      | Requires `markdown` fenced code block;
+
+      A markdown fenced code block that will compile to our highlighted
+      code with Pandoc. What does this code do?
+-------------------------------------------------------------------------- -->
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span> alias Model</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  { dieFace : <span class="dv">1</span> }</span></code></pre></div>
+<pre class="terminal"><code>&gt; Model
+...</code></pre>
+<!-- Back of card ======================================================== -->
+<!-- -------------------------------------------------------------------------
+    ★ Key point (code block or image)
+
+    ⤷ `pre block`
+
+      | Requires `markdown` fenced code block;
+
+      A markdown fenced code block that will compile to our highlighted
+      code with Pandoc. The output or answer to the above question.
+-------------------------------------------------------------------------- -->
+<pre class="terminal"><code>&lt;function&gt; : Int -&gt; Model</code></pre>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Model</span> <span class="dv">1</span>  <span class="co">-- { dieFace = 1 } : Model</span></span></code></pre></div>
+<!-- -------------------------------------------------------------------------
+    ★ Key point notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<p>When we create a <code>record</code> as a <code>type alias</code>, we
+get a <strong>constructor function</strong> for free! This allows us to
+generate a record using the <code>type</code> name.</p>
+<!-- -------------------------------------------------------------------------
+    ✎ Other notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<p>…</p>
+<!-- -------------------------------------------------------------------------
+    ✎ Markdown
+
+    ⤷ `raw text`
+
+      Do not add the compiled HTML to your card, rather, use the raw text
+      Markdown fenced code block. This makes for easier editing of a card
+      later on.
+
+      Warning: may increase card file size
+        @ https://github.com/badlydrawnrob/anki/issues/116
+-------------------------------------------------------------------------- -->
+<p>false</p>

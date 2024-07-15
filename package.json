@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
-    "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
+    "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
+    "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "pandoc": "npm run pandoc-code && npm run simple-data && npm run missing-data",
-    "pandoc-code": "pandoc source/pandoc/code.md -o ./build/data/code.html",
-    "pandoc-code-reverse": "pandoc source/pandoc/code.html -o ./build/data/code.md",
-    "simple-data": "pandoc --from markdown --to html --template=./source/pandoc/template.html source/themes/cards/simple/simple.md -s -o ./build/data/simple-data.html",
-    "missing-data": "pandoc --from markdown --to html --template=./source/pandoc/template.html source/themes/cards/missing/missing.md -s -o ./build/data/missing-data.html",
-    "build": "npm run simple && npm run missing && npm run css"
+    "pandoc": "npm run data-code && npm run data-code-reverse && npm run data-simple && npm run data-missing",
+    "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
+    "data-code-reverse": "pandoc source/data/data-code.html -o ./build/data/data-code.md",
+    "data-simple": "pandoc --from markdown-auto_identifiers source/data/data-simple.md -o ./build/data/data-simple.html",
+    "data-missing": "pandoc --from markdown-auto_identifiers source/data/data-missing.md -o ./build/data/data-missing.html",
+    "build": "npm run demo-simple && npm run demo-missing && npm run css"
   },
   "repository": {
     "type": "git",

@@ -1,25 +1,39 @@
----
-title:
-  Simple Card Data
-card type: |
-  A simple `question->answer` card;
-  we're asking the question: "what does this code do?", e.g:
+<!-- Front of card ===========================================================
 
-  - A function with an output you have to guess,
-  - A class with a method that you need to call.
-card key: |
-  ★ Required,
-  ☆ Optional (recommended),
-  ✎ Optional (notes, markdown),
-  ⤷ Field Type.
-docs:
-  http://tinyurl.com/anki-simple-card
-notes: |
-  Compile with `npm run pandoc`.
-  View compiled file in your text editor or a Chrome-type browser.
-  The `## H2` titles represent Anki text fields, with the contents below.
-css: ../style/main.css
----
+    Simple Card Data
+
+    - Type:
+        What's the answer?
+        A simple question->answer card;
+        we're asking the question: "what does this code do?", e.g:
+
+        - A function with an output you have to guess.
+        - A class with a method that you need to call.
+
+    - Docs:
+        http://tinyurl.com/anki-simple-card
+
+    - Key:
+        ★ Required
+        ☆ Optional (recommended)
+        ✎ Optional (notes, markdown)
+        ⤷ Field Type
+
+    - Notes:
+        Where fields are auto-wrapped with an HTML tag, copy/paste the compiled
+        data _within_ those tags in your Anki fields, otherwise you'll have
+        formatting issues. For example:
+
+            `★ Title` field:
+
+            <h1>What happens is we type <code>Model</code> in the repl?</h1>
+                -------------------------------------------------------
+            xxxx                                                       xxxxx
+
+        Compiled data is simple meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+
+========================================================================== -->
 
 
 <!-- -------------------------------------------------------------------------
@@ -27,9 +41,7 @@ css: ../style/main.css
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-## ★ Title
-
-What will each <code>residents[<b>'key'</b>]</code> print out?
+# What happens if we type `Model` in the repl?
 
 
 <!-- -------------------------------------------------------------------------
@@ -37,9 +49,7 @@ What will each <code>residents[<b>'key'</b>]</code> print out?
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## ☆ Subtitle
-
-Dictionaries
+## Type Alias
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,48 +57,48 @@ Dictionaries
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-## ☆ Syntax (inline code)
-
-d = {<b>'key'</b>: <i>value</i>}
+`type alias Model`
 
 
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block or image)
 
-    ⤷ `code block | image`
+    ⤷ `pre block`
 
       | Requires `markdown` fenced code block;
 
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-## ★ Sample (code block or image)
-
 ```python
-residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
-
-print(residents['Puffin'])
-print(residents['Sloth'])
-print(residents['Burmese Python'])
+type alias Model
+  { dieFace : 1 }
 ```
+```terminal
+> Model
+...
+```
+
+
+
+<!-- Back of card ======================================================== -->
 
 
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block or image)
 
-    ⤷ `code block | image`
+    ⤷ `pre block`
 
       | Requires `markdown` fenced code block;
 
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-## ★ Key point (code block or image)
-
-```text
-104
-105
-106
+```terminal
+<function> : Int -> Model
+```
+```elm
+Model 1  -- { dieFace = 1 } : Model
 ```
 
 
@@ -97,22 +107,14 @@ print(residents['Burmese Python'])
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-## ★ Key point notes
-
-Access a **dictionary** item with it's `key`, which returns it's `value`.
-
-A dictionary is similar to a list, but you access values by looking up a key instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces `{ }`.
-
+When we create a `record` as a `type alias`, we get a **constructor function** for free! This allows us to generate a record using the `type` name.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-## ✎ Other notes
-
-**Warning:** [Never search for a value in a dictionary using a for loop](https://jeffknupp.com/blog/2015/08/30/python-dictionaries)!
-
+...
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
@@ -126,6 +128,4 @@ A dictionary is similar to a list, but you access values by looking up a key ins
       Warning: may increase card file size
         @ https://github.com/badlydrawnrob/anki/issues/116
 -------------------------------------------------------------------------- -->
-## ✎ Markdown
-
 false

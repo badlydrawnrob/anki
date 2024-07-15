@@ -1,0 +1,166 @@
+<!-- Front of card ===========================================================
+
+    Missing! Card Data
+
+    - Type:
+        A question with a [missing] word;
+
+        - A missing function or expression you have to guess,
+        - A missing input or output to remember.
+
+    - Docs:
+        http://tinyurl.com/anki-missing-card
+
+    - Key:
+        ★ Required
+        ☆ Optional (recommended)
+        ✎ Optional (notes, markdown)
+        ⤷ Field Type
+
+    - Notes:
+        Where fields are auto-wrapped with an HTML tag, copy/paste the compiled
+        data _within_ those tags in your Anki fields, otherwise you'll have
+        formatting issues. For example:
+
+            `★ Title` field:
+
+            <h1>We’ve changed from <code>Browser.sandbox</code> to <code>Browser.element</code>. What’s changed?</h1>
+                ------------------------------------------------------------------------------------------------
+            xxxx                                                                                                xxxxx
+
+        Compiled data is simple meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+
+========================================================================== -->
+<!-- -------------------------------------------------------------------------
+    ★ Title
+
+    ⤷ `string` (auto wrapped with a `H1` tag)
+-------------------------------------------------------------------------- -->
+<h1>We’ve changed from <code>Browser.sandbox</code> to
+<code>Browser.element</code>. What’s changed?</h1>
+<!-- -------------------------------------------------------------------------
+    ☆ Subtitle
+
+    ⤷ `string` (auto wrapped with a `H2` tag)
+-------------------------------------------------------------------------- -->
+<h2>Commands</h2>
+<!-- -------------------------------------------------------------------------
+    ☆ Syntax (inline code)
+
+    ⤷ `code string` (auto wrapped with <p><code> tag)
+-------------------------------------------------------------------------- -->
+<p><code>Cmd</code></p>
+<!-- -------------------------------------------------------------------------
+    ★ Key point (code block or image)
+
+    ⤷ `pre block | image`
+
+      | Requires `markdown` fenced code block;
+      | Requires `{{c1::cloze}}` tag(s))
+
+      A markdown fenced code block that will compile to our highlighted
+      code with Pandoc. Make sure to add at least one cloze deletion:
+
+        `{{c1::the answer::HINT TEXT}}`
+
+      Here's an example cloze card:
+
+        @ https://codepen.io/testuser-247585903/pen/BabRjvb
+
+      You can add cloze deletion tags to the fenced code block and
+      they should work fine in Anki. You can also:
+
+      1. `Toggle HTML Editor ⌘⇧X` (`‹›`) to enable rich text preview
+      2. Highlight the text that you'd like to convert to a cloze.
+      3. Press the `[...]` or `[...]+` button to add the cloze deletion
+
+      !# Warning: These buttons may break your code:
+        @ https://github.com/badlydrawnrob/anki/issues/132
+-------------------------------------------------------------------------- -->
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- other imports here</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Browser</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span> <span class="kw">exposing</span> (<span class="dt">Html</span><span class="op">,</span> <span class="fu">button</span><span class="op">,</span> <span class="fu">div</span><span class="op">,</span> <span class="fu">text</span><span class="op">,</span> <span class="fu">img</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Attributes</span> <span class="kw">exposing</span> (<span class="op">..</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Events</span> <span class="kw">exposing</span> (<span class="fu">onClick</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Random</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Array</span> <span class="kw">exposing</span> (<span class="dt">Array</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">-- A bunch of other stuff:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">--   2. A `viewThumbnail string` -&gt; `Html Msg` (an image)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">--   3. A `getPhoto` that returns `Just Photo` (i.e: &quot;1.jpeg&quot;)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">--   4. Of course, our `Model`, `View`, `Update` etc</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ClickedButton</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">GotSelectedIndex</span> <span class="dt">Int</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">randomPhoto</span> : <span class="dt">Random</span><span class="op">.</span><span class="dt">Generator</span> <span class="dt">Int</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">randomPhoto</span> <span class="op">=</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Random</span><span class="op">.</span><span class="fu">int</span> <span class="dv">0</span> (<span class="dt">Array</span><span class="op">.</span><span class="fu">length</span> <span class="fu">arrayOfPhotos</span> <span class="op">-</span> <span class="dv">1</span>)  <span class="co">-- Returns a random index</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> (<span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ClickedButton</span> <span class="op">-&gt;</span>  <span class="co">-- Generates a `Cmd` and returns a `Msg`</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      ( <span class="fu">model</span><span class="op">,</span> <span class="dt">Random</span><span class="op">.</span><span class="fu">generate</span> <span class="dt">GotSelectedIndex</span> <span class="fu">randomPhoto</span> )  <span class="co">-- Gets random Photo</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">GotSelectedIndex</span> <span class="fu">index</span> <span class="op">-&gt;</span>  <span class="co">-- Updates the model from a `Msg`</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      ( { <span class="fu">model</span> <span class="op">|</span> <span class="fu">selectedUrl</span> <span class="op">=</span> (<span class="fu">getPhoto</span> <span class="fu">index</span>) }<span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span> )  <span class="co">-- Returns a Photo</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span> : <span class="dt">Program</span> () <span class="dt">Model</span> <span class="dt">Msg</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span> <span class="op">=</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Browser</span><span class="op">.</span><span class="fu">element</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    { <span class="fu">init</span> <span class="op">=</span> \<span class="fu">flags</span> <span class="op">-&gt;</span> ( <span class="fu">initialModel</span><span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span> )</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">view</span> <span class="op">=</span> <span class="fu">view</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">update</span> <span class="op">=</span> <span class="fu">update</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">subscriptions</span> <span class="op">=</span> \<span class="fu">model</span> <span class="op">-&gt;</span> <span class="dt">Sub</span><span class="op">.</span><span class="fu">none</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<!-- -------------------------------------------------------------------------
+    ★ Key point notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<ol type="1">
+<li><code>Browser.sandbox</code> lets us “stay within the world of
+Elm”</li>
+<li>To use functions that have side-effects like <code>Random</code> we
+need <code>Cmd</code>.</li>
+<li>For <em>that</em>, we switch from <code>Browser.sandbox</code> to <a
+href="https://guide.elm-lang.org/effects/"><code>Browser.element</code></a></li>
+<li>This allows us to interact with the outside world (and it’s
+data).</li>
+</ol>
+<p>You can see the <a
+href="https://ellie-app.com/qbXb7HZtxpya1">simplified full program
+here</a>.</p>
+<!-- -------------------------------------------------------------------------
+    ✎ Other notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<p>You can see <a
+href="http://tinyurl.com/elm-lang-convert-update-tuple">how we
+transformed a update function</a> with a regular <code>Model</code> to a
+tuple with a <code>(Model, Cmd Msg)</code>. <strong>More on <a
+href="https://elmprogramming.com/commands.html"><code>commands</code>
+here</a></strong></p>
+<!-- -------------------------------------------------------------------------
+    ✎ Markdown
+
+    ⤷ `raw text`
+
+      Do not add the compiled HTML to your card, rather, use the raw text
+      Markdown fenced code block. This makes for easier editing of a card
+      later on.
+
+      Please be careful:
+
+        Warning: remove all `{{c1:cloze}}` cloze deletion tags!
+
+      If you save your card with cloze deletion tags in the `★ Markdown`
+      field, Anki will throw an error, and you might not be able to save
+      your card.
+-------------------------------------------------------------------------- -->
+<p>false</p>
