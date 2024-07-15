@@ -1,3 +1,18 @@
+# I'm simplifying how things work (in the next version)
+
+- Mostly discontinuing "professional" documentation
+- Don't scare off beginners, make it "easy to buy"
+- Allow a little flexibility for typography and code highlighting themes
+- The "professionals" should be smart enough to figure out how to:
+    - Extend the themes
+    - Create their own
+    - And so on.
+- But I'm refocusing on ease of use, and core features (learning to code)
+
+**I'm not getting a huge amount of user interactions, so I have no idea how people are (or are not) using this repo.** Hopefully there's some of the 700+ people who are still having fun with this. Let's see.
+
+Get in touch if you're one of the few people extending this theme!
+
 # Becoming a professional programmer!
 
 - [Home](../../../README.md)
