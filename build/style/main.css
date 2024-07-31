@@ -917,10 +917,10 @@ code.sourceCode > span > a:first-child::before {
   font-style: italic;
 }
 :root {
-  --color-card-l: #fff;
-  --color-card-ll: #eceff1;
-  --color-card-lll: #bdbdbd;
-  --color-card-llll: #757575;
+  --color-card-l: #757575;
+  --color-card-ll: #bdbdbd;
+  --color-card-lll: #eceff1;
+  --color-card-llll: #fff;
   --color-code-dark-palette-01: #f8f8f8;
   --color-code-dark-palette-02: #777777;
   --color-code-dark-palette-03: #272822;
@@ -1209,8 +1209,8 @@ img {
   text-align: center;
   justify-content: space-evenly;
   align-items: baseline;
-  background: var(--color-card-ll);
-  border: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-lll);
+  border: var(--spacing-px) solid var(--color-card-lll);
   border-bottom: transparent;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -1224,8 +1224,8 @@ img {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  border-bottom: var(--spacing-px) solid var(--color-card-lll);
-  background: var(--color-card-l);
+  border-bottom: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-llll);
 }
 .simple-Header_Title:only-child {
   margin-bottom: 0;
@@ -1272,8 +1272,12 @@ img {
 }
 .simple-KeyPoint_Notes code {
   color: var(--color-bbb);
-  background: var(--color-lll);
+  background: var(--color-ll);
   padding: var(--spacing-micro) var(--spacing-half);
+}
+.simple-KeyPoint_Notes pre code {
+  text-align: left;
+  background: transparent;
 }
 .simple-Sample pre,
 .simple-Sample pre code,
@@ -1292,7 +1296,7 @@ img {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -1309,7 +1313,7 @@ img {
 .simple-KeyPoint_Notes {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   font-size: var(--font-size-m);
   text-align: center;
 }
@@ -1325,7 +1329,7 @@ img {
 .simple-Notes {
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
-  color: var(--color-card-llll);
+  color: var(--color-card-l);
   font-size: var(--font-size-m);
 }
 .missing {
@@ -1377,8 +1381,12 @@ img {
 }
 .missing-KeyPoint_Notes code {
   color: var(--color-bbb);
-  background: var(--color-lll);
+  background: var(--color-ll);
   padding: var(--spacing-micro) var(--spacing-half);
+}
+.missing-KeyPoint_Notes pre code {
+  text-align: left;
+  background: transparent;
 }
 .missing-KeyPoint_Code pre,
 .missing-KeyPoint_Code pre code {
@@ -1394,8 +1402,8 @@ img {
   text-align: center;
   justify-content: space-evenly;
   align-items: baseline;
-  background: var(--color-card-ll);
-  border: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-lll);
+  border: var(--spacing-px) solid var(--color-card-lll);
   border-bottom: transparent;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -1409,8 +1417,8 @@ img {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  border-bottom: var(--spacing-px) solid var(--color-card-lll);
-  background: var(--color-card-l);
+  border-bottom: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-llll);
 }
 .missing-Header_Title:only-child {
   margin-bottom: 0;
@@ -1429,7 +1437,7 @@ img {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -1443,7 +1451,7 @@ img {
 .missing-KeyPoint_Notes {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   font-size: var(--font-size-m);
   text-align: left;
 }
@@ -1459,7 +1467,7 @@ img {
 .missing-Notes {
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
-  color: var(--color-card-llll);
+  color: var(--color-card-l);
   font-size: var(--font-size-m);
   text-align: left;
 }

@@ -71,8 +71,13 @@ code {
 
   .missing-KeyPoint_Notes & {
     color: var(--color-bbb);
-    background: var(--color-lll);
+    background: var(--color-ll);
     padding: var(--spacing-micro) var(--spacing-half);
+  }
+
+  .missing-KeyPoint_Notes pre & {
+    text-align: left;
+    background: transparent;
   }
 }
 
@@ -95,8 +100,8 @@ pre code {
   text-align: center;
   justify-content: space-evenly;
   align-items: baseline;
-  background: var(--color-card-ll);
-  border: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-lll);
+  border: var(--spacing-px) solid var(--color-card-lll);
   border-bottom: transparent;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -111,8 +116,8 @@ pre code {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  border-bottom: var(--spacing-px) solid var(--color-card-lll);
-  background: var(--color-card-l);
+  border-bottom: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-llll);
 
   &:only-child {
     margin-bottom: 0;
@@ -135,7 +140,7 @@ pre code {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -158,7 +163,7 @@ pre code {
 .missing-KeyPoint_Notes {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
-  background: var(--color-card-ll);
+  background: var(--color-card-lll);
   font-size: var(--font-size-m);
   text-align: left;
 
@@ -175,7 +180,7 @@ pre code {
 .missing-Notes {
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
-  color: var(--color-card-llll);
+  color: var(--color-card-l);
   font-size: var(--font-size-m);
   text-align: left;
 
