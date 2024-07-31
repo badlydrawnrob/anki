@@ -1,7 +1,7 @@
 // Notes ====================================================================
 // Some simple styles to mock the Anki app
 //
-// #1: View the baseline grid
+// #1: Here we're doing some resets for our demo ONLY.
 
 .test-Anki {
   margin: var(--spacing-one);
@@ -23,6 +23,16 @@
 .test-AnkiCard-Reverse {
   .simple-Sample pre {
     margin-bottom: 0
+  }
+
+  .nightmode & {
+    color: var(--color-nightmode-text-color);
+    border: 1px solid var(--color-nightmode-border);
+
+    .anki-Front,
+    .anki-Reverse {
+      border: transparent;  // #! 1
+    }
   }
 }
 

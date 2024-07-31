@@ -11,6 +11,15 @@
 // #5: Skylighting classes
 //     - Using Pandoc Skylighting `../partials/skylighting.less`
 //     - Other code defaults set in `partials/code`
+// #6: Dark mode colours
+//     You want MINIMAL changes to the base code, so you don't screw up the
+//     inheritance of other chunks of css. Also known as "Night Mode".
+//     - Dependant on user's settings. In MacOS you can change by going to:
+//       `System Preferences -> General -> Appearance -> Dark`
+// #7: We should aim to be consistant with our colour pallette, but I don't
+//     think it's a great idea to inherit tokens from other `--color-` variables?
+//     - If those variables are removed, our others will fail silently.
+//     - The `print-first-css` ones are fairly solid, so leave them for now.
 
 // #2
 --color-card-l: #757575;
@@ -66,3 +75,13 @@
 --color-code-dark-variable: var(--color-code-dark-palette-06);         // Variable
 --color-code-dark-verbatim-string: var(--color-code-dark-palette-04);  // VerbatimString
 --color-code-dark-warning: var(--color-code-dark-palette-02);          // #! Warning
+
+
+// #6
+--color-nightmode-background-d: #222;
+--color-nightmode-background-dd: #272822;
+--color-nightmode-background-ddd: #101010;
+--color-nightmode-background-dddd: #000;
+--color-nightmode-text: var(--color-llll);  // #! 7
+--color-nightmode-text-light: var(--color-bb);
+--color-nightmode-border: var(--color-l);
