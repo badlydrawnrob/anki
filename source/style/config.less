@@ -1,9 +1,9 @@
 // Config ======================================================================
 // Sets up the `print-first-css` framework and variables: https://bit.ly/2TpdSaL
-// #1: pull in the mixins file, too
+// We're not worried about `grid-baseline` here (from print-first-css)
 
-@import (less) "../../node_modules/print-first-css/source/style/modules/mixins/grid-baseline";  // #1
-@import (less) "../../node_modules/print-first-css/build/style/print-first.css";
+// @import (less) "../../node_modules/print-first-css/build/style/print-first.css";
+@import (less) "../../../print-first-css/build/style/print-first.css";  // #! Only used for local development!
 
 
 // Modules =====================================================================
