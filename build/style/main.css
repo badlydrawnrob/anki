@@ -19,7 +19,7 @@
   --color-code-light-palette-05: var(--color-bbbb);
   --color-code-light-palette-06: var(--color-bbbb);
   --color-code-light-palette-07: var(--color-bbbb);
-  --color-code-light-background: var(--color-code-light-palette-03);
+  --color-code-light-background: var(--color-lll);
   --color-code-light-alert: var(--color-code-light-palette-01);
   --color-code-light-annotation: var(--color-code-light-palette-01);
   --color-code-light-attribute: var(--color-code-light-palette-07);
@@ -33,7 +33,8 @@
   --color-code-light-documentation: var(--color-code-light-palette-04);
   --color-code-light-data-type: var(--color-code-light-palette-04);
   --color-code-light-dec-val: var(--color-code-light-palette-05);
-  --color-code-light-error: var(--color-code-light-palette-01) --color-code-light-extension: var(--color-code-light-palette-01);
+  --color-code-light-error: var(--color-code-light-palette-01);
+  --color-code-light-extension: var(--color-code-light-palette-01);
   --color-code-light-float: var(--color-code-light-palette-05);
   --color-code-light-function: var(--color-code-light-palette-07);
   --color-code-light-import: var(--color-code-light-palette-01);
@@ -580,7 +581,7 @@ kbd {
   code,
   kbd {
     border-radius: var(--border-radius);
-    background-color: var(--color-lll);
+    background-color: var(--color-code-light-background);
   }
 }
 pre {
@@ -597,7 +598,7 @@ pre {
 @media screen {
   pre {
     white-space: pre;
-    background: var(--color-lll);
+    background: var(--color-code-light-background);
     border-color: transparent;
   }
 }
@@ -921,6 +922,7 @@ code.sourceCode > span > a:first-child::before {
   --color-card-ll: #bdbdbd;
   --color-card-lll: #eceff1;
   --color-card-llll: #fff;
+  --color-code-light-background: #ffffcc;
   --color-code-dark-palette-01: #f8f8f8;
   --color-code-dark-palette-02: #777777;
   --color-code-dark-palette-03: #272822;
