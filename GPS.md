@@ -1,6 +1,150 @@
 Moving on from ECSS
 ===================
 
+## Problems
+
+> It's quite a big job switching out frameworks.
+> It takes time to figure out how to tackle fringe cases,
+> Or to do justice to the _theory_, whichever one you've chosen!
+> Perhaps our `.card` isn't suited to GPS? (cards share a lot of styles)
+
+It's not a good idea to repeat HTML when you can get away without doing that. This means your code is living in two or more places. See Tailwind's "reusing styles" post. Ideally use:
+
+1. A loop
+2. A component
+3. Some kind of conditional css (depending on type of card)
+
+Another big question is "how many nested classes do you need for a global component?". GPS seems to say "very few!" and using regular (raw) html with a wrapping `.gl-` class.
+
+For instance ...
+
+Is the `.header` part of the `.card` or are they separate entities? Well, it definitely _feels_ part of the card, as the card has a header. I'm not sure about that. But if `.header` has a class, then the `h1` doesn't really need one. It's inside the `.header` and if it gets changed, we throw out those styles.
+
+### A solution (I think)
+
+1. The `.gl-Card` is shared amongst all card types.
+2. The `.gl-Header` is _almost_ the same with all cards
+3. The `pre code` blocks however, change depending on the card. But not much.
+    - This is the only part that is likely to change ...
+    - For instance, the `Draw!` card will host an `img`, or an `occlusion` (a special kind of image)
+    - This would likely need to be a `#section` or a `.gl-` type that has variations.
+4. It says in `GPS` that a `#section` needs to be nested inside a `#page` (in our case, a `#card`) so bear this in mind.
+5. In either case with `(3)` and `(4)`, our CSS doesn't really do much at all; simply has a `pre` inside it without any margins. But if we _did_ need to do something with that wrapper, it'd need to be like `(4)` says!
+    - For now, as it doesn't really _do_ anything, I think it's safe to have as a `gl-` type.
+
+
+#### (3), (4), (5) — the original code
+
+> There different _conceptually_, but essentially the exact same CSS code.
+> If you were in Elm, it's likely the models would differ.
+
+```html
+<!-- The simple card -->
+<div class="simple-Sample">
+  {{★ Sample (code block)}}
+</div>
+```
+
+```html
+<!-- The Missing! card -->
+<div class="missing-KeyPoint"> <!-- There's no CSS for this at all -->
+  <div class="missing-KeyPoint_Code">  <!-- Same CSS as `.simple-Sample` -->
+    {{cloze:★ Key point (code block)}}
+  </div>
+</div>
+```
+
+### Another (better?) example
+
+With the Simple card, we have:
+
+```html
+<div id="front" class="anki-Front">
+  <!-- other stuff here -->
+    <div class="simple-Sample">
+      {{{★ Sample (code block)}}}
+    </div>
+  </section>
+</div>
+<section id="answer" class="simple simple-reverse">
+  <div class="simple-KeyPoint">
+    <div class="simple-KeyPoint_Code">
+      {{{★ Key point (code block)}}}
+    </div>
+    <div class="simple-KeyPoint_Notes">
+      {{{★ Key point notes}}}
+    </div>
+  </div>
+  <!-- other stuff here -->
+</section>
+```
+
+Whereas the Missing! card just needs the exact same field (`{{ }}`) for the front and the reverse card (perhaps `gl-Front` should be a unique `#missing-front` and `#simple-front` page level id?). You can see the similarity in the reverse here:
+
+```html
+<!-- This uses the exact same Key Point field on the front
+ as it does on the reverse! -->
+<div class="missing-KeyPoint">
+  <div class="missing-KeyPoint_Code">
+    {{cloze:★ Key point (code block)}}
+  </div>
+  <div class="missing-KeyPoint_Notes">
+    {{★ Key point notes}}
+  </div>
+</div>
+```
+
+### The problems with these card tags
+
+When we used to use `{{FrontSide}}` (in the reverse card) where we had a `.anki-Front` tag on front template, this class becomes a child of `gl-Reverse` on the reverse of the card.
+
+Obviously this doesn't make sense as `.anki-Front` has a border in `.nightmode` and it was awkward to remove that border and place it on `.anki-Reverse`.
+
+So perhaps `{{FrontSide}}` is very useful when cards are simple, but when they become more complex cards it might not make sense to use it.
+
+### A good candidate for `#section`
+
+> Both Simple and Missing have `.anki-Reverse` but only one (Simple) requires collapsing two `pre` blocks (because Missing only has one `pre` block!)
+
+```html
+.anki-Reverse {
+  .simple-Sample pre {
+    margin-bottom: 0
+  }
+```
+
+## Questions
+
+### Is that a `global` element or a `section`?
+
+> **Notice how there’s no nesting here.** The only time you should see nesting in the global CSS file is if you are handling some sort of hover or active properties, or if you have a global style that comprises multiple elements (which, to be fair, does definitely happen). These are all re-useable styles across the entire site.
+
+A section (I think) is supposed to be seen once, and only once. So a `.card` and it's elements should be a `.gl-`obal element?
+
+But does the above quote mean that `.gl-` elements should'nt be nested? Or just that it needs more styles for child elements, which aren't nested?
+
+### Can a `#section` be seen on multiple pages?
+
+> If you are writing styling that applies only to one specific section, **it should be nested under at least 2 levels of ids** — the page id and the section id.
+
+Would you use a `.gl-` for a card, or a `#section` that repeats on multiple card templates? To me that quote seems to say "NO" because it'd be nested under page (or card) specific styles `#CARD-TYPE > #SECTION`.
+
+## Thoughts
+
+**I still need to decide _where_ to put the css files** as it's quite nice to have them next to their "components", or their "pages". Our `styles/partials` are where all raw HTML level styles go (which could be classed as global), but our `.gl-`obal styles should be treated a bit differently. They live in a specific file or folder for design-system stuff. A bit like Pico CSS.
+
+For instance, typography should live in `style/partials/headings.less` for example. So that's our base. It'd be useful to have a specimen file for these raw styles.
+
+We currently have for example:
+
+```html
+ <section class="simple simple-front">
+```
+
+With `simple-reverse` on the reverse card. But this is premature optimisation, as they're both exactly the same! I think that follows on `ECSS` style variation; `-active` would be another version of this.
+
+
+
 > 1. Need to rename card field for code block (rename image)
 > 2. Stop using `{{FrontSide}}`. It's convenient but requires keeping TWO templates ...
 > 3. ...  Which means reusing styles (like the Tailwind article says) becomes harder
@@ -39,9 +183,48 @@ What GPS is trying to achieve
 > By far the largest issue developers have with CSS are what I like to call scope leaks.
 > These happen when you write styles for one specific section of a website, but because of the way you made the selection, the styles also affect elements on other random parts of the site. This is a side effect of CSS being written in the global scope by default.
 
+### Global styles
+
+> For this I'm still using `ECSS` naming convention of `global-CapitalCase`. Elm lang uses CamelCase too.
+
+Some styles are used in multiple places across a website. For example, your `h1` element might consistently look the same (and it should!), or you might have a `.box` class that wraps a piece of content in an elegant box, or a `.button` that creates a standard button on your site. These are good candidates for global styles. Global styles are great, they give a sense of unity to your site, and should be used frequently. If you’ve seen something like a brand manual or style guide, everything within represents global styles.
+
+Should always be classes, and styles should only be defined as global if and only if they appear on multiple different pages.
+
+I'm going to name these `.gl-` (based on ECSS)
+
+## Page
+
+You should probably have a unique `#id` for a page or view element, and all page-level styles (that are not global elements) should live here. Any CSS that you write that is not global should always be scoped under a page or view’s id.
+
+Ids are intended to be used for elements that only appear once per page — it is invalid html to have more than one of the same id on a page.
+
+## Section
+
+> If you are writing styling that applies only to one specific section, it **should be nested under at least 2 levels of ids — the page id and the section id.** This is the default place you should put code if you aren’t sure, as there is no chance of a scope leak for code here.
+>
+> If later on you notice that the same style is actually used elsewhere on the same page, you can pull it up to a page-specific style.
+>
+>And if you notice it being used on other pages, you can pull it up to global.
+>
+> **If you are copy-pasting blocks of CSS in order to get around this problem you are doing it wrong.**
+
+A non-reusable section or element that is page-specific, and isn't going to be reused across the site.
+
+“a unique section
+within a page”. For example, on your about page, you might have a portion that contains an introductory paragraph, then a section that has some of your company’s staff, and a section that has some of the clients you’ve worked with.
+
+since there can only be one of them per page, these are also marked with ids.
+
+
+
 Pandoc's being a pain
 ---------------------
-For some reason whitespace inside a `<div>` gives an error when using `-o` with a standalone file.
+
+> Pandoc changes `<header>` to `<section>` and I don't know why.
+> What's the best way to compile files with imports (but not fuck up the HTML)?
+
+For some reason whitespace inside a `<div>` gives an error when using `-o` with a standalone file. I think it's probably treating it as an indentation code block, rather than plain html.
 
 ```terminal
 [WARNING] Could not deduce format from file extension .mustache
