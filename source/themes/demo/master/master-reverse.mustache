@@ -1,28 +1,16 @@
-<!-- Master card: reverse
-     ====================
-
-     I've ripped out the `{{FrontSide}}` tag here, as only the Simple card
-     type uses it. The Missing! card type can't really use the `{{FrontSide}}`
-     tag because of the way the template is set up.
-
-     So for ease of sharing styles, we'll simply replicate the front code on
-     the reverse of the card.
-
--->
-
 <div class="anki-Reverse">
   <section id="CARD-TYPE" class="gl-Card">
     <header class="gl-Card_Header">
-      <h1>{{★ Title}}</h1>
+      <h1>{{{★ Title}}}</h1>
       {{#☆ Subtitle}}
-        <h2>{{☆ Subtitle}}</h2>
+        <h2>{{{☆ Subtitle}}}</h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
-        <p><code>{{☆ Syntax (inline code)}}</code></p>
+        <p><code>{{{☆ Syntax (inline code)}}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
     <div class="gl-CodeBlock">
-      {{★ Sample (code block)}}
+      {{{★ Sample (code block)}}}
     </div>
 
     <!-- ANSWER #! previously we had two `<sections>` one for front
@@ -31,14 +19,14 @@
     <div id="answer">
       <div class="gl-Card_KeyPoint">
         <div class="gl-CodeBlock">
-          {{★ Key point (code block)}}
+          {{{★ Key point (code block)}}}
         </div>
         <div class="gl-Card_KeyPointNotes">
-          {{★ Key point notes}}
+          {{{★ Key point notes}}}
         </div>
       </div>
       {{#✎ Other notes}}
-        <footer>{{✎ Other notes}}</footer>
+        <footer>{{{✎ Other notes}}}</footer>
       {{/✎ Other notes}}
     </div>
   </section>

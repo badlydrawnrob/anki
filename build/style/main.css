@@ -918,6 +918,8 @@ code.sourceCode > span > a:first-child::before {
   font-style: italic;
 }
 :root {
+  --color-code-light-highlight: #f12056;
+  --color-code-light-lowlight: #a877ff;
   --color-card-l: #757575;
   --color-card-ll: #bdbdbd;
   --color-card-lll: #eceff1;
@@ -1008,6 +1010,20 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-header);
+}
+h1 {
+  font-weight: 700;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
+}
+h2 {
+  font-weight: normal;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-transform: none;
+  letter-spacing: normal;
 }
 pre.sourceCode .numberSource {
   margin-left: 3em;
@@ -1205,172 +1221,11 @@ img {
   max-width: 100%;
   height: auto;
 }
-.nightmode .anki-Front {
-  color: var(--color-nightmode-text);
-  border: 1px solid var(--color-nightmode-border);
-}
 .anki-Reverse .simple-Sample pre {
   margin-bottom: 0;
 }
-.nightmode .anki-Reverse {
-  color: var(--color-nightmode-text-color);
-  border: 1px solid var(--color-nightmode-border);
-}
 .nightmode .anki-Reverse .anki-Front {
   border: transparent;
-}
-.simple {
-  border-radius: var(--border-radius);
-}
-.simple-Header {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-evenly;
-  align-items: baseline;
-  background: var(--color-card-lll);
-  border: var(--spacing-px) solid var(--color-card-lll);
-  border-bottom: transparent;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-}
-.nightmode .simple-Header {
-  background: var(--color-nightmode-background-ddd);
-  border: transparent;
-}
-.simple-Header_Title {
-  flex: 0 0 100%;
-  margin: 0 0 var(--spacing-one);
-  padding: var(--spacing-half);
-  font-weight: 700;
-  font-size: var(--font-size-p);
-  line-height: var(--line-height);
-  text-transform: none;
-  letter-spacing: normal;
-  border-bottom: var(--spacing-px) solid var(--color-card-ll);
-  background: var(--color-card-llll);
-}
-.simple-Header_Title:only-child {
-  margin-bottom: 0;
-}
-.simple-Header_Title::before {
-  content: '★';
-}
-.simple-Header_Title code {
-  font-size: var(--font-size-p);
-}
-.nightmode .simple-Header_Title {
-  background: var(--color-nightmode-background-dddd);
-}
-.simple-Header_Title code b,
-.simple-Header_Subtitle code b,
-.simple-Header_Code code b,
-.simple-Header_Title code strong,
-.simple-Header_Subtitle code strong,
-.simple-Header_Code code strong,
-.simple-Header_Title code i,
-.simple-Header_Subtitle code i,
-.simple-Header_Code code i,
-.simple-Header_Title code em,
-.simple-Header_Subtitle code em,
-.simple-Header_Code code em {
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  background: none;
-}
-.simple-Header_Title code b,
-.simple-Header_Subtitle code b,
-.simple-Header_Code code b,
-.simple-Header_Title code strong,
-.simple-Header_Subtitle code strong,
-.simple-Header_Code code strong {
-  color: var(--color-code-light-highlight);
-}
-.simple-Header_Title code i,
-.simple-Header_Subtitle code i,
-.simple-Header_Code code i,
-.simple-Header_Title code em,
-.simple-Header_Subtitle code em,
-.simple-Header_Code code em {
-  color: var(--color-code-light-lowlight);
-}
-.simple-KeyPoint_Notes code {
-  color: var(--color-bbb);
-  background: var(--color-ll);
-  padding: var(--spacing-micro) var(--spacing-half);
-}
-.simple-KeyPoint_Notes pre code {
-  text-align: left;
-  background: transparent;
-}
-.nightmode .simple-KeyPoint_Notes pre code {
-  background: transparent;
-}
-.simple-Sample pre,
-.simple-Sample pre code,
-.simple-KeyPoint_Code pre,
-.simple-KeyPoint_Code pre code {
-  text-align: left;
-  color: var(--color-code-dark-base);
-  font-family: var(--font-family-mono);
-  background: var(--color-code-dark-background);
-}
-.nightmode .simple-KeyPoint_Notes pre,
-.nightmode .simple-KeyPoint_Notes pre code {
-  background: var(--color-ll);
-}
-.simple-Header_Subtitle {
-  margin: 0 0 var(--spacing-half);
-  padding: var(--spacing-half);
-  font-weight: normal;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  text-transform: none;
-  letter-spacing: normal;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-}
-.nightmode .simple-Header_Subtitle {
-  color: var(--color-nightmode-text-light);
-}
-.simple-Header_Code {
-  margin: 0 0 var(--spacing-half) 0;
-  padding: var(--spacing-half);
-}
-.simple-Sample pre {
-  margin: 0;
-}
-.simple-KeyPoint_Code pre {
-  margin: 0;
-}
-.simple-KeyPoint_Notes {
-  margin-bottom: var(--spacing);
-  padding: var(--spacing) var(--spacing-one);
-  background: var(--color-card-lll);
-  font-size: var(--font-size-m);
-  text-align: center;
-}
-.simple-KeyPoint_Notes ul,
-.simple-KeyPoint_Notes ol {
-  margin-left: var(--spacing-one);
-  text-align: left;
-}
-.simple-KeyPoint_Notes ul > li,
-.simple-KeyPoint_Notes ol > li {
-  margin-left: var(--spacing-one);
-}
-.nightmode .simple-KeyPoint_Notes {
-  color: var(--color-nightmode-text-light);
-  background: var(--color-nightmode-background-d);
-}
-.simple-Notes {
-  margin-bottom: var(--spacing);
-  padding: 0 var(--spacing-one);
-  color: var(--color-card-l);
-  font-size: var(--font-size-m);
 }
 .missing {
   border-radius: var(--border-radius);
@@ -1532,14 +1387,6 @@ img {
 .test-AnkiCard-Reverse .simple-Sample pre {
   margin-bottom: 0;
 }
-.nightmode .test-AnkiCard-Reverse {
-  color: var(--color-nightmode-text-color);
-  border: 1px solid var(--color-nightmode-border);
-}
-.nightmode .test-AnkiCard-Reverse .anki-Front,
-.nightmode .test-AnkiCard-Reverse .anki-Reverse {
-  border: transparent;
-}
 .test-AnkiCard-Button {
   display: inline-block;
   margin: var(--spacing) 0;
@@ -1578,4 +1425,149 @@ img {
   pointer-events: none;
   box-shadow: none;
   text-shadow: none;
+}
+.gl-Card {
+  background: transparent;
+  border-radius: var(--border-radius);
+}
+.nightmode .gl-Card {
+  color: var(--color-nightmode-text);
+  border: 1px solid var(--color-nightmode-border);
+}
+.gl-Card_Header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: var(--color-card-lll);
+  border: var(--spacing-px) solid var(--color-card-lll);
+  border-bottom: transparent;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.nightmode .gl-Card_Header {
+  background: var(--color-nightmode-background-ddd);
+  border: transparent;
+}
+.gl-Card_Header h1 {
+  flex: 0 0 100%;
+  margin: 0 0 var(--spacing-one);
+  padding: var(--spacing-half);
+  border-bottom: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-llll);
+}
+.gl-Card_Header h1:only-child {
+  margin-bottom: 0;
+}
+.gl-Card_Header h1::before {
+  content: '★';
+}
+.nightmode .gl-Card_Header h1 {
+  background: var(--color-nightmode-background-dddd);
+}
+.gl-Card_Header h2 {
+  margin: 0 0 var(--spacing-half);
+  padding: var(--spacing-half);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.nightmode .gl-Card_Header h2 {
+  color: var(--color-nightmode-text-light);
+}
+.gl-Card_Header p {
+  margin: 0 0 var(--spacing-half) 0;
+  padding: var(--spacing-half);
+}
+.gl-Card_KeyPointNotes {
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-lll);
+  font-size: var(--font-size-m);
+  text-align: center;
+}
+.gl-Card_KeyPointNotes ul,
+.gl-Card_KeyPointNotes ol {
+  margin-left: var(--spacing-one);
+  text-align: left;
+}
+.gl-Card_KeyPointNotes ul > li,
+.gl-Card_KeyPointNotes ol > li {
+  margin-left: var(--spacing-one);
+}
+.nightmode .gl-Card_KeyPointNotes {
+  color: var(--color-nightmode-text-light);
+  background: var(--color-nightmode-background-d);
+}
+.gl-Card footer {
+  margin-bottom: var(--spacing);
+  padding: 0 var(--spacing-one);
+  color: var(--color-card-l);
+  font-size: var(--font-size-m);
+}
+.gl-Card header h1 code b,
+.gl-Card header h2 code b,
+.simple-Header_Code code b,
+.gl-Card header h1 code strong,
+.gl-Card header h2 code strong,
+.simple-Header_Code code strong,
+.gl-Card header h1 code i,
+.gl-Card header h2 code i,
+.simple-Header_Code code i,
+.gl-Card header h1 code em,
+.gl-Card header h2 code em,
+.simple-Header_Code code em {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  background: none;
+}
+.gl-Card header h1 code b,
+.gl-Card header h2 code b,
+.simple-Header_Code code b,
+.gl-Card header h1 code strong,
+.gl-Card header h2 code strong,
+.simple-Header_Code code strong {
+  color: var(--color-code-light-highlight);
+}
+.gl-Card header h1 code i,
+.gl-Card header h2 code i,
+.simple-Header_Code code i,
+.gl-Card header h1 code em,
+.gl-Card header h2 code em,
+.simple-Header_Code code em {
+  color: var(--color-code-light-lowlight);
+}
+.simple-KeyPoint_Notes code {
+  color: var(--color-bbb);
+  background: var(--color-ll);
+  padding: var(--spacing-micro) var(--spacing-half);
+}
+.simple-KeyPoint_Notes pre code {
+  text-align: left;
+  background: transparent;
+}
+.nightmode .simple-KeyPoint_Notes pre code {
+  background: transparent;
+}
+.simple-Sample pre,
+.simple-Sample pre code,
+.simple-KeyPoint_Code pre,
+.simple-KeyPoint_Code pre code {
+  text-align: left;
+  color: var(--color-code-dark-base);
+  font-family: var(--font-family-mono);
+  background: var(--color-code-dark-background);
+}
+.nightmode .simple-KeyPoint_Notes pre,
+.nightmode .simple-KeyPoint_Notes pre code {
+  background: var(--color-ll);
+}
+.gl-CodeBlock pre {
+  margin: 0;
+}
+#simple #answer pre {
+  margin-bottom: 0;
 }

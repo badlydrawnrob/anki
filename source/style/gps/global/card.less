@@ -1,5 +1,10 @@
 // Card ========================================================================
-// Base `.Card` wrapper styles.
+// Base `.Card` wrapper styles and it's children elements.
+//
+// #! HOW MANY LEVELS DEEP SHOULD THE CHILDREN GO?
+//    In GPS he says `.gl-` styles shouldn't be nested. But it seems natural to
+//    give a design system children, and if they're not obvious HTML elements,
+//    such as `<ul><li>` then they'll need a proper class, no?
 //
 // I'm using a bit of a bastardisation of `ECSS` and `GPS`.
 // There doesn't seem to be a silver bullet on how to do it, but it feels quite
@@ -16,6 +21,8 @@
 //
 //     TLDR: If the `.wrapper` is unstyled, should we remove it and name it's
 //           (styled) child element?
+//
+// #3: Is this named correctly? It's nested inside `.gl-Card` -> `_KeyPoint`
 //
 // #! Should our `code` styles be here or someplace else?
 
@@ -97,6 +104,36 @@
 // #2
 .gl-Card_KeyPoint {
   // Pass
+}
+
+// #! #3
+.gl-Card_KeyPointNotes {
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-lll);
+  font-size: var(--font-size-m);
+  text-align: center;
+
+  ul, ol {
+    margin-left: var(--spacing-one);
+    text-align: left;
+
+    > li {
+      margin-left: var(--spacing-one);
+    }
+  }
+
+  .nightmode & {
+    color: var(--color-nightmode-text-light);
+    background: var(--color-nightmode-background-d);
+  }
+}
+
+.gl-Card footer {
+  margin-bottom: var(--spacing);
+  padding: 0 var(--spacing-one);
+  color: var(--color-card-l);
+  font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
 }
 
 // #! TEMPORARY CODE STYLES ----------------------------------------------------

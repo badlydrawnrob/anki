@@ -1,13 +1,15 @@
 // Theme colors ================================================================
-// #1: Inherited from print-first-css:
+// #1: We inherit some styles from `print-first-css`. Edit them.
 //     - Base colors: `--color-b` etc
-//     - Solarized light: `--color-code-light` etc
-// #2: Card colors (we're not inheriting from `--color-l`)
+//     - Monochrome: `--color-code-light` etc
+// #2: Add some card color styles (rather than using `color-l` etc)
 // #3: Monokai dark color palette (slightly modified)
 //     - #! Numbers are harder to rearrange than color names
+//         maybe think about using "tokens" similar to Material Design.
 //     - @ http://tinyurl.com/visual-studio-code-colorize
 // #4: Sets up base code sections
-//     a) Sets up default colour
+//     a) Sets up default colour (for text I think?)
+//        #! BE MORE SPECIFIC WITH YOUR NAMING CONVENTIONS!
 // #5: Skylighting classes
 //     - Using Pandoc Skylighting `../partials/skylighting.less`
 //     - Other code defaults set in `partials/code`
@@ -20,6 +22,11 @@
 //     think it's a great idea to inherit tokens from other `--color-` variables?
 //     - If those variables are removed, our others will fail silently.
 //     - The `print-first-css` ones are fairly solid, so leave them for now.
+
+// #1
+--color-code-light-highlight: #f12056;
+--color-code-light-lowlight: #a877ff;
+
 
 // #2
 --color-card-l: #757575;
@@ -44,6 +51,7 @@
 // #4
 --color-code-dark-background: var(--color-code-dark-palette-03);
 --color-code-dark-base: var(--color-code-dark-palette-01);             // #4a
+
 
 // #5
 --color-code-dark-alert: var(--color-code-dark-palette-08);            // #! Alert

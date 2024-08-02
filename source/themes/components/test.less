@@ -2,6 +2,10 @@
 // Some simple styles to mock the Anki app
 //
 // #1: Here we're doing some resets for our demo ONLY.
+//
+// #! Maybe convert this to a `#test` page? It's going to be repeated two or
+// three times though, so it isn't a unique page. Adding three separate `#id`s
+// would mean code repetition, which isn't desirable.
 
 .test-Anki {
   margin: var(--spacing-one);
@@ -25,15 +29,15 @@
     margin-bottom: 0
   }
 
-  .nightmode & {
-    color: var(--color-nightmode-text-color);
-    border: 1px solid var(--color-nightmode-border);
+  // .nightmode & {
+  //   color: var(--color-nightmode-text-color);
+  //   border: 1px solid var(--color-nightmode-border);
 
-    .anki-Front,
-    .anki-Reverse {
-      border: transparent;  // #! 1
-    }
-  }
+  //   .anki-Front,
+  //   .anki-Reverse {
+  //     border: transparent;  // #! 1
+  //   }
+  // }
 }
 
 .test-AnkiCard-Button {
