@@ -1,6 +1,62 @@
 Moving on from ECSS
 ===================
 
+## To Do
+
+> I can see GPS getting a bit messy (sometimes personal opinion). At least with
+> ECSS you know that everything is going to have a unique class, and the code
+> lives with each page or component. It's much clearer where to put the CSS
+>
+> With GPS it seems fuzzy when to use `.gl` styles or `#id` in some situations.
+> Or even which should be raw html styles and which needs a class or id.
+> **Code order becomes more of a challenge too**, for instance I'm needing the `code` to inherit styles from `h1`, but I want to name styles of `code` altogether.
+> If my code styles (inherit) come _after_ my `h1` styles, will they inherit that header style? **Probably not!**.
+>
+> Sometimes it's best to be explicit and style them insitu (i.e. the `.gl-Card` that they live in, rather than at the root raw html level)
+
+```css
+code {
+  .gl-Card header h1 &,
+  .gl-Card header h2 &,
+  .simple-Header_Code & {
+
+    b, strong,
+    i, em {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+      background: none;
+}
+```
+
+1. Solve the problems with our new system. Make rules concrete.
+2. Make sure folder names and file names make sense.
+    - Why are we using `/modules/` and `/partials/`?
+    - Does it make sense to rename these folders (i.e: simply `variables`)
+    - We're repeating the name `_root.less` twice.
+3. Test out the new GPS styles. Do they work?
+4. How are we going to allow for variations in the master template?
+    - Missing! for cloze tags
+    - Simple for ...
+    - Draw! for image fields
+    - Perhaps we can simply use conditional fields `{{#☆ field}} ... {{/☆ field}}`
+5. Our demo files are our specimen files. Is our design system consistant?
+6. Are there any raw HTML css that should live in `/partials`? Any `.gl` that should be a `#page` or a `#section`?
+7. Remember Elm Lang's lessons: **just because something is _similar_ does not mean it is the same!** When do you _not_ reuse styles?
+8. What happens if much of the code's base is shared? For instance `.test-Anki` is used for all demo cards; `.gl-Card` is used for all demo cards; some bits are dependant on `#card-type` ...
+    - It doesn't seem sensible to me to do something like `#card-type -> .gl-Card` and make changes this way (I don't think it recommends in GPS anyway)
+    - It's also a little bit difficult (without a compiler, which Pandoc might help with) to differentiate cards without having a bit of (or a lot of) HTML code repetition (Tailwind advises against this where possible).
+    - For instance the main bits that are going to change are an `<img>` for Draw! (perhaps slightly different layout); a `{{cloze}}` tag for Missing! and so on.
+    - If a layout is _slightly_ different, does (7) apply? Should you make this an entirely different template? Or adapt the `.gl-` elements? Or add a `.gl-Element-variation`? I used to have `.simple` and `.simple-reverse`, for instance.
+    - If they're part of a design system, perhaps a `-variant` might make sense.
+9. Is the `.gl-Card h1 code b` part of the `gl-Card` styles, or part of the global _raw_ html styles? This is nuanced and uncertain.
+10. If `#section` should always be preceded by `#page` then it makes sense to have `#section` in the same file as it's page?
+11. **Aim to keep RAW HTML and `.gl-` styles in separate folders.** You want to try and go as far as you can with raw html styles, but I feel that keeping global styles on their own is the way to go (for now).
+    - <s>In `skylighting.less` I'm referencing `.gl-CodeBlock`. Is this valid to do this?</s>
+    - <s>I feel like keeping `skylighting.less` as one of the main `partials` (well, a global style really) is the way to do things.</s>
+    - <s>Perhaps moving it to be explicitly with the global classes is a better way to go though.</s>
+
 ## Problems
 
 > It's quite a big job switching out frameworks.
@@ -128,6 +184,10 @@ But does the above quote mean that `.gl-` elements should'nt be nested? Or just 
 > If you are writing styling that applies only to one specific section, **it should be nested under at least 2 levels of ids** — the page id and the section id.
 
 Would you use a `.gl-` for a card, or a `#section` that repeats on multiple card templates? To me that quote seems to say "NO" because it'd be nested under page (or card) specific styles `#CARD-TYPE > #SECTION`.
+
+### If a `.gl-` element is inside a `#section` should it be left alone?
+
+Say for instance you had a `#photos` section, but your child elements are `.gl-photo` with some particular styles, should you create _completely new elements_ if your children are needing to be _slightly_ different than the global design system styles?
 
 ## Thoughts
 
