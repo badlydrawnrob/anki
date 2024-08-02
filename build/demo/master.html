@@ -5,9 +5,9 @@
     <title>Cards</title>
     <link rel="stylesheet" href="../style/main.css">
   </head>
-  <body class="test-Anki nightmode">
-    <section class="test-AnkiCard">
-      <div class="test-AnkiCard-Front">
+  <body id="demo" class="nightmode">
+    <section class="wrapper">
+      <div class="top">
         <!-- Master card
              ===========
 
@@ -17,8 +17,8 @@
 
         -->
 
-        <div id="front" class="gl-Front">
-          <section id="CARD-TYPE" class="gl-Card">
+        <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+          <section class="gl-Card">
             <header class="gl-Card_Header">
               <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
                 <h2>Dictionaries</h2>
@@ -34,11 +34,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
             </div>
           </section>
         </div>
-        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+        <a class="button" href="#answer">See answer</a>
       </div>
-      <div class="test-AnkiCard-Reverse">
-        <div class="anki-Reverse">
-          <section id="CARD-TYPE" class="gl-Card">
+      <div class="bottom">
+        <div id="#reverse">  <!-- We probably need a #CARD-TYPE id somewhere -->
+          <section class="gl-Card">
             <header class="gl-Card_Header">
               <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
                 <h2>Dictionaries</h2>

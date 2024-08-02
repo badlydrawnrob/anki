@@ -1,0 +1,87 @@
+// Notes ====================================================================
+// Some simple styles to mock the Anki app
+//
+// #! The `#demo` page is likely to be repeated once or twice for different
+//    card demos. Is this valid in GPS? I feel that each `#pageID` should
+//    be unique?
+//
+// #1 Does a `#section` have to be unique to it's parent and only show up on
+//    one single view in the app?
+//
+// #2 Buttons are a bloomin' arse to code up. This is where a utility framework
+//    comes in handy (either built by me or some other mug, like Pico CSS)
+//
+//    - The button only shows up once in our HTML, so there's no need to make it
+//      a global element (unless we use it elsewhere.
+
+#demo {
+  margin: var(--spacing-one);
+
+  @media (min-width: 840px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    margin: var(--spacing) 0;
+  }
+
+  .top {
+    margin-bottom: calc(var(--spacing-eight) * 4);
+
+    #front {
+      // #! #1
+    }
+  }
+
+  .bottom {
+    #reverse {
+      // pass
+    }
+  }
+
+  // #2
+  .button {
+    display: inline-block;
+    margin: var(--spacing) 0;
+    padding: var(--spacing);
+    width: 100%;
+    color: inherit;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: var(--font-size-m);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: normal;
+    line-height: var(--line-height-half);  // #2
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: 0 none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%);
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &:active {
+      background-color: #e0e0e0;
+      box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%);
+    }
+
+    &:active:focus {
+      outline: 0 none;
+    }
+
+    &:disabled {
+      color: var(--color-bb);
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+      text-shadow: none;
+    }
+  }
+}

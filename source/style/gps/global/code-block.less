@@ -20,3 +20,22 @@
     background: var(--color-code-dark-background);
   }
 }
+
+
+// Missing! `.cloze` tag styles ------------------------------------------------
+//
+// #1: `.cloze` is an Anki-specific class for cloze deletion types
+// #2: Make the `--code-` colours more "punchy" on the `.cloze` background
+//     all `.sourceCode` classes are spans (such as `.at`tributes)
+
+.gl-CodeBlock .cloze {
+  color: var(--color-code-dark-operator);
+  font-weight: 700;
+  background: #ffffcc; // #2
+  padding: var(--spacing-quarter);
+  border-radius: var(--border-radius);
+
+  > span {
+    filter: brightness(65%) contrast(220%);  // #3
+  }
+}

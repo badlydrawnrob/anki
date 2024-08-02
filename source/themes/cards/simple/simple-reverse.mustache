@@ -1,19 +1,45 @@
-<div class="anki-Reverse">
-  {{FrontSide}}  <!-- Anki only -->
+<!-- Master card: reverse
+     ====================
 
-  <section id="answer" class="simple simple-reverse">
-    <div class="simple-KeyPoint">
-      <div class="simple-KeyPoint_Code">
-        {{★ Key point (code block)}}
-      </div>
-      <div class="simple-KeyPoint_Notes">
-        {{★ Key point notes}}
-      </div>
+     I've ripped out the `{{FrontSide}}` tag here, as only the Simple card
+     type uses it. The Missing! card type can't use the `{{FrontSide}}`
+     tag because of the way the template is set up (using a `{{cloze}}`)
+
+     So for ease of sharing styles, we'll simply replicate the front code on
+     the reverse of the card.
+
+-->
+
+<div id="reverse">  <!-- Missing! has it's #answer tag here (wraps the whole of reverse) -->
+  <section class="gl-Card">
+    <header class="gl-Card_Header">
+      <h1>{{★ Title}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{☆ Subtitle}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Syntax (inline code)}}
+        <p><code>{{☆ Syntax (inline code)}}</code></p>
+      {{/☆ Syntax (inline code)}}
+    </header>
+    <div class="gl-CodeBlock">
+      {{★ Sample (code block)}} <!-- Missing! has no sample code block here like Simple ... -->
     </div>
-    {{#✎ Other notes}}
-      <footer class="simple-Notes">
-        {{✎ Other notes}}
-      </footer>
-    {{/✎ Other notes}}
+
+    <!-- ANSWER #! previously we had two `<sections>` one for front
+         and one for `#answer` and `anki-Reverse`. It makes sense for them
+         to be sections, but there should only be ONE `.gl-Card`. -->
+    <div id="answer">
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-CodeBlock">
+          {{★ Key point (code block)}} <!-- ... it only has this one! -->
+        </div>
+        <div class="gl-Card_KeyPointNotes">
+          {{★ Key point notes}}
+        </div>
+      </div>
+      {{#✎ Other notes}}
+        <footer>{{✎ Other notes}}</footer>
+      {{/✎ Other notes}}
+    </div>
   </section>
 </div>

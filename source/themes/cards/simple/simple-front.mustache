@@ -1,5 +1,5 @@
-<!-- Simple card
-     ===========
+<!-- Master card: front
+     ==================
 
     - Type: What's the answer?
     - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple/index.md
@@ -8,26 +8,35 @@
             ✎ Optional (notes, markdown)
             ⤷ Field Type
 
+    We try to keep all cards similar(ish), so most elements are shared
+    between each card, but some sections apply to only one card. We use a
+    bit of a hybrid between ECSS naming conventions, and GPS global, section,
+    page elements.
+
+    See data cards for our Anki form fields, where you'll see each of the
+    variations per card, and be able to perform Pandoc conversions.
+
+    The only thing that isn't flexible is the `id="front"` and `id="answer"`
+    ids, which aren't quite page level elements, but allow Anki to "skip"
+    to the correct part of the template on the card answer reveal.
+
+    Wherever global styles can be turned into raw HTML and placed in `partials`
+    they should be.
+
 -->
 
-<div id="front" class="anki-Front">
-  <section class="simple simple-front">
-    <header class="simple-Header">
-      <h1 class="simple-Header_Title">
-        {{★ Title}}
-      </h1>
+<div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+  <section class="gl-Card">
+    <header class="gl-Card_Header">
+      <h1>{{★ Title}}</h1>
       {{#☆ Subtitle}}
-        <h2 class="simple-Header_Subtitle">
-          {{☆ Subtitle}}
-        </h2>
+        <h2>{{☆ Subtitle}}</h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
-        <p class="simple-Header_Code">
-          <code>{{☆ Syntax (inline code)}}</code>
-        </p>
+        <p><code>{{☆ Syntax (inline code)}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <div class="simple-Sample">
+    <div class="gl-CodeBlock">
       {{★ Sample (code block)}}
     </div>
   </section>

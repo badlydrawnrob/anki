@@ -1,19 +1,33 @@
-<div class="anki-Reverse">
-  {{FrontSide}}  <!-- Anki only -->
-
-  <section id="answer" class="simple simple-reverse">
-    <div class="simple-KeyPoint">
-      <div class="simple-KeyPoint_Code">
-        {{{★ Key point (code block)}}}
-      </div>
-      <div class="simple-KeyPoint_Notes">
-        {{{★ Key point notes}}}
-      </div>
+<div id="#reverse">  <!-- We probably need a #CARD-TYPE id somewhere -->
+  <section class="gl-Card">
+    <header class="gl-Card_Header">
+      <h1>{{{★ Title}}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{{☆ Subtitle}}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Syntax (inline code)}}
+        <p><code>{{{☆ Syntax (inline code)}}}</code></p>
+      {{/☆ Syntax (inline code)}}
+    </header>
+    <div class="gl-CodeBlock">
+      {{{★ Sample (code block)}}}
     </div>
-    {{#✎ Other notes}}
-      <footer class="simple-Notes">
-        {{{✎ Other notes}}}
-      </footer>
-    {{/✎ Other notes}}
+
+    <!-- ANSWER #! previously we had two `<sections>` one for front
+         and one for `#answer` and `anki-Reverse`. It makes sense for them
+         to be sections, but there should only be ONE `.gl-Card`. -->
+    <div id="answer">
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-CodeBlock">
+          {{{★ Key point (code block)}}}
+        </div>
+        <div class="gl-Card_KeyPointNotes">
+          {{{★ Key point notes}}}
+        </div>
+      </div>
+      {{#✎ Other notes}}
+        <footer>{{{✎ Other notes}}}</footer>
+      {{/✎ Other notes}}
+    </div>
   </section>
 </div>

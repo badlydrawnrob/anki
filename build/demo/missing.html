@@ -5,9 +5,9 @@
     <title>Cards</title>
     <link rel="stylesheet" href="../style/main.css">
   </head>
-  <body class="test-Anki">
-    <section class="test-AnkiCard">
-      <div class="test-AnkiCard-Front">
+  <body id="demo" class="nightmode">
+    <section class="wrapper">
+      <div class="top">
         <!-- Missing! Card
              =============
 
@@ -17,66 +17,56 @@
 
         -->
 
-        <div id="front" class="anki-Front">
-          <section class="missing missing-front">
-            <header class="missing-Header">
-              <h1 class="missing-Header_Title">
-                What type of condition group do these symbols belong to?
-              </h1>
-                <h2 class="missing-Header_Subtitle">
-                  Conditions
-                </h2>
+        <div id="front">
+          <section class="gl-Card">
+            <header class="gl-Card_Header">
+              <h1>What type of condition group do these symbols belong to?</h1>
+                <h2>Conditions</h2>
             </header>
-            <div class="missing-KeyPoint">
-              <div class="missing-KeyPoint_Code">
-                <div class="sourceCode" id="cb2"><pre
+            <div class="gl-CodeBlock">
+              <div class="sourceCode" id="cb2"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>] <span class="co"># <span class="cloze">[ ... ]</span></span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">20</span>] <span class="co"># <span class="cloze">[ ... ]</span></span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">[ ... ]</span></span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">[ ... ]</span></span></span></code></pre></div>  <!-- Rename to `` in Anki -->
-              </div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">[ ... ]</span></span></span></code></pre></div> <!-- Special name for .json only -->
             </div>
           </section>
         </div>
-        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+        <a class="button" href="#answer">See answer</a>
       </div>
-      <div class="test-AnkiCard-Reverse">
-        <div id="answer" class="anki-Reverse">
-          <section class="missing missing-reverse">
-            <header class="missing-Header">
-              <h1 class="missing-Header_Title">
-                What type of condition group do these symbols belong to?
-              </h1>
-                <h2 class="missing-Header_Subtitle">
-                  Conditions
-                </h2>
-            </header>
-            <div class="missing-KeyPoint">
-              <div class="missing-KeyPoint_Code">
-                <div class="sourceCode" id="cb1"><pre
+      <div class="bottom">
+        <div id="reverse">
+          <div id="answer">  <!-- Missing! has it's #answer tag here (wraps the whole of reverse) -->
+            <section class="gl-Card">
+              <header class="gl-Card_Header">
+                <h1>What type of condition group do these symbols belong to?</h1>
+                  <h2>Conditions</h2>
+              </header>
+              <div class="gl-Card_KeyPoint">
+                <div class="gl-CodeBlock">
+                  <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>] <span class="co"># <span class="cloze">>= 0, <= 20</span></span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">20</span>] <span class="co"># <span class="cloze">> 0, <= 20</span></span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">> 0, < 20</span></span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">>= 0, < 20</span></span></span></code></pre></div>  <!-- Rename to `` in Anki -->
-              </div>
-              <div class="missing-KeyPoint_Notes">
-                <p>An example of <a href="https://www.mathsisfun.com/sets/intervals.html">intervals</a>.</p>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">20</span>) <span class="co"># <span class="cloze">>= 0, < 20</span></span></span></code></pre></div> <!-- special name for .json only -->
+                </div>
+                <div class="gl-Card_KeyPointNotes">
+                  <p>An example of <a href="https://www.mathsisfun.com/sets/intervals.html">intervals</a>.</p>
 <ul>
 <li><code>[</code> symbol means <strong>include</strong> the number.</li>
 <li><code>(</code> symbol means <strong>exclude</strong> the number.</li>
 </ul>
+                </div>
               </div>
-            </div>
-              <footer class="missing-Notes">
-                <p>More <a href="https://www.mathsisfun.com/sets/intervals.html">ways to think about intervals</a></p>
-              </footer>
-          </section>
+                <footer><p>More <a href="https://www.mathsisfun.com/sets/intervals.html">ways to think about intervals</a></p></footer>
+            </section>
+          </div>
         </div>
       </div>
     </section>

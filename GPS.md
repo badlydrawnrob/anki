@@ -56,6 +56,12 @@ code {
     - <s>In `skylighting.less` I'm referencing `.gl-CodeBlock`. Is this valid to do this?</s>
     - <s>I feel like keeping `skylighting.less` as one of the main `partials` (well, a global style really) is the way to do things.</s>
     - <s>Perhaps moving it to be explicitly with the global classes is a better way to go though.</s>
+12. In the old `/component/test.less` file (and the `simple.mustache` file for instance) we've got our `.gl-Card` which is wrapped in our Anki view `#front` and `#reverse`.
+    - Our `.test-` classes are pretty much just grid components to give ourselves some page layout. So the `.gl-Card` in that case would act like a component (even though it's a view in Anki app).
+    - How do we code this up? Treat our test wrappers as sections? Have them as a `gl-Grid` or `gl-Wrapper`?
+    - Views within views in the GPS thingy would break it's concept. So in this case we'd treat `#reverse -> #answer` as nested sections. I think.
+    - SEE?!! It gets complicated when you move away from a very set ECSS type of model. With that everything becomes a class and I'm losing the will to live 'cos I can't "see" it properly :(
+13. Does a `#section` have to be unique to it's parent and only show up on one single view in the app? See `#demo -> #reverse`.
 
 ## Problems
 

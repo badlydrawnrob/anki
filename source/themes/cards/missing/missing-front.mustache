@@ -9,27 +9,19 @@
             ⤷ Field Type
 -->
 
-<div id="front" class="anki-Front">
-  <section class="missing missing-front">
-    <header class="missing-Header">
-      <h1 class="missing-Header_Title">
-        {{★ Title}}
-      </h1>
+<div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+  <section class="gl-Card">
+    <header class="gl-Card_Header">
+      <h1>{{★ Title}}</h1>
       {{#☆ Subtitle}}
-        <h2 class="missing-Header_Subtitle">
-          {{☆ Subtitle}}
-        </h2>
+        <h2>{{☆ Subtitle}}</h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
-        <p class="missing-Header_Code">
-          <code>{{☆ Syntax (inline code)}}</code>
-        </p>
+        <p><code>{{☆ Syntax (inline code)}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <div class="missing-KeyPoint">
-      <div class="missing-KeyPoint_Code">
-        {{cloze:★ Key point (code block)}}
-      </div>
+    <div class="gl-CodeBlock">
+      {{cloze:★ Key point (code block)}}
     </div>
   </section>
 </div>

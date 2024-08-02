@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
     "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
-    "demo-master": "npx mustache -p source/themes/demo/master/master-front.mustache -p source/themes/demo/master/master-reverse.mustache source/themes/demo/master/master.json source/themes/demo/master/master.mustache > build/demo/master.html",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
     "pandoc": "npm run data-code && npm run data-code-reverse && npm run data-simple && npm run data-missing",
     "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
