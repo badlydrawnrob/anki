@@ -976,7 +976,6 @@ code.sourceCode > span > a:first-child::before {
   --font-family: var(--recursive), var(--system-ui);
   --font-family-header: var(--recursive), var(--system-ui);
   --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
-  background: black;
 }
 body {
   color: var(--font-color);
