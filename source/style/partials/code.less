@@ -11,9 +11,11 @@
 code,
 kbd {
   padding: 0;
-  background: transparent;
+  background: var(--color-ll);
   border-color: transparent;
-  font-variation-settings: 'MONO' 1;
+  padding: var(--spacing-micro) var(--spacing-half);
+
+  font-variation-settings: 'MONO' 1;  // #! For recursive font only
 
   &:empty {
     margin: 0;

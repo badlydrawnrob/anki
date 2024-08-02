@@ -970,6 +970,7 @@ code.sourceCode > span > a:first-child::before {
   --color-nightmode-background-dddd: #000;
   --color-nightmode-text: var(--color-llll);
   --color-nightmode-text-light: var(--color-bb);
+  --color-nightmode-text-dark: var(--color-bbb);
   --color-nightmode-border: var(--color-l);
   --recursive: "Recursive";
   --font-family: var(--recursive), var(--system-ui);
@@ -992,8 +993,9 @@ body {
 code,
 kbd {
   padding: 0;
-  background: transparent;
+  background: var(--color-ll);
   border-color: transparent;
+  padding: var(--spacing-micro) var(--spacing-half);
   font-variation-settings: 'MONO' 1;
 }
 code:empty,
@@ -1024,198 +1026,6 @@ h2 {
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
-}
-pre.sourceCode .numberSource {
-  margin-left: 3em;
-  padding-left: 4px;
-  border-left: 1px solid #aaaaaa;
-}
-pre.sourceCode .numberSource code {
-  counter-reset: source-line 0;
-}
-pre.sourceCode .numberSource code > span {
-  position: relative;
-  left: -4em;
-  counter-increment: source-line;
-}
-pre.sourceCode .numberSource code > span > a:first-child::before {
-  content: counter(source-line);
-  position: relative;
-  left: -1em;
-  display: inline-block;
-  width: 4em;
-  padding: 0 4px;
-  color: #aaaaaa;
-  text-align: right;
-  vertical-align: baseline;
-  border: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-code.sourceCode > span > a:first-child::before {
-  text-decoration: underline;
-}
-.simple-Sample .sourceCode .al,
-.simple-KeyPoint_Code .sourceCode .al,
-.missing-KeyPoint_Code .sourceCode .al {
-  color: var(--color-code-dark-alert);
-  font-weight: bold;
-}
-.simple-Sample .sourceCode .an,
-.simple-KeyPoint_Code .sourceCode .an,
-.missing-KeyPoint_Code .sourceCode .an {
-  color: var(--color-code-dark-annotation);
-  font-weight: bold;
-  font-style: italic;
-}
-.simple-Sample .sourceCode .at,
-.simple-KeyPoint_Code .sourceCode .at,
-.missing-KeyPoint_Code .sourceCode .at {
-  color: var(--color-code-dark-attribute);
-}
-.simple-Sample .sourceCode .bn,
-.simple-KeyPoint_Code .sourceCode .bn,
-.missing-KeyPoint_Code .sourceCode .bn {
-  color: var(--color-code-dark-base-n);
-}
-.simple-Sample .sourceCode .bu,
-.simple-KeyPoint_Code .sourceCode .bu,
-.missing-KeyPoint_Code .sourceCode .bu {
-  color: var(--color-code-dark-built-in);
-}
-.simple-Sample .sourceCode .cf,
-.simple-KeyPoint_Code .sourceCode .cf,
-.missing-KeyPoint_Code .sourceCode .cf {
-  color: var(--color-code-dark-control-flow);
-  font-weight: bold;
-}
-.simple-Sample .sourceCode .ch,
-.simple-KeyPoint_Code .sourceCode .ch,
-.missing-KeyPoint_Code .sourceCode .ch {
-  color: var(--color-code-dark-char);
-}
-.simple-Sample .sourceCode .cn,
-.simple-KeyPoint_Code .sourceCode .cn,
-.missing-KeyPoint_Code .sourceCode .cn {
-  color: var(--color-code-dark-constant);
-}
-.simple-Sample .sourceCode .co,
-.simple-KeyPoint_Code .sourceCode .co,
-.missing-KeyPoint_Code .sourceCode .co {
-  color: var(--color-code-dark-comment);
-}
-.simple-Sample .sourceCode .cv,
-.simple-KeyPoint_Code .sourceCode .cv,
-.missing-KeyPoint_Code .sourceCode .cv {
-  color: var(--color-code-dark-comment-var);
-  font-weight: bold;
-  font-style: italic;
-}
-.simple-Sample .sourceCode .do,
-.simple-KeyPoint_Code .sourceCode .do,
-.missing-KeyPoint_Code .sourceCode .do {
-  color: var(--color-code-dark-documentation);
-  font-style: italic;
-}
-.simple-Sample .sourceCode .dt,
-.simple-KeyPoint_Code .sourceCode .dt,
-.missing-KeyPoint_Code .sourceCode .dt {
-  color: var(--color-code-dark-data-type);
-}
-.simple-Sample .sourceCode .dv,
-.simple-KeyPoint_Code .sourceCode .dv,
-.missing-KeyPoint_Code .sourceCode .dv {
-  color: var(--color-code-dark-dec-val);
-}
-.simple-Sample .sourceCode .er,
-.simple-KeyPoint_Code .sourceCode .er,
-.missing-KeyPoint_Code .sourceCode .er {
-  color: var(--color-code-dark-error);
-  font-weight: bold;
-}
-.simple-Sample .sourceCode .ex,
-.simple-KeyPoint_Code .sourceCode .ex,
-.missing-KeyPoint_Code .sourceCode .ex {
-  color: var(--color-code-dark-extension);
-}
-.simple-Sample .sourceCode .fl,
-.simple-KeyPoint_Code .sourceCode .fl,
-.missing-KeyPoint_Code .sourceCode .fl {
-  color: var(--color-code-dark-float);
-}
-.simple-Sample .sourceCode .fu,
-.simple-KeyPoint_Code .sourceCode .fu,
-.missing-KeyPoint_Code .sourceCode .fu {
-  color: var(--color-code-dark-function);
-}
-.simple-Sample .sourceCode .im,
-.simple-KeyPoint_Code .sourceCode .im,
-.missing-KeyPoint_Code .sourceCode .im {
-  color: var(--color-code-dark-import);
-}
-.simple-Sample .sourceCode .in,
-.simple-KeyPoint_Code .sourceCode .in,
-.missing-KeyPoint_Code .sourceCode .in {
-  color: var(--color-code-dark-information);
-  font-weight: bold;
-  font-style: italic;
-}
-.simple-Sample .sourceCode .kw,
-.simple-KeyPoint_Code .sourceCode .kw,
-.missing-KeyPoint_Code .sourceCode .kw {
-  color: var(--color-code-dark-keyword);
-  font-weight: bold;
-}
-.simple-Sample .sourceCode .op,
-.simple-KeyPoint_Code .sourceCode .op,
-.missing-KeyPoint_Code .sourceCode .op {
-  color: var(--color-code-dark-operator);
-}
-.simple-Sample .sourceCode .ot,
-.simple-KeyPoint_Code .sourceCode .ot,
-.missing-KeyPoint_Code .sourceCode .ot {
-  color: var(--color-code-dark-other);
-}
-.simple-Sample .sourceCode .pp,
-.simple-KeyPoint_Code .sourceCode .pp,
-.missing-KeyPoint_Code .sourceCode .pp {
-  color: var(--color-code-dark-lowlight);
-}
-.simple-Sample .sourceCode .sc,
-.simple-KeyPoint_Code .sourceCode .sc,
-.missing-KeyPoint_Code .sourceCode .sc {
-  color: var(--color-code-dark-special-char);
-}
-.simple-Sample .sourceCode .ss,
-.simple-KeyPoint_Code .sourceCode .ss,
-.missing-KeyPoint_Code .sourceCode .ss {
-  color: var(--color-code-dark-special-string);
-}
-.simple-Sample .sourceCode .st,
-.simple-KeyPoint_Code .sourceCode .st,
-.missing-KeyPoint_Code .sourceCode .st {
-  color: var(--color-code-dark-string);
-}
-.simple-Sample .sourceCode .va,
-.simple-KeyPoint_Code .sourceCode .va,
-.missing-KeyPoint_Code .sourceCode .va {
-  color: var(--color-code-dark-variable);
-}
-.simple-Sample .sourceCode .vs,
-.simple-KeyPoint_Code .sourceCode .vs,
-.missing-KeyPoint_Code .sourceCode .vs {
-  color: var(--color-code-dark-verbatim-string);
-}
-.simple-Sample .sourceCode .wa,
-.simple-KeyPoint_Code .sourceCode .wa,
-.missing-KeyPoint_Code .sourceCode .wa {
-  color: var(--color-code-dark-warning);
-  font-weight: bold;
-  font-style: italic;
 }
 img {
   max-width: 100%;
@@ -1462,7 +1272,7 @@ img {
   margin-bottom: 0;
 }
 .gl-Card_Header h1::before {
-  content: '★';
+  content: '★ ';
 }
 .nightmode .gl-Card_Header h1 {
   background: var(--color-nightmode-background-dddd);
@@ -1506,68 +1316,181 @@ img {
   color: var(--color-card-l);
   font-size: var(--font-size-m);
 }
-.gl-Card header h1 code b,
-.gl-Card header h2 code b,
-.simple-Header_Code code b,
-.gl-Card header h1 code strong,
-.gl-Card header h2 code strong,
-.simple-Header_Code code strong,
-.gl-Card header h1 code i,
-.gl-Card header h2 code i,
-.simple-Header_Code code i,
-.gl-Card header h1 code em,
-.gl-Card header h2 code em,
-.simple-Header_Code code em {
+.gl-Card header code b,
+.gl-Card header code strong,
+.gl-Card header code i,
+.gl-Card header code em {
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
   text-decoration: none;
-  background: none;
 }
-.gl-Card header h1 code b,
-.gl-Card header h2 code b,
-.simple-Header_Code code b,
-.gl-Card header h1 code strong,
-.gl-Card header h2 code strong,
-.simple-Header_Code code strong {
+.gl-Card header code b,
+.gl-Card header code strong {
   color: var(--color-code-light-highlight);
 }
-.gl-Card header h1 code i,
-.gl-Card header h2 code i,
-.simple-Header_Code code i,
-.gl-Card header h1 code em,
-.gl-Card header h2 code em,
-.simple-Header_Code code em {
+.gl-Card header code i,
+.gl-Card header code em {
   color: var(--color-code-light-lowlight);
 }
-.simple-KeyPoint_Notes code {
+.nightmode .gl-Card header code {
+  color: var(--color-nightmode-text-dark);
+}
+.gl-Card_KeyPointNotes code {
   color: var(--color-bbb);
-  background: var(--color-ll);
-  padding: var(--spacing-micro) var(--spacing-half);
 }
-.simple-KeyPoint_Notes pre code {
+.gl-Card_KeyPointNotes pre code {
   text-align: left;
   background: transparent;
 }
-.nightmode .simple-KeyPoint_Notes pre code {
-  background: transparent;
-}
-.simple-Sample pre,
-.simple-Sample pre code,
-.simple-KeyPoint_Code pre,
-.simple-KeyPoint_Code pre code {
-  text-align: left;
-  color: var(--color-code-dark-base);
-  font-family: var(--font-family-mono);
-  background: var(--color-code-dark-background);
-}
-.nightmode .simple-KeyPoint_Notes pre,
-.nightmode .simple-KeyPoint_Notes pre code {
+.nightmode .gl-Card_KeyPointNotes pre,
+.nightmode .gl-Card_KeyPointNotes pre code {
   background: var(--color-ll);
 }
 .gl-CodeBlock pre {
   margin: 0;
 }
-#simple #answer pre {
+.gl-CodeBlock pre,
+.gl-CodeBlock pre code {
+  text-align: left;
+  color: var(--color-code-dark-base);
+  font-family: var(--font-family-mono);
+  background: var(--color-code-dark-background);
+}
+pre.sourceCode .numberSource {
+  margin-left: 3em;
+  padding-left: 4px;
+  border-left: 1px solid #aaaaaa;
+}
+pre.sourceCode .numberSource code {
+  counter-reset: source-line 0;
+}
+pre.sourceCode .numberSource code > span {
+  position: relative;
+  left: -4em;
+  counter-increment: source-line;
+}
+pre.sourceCode .numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+  position: relative;
+  left: -1em;
+  display: inline-block;
+  width: 4em;
+  padding: 0 4px;
+  color: #aaaaaa;
+  text-align: right;
+  vertical-align: baseline;
+  border: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+code.sourceCode > span > a:first-child::before {
+  text-decoration: underline;
+}
+.gl-CodeBlock .sourceCode .al {
+  color: var(--color-code-dark-alert);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .an {
+  color: var(--color-code-dark-annotation);
+  font-weight: bold;
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .at {
+  color: var(--color-code-dark-attribute);
+}
+.gl-CodeBlock .sourceCode .bn {
+  color: var(--color-code-dark-base-n);
+}
+.gl-CodeBlock .sourceCode .bu {
+  color: var(--color-code-dark-built-in);
+}
+.gl-CodeBlock .sourceCode .cf {
+  color: var(--color-code-dark-control-flow);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .ch {
+  color: var(--color-code-dark-char);
+}
+.gl-CodeBlock .sourceCode .cn {
+  color: var(--color-code-dark-constant);
+}
+.gl-CodeBlock .sourceCode .co {
+  color: var(--color-code-dark-comment);
+}
+.gl-CodeBlock .sourceCode .cv {
+  color: var(--color-code-dark-comment-var);
+  font-weight: bold;
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .do {
+  color: var(--color-code-dark-documentation);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .dt {
+  color: var(--color-code-dark-data-type);
+}
+.gl-CodeBlock .sourceCode .dv {
+  color: var(--color-code-dark-dec-val);
+}
+.gl-CodeBlock .sourceCode .er {
+  color: var(--color-code-dark-error);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .ex {
+  color: var(--color-code-dark-extension);
+}
+.gl-CodeBlock .sourceCode .fl {
+  color: var(--color-code-dark-float);
+}
+.gl-CodeBlock .sourceCode .fu {
+  color: var(--color-code-dark-function);
+}
+.gl-CodeBlock .sourceCode .im {
+  color: var(--color-code-dark-import);
+}
+.gl-CodeBlock .sourceCode .in {
+  color: var(--color-code-dark-information);
+  font-weight: bold;
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .kw {
+  color: var(--color-code-dark-keyword);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .op {
+  color: var(--color-code-dark-operator);
+}
+.gl-CodeBlock .sourceCode .ot {
+  color: var(--color-code-dark-other);
+}
+.gl-CodeBlock .sourceCode .pp {
+  color: var(--color-code-dark-lowlight);
+}
+.gl-CodeBlock .sourceCode .sc {
+  color: var(--color-code-dark-special-char);
+}
+.gl-CodeBlock .sourceCode .ss {
+  color: var(--color-code-dark-special-string);
+}
+.gl-CodeBlock .sourceCode .st {
+  color: var(--color-code-dark-string);
+}
+.gl-CodeBlock .sourceCode .va {
+  color: var(--color-code-dark-variable);
+}
+.gl-CodeBlock .sourceCode .vs {
+  color: var(--color-code-dark-verbatim-string);
+}
+.gl-CodeBlock .sourceCode .wa {
+  color: var(--color-code-dark-warning);
+  font-weight: bold;
+  font-style: italic;
+}
+#reverse #answer pre {
   margin-bottom: 0;
 }

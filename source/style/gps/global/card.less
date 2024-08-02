@@ -31,7 +31,7 @@
   border-radius: var(--border-radius);
 
   .nightmode & {
-    color: var(--color-nightmode-text);
+    color: var(--color-nightmode-text);  // #! Perhaps should live in RAW HTML
     border: 1px solid var(--color-nightmode-border);
   }
 }
@@ -67,7 +67,7 @@
   }
 
   &::before {
-    content: '★';
+    content: '★ ';
   }
 
   .nightmode & {
@@ -136,60 +136,106 @@
   font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
 }
 
+
+// Code styles -----------------------------------------------------------------
+// #! We're being a little more specific here to stop it fucking up our
+//    `gl-CodeBlock` styles (which should take precedence). We're NOT currently
+//    allowing highlights within the keypoint notes or footer (which might change).
+
+.gl-Card header code {
+  b, strong,
+  i, em {
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    // background: none;
+  }
+
+  b, strong {
+    color: var(--color-code-light-highlight);
+  }
+
+  i, em {
+    color: var(--color-code-light-lowlight);
+  }
+
+  .nightmode & {
+    color: var(--color-nightmode-text-dark);
+  }
+}
+
+.gl-Card_KeyPointNotes code {
+  color: var(--color-bbb);
+}
+
+.gl-Card_KeyPointNotes pre code {
+  text-align: left;
+  background: transparent;
+}
+
+.gl-Card_KeyPointNotes pre,
+.gl-Card_KeyPointNotes pre code {
+  .nightmode & {
+    background: var(--color-ll);
+  }
+}
+
+
 // #! TEMPORARY CODE STYLES ----------------------------------------------------
 
 code {
-  .gl-Card header h1 &,
-  .gl-Card header h2 &,
-  .simple-Header_Code & {
+  // .gl-Card header h1 &,
+  // .gl-Card header h2 &,
+  // .simple-Header_Code & {
 
-    b, strong,
-    i, em {
-      font-size: inherit;
-      font-style: inherit;
-      font-weight: inherit;
-      text-decoration: none;
-      background: none;
-    }
+  //   b, strong,
+  //   i, em {
+  //     font-size: inherit;
+  //     font-style: inherit;
+  //     font-weight: inherit;
+  //     text-decoration: none;
+  //     background: none;
+  //   }
 
-    b,
-    strong {
-      color: var(--color-code-light-highlight);  // #! Needs editing (print-first-css is now monochrome)
-    }
+  //   b,
+  //   strong {
+  //     color: var(--color-code-light-highlight);  // #! Needs editing (print-first-css is now monochrome)
+  //   }
 
-    i,
-    em {
-      color: var(--color-code-light-lowlight);    // #! Needs editing (print-first-css is now monochrome)
-    }
-  }
+  //   i,
+  //   em {
+  //     color: var(--color-code-light-lowlight);    // #! Needs editing (print-first-css is now monochrome)
+  //   }
+  // }
 
-  .simple-KeyPoint_Notes & {
-    color: var(--color-bbb);
-    background: var(--color-ll);
-    padding: var(--spacing-micro) var(--spacing-half);
-  }
+  // .simple-KeyPoint_Notes & {
+  //   color: var(--color-bbb);
+  //   background: var(--color-ll);
+  //   padding: var(--spacing-micro) var(--spacing-half);
+  // }
 
-  .simple-KeyPoint_Notes pre & {
-    text-align: left;
-    background: transparent;
-  }
+  // .simple-KeyPoint_Notes pre & {
+  //   text-align: left;
+  //   background: transparent;
+  // }
 
-  .nightmode .simple-KeyPoint_Notes pre & {
-    background: transparent;  // #!
-  }
+  // .nightmode .simple-KeyPoint_Notes pre & {
+  //   background: transparent;  // #!
+  // }
 }
 
-pre,
-pre code {
-  .simple-Sample &,
-  .simple-KeyPoint_Code & {
-    text-align: left;
-    color: var(--color-code-dark-base);
-    font-family: var(--font-family-mono);
-    background: var(--color-code-dark-background);
-  }
+// pre,
+// pre code {
+//   .simple-Sample &,
+//   .simple-KeyPoint_Code & {
+//     text-align: left;
+//     color: var(--color-code-dark-base);
+//     font-family: var(--font-family-mono);
+//     background: var(--color-code-dark-background);
+//   }
 
-  .nightmode .simple-KeyPoint_Notes & {
-    background: var(--color-ll);
-  }
-}
+//   .nightmode .simple-KeyPoint_Notes & {
+//     background: var(--color-ll);
+//   }
+// }
