@@ -12,43 +12,37 @@
   --color-ll: #ddd;
   --color-lll: #f1f1f1;
   --color-llll: #fff;
-  --color-code-light-palette-01: var(--color-bbbb);
-  --color-code-light-palette-02: var(--color-bbbb);
-  --color-code-light-palette-03: var(--color-bbbb);
-  --color-code-light-palette-04: var(--color-bbbb);
-  --color-code-light-palette-05: var(--color-bbbb);
-  --color-code-light-palette-06: var(--color-bbbb);
-  --color-code-light-palette-07: var(--color-bbbb);
   --color-code-light-background: var(--color-lll);
-  --color-code-light-alert: var(--color-code-light-palette-01);
-  --color-code-light-annotation: var(--color-code-light-palette-01);
-  --color-code-light-attribute: var(--color-code-light-palette-07);
-  --color-code-light-base-n: var(--color-code-light-palette-05);
-  --color-code-light-built-in: var(--color-code-light-palette-04);
-  --color-code-light-control-flow: var(--color-code-light-palette-04);
-  --color-code-light-char: var(--color-code-light-palette-05);
-  --color-code-light-constant: var(--color-code-light-palette-04);
-  --color-code-light-comment: var(--color-code-light-palette-01);
-  --color-code-light-comment-var: var(--color-code-light-palette-01);
-  --color-code-light-documentation: var(--color-code-light-palette-04);
-  --color-code-light-data-type: var(--color-code-light-palette-04);
-  --color-code-light-dec-val: var(--color-code-light-palette-05);
-  --color-code-light-error: var(--color-code-light-palette-01);
-  --color-code-light-extension: var(--color-code-light-palette-01);
-  --color-code-light-float: var(--color-code-light-palette-05);
-  --color-code-light-function: var(--color-code-light-palette-07);
-  --color-code-light-import: var(--color-code-light-palette-01);
-  --color-code-light-information: var(--color-code-light-palette-01);
-  --color-code-light-keyword: var(--color-code-light-palette-04);
-  --color-code-light-operator: var(--color-code-light-palette-04);
-  --color-code-light-other: var(--color-code-light-palette-07);
-  --color-code-light-preprocessor: var(--color-code-light-palette-07);
-  --color-code-light-special-char: var(--color-code-light-palette-05);
-  --color-code-light-special-string: var(--color-code-light-palette-05);
-  --color-code-light-string: var(--color-code-light-palette-05);
-  --color-code-light-variable: var(--color-code-light-palette-07);
-  --color-code-light-verbatim-string: var(--color-code-light-palette-05);
-  --color-code-light-warning: var(--color-code-light-palette-01);
+  --color-code-light-alert: #000;
+  --color-code-light-annotation: #000;
+  --color-code-light-attribute: #000;
+  --color-code-light-base-n: #000;
+  --color-code-light-built-in: #000;
+  --color-code-light-char: #000;
+  --color-code-light-comment: #000;
+  --color-code-light-comment-var: #000;
+  --color-code-light-constant: #000;
+  --color-code-light-control-flow: #000;
+  --color-code-light-data-type: #000;
+  --color-code-light-dec-val: #000;
+  --color-code-light-documentation: #000;
+  --coloor-code-light-error: #000;
+  --color-code-light-extension: #000;
+  --color-code-light-float: #000;
+  --color-code-light-function: #000;
+  --color-code-light-import: #000;
+  --color-code-light-information: #000;
+  --color-code-light-keyword: #000;
+  --color-code-light-operator: #000;
+  --color-code-light-other: #000;
+  --color-code-light-preprocessor: #000;
+  --color-code-light-region-marker: #000;
+  --color-code-light-special-char: #000;
+  --color-code-light-special-string: #000;
+  --color-code-light-string: #000;
+  --color-code-light-variable: #000;
+  --color-code-light-verbatim-string: #000;
+  --color-code-light-warning: #000;
   --spacing-increment: calc(var(--spacing-pp) * 1rem);
   --spacing-pppppppp: 128 / 16;
   --spacing-ppppppp: 112 / 16;
@@ -847,74 +841,106 @@ i,
 cite {
   font-style: italic;
 }
-pre.sourceCode .numberSource {
-  margin-left: 3em;
-  padding-left: 4px;
-  border-left: 1px solid var(--color-bbb);
-}
-pre.sourceCode .numberSource code {
-  counter-reset: source-line 0;
-}
-pre.sourceCode .numberSource code > span {
-  position: relative;
-  left: -4em;
-  counter-increment: source-line;
-}
-pre.sourceCode .numberSource code > span > a:first-child::before {
-  content: counter(source-line);
-  position: relative;
-  left: -1em;
-  display: inline-block;
-  width: 4em;
-  padding: 0 4px;
-  color: var(--color-bbb);
-  text-align: right;
-  vertical-align: baseline;
-  border: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-code.sourceCode > span > a:first-child::before {
-  text-decoration: underline;
-}
 .sourceCode .al {
+  color: var(--color-code-light-alert);
   font-weight: 700;
 }
 .sourceCode .an {
+  color: var(--color-code-light-annotation);
   font-style: italic;
 }
-.sourceCode .cf {
-  font-weight: 700;
+.sourceCode .at {
+  color: var(--color-code-light-attribute);
+}
+.sourceCode .bn {
+  color: var(--color-code-light-base-n);
+}
+.sourceCode .bu {
+  color: var(--color-code-light-built-in);
+}
+.sourceCode .ch {
+  color: var(--color-code-light-char);
 }
 .sourceCode .co {
+  color: var(--color-code-light-comment);
   font-style: italic;
 }
 .sourceCode .cv {
+  color: var(--color-code-light-comment-var);
   font-style: italic;
 }
-.sourceCode .do {
-  font-style: italic;
+.sourceCode .cn {
+  color: var(--color-code-light-constant);
 }
-.sourceCode .dt {
-  text-decoration: underline;
-}
-.sourceCode .er {
+.sourceCode .cf {
+  color: var(--color-code-light-control-flow);
   font-weight: 700;
 }
+.sourceCode .dt {
+  color: var(--color-code-light-data-type);
+  text-decoration: underline;
+}
+.sourceCode .dv {
+  color: var(--color-code-light-dec-val);
+}
+.sourceCode .do {
+  color: var(--color-code-light-documentation);
+  font-style: italic;
+}
+.sourceCode .er {
+  color: var(--color-code-light-error);
+  font-weight: 700;
+}
+.sourceCode .ex {
+  color: var(--color-code-light-extension);
+}
+.sourceCode .fl {
+  color: var(--color-code-light-float);
+}
+.sourceCode .fu {
+  color: var(--color-code-light-function);
+}
+.sourceCode .im {
+  color: var(--color-code-light-import);
+}
 .sourceCode .in {
+  color: var(--color-code-light-information);
   font-style: italic;
 }
 .sourceCode .kw {
+  color: var(--color-code-light-keyword);
   font-weight: 700;
+}
+.sourceCode .op {
+  color: var(--color-code-light-operator);
+}
+.sourceCode .ot {
+  color: var(--color-code-light-other);
 }
 .sourceCode .pp {
+  color: var(--color-code-light-lowlight);
   font-weight: 700;
 }
+.sourceCode .re {
+  color: var(--color-code-light-region-marker);
+}
+.sourceCode .sc {
+  color: var(--color-code-light-special-char);
+}
+.sourceCode .ss {
+  color: var(--color-code-light-special-string);
+}
+.sourceCode .st {
+  color: var(--color-code-light-string);
+}
+.sourceCode .va {
+  color: var(--color-code-light-variable);
+}
+.sourceCode .vs {
+  color: var(--color-code-light-verbatim-string);
+}
 .sourceCode .wa {
+  color: var(--color-code-light-warning);
   font-style: italic;
 }
 :root {
@@ -932,6 +958,8 @@ code.sourceCode > span > a:first-child::before {
   --color-nightmode-text-light: var(--color-bb);
   --color-nightmode-text-dark: var(--color-bbb);
   --color-nightmode-border: var(--color-l);
+  --color-code-light-highlight: #da4453;
+  --color-code-light-lowlight: #8e44ad;
   --color-code-dark-background: #232629;
   --color-code-dark-text-color: #cfcfc2;
   --color-code-dark-line-number-color: #7a7c7d;

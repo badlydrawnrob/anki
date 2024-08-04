@@ -2,7 +2,9 @@
 //
 // #1: Skylighting theme (Breeze Dark), Compile code blocks with Pandoc!
 //
-//    (a) A very helpful plugin is `colorize` which allows you to preview color:
+//    (a) Our inherited `--color-code-light` theme is
+//
+//    (b) A very helpful plugin is `colorize` which allows you to preview color:
 //        @ http://tinyurl.com/visual-studio-code-colorize
 //
 //        - Some themes have `background-color` and extra `font` styles. It might
@@ -11,7 +13,7 @@
 //          isn't needed. Also I've cleaned up the code to just use classes
 //          (without `code span`) so using `-normal` causes inheritance issues.
 //
-//    (b) Might be an idea to list the colour pallette for use elsewhere?
+//    (c) Might be an idea to list the colour pallette for use elsewhere?
 //
 //        - Most of the `--color-code-dark-` variables are used by _all_ themes,
 //          but some are theme specific. Perhaps consider using "tokens" in a
@@ -19,6 +21,10 @@
 
 
 // #1a
+--color-code-light-highlight: #da4453;
+--color-code-light-lowlight: #8e44ad;
+
+// #1b
 --color-code-dark-background: #232629;
 --color-code-dark-text-color: #cfcfc2;
 --color-code-dark-line-number-color: #7a7c7d;
