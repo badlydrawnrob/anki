@@ -62,6 +62,7 @@ code {
     - Views within views in the GPS thingy would break it's concept. So in this case we'd treat `#reverse -> #answer` as nested sections. I think.
     - SEE?!! It gets complicated when you move away from a very set ECSS type of model. With that everything becomes a class and I'm losing the will to live 'cos I can't "see" it properly :(
 13. Does a `#section` have to be unique to it's parent and only show up on one single view in the app? See `#demo -> #reverse`.
+14. Shouldn't `.gl-CodeBlock .cloze` be more of a `#page -> #section -> .cloze` type? It's part of the `#missing` card and nowhere else really.
 
 ## Problems
 
