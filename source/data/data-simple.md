@@ -4,7 +4,7 @@
 
     - Type:
         What's the answer?
-        A simple question->answer card;
+        A simple `question->answer` card;
         we're asking the question: "what does this code do?", e.g:
 
         - A function with an output you have to guess.
@@ -61,7 +61,7 @@
 
 
 <!-- -------------------------------------------------------------------------
-    ★ Sample (code block or image)
+    ★ Sample (code block)
 
     ⤷ `pre block`
 
@@ -85,7 +85,7 @@ type alias Model
 
 
 <!-- -------------------------------------------------------------------------
-    ★ Key point (code block or image)
+    ★ Key point (code block)
 
     ⤷ `pre block`
 

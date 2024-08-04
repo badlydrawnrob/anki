@@ -59,9 +59,9 @@
 
 
 <!-- -------------------------------------------------------------------------
-    ★ Key point (code block or image)
+    ★ Key point (code block)
 
-    ⤷ `pre block | image`
+    ⤷ `pre block`
 
       | Requires `markdown` fenced code block;
       | Requires `{{c1::cloze}}` tag(s))
