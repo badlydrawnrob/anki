@@ -946,6 +946,8 @@ cite {
 :root {
   --color-code-light-highlight: #f12056;
   --color-code-light-lowlight: #a877ff;
+  --color-code-cloze: #da4453;
+  --color-code-cloze-background: #ffffcc;
   --color-card-l: #757575;
   --color-card-ll: #bdbdbd;
   --color-card-lll: #eceff1;
@@ -1177,9 +1179,9 @@ img {
   background: var(--color-code-dark-background);
 }
 .gl-CodeBlock .cloze {
-  color: var(--color-code-dark-operator);
+  color: var(--color-code-cloze);
   font-weight: 700;
-  background: #ffffcc;
+  background: var(--color-code-cloze-background);
   padding: var(--spacing-quarter);
   border-radius: var(--border-radius);
 }
