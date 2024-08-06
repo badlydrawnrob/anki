@@ -32,6 +32,7 @@ code {
 
 1. Solve the problems with our new system. Make rules concrete.
     - See the `card.less` file as it has a couple of conundrums.
+    - See also commit `#c131fe7` for our changes to GPS style.
 2. Make sure folder names and file names make sense.
     - Why are we using `/modules/` and `/partials/`?
     - Does it make sense to rename these folders (i.e: simply `variables`)
