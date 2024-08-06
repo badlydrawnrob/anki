@@ -2,29 +2,41 @@
 // Base `.Card` wrapper styles and it's children elements.
 //
 // #! HOW MANY LEVELS DEEP SHOULD THE CHILDREN GO?
-//    In GPS he says `.gl-` styles shouldn't be nested. But it seems natural to
+//    In GPS he says `.gl-` styles shouldn't be nested? But it seems natural to
 //    give a design system children, and if they're not obvious HTML elements,
 //    such as `<ul><li>` then they'll need a proper class, no?
 //
-// I'm using a bit of a bastardisation of `ECSS` and `GPS`.
-// There doesn't seem to be a silver bullet on how to do it, but it feels quite
-// nice having definite wrappers, like `gl-Card` and `gl-Card_Header`, but probably
-// not nesting `.gl` classes much deeper than that.
+// #! I'm still tempted to use a bastardisation of `ECSS` and `GPS`.
+// -----------------------------------------------------------------
+// There doesn't seem to be a silver bullet on how to do GPS, but it feels quite
+// nice having definite wrappers (makes for flatter css), like `gl-Card` and
+// `gl-Card_KeyPoint`. I removed `.gl-Card_Header` in favor for `.gl-Card header`,
+// and it still feels weird! I guess GPS would frown on this kind of flat style,
+// but in any case it's probably advisable to not nest ECSS style `.gl` classes
+// much deeper than one level.
+//
+//    - Use decent HTML5 tags wherever possible: `aside`, `h1`, `section`, etc
+//    - Where `div`s are used, consider naming after parent, i.e: `.gl-Card_KeyPoint`.
+//      Go ask the guys at GPS and I'm sure they'll tell me I'm doing it wrong!
 //
 // #1: A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
 //     however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
 //
-// #2: If a `.gl-` class is added, but is empty of CSS, should this class just
-//     be discarded? It's _sort of_ important to distinguish the component,
-//     but only it's child has styles (perhaps this is perfectly fine and we can
-//     use it as a sort of wrapper.
+// #2: Should there ever be "Placeholder" classes added? For instance, you add
+//     a descriptive wrapper but you don't have any styles for it yet.
 //
-//     TLDR: If the `.wrapper` is unstyled, should we remove it and name it's
-//           (styled) child element?
+//     - Should empty `.gl-` classes be discarded? The HTML element too?
+//     - Sometimes it's nice to give the children a wrapper, to distinguish that
+//       section. Is this a bad way to work?
 //
-// #3: Is this named correctly? It's nested inside `.gl-Card` -> `_KeyPoint`
+//       #! See `.gl-Card_KeyPoint` wrapper.
 //
-// #! Should our `code` styles be here or someplace else?
+// #3: Should an element that's nested inside it's parent be "flat" but "nested"
+//     in ECSS/BEM style or is this disallowed?
+//
+//     #! `.gl-Card` -> `_KeyPoint`
+//
+// #4: #! Should our `code` styles be here or someplace else?
 
 .gl-Card {
   background: transparent;
@@ -36,7 +48,7 @@
   }
 }
 
-.gl-Card_Header {
+.gl-Card header {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -55,7 +67,7 @@
   }
 }
 
-.gl-Card_Header h1 {
+.gl-Card header h1 {
   flex: 0 0 100%;
   margin: 0 0 var(--spacing-one);
   padding: var(--spacing-half);
@@ -84,7 +96,7 @@
   // }
 }
 
-.gl-Card_Header h2 {
+.gl-Card header h2 {
   margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
   border-top-left-radius: var(--border-radius);
@@ -96,7 +108,7 @@
 }
 
 // #1
-.gl-Card_Header p {
+.gl-Card header p {
   margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
@@ -138,6 +150,8 @@
 
 
 // Code styles -----------------------------------------------------------------
+// #4
+//
 // #! We're being a little more specific here to stop it fucking up our
 //    `gl-CodeBlock` styles (which should take precedence). We're NOT currently
 //    allowing highlights within the keypoint notes or footer (which might change).

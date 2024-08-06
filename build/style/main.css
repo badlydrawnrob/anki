@@ -1065,7 +1065,7 @@ img {
   color: var(--color-nightmode-text);
   border: 1px solid var(--color-nightmode-border);
 }
-.gl-Card_Header {
+.gl-Card header {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -1078,36 +1078,36 @@ img {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.nightmode .gl-Card_Header {
+.nightmode .gl-Card header {
   background: var(--color-nightmode-background-ddd);
   border: transparent;
 }
-.gl-Card_Header h1 {
+.gl-Card header h1 {
   flex: 0 0 100%;
   margin: 0 0 var(--spacing-one);
   padding: var(--spacing-half);
   border-bottom: var(--spacing-px) solid var(--color-card-ll);
   background: var(--color-card-llll);
 }
-.gl-Card_Header h1:only-child {
+.gl-Card header h1:only-child {
   margin-bottom: 0;
 }
-.gl-Card_Header h1::before {
+.gl-Card header h1::before {
   content: '★ ';
 }
-.nightmode .gl-Card_Header h1 {
+.nightmode .gl-Card header h1 {
   background: var(--color-nightmode-background-dddd);
 }
-.gl-Card_Header h2 {
+.gl-Card header h2 {
   margin: 0 0 var(--spacing-half);
   padding: var(--spacing-half);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.nightmode .gl-Card_Header h2 {
+.nightmode .gl-Card header h2 {
   color: var(--color-nightmode-text-light);
 }
-.gl-Card_Header p {
+.gl-Card header p {
   margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
