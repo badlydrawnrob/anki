@@ -960,6 +960,7 @@ cite {
   --color-nightmode-text-light: var(--color-bb);
   --color-nightmode-text-dark: var(--color-bbb);
   --color-nightmode-border: var(--color-l);
+  --color-nightmode-link: #3daee9;
   --color-code-light-highlight: #da4453;
   --color-code-light-lowlight: #8e44ad;
   --color-code-dark-background: #232629;
@@ -1053,6 +1054,9 @@ h2 {
   text-transform: none;
   letter-spacing: normal;
 }
+.nightmode a {
+  color: var(--color-nightmode-link);
+}
 img {
   max-width: 100%;
   height: auto;
@@ -1137,6 +1141,10 @@ img {
   color: var(--color-card-l);
   font-size: var(--font-size-m);
 }
+.gl-Card header code {
+  font-size: inherit;
+  background: transparent;
+}
 .gl-Card header code b,
 .gl-Card header code strong,
 .gl-Card header code i,
@@ -1160,7 +1168,11 @@ img {
 .gl-Card_KeyPointNotes code {
   color: var(--color-bbb);
 }
+.gl-Card_KeyPointNotes pre {
+  font-size: inherit;
+}
 .gl-Card_KeyPointNotes pre code {
+  font-size: inherit;
   text-align: left;
   background: transparent;
 }

@@ -150,20 +150,23 @@
 
 
 // Code styles -----------------------------------------------------------------
-// #4
+// We're being a little specific here so that it doesn't fuck up our
+// `.gl-CodeBlock` or Skylighting's `.sourceCode span` classes. Let's keep
+// our Key Point Notes code monochrome for now.
 //
-// #! We're being a little more specific here to stop it fucking up our
-//    `gl-CodeBlock` styles (which should take precedence). We're NOT currently
-//    allowing highlights within the keypoint notes or footer (which might change).
+// #! For some reason you have to inherit for both `pre` and `code` here.
 
 .gl-Card header code {
+
+  font-size: inherit;
+  background: transparent;
+
   b, strong,
   i, em {
     font-size: inherit;
     font-style: inherit;
     font-weight: inherit;
     text-decoration: none;
-    // background: none;
   }
 
   b, strong {
@@ -183,9 +186,16 @@
   color: var(--color-bbb);
 }
 
-.gl-Card_KeyPointNotes pre code {
-  text-align: left;
-  background: transparent;
+.gl-Card_KeyPointNotes {
+  pre {
+    font-size: inherit;    // !#
+
+    code {
+      font-size: inherit;  // !#
+      text-align: left;
+      background: transparent;
+    }
+  }
 }
 
 .gl-Card_KeyPointNotes pre,
