@@ -1,15 +1,15 @@
 Moving on from ECSS
 ===================
 
+<!-- #! Add in links to Tailwind article, GPS article and Portfolio -->
+
 ## To Do
 
-> I can see GPS getting a bit messy (sometimes personal opinion). At least with
-> ECSS you know that everything is going to have a unique class, and the code
-> lives with each page or component. It's much clearer where to put the CSS
+> GPS seems to be sometimes a bit messy. Personal opinion. Subjective.
 >
 > With GPS it seems fuzzy when to use `.gl` styles or `#id` in some situations.
 > Or even which should be raw html styles and which needs a class or id.
-> **Code order becomes more of a challenge too**, for instance I'm needing the `code` to inherit styles from `h1`, but I want to name styles of `code` altogether.
+> **Code order becomes more of a challenge too**, for instance I'm needing the `code` to inherit styles from `h1`, but I want to name styles of `code` altogether for ease of scanning.
 > If my code styles (inherit) come _after_ my `h1` styles, will they inherit that header style? **Probably not!**.
 >
 > Sometimes it's best to be explicit and style them insitu (i.e. the `.gl-Card` that they live in, rather than at the root raw html level)
@@ -30,88 +30,103 @@ code {
 }
 ```
 
-1. Solve the problems with our new system. Make rules concrete.
-    - See the `card.less` file as it has a couple of conundrums.
-    - See also commit `#c131fe7` for our changes to GPS style.
-2. Make sure folder names and file names make sense.
-    - Why are we using `/modules/` and `/partials/`?
-    - Does it make sense to rename these folders (i.e: simply `variables`)
-    - We're repeating the name `_root.less` twice.
-3. Test out the new GPS styles. Do they work?
-4. How are we going to allow for variations in the master template?
-    - Missing! for cloze tags
-    - Simple for ...
-    - Draw! for image fields
-    - Perhaps we can simply use conditional fields `{{#☆ field}} ... {{/☆ field}}`
-5. Our demo files are our specimen files. Is our design system consistant?
-6. Are there any raw HTML css that should live in `/partials`? Any `.gl` that should be a `#page` or a `#section`?
-7. Remember Elm Lang's lessons: **just because something is _similar_ does not mean it is the same!** When do you _not_ reuse styles?
-8. What happens if much of the code's base is shared? For instance `.test-Anki` is used for all demo cards; `.gl-Card` is used for all demo cards; some bits are dependant on `#card-type` ...
-    - It doesn't seem sensible to me to do something like `#card-type -> .gl-Card` and make changes this way (I don't think it recommends in GPS anyway)
-    - It's also a little bit difficult (without a compiler, which Pandoc might help with) to differentiate cards without having a bit of (or a lot of) HTML code repetition (Tailwind advises against this where possible).
-    - For instance the main bits that are going to change are an `<img>` for Draw! (perhaps slightly different layout); a `{{cloze}}` tag for Missing! and so on.
-    - If a layout is _slightly_ different, does (7) apply? Should you make this an entirely different template? Or adapt the `.gl-` elements? Or add a `.gl-Element-variation`? I used to have `.simple` and `.simple-reverse`, for instance.
-    - If they're part of a design system, perhaps a `-variant` might make sense.
-9. Is the `.gl-Card h1 code b` part of the `gl-Card` styles, or part of the global _raw_ html styles? This is nuanced and uncertain.
-10. If `#section` should always be preceded by `#page` then it makes sense to have `#section` in the same file as it's page?
-11. **Aim to keep RAW HTML and `.gl-` styles in separate folders.** You want to try and go as far as you can with raw html styles, but I feel that keeping global styles on their own is the way to go (for now).
-    - <s>In `skylighting.less` I'm referencing `.gl-CodeBlock`. Is this valid to do this?</s>
-    - <s>I feel like keeping `skylighting.less` as one of the main `partials` (well, a global style really) is the way to do things.</s>
-    - <s>Perhaps moving it to be explicitly with the global classes is a better way to go though.</s>
-12. In the old `/component/test.less` file (and the `simple.mustache` file for instance) we've got our `.gl-Card` which is wrapped in our Anki view `#front` and `#reverse`.
-    - Our `.test-` classes are pretty much just grid components to give ourselves some page layout. So the `.gl-Card` in that case would act like a component (even though it's a view in Anki app).
-    - How do we code this up? Treat our test wrappers as sections? Have them as a `gl-Grid` or `gl-Wrapper`?
-    - Views within views in the GPS thingy would break it's concept. So in this case we'd treat `#reverse -> #answer` as nested sections. I think.
-    - SEE?!! It gets complicated when you move away from a very set ECSS type of model. With that everything becomes a class and I'm losing the will to live 'cos I can't "see" it properly :(
-13. Does a `#section` have to be unique to it's parent and only show up on one single view in the app? See `#demo -> #reverse`.
-14. Shouldn't `.gl-CodeBlock .cloze` be more of a `#page -> #section -> .cloze` type? It's part of the `#missing` card and nowhere else really.
+I'm not sure if the above is correct, or if it should always live with `/partials` raw html. I'm also not super keen on the nested style over the `.gl-Card_HeaderTitle` style. GPS is all about gettin out of the BEM habit however.
 
-## Problems
+## The problems with GPS
 
-> It's quite a big job switching out frameworks.
-> It takes time to figure out how to tackle fringe cases,
-> Or to do justice to the _theory_, whichever one you've chosen!
-> Perhaps our `.card` isn't suited to GPS? (cards share a lot of styles)
+> It can take a long time to switch between frameworks (about 2-3 days with Anki), so better to choose wisely and stick with it.
+>
+> - Is GPS suited to _all_ types of sites?
+> - How do we tackle fringe or subjective problems?
+> - How does it cope at scale, with a team of devs?
 
-It's not a good idea to repeat HTML when you can get away without doing that. This means your code is living in two or more places. See Tailwind's "reusing styles" post. Ideally use:
+
+Repetition should be avoided ([see sharing styles](..)) so here's your options:
 
 1. A loop
 2. A component
 3. Some kind of conditional css (depending on type of card)
 
-Another big question is "how many nested classes do you need for a global component?". GPS seems to say "very few!" and using regular (raw) html with a wrapping `.gl-` class.
+### Bye Bye ECSS (almost)
 
-For instance ...
+In some ways it's nice to go back to styling raw html elements (which can be wrapped in a `.gl-` class) but I don't personally like overly nested elements. With ECSS you could scan the css file and see very quickly what was part of what:
 
-Is the `.header` part of the `.card` or are they separate entities? Well, it definitely _feels_ part of the card, as the card has a header. I'm not sure about that. But if `.header` has a class, then the `h1` doesn't really need one. It's inside the `.header` and if it gets changed, we throw out those styles.
+1. The file lived with it's page or component
+2. It has the concept of `.gl-` styles (which in my portfolio is for _true_ global styles, such as `.gl-Nav`, `.gl-Header`, which are site-wide ...
+3. Things that affect portions of the website, such as a `/page` template, would be scoped as `.pg-Intro`, and it's child elements `.
+    - These live in a folder named `/pages`
+    - Page templates live here also.
+4. Next we have page-level sections `/pages/manifesto`, which may be _exactly_ the same as other page sections, but we scope them as unique individual pages; `.manifesto`, `.about`, etc.
+5. Elements that live inside the `/manifesto` template, _even though_ they're `.gl-` elements as far as GPS are concerned get scoped to the page.
+6. `.manifesto-List` and `.manifesto-Photos_WithChildren` or `.manifesto-Button-variant` are all examples of this line of thought. So there's a _lot_ of repetition across the site.
 
-### A solution (I think)
+There's some subtly to how we decide things that are `.gl-` elements in ECSS, but less so than GPS it seems to me. If there's likely to be differences, ECSS says treat them as unique components. Our Anki cards in that case scope to `.simple-Card` and `.missing-Card` with all their children. They share nothing.
 
-1. The `.gl-Card` is shared amongst all card types.
-2. The `.gl-Header` is _almost_ the same with all cards
-3. The `pre code` blocks however, change depending on the card. But not much.
-    - This is the only part that is likely to change ...
-    - For instance, the `Draw!` card will host an `img`, or an `occlusion` (a special kind of image)
-    - This would likely need to be a `#section` or a `.gl-` type that has variations.
-4. It says in `GPS` that a `#section` needs to be nested inside a `#page` (in our case, a `#card`) so bear this in mind.
-5. In either case with `(3)` and `(4)`, our CSS doesn't really do much at all; simply has a `pre` inside it without any margins. But if we _did_ need to do something with that wrapper, it'd need to be like `(4)` says!
-    - For now, as it doesn't really _do_ anything, I think it's safe to have as a `gl-` type.
+### Hello GPS (mostly)
+
+> How can we reason about all our elements with ease?
+
+With ECSS you didn't have to wonder what an element was or where it was positioned. With GPS the naming conditions are slightly different:
+
+- Is `.gl-header` part of `.gl-card` or it's own thing? Can I place `.gl-header` anywhere or is it dependant on it's relative position?
+- When _do_ I add a class? A `p` tag is a bit weak and doesn't give any semantic information, for instance.
+- If we move elements around, this _must_ be reflected in our CSS, unless that element is it's own thing.
 
 
-#### (3), (4), (5) — the original code
+### On "uniqueness" and "sameness"
 
-> There different _conceptually_, but essentially the exact same CSS code.
-> If you were in Elm, it's likely the models would differ.
+> What happens when a global component _mostly_ shares styles, but has some minor differences. At what point do we split into a new `.gl-` component, or a `-variant`? When do we create a unique `#section`?
+
+A good for instance here is `Missing!` and `Simple` cards are _almost_ identical, but `#answer` wraps differently.
+
+If we wanted to create a `Draw!` card type which uses images, our `.gl-CodeBlock` isn't required anymore (which I named as a separate entity for this reason). How far can we stretch our design system before we have to be unique?
+
+Again, ECSS didn't have this issue as almost EVERYTHING was unique.
+
+
+## Here's what I know so far:
+
+1. GPS has some nuances that ECSS does not suffer from.
+2. Folder names and file names should make sense with our new framework
+    - Raw html should be separate from `.gl-` styles and `#page #section`s
+3. The `/demo/` folder is equivalent to a font specimen or design system.
+    - We should have a base `specimen` file, for defaults styles, as well as a design system for our `.gl-` styles.
+    - These should be consistant and the place you go preview any changes.
+4. Make sure there's no `.gl` styles that should be raw `/partials` html and vice-versa.
+    - As much as is possible should be styled in raw html (base styles)
+    - Styles such as `.gl-Card h1 code b` might best live in `/partials` with our specimen styles. Do we always set `h1 code` as `font-size: inherit;` for instance?
+    - `#section` and `.gl` have to be carefully considered. A `#section` should be unique. It gets complicated when you have _slight_ differences between two components. You can move it up or down the scope.
+    - A `#section` should always be underneath a `#page` (I think)
+5. Our `.anki-Front` and `.anki-Reverse` are now `#front` and `#reverse`. They're _sort of_ pages (as they're complete Anki templates) but within `#demo` they're more like sections. **It's a view within a view.** What to do here?
+    - Our `#demo > ...` classes are pretty much just grid components to give ourselves some page layout. Do we name them as `.gl-Grid` components or use a page id?
+    - ECSS would treat every class as unique, and scoped to it's page/component.
+6. <s>Does a `#section` _have_ to be a unique element, only one per site, nested inside a unique`#page`?</s> It seems a `#section` should be unique to, and nested inside, a `#page` level element.
+    - A piece of styling that applies to ONE area only should be under at least `#page #section` ids (2 levels).
+    - If you had `#photo` and inside `gl-Photo` should the `.gl-` element be left alone? Is it wrong to style it dependant on the `#photo` section? (such as `.gl-Photo { #photo & { .. } }`)
+    - What about our "uniqueness" problem, where two pages are similar, but not the same?
+    - If we have a slight `-variant` element, do we treat this as a brand new thing?
+7. If an element is only seen in one _type_ of card, such as `#missing > .cloze` I'm guessing it should be a uniqe `#section` or `.class`? (in our case, the `.cloze` class is required by Anki).
+    - i.e: where should it live?
+8. `.gl-` elements should _only_ be nested if they contain multiple children, or for `-hover` and `-active` states.
+
+
+
+
+
+## Conceptually different, fundamentally the same
+
+> Do we give our "views" in Anki a unique `#page` ID? How do we account for variations in our `.gl-Card` which both `#missing` and `#simple` will share? How do we name the `.gl-Card` `-front` and `-reverse`?
 
 ```html
-<!-- The simple card -->
+<!-- The simple card had the `.simple-Sample` on
+front and the `.simple-KeyPoint` and `.simple-KeyPoint_Code` on reverse. -->
 <div class="simple-Sample">
   {{★ Sample (code block)}}
 </div>
 ```
 
 ```html
-<!-- The Missing! card -->
+<!-- The Missing! card only has the `.missing-KeyPoint` on the front and reverse. Both-->
 <div class="missing-KeyPoint"> <!-- There's no CSS for this at all -->
   <div class="missing-KeyPoint_Code">  <!-- Same CSS as `.simple-Sample` -->
     {{cloze:★ Key point (code block)}}
@@ -119,138 +134,59 @@ Is the `.header` part of the `.card` or are they separate entities? Well, it def
 </div>
 ```
 
-### Another (better?) example
+We also used to use `{{FrontSide}}` tag for our `#simple` `.gl-Card` because it's simpler to do that and render our `.gl-Card` `-front` within our `-reverse` template. **This won't work if we want to share styles with Missing!**
 
-With the Simple card, we have:
+Not only do we have the above issue, where they're using different `{{card fields}}` but our Missing! card wraps the entire `-reverse` in an `div#answer` (our Simple template uses `#answer` as a child of `-reverse`).
+
+Here in lies the conundrum.
 
 ```html
-<div id="front" class="anki-Front">
-  <!-- other stuff here -->
-    <div class="simple-Sample">
-      {{{★ Sample (code block)}}}
+<!-- Missing! -->
+<div id="reverse">
+  <div id="answer">
+    <!-- Missing! wraps everything in an `#answer`
+    so we can skip to the right place on reveal -->
+  </div>
+</div>
+```
+
+```html
+<!-- Simple -->
+<div id="reverse">
+  <section class="gl-Card">
+    <!-- We used to use `{{FrontSide}}` here, but we can't do that and share our templates with Missing! -->
+    <div id="answer">
+      <!-- Simple has it's skip to link further down the page -->
     </div>
   </section>
 </div>
-<section id="answer" class="simple simple-reverse">
-  <div class="simple-KeyPoint">
-    <div class="simple-KeyPoint_Code">
-      {{{★ Key point (code block)}}}
-    </div>
-    <div class="simple-KeyPoint_Notes">
-      {{{★ Key point notes}}}
-    </div>
-  </div>
-  <!-- other stuff here -->
-</section>
 ```
 
-Whereas the Missing! card just needs the exact same field (`{{ }}`) for the front and the reverse card (perhaps `gl-Front` should be a unique `#missing-front` and `#simple-front` page level id?). You can see the similarity in the reverse here:
+Luckily we don't actually _style_ `#answer` as it's just an internal link, but it begs the question "what if we want to share a template but it's layout forbids it?". Do we ...
 
-```html
-<!-- This uses the exact same Key Point field on the front
- as it does on the reverse! -->
-<div class="missing-KeyPoint">
-  <div class="missing-KeyPoint_Code">
-    {{cloze:★ Key point (code block)}}
-  </div>
-  <div class="missing-KeyPoint_Notes">
-    {{★ Key point notes}}
-  </div>
-</div>
-```
-
-### The problems with these card tags
-
-When we used to use `{{FrontSide}}` (in the reverse card) where we had a `.anki-Front` tag on front template, this class becomes a child of `gl-Reverse` on the reverse of the card.
-
-Obviously this doesn't make sense as `.anki-Front` has a border in `.nightmode` and it was awkward to remove that border and place it on `.anki-Reverse`.
-
-So perhaps `{{FrontSide}}` is very useful when cards are simple, but when they become more complex cards it might not make sense to use it.
-
-### A good candidate for `#section`
-
-> Both Simple and Missing have `.anki-Reverse` but only one (Simple) requires collapsing two `pre` blocks (because Missing only has one `pre` block!)
-
-```html
-.anki-Reverse {
-  .simple-Sample pre {
-    margin-bottom: 0
-  }
-```
-
-## Questions
-
-### Is that a `global` element or a `section`?
-
-> **Notice how there’s no nesting here.** The only time you should see nesting in the global CSS file is if you are handling some sort of hover or active properties, or if you have a global style that comprises multiple elements (which, to be fair, does definitely happen). These are all re-useable styles across the entire site.
-
-A section (I think) is supposed to be seen once, and only once. So a `.card` and it's elements should be a `.gl-`obal element?
-
-But does the above quote mean that `.gl-` elements should'nt be nested? Or just that it needs more styles for child elements, which aren't nested?
-
-### Can a `#section` be seen on multiple pages?
-
-> If you are writing styling that applies only to one specific section, **it should be nested under at least 2 levels of ids** — the page id and the section id.
-
-Would you use a `.gl-` for a card, or a `#section` that repeats on multiple card templates? To me that quote seems to say "NO" because it'd be nested under page (or card) specific styles `#CARD-TYPE > #SECTION`.
-
-### If a `.gl-` element is inside a `#section` should it be left alone?
-
-Say for instance you had a `#photos` section, but your child elements are `.gl-photo` with some particular styles, should you create _completely new elements_ if your children are needing to be _slightly_ different than the global design system styles?
-
-## Thoughts
-
-**I still need to decide _where_ to put the css files** as it's quite nice to have them next to their "components", or their "pages". Our `styles/partials` are where all raw HTML level styles go (which could be classed as global), but our `.gl-`obal styles should be treated a bit differently. They live in a specific file or folder for design-system stuff. A bit like Pico CSS.
-
-For instance, typography should live in `style/partials/headings.less` for example. So that's our base. It'd be useful to have a specimen file for these raw styles.
-
-We currently have for example:
-
-```html
- <section class="simple simple-front">
-```
-
-With `simple-reverse` on the reverse card. But this is premature optimisation, as they're both exactly the same! I think that follows on `ECSS` style variation; `-active` would be another version of this.
+1. Create a new _almost identical_ element (and assume it must be a `#section` as it's used in one place);
+2. Create a `.gl-` `-variant` for this one scenario, bearing in mind we may only use it once;
+3. Create some `.gl-` bits that are universal, and `#page #section` or `#page .class` for the bits that are unique?
+4. Some other hybrid solution?
 
 
+-----
 
-> 1. Need to rename card field for code block (rename image)
-> 2. Stop using `{{FrontSide}}`. It's convenient but requires keeping TWO templates ...
-> 3. ...  Which means reusing styles (like the Tailwind article says) becomes harder
-> 4. The only thing that _should_ be different per card type is certain portions:\
->    - The `{{cloze}}` tag for Missing!
->    - The `{{image}}` field for (eventually) Draw!
-         - Will Draw! Have fewer fields? Do these really need to be split out?
 
-Components are a nice idea, and perhaps for really massive sites they're the best option, but for Anki it leads to lots and lots of repetition. Some might say, needless repetition.
+## Basic overview of GPS
 
-Current CSS
------------
+> What GPS is trying to achieve.
 
-I think we can safely say that the current layout for CSS is:
+Full article and Github repo.
 
-1. `style/modules/variables/` lives the `--css-variables` (why do we call it a modules folder? What's the reason for that name?
-2. `style/modules/mixins/` aren't used at all (in Print First we have a `.baseline-grid()` mixin.
-3. `partials` lives the raw HTML styles. That is everything at it's base level that doesn't involve components or conceptual design elements.
-
-That lives the components, or designed elements, like `.anki-Front` or `.card` or whatever. Where should this live?
-
-What GPS is trying to achieve
------------------------------
-
-> GPS stands for `global`, `page`, `section`.
-> A caveat is: YOU SHOULD HAVE A DESIGN SYSTEM (for anything other than micro sites)
-> If you're a team, you need something to work from or it'll get messy.
-> That's why ECSS was born, for isolating code.
+GPS stands for `global`, `page`, `section`. If you're in a team, you need a document to work from, so you should definitely have a design system at least for your `global` styles. ECSS was all about complete isolation, but GPS isn't so strict. It's trying to achieve:
 
 1. Cleaner code (dare I say, beautiful code?)
 2. Fewer unwieldy class names
 3. Repetition (BEM and ECSS aren't dry; neither is Tailwind!)
-4. Just enough isolation (to stop inheritance issues, and what he calls "scope leaks")
+4. Just enough isolation (to stop inheritance issues, and what he calls "scope leaks")[^1]
 5. The simplicity of frameworks like Pico CSS.
 
-> By far the largest issue developers have with CSS are what I like to call scope leaks.
-> These happen when you write styles for one specific section of a website, but because of the way you made the selection, the styles also affect elements on other random parts of the site. This is a side effect of CSS being written in the global scope by default.
 
 ### Global styles
 
@@ -260,45 +196,27 @@ Some styles are used in multiple places across a website. For example, your `h1`
 
 Should always be classes, and styles should only be defined as global if and only if they appear on multiple different pages.
 
-I'm going to name these `.gl-` (based on ECSS)
-
 ## Page
 
 You should probably have a unique `#id` for a page or view element, and all page-level styles (that are not global elements) should live here. Any CSS that you write that is not global should always be scoped under a page or view’s id.
 
-Ids are intended to be used for elements that only appear once per page — it is invalid html to have more than one of the same id on a page.
+Ids are intended to be used for elements that only appear once per page — **it is invalid html to have more than one of the same id on a page.** I think it's also invalid to have more than one `#id` on the same element?
 
 ## Section
 
+> **A unique section within a page**
+>
 > If you are writing styling that applies only to one specific section, it **should be nested under at least 2 levels of ids — the page id and the section id.** This is the default place you should put code if you aren’t sure, as there is no chance of a scope leak for code here.
 >
-> If later on you notice that the same style is actually used elsewhere on the same page, you can pull it up to a page-specific style.
+> **Pull it up to page-specific style:** if later on you notice that the same style is actually used elsewhere on the same page
 >
->And if you notice it being used on other pages, you can pull it up to global.
+> **Pull it up to global:** if you notice it being used on other pages!
 >
 > **If you are copy-pasting blocks of CSS in order to get around this problem you are doing it wrong.**
 
-A non-reusable section or element that is page-specific, and isn't going to be reused across the site.
+A non-reusable section or element that is page-specific, and isn't going to be reused across the site. For example, on your about page, you might have a portion that contains an introductory paragraph, then a section that has some of your company’s staff, and a section that has some of the clients you’ve worked with.
 
-“a unique section
-within a page”. For example, on your about page, you might have a portion that contains an introductory paragraph, then a section that has some of your company’s staff, and a section that has some of the clients you’ve worked with.
-
-since there can only be one of them per page, these are also marked with ids.
+Since there can only be one of them per page, these are also marked with ids.
 
 
-
-Pandoc's being a pain
----------------------
-
-> Pandoc changes `<header>` to `<section>` and I don't know why.
-> What's the best way to compile files with imports (but not fuck up the HTML)?
-
-For some reason whitespace inside a `<div>` gives an error when using `-o` with a standalone file. I think it's probably treating it as an indentation code block, rather than plain html.
-
-```terminal
-[WARNING] Could not deduce format from file extension .mustache
-  Defaulting to markdown
-[WARNING] Could not deduce format from file extension .mustache
-  Defaulting to html
-[WARNING] Div at TESTING.mustache line 1 column 1 unclosed at TESTING.mustache line 25 column 1, closing implicitly.
-```
+[^1]: By far the largest issue developers have with CSS are what I like to call scope leaks. These happen when you write styles for one specific section of a website, but because of the way you made the selection, the styles also affect elements on other random parts of the site. This is a side effect of CSS being written in the global scope by default.
