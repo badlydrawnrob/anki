@@ -1054,7 +1054,7 @@ h2 {
   text-transform: none;
   letter-spacing: normal;
 }
-.nightmode a {
+.nightMode a {
   color: var(--color-nightmode-link);
 }
 img {
@@ -1065,7 +1065,7 @@ img {
   background: transparent;
   border-radius: var(--border-radius);
 }
-.nightmode .gl-Card {
+.nightMode .gl-Card {
   color: var(--color-nightmode-text);
   border: 1px solid var(--color-nightmode-border);
 }
@@ -1082,7 +1082,7 @@ img {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.nightmode .gl-Card header {
+.nightMode .gl-Card header {
   background: var(--color-nightmode-background-ddd);
   border: transparent;
 }
@@ -1099,7 +1099,7 @@ img {
 .gl-Card header h1::before {
   content: '★ ';
 }
-.nightmode .gl-Card header h1 {
+.nightMode .gl-Card header h1 {
   background: var(--color-nightmode-background-dddd);
 }
 .gl-Card header h2 {
@@ -1108,7 +1108,7 @@ img {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.nightmode .gl-Card header h2 {
+.nightMode .gl-Card header h2 {
   color: var(--color-nightmode-text-light);
 }
 .gl-Card header p {
@@ -1131,7 +1131,7 @@ img {
 .gl-Card_KeyPointNotes ol > li {
   margin-left: var(--spacing-one);
 }
-.nightmode .gl-Card_KeyPointNotes {
+.nightMode .gl-Card_KeyPointNotes {
   color: var(--color-nightmode-text-light);
   background: var(--color-nightmode-background-d);
 }
@@ -1162,7 +1162,7 @@ img {
 .gl-Card header code em {
   color: var(--color-code-light-lowlight);
 }
-.nightmode .gl-Card header code {
+.nightMode .gl-Card header code {
   color: var(--color-nightmode-text-dark);
 }
 .gl-Card_KeyPointNotes code {
@@ -1176,8 +1176,8 @@ img {
   text-align: left;
   background: transparent;
 }
-.nightmode .gl-Card_KeyPointNotes pre,
-.nightmode .gl-Card_KeyPointNotes pre code {
+.nightMode .gl-Card_KeyPointNotes pre,
+.nightMode .gl-Card_KeyPointNotes pre code {
   background: var(--color-ll);
 }
 .gl-CodeBlock pre {
