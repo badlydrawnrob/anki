@@ -18,5 +18,8 @@
   "✎ Other notes": "<p>More <a href=\"https:\/\/www.mathsisfun.com\/sets\/intervals.html\">ways to think about intervals<\/a><\/p>",
 
 
-  "✎ Markdown": "The online Pandoc convertor seems to ouput the cloze properly:\r\n\r\n```bash\r\n[0, 20] # {{c1::>= 0, <= 20}}\r\n\r\n(0, 20] # {{c1::> 0, <= 20}}\r\n\r\n(0, 20) # {{c1::> 0, < 20}}\r\n\r\n[0, 20) # {{c1::>= 0, < 20}}\r\n```"
+  "✎ Markdown": "The online Pandoc convertor seems to ouput the cloze properly:\r\n\r\n```bash\r\n[0, 20] # {{c1::>= 0, <= 20}}\r\n\r\n(0, 20] # {{c1::> 0, <= 20}}\r\n\r\n(0, 20) # {{c1::> 0, < 20}}\r\n\r\n[0, 20) # {{c1::>= 0, < 20}}\r\n```",
+
+
+  "Tags": "__anki-themes-2.7.0::desktop __anki-themes-2.7.0::elm edit"
 }
