@@ -76,8 +76,8 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 They say code is an art form. Anki themes comes with both a light and dark colour palette; highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
 
 - 🖌️ **Starter themes**
-    - 🌅 [Solarized light](https://ethanschoonover.com/solarized/)
-    - 🌃 [Monokai](https://www.monokai.pro)
+    - 🌅 Monochrome
+    - 🌃 Breeze Dark
 - 🧑‍🎨 **[Create your own colour theme](./source/docs/highlight/index.md#customising-themes-the-easy-way)**
 
 

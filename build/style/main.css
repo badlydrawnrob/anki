@@ -944,9 +944,7 @@ cite {
   font-style: italic;
 }
 :root {
-  --color-code-light-highlight: #f12056;
-  --color-code-light-lowlight: #a877ff;
-  --color-code-cloze: #da4453;
+  --color-code-cloze: #f12056;
   --color-code-cloze-background: #ffffcc;
   --color-card-l: #757575;
   --color-card-ll: #bdbdbd;
@@ -961,8 +959,8 @@ cite {
   --color-nightmode-text-dark: var(--color-bbb);
   --color-nightmode-border: var(--color-l);
   --color-nightmode-link: #3daee9;
-  --color-code-light-highlight: #da4453;
-  --color-code-light-lowlight: #8e44ad;
+  --color-code-bold: #f12056;
+  --color-code-italic: #f67400;
   --color-code-dark-background: #232629;
   --color-code-dark-text-color: #cfcfc2;
   --color-code-dark-line-number-color: #7a7c7d;
@@ -1156,11 +1154,11 @@ img {
 }
 .gl-Card header code b,
 .gl-Card header code strong {
-  color: var(--color-code-light-highlight);
+  color: var(--color-code-bold);
 }
 .gl-Card header code i,
 .gl-Card header code em {
-  color: var(--color-code-light-lowlight);
+  color: var(--color-code-italic);
 }
 .nightMode .gl-Card header code {
   color: var(--color-nightmode-text-dark);

@@ -5,10 +5,12 @@
 //
 // #1: Some styles are inherited from `print-first-css`:
 //     - Base colors: `--color-b` etc
-//     - Monochrome: `--color-code-light` etc
+//     - Monochrome: `--color-code-light`
+//         - You can add `code block`s to your Anki Card notes, but I'd advise
+//           keeping them as monochrome, from the light theme.
 //         - Inline `code` styles are handled in `code.less`
-//         - Our light style is monochrome, but we need to add in our
-//           "basic syntax highlighting" variables for `strong` and `em`.
+//         - Our "basic syntax highlighting" variables can be found in
+//           `breezedark.less`
 //
 // #2: Add some card color styles (rather than using `color-l` etc)
 //
@@ -20,9 +22,7 @@
 
 
 // #1
---color-code-light-highlight: #f12056;
---color-code-light-lowlight: #a877ff;
---color-code-cloze: #da4453;
+--color-code-cloze: #f12056;
 --color-code-cloze-background: #ffffcc;
 
 

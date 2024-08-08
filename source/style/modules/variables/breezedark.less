@@ -2,7 +2,11 @@
 //
 // #1: Skylighting theme (Breeze Dark), Compile code blocks with Pandoc!
 //
-//    (a) Our inherited `--color-code-light` theme is
+//    (a) Our inherited `--color-code-light` theme is monochrome, but we can
+//        make some changes here.
+//
+//        #! What happens if we use our `code block` inside our notes?
+//           It's going to inherit these styles. New variables are needed.
 //
 //    (b) A very helpful plugin is `colorize` which allows you to preview color:
 //        @ http://tinyurl.com/visual-studio-code-colorize
@@ -21,8 +25,9 @@
 
 
 // #1a
---color-code-light-highlight: #da4453;
---color-code-light-lowlight: #8e44ad;
+--color-code-bold: #f12056;
+--color-code-italic: #f67400;  // Was #8e44ad
+
 
 // #1b
 --color-code-dark-background: #232629;
