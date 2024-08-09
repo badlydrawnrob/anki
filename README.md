@@ -118,6 +118,12 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 > ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
 
+### Can't swipe left to view code on Anki Mobile
+
+The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture.
+This is not desirable, as often our code will have an `overflow` which we want to
+scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
+
 ### Formatting problems
 
 > ⚠️ If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
@@ -132,4 +138,4 @@ Anki themes are licensed under the [MIT Open Source License](./license.md)
 
 ### Inspiration
 
-I've had a lot of inspiration from [Enduring CSS](https://tinyurl.com/yc4pnxyr) for component naming conventions, [@mdo code guide](http://codeguide.co/) for HTML/CSS and [@cbracco](https://github.com/cbracco) for sane frameworks ... so, thanks!
+I've had a lot of inspiration from [Enduring CSS](https://tinyurl.com/yc4pnxyr) for component naming conventions, [@mdo code guide](http://codeguide.co/) for HTML/CSS and [@cbracco](https://github.com/cbracco) for sane frameworks ... so, thanks! iPhone photo by `@svstudioart` on Freepik.
