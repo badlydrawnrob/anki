@@ -9,7 +9,7 @@
 ========================================================================== -->
 
 ```python
-residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106, 'snake' : 1000}
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
 
 print(residents['Puffin'])
 print(residents['Sloth'])
