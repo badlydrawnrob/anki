@@ -1063,6 +1063,7 @@ img {
 .gl-Card {
   background: transparent;
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
 .nightMode .gl-Card {
   color: var(--color-nightmode-text);
@@ -1118,6 +1119,7 @@ img {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
   background: var(--color-card-lll);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   font-size: var(--font-size-m);
   text-align: center;
 }
@@ -1130,6 +1132,11 @@ img {
 .gl-Card_KeyPointNotes ol > li {
   margin-left: var(--spacing-one);
 }
+.gl-Card_KeyPointNotes small {
+  color: var(--color-card-l);
+  text-align: center;
+  display: block;
+}
 .nightMode .gl-Card_KeyPointNotes {
   color: var(--color-nightmode-text-light);
   background: var(--color-nightmode-background-d);
@@ -1139,6 +1146,9 @@ img {
   padding: 0 var(--spacing-one);
   color: var(--color-card-l);
   font-size: var(--font-size-m);
+}
+.gl-Card footer code {
+  font-size: inherit;
 }
 .gl-Card header code {
   font-size: inherit;
@@ -1167,11 +1177,11 @@ img {
 .gl-Card_KeyPointNotes code {
   color: var(--color-bbb);
 }
-.gl-Card_KeyPointNotes pre {
+.gl-Card_KeyPointNotes pre,
+.gl-Card_KeyPointNotes code {
   font-size: inherit;
 }
 .gl-Card_KeyPointNotes pre code {
-  font-size: inherit;
   text-align: left;
   background: transparent;
 }

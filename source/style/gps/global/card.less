@@ -22,6 +22,8 @@
 // #1: A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
 //     however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
 //
+//     #! How can we be more descriptive? Just have in-place comments?
+//
 // #2: Should there ever be "Placeholder" classes added? For instance, you add
 //     a descriptive wrapper but you don't have any styles for it yet.
 //
@@ -36,11 +38,12 @@
 //
 //     #! `.gl-Card` -> `_KeyPoint`
 //
-// #4: #! Should our `code` styles be here or someplace else?
+// #! Should our `code` styles be here or someplace else?
 
 .gl-Card {
   background: transparent;
   border-radius: var(--border-radius);
+  overflow: hidden;  // Force the border-radius
 
   .nightMode & {
     color: var(--color-nightmode-text);  // #! Perhaps should live in RAW HTML
@@ -85,15 +88,6 @@
   .nightMode & {
     background: var(--color-nightmode-background-dddd);
   }
-
-  // #!
-  // Set the appropriate `font-size` for heading code
-  // reverses the Goldilocks hack in `print-first-css`:
-  //     @ https://tinyurl.com/2p9xpevw
-  //
-  // code {
-  //   font-size: var(--font-size-p);
-  // }
 }
 
 .gl-Card header h2 {
@@ -115,7 +109,7 @@
 
 // #2
 .gl-Card_KeyPoint {
-  // Pass
+  // pass
 }
 
 // #! #3
@@ -123,6 +117,7 @@
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
   background: var(--color-card-lll);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   font-size: var(--font-size-m);
   text-align: center;
 
@@ -135,6 +130,13 @@
     }
   }
 
+  // {{Tags}}
+  small {
+    color: var(--color-card-l);  // #! This feels wrong to use `-card` var here
+    text-align: center;
+    display: block;
+  }
+
   .nightMode & {
     color: var(--color-nightmode-text-light);
     background: var(--color-nightmode-background-d);
@@ -144,8 +146,12 @@
 .gl-Card footer {
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
-  color: var(--color-card-l);
+  color: var(--color-card-l);     // #! This feels wrong using `-card` var here
   font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
+
+  code {
+    font-size: inherit;  // #!
+  }
 }
 
 
@@ -154,7 +160,9 @@
 // `.gl-CodeBlock` or Skylighting's `.sourceCode span` classes. Let's keep
 // our Key Point Notes code monochrome for now.
 //
-// #! For some reason you have to inherit for both `pre` and `code` here.
+// #! Should our code styles be here or someplace else?
+// #! I feel at least `code { font-size: inherit }` should be raw html
+// #! Both `pre` and `code` need to inherit here for some reason.
 
 .gl-Card header code {
 
@@ -187,14 +195,14 @@
 }
 
 .gl-Card_KeyPointNotes {
-  pre {
+  pre,
+  code {
     font-size: inherit;    // !#
+  }
 
-    code {
-      font-size: inherit;  // !#
-      text-align: left;
-      background: transparent;
-    }
+  pre code {
+    text-align: left;
+    background: transparent;
   }
 }
 
