@@ -148,10 +148,6 @@
   padding: 0 var(--spacing-one);
   color: var(--color-card-l);     // #! This feels wrong using `-card` var here
   font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
-
-  code {
-    font-size: inherit;  // #!
-  }
 }
 
 
@@ -161,17 +157,13 @@
 // our Key Point Notes code monochrome for now.
 //
 // #! Should our code styles be here or someplace else?
-// #! I feel at least `code { font-size: inherit }` should be raw html
 // #! Both `pre` and `code` need to inherit here for some reason.
 
 .gl-Card header code {
-
-  font-size: inherit;
   background: transparent;
 
   b, strong,
   i, em {
-    font-size: inherit;
     font-style: inherit;
     font-weight: inherit;
     text-decoration: none;
@@ -195,10 +187,6 @@
 }
 
 .gl-Card_KeyPointNotes {
-  pre,
-  code {
-    font-size: inherit;    // !#
-  }
 
   pre code {
     text-align: left;

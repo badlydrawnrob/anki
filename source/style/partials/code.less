@@ -7,6 +7,8 @@
 // 1. Inherited Light theme as default
 // 2. See :root variables for color themes
 // 3. Add `--color-code-dark` to the `code block`s!
+// 4. Inherit `font-size` from parents (setting it here, as it seems like a lot
+//    of extra work to style it on every element individually.
 
 code,
 kbd {
@@ -15,6 +17,7 @@ kbd {
   border-color: transparent;
   padding: var(--spacing-micro) var(--spacing-half);
 
+  font-size: inherit;
   font-variation-settings: 'MONO' 1;  // #! For recursive font only
 
   &:empty {
@@ -23,4 +26,8 @@ kbd {
     background: transparent;
     border-color: transparent;
   }
+}
+
+pre {
+  font-size: inherit;
 }

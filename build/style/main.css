@@ -1022,6 +1022,7 @@ kbd {
   background: var(--color-ll);
   border-color: transparent;
   padding: var(--spacing-micro) var(--spacing-half);
+  font-size: inherit;
   font-variation-settings: 'MONO' 1;
 }
 code:empty,
@@ -1030,6 +1031,9 @@ kbd:empty {
   padding: 0;
   background: transparent;
   border-color: transparent;
+}
+pre {
+  font-size: inherit;
 }
 h1,
 h2,
@@ -1147,18 +1151,13 @@ img {
   color: var(--color-card-l);
   font-size: var(--font-size-m);
 }
-.gl-Card footer code {
-  font-size: inherit;
-}
 .gl-Card header code {
-  font-size: inherit;
   background: transparent;
 }
 .gl-Card header code b,
 .gl-Card header code strong,
 .gl-Card header code i,
 .gl-Card header code em {
-  font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
   text-decoration: none;
@@ -1177,10 +1176,6 @@ img {
 .gl-Card_KeyPointNotes code {
   color: var(--color-bbb);
 }
-.gl-Card_KeyPointNotes pre,
-.gl-Card_KeyPointNotes code {
-  font-size: inherit;
-}
 .gl-Card_KeyPointNotes pre code {
   text-align: left;
   background: transparent;
@@ -1198,6 +1193,11 @@ img {
   color: var(--color-code-dark-text-color);
   font-family: var(--font-family-mono);
   background: var(--color-code-dark-background);
+}
+@media (orientation: portrait) {
+  .gl-CodeBlock {
+    font-size: var(--font-size-m);
+  }
 }
 .gl-CodeBlock .cloze {
   color: var(--color-code-cloze);
