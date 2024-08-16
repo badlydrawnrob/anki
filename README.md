@@ -127,11 +127,11 @@ This is not desirable, as often our code will have an `overflow` which we want t
 scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
 
 <details>
-    <summary>
+<summary>
 
-    ### 4. Text Formatting problems
+    <h3>4. Text Formatting problems</h3>
 
-    </summary>
+</summary>
 
 > Paste **raw html** or **plain text** to avoid styling issues.
 
