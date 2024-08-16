@@ -108,25 +108,25 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 
 ## ⚠️ Be careful when ...
 
-### Upgrading your deck
+### 1. Upgrading your deck
 
-> ⚠️ **Always backup your deck** before installing a new version!
+> **Always backup your deck** before installing a new version!
 
 I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme.
 
-### Creating your flashcards
+### 2. Creating your flashcards
 
 > Keep it simple and avoid javascript
 
 **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
 
-### Can't swipe left to view code on Anki Mobile
+### 3. Can't swipe left to view code on Anki Mobile
 
 The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture.
 This is not desirable, as often our code will have an `overflow` which we want to
 scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
 
-### Formatting problems
+### 4. Formatting problems
 
 > Paste **raw html** or **plain text** to avoid styling issues.
 
