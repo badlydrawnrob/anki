@@ -106,7 +106,7 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 
 
 
-## Be careful when ...
+## ⚠️ Be careful when ...
 
 ### Upgrading your deck
 
@@ -116,7 +116,9 @@ I try to stick to **major.minor.patch** [semantic versioning](http://semver.org)
 
 ### Creating your flashcards
 
-> ⚠️ **Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
+> Keep it simple and avoid javascript
+
+**Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
 
 ### Can't swipe left to view code on Anki Mobile
 
@@ -126,16 +128,16 @@ scroll horizontally. You can change the settings, [see issue #118](https://githu
 
 ### Formatting problems
 
-> ⚠️ If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html.
+> Paste **raw html** or **plain text** to avoid styling issues.
+
+If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html. **TL;DR** [paste as plain text](https://forums.ankiweb.net/t/paste-plain-text/4326) to avoid formatting issues.
 
 
-## Licensed under MIT
+## License and inspiration
 
-Anki themes are licensed under the [MIT Open Source License](./license.md)
+> Anki themes are licensed under the [MIT Open Source License](./license.md)
+
+Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki themes are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^1] iPhone photo by `@svstudioart` on Freepik.
 
 
-## Thanks to ...
-
-### Inspiration
-
-I've had a lot of inspiration from [Enduring CSS](https://tinyurl.com/yc4pnxyr) for component naming conventions, [@mdo code guide](http://codeguide.co/) for HTML/CSS and [@cbracco](https://github.com/cbracco) for sane frameworks ... so, thanks! iPhone photo by `@svstudioart` on Freepik.
+[^1]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
