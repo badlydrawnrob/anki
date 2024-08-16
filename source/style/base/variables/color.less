@@ -1,4 +1,6 @@
-// Theme colors ================================================================
+// -----------------------------------------------------------------------------
+// Color variables
+// =============================================================================
 // I think I need to go back and rethink how I'm using `--color` variables and
 // try to be explicit as possible. As a rule, it's generally better to use the
 // absolute minimum of vars as possible, BUT when dealing with `.nightMode`,
@@ -20,7 +22,7 @@
 //
 // Notes
 // -----
-// #1: Some styles inherit from `print-first-css`:
+// 1. Some styles inherit from `print-first-css`:
 //     - Base colors: `--color-b` etc
 //     - Monochrome: `--color-code-light`
 //         - You can add `code block`s to your Anki Card notes, but I'd advise
@@ -29,28 +31,28 @@
 //         - Our "basic syntax highlighting" variables can be found in
 //           `breezedark.less`
 //
-// #2: Add some card color styles (rather than using `color-l` etc)
+// 2. Add some card color styles (rather than using `color-l` etc)
 //
-// #3: Dark mode colours:
+// 3. Dark mode colours:
 //     Aiming for MINIMAL changes to the base code, so it doesn't screw up
 //     inheritance of other chunks of css. Also known as "Night Mode".
 //     - Dependant on user's settings. In MacOS you can change by going to:
 //       `System Preferences -> General -> Appearance -> Dark`
 
 
-// #1
+// 1
 --color-code-cloze: #f12056;
 --color-code-cloze-background: #ffffcc;
 
 
-// #2
+// 2
 --color-card-l: #757575;
 --color-card-ll: #bdbdbd;
 --color-card-lll: #eceff1;
 --color-card-llll: #fff;
 
 
-// #3
+// 3
 --color-nightmode-background-d: #222;
 --color-nightmode-background-dd: #272822;
 --color-nightmode-background-ddd: #101010;

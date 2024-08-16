@@ -1,17 +1,45 @@
-// Main ========================================================================
-// #1: Setup our framework
-// #2: Testing out GPS
+/* -----------------------------------------------------------------------------
+// Anki Programming Themes
+// MIT License | https://github.com/badlydrawnrob/anki
+// =============================================================================
+// Inherits and extends `print-first-css` and sets up styles for our Anki themes!
+// This can be used as-is, or perhaps you'd like to use it as a base for another
+// set of Anki cards. We're not worrying about `.gl-BaselineGrid` here.
+//
+//    @ https://bit.ly/2TpdSaL                                                */
 
-// #1
-@import "config";
+@import (less) "../../node_modules/print-first-css/build/style/print-first.css";
+// @import (less) "../../../print-first-css/build/style/print-first.css";  // #! Only used for local development!
 
-// #2
-@import "./gps/global/card";
-@import "./gps/global/code-block";
-@import "./gps/global/breezedark";
-// @import "./gps/global/dracula";
-@import "./gps/page/front";
-@import "./gps/page/reverse";
-@import "./gps/page/demo";
-// #! Do we need a `/section` folder?
 
+// -----------------------------------------------------------------------------
+// Base files (setting the defaults)
+// -----------------------------------------------------------------------------
+// Print First CSS gives us some variables, but we'll want to add our own!
+
+@import "base/html/_root";
+
+
+// -----------------------------------------------------------------------------
+// Base files (our raw HTML styles)
+// -----------------------------------------------------------------------------
+// Ideally we'd style as much as possible here.
+
+@import "base/html/code";
+@import "base/html/headings";
+@import "base/html/text-elements";
+@import "base/html/utilities";
+
+
+// -----------------------------------------------------------------------------
+// Now for the good stuff, our Anki Cards
+// -----------------------------------------------------------------------------
+// We're using GPS style css, with some naming conventions from ECSS.
+
+@import "globals/card";
+@import "globals/code-block";
+@import "globals/breezedark";
+
+@import "pages/front";
+@import "pages/reverse";
+@import "pages/demo";

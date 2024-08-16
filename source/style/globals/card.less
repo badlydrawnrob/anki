@@ -1,4 +1,6 @@
-// Card ========================================================================
+// -----------------------------------------------------------------------------
+// Card styles
+// =============================================================================
 // Base `.Card` wrapper styles and it's children elements.
 //
 // #! HOW MANY LEVELS DEEP SHOULD THE CHILDREN GO?
@@ -19,24 +21,24 @@
 //    - Where `div`s are used, consider naming after parent, i.e: `.gl-Card_KeyPoint`.
 //      Go ask the guys at GPS and I'm sure they'll tell me I'm doing it wrong!
 //
-// #1: A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
-//     however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
+//1. A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
+//   however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
 //
-//     #! How can we be more descriptive? Just have in-place comments?
+//   #! How can we be more descriptive? Just have in-place comments?
 //
-// #2: Should there ever be "Placeholder" classes added? For instance, you add
-//     a descriptive wrapper but you don't have any styles for it yet.
+// 2. Should there ever be "Placeholder" classes added? For instance, you add
+//    a descriptive wrapper but you don't have any styles for it yet.
 //
-//     - Should empty `.gl-` classes be discarded? The HTML element too?
-//     - Sometimes it's nice to give the children a wrapper, to distinguish that
-//       section. Is this a bad way to work?
+//    - Should empty `.gl-` classes be discarded? The HTML element too?
+//    - Sometimes it's nice to give the children a wrapper, to distinguish that
+//      section. Is this a bad way to work?
 //
-//       #! See `.gl-Card_KeyPoint` wrapper.
+//      #! See `.gl-Card_KeyPoint` wrapper.
 //
-// #3: Should an element that's nested inside it's parent be "flat" but "nested"
-//     in ECSS/BEM style or is this disallowed?
+// 3. Should an element that's nested inside it's parent be "flat" but "nested"
+//    in ECSS/BEM style or is this disallowed?
 //
-//     #! `.gl-Card` -> `_KeyPoint`
+//    #! `.gl-Card` -> `_KeyPoint`
 //
 // #! Should our `code` styles be here or someplace else?
 
@@ -101,18 +103,18 @@
   }
 }
 
-// #1
+// 1
 .gl-Card header p {
   margin: 0 0 var(--spacing-half) 0;
   padding: var(--spacing-half);
 }
 
-// #2
+// 2
 .gl-Card_KeyPoint {
   // pass
 }
 
-// #! #3
+// 3 #!
 .gl-Card_KeyPointNotes {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);

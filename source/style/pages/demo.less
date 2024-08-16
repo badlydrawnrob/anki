@@ -1,14 +1,16 @@
-// Notes ====================================================================
+// -----------------------------------------------------------------------------
+// Demo page (`#demo`)
+// =============================================================================
 // Some simple styles to mock the Anki app
 //
 // #! The `#demo` page is likely to be repeated once or twice for different
 //    card demos. Is this valid in GPS? I feel that each `#pageID` should
 //    be unique?
 //
-// #1 Does a `#section` have to be unique to it's parent and only show up on
+// 1. Does a `#section` have to be unique to it's parent and only show up on
 //    one single view in the app?
 //
-// #2 Buttons are a bloomin' arse to code up. This is where a utility framework
+// 2. Buttons are a bloomin' arse to code up. This is where a utility framework
 //    comes in handy (either built by me or some other mug, like Pico CSS)
 //
 //    - The button only shows up once in our HTML, so there's no need to make it
@@ -34,17 +36,17 @@ body.nightMode {
     margin-bottom: calc(var(--spacing-eight) * 4);
 
     #front {
-      // #! #1
+      // 1 #!
     }
   }
 
   .bottom {
     #reverse {
-      // #! #1
+      // 1 #!
     }
   }
 
-  // #2
+  // 2
   .button {
     display: inline-block;
     margin: var(--spacing) 0;
@@ -58,7 +60,7 @@ body.nightMode {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: normal;
-    line-height: var(--line-height-half);  // #2
+    line-height: var(--line-height-half);  // 2
     vertical-align: middle;
     white-space: nowrap;
     cursor: pointer;

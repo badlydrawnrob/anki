@@ -1,35 +1,36 @@
-// Skylighting Colour (Breeze Dark) ============================================
+// -----------------------------------------------------------------------------
+// Breeze Dark variables (Pandoc's Skylighting)
+// =============================================================================
+// 1. Skylighting theme (Breeze Dark), Compile code blocks with Pandoc!
 //
-// #1: Skylighting theme (Breeze Dark), Compile code blocks with Pandoc!
+//   (a) Our inherited `--color-code-light` theme is monochrome, but we can
+//       make some changes here.
 //
-//    (a) Our inherited `--color-code-light` theme is monochrome, but we can
-//        make some changes here.
+//       #! What happens if we use our `code block` inside our notes?
+//          It's going to inherit these styles. New variables are needed.
 //
-//        #! What happens if we use our `code block` inside our notes?
-//           It's going to inherit these styles. New variables are needed.
+//   (b) A very helpful plugin is `colorize` which allows you to preview color:
+//       @ http://tinyurl.com/visual-studio-code-colorize
 //
-//    (b) A very helpful plugin is `colorize` which allows you to preview color:
-//        @ http://tinyurl.com/visual-studio-code-colorize
-//
-//        - Some themes have `background-color` and extra `font` styles. It might
+//       - Some themes have `background-color` and extra `font` styles. It might
 //          make sense at some point to move these all into the `skylighting.less`
-//        - `--color-code-dark-normal` is exactly the same as `-text-color` so
+//       - `--color-code-dark-normal` is exactly the same as `-text-color` so
 //          isn't needed. Also I've cleaned up the code to just use classes
 //          (without `code span`) so using `-normal` causes inheritance issues.
 //
-//    (c) Might be an idea to list the colour pallette for use elsewhere?
+//   (c) Might be an idea to list the colour pallette for use elsewhere?
 //
-//        - Most of the `--color-code-dark-` variables are used by _all_ themes,
-//          but some are theme specific. Perhaps consider using "tokens" in a
-//          similar way to Material Design?
+//       - Most of the `--color-code-dark-` variables are used by _all_ themes,
+//         but some are theme specific. Perhaps consider using "tokens" in a
+//         similar way to Material Design?
 
 
-// #1a
+// 1a
 --color-code-bold: #f12056;
 --color-code-italic: #f67400;  // Was #8e44ad
 
 
-// #1b
+// 1b
 --color-code-dark-background: #232629;
 --color-code-dark-text-color: #cfcfc2;
 --color-code-dark-line-number-color: #7a7c7d;
@@ -37,7 +38,7 @@
 --color-code-dark-normal: #cfcfc2;  // #! This isn't being used
 
 
-// #1b
+// 1b
 --color-code-dark-alert: #95da4c;                    // #! Alert
 --color-code-dark-alert-background-color: #4d1f24;   // #! Alert Background Color
 --color-code-dark-annotation: #3f8058;               // Annotation

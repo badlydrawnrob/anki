@@ -1,3 +1,12 @@
+/* -----------------------------------------------------------------------------
+// Anki Programming Themes
+// MIT License | https://github.com/badlydrawnrob/anki
+// =============================================================================
+// Inherits and extends `print-first-css` and sets up styles for our Anki themes!
+// This can be used as-is, or perhaps you'd like to use it as a base for another
+// set of Anki cards. We're not worrying about `.gl-BaselineGrid` here.
+//
+//    @ https://bit.ly/2TpdSaL                                                */
 /*!
  * == Print First CSS ===========================================
  * MIT License | https://github.com/badlydrawnrob/print-first-css
@@ -1283,7 +1292,7 @@ img {
   color: var(--color-code-dark-other);
 }
 .gl-CodeBlock .sourceCode .pp {
-  color: var(--color-code-dark-lowlight);
+  color: var(--color-code-light-preprocessor);
 }
 .gl-CodeBlock .sourceCode .re {
   color: var(--color-code-dark-region-marker);

@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// Card back (reverse)
+// =============================================================================
+// We're only naming this as `reverse` because of the natural file order
+// (naming the files `back` would appear before `front` when browsing files.
+//
+// 1. Requires an `#answer` ID on reveal to skip to the right part of the card.
+//
+// 2 When two `pre` blocks are on top of each other, the first one should have
+//     no margin (mainly with Simple card type).
+
+#reverse {
+  // 1
+  #answer {
+    pre {
+      margin-bottom: 0  // 2
+    }
+  }
+}
