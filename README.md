@@ -126,20 +126,11 @@ The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture
 This is not desirable, as often our code will have an `overflow` which we want to
 scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
 
-<details>
-<summary>
-
-    <h3>4. Text Formatting problems</h3>
-
-</summary>
+### 4. Text Formatting problems
 
 > Paste **raw html** or **plain text** to avoid styling issues.
 
 If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html. **TL;DR** [paste as plain text](https://forums.ankiweb.net/t/paste-plain-text/4326) to avoid formatting issues.
-
-</details>
-
-
 
 
 
