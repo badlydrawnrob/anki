@@ -4,7 +4,7 @@
     + 💡 **[Simple](../simple/index.md) card**
     + 🔎 [Missing!](../missing/index.md) card
     + 🧑‍🎨 [Add color to your code](../highlight/index.md)
-    + 🧑‍🎓 [The professional way](../advanced/index.md)
+    + 🧑‍🎓 [The professional way](../professional/index.md)
 
 
 ## What's the answer?

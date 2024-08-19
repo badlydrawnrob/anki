@@ -1,8 +1,8 @@
 /* -----------------------------------------------------------------------------
-// Anki Programming Themes
+// Anki Flashcards (CSS Programming Themes)
 // MIT License | https://github.com/badlydrawnrob/anki
 // =============================================================================
-// Inherits and extends `print-first-css` and sets up styles for our Anki themes!
+// Inherits and extends `print-first-css` and sets up styles for our Anki flashcards!
 // This can be used as-is, or perhaps you'd like to use it as a base for another
 // set of Anki cards. We're not worrying about `.gl-BaselineGrid` here.
 //
@@ -973,22 +973,22 @@ cite {
   background: linear-gradient(0deg, var(--baseline-grid-gradient-colour-8dp) 1px, transparent 1px, transparent), linear-gradient(0deg, var(--baseline-grid-gradient-colour-4dp) 1px, transparent 1px, transparent);
   background-size: auto var(--spacing), auto var(--spacing-quarter);
 }
-:root {
-  --baseline-grid-depth: 1;
-  --baseline-grid-align-top: 50px;
-}
 @media all {
   .title {
     margin-bottom: var(--spacing);
   }
 }
 @media screen and (min-width: 200px) {
-  html {
+  body#print-first-demo {
     max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing-three) 0;
   }
-  #demo {
+  body#print-first-demo.gl-BaselineGrid {
+    --baseline-grid-depth: 1;
+    --baseline-grid-align-top: -1px;
+  }
+  main#card-wrapper {
     padding: 0 var(--spacing-one);
   }
 }
