@@ -11,6 +11,8 @@
 
 > This is simple! `npm run pandoc` and you're done!
 
+The `/data/*` files are a helpful way to quickly write your Anki cards. You can compile them into HTML and use that to add to the card's fields. They're well `<!-- commented -->` so you'll know what to do with each field. Make sure you've read each card's documentation (linked to in the navigation above) before you use these `data-` files. They'll make more sense after.
+
 Each `data/data-*` file will be updated when you run this command. There's also a special `data-code.md` and `data-code.html` file that's helpful for `code block`s to compile. This can convert from `.md -> .html` and back again.
 
 
