@@ -3,6 +3,48 @@ Moving on from ECSS
 
 <!-- #! Add in links to Tailwind article, GPS article and Portfolio -->
 
+
+## Summary
+
+With ECSS you write a unique scoped class for each and every item.
+
+1. **Aim to be explicit in the code's meaning**
+    - `<div>`s are no good. Add a class
+    - If it's unclear, add good comments
+    - There's nothing wrong with adding a class if the element doesn't describe the situation properly, but aim to use raw html as much as possible.
+    - `gl-Form p` isn't as good as `.gl-Form .error` of `gl-Form_Error`
+    - Should it be scoped? (to global or page)
+2. GPS aims to reduce bloat that BEM and ECSS bring.
+    - Simplifying class names, using raw html elements to style, reducing repetition of code
+3. **Aim to be consistant with your naming conventions**
+4. `#fragments` for links can be safely ignored
+5. **Similar is not the same, have a solution**
+    - I don't think `.gl-Class { #page & { ... } }` is a good idea.
+    - It adds complexity where there should be reliable continuity in design
+    - When there's more than a few lines of code is different, consider splitting it into a new `.gl` element (rather than a variant. If more than that, make it a unique `#section`.
+6. **You'll need to refactor if you move elements around**
+    - If you wrap your `p.error` in `<div>` what then?
+    - Do you disallow `>` specific css?
+7. Always properly scope css to avoid inheritance issues
+8. **Never wrap or give a class if it isn't being used?**
+9. Flat style css is preferred, but 3 levels deep is ok (nested)
+10. Styles that are nested must have demos available (so they're easy to reason about)
+11. **Better to declare overrides within the child class, such as `.nightMode` or `@media screen` but these should be few and far between. The latter might need to be used often**
+12. Use Tailwind's method of reusing styles wherever possible.
+13. `#page` and `#section` elements should be unique. Use `gl-Demo` or `gl-GridHeader` etc if you're reusing styles? Or just repeat yourself?
+14. NEVER style a `.gl-` element with a `#page` or `#section`. Always use a `-variant` class on the `.gl-` parent, or create a unique `#section`. TL;DR `gl`obal means it's the same site wide, full stop.
+
+HTML5 tags may still not be enough to guide you in what each element is for. Create a design-system, or make it obvious with comments or classes. Aim to isolate styles. Make rules concrete.
+
+If your `h1` element is always wrapped in a `gl-Card` just style the h1 font and margins that way? If it's not going to be visible outside this context.
+
+A good example is `code` in Anki flashcards. It needs `font-size: inherit` and this kind of style should live in one place for all it's variations. Basically, inherit it's parent styles.
+
+GPS doesn't solve every problem. I'm sure there's more that ECSS is solving that we'll have to consider at some point.
+
+
+
+
 ## To Do
 
 > GPS seems to be sometimes a bit messy. Personal opinion. Subjective.
