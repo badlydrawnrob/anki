@@ -1,3 +1,5 @@
 !build/
 source/style/base/variables/custom-theme.less
 source/style/globals/custom-theme.less
+source/themes/custom/*
+build/custom/*

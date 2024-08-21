@@ -1423,3 +1423,152 @@ img {
   box-shadow: none;
   text-shadow: none;
 }
+:root {
+  --color-code-bold: #f12056;
+  --color-code-italic: #f67400;
+  --color-code-dark-background: #232629;
+  --color-code-dark-text-color: #EFFFFF;
+  --color-code-dark-line-number-color: #7a7c7d;
+  --color-code-dark-line-number-background-color: #232629;
+  --color-code-dark-normal: #cfcfc2;
+  --color-code-dark-alert: #95da4c;
+  --color-code-dark-alert-background-color: #4d1f24;
+  --color-code-dark-annotation: #3f8058;
+  --color-code-dark-attribute: #2980b9;
+  --color-code-dark-base-n: #f67400;
+  --color-code-dark-built-in: #7f8c8d;
+  --color-code-dark-char: #3daee9;
+  --color-code-dark-comment: #7a7c7d;
+  --color-code-dark-comment-var: #7f8c8d;
+  --color-code-dark-constant: #27aeae;
+  --color-code-dark-control-flow: #fdbc4b;
+  --color-code-dark-data-type: #C695E8;
+  --color-code-dark-dec-val: #f67400;
+  --color-code-dark-documentation: #a43340;
+  --color-code-dark-error: #da4453;
+  --color-code-dark-extension: #0099ff;
+  --color-code-dark-float: #f67400;
+  --color-code-dark-function: #83ABFB;
+  --color-code-dark-import: #27ae60;
+  --color-code-dark-information: #c45b00;
+  --color-code-dark-keyword: #EE727A;
+  --color-code-dark-operator: #EFFFFF;
+  --color-code-dark-other: #27ae60;
+  --color-code-dark-preprocessor: #27ae60;
+  --color-code-dark-region-marker: #2980b9;
+  --color-code-dark-region-marker-background: #153042;
+  --color-code-dark-special-char: #3daee9;
+  --color-code-dark-special-string: #da4453;
+  --color-code-dark-string: #f44f4f;
+  --color-code-dark-variable: #27aeae;
+  --color-code-dark-verbatim-string: #da4453;
+  --color-code-dark-warning: #da4453;
+}
+.gl-CodeBlock .sourceCode .al {
+  color: var(--color-code-dark-alert);
+  background-color: var(--color-code-dark-alert-background);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .an {
+  color: var(--color-code-dark-annotation);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .at {
+  color: var(--color-code-dark-attribute);
+}
+.gl-CodeBlock .sourceCode .bn {
+  color: var(--color-code-dark-base-n);
+}
+.gl-CodeBlock .sourceCode .bu {
+  color: var(--color-code-dark-built-in);
+}
+.gl-CodeBlock .sourceCode .ch {
+  color: var(--color-code-dark-char);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .co {
+  color: var(--color-code-dark-comment);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .cv {
+  color: var(--color-code-dark-comment-var);
+}
+.gl-CodeBlock .sourceCode .cn {
+  color: var(--color-code-dark-constant);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .cf {
+  color: var(--color-code-dark-control-flow);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .dt {
+  color: var(--color-code-dark-data-type);
+  text-decoration: none;
+}
+.gl-CodeBlock .sourceCode .dv {
+  color: var(--color-code-dark-dec-val);
+}
+.gl-CodeBlock .sourceCode .do {
+  color: var(--color-code-dark-documentation);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .er {
+  color: var(--color-code-dark-error);
+  text-decoration: underline;
+  font-weight: 700;
+}
+.gl-CodeBlock .sourceCode .ex {
+  color: var(--color-code-dark-extension);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .fl {
+  color: var(--color-code-dark-float);
+}
+.gl-CodeBlock .sourceCode .fu {
+  color: var(--color-code-dark-function);
+}
+.gl-CodeBlock .sourceCode .im {
+  color: var(--color-code-dark-import);
+}
+.gl-CodeBlock .sourceCode .in {
+  color: var(--color-code-dark-information);
+  font-style: italic;
+}
+.gl-CodeBlock .sourceCode .kw {
+  color: var(--color-code-dark-keyword);
+  font-weight: bold;
+}
+.gl-CodeBlock .sourceCode .op {
+  color: var(--color-code-dark-operator);
+}
+.gl-CodeBlock .sourceCode .ot {
+  color: var(--color-code-dark-other);
+}
+.gl-CodeBlock .sourceCode .pp {
+  color: var(--color-code-light-preprocessor);
+  font-weight: normal;
+}
+.gl-CodeBlock .sourceCode .re {
+  color: var(--color-code-dark-region-marker);
+  background-color: var(--color-code-dark-region-marker-background);
+}
+.gl-CodeBlock .sourceCode .sc {
+  color: var(--color-code-dark-special-char);
+}
+.gl-CodeBlock .sourceCode .ss {
+  color: var(--color-code-dark-special-string);
+}
+.gl-CodeBlock .sourceCode .st {
+  color: var(--color-code-dark-string);
+}
+.gl-CodeBlock .sourceCode .va {
+  color: var(--color-code-dark-variable);
+}
+.gl-CodeBlock .sourceCode .vs {
+  color: var(--color-code-dark-verbatim-string);
+}
+.gl-CodeBlock .sourceCode .wa {
+  color: var(--color-code-dark-warning);
+  font-weight: bold;
+  font-style: italic;
+}

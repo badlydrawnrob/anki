@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
-    "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
+    "build": "npm run css && npm run demo-missing && npm run demo-simple",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "pandoc": "npm run data-code && npm run data-code-reverse && npm run data-simple && npm run data-missing",
+    "custom": "pandoc --template=source/themes/custom/template.html -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
     "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
     "data-code-reverse": "pandoc source/data/data-code.html -o ./build/data/data-code.md",
     "data-simple": "pandoc --from markdown-auto_identifiers source/data/data-simple.md -o ./build/data/data-simple.html",
     "data-missing": "pandoc --from markdown-auto_identifiers source/data/data-missing.md -o ./build/data/data-missing.html",
-    "build": "npm run demo-simple && npm run demo-missing && npm run css"
+    "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
+    "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
+    "pandoc": "npm run data-code && npm run data-code-reverse && npm run data-missing && npm run data-simple"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,8 @@
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
   "devDependencies": {
+    "print-first-css": "github:badlydrawnrob/print-first-css#a318541",
     "less": "^4.2.0",
-    "mustache": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#a318541"
+    "mustache": "^4.2.0"
   }
 }

@@ -48,5 +48,10 @@
 // -----------------------------------------------------------------------------
 // Your Custom Theme can go here
 // -----------------------------------------------------------------------------
-@import "base/variables/custom-theme.less";
+// `--css-variables` must be inside a selector, like `body`, `.class`, `:root` etc.
+
+:root {
+  @import "base/variables/custom-theme.less";
+}
+
 @import "globals/custom-theme.less";
