@@ -18,12 +18,21 @@ You can mark any inline **[`code string`](../simple/index.md#-syntax-inline-code
 2. **Italic**:
     + `<i>` or `<em>`
 
-For regular `string` fields, such as `★ Title` you can highlight a code section like this: `<code>{ string = <b>"bold"</b>, italic = <i>42</i> }</code>`
+For regular `string` fields, such as `★ Title` you can highlight a code section by wrapping your text in a `code` tag. Something like this:
+
+```html
+<!-- ★ Title card field is wrapped in a `h1` -->
+<code>{ string = <b>"bold"</b>, italic = <i>42</i> }</code>
+```
 
 
 ## Full syntax highlighting
 
-> Currently using Monochrome and [Breeze Dark](../../source/style/modules/variables/breezedark.less) themes. To generate highlighted `code block`s you can follow the steps below. If you know how to use a terminal, there's a [🧑‍🎓 better way](../professional/index.md)!
+> We use our `code block`s with generated HTML for our pretty colours.
+> For beginners, use the [online tool](https://tinyurl.com/mr43ydea).
+> If you know how to use `npm` go here.
+
+Currently using Monochrome and [Breeze Dark](../../source/style/modules/variables/breezedark.less) themes. To generate highlighted `code block`s you can follow the steps below. If you know how to use a terminal, there's a [🧑‍🎓 better way](../professional/index.md)!
 
 Basic colours are fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Theme provides pretty colours (CSS) to use with Markdown and [Pandoc](https://pandoc.org/demo/example18f.html) to generate your code.
 
@@ -38,7 +47,7 @@ Basic colours are fine for small lines of code, but you'll probably want to go [
 That's it. You're done. Simple, right?!
 
 
-## Customising themes (the easy way)
+### Customising themes (the easy way)
 
 For quick customisations, view this file:
 
@@ -55,22 +64,26 @@ source
 
 The easiest way to change the colors for the `code string` and `code block` fields is to edit the `--color-code-bold`, `--color-code-italic`, and `--color-code-dark-*` variables in your Anki cards. This will overwrite the defaults.
 
-### Change colors
+### How to change your theme colours
 
-> Pandoc has some ready made themes that you can use. See [this issue](#!) for more info.
+> Pandoc has some ready made themes you can use. See [this issue](https://github.com/badlydrawnrob/anki/issues/142) for more info.
 
 1. You'll have the latest [Anki flashcards release](https://github.com/badlydrawnrob/anki/releases).
 2. In the Anki app menu, go to `Manage Note Types`.
 3. Select the `Anki flashcards: ...` Note Type.
 4. Select the `Cards` button.
 5. Select the `Styling` option.
-6. Copy our `--color-code` variables from `colors.less`
+6. Copy our `--color-code` variables from `breeze.dark.less`.
 7. Add them to the bottom of the `Styling` box, and [edit them](https://github.com/badlydrawnrob/anki/issues/78).
+8. Repeat for all Anki flashcard card types
 
-**Note:** If you edit your colors this way, changes will be lost every time you download a new release of Anki Flashcards and import them to Anki. See below for a better way.
+#### Updates to Anki flashcards
+
+If you edit your colors this way, **changes will be lost every time** you download a new release of Anki Flashcards and import them to Anki. See below for a better way.
 
 
-## Customising themes (the better way)
+## Compiling offline and custom themes
+### A better way to manage our flashcards
 
 > If you don't want to lose your theme changes everytime a new release of Anki Flashcards is imported to Anki, **you'll need to clone or fork this repo.**
 

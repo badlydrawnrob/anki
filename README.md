@@ -8,7 +8,7 @@
 <img width="100%" height="auto" src="./source/media/preview-19-08-24.png" style="padding-bottom: 20px;">
 
 
-## 💻 Want to learn how to code?
+## Want to learn how to code? 👨🏻‍💻👩🏻‍💻
 
 > Anki helps you learn and remember quickly. You'll know how to code in no time!
 
@@ -75,30 +75,44 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 
 They say code is an art form. Anki flashcard's CSS themes come with a light and dark colour palette; it's also good for `dark mode` if that's your thing.
 
-- 🖌️ **Starter themes**
-    - 🌅 Monochrome
-    - 🌃 Breeze Dark
+- 👨🏻‍🎨 **Starter themes**
+    - 🥷🏻 Monochrome
+    - ⛵️ Breeze Dark
 
 You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
 
-If you want to get creative, you can always 🧑‍🎨 **[create your own colour theme](./source/docs/highlight/index.md#customising-themes-the-easy-way)**. Typography can also be edited with your font of choice.
+
+## It's more fun with a compiler (advanced)
+### Custom colours and `markdown->html`
+
+> 🧑‍🎨 Want your own custom colour theme?
+> ⏱️ Want a faster way to create your flashcards?
+> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
+
+When you've levelled up your programming skills, it's time to **[🧑‍🎓 do things the professional way!](./source/docs/professional/index.md)**
+
+#### Markdown to HTML
+
+[here is a video of the compiler]
+
+Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's fields for you in a flash!
+
+#### Custom colours
+
+[here is a video of the less compiler]
+
+If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. Typography `--font`s can also be edited whatever you like. Using the same theme as your code editor might things more familiar for you.
 
 
 
-
-## Custom colors and a child theme
-
-Once you've got the basics down, you can get _really_ fancy with offline `markdown->html`, custom cards, and using **NPM**, **Pandoc**, and **CSS** to create your theme **[🧑‍🎓 the professional way](./source/docs/professional/index.md)**.
-
-
-## Why Anki flashcards instead of a plugin?
+## Why Anki flashcards instead of an add-on?
 
 I've spent a lot of time so you can:
 
 - Use Anki flashcards as they are — or customise the CSS themes,
 - Use the excellent `markdown->html` workflow  ... online or locally.
 
-The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app; it's stable software, with no add-ons required, and has a simple setup.
+The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app; it's stable software, with no add-ons or plugins required, and is a very simple setup.
 
 ### Dependency hell
 

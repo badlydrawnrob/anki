@@ -9,14 +9,18 @@
 
 ## First steps
 
-You should know how to clone or fork a Github repository. You should also have `npm` and `pandoc` installed. Once you've done that, you can continue reading.
+> First `npm install` to install dependencies.[^1]
+> `npm ls` should list `less` and `print-first-css`.
+> `npm run build` to compile the css and demo.
+
+**You should know how to clone or fork a Github repository.** You should also have [`npm`](https://nodejs.org/en/download/package-manager) and [`pandoc`](https://pandoc.org/installing.html) installed. Once you've done that, run the commands above, and you can continue reading.
 
 
 ## Compiling your card field data
 
-> This is simple! `npm run pandoc` and you're done!
+> `npm run pandoc` and you're done. So simple!
 
-The `/data/*` files are a helpful way to quickly write your Anki cards. You can compile them into HTML and use that to add to the card's fields. They're well `<!-- commented -->` so you'll know what to do with each field. Make sure you've read each card's documentation (linked to in the navigation above) before you use these `data-` files. They'll make more sense then.
+The `/data/*` files are a helpful way to quickly write your Anki cards. You can compile them into HTML and use that to add to the card's fields. They're well `<!-- commented -->` so you'll know what to do with each field. Make sure you've read [each card's documentation](https://github.com/badlydrawnrob/anki#cards) before you use these `data-` files. They'll make more sense then.
 
 Each `data-*` file will be updated when you run this command. There's also a special `data-code.md` and `data-code.html` file that's helpful to compile `code block`s. This can convert from `.md -> .html` and back again.
 
@@ -42,31 +46,34 @@ source
           breezedark.less
 ```
 
-Go to the `main.less` file and `@import` your custom `skylighting-theme.less` and `typography.less` variables. It's quite straightforward to do this. You'll mostly be changing the `--font-*` and `--color-code-*` variables, but you may also need to change other `style/html/*.less` files for finer-grain changes.
+Setup is quite straightforward. Go to the `main.less` file and create and `@import` custom `base/variables/skylighting-theme.less`, `base/variables/typography.less` and `globals/theme.less` files. You can `// comment` out the existing ones. The `--font-*` and `--color-code-*` variables are the things you'll be changing, but you may also need to change other `base/html/*.less` files for finer-grain changes.
 
 
 ### Pandoc's Skylighting
+
+> Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18)
 
 Pandoc's Skylighting comes with a bunch of `--list-highlight-styles` and `--print-highlight-style=<theme>` that you can reference when editing your `--color-code-dark-*` variables. I generally work in the following way:
 
 1. Write out a large chunk of code in `data-code.md`
 2. Compile it with `pandoc -s data-code.md --highlight-style=<theme> -o data-code.html`
-3. Cross-reference the `pandoc --print-highlight-style=breezedark` json file with your `data-code.html` and our `style/globals/breezedark.less` file.
-4. The `span` classes in the CSS match up with the `json` keys. It'll take a little playing around to find the right match of colours.
+3. Cross-reference the `pandoc --print-highlight-style=breezedark` json with your `data-code.html` and our `style/globals/breezedark.less` files.
+4. The `span` classes in the `base/globals/breezedark.less` file matches up with the `json` keys (and our `--color-code-dark-*` variables).
+5. It'll take a little playing around to find the right match of colours.
 
 
 ### Compiling your CSS stylesheet
 
 > Simply `npm run css` to compile your changes!
 
-Next, you'll want to create your own `theme.less` file for your `--color-code-dark-*` variables. You'll also want to create a custom `globals/theme.less` file too. Once you have these `@import`ed into your `main.less` file, you can compile with `npm` (see `package.json`) for more commands.
+With your `globals/theme.less` file we can add in our `var(--color-code-dark-*)` CSS inside the Pandoc Skylighting `.gl-CodeBlock .sourceCode` class. You can also add in here any `font-*` styles such as bold and italic. Finally, you can compile the CSS changes with `npm run css`.
 
 Your brand new theme will be built, ready to add to Anki!
 
 
-### Adding your theme to the Anki desktop app
+### Adding your new theme to the Anki desktop app
 
-Finally, open the Anki desktop app and:
+Open the Anki desktop app and:
 
 2. Go to `Tools > Manage Note Types`.
 3. Select the `Anki flashcards: ...` Note Type.
