@@ -853,6 +853,24 @@ i,
 cite {
   font-style: italic;
 }
+.gl-BaselineGrid {
+  --baseline-grid-depth: -1;
+  --baseline-grid-align-top: 0;
+  --baseline-grid-gradient-colour-8dp: #008b89;
+  --baseline-grid-gradient-colour-4dp: #85e7e7;
+  position: relative;
+}
+.gl-BaselineGrid::before {
+  content: '';
+  position: absolute;
+  z-index: var(--baseline-grid-depth);
+  top: var(--baseline-grid-align-top);
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, var(--baseline-grid-gradient-colour-8dp) 1px, transparent 1px, transparent), linear-gradient(0deg, var(--baseline-grid-gradient-colour-4dp) 1px, transparent 1px, transparent);
+  background-size: auto var(--spacing), auto var(--spacing-quarter);
+}
 .sourceCode .al {
   color: var(--color-code-light-alert);
   font-weight: 700;
@@ -954,24 +972,6 @@ cite {
 .sourceCode .wa {
   color: var(--color-code-light-warning);
   font-style: italic;
-}
-.gl-BaselineGrid {
-  --baseline-grid-depth: -1;
-  --baseline-grid-align-top: 0;
-  --baseline-grid-gradient-colour-8dp: #008b89;
-  --baseline-grid-gradient-colour-4dp: #85e7e7;
-  position: relative;
-}
-.gl-BaselineGrid::before {
-  content: '';
-  position: absolute;
-  z-index: var(--baseline-grid-depth);
-  top: var(--baseline-grid-align-top);
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, var(--baseline-grid-gradient-colour-8dp) 1px, transparent 1px, transparent), linear-gradient(0deg, var(--baseline-grid-gradient-colour-4dp) 1px, transparent 1px, transparent);
-  background-size: auto var(--spacing), auto var(--spacing-quarter);
 }
 @media all {
   .title {
