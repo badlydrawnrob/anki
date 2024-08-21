@@ -1423,6 +1423,9 @@ img {
   box-shadow: none;
   text-shadow: none;
 }
+/* -----------------------------------------------------------------------------
+// Your Custom Theme can go here
+// -------------------------------------------------------------------------- */
 :root {
   --color-code-bold: #f12056;
   --color-code-italic: #f67400;
@@ -1435,34 +1438,35 @@ img {
   --color-code-dark-alert-background-color: #4d1f24;
   --color-code-dark-annotation: #3f8058;
   --color-code-dark-attribute: #2980b9;
-  --color-code-dark-base-n: #f67400;
-  --color-code-dark-built-in: #7f8c8d;
-  --color-code-dark-char: #3daee9;
+  --color-code-dark-base-n: #F58C70;
+  --color-code-dark-built-in: #83ABFB;
+  --color-code-dark-char: #EFFFFF;
   --color-code-dark-comment: #7a7c7d;
-  --color-code-dark-comment-var: #7f8c8d;
+  --color-code-dark-comment-var: #A9C1CA;
   --color-code-dark-constant: #27aeae;
   --color-code-dark-control-flow: #fdbc4b;
-  --color-code-dark-data-type: #C695E8;
-  --color-code-dark-dec-val: #f67400;
+  --color-code-dark-data-type: #8CDEFC;
+  --color-code-dark-dec-val: #F58C70;
   --color-code-dark-documentation: #a43340;
-  --color-code-dark-error: #da4453;
+  --color-code-dark-error: #F25470;
   --color-code-dark-extension: #0099ff;
   --color-code-dark-float: #f67400;
   --color-code-dark-function: #83ABFB;
-  --color-code-dark-import: #27ae60;
-  --color-code-dark-information: #c45b00;
-  --color-code-dark-keyword: #EE727A;
+  --color-code-dark-import: #8CDEFC;
+  --color-code-dark-information: #C695E8;
+  --color-code-dark-keyword: #F25470;
   --color-code-dark-operator: #EFFFFF;
-  --color-code-dark-other: #27ae60;
-  --color-code-dark-preprocessor: #27ae60;
+  --color-code-dark-other: #C695E8;
+  --color-code-dark-preprocessor: #A9C1CA;
   --color-code-dark-region-marker: #2980b9;
   --color-code-dark-region-marker-background: #153042;
   --color-code-dark-special-char: #3daee9;
-  --color-code-dark-special-string: #da4453;
-  --color-code-dark-string: #f44f4f;
-  --color-code-dark-variable: #27aeae;
-  --color-code-dark-verbatim-string: #da4453;
-  --color-code-dark-warning: #da4453;
+  --color-code-dark-special-string: #F25470;
+  --color-code-dark-string: #C4E792;
+  --color-code-dark-variable: #EFFFFF;
+  --color-code-dark-verbatim-string: #F25470;
+  --color-code-dark-warning: #F25470;
+  --color-code-dark-variable-alt: #F58C70;
 }
 .gl-CodeBlock .sourceCode .al {
   color: var(--color-code-dark-alert);
@@ -1515,7 +1519,7 @@ img {
 .gl-CodeBlock .sourceCode .er {
   color: var(--color-code-dark-error);
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: normal;
 }
 .gl-CodeBlock .sourceCode .ex {
   color: var(--color-code-dark-extension);
@@ -1536,7 +1540,7 @@ img {
 }
 .gl-CodeBlock .sourceCode .kw {
   color: var(--color-code-dark-keyword);
-  font-weight: bold;
+  font-weight: normal;
 }
 .gl-CodeBlock .sourceCode .op {
   color: var(--color-code-dark-operator);
@@ -1545,7 +1549,7 @@ img {
   color: var(--color-code-dark-other);
 }
 .gl-CodeBlock .sourceCode .pp {
-  color: var(--color-code-light-preprocessor);
+  color: var(--color-code-dark-preprocessor);
   font-weight: normal;
 }
 .gl-CodeBlock .sourceCode .re {
@@ -1571,4 +1575,7 @@ img {
   color: var(--color-code-dark-warning);
   font-weight: bold;
   font-style: italic;
+}
+.gl-CodeBlock .python .va {
+  color: var(--color-code-dark-variable-alt);
 }

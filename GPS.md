@@ -6,6 +6,8 @@ Moving on from ECSS
 
 ## Summary
 
+### `@media` styles CAN'T be nested still, only `.class` names?
+
 With ECSS you write a unique scoped class for each and every item.
 
 1. **Aim to be explicit in the code's meaning**
