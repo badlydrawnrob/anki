@@ -5,6 +5,10 @@
 // - @link: https://github.com/jgm/skylighting
 // - @link: https://stackoverflow.com/a/30884409
 //
+// Take care to override `print-first-css` monochrome default `font-*` styles, and
+// include the ones we want for Breeze Dark. Better to be explicit and add all
+// the styling that Print First does before you start.
+//
 // #!: Base --font-color inherited from `dark.less`
 // #!: Set some defaults and remove code if possible
 // #!: A lot of repetition of sourceCode class ... why?
@@ -80,7 +84,7 @@
         font-weight: bold;
       }
     // Annotation
-    .an { color: var(--color-code-dark-annotation); }
+    .an { color: var(--color-code-dark-annotation); font-style: italic; }
     // Attribute
     .at { color: var(--color-code-dark-attribute); }
     // BaseN
@@ -88,9 +92,9 @@
     // BuiltIn
     .bu { color: var(--color-code-dark-built-in); }
     // Char
-    .ch { color: var(--color-code-dark-char); }
+    .ch { color: var(--color-code-dark-char); font-style: italic; }
     // Comment
-    .co { color: var(--color-code-dark-comment); }
+    .co { color: var(--color-code-dark-comment); font-style: italic; }
     // CommentVar
     .cv { color: var(--color-code-dark-comment-var); }
     // Constant
@@ -98,13 +102,17 @@
     // ControlFlow
     .cf { color: var(--color-code-dark-control-flow); font-weight: bold; }
     // DataType
-    .dt { color: var(--color-code-dark-data-type); }
+    .dt { color: var(--color-code-dark-data-type); text-decoration: none; }
     // DecVal
     .dv { color: var(--color-code-dark-dec-val); }
     // Documentation
-    .do { color: var(--color-code-dark-documentation); }
+    .do { color: var(--color-code-dark-documentation); font-style: italic; }
     // Error
-    .er { color: var(--color-code-dark-error); text-decoration: underline; }
+    .er {
+      color: var(--color-code-dark-error);
+      text-decoration: underline;
+      font-weight: 700;
+    }
     // Extension
     .ex { color: var(--color-code-dark-extension); font-weight: bold; }
     // Float
@@ -114,7 +122,7 @@
     // Import
     .im { color: var(--color-code-dark-import); }
     // Information
-    .in { color: var(--color-code-dark-information); }
+    .in { color: var(--color-code-dark-information); font-style: italic; }
     // Keyword
     .kw { color: var(--color-code-dark-keyword); font-weight: bold; }  // #!
     // Operator
@@ -122,7 +130,7 @@
     // Other
     .ot { color: var(--color-code-dark-other); }
     // Preprocessor
-    .pp { color: var(--color-code-light-preprocessor); }
+    .pp { color: var(--color-code-light-preprocessor); font-weight: normal; }
     // Region Marker
     .re {
       color: var(--color-code-dark-region-marker);
@@ -139,7 +147,10 @@
     // VerbatimString
     .vs { color: var(--color-code-dark-verbatim-string); }
     // Warning
-    .wa { color: var(--color-code-dark-warning); font-weight: bold; font-style: italic; }
-
+    .wa {
+      color: var(--color-code-dark-warning);
+      font-weight: bold;
+      font-style: italic;
+    }
   }
 }
