@@ -4,9 +4,42 @@
 // =============================================================================
 // Inherits and extends `print-first-css` and sets up styles for our Anki flashcards!
 // This can be used as-is, or perhaps you'd like to use it as a base for another
-// set of Anki cards. We're not worrying about `.gl-BaselineGrid` here.
+// set of Anki cards. Or, you might like to use `print-first-css` for a project.
+// We're not worrying about `.gl-BaselineGrid` here.
 //
-//    @ https://bit.ly/2TpdSaL                                                */
+//    @ https://bit.ly/2TpdSaL
+//
+//
+// GPS, ECSS, and Thema Styles: The Basic Idea
+// -------------------------------------------
+// I haven't found a silver bullet yet, so this is a work in progress!
+//
+//    @ link:
+//
+// Use GPS where appropriate, and reduce verbosity (number of nested levels),
+// which is where I feel the method falls down. Use Thema Styles in these cases.
+// I'm looking for methods to increase speed when checking classnames against
+// their purpose. Be careful of naming clashes in bigger sites; it's unlikely
+// to happen in a tool as small as this.
+//
+// If you are interested in these concepts and have a big team of developers
+// working together, make sure they're well trained on a well-documented and
+// strict style. You can always scope everything under it's `#page` or
+// `#section`, or use a `.pg-` or `.section-` scope like we used to do
+// with ECSS to avoid clashes and inheritance issues.
+//
+// Always try and make use of your plain old HTML styles, and have a specimen
+// file and some form of design-system for your globals. Go as far as you can with
+// raw HTML and very basic styling, before reaching for something more complex.
+//
+//
+// Finding what's right for you
+// ----------------------------
+// GPS theory has been well tested, but Thema Styles (although simple) hasn't.
+// There's bound to be stuff I might want to change, or rules to get rid of
+// completely. GPS doesn't automatically solve every problem (one of the reasons
+// I dreamed up Thema), so some trial and error is needed to arrive at a
+// working style you prefer to use!                                           */
 
 @import (less) "../../node_modules/print-first-css/build/style/print-first.css";
 // @import (less) "../../../print-first-css/build/style/print-first.css";  // #! Only used for local development!
