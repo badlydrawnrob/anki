@@ -7,14 +7,20 @@
 //    card demos. Is this valid in GPS? I feel that each `#pageID` should
 //    be unique?
 //
-// 1. Does a `#section` have to be unique to it's parent and only show up on
-//    one single view in the app?
-//
-// 2. Buttons are a bloomin' arse to code up. This is where a utility framework
+// 1. Buttons are a bloomin' arse to code up. This is where a utility framework
 //    comes in handy (either built by me or some other mug, like Pico CSS)
 //
 //    - The button only shows up once in our HTML, so there's no need to make it
 //      a global element (unless we use it elsewhere.
+//
+// 2. Does a `#section` have to be unique to it's parent and only show up on
+//    one single view in the app?
+//
+//    - This still looks a bit weird to me, using `#id`s instead of ECSS
+//      style `.demo-` scoped classes! I guess it's habit. treat them like
+//      Markdown headings, `#h1` `#h1 #h2` and so on.
+//
+// #! Aim to reduce dead code. Are `#front` and `#reverse` doing anything?
 
 body.nightMode {
   // background: black;  // #! temporary for testing Night Mode
@@ -32,62 +38,54 @@ body.nightMode {
     margin: var(--spacing) 0;
   }
 
-  .top {
-    margin-bottom: calc(var(--spacing-eight) * 4);
+  .top    { margin-bottom: calc(var(--spacing-eight) * 4); }
+  .bottom {}  // Aim to reduce dead code
+}
 
-    #front {
-      // 1 #!
-    }
-  }
+// 2
+#demo .button {
+  display: inline-block;
+  margin: var(--spacing) 0;
+  padding: var(--spacing);
+  width: 100%;
+  color: inherit;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: var(--font-size-m);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: normal;
+  line-height: var(--line-height-half);  // 2
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 0 none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%);
 
-  .bottom {
-    #reverse {
-      // 1 #!
-    }
-  }
-
-  // 2
-  .button {
-    display: inline-block;
-    margin: var(--spacing) 0;
-    padding: var(--spacing);
-    width: 100%;
-    color: inherit;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: var(--font-size-m);
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: normal;
-    line-height: var(--line-height-half);  // 2
-    vertical-align: middle;
-    white-space: nowrap;
-    cursor: pointer;
+  &:hover {
     background-color: #f5f5f5;
-    border: 0 none;
-    border-radius: var(--border-radius);
-    box-shadow: 0 1px 3px alpha(#000, 12%), 0 1px 2px alpha(#000, 24%);
+  }
 
-    &:hover {
-      background-color: #f5f5f5;
-    }
+  &:active {
+    background-color: #e0e0e0;
+    box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%);
+  }
 
-    &:active {
-      background-color: #e0e0e0;
-      box-shadow: 0 3px 6px alpha(#000, 16%), 0 3px 6px alpha(#000, 23%);
-    }
+  &:active:focus {
+    outline: 0 none;
+  }
 
-    &:active:focus {
-      outline: 0 none;
-    }
-
-    &:disabled {
-      color: var(--color-bb);
-      cursor: not-allowed;
-      pointer-events: none;
-      box-shadow: none;
-      text-shadow: none;
-    }
+  &:disabled {
+    color: var(--color-bb);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    text-shadow: none;
   }
 }
+
+#demo #front   { } // 2
+#demo #reverse { } // 2
