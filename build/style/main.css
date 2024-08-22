@@ -1372,7 +1372,7 @@ img {
   color: var(--color-code-dark-other);
 }
 .gl-CodeBlock .sourceCode .pp {
-  color: var(--color-code-light-preprocessor);
+  color: var(--color-code-dark-preprocessor);
   font-weight: normal;
 }
 .gl-CodeBlock .sourceCode .re {
