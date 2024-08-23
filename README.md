@@ -93,7 +93,7 @@ When you've levelled up your programming skills, it's time to **[🧑‍🎓 do 
 
 #### Markdown to HTML
 
-[here is a video of the compiler]
+https://github.com/badlydrawnrob/anki/assets/1176875/e852e912-317b-4cd9-9ab5-82855a5274a5
 
 Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's fields for you in a flash!
 
