@@ -43,30 +43,48 @@ source
     │          typography.less
     │
     └───globals
-          breezedark.less
+    │     breezedark.less
+    │
+    └───themes
+        │
+        └───custom
+              custom-theme.md
+              template.html
 ```
 
-Setup is quite straightforward. Go to the `main.less` file and create and `@import` custom `base/variables/skylighting-theme.less`, `base/variables/typography.less` and `globals/theme.less` files. You can `// comment` out the existing ones. The `--font-*` and `--color-code-*` variables are the things you'll be changing, but you may also need to change other `base/html/*.less` files for finer-grain changes.
+Let's quickly run through those files:
+
+- You can reference the `--color-code-*` variables from `breezedark.less`.
+- And the typography `--font-*` variables in `typography.less`.
+- Our `themes/custom/*` compile to `/build/custom/custom-theme.html`:
+    - Here we can preview our `custom-theme.less` with different programming languages!
+
+ Setup is quite straightforward. Go to the `main.less` file and create and `@import` a `base/variables/` `custom-theme.less` and `custom-typography.less` file; a `globals/custom-theme.less` file too. You can reference the defaults, from which you'll be copying the variables and `// comment` them out or override them in `main.less`. You may also need to change (or copy) other `base/html/*.less` files for finer-grain changes.
 
 
 ### Pandoc's Skylighting
 
 > Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18)
 
-Pandoc's Skylighting comes with a bunch of `--list-highlight-styles` and `--print-highlight-style=<theme>` that you can reference when editing your `--color-code-dark-*` variables. I generally work in the following way:
+Pandoc's Skylighting comes with a bunch of `--list-highlight-styles` and `--print-highlight-style=<theme>` that you can reference when editing your `--color-code-dark-*` variables. I currently work in the following way:
 
-1. Write out a large chunk of code in `data-code.md`
-2. Compile it with `pandoc -s data-code.md --highlight-style=<theme> -o data-code.html`
-3. Cross-reference the `pandoc --print-highlight-style=breezedark` json with your `data-code.html` and our `style/globals/breezedark.less` files.
-4. The `span` classes in the `base/globals/breezedark.less` file matches up with the `json` keys (and our `--color-code-dark-*` variables).
-5. It'll take a little playing around to find the right match of colours.
+1. Setup a few programming language `code block`s in `themes/custom/custom-theme.md`,
+2. Start making changes in the `custom-theme.less` files,
+3. Compile the `.md` file to `build/custom/*` with `npm run custom`,
+4. Rinse and repeat until you've got colours you're happy with.
+5. For typography, you'll want to compile CSS with `npm run css`,
+6. Then view the `build/demo/*md` files to see how it looks.
+
+If you want to check out all of Pandoc's highlighting themes to get inspiration, you can use `pandoc -s data-code.md --highlight-style=<theme> -o data-code.html`. You can also output `pandoc --print-highlight-style=breezedark` json (or a different theme) and cross-reference those styles. The `span` classes in the `base/globals/breezedark.less` file matches up with the `json` keys (and our `--color-code-dark-*` variables).
+
+It'll take a little playing around to find the right match of colours. Have fun!
 
 
 ### Compiling your CSS stylesheet
 
 > Simply `npm run css` to compile your changes!
 
-With your `globals/theme.less` file we can add in our `var(--color-code-dark-*)` CSS inside the Pandoc Skylighting `.gl-CodeBlock .sourceCode` class. You can also add in here any `font-*` styles such as bold and italic. Finally, you can compile the CSS changes with `npm run css`.
+With your `globals/custom-theme.less` file we can add in our `var(--color-code-dark-*)` CSS inside the Pandoc Skylighting `.gl-CodeBlock .sourceCode` class. You can also add in here any `font-*` styles such as bold and italic. Finally, you can compile the CSS changes with `npm run css`.
 
 Your brand new theme will be built, ready to add to Anki!
 
