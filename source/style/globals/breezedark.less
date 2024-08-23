@@ -5,13 +5,21 @@
 // - @link: https://github.com/jgm/skylighting
 // - @link: https://stackoverflow.com/a/30884409
 //
-// Take care to override `print-first-css` monochrome default `font-*` styles, and
-// include the ones we want for Breeze Dark. Better to be explicit and add all
-// the styling that Print First does before you start.
+// We can use this file for both the default `breezedark.less` theme, and the
+// `breezedark-modified.less` theme. We'll styles consistant in this file for ease
+// of switching between the two. Take care to override `print-first-css` monochrome
+// default `font-*` styles, and include the ones we want for Breeze Dark.
+// Better to be explicit and add all the styling that Print First does before
+// you start.
 //
 // #!: Base --font-color inherited from `dark.less`
 // #!: Set some defaults and remove code if possible
 // #!: A lot of repetition of sourceCode class ... why?
+//
+// Notes on number lines
+// ---------------------
+// This is currently not supported, so even if you use ``` {.numberLines} it's
+// not gonna work right now. Sorry!
 
 
 // div.sourceCode {
