@@ -11,6 +11,7 @@ description: Make sure to add `.gl-CodeBlock` for the dark theme
 2. [HTML](#html)
 3. [CSS](#css)
 4. [Python](#python)
+5. [Terminal](#terminal)
 
 
 ## Elm lang
@@ -346,4 +347,19 @@ class ExitNotifyThread(Thread):
         a call to setExitMessage(), or None if there was no such message
         set."""
         return self.exitmessage
+```
+
+
+## Terminal
+
+```elm {.gl-CodeBlock}
+type alias Model
+  { dieFace : Int }
+```
+```terminal
+> Model
+<function> : Int -> Model
+```
+```elm
+Model 1  -- { dieFace = 1 } : Model
 ```
