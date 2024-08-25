@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# We've changed from `Browser.sandbox` to `Browser.element`. What's changed?
+# How would we store a `Maybe` that's a `Nothing` in our data?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Commands
+## Storing empty data
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-`Cmd`
+`Nothing : Maybe a`
 
 
 <!-- -------------------------------------------------------------------------
@@ -85,45 +85,10 @@
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```elm
--- other imports here
-import Browser
-import Html exposing (Html, button, div, text, img)
-import Html.Attributes exposing (..)
-import Html.Events exposing (onClick)
-import Random
-import Array exposing (Array)
-
--- A bunch of other stuff:
---   2. A `viewThumbnail string` -> `Html Msg` (an image)
---   3. A `getPhoto` that returns `Just Photo` (i.e: "1.jpeg")
---   4. Of course, our `Model`, `View`, `Update` etc
-
-type Msg
-    = ClickedButton
-    | GotSelectedIndex Int
-
-randomPhoto : Random.Generator Int
-randomPhoto =
-  Random.int 0 (Array.length arrayOfPhotos - 1)  -- Returns a random index
-
-update : Msg -> Model -> (Model, Cmd Msg)
-update msg model =
-  case msg of
-    ClickedButton ->  -- Generates a `Cmd` and returns a `Msg`
-      ( model, Random.generate GotSelectedIndex randomPhoto )  -- Gets random Photo
-    GotSelectedIndex index ->  -- Updates the model from a `Msg`
-      ( { model | selectedUrl = (getPhoto index) }, Cmd.none )  -- Returns a Photo
-
-
-main : Program () Model Msg
-main =
-  Browser.element
-    { init = \flags -> ( initialModel, Cmd.none )
-    , view = view
-    , update = update
-    , subscriptions = \model -> Sub.none
-  }
+```json
+{
+  "empty data" : null
+}
 ```
 
 
@@ -132,12 +97,15 @@ main =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-1. `Browser.sandbox` lets us "stay within the world of Elm"
-2. To use functions that have side-effects like `Random` we need `Cmd`.
-3. For _that_, we switch from `Browser.sandbox` to [`Browser.element`](https://guide.elm-lang.org/effects/)
-4. This allows us to interact with the outside world (and it's data).
+1. `Nothing` translates to `null` in our json
+2. However, it might best to _literally store nothing_ in our json file
+    - Meaning, no data at all. This makes it obvious that it's missing.
+3. Or, you could store a custom data type `DoesNotExist : Entries`
+    - These can make life more complex and problematic, however.
 
-You can see the [simplified full program here](https://ellie-app.com/qbXb7HZtxpya1).
+**The simplest way is to not store anything.** You can use `Json.Decode.Pipeline` and have some `optional` fields. Default data just hides potential
+issues and mute errors. Just make it obvious you're missing something, and
+push it until the very end to deal with that, e.g. **show an empty `view` and keep things simple!**
 
 
 
@@ -146,7 +114,7 @@ You can see the [simplified full program here](https://ellie-app.com/qbXb7HZtxpy
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-You can see [how we transformed a update function](http://tinyurl.com/elm-lang-convert-update-tuple) with a regular `Model` to a tuple with a `(Model, Cmd Msg)`. **More on [`commands` here](https://elmprogramming.com/commands.html)**
+ How does SQL handle this? Rethink storing `type Custom` directly, as your custom types in your app can get out of sync with your stored data very quickly. You would have to version your custom types and deal with that. You would need to have metadata `key` in your json to identify the variants in your custom types.
 
 
 <!-- -------------------------------------------------------------------------

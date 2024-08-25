@@ -39,19 +39,20 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What happens if we type <code>Model</code> in the repl?</h1>
+<h1>Here we have a <code>Songs</code> type that might be empty. What
+simple data type is this similar to?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Type Alias</h2>
+<h2>Maybe</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-<p><code>type alias Model</code></p>
+<p><code>Maybe</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -63,10 +64,23 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span> alias Model</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  { dieFace : <span class="dv">1</span> }</span></code></pre></div>
-<pre class="terminal"><code>&gt; Model
-...</code></pre>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">{-| `Songs` is a custom type. It&#39;s a bit like</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">`Random.Uniform`, with `first` and `rest` -}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">Song</span> <span class="op">=</span> { <span class="fu">song</span> : <span class="dt">String</span> }</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">Songs</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">NoSongs</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">Songs</span> <span class="dt">Song</span> (<span class="dt">List</span> <span class="dt">Song</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">--          ^^^^       ^^^^</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">Songs</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Song</span> <span class="st">&quot;Afraid&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  [(<span class="dt">Song</span> <span class="st">&quot;Get Back&quot;</span>)<span class="op">,</span> (<span class="dt">Entry</span> <span class="st">&quot;Ship Building&quot;</span>)]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">-- Model</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span> <span class="op">=</span> {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">songs</span> <span class="op">=</span> <span class="dt">NoSongs</span> <span class="co">-- custom type</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -78,23 +92,40 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<pre class="terminal"><code>&lt;function&gt; : Int -&gt; Model</code></pre>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Model</span> <span class="dv">1</span>  <span class="co">-- { dieFace = 1 } : Model</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Do we have text or not?</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">renderView</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">songs</span> <span class="cf">of</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">NoSongs</span> <span class="op">-&gt;</span> <span class="fu">songlessView</span> <span class="co">-- No text view</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Songs</span> <span class="fu">first</span> <span class="fu">rest</span>  <span class="op">-&gt;</span> (<span class="fu">view</span> <span class="fu">first</span> <span class="fu">rest</span>) <span class="co">-- Render songs</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>When we create a <code>record</code> as a <code>type alias</code>, we
-get a <strong>constructor function</strong> for free! This allows us to
-generate a record using the <code>type</code> name.</p>
+<ul>
+<li>You <em>could</em> use a custom type, but it adds some complexity …
+<ul>
+<li>And it’s not always a big improvement on simpler data types!</li>
+</ul></li>
+</ul>
+<p>Only use a <code>type Custom</code> where it makes a noticeable
+improvement — <code>[]</code> and <code>NoSongs : Songs</code> are
+similar, so it doesn’t bring much to the table. Instead you could’ve
+used a <code>Maybe List</code>. Remember — when using
+<code>Maybe</code>, reach for <code>withDefault</code> late (e.g. in the
+<code>view</code> that needs to show something).</p>
+<p>You could also use a collection type, so it’s either
+<code>AlbumNotFound</code> or an <code>AlbumId Int</code> that links to
+a <code>List Song</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>…</p>
+<p>A list can be <code>empty</code>, <code>singleton</code>, or
+<code>many</code>, so bear that in mind when you’re creating a custom
+type. <code>Random.Uniform</code> is a good example of this.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

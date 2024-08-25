@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What happens if we type `Model` in the repl?
+# Here we have a `Songs` type that might be empty. What simple data type is this similar to?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Type Alias
+## Maybe
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-`type alias Model`
+`Maybe`
 
 
 <!-- -------------------------------------------------------------------------
@@ -70,13 +70,24 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```python
-type alias Model
-  { dieFace : 1 }
-```
-```terminal
-> Model
-...
+```elm
+{-| `Songs` is a custom type. It's a bit like
+`Random.Uniform`, with `first` and `rest` -}
+Song = { song : String }
+
+Songs
+    = NoSongs
+    | Songs Song (List Song)
+--          ^^^^       ^^^^
+
+Songs
+  (Song "Afraid")
+  [(Song "Get Back"), (Entry "Ship Building")]
+
+-- Model
+model = {
+  songs = NoSongs -- custom type
+}
 ```
 
 
@@ -94,11 +105,12 @@ type alias Model
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```terminal
-<function> : Int -> Model
-```
 ```elm
-Model 1  -- { dieFace = 1 } : Model
+-- Do we have text or not?
+renderView model =
+  case model.songs of
+    NoSongs -> songlessView -- No text view
+    Songs first rest  -> (view first rest) -- Render songs
 ```
 
 
@@ -107,14 +119,19 @@ Model 1  -- { dieFace = 1 } : Model
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-When we create a `record` as a `type alias`, we get a **constructor function** for free! This allows us to generate a record using the `type` name.
+- You _could_ use a custom type, but it adds some complexity ...
+    - And it's not always a big improvement on simpler data types!
+
+ Only use a `type Custom` where it makes a noticeable improvement — `[]` and `NoSongs : Songs` are similar, so it doesn't bring much to the table. Instead you could've used a `Maybe List`. Remember — when using `Maybe`, reach for `withDefault` late (e.g. in the `view` that needs to show something).
+
+ You could also use a collection type, so it's either `AlbumNotFound` or an `AlbumId Int` that links to a `List Song`.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-...
+A list can be `empty`, `singleton`, or `many`, so bear that in mind when you're creating a custom type. `Random.Uniform` is a good example of this.
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
