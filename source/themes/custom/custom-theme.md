@@ -2,6 +2,10 @@
 title: Testing out a custom theme
 css: ../style/main.css
 description: Make sure to add `.gl-CodeBlock` for the dark theme
+notes: >-
+  Remember to wrap your code block like this (with a class):
+    ```lang {.gl-CodeBlock} code block
+  or the `code block` will be missing some colours!
 ---
 
 > This helps us build our new theme.
@@ -356,10 +360,10 @@ class ExitNotifyThread(Thread):
 type alias Model
   { dieFace : Int }
 ```
-```terminal
+```terminal {.gl-CodeBlock}
 > Model
 <function> : Int -> Model
 ```
-```elm
+```elm {.gl-CodeBlock}
 Model 1  -- { dieFace = 1 } : Model
 ```
