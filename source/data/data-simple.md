@@ -119,6 +119,10 @@ renderView model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
+| Try to not reach for withDefault early | You could use a custom type, but it adds some complexity |
+|--|--|
+| Use it at the very end (as late as possible) | And it’s not always a big improvement on simpler data types! |
+
 - You _could_ use a custom type, but it adds some complexity ...
     - And it's not always a big improvement on simpler data types!
 
