@@ -6,29 +6,27 @@
 // definitely better overall, and doesn't feel like Christmas when working with
 // ```html Markdown fenced code blocks. The choice is up to you!
 //
-//    @ link: https://shorturl.at/W3KTg (Visual Studio Code plugin)
+//    @ link: https://tinyurl.com/breeze-dark-theme-vsc
+//
+// Colours really make the code "pop", but choosing the right colour combinations
+// really takes some time and effort.
 //
 //
-// Color variables notes
-// ---------------------
-// 1. Skylighting theme (Breeze Dark - Modified), Compile code blocks with Pandoc!
+// Colour variables notes
+// ----------------------
 //
-//   (a) Our inherited `--color-code-light` theme is monochrome, but we can
-//       make some changes here.
+// 1. We make some slight changes from our `print-first-css` defaults, and add in
+//    theme-specific styles.
 //
-//       #! What happens if we use our `code block` inside our notes?
-//          It's going to inherit these styles. New variables are needed.
+//   (a) Our basic highlighting styles.
 //
-//   (b) A very helpful plugin is `colorize` which allows you to preview color:
-//       @ http://tinyurl.com/visual-studio-code-colorize
+//       #! If we use a `code block` inside a notes field, you'll see the
+//          monochrome theme _not_ the dark theme. This helps keep things simple
+//          and easier to scan (I think).
 //
-//       - Some themes have `background-color` and extra `font` styles. It might
-//          make sense at some point to move these all into the `skylighting.less`
-//       - `--color-code-dark-normal` is exactly the same as `-text-color` so
-//          isn't needed. Also I've cleaned up the code to just use classes
-//          (without `code span`) so using `-normal` causes inheritance issues.
-//
-//   (c) Might be an idea to list the colour pallette for use elsewhere?
+//   (b) Some themes have extra variables for things like `*-background-color`.
+//       Where a theme has extra colours, _add them_ as variables. Where they don't
+//       use these colours, _remove_ them.
 //
 //       - Most of the `--color-code-dark-` variables are used by _all_ themes,
 //         but some are theme specific. Perhaps consider using "tokens" in a
@@ -50,15 +48,25 @@
 // use in our `data/*.md` files.
 //
 // To see what a theme _should_ look like, try it out in Visual Studio Code.
-// You'll need to find a theme plugin. There's a fair few differences that we
-// can't really capture as it stands with Pandoc right now.
+// You'll need to find a theme's colour plugin. There's a fair few differences
+// that we can't really capture as it stands with Pandoc right now. We'll just
+// have to do our best!
+//
+//    @ issue link: https://github.com/badlydrawnrob/anki/issues/152
 //
 //
 // Colour pallette
 // ---------------
-// Use the colorize Visual Studio Code plugin to see colours. The colour pallette
-// is quite extensive, so can be a little difficult to change. These are the default
-// colours that Pandoc uses for `breezedark`.
+// Use the "colorize" Visual Studio Code plugin to preview colours. The colour
+// pallette is quite extensive, so can be a little difficult to change. These are
+// the default colours that Andrew Fridley uses in his Visual Studio Code
+// plugin for Breeze Dark Theme (modified).
+//
+//    #! There's still some leftover styles from the original Breeze Dark Theme
+//       but in my code examples I can't really see them.
+//
+//    @ http://tinyurl.com/visual-studio-code-colorize
+//
 //
 // #EFFFFF,
 // #7a7c7d,
@@ -96,15 +104,15 @@
 
 // 1a
 --color-code-bold: #f12056;
---color-code-italic: #f67400;  // Was #8e44ad
+--color-code-italic: #f67400;
 
 
 // 1b
 --color-code-dark-background: #232629;
 --color-code-dark-text-color: #EFFFFF;
---color-code-dark-line-number-color: #7a7c7d;
---color-code-dark-line-number-background-color: #232629;
---color-code-dark-normal: #cfcfc2;  // #! This isn't being used
+--color-code-dark-line-number-color: #7a7c7d;             // #! Not used
+--color-code-dark-line-number-background-color: #232629;  // #! Not used
+--color-code-dark-normal: #cfcfc2;                        // #! Not used
 
 
 // 1b

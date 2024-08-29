@@ -8,7 +8,8 @@
 //    be unique?
 //
 // 1. Buttons are a bloomin' arse to code up. This is where a utility framework
-//    comes in handy (either built by me or some other mug, like Pico CSS)
+//    comes in handy (either built by me or some other mug, like Pico CSS) ...
+//    in fact, half of those styles aren't really needed.
 //
 //    - The button only shows up once in our HTML, so there's no need to make it
 //      a global element (unless we use it elsewhere.
@@ -18,7 +19,8 @@
 //
 //    - This still looks a bit weird to me, using `#id`s instead of ECSS
 //      style `.demo-` scoped classes! I guess it's habit. treat them like
-//      Markdown headings, `#h1` `#h1 #h2` and so on.
+//      Markdown headings, `#h1` `#h1 #h2` and so on. Two IDs together just
+//      looks a bit ugly :(
 //
 // #! Aim to reduce dead code. Are `#front` and `#reverse` doing anything?
 
@@ -42,7 +44,7 @@ body.nightMode {
   .bottom {}  // Aim to reduce dead code
 }
 
-// 2
+// 1
 #demo .button {
   display: inline-block;
   margin: var(--spacing) 0;

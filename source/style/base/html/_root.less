@@ -7,24 +7,34 @@
 // ----------
 // There seems to be a trend for massive font sizes: See issue #75
 //
-// 1. Anki (app) sets default `body` styles and `:root` doesn't override this.
+// 1. Here we import all our variables. There's _three_ options right now
+//    for colours, two of which I'll remove in the next release. They're marked
+//    with a little artist!
+//
+//    - I'm still not happy with the colours, but they do take a while to get
+//      right and Pandoc is a bit limiting in some ways. An artist ships, as they
+//      say, otherwise I'd _still_ be working on those colours now!
+//
+// 2. Anki (app) sets default `body` styles and `:root` doesn't override this.
 //    Might have to override all the styles in print-first-css `:root`?
 //    @ https://github.com/badlydrawnrob/anki/issues/117
 //
-// 2. @font-face should live outside of `:root` I found out. See issue #12
+//
+// 3. @font-face should live outside of `:root` I found out. See issue #12
 //
 //     - Add your custom `--font-variable` and `@font-face`
 //     - https://www.hacksoft.io/blog/using-multiple-font-files-the-right-way
 
+// 1
 :root {
   @import '../variables/color';
-  // @import '../variables/breezedark'; // You might prefer this theme
-  @import '../variables/breezedark-modified';
-  // @import '../variables/monokai';  // Deprecated (but still works)
+  @import '../variables/breezedark-modified';  // 👨‍🎨 My preference (modified)
+  // @import '../variables/breezedark';       // 🧑‍🎨 Pandoc's original
+  // @import '../variables/monokai';          // 👩‍🎨 Old theme (deprecated)
   @import '../variables/typography';
 }
 
-// 1 !#
+// 2 !#
 body {
   color: var(--font-color);
   font-family: var(--font-family);
@@ -33,7 +43,7 @@ body {
   background: transparent;
 }
 
-// 2
+// 3
 @font-face {
   font-family: 'Recursive';
   src: url('_RecursiveVariableFont.woff2') format('woff2-variations');

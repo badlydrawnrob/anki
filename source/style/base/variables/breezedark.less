@@ -1,51 +1,11 @@
 // -----------------------------------------------------------------------------
 // Breeze Dark variables (Pandoc's Skylighting original colours)
 // =============================================================================
-// 1. Skylighting theme (Breeze Dark), Compile code blocks with Pandoc!
+// See `breezedark-modified.less` for all notes and links. Use the Visual Studio
+// Code plugin `colorize` to preview colours (it's a cool little plugin).
 //
-//   (a) Our inherited `--color-code-light` theme is monochrome, but we can
-//       make some changes here.
+//    @ http://tinyurl.com/visual-studio-code-colorize
 //
-//       #! What happens if we use our `code block` inside our notes?
-//          It's going to inherit these styles. New variables are needed.
-//
-//   (b) A very helpful plugin is `colorize` which allows you to preview color:
-//       @ http://tinyurl.com/visual-studio-code-colorize
-//
-//       - Some themes have `background-color` and extra `font` styles. It might
-//          make sense at some point to move these all into the `skylighting.less`
-//       - `--color-code-dark-normal` is exactly the same as `-text-color` so
-//          isn't needed. Also I've cleaned up the code to just use classes
-//          (without `code span`) so using `-normal` causes inheritance issues.
-//
-//   (c) Might be an idea to list the colour pallette for use elsewhere?
-//
-//       - Most of the `--color-code-dark-` variables are used by _all_ themes,
-//         but some are theme specific. Perhaps consider using "tokens" in a
-//         similar way to Material Design?
-//
-//
-// General problems with Pandoc and the theme
-// ------------------------------------------
-// We don't have as many "tokens" or different `span.class` sections as other
-// highlighter tools and editors. This means two things: we must be more careful
-// with our colours, they're shared between more elements; we must put up with a
-// less-than-perfect visual style. This is one of the trade-offs from using
-// Pandoc, which is a brilliant compiler tool. The other option is to install
-// Python (or use the built in MacOs version) and use a different highlighter tool.
-// The downside of this is that we'd lose the nice `markdown->html` process we
-// use in our `data/*.md` files.
-//
-// To see what a theme _should_ look like, try it out in Visual Studio Code.
-// You'll need to find a theme plugin. There's a fair few differences that we
-// can't really capture as it stands with Pandoc right now.
-//
-//
-// Colour pallette
-// ---------------
-// Use the colorize Visual Studio Code plugin to see colours. The colour pallette
-// is quite extensive, so can be a little difficult to change. These are the default
-// colours that Pandoc uses for `breezedark`.
 //
 // #232629,
 // #cfcfc2,
@@ -67,20 +27,20 @@
 // #95da4c,
 // #27ae60,
 // #3f8058,
-// #9B86BD, // #8e44ad
+// #8466c6, // Original was #8e44ad
 
 
 // 1a
 --color-code-bold: #f12056;
---color-code-italic: #f67400;  // Was #8e44ad
+--color-code-italic: #f67400;
 
 
 // 1b
 --color-code-dark-background: #232629;
 --color-code-dark-text-color: #cfcfc2;
---color-code-dark-line-number-color: #7a7c7d;
---color-code-dark-line-number-background-color: #232629;
---color-code-dark-normal: #cfcfc2;  // #! This isn't being used
+--color-code-dark-line-number-color: #7a7c7d;            // #! Not used
+--color-code-dark-line-number-background-color: #232629; // #! Not used
+--color-code-dark-normal: #cfcfc2;                       // #! Not used
 
 
 // 1b
@@ -101,7 +61,7 @@
 --color-code-dark-error: #da4453;                    // Error
 --color-code-dark-extension: #0099ff;                // Extension
 --color-code-dark-float: #f67400;                     // Float
---color-code-dark-function: #9B86BD;                 // Function
+--color-code-dark-function: #8466c6;                 // Function
 --color-code-dark-import: #27ae60;                   // Import
 --color-code-dark-information: #c45b00;              // Information
 --color-code-dark-keyword: #cfcfc2;                  // Keyword

@@ -6,13 +6,17 @@
 //
 // 1. Requires an `#answer` ID on reveal to skip to the right part of the card.
 //
-// 2 When two `pre` blocks are on top of each other, the first one should have
-//     no margin (mainly with Simple card type).
+// 2. When two `pre` blocks are on top of each other, the first one should have
+//    no margin (mainly with Simple card type).
+//
+//    #! Shouldn't this live within the `code-block.less` file? I have in my
+//       GPS article to never use a `#page` to manage styles within a `.gl`
+//       though.
 
 #reverse {
   // 1
   #answer {
-    pre {
+    .gl-CodeBlock pre {
       margin-bottom: 0  // 2
     }
   }
