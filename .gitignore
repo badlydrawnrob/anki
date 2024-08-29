@@ -2,6 +2,4 @@
 source/style/base/variables/custom-theme.less
 source/style/base/variables/custom-typography.less
 source/style/globals/custom-theme.less
-build/custom/custom-theme-modified.html
-build/custom/custom-theme-old.html
 build/custom/*.css
