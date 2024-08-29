@@ -1140,6 +1140,28 @@ h2 {
   text-transform: none;
   letter-spacing: normal;
 }
+table {
+  text-align: left;
+  border-collapse: collapse;
+}
+.nightMode table {
+  border-color: var(--color-nightmode-border);
+}
+thead tr {
+  border-bottom: 1px solid var(--color-card-l);
+}
+tbody tr {
+  border-bottom: 1px solid var(--color-card-ll);
+}
+.nightMode tbody tr {
+  border-color: var(--color-card-l);
+}
+tbody tr:last-of-type {
+  border-bottom-color: transparent;
+}
+tbody td {
+  padding: var(--spacing-half) 0;
+}
 .nightMode a {
   color: var(--color-nightmode-link);
 }
@@ -1323,11 +1345,11 @@ img {
 }
 .gl-CodeBlock .sourceCode .cn {
   color: var(--color-code-dark-constant);
-  font-weight: bold;
+  font-weight: 500;
 }
 .gl-CodeBlock .sourceCode .cf {
   color: var(--color-code-dark-control-flow);
-  font-weight: bold;
+  font-weight: 500;
 }
 .gl-CodeBlock .sourceCode .dt {
   color: var(--color-code-dark-data-type);
@@ -1347,7 +1369,7 @@ img {
 }
 .gl-CodeBlock .sourceCode .ex {
   color: var(--color-code-dark-extension);
-  font-weight: bold;
+  font-weight: 500;
 }
 .gl-CodeBlock .sourceCode .fl {
   color: var(--color-code-dark-float);
@@ -1364,7 +1386,7 @@ img {
 }
 .gl-CodeBlock .sourceCode .kw {
   color: var(--color-code-dark-keyword);
-  font-weight: bold;
+  font-weight: 500;
 }
 .gl-CodeBlock .sourceCode .op {
   color: var(--color-code-dark-operator);
@@ -1397,10 +1419,10 @@ img {
 }
 .gl-CodeBlock .sourceCode .wa {
   color: var(--color-code-dark-warning);
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
 }
-#reverse #answer pre {
+#reverse #answer .gl-CodeBlock pre {
   margin-bottom: 0;
 }
 #demo {

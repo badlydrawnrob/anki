@@ -103,39 +103,34 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#c
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
+<p>Access a dictionary item with it’s <code>key</code>, which returns
+it’s <code>value</code>. You can also change a value, or generate a
+brand new value with the following syntax:</p>
 <table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <thead>
 <tr>
-<th>Try to not reach for withDefault early</th>
-<th>You could use a custom type, but it adds some complexity</th>
+<th>Change a value</th>
+<th>Add a new animal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Use it at the very end (as late as possible)</td>
-<td>And it’s not always a big improvement on simpler data types!</td>
+<td><code>residents['Burmese Python'] = 79</code></td>
+<td><code>residents['Giraffe'] = 200</code></td>
+</tr>
+<tr>
+<td>This will edit a value</td>
+<td>This will add a new key/value pair</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>You <em>could</em> use a custom type, but it adds some complexity …
-<ul>
-<li>And it’s not always a big improvement on simpler data types!</li>
-</ul></li>
-</ul>
-<p>Only use a <code>type Custom</code> where it makes a noticeable
-improvement — <code>[]</code> and <code>NoSongs : Songs</code> are
-similar, so it doesn’t bring much to the table. Instead you could’ve
-used a <code>Maybe List</code>. Remember — when using
-<code>Maybe</code>, reach for <code>withDefault</code> late (e.g. in the
-<code>view</code> that needs to show something).</p>
-<p>You could also use a collection type, so it’s either
-<code>AlbumNotFound</code> or an <code>AlbumId Int</code> that links to
-a <code>List Song</code>.</p>
+<pre class="terminal"><code>&gt; print(&quot;Burmese Python: &quot;, residents[&#39;Burmese Python&#39;])
+Burmese Python:  79
+&gt; print(&quot;Giraffe: &quot;, residents[&#39;Giraffe&#39;])
+200</code></pre>
+<p>A dictionary is similar to a list, but you access values by looking
+up a <code>key</code> instead of an index. A key can be any string or
+number. Dictionaries are enclosed in curly braces <code>{ }</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 

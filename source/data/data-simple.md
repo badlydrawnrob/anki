@@ -119,16 +119,20 @@ renderView model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-| Try to not reach for withDefault early | You could use a custom type, but it adds some complexity |
-|--|--|
-| Use it at the very end (as late as possible) | And it’s not always a big improvement on simpler data types! |
+Access a dictionary item with it's `key`, which returns it's `value`. You can also change a value, or generate a brand new value with the following syntax:
 
-- You _could_ use a custom type, but it adds some complexity ...
-    - And it's not always a big improvement on simpler data types!
+| Change a value | Add a new animal |
+| -------------- | ---------------- |
+| `residents['Burmese Python'] = 79` | `residents['Giraffe'] = 200` |
+| This will edit a value | This will add a new key/value pair |
 
- Only use a `type Custom` where it makes a noticeable improvement — `[]` and `NoSongs : Songs` are similar, so it doesn't bring much to the table. Instead you could've used a `Maybe List`. Remember — when using `Maybe`, reach for `withDefault` late (e.g. in the `view` that needs to show something).
-
- You could also use a collection type, so it's either `AlbumNotFound` or an `AlbumId Int` that links to a `List Song`.
+```terminal
+> print("Burmese Python: ", residents['Burmese Python'])
+Burmese Python:  79
+> print("Giraffe: ", residents['Giraffe'])
+200
+```
+A dictionary is similar to a list, but you access values by looking up a `key` instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces `{ }`.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes

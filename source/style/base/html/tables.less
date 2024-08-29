@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// Tables
+// =============================================================================
+// 1. Stupid bloody borders rule: https://shorturl.at/HtZkT
+
+table {
+  text-align: left;
+  border-collapse: collapse;  // 1
+
+  .nightMode & {
+    border-color: var(--color-nightmode-border);
+  }
+}
+
+thead {
+  tr { border-bottom: 1px solid var(--color-card-l); }
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid var(--color-card-ll);
+
+    .nightMode & {
+      border-color: var(--color-card-l);
+    }
+
+    &:last-of-type {
+      border-bottom-color: transparent;
+    }
+  }
+
+  td {
+    padding: var(--spacing-half) 0;
+  }
+}
