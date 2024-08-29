@@ -5,19 +5,19 @@
 // fonts, also take care when naming them: See issue #12. You must also check
 // override Anki's default typography with `body` tag, or a class.
 //
-// 1. DejaVu and Verdana (small) font stack
+// Inherited from `print-first-css`: `--system-ui`, `--system-mono`, `--fallback-mono`
 //
-//     Inherited from print-first-css:
+// 1. Recursive font stack as default. I'm not super happy about this font yet,
+//    but it works quite nicely on mobile (not as great on desktop). If I get
+//    time to try out other fonts, I'll improve typography later.
 //
-//     - `--system-ui`, `--system-mono`, `--fallback-mono`
+//    @ link: https://www.recursive.design/
 //
+// 2. If you hate Recursive as a heading and body font, you can switch back to
+//    DejaVu ... it should be simple to figure out. I'll probably deprecate it
+//    in the next release though.
 //
-//     ⟳ Switch to Verdana as our base font! (works better with DejaVu)
-//       Verdana is a wee bit too big for my liking, so try to
-//       reduce size for Anki Cards (but not globally): see issue #12
-//
-//     ⇾ Also change the variables in `../../partials/..`
-//     ⟳ Override print-first-css files
+//    - This will be deprecated in future versions!
 
 --recursive: "Recursive";
 
@@ -25,3 +25,8 @@
 --font-family: var(--recursive), var(--system-ui);
 --font-family-header: var(--recursive), var(--system-ui);
 --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
+
+// 2
+--dejavu: "DejaVu Sans";
+--font-family-old: var(--dejavu);
+--font-family-header-old: var(--dejavu);

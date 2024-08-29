@@ -1,12 +1,15 @@
 <!-- Simple card: reverse
      ====================
 
-     I've ripped out the `FrontSide` tag here, as only the Simple card
-     type uses it. The Missing! card type can't use the `FrontSide`
-     tag because of the way the template is set up (using a `cloze`)
+     I've ripped out the `FrontSide` tag here,
+     as only the Simple card type uses it.
+     The Missing! card type can't use the `FrontSide`
+     tag because of the way the template is set up
+     (using a `cloze`).
 
-     So for ease of sharing styles, we'll simply replicate the front code on
-     the reverse of the card.
+     So for ease of sharing styles, we'll simply
+     replicate the front code on the reverse of
+     the card, instead of using `FrontSide` tag.
 
 -->
 
@@ -22,12 +25,12 @@
       {{/☆ Syntax (inline code)}}
     </header>
     <div class="gl-CodeBlock">
-      {{★ Sample (code block)}} <!-- Missing! has no sample code block here like Simple ... -->
+      {{★ Sample (code block)}} <!-- Missing! has no sample code block ... -->
     </div>
 
-    <!-- ANSWER #! previously we had two `<sections>` one for front
-         and one for `#answer` and `anki-Reverse`. It makes sense for them
-         to be sections, but there should only be ONE `.gl-Card`. -->
+    <!-- #! `#answer` is in a different position to the Missing! card, as it's
+         used to "skip" to the answer. We're not using it for any styling,
+         so it doesn't break our GPS framework. There's only ONE `.gl-Card`. -->
     <div id="answer">
       <div class="gl-Card_KeyPoint">
         <div class="gl-CodeBlock">

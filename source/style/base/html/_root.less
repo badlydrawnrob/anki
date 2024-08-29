@@ -19,11 +19,19 @@
 //    Might have to override all the styles in print-first-css `:root`?
 //    @ https://github.com/badlydrawnrob/anki/issues/117
 //
-//
 // 3. @font-face should live outside of `:root` I found out. See issue #12
 //
 //     - Add your custom `--font-variable` and `@font-face`
 //     - https://www.hacksoft.io/blog/using-multiple-font-files-the-right-way
+//
+// 4. I'm still not 100% sold on Recursive font. The `MONO` is nice, but having
+//    recursive as the heading/body font can feel hard to read on desktop (it's
+//    _far_ better on mobile) — I could spend forever on typography, so I'll
+//    punt better typography to a future release.
+//
+//    - If you absolutely HATE Recursive, you can switch back to DejaVu Sans as
+//      body and header text :)
+//    - This will be deprecated in future versions.
 
 // 1
 :root {
@@ -49,4 +57,12 @@ body {
   src: url('_RecursiveVariableFont.woff2') format('woff2-variations');
   font-style: oblique 0deg 15deg;
   font-weight: 300 1000;
+}
+
+// 4 (deprecated)
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url("_DejaVuSans.ttf");
+  font-style: normal;
+  font-weight: 400;
 }

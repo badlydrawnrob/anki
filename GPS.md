@@ -1,7 +1,14 @@
 Moving on from ECSS
 ===================
 
-<!-- #! Add in links to Tailwind article, GPS article and Portfolio -->
+<!-- #! Add in links to Tailwind article, GPS article and Portfolio
+
+    The only thing that isn't flexible is the `id="front"` and `id="answer"`
+    ids, which aren't quite page-level elements, but allow Anki to "skip"
+    to the correct part of the template on the card answer reveal.
+
+    Wherever global styles can be turned into raw HTML and placed in `partials`
+    they should be. -->
 
 
 ## Summary

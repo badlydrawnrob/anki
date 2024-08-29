@@ -1,163 +1,117 @@
-/* -----------------------------------------------------------------------------
+/* ---------------------------------------------------
 // Anki Flashcards (CSS Programming Themes)
 // MIT License | https://github.com/badlydrawnrob/anki
-// =============================================================================
-// Inherits and extends `print-first-css` and sets up styles for our Anki flashcards!
-// This can be used as-is, or perhaps you'd like to use it as a base for another
-// set of Anki cards. Or, you might like to use `print-first-css` for a project.
-// We're not worrying about `.gl-BaselineGrid` here.
+// ===================================================
+// Inherits and extends `print-first-css` and sets up
+// styles for our Anki flashcards! This can be used
+// as-is, or perhaps you'd like to use it as a base for
+// another set of Anki cards. Or, you might like to use
+// `print-first-css` for a project. We're not worrying
+// about `.gl-BaselineGrid` here.
 //
 //    @ https://bit.ly/2TpdSaL
 //
 //
 // GPS, ECSS, and Thema Styles: The Basic Idea
 // -------------------------------------------
-// I haven't found a silver bullet yet, so this is a work in progress!
+// I haven't found a silver bullet yet, so this is a
+// work in progress!
 //
-//    @ link:
+//    @ link: https://github.com/badlydrawnrob/anki/issues/146 #!
 //
-// Use GPS where appropriate, and reduce verbosity (number of nested levels),
-// which is where I feel the method falls down. Use Thema Styles in these cases.
-// I'm looking for methods to increase speed when checking classnames against
-// their purpose. Be careful of naming clashes in bigger sites; it's unlikely
-// to happen in a tool as small as this.
+// Use GPS where appropriate, and reduce verbosity
+// (number of nested levels), which is where I feel the
+// method falls down. Use Thema Styles in these cases.
+// I'm looking for methods to increase speed when
+// checking classnames against their purpose. Be careful
+// of naming clashes in bigger sites; it's unlikely to
+// happen in a tool as small as this.
 //
-// If you are interested in these concepts and have a big team of developers
-// working together, make sure they're well trained on a well-documented and
-// strict style. You can always scope everything under it's `#page` or
-// `#section`, or use a `.pg-` or `.section-` scope like we used to do
-// with ECSS to avoid clashes and inheritance issues.
+// If you are interested in these concepts and have a
+// big team of developers working together, make sure
+// they're well trained on a well-documented and strict
+// style. You can always scope everything under it's
+// `#page` or `#section`, or use a `.pg-` or `.section-`
+// scope like we used to do with ECSS to avoid clashes
+// and inheritance issues.
 //
-// Always try and make use of your plain old HTML styles, and have a specimen
-// file and some form of design-system for your globals. Go as far as you can with
-// raw HTML and very basic styling, before reaching for something more complex.
+// Always try and make use of your plain old HTML
+// styles, and have a specimen file and some form of
+// design-system for your globals. Go as far as you can
+// with raw HTML and very basic styling, before reaching
+// for something more complex.
 //
 //
 // Finding what's right for you
 // ----------------------------
-// GPS theory has been well tested, but Thema Styles (although simple) hasn't.
-// There's bound to be stuff I might want to change, or rules to get rid of
-// completely. GPS doesn't automatically solve every problem (one of the reasons
-// I dreamed up Thema), so some trial and error is needed to arrive at a
-// working style you prefer to use!                                           */
-/* -----------------------------------------------------------------------------
-// Print First CSS
-// MIT License | https://github.com/badlydrawnrob/print-first-css
-// =============================================================================
-// A very light framework, which has printable styles at it's heart. This means
-// we want it nicely printed, saved as a PDF, or viewed in an eReader. It's also
-// nice as a solid base for your own projects, which don't have to be "print first".
+// GPS theory has been well tested, but Thema Styles
+// (although simple) hasn't. There's bound to be stuff I
+// might want to change, or rules to get rid of
+// completely. GPS doesn't automatically solve every
+// problem (one of the reasons I dreamed up Thema styles),
+// so some trial and error is needed to arrive at a
+// working style you prefer to use!
+*/
+/*! --------------------------------------------------
+// Print First CSS | MIT License
+// @ https://github.com/badlydrawnrob/print-first-css
+// ===================================================
+// A very light framework, which has printable styles
+// at it's heart. This means we want it nicely printed,
+// saved as a PDF, or viewed in an eReader. It's also
+// nice as a solid base for your own projects, which
+// don't have to be "print first".
 //
-// I often save things as PDFs and occasionally print them, so it's always nice
-// to make an effort for that kind of job a person hires your website for.    */
+// I often save things as PDFs and occasionally print
+// them, so it's always nice to make an effort for that
+// kind of job a person hires your website for.
+//
+//                                                   */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
 }
-/**
- * Render the `main` element consistently in IE.
- */
 main {
   display: block;
 }
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
   box-sizing: content-box;
-  /* 1 */
   height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */
 }
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
+  font-family: monospace,monospace;
   font-size: 1em;
-  /* 2 */
 }
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
   background-color: transparent;
 }
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
   border-bottom: none;
-  /* 1 */
   text-decoration: underline;
-  /* 2 */
   text-decoration: underline dotted;
-  /* 2 */
 }
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
 }
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
+  font-family: monospace,monospace;
   font-size: 1em;
-  /* 2 */
 }
-/**
- * Add the correct font size in all browsers.
- */
 small {
   font-size: 80%;
 }
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -171,187 +125,92 @@ sub {
 sup {
   top: -0.5em;
 }
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
   border-style: none;
 }
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
 input {
-  /* 1 */
   overflow: visible;
 }
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit],
+button {
   -webkit-appearance: button;
 }
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 legend {
   box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
   vertical-align: baseline;
 }
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
   overflow: auto;
 }
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
 }
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
 }
-/*
- * Add the correct display in all browsers.
- */
 summary {
   display: list-item;
 }
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
 template {
   display: none;
 }
-/**
- * Add the correct display in IE 10.
- */
 [hidden] {
   display: none;
 }
@@ -365,19 +224,19 @@ template {
   --color-lll: #f1f1f1;
   --color-llll: #fff;
   --spacing-increment: calc(var(--spacing-pp) * 1rem);
-  --spacing-pppppppp: 128 / 16;
-  --spacing-ppppppp: 112 / 16;
-  --spacing-pppppp: 96 / 16;
-  --spacing-ppppp: 80 / 16;
-  --spacing-pppp: 64 / 16;
-  --spacing-ppp: 48 / 16;
-  --spacing-pp: 32 / 16;
-  --spacing-p: 24 / 16;
-  --spacing-base: 16 / 16;
-  --spacing-m: 8 / 16;
-  --spacing-mm: 4 / 16;
-  --spacing-mmm: 2 / 16;
-  --spacing-mmmm: 1 / 16;
+  --spacing-pppppppp: 128/16;
+  --spacing-ppppppp: 112/16;
+  --spacing-pppppp: 96/16;
+  --spacing-ppppp: 80/16;
+  --spacing-pppp: 64/16;
+  --spacing-ppp: 48/16;
+  --spacing-pp: 32/16;
+  --spacing-p: 24/16;
+  --spacing-base: 16/16;
+  --spacing-m: 8/16;
+  --spacing-mm: 4/16;
+  --spacing-mmm: 2/16;
+  --spacing-mmmm: 1/16;
   --spacing-eight: calc(var(--spacing-pppppppp) * 1rem);
   --spacing-seven: calc(var(--spacing-ppppppp) * 1rem);
   --spacing-six: calc(var(--spacing-pppppp) * 1rem);
@@ -422,12 +281,12 @@ template {
   --color-code-light-variable: #000;
   --color-code-light-verbatim-string: #000;
   --color-code-light-warning: #000;
-  --system-ui: system-ui, sans-serif;
+  --system-ui: system-ui,sans-serif;
   --system-mono: ui-monospace;
-  --fallback-mono: 'Roboto Mono', monospace, monospace;
+  --fallback-mono: 'Roboto Mono',monospace,monospace;
   --font-color: var(--color-bbbb);
   --font-family: var(--system-ui);
-  --font-family-mono: var(--system-mono), var(--fallback-mono);
+  --font-family-mono: var(--system-mono),var(--fallback-mono);
   --font-size-pppppp: calc((96 / 16) * 1rem);
   --font-size-ppppp: calc((60 / 16) * 1rem);
   --font-size-pppp: calc((48 / 16) * 1rem);
@@ -454,14 +313,14 @@ template {
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
-  background: transparent;
+  background: 0 0;
 }
 html {
   box-sizing: border-box;
 }
 *,
-*::before,
-*::after {
+::after,
+::before {
   box-sizing: inherit;
 }
 a,
@@ -602,14 +461,16 @@ samp {
   }
 }
 code,
-kbd {
+kbd,
+samp {
   margin: 0;
   padding: var(--spacing-quarter);
   white-space: nowrap;
 }
 @media screen {
   code,
-  kbd {
+  kbd,
+  samp {
     border-radius: var(--border-radius);
     background-color: var(--color-code-light-background);
   }
@@ -642,21 +503,21 @@ pre code {
   color: inherit;
   border: none;
   border-radius: 0;
-  background: transparent;
+  background: 0 0;
 }
 button,
-input[type="checkbox"],
-input[type="file"],
-input[type="image"],
-input[type="radio"],
-input[type="reset"],
-input[type="submit"],
+input[type=checkbox],
+input[type=file],
+input[type=image],
+input[type=radio],
+input[type=reset],
+input[type=submit],
 label,
 select {
   cursor: pointer;
 }
-input[type="color"],
-input[type="range"] {
+input[type=color],
+input[type=range] {
   vertical-align: middle;
 }
 fieldset {
@@ -665,24 +526,24 @@ fieldset {
   padding: 0;
   border: 0;
 }
-input[type="checkbox"],
-input[type="image"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=image],
+input[type=radio] {
   display: inline-block;
   width: auto;
 }
-input[type="file"] {
+input[type=file] {
   max-width: 100%;
   cursor: pointer;
 }
-input[type="search"] {
+input[type=search] {
   box-sizing: border-box;
   appearance: none;
 }
-input[type="submit"],
-input[type="button"],
-input[type="image"],
-input[type="reset"],
+input[type=button],
+input[type=image],
+input[type=reset],
+input[type=submit],
 select {
   border-radius: 0;
 }
@@ -699,14 +560,14 @@ textarea {
 }
 h1 {
   margin-bottom: var(--spacing-three);
-  font-weight: normal;
+  font-weight: 400;
   font-size: var(--font-size-pppp);
   line-height: var(--line-height-one);
   text-transform: none;
 }
 h2 {
   margin-bottom: calc(var(--spacing-two) - var(--spacing-micro));
-  font-weight: normal;
+  font-weight: 400;
   font-size: var(--font-size-ppp);
   line-height: var(--line-height-one);
   text-transform: none;
@@ -714,7 +575,7 @@ h2 {
 }
 h3 {
   margin-bottom: calc(var(--spacing-one) + var(--spacing-micro));
-  font-weight: normal;
+  font-weight: 400;
   font-size: var(--font-size-pp);
   line-height: calc(var(--line-height-one) + var(--line-height-quarter));
   text-transform: none;
@@ -785,8 +646,8 @@ ol ol ol ol {
   list-style: lower-alpha;
 }
 ol ol,
-ul ol,
 ol ul,
+ul ol,
 ul ul {
   margin-bottom: 0;
 }
@@ -819,20 +680,20 @@ video {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  blockquote,
+  pre {
     page-break-inside: avoid;
   }
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  img,
+  tr {
     page-break-inside: avoid;
   }
-  p,
   h2,
-  h3 {
+  h3,
+  p {
     orphans: 3;
     widows: 3;
   }
@@ -849,12 +710,12 @@ table {
 tr {
   vertical-align: baseline;
 }
-th,
-tfoot td {
+tfoot td,
+th {
   text-align: left;
 }
-th,
-td {
+td,
+th {
   overflow: visible;
 }
 caption,
@@ -881,9 +742,9 @@ del {
 details {
   cursor: pointer;
 }
+cite,
 em,
-i,
-cite {
+i {
   font-style: italic;
 }
 .gl-BaselineGrid {
@@ -1085,10 +946,13 @@ cite {
   --font-family: var(--recursive), var(--system-ui);
   --font-family-header: var(--recursive), var(--system-ui);
   --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
+  --dejavu: "DejaVu Sans";
+  --font-family-old: var(--dejavu);
+  --font-family-header-old: var(--dejavu);
 }
 body {
   color: var(--font-color);
-  font-family: var(--font-family);
+  font-family: var(--font-family-old);
   font-size: var(--font-size);
   line-height: var(--line-height);
   background: transparent;
@@ -1099,12 +963,19 @@ body {
   font-style: oblique 0deg 15deg;
   font-weight: 300 1000;
 }
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url("_DejaVuSans.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
 code,
 kbd {
   padding: 0;
   background: var(--color-ll);
   border-color: transparent;
   padding: var(--spacing-micro) var(--spacing-half);
+  font-family: var(--font-family);
   font-size: inherit;
   font-variation-settings: 'MONO' 1;
 }
@@ -1124,7 +995,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-header);
+  font-family: var(--font-family-header-old);
 }
 h1 {
   font-weight: 700;
@@ -1479,6 +1350,6 @@ img {
   box-shadow: none;
   text-shadow: none;
 }
-/* -----------------------------------------------------------------------------
+/* ---------------------------------------------------
 // Your Custom Theme can go here
-// -------------------------------------------------------------------------- */
+// ------------------------------------------------- */
