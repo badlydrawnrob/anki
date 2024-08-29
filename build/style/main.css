@@ -952,8 +952,9 @@ i {
 }
 body {
   color: var(--font-color);
-  font-family: var(--font-family-old);
+  font-family: var(--font-family);
   font-size: var(--font-size);
+  font-variation-settings: 'CASL' 0.43;
   line-height: var(--line-height);
   background: transparent;
 }
@@ -977,7 +978,7 @@ kbd {
   padding: var(--spacing-micro) var(--spacing-half);
   font-family: var(--font-family);
   font-size: inherit;
-  font-variation-settings: 'MONO' 1;
+  font-variation-settings: 'MONO' 1, 'CASL' 0;
 }
 code:empty,
 kbd:empty {
@@ -995,7 +996,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-header-old);
+  font-family: var(--font-family-header);
 }
 h1 {
   font-weight: 700;
@@ -1020,6 +1021,9 @@ table {
 }
 thead tr {
   border-bottom: 1px solid var(--color-card-l);
+}
+thead th {
+  font-weight: 700;
 }
 tbody tr {
   border-bottom: 1px solid var(--color-card-ll);
