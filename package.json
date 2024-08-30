@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-themes",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
