@@ -1,4 +1,5 @@
 !build/
+*.apkg
 source/style/base/variables/custom-theme.less
 source/style/base/variables/custom-typography.less
 source/style/globals/custom-theme.less
