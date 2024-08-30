@@ -5,32 +5,26 @@
     <title>Cards</title>
     <link rel="stylesheet" href="../style/main.css">
   </head>
-  <body class="test-Anki">
-    <section class="test-AnkiCard">
-      <div class="test-AnkiCard-Front">
-        <!-- Simple card ====
+  <body id="demo">
+    <section class="wrapper">
+      <div class="top">
+        <!-- Simple card
+             ===========
 
-            Demo version copied from `../../cards/simple/simple-...` files
+            This is a demo file only. See `themes/cards/missing/*.mustache` for
+            card type templates to use in Anki. Our demo requires ``
+            triple brackets which Anki does not support!
 
-            - requires  triple brackets
-            - `.json` file requires 
+        -->
 
-        ===== -->
-
-        <div id="front" class="anki-Front">
-          <section class="simple simple-front">
-            <header class="simple-Header">
-              <h1 class="simple-Header_Title">
-                What will each <code>residents[<b>‘key’</b>]</code> print out?
-              </h1>
-                <h2 class="simple-Header_Subtitle">
-                  Dictionaries
-                </h2>
-                <p class="simple-Header_Code">
-                  <code>d = {<b>‘key’</b>: <i>value</i>}</code>
-                </p>
+        <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+          <section class="gl-Card">
+            <header>
+              <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
+                <h2>Dictionaries</h2>
+                <p><code>d = {<b>‘key’</b>: <i>value</i>}</code></p>
             </header>
-            <div class="simple-Sample">
+            <div class="gl-CodeBlock">
               <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>residents <span class="op">=</span> {<span class="st">&#39;Puffin&#39;</span> : <span class="dv">104</span>, <span class="st">&#39;Sloth&#39;</span> : <span class="dv">105</span>, <span class="st">&#39;Burmese Python&#39;</span> : <span class="dv">106</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -40,32 +34,17 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
             </div>
           </section>
         </div>
-        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+        <a class="button" href="#answer">See answer</a>
       </div>
-      <div class="test-AnkiCard-Reverse">
-        <!-- Simple card ====
-
-            Demo version copied from `../../cards/simple/simple-...` files
-
-            - requires  triple brackets
-            - `.json` file requires 
-
-        ===== -->
-
-        <div id="front" class="anki-Front">
-          <section class="simple simple-front">
-            <header class="simple-Header">
-              <h1 class="simple-Header_Title">
-                What will each <code>residents[<b>‘key’</b>]</code> print out?
-              </h1>
-                <h2 class="simple-Header_Subtitle">
-                  Dictionaries
-                </h2>
-                <p class="simple-Header_Code">
-                  <code>d = {<b>‘key’</b>: <i>value</i>}</code>
-                </p>
+      <div class="bottom">
+        <div id="reverse">  <!-- We probably need a #CARD-TYPE id somewhere -->
+          <section class="gl-Card">
+            <header>
+              <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
+                <h2>Dictionaries</h2>
+                <p><code>d = {<b>‘key’</b>: <i>value</i>}</code></p>
             </header>
-            <div class="simple-Sample">
+            <div class="gl-CodeBlock">
               <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>residents <span class="op">=</span> {<span class="st">&#39;Puffin&#39;</span> : <span class="dv">104</span>, <span class="st">&#39;Sloth&#39;</span> : <span class="dv">105</span>, <span class="st">&#39;Burmese Python&#39;</span> : <span class="dv">106</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -73,32 +52,54 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(residents[<span class="st">&#39;Sloth&#39;</span>])</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(residents[<span class="st">&#39;Burmese Python&#39;</span>])</span></code></pre></div>
             </div>
-          </section>
-        </div>
-        <div class="anki-Reverse">
-            <!-- Anki only -->
 
-          <section id="answer" class="simple simple-reverse">
-            <div class="simple-KeyPoint">
-              <div class="simple-KeyPoint_Code">
-                <div class="sourceCode" id="cb1"><pre
+            <!-- ANSWER #! previously we had two `<sections>` one for front
+                 and one for `#answer` and `anki-Reverse`. It makes sense for them
+                 to be sections, but there should only be ONE `.gl-Card`. -->
+            <div id="answer">
+              <div class="gl-Card_KeyPoint">
+                <div class="gl-CodeBlock">
+                  <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">104</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">105</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">106</span></span></code></pre></div>
+                </div>
+                <div class="gl-Card_KeyPointNotes">
+                  <p>Access a dictionary item with it’s <code>key</code>, which returns
+it’s <code>value</code>. You can also change a value, or generate a
+brand new value with the following syntax:</p>
+<table>
+<thead>
+<tr>
+<th>Change a value</th>
+<th>Add a new animal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>residents['Burmese Python'] = 79</code></td>
+<td><code>residents['Giraffe'] = 200</code></td>
+</tr>
+<tr>
+<td>This will edit a value</td>
+<td>This will add a new key/value pair</td>
+</tr>
+</tbody>
+</table>
+<pre class="terminal"><code>&gt; print(&quot;Burmese Python: &quot;, residents[&#39;Burmese Python&#39;])
+Burmese Python:  79
+&gt; print(&quot;Giraffe: &quot;, residents[&#39;Giraffe&#39;])
+200</code></pre>
+<p>A dictionary is similar to a list, but you access values by looking
+up a <code>key</code> instead of an index. A key can be any string or
+number. Dictionaries are enclosed in curly braces <code>{ }</code>.</p>
+                  <small>__akf-3.0.0::python __akf-3.0.0::demo testing</small>
+                </div>
               </div>
-              <div class="simple-KeyPoint_Notes">
-                <p>Access a <strong>dictionary</strong> item with it's <code>key</code>, which returns it's <code>value</code>. You can also change a value, or generate a brand new value with the following syntax:</p><div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>residents <span class="op">=</span> {<span class="st">&#39;Puffin&#39;</span>: <span class="dv">104</span>, <span class="st">&#39;Sloth&#39;</span>: <span class="dv">105</span>, <span class="st">&#39;Burmese Python&#39;</span>: <span class="dv">106</span>}</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>residents[<span class="st">&#39;Burmese Python&#39;</span>] <span class="op">=</span> <span class="dv">98</span><span class="op">;</span> <span class="co"># update existing entry</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>residents[<span class="st">&#39;Puffin&#39;</span>] <span class="op">=</span> <span class="dv">36</span><span class="op">;</span> <span class="co"># Add new entry</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> <span class="st">&quot;residents[&#39;Burmese Python&#39;]: &quot;</span>, residents[<span class="st">&#39;Burmese Python&#39;</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> <span class="st">&quot;residents[&#39;Puffin&#39;]: &quot;</span>, residents[<span class="st">&#39;Puffin&#39;</span>]</span></code></pre></div><p>A dictionary is similar to a list, but you access values by looking up a key instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces <code>{ }</code>.</p>
-              </div>
+                <footer>
+                  <p><strong>Warning:</strong> <a href="https://jeffknupp.com/blog/2015/08/30/python-dictionaries">Never search for a value in a dictionary using a for loop</a>! The <code>.items()</code> method allows you to iterate over both keys and values at the same time. The method returns a view object containing the dictionary’s items as key-value tuples.</p>
+                </footer>
             </div>
-              <footer class="simple-Notes">
-                <p><strong>Warning:</strong> <a href="https://jeffknupp.com/blog/2015/08/30/python-dictionaries">Never search for a value in a dictionary using a for loop</a>! The <code>.items()</code> method allows you to iterate over both keys and values at the same time. The method returns a view object containing the dictionary’s items as key-value tuples.</p>
-              </footer>
           </section>
         </div>
       </div>

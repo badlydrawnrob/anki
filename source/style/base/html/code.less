@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// Code (inline and basic code blocks)
+// =============================================================================
+// It seems I'm basically resetting to a default here, and we're doing the
+// heavy lifting of styles elsewhere. Inherited `--color-code-light-*` theme
+// as default, so some styles need to be overriden.
+//
+//    #! Should some styles be edited/moved here?
+//       I feel as much as possible, `code` and `pre` stuff should be set here
+//       for light and dark mode (user settings).
+//
+// 1. See `variables` folder for colours and themes
+// 2. Inherit `font-size` from parents (setting it here, as it seems like a lot
+//    of extra work to style it on every element individually.
+// 3. Some specific settings for Recursive font (see `typography.less`)
+
+
+code,
+kbd {
+  padding: 0;
+  background: var(--color-ll);
+  border-color: transparent;
+  padding: var(--spacing-micro) var(--spacing-half);
+
+  font-family: var(--font-family);
+  font-size: inherit;                           // 2
+  font-variation-settings: 'MONO' 1, 'CASL' 0;  // 3 #!
+
+  .nightMode & {
+    background: var(--color-nightmode-background-l);
+  }
+
+  &:empty {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+pre {
+  font-size: inherit;
+
+  .nightMode & {
+    background: var(--color-nightmode-background-l);
+  }
+}

@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// Color variables
+// =============================================================================
+// I think I need to go back and rethink how I'm using `--color` variables and
+// try to be explicit as possible. As a rule, it's generally better to use the
+// absolute minimum of vars as possible, BUT when dealing with `.nightMode`,
+// `-card`s and text hierarchy, you need a capable colour pallette.
+//
+//    1. Try to be specific. `-card` styles should be for card backgrounds!
+//    2. Try to reduce. Do you really need that variable?
+//    3. Try to be simple. `dddd` is easy to remember (the darkest), but if you
+//       add another mid-level gray, you'd have to find/replace ALL of them.
+//       Perhaps even just say, literally, `--color-card-#757575`!
+//
+//    #! Revisit these in both `print-first-css` and `anki`. Use Material
+//       Design as inspiration but it's far too complex.
+//
+// Don't inherit `--color` vars inside other variables
+// ---------------------------------------------------
+// If they're changed in future, it's less confusing this way. Always aim
+// to be explicit with color variable names.
+//
+// Notes
+// -----
+// 1. Some styles inherit from `print-first-css`:
+//     - Base colors: `--color-b` etc
+//     - Monochrome: `--color-code-light`
+//         - You can add `code block`s to your Anki Card notes, but I'd advise
+//           keeping them as monochrome, from Print First's light theme.
+//         - Inline `code` styles are handled in `code.less`
+//         - Our "basic syntax highlighting" variables can be found in
+//           `breezedark.less`
+//
+// 2. Add some card color styles (rather than using `color-l` etc)
+//
+// 3. Dark mode colours:
+//     Aiming for MINIMAL changes to the base code, so it doesn't screw up
+//     inheritance of other chunks of css. Also known as "Night Mode".
+//     - Dependant on user's settings. In MacOS you can change by going to:
+//       `System Preferences -> General -> Appearance -> Dark`
+
+
+// 1
+--color-code-cloze: #f12056;
+--color-code-cloze-background: #ffffcc;
+
+
+// 2
+--color-card-l: #757575;
+--color-card-ll: #bdbdbd;
+--color-card-lll: #eceff1;
+--color-card-llll: #fff;
+
+
+// 3
+--color-nightmode-background-d: #222;
+--color-nightmode-background-dd: #272822;
+--color-nightmode-background-ddd: #101010;
+--color-nightmode-background-dddd: #000;
+--color-nightmode-background-l: #bbbbbb;
+--color-nightmode-background-ll: #ccc;   // Same as `--color-bb` (print-first)
+--color-nightmode-background-lll: #ddd;  // Same as `--color-l`  (print-first)
+--color-nightmode-text: #fff;
+--color-nightmode-text-light: #ccc;
+--color-nightmode-text-dark: #333;       // Same as `--color-bbb`
+--color-nightmode-border: #ddd;
+--color-nightmode-link: #3daee9;         // Stolen from breezedark!

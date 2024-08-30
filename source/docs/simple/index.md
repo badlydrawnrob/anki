@@ -3,8 +3,9 @@
 - [Home](../../../README.md)
     + 💡 **[Simple](../simple/index.md) card**
     + 🔎 [Missing!](../missing/index.md) card
+    + 🖍️ [Draw!](../draw/index.md) card
     + 🧑‍🎨 [Add color to your code](../highlight/index.md)
-    + 🧑‍🎓 [The professional way](../advanced/index.md)
+    + 🧑‍🎓 [The professional way](../professional/index.md)
 
 
 ## What's the answer?
@@ -50,22 +51,20 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 - The actual function or symbol, i.e. `len()`.
 
 
-## ★ Sample (code block or image)
+## ★ Sample (code block)
 
-> ⤷ **[`code block | image`](../highlight/index.md#full-syntax-highlighting)**
+> ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
 >    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - A sample of the code we're learning
-- If you're feeling lazy, a snapshot image
 
 
-## ★ Key point (code block or image)
+## ★ Key point (code block)
 
-> ⤷ **[`code block | image`](../highlight/index.md#full-syntax-highlighting)**
+> ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
 >     (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 - The answer or key learning point
-- If you're feeling lazy, a snapshot image
 
 
 ## ★ Key point notes

@@ -1,4 +1,5 @@
-<!-- Simple card ====
+<!-- Simple card
+     ===========
 
     - Type: What's the answer?
     - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple/index.md
@@ -7,27 +8,32 @@
             ✎ Optional (notes, markdown)
             ⤷ Field Type
 
-===== -->
+    We try to keep all cards similar(ish), so most
+    elements are shared between each card, but some
+    sections apply to only one card. We use a bit of
+    a hybrid between ECSS naming conventions and
+    GPS global, section, page elements.
 
-<div id="front" class="anki-Front">
-  <section class="simple simple-front">
-    <header class="simple-Header">
-      <h1 class="simple-Header_Title">
-        {{★ Title}}
-      </h1>
+    See `data-simple.md` for the data you'll use to
+    populate the Anki form fields, which you can use
+    with Pandoc to compile your data fields.
+    See `source/docs/professional/index.md` for info.
+
+-->
+
+<div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+  <section class="gl-Card">
+    <header>
+      <h1>{{★ Title}}</h1>
       {{#☆ Subtitle}}
-        <h2 class="simple-Header_Subtitle">
-          {{☆ Subtitle}}
-        </h2>
+        <h2>{{☆ Subtitle}}</h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
-        <p class="simple-Header_Code">
-          <code>{{☆ Syntax (inline code)}}</code>
-        </p>
+        <p><code>{{☆ Syntax (inline code)}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <div class="simple-Sample">
-      {{★ Sample (code block or image)}}
+    <div class="gl-CodeBlock">
+      {{★ Sample (code block)}}
     </div>
   </section>
 </div>

@@ -1,0 +1,27 @@
+{
+  "★ Title": "What\u2019s special about the way we\u2019re layering in Racket Lang\u2019s <a\r\nhref=\"https:\/\/docs.racket-lang.org\/teachpack\/2htdpimage.html\">images\r\nteachpack<\/a>?",
+
+
+  "☆ Subtitle": "2htdp/image",
+
+
+  "☆ Syntax (inline code)": "(require 2htdp/image)",
+
+
+  "★ Sample (image)": "<img src=\"..\/..\/source\/media\/draw-picture-02.png\"\r\nalt=\"The image will need to be added to Anki first\" \/>",
+
+
+  "★ Key point (image)": "<img src=\"..\/..\/source\/media\/draw-picture-03.png\"\r\nalt=\"The image will need to be added to Anki first\" \/>",
+
+
+  "★ Key point notes": "<p>Lisp feels a bit back-to-front and inside-out when you first start!\r\nOur background is the innermost item, and our rocket the outermost\r\n(wrapped in <code>place-image<\/code> function)<\/p>\r\n<pre class=\"racket\"><code>(require 2htdp\/image)\r\n\r\n; Here&#39;s the constants\r\n\r\n(define WIDTH 180)\r\n(define HEIGHT 180)\r\n(define MIDDLE (\/ WIDTH 2))\r\n\r\n(define BACKGROUND\r\n  (rectangle WIDTH HEIGHT &quot;solid&quot; &quot;black&quot;))\r\n\r\n(define ROCKET\r\n  (bitmap\/file &quot;rocket.png&quot;))\r\n\r\n(define MOON\r\n  (circle 40 &quot;solid&quot; &quot;white&quot;))\r\n\r\n; Let&#39;s make our image!\r\n\r\n(place-image\r\n  MOON 10 10\r\n    (place-image\r\n      ROCKET MIDDLE MIDDLE\r\n        BACKGROUND))<\/code><\/pre>",
+
+
+  "✎ Other notes": "<p>Lisp calculates the <em>inner-most<\/em> function (data or variable)\r\nFIRST. It then works inside-out to render our <code>ROCKET<\/code>.<\/p>",
+
+
+  "✎ Markdown": false,
+
+
+  "Tags": "__apf-3.0.0::lisp"
+}

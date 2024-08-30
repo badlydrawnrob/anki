@@ -1,0 +1,164 @@
+// -----------------------------------------------------------------------------
+// Breeze Dark Theme (Pandoc's Skylighting)
+// =============================================================================
+// Currently using Pandoc's highlighting script:
+// - @link: https://github.com/jgm/skylighting
+// - @link: https://stackoverflow.com/a/30884409
+//
+// We can use this file for both the default `breezedark.less` theme and the
+// `breezedark-modified.less` theme. We'll keep styles consistant in this file for
+// ease of switching between the two. Take care to override `print-first-css`
+// monochrome default `font-*` styles, and include the ones we want for
+// Breeze Dark. Better to be explicit and add all the styling that Print First
+// does before you start.
+//
+// - I've changed the `font-weight: bold` to a very slight bold `500`. It looks
+//   better in my opinion.
+//
+// - "Normal" is simply a non-class span. Don't use.
+// - `--color-code-dark-text-color` set in `.gl-CodeBlock` (base text colour)
+// - A lot of repetition of `sourceCode` class which seems unnecessary? #!
+//
+// Notes on number lines
+// ---------------------
+// This is currently not supported, so even if you use ``` {.numberLines} it's
+// not gonna work right now. Sorry!
+
+
+// div.sourceCode {
+//   // pass
+// }
+
+// pre.sourceCode {
+//   // pass
+
+//   .numberSource {
+//     margin-left: 3em;
+//     padding-left: 4px;
+//     border-left: 1px solid #aaaaaa;
+
+//     code {
+//       counter-reset: source-line 0;
+
+//       > span {
+//         position: relative;
+//         left: -4em;
+//         counter-increment: source-line;
+
+//         > a:first-child::before {
+//           content: counter(source-line);
+//           position: relative;
+//           left: -1em;
+//           display: inline-block;
+//           width: 4em;
+//           padding: 0 4px;
+//           color: #aaaaaa;
+//           text-align: right;
+//           vertical-align: baseline;
+//           border: none;
+
+//           -webkit-touch-callout: none; -webkit-user-select: none;
+//           -khtml-user-select: none; -moz-user-select: none;
+//           -ms-user-select: none; user-select: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// code.sourceCode {
+//   // pass
+
+//   & > span {
+//     &:empty {
+//       // #! was a set height
+//     }
+
+//     & > a:first-child::before {
+//       text-decoration: underline;  // #! Dunno what this does
+//     }
+//   }
+// }
+
+.sourceCode {
+  .gl-CodeBlock & {
+    // Normal (unused)
+    // code span { color: var(--color-code-dark-normal); }
+
+    // Alert
+    .al {
+        color: var(--color-code-dark-alert);
+        background-color: var(--color-code-dark-alert-background);
+        font-weight: bold;
+      }
+    // Annotation
+    .an { color: var(--color-code-dark-annotation); font-style: italic; }
+    // Attribute
+    .at { color: var(--color-code-dark-attribute); }
+    // BaseN
+    .bn { color: var(--color-code-dark-base-n); }
+    // BuiltIn
+    .bu { color: var(--color-code-dark-built-in); }
+    // Char
+    .ch { color: var(--color-code-dark-char); font-style: italic; }
+    // Comment
+    .co { color: var(--color-code-dark-comment); font-style: italic; }
+    // CommentVar
+    .cv { color: var(--color-code-dark-comment-var); }
+    // Constant
+    .cn { color: var(--color-code-dark-constant); font-weight: 500; }
+    // ControlFlow
+    .cf { color: var(--color-code-dark-control-flow); font-weight: 500; }
+    // DataType
+    .dt { color: var(--color-code-dark-data-type); text-decoration: none; }
+    // DecVal
+    .dv { color: var(--color-code-dark-dec-val); }
+    // Documentation
+    .do { color: var(--color-code-dark-documentation); font-style: italic; }
+    // Error
+    .er {
+      color: var(--color-code-dark-error);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    // Extension
+    .ex { color: var(--color-code-dark-extension); font-weight: 500; }
+    // Float
+    .fl { color: var(--color-code-dark-float); }
+    // Function
+    .fu { color: var(--color-code-dark-function); }
+    // Import
+    .im { color: var(--color-code-dark-import); }
+    // Information
+    .in { color: var(--color-code-dark-information); font-style: italic; }
+    // Keyword
+    .kw { color: var(--color-code-dark-keyword); font-weight: 500; }
+    // Operator
+    .op { color: var(--color-code-dark-operator); }
+    // Other
+    .ot { color: var(--color-code-dark-other); }
+    // Preprocessor
+    .pp { color: var(--color-code-dark-preprocessor); font-weight: normal; }
+    // Region Marker
+    .re {
+      color: var(--color-code-dark-region-marker);
+      background-color: var(--color-code-dark-region-marker-background);
+    }
+    // SpecialChar
+    .sc { color: var(--color-code-dark-special-char); }
+    // SpecialString
+    .ss { color: var(--color-code-dark-special-string); }
+    // String
+    .st { color: var(--color-code-dark-string); }
+    // Variable
+    .va { color: var(--color-code-dark-variable); }
+    // VerbatimString
+    .vs { color: var(--color-code-dark-verbatim-string); }
+    // Warning
+    .wa {
+      color: var(--color-code-dark-warning);
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+}

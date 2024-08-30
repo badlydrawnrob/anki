@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// Code block
+// =============================================================================
+// I've split this into it's own file, as it seems a pretty important chunk
+// of CSS that should live on its own. There's a few variations ..
+//
+// Slight differences between card types
+// -------------------------------------
+// Neither one of these card types really does much with their wrappers, but
+// a couple things to note:
+//
+// (a) Simple card is a just basic `pre` code block
+// (b) Missing! card requires a `{{cloze}}` field, but is essentially the same.
+//
+// Anki mobile screen size
+// -----------------------
+// We need to balance legibility with screen size ... if you're viewing in
+// portrait mode (i.e: a mobile phone) we'll reduce the size so you can fit more
+// code on the screen, which makes for more comfortable reviewing.
+//
+// #! Anki Mobile app defaults to swipe gesture launching the menu.
+//    This is undesirable. You can change the settings, see issue #118
+//
+//    @ https://shorturl.at/awLnl
+
+.gl-CodeBlock {
+
+  pre {
+    margin: 0
+  }
+
+  pre,
+  pre code {
+    text-align: left;
+    color: var(--color-code-dark-text-color);
+    font-family: var(--font-family-mono);
+    background: var(--color-code-dark-background);
+  }
+
+  @media (orientation: portrait) {
+    font-size: var(--font-size-m);
+  }
+}
+
+
+// Missing! `.cloze` tag styles ------------------------------------------------
+//
+// 1. `.cloze` is an Anki-specific class for cloze deletion types
+// 2. Make the `--code-` colours more "punchy" on the `.cloze` background
+//    all `.sourceCode` classes are spans (such as `.at`tributes)
+
+.gl-CodeBlock .cloze {
+  color: var(--color-code-cloze);
+  font-weight: 700;
+  background: var(--color-code-cloze-background); // 1
+  padding: var(--spacing-quarter);
+  border-radius: var(--border-radius);
+
+  > span {
+    filter: brightness(65%) contrast(220%);        // 2 #!
+  }
+}

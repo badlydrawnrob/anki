@@ -1,19 +1,23 @@
 {
   "name": "anki-programming-themes",
-  "version": "2.10.1",
+  "version": "3.0.0",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
-    "missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html",
+    "build": "npm run css && npm run demo",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "pandoc": "npm run pandoc-code && npm run simple-data && npm run missing-data",
-    "pandoc-code": "pandoc source/pandoc/code.md -o ./build/data/code.html",
-    "pandoc-code-reverse": "pandoc source/pandoc/code.html -o ./build/data/code.md",
-    "simple-data": "pandoc --from markdown --to html --template=./source/pandoc/template.html source/themes/cards/simple/simple.md -s -o ./build/data/simple-data.html",
-    "missing-data": "pandoc --from markdown --to html --template=./source/pandoc/template.html source/themes/cards/missing/missing.md -s -o ./build/data/missing-data.html",
-    "build": "npm run simple && npm run missing && npm run css"
+    "custom": "pandoc --template=source/themes/custom/template.html -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
+    "data": "npm run data-code && npm run data-code-reverse && npm run data-draw && npm run data-missing && npm run data-simple",
+    "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
+    "data-code-reverse": "pandoc source/data/data-code.html -o ./build/data/data-code.md",
+    "data-draw": "pandoc --from markdown-auto_identifiers source/data/data-draw.md -o ./build/data/data-draw.html",
+    "data-simple": "pandoc --from markdown-auto_identifiers source/data/data-simple.md -o ./build/data/data-simple.html",
+    "data-missing": "pandoc --from markdown-auto_identifiers source/data/data-missing.md -o ./build/data/data-missing.html",
+    "demo": "npm run demo-draw && npm run demo-simple && npm run demo-missing",
+    "demo-draw": "npx mustache -p source/themes/demo/draw/draw-front.mustache -p source/themes/demo/draw/draw-reverse.mustache source/themes/demo/draw/draw.json source/themes/demo/draw/draw.mustache > build/demo/draw.html",
+    "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
+    "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,6 @@
   "devDependencies": {
     "less": "^4.2.0",
     "mustache": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#01c2c62"
+    "print-first-css": "github:badlydrawnrob/print-first-css#d2f15c2"
   }
 }

@@ -1,0 +1,138 @@
+<!-- Front of card ===========================================================
+
+    Missing! Card Data
+
+    - Type:
+        A question with a [missing] word;
+
+        - A missing function or expression you have to guess,
+        - A missing input or output to remember.
+
+    - Docs:
+        http://tinyurl.com/anki-missing-card
+
+    - Key:
+        ★ Required
+        ☆ Optional (recommended)
+        ✎ Optional (notes, markdown)
+        ⤷ Field Type
+
+    - Notes:
+        Where fields are auto-wrapped with an HTML tag, copy/paste the compiled
+        data _within_ those tags in your Anki fields, otherwise you'll have
+        formatting issues. For example:
+
+            `★ Title` field:
+
+            <h1>We’ve changed from <code>Browser.sandbox</code> to <code>Browser.element</code>. What’s changed?</h1>
+                ------------------------------------------------------------------------------------------------
+            xxxx                                                                                                xxxxx
+
+        Compiled data is simple meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+
+========================================================================== -->
+<!-- -------------------------------------------------------------------------
+    ★ Title
+
+    ⤷ `string` (auto wrapped with a `H1` tag)
+-------------------------------------------------------------------------- -->
+<h1>How would we store a <code>Maybe</code> that’s a
+<code>Nothing</code> in our data?</h1>
+<!-- -------------------------------------------------------------------------
+    ☆ Subtitle
+
+    ⤷ `string` (auto wrapped with a `H2` tag)
+-------------------------------------------------------------------------- -->
+<h2>Storing empty data</h2>
+<!-- -------------------------------------------------------------------------
+    ☆ Syntax (inline code)
+
+    ⤷ `code string` (auto wrapped with <p><code> tag)
+-------------------------------------------------------------------------- -->
+<p><code>Nothing : Maybe a</code></p>
+<!-- -------------------------------------------------------------------------
+    ★ Key point (code block)
+
+    ⤷ `pre block`
+
+      | Requires `markdown` fenced code block;
+      | Requires `{{c1::cloze}}` tag(s))
+
+      A markdown fenced code block that will compile to our highlighted
+      code with Pandoc. Make sure to add at least one cloze deletion:
+
+        `{{c1::the answer::HINT TEXT}}`
+
+      Here's an example cloze card:
+
+        @ https://codepen.io/testuser-247585903/pen/BabRjvb
+
+      You can add cloze deletion tags to the fenced code block and
+      they should work fine in Anki. You can also:
+
+      1. `Toggle HTML Editor ⌘⇧X` (`‹›`) to enable rich text preview
+      2. Highlight the text that you'd like to convert to a cloze.
+      3. Press the `[...]` or `[...]+` button to add the cloze deletion
+
+      !# Warning: These buttons may break your code:
+        @ https://github.com/badlydrawnrob/anki/issues/132
+-------------------------------------------------------------------------- -->
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;empty data&quot;</span> <span class="fu">:</span> <span class="kw">null</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<!-- -------------------------------------------------------------------------
+    ★ Key point notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<ol type="1">
+<li><code>Nothing</code> translates to <code>null</code> in our
+json</li>
+<li>However, it might best to <em>literally store nothing</em> in our
+json file
+<ul>
+<li>Meaning, no data at all. This makes it obvious that it’s
+missing.</li>
+</ul></li>
+<li>Or, you could store a custom data type
+<code>DoesNotExist : Entries</code>
+<ul>
+<li>These can make life more complex and problematic, however.</li>
+</ul></li>
+</ol>
+<p><strong>The simplest way is to not store anything.</strong> You can
+use <code>Json.Decode.Pipeline</code> and have some
+<code>optional</code> fields. Default data just hides potential issues
+and mute errors. Just make it obvious you’re missing something, and push
+it until the very end to deal with that, e.g. <strong>show an empty
+<code>view</code> and keep things simple!</strong></p>
+<!-- -------------------------------------------------------------------------
+    ✎ Other notes
+
+    ⤷ `rich html`
+-------------------------------------------------------------------------- -->
+<p>How does SQL handle this? Rethink storing <code>type Custom</code>
+directly, as your custom types in your app can get out of sync with your
+stored data very quickly. You would have to version your custom types
+and deal with that. You would need to have metadata <code>key</code> in
+your json to identify the variants in your custom types.</p>
+<!-- -------------------------------------------------------------------------
+    ✎ Markdown
+
+    ⤷ `raw text`
+
+      Do not add the compiled HTML to your card, rather, use the raw text
+      Markdown fenced code block. This makes for easier editing of a card
+      later on.
+
+      Please be careful:
+
+        Warning: remove all `{{c1:cloze}}` cloze deletion tags!
+
+      If you save your card with cloze deletion tags in the `★ Markdown`
+      field, Anki will throw an error, and you might not be able to save
+      your card.
+-------------------------------------------------------------------------- -->
+<p>false</p>

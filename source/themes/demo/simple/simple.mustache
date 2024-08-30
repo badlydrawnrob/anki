@@ -5,14 +5,14 @@
     <title>Cards</title>
     <link rel="stylesheet" href="../style/main.css">
   </head>
-  <body class="test-Anki">
-    <section class="test-AnkiCard">
-      <div class="test-AnkiCard-Front">
+  <body id="demo">
+  {{! <body id="demo" class="nightMode"> }}
+    <section class="wrapper">
+      <div class="top">
         {{>simple-front}}
-        <a class="test-AnkiCard-Button" href="#answer">See answer</a>
+        <a class="button" href="#answer">See answer</a>
       </div>
-      <div class="test-AnkiCard-Reverse">
-        {{>simple-front}}
+      <div class="bottom">
         {{>simple-reverse}}
       </div>
     </section>

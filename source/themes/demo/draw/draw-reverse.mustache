@@ -1,0 +1,33 @@
+<div id="reverse">
+  <section class="gl-Card">
+    <header>
+      <h1>{{{★ Title}}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{{☆ Subtitle}}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Syntax (inline code)}}
+        <p><code>{{{☆ Syntax (inline code)}}}</code></p>
+      {{/☆ Syntax (inline code)}}
+    </header>
+    <div class="gl-ImageBlock">
+      {{{★ Sample (image)}}}
+    </div>
+
+    <div id="answer">
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-ImageBlock">
+          {{{★ Key point (image)}}}
+        </div>
+        <div class="gl-Card_KeyPointNotes">
+          {{{★ Key point notes}}}
+          <small>{{Tags}}</small>
+        </div>
+      </div>
+      {{#✎ Other notes}}
+        <footer>
+          {{{✎ Other notes}}}
+        </footer>
+      {{/✎ Other notes}}
+    </div>
+  </section>
+</div>

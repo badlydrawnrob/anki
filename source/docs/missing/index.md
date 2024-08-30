@@ -3,8 +3,9 @@
 - [Home](../../../README.md)
     + 💡 [Simple](../simple/index.md) card
     + 🔎 **[Missing!](../missing/index.md) card**
+    + 🖍️ [Draw!](../draw/index.md) card
     + 🧑‍🎨 [Add color to your code](../highlight/index.md)
-    + 🧑‍🎓 [The professional way](../advanced/index.md)
+    + 🧑‍🎓 [The professional way](../professional/index.md)
 
 
 ## A question with a [missing] word
@@ -49,9 +50,9 @@
 - The actual function or symbol, i.e. `len()`.
 
 
-## ★ Key point (code block or image)
+## ★ Key point (code block)
 
-> ⤷ **[`code block | image`](../highlight/index.md#full-syntax-highlighting)**
+> ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
 >    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
 Create your code, add one or more [cloze deletion](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) tag to hide a selected word or phrase:

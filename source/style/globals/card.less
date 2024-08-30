@@ -1,0 +1,215 @@
+// -----------------------------------------------------------------------------
+// Card styles
+// =============================================================================
+// Base `.Card` wrapper styles and it's children elements.
+//
+// #! HOW MANY LEVELS DEEP SHOULD THE CHILDREN GO?
+//    In GPS he says `.gl-` styles shouldn't be nested? But it seems natural to
+//    give a design system children, and if they're not obvious HTML elements,
+//    such as `<ul><li>` then they'll need a proper class, no?
+//
+// #! I'm still tempted to use a bastardisation of `ECSS` and `GPS`.
+// -----------------------------------------------------------------
+// There doesn't seem to be a silver bullet on how to do GPS, but it feels quite
+// nice having definite wrappers (makes for flatter css), like `gl-Card` and
+// `gl-Card_KeyPoint`. I removed `.gl-Card_Header` in favor for `.gl-Card header`,
+// and it still feels weird! I guess GPS would frown on this kind of flat style,
+// but in any case it's probably advisable to not nest ECSS style `.gl` classes
+// much deeper than one level.
+//
+//    - Use decent HTML5 tags wherever possible: `aside`, `h1`, `section`, etc
+//    - Where `div`s are used, consider naming after parent, i.e: `.gl-Card_KeyPoint`.
+//      Go ask the guys at GPS and I'm sure they'll tell me I'm doing it wrong!
+//
+//1. A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
+//   however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
+//
+//   #! How can we be more descriptive? Just have in-place comments?
+//
+// 2. Should there ever be "Placeholder" classes added? For instance, you add
+//    a descriptive wrapper but you don't have any styles for it yet.
+//
+//    - Should empty `.gl-` classes be discarded? The HTML element too?
+//    - Sometimes it's nice to give the children a wrapper, to distinguish that
+//      section. Is this a bad way to work?
+//
+//      #! See `.gl-Card_KeyPoint` wrapper.
+//
+// 3. Should an element that's nested inside it's parent be "flat" but "nested"
+//    in ECSS/BEM style or is this disallowed?
+//
+//    #! `.gl-Card` -> `_KeyPoint`
+//
+// #! Should our `code` styles be here or someplace else?
+
+.gl-Card {
+  background: transparent;
+  border-radius: var(--border-radius);
+  overflow: hidden;  // Force the border-radius
+
+  .nightMode & {
+    color: var(--color-nightmode-text);  // #! Perhaps should live in RAW HTML
+    // background: var(--color-nightmode-background-dddd); #!
+    border: 1px solid var(--color-nightmode-border);
+  }
+}
+
+.gl-Card header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: var(--color-card-lll);
+  border: var(--spacing-px) solid var(--color-card-lll);
+  border-bottom: transparent;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+  .nightMode & {
+    background: var(--color-nightmode-background-ddd);
+    border: transparent;
+  }
+}
+
+.gl-Card header h1 {
+  flex: 0 0 100%;
+  margin: 0 0 var(--spacing-one);
+  padding: var(--spacing-half);
+  border-bottom: var(--spacing-px) solid var(--color-card-ll);
+  background: var(--color-card-llll);
+
+  &:only-child {
+    margin-bottom: 0;  // #! I think this is if there's no h2?
+  }
+
+  &::before {
+    content: '★ ';
+  }
+
+  .nightMode & {
+    background: var(--color-nightmode-background-dddd);
+  }
+}
+
+.gl-Card header h2 {
+  margin: 0 0 var(--spacing-half);
+  padding: var(--spacing-half);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+
+  .nightMode & {
+    color: var(--color-nightmode-text-light);
+  }
+}
+
+// 1
+.gl-Card header p {
+  margin: 0 0 var(--spacing-half) 0;
+  padding: var(--spacing-half);
+}
+
+// 2
+.gl-Card_KeyPoint {
+  // pass
+}
+
+// 3 #!
+.gl-Card_KeyPointNotes {
+  margin-bottom: var(--spacing);
+  padding: var(--spacing) var(--spacing-one);
+  background: var(--color-card-lll);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  font-size: var(--font-size-m);
+  text-align: center;
+
+  ul, ol {
+    margin-left: var(--spacing-one);
+    text-align: left;
+
+    > li {
+      margin-left: var(--spacing-one);
+    }
+  }
+
+  // {{Tags}}
+  small {
+    color: var(--color-card-l);  // #! This feels wrong to use `-card` var here
+    text-align: center;
+    display: block;
+  }
+
+  .nightMode & {
+    color: var(--color-nightmode-text-light);
+    background: var(--color-nightmode-background-d);
+  }
+}
+
+.gl-Card footer {
+  margin-bottom: var(--spacing);
+  padding: 0 var(--spacing-one);
+  color: var(--color-card-l);     // #! This feels wrong using `-card` var here
+  font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
+}
+
+
+// Code styles -----------------------------------------------------------------
+// We're being a little specific here so that it doesn't fuck up our
+// `.gl-CodeBlock` or Skylighting's `.sourceCode span` classes. Let's keep
+// our Key Point Notes code monochrome for now.
+//
+// #! Should our code styles be here or someplace else?
+// #! Both `pre` and `code` need to inherit here for some reason.
+
+.gl-Card header code {
+  background: transparent;
+
+  b, strong,
+  i, em {
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+  }
+
+  b, strong {
+    color: var(--color-code-bold);
+  }
+
+  i, em {
+    color: var(--color-code-italic);
+  }
+
+  .nightMode & {
+    color: var(--color-nightmode-text);
+  }
+}
+
+.gl-Card_KeyPointNotes {
+
+  code {
+    color: var(--color-bbb);
+
+    .nightMode & {
+      color: var(--color-bbbb);
+    }
+  }
+
+  pre code {
+    text-align: left;
+    background: transparent;
+  }
+}
+
+.gl-Card footer code {
+  .nightMode & {
+    color: var(--color-bbbb);
+  }
+}
+
+// .gl-Card_KeyPointNotes pre,
+// .gl-Card_KeyPointNotes pre code {
+//   .nightMode & {
+//     background: var(--color-ll);
+//   }
+// }

@@ -1,31 +1,25 @@
-<!-- Simple card ====
+<!-- Simple card
+     ===========
 
-    Demo version copied from `../../cards/simple/simple-...` files
+    This is a demo file only. See `themes/cards/missing/*.mustache` for
+    card type templates to use in Anki. Our demo requires `{{{ ... }}}`
+    triple brackets which Anki does not support!
 
-    - requires {{{ ... }}} triple brackets
-    - `.json` file requires 
+-->
 
-===== -->
-
-<div id="front" class="anki-Front">
-  <section class="simple simple-front">
-    <header class="simple-Header">
-      <h1 class="simple-Header_Title">
-        {{{★ Title}}}
-      </h1>
+<div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+  <section class="gl-Card">
+    <header>
+      <h1>{{{★ Title}}}</h1>
       {{#☆ Subtitle}}
-        <h2 class="simple-Header_Subtitle">
-          {{{☆ Subtitle}}}
-        </h2>
+        <h2>{{{☆ Subtitle}}}</h2>
       {{/☆ Subtitle}}
       {{#☆ Syntax (inline code)}}
-        <p class="simple-Header_Code">
-          <code>{{{☆ Syntax (inline code)}}}</code>
-        </p>
+        <p><code>{{{☆ Syntax (inline code)}}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <div class="simple-Sample">
-      {{{★ Sample (code block or image)}}}
+    <div class="gl-CodeBlock">
+      {{{★ Sample (code block)}}}
     </div>
   </section>
 </div>

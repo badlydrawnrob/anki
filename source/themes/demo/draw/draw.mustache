@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../style/main.css">
+  </head>
+  <body id="demo">
+  {{! <body id="demo" class="nightMode"> }}
+    <section class="wrapper">
+      <div class="top">
+        {{>draw-front}}
+        <a class="button" href="#answer">See answer</a>
+      </div>
+      <div class="bottom">
+        {{>draw-reverse}}
+      </div>
+    </section>
+  </body>
+</html>

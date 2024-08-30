@@ -1,32 +1,29 @@
-<div id="answer" class="anki-Reverse">
-  <section class="missing missing-reverse">
-    <header class="missing-Header">
-      <h1 class="missing-Header_Title">
-        {{{★ Title}}}
-      </h1>
-      {{#☆ Subtitle}}
-        <h2 class="missing-Header_Subtitle">
-          {{{☆ Subtitle}}}
-        </h2>
-      {{/☆ Subtitle}}
-      {{#☆ Syntax (inline code)}}
-        <p class="missing-Header_Code">
-          <code>{{{☆ Syntax (inline code)}}}</code>
-        </p>
-      {{/☆ Syntax (inline code)}}
-    </header>
-    <div class="missing-KeyPoint">
-      <div class="missing-KeyPoint_Code">
-        {{{★ Key point (code block or image) — cloze reverse}}}  <!-- add `{{cloze:text}}` in Anki -->
+<div id="reverse">
+  <div id="answer">  <!-- Missing! has it's #answer tag here (wraps the whole of reverse) -->
+    <section class="gl-Card">
+      <header>
+        <h1>{{{★ Title}}}</h1>
+        {{#☆ Subtitle}}
+          <h2>{{{☆ Subtitle}}}</h2>
+        {{/☆ Subtitle}}
+        {{#☆ Syntax (inline code)}}
+          <p><code>{{{☆ Syntax (inline code)}}}</code></p>
+        {{/☆ Syntax (inline code)}}
+      </header>
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-CodeBlock">
+          {{{★ Key point (code block) — cloze reverse}}} <!-- special name for .json only -->
+        </div>
+        <div class="gl-Card_KeyPointNotes">
+          {{{★ Key point notes}}}
+          <small>{{Tags}}</small>
+        </div>
       </div>
-      <div class="missing-KeyPoint_Notes">
-        {{{★ Key point notes}}}
-      </div>
-    </div>
-    {{#✎ Other notes}}
-      <footer class="missing-Notes">
-        {{{✎ Other notes}}}
-      </footer>
-    {{/✎ Other notes}}
-  </section>
+      {{#✎ Other notes}}
+        <footer>
+          {{{✎ Other notes}}}
+        </footer>
+      {{/✎ Other notes}}
+    </section>
+  </div>
 </div>

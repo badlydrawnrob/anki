@@ -1,0 +1,158 @@
+// -----------------------------------------------------------------------------
+// Breeze Dark — Modified variables (by Andrew Fridley)
+// =============================================================================
+// Using the Breeze Dark Theme, but a variation by Andrew Fridley. This isn't
+// quite as nice as `breezedark.less` for our `build/demo/*` files, but it's
+// definitely better overall, and doesn't feel like Christmas when working with
+// ```html Markdown fenced code blocks. The choice is up to you!
+//
+//    @ link: https://tinyurl.com/breeze-dark-theme-vsc
+//
+// Colours really make the code "pop", but choosing the right colour combinations
+// really takes some time and effort.
+//
+//
+// Colour variables notes
+// ----------------------
+//
+// 1. We make some slight changes from our `print-first-css` defaults, and add in
+//    theme-specific styles.
+//
+//   (a) Our basic highlighting styles.
+//
+//       #! If we use a `code block` inside a notes field, you'll see the
+//          monochrome theme _not_ the dark theme. This helps keep things simple
+//          and easier to scan (I think).
+//
+//   (b) Some themes have extra variables for things like `*-background-color`.
+//       Where a theme has extra colours, _add them_ as variables. Where they don't
+//       use these colours, _remove_ them.
+//
+//       - Most of the `--color-code-dark-` variables are used by _all_ themes,
+//         but some are theme specific. Perhaps consider using "tokens" in a
+//         similar way to Material Design?
+//
+//       - Some of the variables are marked `//-` which means they haven't yet
+//         been changed (from the original Breeze Dark theme). They're not often
+//         used in the `custom-theme.md` file's code samples.
+//
+// 2. Here we add a specific variable just for this theme. Our orangy brown colour
+//    works nicely in ```python code blocks, but awful in ```css ones.
+//
+//
+// General problems with Pandoc and the theme
+// ------------------------------------------
+// We don't have as many "tokens" or different `span.class` sections as other
+// highlighter tools and editors. This means two things: we must be more careful
+// with our colours, they're shared between more elements; we must put up with a
+// less-than-perfect visual style. This is one of the trade-offs from using
+// Pandoc, which is a brilliant compiler tool. The other option is to install
+// Python (or use the built in MacOs version) and use a different highlighter tool.
+// The downside of this is that we'd lose the nice `markdown->html` process we
+// use in our `data/*.md` files.
+//
+// To see what a theme _should_ look like, try it out in Visual Studio Code.
+// You'll need to find a theme's colour plugin. There's a fair few differences
+// that we can't really capture as it stands with Pandoc right now. We'll just
+// have to do our best!
+//
+//    @ issue link: https://github.com/badlydrawnrob/anki/issues/152
+//
+//
+// Colour pallette
+// ---------------
+// Use the "colorize" Visual Studio Code plugin to preview colours. The colour
+// pallette is quite extensive, so can be a little difficult to change. These are
+// the default colours that Andrew Fridley uses in his Visual Studio Code
+// plugin for Breeze Dark Theme (modified).
+//
+//    #! There's still some leftover styles from the original Breeze Dark Theme
+//       but in my code examples I can't really see them.
+//
+//    @ http://tinyurl.com/visual-studio-code-colorize
+//
+//
+// #EFFFFF,
+// #7a7c7d,
+// #A9C1CA,
+// #cfcfc2,
+// #232629,
+// #F58C70,
+// #f12056,
+// #a43340,
+// #f67400,
+// #fdbc4b,
+// #95da4c,
+// #27aeae,
+// #C4E792,
+// #4d1f24,
+// #3f8058,
+// #C695E8,
+// #8CDEFC,
+// #83ABFB,
+// #0099ff,
+// #2980b9,
+// #153042,
+//
+// Some stuff to fix?
+// -----------------
+//
+// #F58C70
+// - A little too pale. The original was f67400. Somewhere between the two?
+// - Looks ugly in CSS variables, but fine in Python. Use `-alt` for the langs
+//   you want this browny colour.
+//
+// #f44f4f was a tad too bright for my eyes, but #F25470 seems a bit better.
+// this Breeze Dark Theme uses them both. Pandoc uses #da4453 which is bright!
+
+
+// 1a
+--color-code-bold: #f12056;
+--color-code-italic: #f67400;
+
+
+// 1b
+--color-code-dark-background: #232629;
+--color-code-dark-text-color: #EFFFFF;
+--color-code-dark-line-number-color: #7a7c7d;             // #! Not used
+--color-code-dark-line-number-background-color: #232629;  // #! Not used
+--color-code-dark-normal: #cfcfc2;                        // #! Not used
+
+
+// 1b
+--color-code-dark-alert: #95da4c;                    //- #! Alert
+--color-code-dark-alert-background-color: #4d1f24;   //- #! Alert Background Color
+--color-code-dark-annotation: #3f8058;               //- Annotation
+--color-code-dark-attribute: #2980b9;                //- Attribute
+--color-code-dark-base-n: #F58C70;                   //- BaseN - originally f67400 !# somewhere inbetween the two!
+--color-code-dark-built-in: #83ABFB;                 // BuiltIn — originally #7f8c8d
+--color-code-dark-char: #EFFFFF;                     // Char
+--color-code-dark-comment: #7a7c7d;                  //- Comment
+--color-code-dark-comment-var: #A9C1CA;              // CommentVar
+--color-code-dark-constant: #27aeae;                 //- Constant
+--color-code-dark-control-flow: #fdbc4b;              //- ControlFlow — #! This is light blue in VSC Breeze
+--color-code-dark-data-type: #8CDEFC;                // DataType — originally C695E8
+--color-code-dark-dec-val: #F58C70;                  //- DecVal — originally f67400 !# somewhere inbetween the two!
+--color-code-dark-documentation: #a43340;            //- Documentation
+--color-code-dark-error: #F25470;                    // Error
+--color-code-dark-extension: #0099ff;                //- Extension
+--color-code-dark-float: #f67400;                     //- Float
+--color-code-dark-function: #83ABFB;                 // Function
+--color-code-dark-import: #8CDEFC;                   // Import — originally 27ae60
+--color-code-dark-information: #C695E8;              // Information
+--color-code-dark-keyword: #F25470;                  // Keyword — #! This is
+--color-code-dark-operator: #EFFFFF;                 // Operator
+--color-code-dark-other: #C695E8;                    // #! Other
+--color-code-dark-preprocessor: #A9C1CA;             // #! Preprocessor — originally 27aeae
+--color-code-dark-region-marker: #2980b9;            //- #! Region Marker
+--color-code-dark-region-marker-background: #153042; //- #! Region Marker Background Color
+--color-code-dark-special-char: #3daee9;             //- SpecialChar
+--color-code-dark-special-string: #F25470;           // SpecialString
+--color-code-dark-string: #C4E792;                   // String
+--color-code-dark-variable: #EFFFFF;                 // Variable — originally 27aeae
+--color-code-dark-verbatim-string: #F25470;          // VerbatimString
+--color-code-dark-warning: #F25470;                  // #! Warning
+
+
+// 2
+--color-code-dark-variable-alt: #F58C70;             // Variable (for Python)
