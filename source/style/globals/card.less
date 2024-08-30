@@ -49,6 +49,7 @@
 
   .nightMode & {
     color: var(--color-nightmode-text);  // #! Perhaps should live in RAW HTML
+    // background: var(--color-nightmode-background-dddd); #!
     border: 1px solid var(--color-nightmode-border);
   }
 }
@@ -180,15 +181,19 @@
   }
 
   .nightMode & {
-    color: var(--color-nightmode-text-dark);
+    color: var(--color-nightmode-text);
   }
 }
 
-.gl-Card_KeyPointNotes code {
-  color: var(--color-bbb);
-}
-
 .gl-Card_KeyPointNotes {
+
+  code {
+    color: var(--color-bbb);
+
+    .nightMode & {
+      color: var(--color-bbbb);
+    }
+  }
 
   pre code {
     text-align: left;
@@ -196,9 +201,15 @@
   }
 }
 
-.gl-Card_KeyPointNotes pre,
-.gl-Card_KeyPointNotes pre code {
+.gl-Card footer code {
   .nightMode & {
-    background: var(--color-ll);
+    color: var(--color-bbbb);
   }
 }
+
+// .gl-Card_KeyPointNotes pre,
+// .gl-Card_KeyPointNotes pre code {
+//   .nightMode & {
+//     background: var(--color-ll);
+//   }
+// }

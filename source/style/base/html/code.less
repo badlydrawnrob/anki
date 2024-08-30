@@ -2,15 +2,18 @@
 // Code (inline and basic code blocks)
 // =============================================================================
 // It seems I'm basically resetting to a default here, and we're doing the
-// heavy lifting of styles within each `/gps/` files.
+// heavy lifting of styles elsewhere. Inherited `--color-code-light-*` theme
+// as default, so some styles need to be overriden.
 //
 //    #! Should some styles be edited/moved here?
+//       I feel as much as possible, `code` and `pre` stuff should be set here
+//       for light and dark mode (user settings).
 //
-// 1. Inherited Light theme as default
-// 2. See :root variables for color themes
-// 3. Add `--color-code-dark` to the `code block`s!
-// 4. Inherit `font-size` from parents (setting it here, as it seems like a lot
+// 1. See `variables` folder for colours and themes
+// 2. Inherit `font-size` from parents (setting it here, as it seems like a lot
 //    of extra work to style it on every element individually.
+// 3. Some specific settings for Recursive font (see `typography.less`)
+
 
 code,
 kbd {
@@ -20,8 +23,12 @@ kbd {
   padding: var(--spacing-micro) var(--spacing-half);
 
   font-family: var(--font-family);
-  font-size: inherit;
-  font-variation-settings: 'MONO' 1, 'CASL' 0;  // #! For recursive font only
+  font-size: inherit;                           // 2
+  font-variation-settings: 'MONO' 1, 'CASL' 0;  // 3 #!
+
+  .nightMode & {
+    background: var(--color-nightmode-background-l);
+  }
 
   &:empty {
     margin: 0;
@@ -33,4 +40,8 @@ kbd {
 
 pre {
   font-size: inherit;
+
+  .nightMode & {
+    background: var(--color-nightmode-background-l);
+  }
 }

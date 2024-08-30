@@ -3,6 +3,7 @@
 - [Home](../../../README.md)
     + 💡 [Simple](../simple/index.md) card
     + 🔎 **[Missing!](../missing/index.md) card**
+    + 🖍️ [Draw!](../draw/index.md) card
     + 🧑‍🎨 [Add color to your code](../highlight/index.md)
     + 🧑‍🎓 [The professional way](../professional/index.md)
 

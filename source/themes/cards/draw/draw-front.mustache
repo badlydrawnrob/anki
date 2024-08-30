@@ -1,20 +1,20 @@
-<!-- Simple card
-     ===========
+<!-- Draw! card
+     ==========
 
     - Type: What's the answer?
-    - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/simple/index.md
+    - Docs: https://github.com/badlydrawnrob/anki/tree/master/source/docs/draw/index.md
     - Key:  ★ Required
             ☆ Optional (recommended)
             ✎ Optional (notes, markdown)
             ⤷ Field Type
 
-    We try to keep all cards similar(ish), so most
-    elements are shared between each card, but some
-    sections apply to only one card. We use a bit of
-    a hybrid between ECSS naming conventions and
-    GPS global, section, page elements.
+    For now this is basically a clone of `Simple`
+    card, with images. I have a few ideas for the
+    future that may or may not work, so treat this
+    as an experimental card for now. I'll try to not
+    make breaking changes but I can't guarantee it.
 
-    See `data-simple.md` for the data you'll use to
+    See `data-draw.md` for the data you'll use to
     populate the Anki form fields, which you can use
     with Pandoc to compile your data fields.
     See `source/docs/professional/index.md` for info.
@@ -32,8 +32,8 @@
         <p><code>{{☆ Syntax (inline code)}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <div class="gl-CodeBlock">
-      {{★ Sample (code block)}}
+    <div class="gl-ImageBlock">
+      {{★ Sample (image)}}
     </div>
   </section>
 </div>

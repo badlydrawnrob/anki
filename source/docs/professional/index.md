@@ -3,6 +3,7 @@
 - [Home](../../../README.md)
     + 💡 [Simple](../simple/index.md) card
     + 🔎 [Missing!](../missing/index.md) card
+    + 🖍️ [Draw!](../draw/index.md) card
     + 🧑‍🎨 [Add color to your code](../highlight/index.md)
     + 🧑‍🎓 **[The professional way](../professional/index.md)**
 
@@ -106,7 +107,7 @@ Open the Anki desktop app and:
 
 > Take care to keep your repository up-to-date.
 
-Every time the [Anki Themes](https://github.com/badlydrawnrob/anki) updates it's CSS with a [new release](https://github.com/badlydrawnrob/anki/releases), make sure your clone or fork is up-to-date. Upload the `.apkg` deck to the Anki desktop app first, then manually override your CSS.
+Every time the [Anki Programming Flashcards](https://github.com/badlydrawnrob/anki) updates it's CSS with a [new release](https://github.com/badlydrawnrob/anki/releases), make sure your clone or fork is up-to-date. Upload the `.apkg` deck to the Anki desktop app first, then manually override your CSS.
 
 If you have any problems, [create an issue](https://github.com/badlydrawnrob/anki/issues) in this repo.
 

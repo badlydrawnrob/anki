@@ -897,10 +897,13 @@ i {
   --color-nightmode-background-dd: #272822;
   --color-nightmode-background-ddd: #101010;
   --color-nightmode-background-dddd: #000;
-  --color-nightmode-text: var(--color-llll);
-  --color-nightmode-text-light: var(--color-bb);
-  --color-nightmode-text-dark: var(--color-bbb);
-  --color-nightmode-border: var(--color-l);
+  --color-nightmode-background-l: #bbbbbb;
+  --color-nightmode-background-ll: #ccc;
+  --color-nightmode-background-lll: #ddd;
+  --color-nightmode-text: #fff;
+  --color-nightmode-text-light: #ccc;
+  --color-nightmode-text-dark: #333;
+  --color-nightmode-border: #ddd;
   --color-nightmode-link: #3daee9;
   --color-code-bold: #f12056;
   --color-code-italic: #f67400;
@@ -980,6 +983,10 @@ kbd {
   font-size: inherit;
   font-variation-settings: 'MONO' 1, 'CASL' 0;
 }
+.nightMode code,
+.nightMode kbd {
+  background: var(--color-nightmode-background-l);
+}
 code:empty,
 kbd:empty {
   margin: 0;
@@ -989,6 +996,9 @@ kbd:empty {
 }
 pre {
   font-size: inherit;
+}
+.nightMode pre {
+  background: var(--color-nightmode-background-l);
 }
 h1,
 h2,
@@ -1151,18 +1161,20 @@ img {
   color: var(--color-code-italic);
 }
 .nightMode .gl-Card header code {
-  color: var(--color-nightmode-text-dark);
+  color: var(--color-nightmode-text);
 }
 .gl-Card_KeyPointNotes code {
   color: var(--color-bbb);
+}
+.nightMode .gl-Card_KeyPointNotes code {
+  color: var(--color-bbbb);
 }
 .gl-Card_KeyPointNotes pre code {
   text-align: left;
   background: transparent;
 }
-.nightMode .gl-Card_KeyPointNotes pre,
-.nightMode .gl-Card_KeyPointNotes pre code {
-  background: var(--color-ll);
+.nightMode .gl-Card footer code {
+  color: var(--color-bbbb);
 }
 .gl-CodeBlock pre {
   margin: 0;
@@ -1296,6 +1308,12 @@ img {
   color: var(--color-code-dark-warning);
   font-weight: 700;
   font-style: italic;
+}
+.gl-ImageBlock {
+  display: flex;
+}
+.gl-ImageBlock img {
+  margin: 0 auto;
 }
 #reverse #answer .gl-CodeBlock pre {
   margin-bottom: 0;

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../style/main.css">
+  </head>
+  <body id="demo">
+    <section class="wrapper">
+      <div class="top">
+        <!-- Draw! card
+             ==========
+
+            This is a demo file only. See `themes/cards/draw/*.mustache` for
+            card type templates to use in Anki. Our demo requires ``
+            triple brackets which Anki does not support!
+
+        -->
+
+        <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+          <section class="gl-Card">
+            <header>
+              <h1>What’s special about the way we’re layering in Racket Lang’s <a
+href="https://docs.racket-lang.org/teachpack/2htdpimage.html">images
+teachpack</a>?</h1>
+                <h2>2htdp/image</h2>
+                <p><code>(require 2htdp/image)</code></p>
+            </header>
+            <div class="gl-ImageBlock">
+              <img src="../../source/media/draw-picture-02.png"
+alt="The image will need to be added to Anki first" />
+            </div>
+          </section>
+        </div>
+        <a class="button" href="#answer">See answer</a>
+      </div>
+      <div class="bottom">
+        <div id="reverse">
+          <section class="gl-Card">
+            <header>
+              <h1>What’s special about the way we’re layering in Racket Lang’s <a
+href="https://docs.racket-lang.org/teachpack/2htdpimage.html">images
+teachpack</a>?</h1>
+                <h2>2htdp/image</h2>
+                <p><code>(require 2htdp/image)</code></p>
+            </header>
+            <div class="gl-ImageBlock">
+              <img src="../../source/media/draw-picture-02.png"
+alt="The image will need to be added to Anki first" />
+            </div>
+
+            <div id="answer">
+              <div class="gl-Card_KeyPoint">
+                <div class="gl-ImageBlock">
+                  <img src="../../source/media/draw-picture-03.png"
+alt="The image will need to be added to Anki first" />
+                </div>
+                <div class="gl-Card_KeyPointNotes">
+                  <p>Lisp feels a bit back-to-front and inside-out when you first start!
+Our background is the innermost item, and our rocket the outermost
+(wrapped in <code>place-image</code> function)</p>
+<pre class="racket"><code>(require 2htdp/image)
+
+; Here&#39;s the constants
+
+(define WIDTH 180)
+(define HEIGHT 180)
+(define MIDDLE (/ WIDTH 2))
+
+(define BACKGROUND
+  (rectangle WIDTH HEIGHT &quot;solid&quot; &quot;black&quot;))
+
+(define ROCKET
+  (bitmap/file &quot;rocket.png&quot;))
+
+(define MOON
+  (circle 40 &quot;solid&quot; &quot;white&quot;))
+
+; Let&#39;s make our image!
+
+(place-image
+  MOON 10 10
+    (place-image
+      ROCKET MIDDLE MIDDLE
+        BACKGROUND))</code></pre>
+                  <small>__akf-3.0.0::lisp</small>
+                </div>
+              </div>
+                <footer>
+                  <p>Lisp calculates the <em>inner-most</em> function (data or variable)
+FIRST. It then works inside-out to render our <code>ROCKET</code>.</p>
+                </footer>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

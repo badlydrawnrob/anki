@@ -1,17 +1,25 @@
 <!-- Front of card ===========================================================
 
-    Simple Card Data
+    Draw! Card Data
 
     - Type:
         What's the answer?
-        A simple `question->answer` card;
-        we're asking the question: "what does this code do?", e.g:
 
-        - A function with an output you have to guess.
-        - A class with a method that you need to call.
+        ⚠️ For now this is simply a clone of a simple
+        `question->answer` card; but with images! We're
+        asking the question something along the lines of:
+        _"what does this code do?"_, or _"how might I
+        sketch this idea out?"_ e.g:
+
+        - A whiteboard diagram with a small program or
+          function: You have to remember or guess something
+          about it.
+        - A function or program that you need to sketch
+          out. Something you'd like to drill yourself with
+          to rememeber.
 
     - Docs:
-        http://tinyurl.com/anki-simple-card
+        @ #! tinyurl link to come later
 
     - Key:
         ★ Required
@@ -41,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What will each `residents[**'key'**]` print out?
+# What's special about the way we're layering in Racket Lang's [images teachpack](https://docs.racket-lang.org/teachpack/2htdpimage.html)?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +57,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Dictionaries
+## 2htdp/image
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,26 +65,23 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-`d = {‘key’: value}`
+`(require 2htdp/image)`
 
 
 <!-- -------------------------------------------------------------------------
-    ★ Sample (code block)
+    ★ Sample (image)
 
-    ⤷ `pre block`
+    ⤷ `image`
 
-      | Requires `markdown` fenced code block;
+      | May require the `markdown->html` compiler in future
 
-      A markdown fenced code block that will compile to our highlighted
-      code with Pandoc. What does this code do?
+      An image that asks the question "what does this code do?"_,
+      or "how might I sketch this idea out?".
+
+      The image will need to be added to Anki first, or you can store it
+      in the cloud somewhere, and link to it like this.
 -------------------------------------------------------------------------- -->
-```python
-residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
-
-print(residents['Puffin'])
-print(residents['Sloth'])
-print(residents['Burmese Python'])
-```
+![The image will need to be added to Anki first](../../source/media/draw-picture-02.png)
 
 
 
@@ -84,20 +89,19 @@ print(residents['Burmese Python'])
 
 
 <!-- -------------------------------------------------------------------------
-    ★ Key point (code block)
+    ★ Key point (image)
 
-    ⤷ `pre block`
+    ⤷ `draw`
 
-      | Requires `markdown` fenced code block;
+      | May require the `markdown->html` compiler in future
 
-      A markdown fenced code block that will compile to our highlighted
-      code with Pandoc. The output or answer to the above question.
+      An image that shows the answer to "what does this code do?"_,
+      or "how might I sketch this idea out?".
+
+      The image will need to be added to Anki first, or you can store it
+      in the cloud somewhere, and link to it like this.
 -------------------------------------------------------------------------- -->
-```python
-104
-105
-106
-```
+![The image will need to be added to Anki first](../../source/media/draw-picture-03.png)
 
 
 <!-- -------------------------------------------------------------------------
@@ -105,27 +109,41 @@ print(residents['Burmese Python'])
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Access a dictionary item with it's `key`, which returns it's `value`. You can also change a value, or generate a brand new value with the following syntax:
+Lisp feels a bit back-to-front and inside-out when you first start! Our background is the innermost item, and our rocket the outermost (wrapped in `place-image` function)
 
-| Change a value | Add a new animal |
-| -------------- | ---------------- |
-| `residents['Burmese Python'] = 79` | `residents['Giraffe'] = 200` |
-| This will edit a value | This will add a new key/value pair |
+```racket
+(require 2htdp/image)
 
-```terminal
-> print("Burmese Python: ", residents['Burmese Python'])
-Burmese Python:  79
-> print("Giraffe: ", residents['Giraffe'])
-200
+; Here's the constants
+
+(define WIDTH 180)
+(define HEIGHT 180)
+(define MIDDLE (/ WIDTH 2))
+
+(define BACKGROUND
+  (rectangle WIDTH HEIGHT "solid" "black"))
+
+(define ROCKET
+  (bitmap/file "rocket.png"))
+
+(define MOON
+  (circle 40 "solid" "white"))
+
+; Let's make our image!
+
+(place-image
+  MOON 10 10
+    (place-image
+      ROCKET MIDDLE MIDDLE
+        BACKGROUND))
 ```
-A dictionary is similar to a list, but you access values by looking up a `key` instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces `{ }`.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-**Warning:** [Never search for a value in a dictionary using a for loop!](https://jeffknupp.com/blog/2015/08/30/python-dictionaries) The `.items()` method allows you to iterate over both keys and values at the same time. The method returns a view object containing the dictionary’s items as key-value tuples.
+Lisp calculates the _inner-most_ function (data or variable) FIRST. It then works inside-out to render our `ROCKET`.
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
@@ -139,4 +157,13 @@ A dictionary is similar to a list, but you access values by looking up a `key` i
       Warning: may increase card file size
         @ https://github.com/badlydrawnrob/anki/issues/116
 -------------------------------------------------------------------------- -->
-false
+The original problem has the following note (which isn't really needed now):
+
+
+```racket
+; Each object image can be passed as a (render-obj ... img) — for nested img!
+; I think this was using a `define struct` or something.
+(define (render-obj obj img)
+  (place-image obj (posn-x img) (posn-y img)
+    img))
+```
