@@ -45,6 +45,9 @@ There's two types of cards to choose from:
 2. 🔎 **[Missing!](./source/docs/missing/index.md)**
     - A question with a `[…]` word
     - A question with a `[missing]` word
+3. 🖍️ **[Draw!](./source/docs/draw/index.md)** (experimental)[^1]
+    - A diagram of a small program you have to guess
+    - A sketch of a function or program to drill yourself on
 
 Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) to your code. But first, a quick tip on how to keep your Anki deck nice and organised ...
 
@@ -157,7 +160,9 @@ If you're having formatting problems, make sure you're **[following the guide](#
 
 > Anki flashcards are licensed under the [MIT Open Source License](./license.md)
 
-Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^1] iPhone photo by `@svstudioart` on Freepik.
+Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^2] iPhone photo by `@svstudioart` on Freepik.
 
 
-[^1]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
+[^1]: Meaning, likely to change. I'm [trying a few things out](https://github.com/badlydrawnrob/anki/issues/66) privately and when I have something to share, I'll let you know!
+
+[^2]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
