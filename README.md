@@ -5,7 +5,7 @@
 # Anki programming flashcards
 ## Learning to code with Anki: themes, templates, and syntax highlighting for beginners and pros.
 
-<img width="100%" height="auto" src="./source/media/preview-19-08-24.png" style="padding-bottom: 20px;">
+<img width="100%" height="auto" src="./source/media/preview.png" style="padding-bottom: 20px;">
 
 
 ## Want to learn how to code? 👨🏻‍💻👩🏻‍💻
