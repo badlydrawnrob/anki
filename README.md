@@ -24,11 +24,14 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 
 ## Quick start
 
+> If you're updating from a previous version, [go here](https://github.com/badlydrawnrob/anki/issues/156).
+> You can merge the old notetypes with the new.
+
 1. Get the [latest Anki deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
 2. Open the [Anki](https://apps.ankiweb.net) desktop app.
-3. `File > Import ...` the deck.
-4. Add a new card
-5. Select the `Anki flashcards` type
+3. `File > Import ...` the deck,
+4. Add a new card,
+5. Select the `APF` type (Anki Programming Flashcards),
 6. Get creative with your cards!
 
 
@@ -83,27 +86,26 @@ You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inli
 
 
 ## It's more fun with a compiler (advanced)
-### Custom colours and `markdown->html`
-
-> 🧑‍🎨 Want your own custom colour theme?
-> ⏱️ Want a faster way to create your flashcards?
-> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
 
 When you've levelled up your programming skills, it's time to **[🧑‍🎓 do things the professional way!](./source/docs/professional/index.md)**
 
-#### Markdown to HTML
+### `markdown->html` with data files
 
-<!-- #! Add a proper good compiler tutorial video -->
-https://github.com/badlydrawnrob/anki/assets/1176875/e852e912-317b-4cd9-9ab5-82855a5274a5
+> ⏱️ Want a faster way to create your flashcards?
+> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
+
+https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 
 Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's fields for you in a flash!
 
-#### Custom colours
+### Custom colours for your theme
 
-[here is a video of the less compiler]
+> 🧑‍🎨 Want your own custom colour theme?
+> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
 
-If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. Typography `--font`s can also be edited whatever you like. Using the same theme as your code editor might things more familiar for you.
+https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
+If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. You can also change the Typography to your favourite `--font`!
 
 
 ## Why Anki flashcards instead of an add-on?
