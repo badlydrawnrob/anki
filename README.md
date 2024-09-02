@@ -107,7 +107,7 @@ Once you've got the basics of Anki flashcards down, it's time to get fancy with 
 </details>
 
 <details>
-<summary><u><strong>Step 2. Create your own colour theme</strong></u></summary>&nbsp;
+<summary><strong><u>Step 2. Create your own colour theme</u></strong></summary>&nbsp;
 
 https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
