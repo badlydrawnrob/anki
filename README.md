@@ -93,13 +93,15 @@ You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inli
 
 > When you've levelled up your programming skills, it's time to **[🧑‍🎓 do things the professional way!](./source/docs/professional/index.md)**
 
-- ⏱️ Want a faster way to create your flashcards?
-- 🧑‍🎨 Want your own custom colour theme?
-- 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
+
+
 
 
 <details>
-<summary><u><strong>Step 1. Write your flashcards quickly and easily (<code>markdown->html</code>)</strong></u></summary>&nbsp;
+<summary><strong>🎥 Step 1. Write your flashcards quickly and easily (<code>markdown->html</code>)</strong></summary>&nbsp;
+
+- ⏱️ Want a faster way to create your flashcards?
+- 🤖 I've got you covered with `npm` and `pandoc`.
 
 https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 
@@ -107,7 +109,10 @@ Once you've got the basics of Anki flashcards down, it's time to get fancy with 
 </details>
 
 <details>
-<summary><strong><u>Step 2. Create your own colour theme</u></strong></summary>&nbsp;
+<summary><strong>🎥 Step 2. Create your own colour theme</strong></summary>&nbsp;
+
+- 🧑‍🎨 Want your own custom colour theme?
+- 🤖 I've got you covered with `npm`, `pandoc` and `less`.
 
 https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
