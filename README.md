@@ -99,7 +99,7 @@ You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inli
 
 
 <details>
-<summary><strong>Write your flashcards quickly and easily (`markdown->html`)</strong></summary>&nbsp;
+<summary><u><strong>Step 1. Write your flashcards quickly and easily (<code>markdown->html</code>)</strong></u></summary>&nbsp;
 
 https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 
@@ -107,7 +107,7 @@ Once you've got the basics of Anki flashcards down, it's time to get fancy with 
 </details>
 
 <details>
-<summary><strong>Create your own colour theme</strong></summary>&nbsp;
+<summary><u><strong>Step 2. Create your own colour theme</strong></u></summary>&nbsp;
 
 https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
