@@ -63,7 +63,7 @@ They say code is an art form. Anki flashcard's CSS themes come with a light and 
 
 - 👨🏻‍🎨 **Starter themes**
     - 🥷🏻 Monochrome
-    - ⛵️ Breeze Dark
+    - ⛵️ Breeze Dark[^2]
 
 You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
 
@@ -190,4 +190,6 @@ Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Es
 
 [^1]: Meaning, likely to change. I'm [trying a few things out](https://github.com/badlydrawnrob/anki/issues/66) privately and when I have something to share, I'll let you know!
 
-[^2]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
+[^2]: This is based on the modified [Breeze Dark theme](https://marketplace.visualstudio.com/items?itemName=AndrewFridley.Breeze-Dark-Theme) for Visual Studio Code by Andrew Fridley. If you'd prefer the [original](https://github.com/badlydrawnrob/anki/issues/142#issuecomment-2227452134) Pandoc version, you can follow the instructions [here](https://github.com/badlydrawnrob/anki/issues/154).
+
+[^3]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
