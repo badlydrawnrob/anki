@@ -90,6 +90,10 @@ You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inli
 
 ## It's more fun with a compiler (advanced)
 
+> ⏱️ Want a faster way to create your flashcards?
+> 🧑‍🎨 Want your own custom colour theme?
+> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
+
 When you've levelled up your programming skills, it's time to **[🧑‍🎓 do things the professional way!](./source/docs/professional/index.md)**
 
 ### `markdown->html` with data files
@@ -101,14 +105,14 @@ https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 
 Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's fields for you in a flash!
 
-### Custom colours for your theme
-
-> 🧑‍🎨 Want your own custom colour theme?
-> 🤖 I've got you covered with `npm`, `pandoc`, and `less`.
+<details>
+<summary><strong>Custom colours for your theme</strong></summary>&nbsp;
 
 https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
 If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. You can also change the Typography to your favourite `--font`!
+
+</summary>
 
 
 ## Why Anki flashcards instead of an add-on?
@@ -131,25 +135,19 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 ## ⚠️ FAQs
 
 <details>
-<summary>
-<strong>1. How do I upgrade?</strong> (semantic versioning)
-</summary>
+<summary><strong>1. How do I upgrade?</strong> (semantic versioning)</summary>&nbsp;
 
 **Always backup your deck** before installing a new version! I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones.
 </details>
 
 <details>
-<summary>
-<strong>2. How do I write the flashcards?</strong>
-</summary>
+<summary><strong>2. How do I write the flashcards?</strong></summary>&nbsp;
 
 **Keep it simple and avoid javascript.** Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization) to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
 </details>
 
 <details>
-<summary>
-<strong>3. I can't swipe left</strong> to view code on Anki Mobile
-</summary>
+<summary><strong>3. I can't swipe left</strong> to view code on Anki Mobile</summary>&nbsp;
 
 The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture.
 This is not desirable, as often our code will have an `overflow` which we want to
@@ -158,10 +156,8 @@ scroll horizontally. You can change the settings, [see issue #118](https://githu
 </details>
 
 <details>
-<summary>
-<strong>4. I'm having text formatting problems</strong>, what do I do?
-</summary>
-&nbsp;
+<summary><strong>4. I'm having text formatting problems</strong>, what do I do?</summary>&nbsp;
+
 > Paste **raw html** or **plain text** to avoid styling issues.
 
 If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html. **TL;DR** [paste as plain text](https://forums.ankiweb.net/t/paste-plain-text/4326) to avoid formatting issues.
