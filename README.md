@@ -106,9 +106,9 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 - ⏱️ Want a faster way to create your flashcards?
 - 🤖 I've got you covered with `npm` and `pandoc`.
 
-https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
-
 Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's data fields for you in a flash!
+
+https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 </details>
 
 <details>
@@ -117,9 +117,9 @@ Once you've got the basics of Anki flashcards down, it's time to get fancy with 
 - 🧑‍🎨 Want your own custom colour theme?
 - 🤖 I've got you covered with `npm`, `pandoc` and `less`.
 
-https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
-
 If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. You can also change the Typography to your favourite `--font`!
+
+https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 </details>
 
 I'd advise beginners to start by writing great cards, before moving on to use the compiler. I know when I was starting out using terminal and compilers took some getting used to!
