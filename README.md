@@ -53,6 +53,21 @@ There's two types of cards to choose from:
 Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) to your code. But first, a quick tip on how to keep your Anki deck nice and organised ...
 
 
+## Add color to your code
+
+### Syntax highlighting
+
+> 🎨 Life is better in full colour!
+
+They say code is an art form. Anki flashcard's CSS themes come with a light and dark colour palette; it's also good for `dark mode` if that's your thing.
+
+- 👨🏻‍🎨 **Starter themes**
+    - 🥷🏻 Monochrome
+    - ⛵️ Breeze Dark
+
+You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
+
+
 ## Keep it simple, stupid!
 
 > ☝️ [One idea](https://github.com/badlydrawnrob/anki/issues/41) per card. Just one.
@@ -74,19 +89,7 @@ A card stuffed with facts will overload the brain. I imagine you're trying to le
 That's great! But. Keep your questions clear — perhaps split a hard question into three easy cards — if you're spending more than a minute reviewing each card; reduce, reduce, reduce. Simplify it!
 
 
-## Add color to your code
 
-### Syntax highlighting
-
-> 🎨 Life is better in full colour!
-
-They say code is an art form. Anki flashcard's CSS themes come with a light and dark colour palette; it's also good for `dark mode` if that's your thing.
-
-- 👨🏻‍🎨 **Starter themes**
-    - 🥷🏻 Monochrome
-    - ⛵️ Breeze Dark
-
-You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
 
 
 ## It's more fun with a compiler (advanced)
