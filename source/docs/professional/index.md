@@ -8,7 +8,7 @@
     + 🧑‍🎓 **[The professional way](../professional/index.md)**
 
 
-## First steps
+## First steps
 
 > First `npm install` to install dependencies.[^1]
 > `npm ls` should list `less` and `print-first-css`.
