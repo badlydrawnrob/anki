@@ -25,7 +25,7 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 ## Quick start
 
 > If you're updating from a previous version, [go here](https://github.com/badlydrawnrob/anki/issues/156).
-> You can merge the old notetypes with the new.
+> You can merge notetypes, but be safe and backup!
 
 1. Get the [latest Anki deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
 2. Open the [Anki](https://apps.ankiweb.net) desktop app.
@@ -130,11 +130,16 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 
 ## ⚠️ Be careful when ...
 
-### 1. Upgrading your deck
+<details>
+<summary>
+1. Upgrades (semantic versioning)
+</summary>
 
 > **Always backup your deck** before installing a new version!
 
 I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme.
+
+</details>
 
 ### 2. Creating your flashcards
 
