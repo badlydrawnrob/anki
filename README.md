@@ -63,9 +63,9 @@ They say code is an art form. Anki flashcard's CSS themes come with a light and 
 
 - 👨🏻‍🎨 **Starter themes**
     - 🥷🏻 Monochrome
-    - ⛵️ Breeze Dark[^2]
+    - ⛵️ Breeze Dark
 
-You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc.
+You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc. Our Breeze Dark theme is a modified version (not the one Pandoc uses).[^2]
 
 
 ## Keep it simple, stupid!
