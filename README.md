@@ -132,7 +132,7 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 
 <details>
 <summary>
-**1. Upgrading (semantic versioning)**
+<strong>1. Upgrading (semantic versioning)</strong>
 </summary>
 
 > **Always backup your deck** before installing a new version!
