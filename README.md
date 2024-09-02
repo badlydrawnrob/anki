@@ -128,37 +128,44 @@ There _are_ other plugins out there that are fun to use, but [beware of dependen
 
 
 
-## ⚠️ Be careful when ...
+## ⚠️ FAQs
 
 <details>
 <summary>
-<strong>1. Upgrading (semantic versioning)</strong>
+<strong>1. How do I upgrade?</strong> (semantic versioning)
 </summary>
 
-> **Always backup your deck** before installing a new version!
-
-I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme.
-
+**Always backup your deck** before installing a new version! I try to stick to **major.minor.patch** [semantic versioning](http://semver.org), so updates don't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones.
 </details>
 
-### 2. Creating your flashcards
+<details>
+<summary>
+<strong>2. How do I write the flashcards?</strong>
+</summary>
 
-> Keep it simple and avoid javascript
+**Keep it simple and avoid javascript.** Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization) to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
+</details>
 
-**Stick to [Common Markdown](https://commonmark.org/) or [safe HTML](https://en.wikipedia.org/wiki/HTML_sanitization)** to [avoid unintended consequences in Anki](https://github.com/badlydrawnrob/anki/issues/27). Here's some [helpful guides](https://github.com/badlydrawnrob/anki/discussions/123) on how to use the Anki software.
-
-### 3. Can't swipe left to view code on Anki Mobile
+<details>
+<summary>
+<strong>3. I can't swipe left</strong> to view code on Anki Mobile
+</summary>
 
 The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture.
 This is not desirable, as often our code will have an `overflow` which we want to
 scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
 
-### 4. Text Formatting problems
+</details>
 
+<details>
+<summary>
+<strong>4. I'm having text formatting problems</strong>, what do I do?
+</summary>
+&nbsp;
 > Paste **raw html** or **plain text** to avoid styling issues.
 
 If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html. **TL;DR** [paste as plain text](https://forums.ankiweb.net/t/paste-plain-text/4326) to avoid formatting issues.
-
+</details>
 
 
 ## License and inspiration
