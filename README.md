@@ -111,9 +111,7 @@ Once you've got the basics of Anki flashcards down, it's time to get fancy with 
 https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
 If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. You can also change the Typography to your favourite `--font`!
-
-</summary>
-
+</details>
 
 ## Why Anki flashcards instead of an add-on?
 
