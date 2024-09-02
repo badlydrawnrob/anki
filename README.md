@@ -2,6 +2,10 @@
 [![Release](https://img.shields.io/github/release/badlydrawnrob/anki)](https://github.com/badlydrawnrob/anki/releases)
 [![GitHub Repo stars](https://img.shields.io/github/stars/badlydrawnrob/anki?style=social)](https://github.com/badlydrawnrob/anki/stargazers)
 
+<style>
+    summary { padding-bottom: 40px; }
+</style>
+
 # Anki programming flashcards
 ## Learning to code with Anki: themes, templates, and syntax highlighting for beginners and pros.
 
