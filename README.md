@@ -128,10 +128,10 @@ I'd advise beginners to start by writing great cards, before moving on to use th
 
 I've spent a lot of time so you can:
 
-- Use Anki flashcards as they are — or customise the CSS themes,
+- Use Anki flashcards as they are — or create your own colors/typography,
 - Use the excellent `markdown->html` workflow  ... online or locally.
 
-The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app; it's stable software, with no add-ons or plugins required, and is a very simple setup.
+The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app, no add-ons required (which tend to go out-of-date); it's stable software, with very light dependencies (Node and Pandoc) and a very simple setup.
 
 ### Dependency hell
 
