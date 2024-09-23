@@ -37,20 +37,20 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How would we store a <code>Maybe</code> that’s a
-<code>Nothing</code> in our data?</h1>
+<h1>What does the functional composition operator look like in Elm
+Lang?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Storing empty data</h2>
+<h2>Composing functions</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-<p><code>Nothing : Maybe a</code></p>
+<p>``</p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -79,45 +79,31 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;empty data&quot;</span> <span class="fu">:</span> <span class="kw">null</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toString</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">toString</span> <span class="fu">n</span> <span class="op">=</span> <span class="dt">String</span><span class="op">.</span><span class="fu">fromInt</span> <span class="fu">n</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toList</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">String</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">toList</span> <span class="fu">s</span> <span class="op">=</span> [<span class="fu">s</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">intToStringList</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">String</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">intToStringList</span> <span class="op">=</span> <span class="fu">toList</span> <span class="op">&lt;&lt;</span> <span class="fu">toString</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<ol type="1">
-<li><code>Nothing</code> translates to <code>null</code> in our
-json</li>
-<li>However, it might best to <em>literally store nothing</em> in our
-json file
-<ul>
-<li>Meaning, no data at all. This makes it obvious that it’s
-missing.</li>
-</ul></li>
-<li>Or, you could store a custom data type
-<code>DoesNotExist : Entries</code>
-<ul>
-<li>These can make life more complex and problematic, however.</li>
-</ul></li>
-</ol>
-<p><strong>The simplest way is to not store anything.</strong> You can
-use <code>Json.Decode.Pipeline</code> and have some
-<code>optional</code> fields. Default data just hides potential issues
-and mute errors. Just make it obvious you’re missing something, and push
-it until the very end to deal with that, e.g. <strong>show an empty
-<code>view</code> and keep things simple!</strong></p>
+<p>The operator is <strong><code>&lt;&lt;</code></strong>. In maths
+functions will convert from right to left. We can use these functions
+without <code>(parenthesis)</code>. If you try to use a pipe here, Elm
+will throw an error.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>How does SQL handle this? Rethink storing <code>type Custom</code>
-directly, as your custom types in your app can get out of sync with your
-stored data very quickly. You would have to version your custom types
-and deal with that. You would need to have metadata <code>key</code> in
-your json to identify the variants in your custom types.</p>
+<p>You can also use this operator the other way around
+<code>&gt;&gt;</code>. In Haskell, this operator has three arrows
+<code>&lt;&lt;&lt;</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

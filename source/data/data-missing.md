@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How would we store a `Maybe` that's a `Nothing` in our data?
+# What does the functional composition operator look like in Elm Lang?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Storing empty data
+## Composing functions
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-`Nothing : Maybe a`
+``
 
 
 <!-- -------------------------------------------------------------------------
@@ -85,10 +85,15 @@
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```json
-{
-  "empty data" : null
-}
+```elm
+toString : Int -> String
+toString n = String.fromInt n
+
+toList : String -> List String
+toList s = [s]
+
+intToStringList : Int -> List String
+intToStringList = toList << toString
 ```
 
 
@@ -97,15 +102,8 @@
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-1. `Nothing` translates to `null` in our json
-2. However, it might best to _literally store nothing_ in our json file
-    - Meaning, no data at all. This makes it obvious that it's missing.
-3. Or, you could store a custom data type `DoesNotExist : Entries`
-    - These can make life more complex and problematic, however.
-
-**The simplest way is to not store anything.** You can use `Json.Decode.Pipeline` and have some `optional` fields. Default data just hides potential
-issues and mute errors. Just make it obvious you're missing something, and
-push it until the very end to deal with that, e.g. **show an empty `view` and keep things simple!**
+The operator is **`<<`**. In maths functions will convert from right to left. We can use these functions without `(parenthesis)`. If you try to use a pipe here,
+Elm will throw an error.
 
 
 
@@ -114,7 +112,7 @@ push it until the very end to deal with that, e.g. **show an empty `view` and ke
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
- How does SQL handle this? Rethink storing `type Custom` directly, as your custom types in your app can get out of sync with your stored data very quickly. You would have to version your custom types and deal with that. You would need to have metadata `key` in your json to identify the variants in your custom types.
+ You can also use this operator the other way around `>>`. In Haskell, this operator has three arrows `<<<`.
 
 
 <!-- -------------------------------------------------------------------------
