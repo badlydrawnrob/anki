@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What does the functional composition operator look like in Elm Lang?
+# How would you destructure a record in this function?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Composing functions
+## Destructuring
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,14 +86,17 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-toString : Int -> String
-toString n = String.fromInt n
+type alias UserInput =
+    { input : String
+    , valid : Bool
+    }
 
-toList : String -> List String
-toList s = [s]
-
-intToStringList : Int -> List String
-intToStringList = toList << toString
+createIfValid : (a -> UserInput) -> UserInput -> ValidInput
+createIfValid func ({input, valid} as field) =
+    if field.valid then
+        func input  -- Create ValidInput
+    else
+        field  -- Return original UserInput
 ```
 
 
@@ -102,8 +105,7 @@ intToStringList = toList << toString
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-The operator is **`<<`**. In maths functions will convert from right to left. We can use these functions without `(parenthesis)`. If you try to use a pipe here,
-Elm will throw an error.
+We can use curly braces `{field1, field2}` to destructure a record, then name them as `field` (same as you would modules).
 
 
 
@@ -112,7 +114,7 @@ Elm will throw an error.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
- You can also use this operator the other way around `>>`. In Haskell, this operator has three arrows `<<<`.
+You don't _have_ to name the destructured record, you could simply use the values that `input` and `valid` would return.
 
 
 <!-- -------------------------------------------------------------------------

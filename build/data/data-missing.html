@@ -37,14 +37,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What does the functional composition operator look like in Elm
-Lang?</h1>
+<h1>How would you destructure a record in this function?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Composing functions</h2>
+<h2>Destructuring</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -79,31 +78,33 @@ Lang?</h1>
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toString</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">toString</span> <span class="fu">n</span> <span class="op">=</span> <span class="dt">String</span><span class="op">.</span><span class="fu">fromInt</span> <span class="fu">n</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toList</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">String</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">toList</span> <span class="fu">s</span> <span class="op">=</span> [<span class="fu">s</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">intToStringList</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">String</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">intToStringList</span> <span class="op">=</span> <span class="fu">toList</span> <span class="op">&lt;&lt;</span> <span class="fu">toString</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">UserInput</span> <span class="op">=</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    { <span class="fu">input</span> : <span class="dt">String</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">valid</span> : <span class="dt">Bool</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">createIfValid</span> : (<span class="fu">a</span> <span class="op">-&gt;</span> <span class="dt">UserInput</span>) <span class="op">-&gt;</span> <span class="dt">UserInput</span> <span class="op">-&gt;</span> <span class="dt">ValidInput</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">createIfValid</span> <span class="fu">func</span> ({<span class="fu">input</span><span class="op">,</span> <span class="fu">valid</span>} <span class="kw">as</span> <span class="fu">field</span>) <span class="op">=</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">field</span><span class="op">.</span><span class="fu">valid</span> <span class="cf">then</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">func</span> <span class="fu">input</span>  <span class="co">-- Create ValidInput</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">field</span>  <span class="co">-- Return original UserInput</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>The operator is <strong><code>&lt;&lt;</code></strong>. In maths
-functions will convert from right to left. We can use these functions
-without <code>(parenthesis)</code>. If you try to use a pipe here, Elm
-will throw an error.</p>
+<p>We can use curly braces <code>{field1, field2}</code> to destructure
+a record, then name them as <code>field</code> (same as you would
+modules).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>You can also use this operator the other way around
-<code>&gt;&gt;</code>. In Haskell, this operator has three arrows
-<code>&lt;&lt;&lt;</code>.</p>
+<p>You don’t <em>have</em> to name the destructured record, you could
+simply use the values that <code>input</code> and <code>valid</code>
+would return.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

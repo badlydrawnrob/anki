@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What will each `residents[**'key'**]` print out?
+# Explain each part of this type signature
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Dictionaries
+## Http
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-`d = {‘key’: value}`
+`Http.expectJson`
 
 
 <!-- -------------------------------------------------------------------------
@@ -70,12 +70,8 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```python
-residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
-
-print(residents['Puffin'])
-print(residents['Sloth'])
-print(residents['Burmese Python'])
+```elm
+Http.expectJson : (Result Http.Error a -> msg) -> Decoder a -> Http.Expect msg
 ```
 
 
@@ -93,10 +89,34 @@ print(residents['Burmese Python'])
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```python
-104
-105
-106
+```elm
+import Http
+import Json.Decode exposing (Decoder, string)
+
+init : () -> ( Model, Cmd Msg )
+init () =
+    ( initialModel, loadJson )
+
+loadJson =
+    Http.get
+        { url = "https://url.com/feed/"
+        , expect = Http.expectJson gotJson string
+        }
+
+type Msg =
+    GotJson (Result Http.Error String)
+
+update msg model =
+    case msg of
+        GotJson (Ok data) ->
+            -- update model
+
+        GotJson (Err _) ->
+            -- update error message
+```
+```terminal
+> Http.expectJson GotJson string
+<internals> : Http.Expect Msg
 ```
 
 
@@ -105,27 +125,20 @@ print(residents['Burmese Python'])
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Access a dictionary item with it's `key`, which returns it's `value`. You can also change a value, or generate a brand new value with the following syntax:
+1. `Http.expectJson` takes a function that returns a `msg` ...
+2. It also takes a `Decoder a`, in this instance [`string`](https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#string)
+3. The result of `Http.exectJson` _expects_ a `msg`
 
-| Change a value | Add a new animal |
-| -------------- | ---------------- |
-| `residents['Burmese Python'] = 79` | `residents['Giraffe'] = 200` |
-| This will edit a value | This will add a new key/value pair |
+Our `msg` could be anything, but it must hold a `Result` of same type. Our decoder takes in a `json` string, converts it to a `String`, then passes that value to our `msg` (in this case a `Msg` type). `GotJson` now holds either an `Ok String` or an `Http.Error`. We handle it in `update` with a `case`.
 
-```terminal
-> print("Burmese Python: ", residents['Burmese Python'])
-Burmese Python:  79
-> print("Giraffe: ", residents['Giraffe'])
-200
-```
-A dictionary is similar to a list, but you access values by looking up a `key` instead of an index. A key can be any string or number. Dictionaries are enclosed in curly braces `{ }`.
+The problem with the type signature is it doesn't quite show the flow of data. Our decoder seems to handle the data (our `json` string) first.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-**Warning:** [Never search for a value in a dictionary using a for loop!](https://jeffknupp.com/blog/2015/08/30/python-dictionaries) The `.items()` method allows you to iterate over both keys and values at the same time. The method returns a view object containing the dictionary’s items as key-value tuples.
+Try messing around with the `elm repl` if you don't understand the type signature fully, give it a value and see what happens!
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
