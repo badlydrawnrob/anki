@@ -114,7 +114,7 @@ For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provide
     - It's a very rudimentary editor (feels quite clunky),
     - I use iPhone images with notes _a lot_, so I don't really need it,
     - It's not helpful for motion images, such as `.gif`s,
-    - It hems us in to Anki's way of doing things, which isn't always ideal.
+    - It limits us to Anki's way of doing things, which isn't always ideal.
 
 
 [^1]: We're asking for an image here, as that's fundamentally what this card is about (more about visual medium than textual). It's basically a `rich html` field, however, so you can pretty much add in what you want here, an `image`, a `code block`, or `rich html`. I can't, however guarantee that it won't change to be wrapped in a [`figure`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) (for instance) — in fact, that's quite a good idea, but I also realise having flexibility could be useful too! Time will tell.
