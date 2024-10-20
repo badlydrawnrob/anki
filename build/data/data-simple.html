@@ -39,19 +39,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>Explain each part of this type signature</h1>
+<h1>Explain what this function does</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Http</h2>
+<h2>Recursion</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-<p><code>Http.expectJson</code></p>
+<p>``</p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -63,7 +63,11 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Http</span><span class="op">.</span><span class="fu">expectJson</span> : (<span class="dt">Result</span> <span class="dt">Http</span><span class="op">.</span><span class="dt">Error</span> <span class="fu">a</span> <span class="op">-&gt;</span> <span class="fu">msg</span>) <span class="op">-&gt;</span> <span class="dt">Decoder</span> <span class="fu">a</span> <span class="op">-&gt;</span> <span class="dt">Http</span><span class="op">.</span><span class="dt">Expect</span> <span class="fu">msg</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span> : <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span> <span class="fu">l</span> <span class="op">=</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">l</span> <span class="cf">of</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        [] <span class="op">-&gt;</span> <span class="dv">0</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">x</span><span class="op">::</span><span class="fu">xs</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">+</span> (<span class="fu">sum</span> <span class="fu">xs</span>)</span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -75,63 +79,23 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Http</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Json</span><span class="op">.</span><span class="dt">Decode</span> <span class="kw">exposing</span> (<span class="dt">Decoder</span><span class="op">,</span> <span class="fu">string</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> : () <span class="op">-&gt;</span> ( <span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span> )</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> () <span class="op">=</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    ( <span class="fu">initialModel</span><span class="op">,</span> <span class="fu">loadJson</span> )</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">loadJson</span> <span class="op">=</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Http</span><span class="op">.</span><span class="fu">get</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        { <span class="fu">url</span> <span class="op">=</span> <span class="st">&quot;https://url.com/feed/&quot;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">expect</span> <span class="op">=</span> <span class="dt">Http</span><span class="op">.</span><span class="fu">expectJson</span> <span class="fu">gotJson</span> <span class="fu">string</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span> <span class="op">=</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">GotJson</span> (<span class="dt">Result</span> <span class="dt">Http</span><span class="op">.</span><span class="dt">Error</span> <span class="dt">String</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">GotJson</span> (<span class="dt">Ok</span> <span class="fu">data</span>) <span class="op">-&gt;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="co">-- update model</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="dt">GotJson</span> (<span class="dt">Err</span> <span class="fu">_</span>) <span class="op">-&gt;</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            <span class="co">-- update error message</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; Http.expectJson GotJson string
-&lt;internals&gt; : Http.Expect Msg</code></pre>
+<pre class="terminal"><code>&gt; sum [1, 2, 3, 4]
+10 : Int</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<ol type="1">
-<li><code>Http.expectJson</code> takes a function that returns a
-<code>msg</code> …</li>
-<li>It also takes a <code>Decoder a</code>, in this instance <a
-href="https://package.elm-lang.org/packages/elm/json/latest/Json-Decode#string"><code>string</code></a></li>
-<li>The result of <code>Http.exectJson</code> <em>expects</em> a
-<code>msg</code></li>
-</ol>
-<p>Our <code>msg</code> could be anything, but it must hold a
-<code>Result</code> of same type. Our decoder takes in a
-<code>json</code> string, converts it to a <code>String</code>, then
-passes that value to our <code>msg</code> (in this case a
-<code>Msg</code> type). <code>GotJson</code> now holds either an
-<code>Ok String</code> or an <code>Http.Error</code>. We handle it in
-<code>update</code> with a <code>case</code>.</p>
-<p>The problem with the type signature is it doesn’t quite show the flow
-of data. Our decoder seems to handle the data (our <code>json</code>
-string) first.</p>
+<p><strong>This is a recursive function</strong> that calculates the sum
+of the numbers passed to the function as a list.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Try messing around with the <code>elm repl</code> if you don’t
-understand the type signature fully, give it a value and see what
-happens!</p>
+<p>We can use the <code>::</code> operator to <em>deconstruct</em> the
+list (as well as constructing a list!) into it’s <code>head</code> and
+<code>tail</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
