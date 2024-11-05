@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How would you destructure a record in this function?
+# What's the difference between these two types?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Destructuring
+## Type
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,17 +86,14 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-type alias UserInput =
-    { input : String
-    , valid : Bool
-    }
+type Car =
+    Car { name : String, age : Int }
 
-createIfValid : (a -> UserInput) -> UserInput -> ValidInput
-createIfValid func ({input, valid} as field) =
-    if field.valid then
-        func input  -- Create ValidInput
-    else
-        field  -- Return original UserInput
+type alias Car =
+    { name : String, age : Int }
+```
+```terminal
+Car { name = "Audi", age = 10 }
 ```
 
 
@@ -105,7 +102,9 @@ createIfValid func ({input, valid} as field) =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-We can use curly braces `{field1, field2}` to destructure a record, then name them as `field` (same as you would modules).
+**`type Car` comes with NO CONSTRUCTOR function.** It expects a single value, which
+in this case is a `record`. Our `type alias Car` allows us to construct a record
+with `Car "Audi" 10`.
 
 
 
@@ -114,7 +113,8 @@ We can use curly braces `{field1, field2}` to destructure a record, then name th
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-You don't _have_ to name the destructured record, you could simply use the values that `input` and `valid` would return.
+It's worth considering the difference as using `Json.Decode.map` will throw an
+error if you try to use it with `type Car`.
 
 
 <!-- -------------------------------------------------------------------------

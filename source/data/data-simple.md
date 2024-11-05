@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Explain what this function does
+# You need to convert `"2:00"` to `pair 2 0` with a simple function. How would you do that?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Recursion
+## Converting types
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-``
+`String.toInt`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,11 +71,6 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-sum : List Int -> Int
-sum l =
-    case l of
-        [] -> 0
-        x::xs -> x + (sum xs)
 ```
 
 
@@ -93,9 +88,21 @@ sum l =
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
+```elm
+gotInts : String -> List (Maybe Int)
+gotInts String.split ":" >> List.map String.toInt
+
+toTuple : List (Maybe Int) -> (Int, Int)
+toTuple l =
+    case l of
+        [Just a, Just b] -> (a, b)
+        _ -> (0, 0) -- This should NEVER happen!
+```
 ```terminal
-> sum [1, 2, 3, 4]
-10 : Int
+> gotInts "2:00"
+[Just 2, Just 0]
+> toTuple [Just 2, Just 0]
+(2, 0)
 ```
 
 
@@ -104,14 +111,14 @@ sum l =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-**This is a recursive function** that calculates the sum of the numbers passed to the function as a list.
+Compose two functions `>>` without parameters (arguments). Take a `String`, split it, pass to `List.map` function. You then need to `case` and deconstruct the list.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-We can use the `::` operator to _deconstruct_ the list (as well as constructing a list!) into it's `head` and `tail`.
+Try and do the simplest thing to deal with the `Maybe` type!
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown

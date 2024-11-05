@@ -39,19 +39,20 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>Explain what this function does</h1>
+<h1>You need to convert <code>"2:00"</code> to <code>pair 2 0</code>
+with a simple function. How would you do that?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Recursion</h2>
+<h2>Converting types</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
 -------------------------------------------------------------------------- -->
-<p>``</p>
+<p><code>String.toInt</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -63,11 +64,7 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span> : <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Int</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span> <span class="fu">l</span> <span class="op">=</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">l</span> <span class="cf">of</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        [] <span class="op">-&gt;</span> <span class="dv">0</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">x</span><span class="op">::</span><span class="fu">xs</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">+</span> (<span class="fu">sum</span> <span class="fu">xs</span>)</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -79,23 +76,35 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<pre class="terminal"><code>&gt; sum [1, 2, 3, 4]
-10 : Int</code></pre>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> <span class="dt">String</span><span class="op">.</span><span class="fu">split</span> <span class="st">&quot;:&quot;</span> <span class="op">&gt;&gt;</span> <span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="dt">String</span><span class="op">.</span><span class="fu">toInt</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> : <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>) <span class="op">-&gt;</span> (<span class="dt">Int</span><span class="op">,</span> <span class="dt">Int</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> <span class="fu">l</span> <span class="op">=</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">l</span> <span class="cf">of</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        [<span class="dt">Just</span> <span class="fu">a</span><span class="op">,</span> <span class="dt">Just</span> <span class="fu">b</span>] <span class="op">-&gt;</span> (<span class="fu">a</span><span class="op">,</span> <span class="fu">b</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">_</span> <span class="op">-&gt;</span> (<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>) <span class="co">-- This should NEVER happen!</span></span></code></pre></div>
+<pre class="terminal"><code>&gt; gotInts &quot;2:00&quot;
+[Just 2, Just 0]
+&gt; toTuple [Just 2, Just 0]
+(2, 0)</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><strong>This is a recursive function</strong> that calculates the sum
-of the numbers passed to the function as a list.</p>
+<p>Compose two functions <code>&gt;&gt;</code> without parameters
+(arguments). Take a <code>String</code>, split it, pass to
+<code>List.map</code> function. You then need to <code>case</code> and
+deconstruct the list.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>We can use the <code>::</code> operator to <em>deconstruct</em> the
-list (as well as constructing a list!) into it’s <code>head</code> and
-<code>tail</code>.</p>
+<p>Try and do the simplest thing to deal with the <code>Maybe</code>
+type!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
