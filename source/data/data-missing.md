@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What's the difference between these two types?
+# What function do we need to add here? What will it compute?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Type
+## Anonymous function
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,14 +86,32 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-type Car =
-    Car { name : String, age : Int }
+type alias Song =
+    { title : String
+    , time : (Int, Int)
+    }
 
-type alias Car =
-    { name : String, age : Int }
+type alias UserInput a =
+    { input : String
+    , valid : Result String a
+    }
+
+{- Our form input results -}
+title = UserInput "Afraid" (Ok "Afraid")
+minutes = UserInput "3" (Ok 3)
+seconds = UserInput "61" (Err "Is not in range")
+
+{- Here we loop over our results -}
+checker =
+    Result.map3
+        (\t m s -> Song t (m,s))
+        title.valid
+        minutes.valid
+        seconds.valid
 ```
 ```terminal
-Car { name = "Audi", age = 10 }
+> checker
+Err ("Is not in range")
 ```
 
 
@@ -102,9 +120,7 @@ Car { name = "Audi", age = 10 }
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-**`type Car` comes with NO CONSTRUCTOR function.** It expects a single value, which
-in this case is a `record`. Our `type alias Car` allows us to construct a record
-with `Car "Audi" 10`.
+**We use `Result.map`**, which can have up to `5` arguments (`map5`). We create an anonymous function that takes in our three parameters and spits out a `Song`!
 
 
 
@@ -113,8 +129,7 @@ with `Car "Audi" 10`.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-It's worth considering the difference as using `Json.Decode.map` will throw an
-error if you try to use it with `type Car`.
+If you have more than 5 arguments this [running out of maps](https://thoughtbot.com/blog/running-out-of-maps) article is a good read.
 
 
 <!-- -------------------------------------------------------------------------
