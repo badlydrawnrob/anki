@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# You need to convert `"2:00"` to `pair 2 0` with a simple function. How would you do that?
+# We've got a BIG chunk of HTML in this `view` function. Why is that bad? How can we fix it?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,15 +49,15 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Converting types
+## Refactoring
 
 
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
-    ⤷ `code string` (auto wrapped with <p><code> tag)
+    ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`String.toInt`
+`view`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,6 +71,27 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
+view : Model -> Html Msg
+view model =
+    div []
+        [ h1 [ class "header" ]
+            [ text "Saladise - Build a Salad" ]
+        , div [ class "content" ]
+            [ if model.sending then
+                -- sending your order HTML
+                -- (one line)
+
+              else if model.building then
+                -- building a salad HTML
+                -- (250 lines PHEW!)
+                    -- a `Maybe Error` HTML
+                    -- (6 lines)
+
+              else
+                -- order completed HTML
+                -- (60 lines)
+            ]
+        ]
 ```
 
 
@@ -89,20 +110,30 @@
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-gotInts : String -> List (Maybe Int)
-gotInts String.split ":" >> List.map String.toInt
+viewSending : Html msg
+viewError : Maybe Error -> Html msg
 
-toTuple : List (Maybe Int) -> (Int, Int)
-toTuple l =
-    case l of
-        [Just a, Just b] -> (a, b)
-        _ -> (0, 0) -- This should NEVER happen!
-```
-```terminal
-> gotInts "2:00"
-[Just 2, Just 0]
-> toTuple [Just 2, Just 0]
-(2, 0)
+viewConfirmation : Model -> Html msg
+
+viewBuild : Model -> Html Msg
+
+viewStep : Model -> Html Msg
+viewStep model =
+    if model.sending then
+        viewSending
+    else if model.building then
+        viewBuild model
+    else
+        viewConfirmation model
+
+view : Model -> Html Msg
+view model =
+    div []
+        [ h1 [ class "header" ]
+            [ text "Saladise - Build a Salad" ]
+        , div [ class "content" ]
+            [ viewStep model ]
+        ]
 ```
 
 
@@ -111,14 +142,21 @@ toTuple l =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Compose two functions `>>` without parameters (arguments). Take a `String`, split it, pass to `List.map` function. You then need to `case` and deconstruct the list.
+1. **Split out `view` functions so it's easier to debug.**
+    - It's easier to spot where the bug lives if they're isolated!
+2. **`Html Msg` means there are actions and messages**
+3. `Html msg` (no type value) means there are **zero actions**
+    - This is _guaranteed_ to have ZERO messages and actions
+4. Splitting out the `if/else` section makes it easier to read!
+
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Try and do the simplest thing to deal with the `Maybe` type!
+Remember that `Bool` can generally be replaced with a Union Type for view state.
+
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown

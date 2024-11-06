@@ -39,20 +39,20 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>You need to convert <code>"2:00"</code> to <code>pair 2 0</code>
-with a simple function. How would you do that?</h1>
+<h1>We’ve got a BIG chunk of HTML in this <code>view</code> function.
+Why is that bad? How can we fix it?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Converting types</h2>
+<h2>Refactoring</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
-    ⤷ `code string` (auto wrapped with <p><code> tag)
+    ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>String.toInt</code></p>
+<p><code>view</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -64,7 +64,27 @@ with a simple function. How would you do that?</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">div</span> []</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">h1</span> [ <span class="fu">class</span> <span class="st">&quot;header&quot;</span> ]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            [ <span class="fu">text</span> <span class="st">&quot;Saladise - Build a Salad&quot;</span> ]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;content&quot;</span> ]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            [ <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">sending</span> <span class="cf">then</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- sending your order HTML</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- (one line)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              <span class="cf">else</span> <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">building</span> <span class="cf">then</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- building a salad HTML</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- (250 lines PHEW!)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                    <span class="co">-- a `Maybe Error` HTML</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                    <span class="co">-- (6 lines)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>              <span class="cf">else</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- order completed HTML</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                <span class="co">-- (60 lines)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        ]</span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -77,34 +97,58 @@ class="sourceCode elm"><code class="sourceCode elm"></code></pre></div>
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> <span class="dt">String</span><span class="op">.</span><span class="fu">split</span> <span class="st">&quot;:&quot;</span> <span class="op">&gt;&gt;</span> <span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="dt">String</span><span class="op">.</span><span class="fu">toInt</span></span>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">viewSending</span> : <span class="dt">Html</span> <span class="fu">msg</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">viewError</span> : <span class="dt">Maybe</span> <span class="dt">Error</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="fu">msg</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> : <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>) <span class="op">-&gt;</span> (<span class="dt">Int</span><span class="op">,</span> <span class="dt">Int</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> <span class="fu">l</span> <span class="op">=</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">l</span> <span class="cf">of</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        [<span class="dt">Just</span> <span class="fu">a</span><span class="op">,</span> <span class="dt">Just</span> <span class="fu">b</span>] <span class="op">-&gt;</span> (<span class="fu">a</span><span class="op">,</span> <span class="fu">b</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">_</span> <span class="op">-&gt;</span> (<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>) <span class="co">-- This should NEVER happen!</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; gotInts &quot;2:00&quot;
-[Just 2, Just 0]
-&gt; toTuple [Just 2, Just 0]
-(2, 0)</code></pre>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viewConfirmation</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="fu">msg</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">viewBuild</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">viewStep</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">viewStep</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">sending</span> <span class="cf">then</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">viewSending</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">building</span> <span class="cf">then</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">viewBuild</span> <span class="fu">model</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">viewConfirmation</span> <span class="fu">model</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">div</span> []</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">h1</span> [ <span class="fu">class</span> <span class="st">&quot;header&quot;</span> ]</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            [ <span class="fu">text</span> <span class="st">&quot;Saladise - Build a Salad&quot;</span> ]</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;content&quot;</span> ]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            [ <span class="fu">viewStep</span> <span class="fu">model</span> ]</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Compose two functions <code>&gt;&gt;</code> without parameters
-(arguments). Take a <code>String</code>, split it, pass to
-<code>List.map</code> function. You then need to <code>case</code> and
-deconstruct the list.</p>
+<ol type="1">
+<li><strong>Split out <code>view</code> functions so it’s easier to
+debug.</strong>
+<ul>
+<li>It’s easier to spot where the bug lives if they’re isolated!</li>
+</ul></li>
+<li><strong><code>Html Msg</code> means there are actions and
+messages</strong></li>
+<li><code>Html msg</code> (no type value) means there are <strong>zero
+actions</strong>
+<ul>
+<li>This is <em>guaranteed</em> to have ZERO messages and actions</li>
+</ul></li>
+<li>Splitting out the <code>if/else</code> section makes it easier to
+read!</li>
+</ol>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Try and do the simplest thing to deal with the <code>Maybe</code>
-type!</p>
+<p>Remember that <code>Bool</code> can generally be replaced with a
+Union Type for view state.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
