@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What function do we need to add here? What will it compute?
+# What will these two functions produce?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Anonymous function
+## List
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-``
+`.map .filter`
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,32 +86,16 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-type alias Song =
-    { title : String
-    , time : (Int, Int)
-    }
+isEmpty = String.isEmpty
 
-type alias UserInput a =
-    { input : String
-    , valid : Result String a
-    }
-
-{- Our form input results -}
-title = UserInput "Afraid" (Ok "Afraid")
-minutes = UserInput "3" (Ok 3)
-seconds = UserInput "61" (Err "Is not in range")
-
-{- Here we loop over our results -}
-checker =
-    Result.map3
-        (\t m s -> Song t (m,s))
-        title.valid
-        minutes.valid
-        seconds.valid
+one = List.map isEmpty ["an", "", "string"]
+two = List.filter isEmpty ["an", "", "string"]
 ```
 ```terminal
-> checker
-Err ("Is not in range")
+> one
+[False, True, False]
+> two
+[""]
 ```
 
 
@@ -120,8 +104,13 @@ Err ("Is not in range")
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-**We use `Result.map`**, which can have up to `5` arguments (`map5`). We create an anonymous function that takes in our three parameters and spits out a `Song`!
+Perform `isEmpty` on each `String` and ...
 
+| `List.map` | `List.filter` |
+|------------|--------------|
+| Return each result | Return ONLY if `True` |
+
+`.map` returns all `String`s after passing through the function, whereas `.filter` strips the list of every `String` that doesn't meet the criteria (where the function returns `False`).
 
 
 <!-- -------------------------------------------------------------------------
@@ -129,7 +118,7 @@ Err ("Is not in range")
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-If you have more than 5 arguments this [running out of maps](https://thoughtbot.com/blog/running-out-of-maps) article is a good read.
+There's lots of other [`List` functions](https://package.elm-lang.org/packages/elm/core/latest/List) you can familiarise yourself with.
 
 
 <!-- -------------------------------------------------------------------------

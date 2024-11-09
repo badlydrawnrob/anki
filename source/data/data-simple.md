@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# We've got a BIG chunk of HTML in this `view` function. Why is that bad? How can we fix it?
+# What is the disadvantage of this custom type?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Refactoring
+## Helper functions
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`view`
+`type Animal`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,27 +71,15 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-view : Model -> Html Msg
-view model =
-    div []
-        [ h1 [ class "header" ]
-            [ text "Saladise - Build a Salad" ]
-        , div [ class "content" ]
-            [ if model.sending then
-                -- sending your order HTML
-                -- (one line)
+type Animal01
+    = Animal
+        { name : String }
 
-              else if model.building then
-                -- building a salad HTML
-                -- (250 lines PHEW!)
-                    -- a `Maybe Error` HTML
-                    -- (6 lines)
+type alias Animal02
+    = { name : String }
 
-              else
-                -- order completed HTML
-                -- (60 lines)
-            ]
-        ]
+dog = Animal01 { name = "Buster" }
+cat = Animal02 "Moggy"
 ```
 
 
@@ -110,30 +98,16 @@ view model =
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-viewSending : Html msg
-viewError : Maybe Error -> Html msg
-
-viewConfirmation : Model -> Html msg
-
-viewBuild : Model -> Html Msg
-
-viewStep : Model -> Html Msg
-viewStep model =
-    if model.sending then
-        viewSending
-    else if model.building then
-        viewBuild model
-    else
-        viewConfirmation model
-
-view : Model -> Html Msg
-view model =
-    div []
-        [ h1 [ class "header" ]
-            [ text "Saladise - Build a Salad" ]
-        , div [ class "content" ]
-            [ viewStep model ]
-        ]
+unwrapDog (Animal01 record)
+    = record.name
+```
+```terminal
+> unwrapDog dog
+"Buster"
+> .name cat
+"Moggy"
+> cat.name
+"Moggy"
 ```
 
 
@@ -142,12 +116,7 @@ view model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-1. **Split out `view` functions so it's easier to debug.**
-    - It's easier to spot where the bug lives if they're isolated!
-2. **`Html Msg` means there are actions and messages**
-3. `Html msg` (no type value) means there are **zero actions**
-    - This is _guaranteed_ to have ZERO messages and actions
-4. Splitting out the `if/else` section makes it easier to read!
+If you're using a custom type **you've got to write your own helper functions** to lift (unwrap) the values from it's wrapper. A `type alias` record always has an _accessor_ function, like `.name`.
 
 
 <!-- -------------------------------------------------------------------------
@@ -155,7 +124,7 @@ view model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Remember that `Bool` can generally be replaced with a Union Type for view state.
+Always consider "why, exactly, is this custom type better?". If you can't answer this question, just use normal types.
 
 
 <!-- -------------------------------------------------------------------------
