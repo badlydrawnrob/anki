@@ -9,9 +9,11 @@
 ========================================================================== -->
 
 ```elm
-deconstruct { title, age } = title ++ ": " ++ String.fromInt age
+filterBy : (String -> Maybe Int) -> List Int
+filterBy func =
+     List.filterMap func ["this", "5.1", "that", "5"]
 ```
 ```terminal
-> deconstruct Dog "Buster" 8
-"Buster: 8" : String
+> filterBy String.toInt
+[5] : List Int
 ```

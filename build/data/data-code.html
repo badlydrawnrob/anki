@@ -8,6 +8,8 @@
 
 ========================================================================== -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">deconstruct</span> { <span class="fu">title</span><span class="op">,</span> <span class="fu">age</span> } <span class="op">=</span> <span class="fu">title</span> <span class="op">++</span> <span class="st">&quot;: &quot;</span> <span class="op">++</span> <span class="dt">String</span><span class="op">.</span><span class="fu">fromInt</span> <span class="fu">age</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; deconstruct Dog &quot;Buster&quot; 8
-&quot;Buster: 8&quot; : String</code></pre>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filterBy</span> : (<span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Int</span>) <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">Int</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filterBy</span> <span class="fu">func</span> <span class="op">=</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="dt">List</span><span class="op">.</span><span class="fu">filterMap</span> <span class="fu">func</span> [<span class="st">&quot;this&quot;</span><span class="op">,</span> <span class="st">&quot;5.1&quot;</span><span class="op">,</span> <span class="st">&quot;that&quot;</span><span class="op">,</span> <span class="st">&quot;5&quot;</span>]</span></code></pre></div>
+<pre class="terminal"><code>&gt; filterBy String.toInt
+[5] : List Int</code></pre>

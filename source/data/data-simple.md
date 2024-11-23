@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What is the disadvantage of this custom type?
+# What is the disadvantage of using nested state?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Helper functions
+## Nested records
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`type Animal`
+``
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,15 +71,21 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-type Animal01
-    = Animal
-        { name : String }
+type Dressing
+  = Caesar
+  | OliveOil
 
-type alias Animal02
-    = { name : String }
+type DressingMsg
+  = SetDressing Dressing
 
-dog = Animal01 { name = "Buster" }
-cat = Animal02 "Moggy"
+type Msg
+  = DressingMsg DressingMsg
+
+type alias Salad =
+  { dressing : Dressing }
+
+init =
+  { salad = { dressing = Caesar } }
 ```
 
 
@@ -98,16 +104,20 @@ cat = Animal02 "Moggy"
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-unwrapDog (Animal01 record)
-    = record.name
-```
-```terminal
-> unwrapDog dog
-"Buster"
-> .name cat
-"Moggy"
-> cat.name
-"Moggy"
+updateDressing : DressingMsg -> Salad -> Salad
+updateDressing msg salad =
+    case msg of
+        SetDressing dressing ->
+            { salad | dressing = dressing }
+
+update : Msg -> Model -> Model
+update msg model =
+  case msg of
+    DressingMsg dressingMsg ->
+      { model
+        | salad =
+          updateDressing dressingMsg model.salad
+      }
 ```
 
 
@@ -116,7 +126,7 @@ unwrapDog (Animal01 record)
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-If you're using a custom type **you've got to write your own helper functions** to lift (unwrap) the values from it's wrapper. A `type alias` record always has an _accessor_ function, like `.name`.
+We've got to create a _nested function_ to update our _nested record_ which **can get quite complicated and ugly** if you go more than one level deep. @rtfeldman uses [a simple `model.form` record](https://github.com/rtfeldman/elm-spa-example/blob/cb32acd73c3d346d0064e7923049867d8ce67193/src/Page/Login.elm#L27) and an anonymous function to update it.
 
 
 <!-- -------------------------------------------------------------------------
@@ -124,7 +134,7 @@ If you're using a custom type **you've got to write your own helper functions** 
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Always consider "why, exactly, is this custom type better?". If you can't answer this question, just use normal types.
+You can also use [extensible records](https://discourse.elm-lang.org/t/extensible-records-seems-to-be-pruning-fields-and-failing-to-compile/8078/7) to narrow the types, which doesn't require nesting records.
 
 
 <!-- -------------------------------------------------------------------------
