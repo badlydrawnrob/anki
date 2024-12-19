@@ -9,11 +9,12 @@
 ========================================================================== -->
 
 ```elm
-filterBy : (String -> Maybe Int) -> List Int
-filterBy func =
-     List.filterMap func ["this", "5.1", "that", "5"]
-```
-```terminal
-> filterBy String.toInt
-[5] : List Int
+view : Html msg
+view model =
+  div []
+    <| List.map viewCat model.cats
+
+viewCat : Html msg
+viewCat cats =
+     p [] [ text cats.name ]
 ```
