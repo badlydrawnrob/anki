@@ -9,12 +9,10 @@
 ========================================================================== -->
 
 ```elm
-view : Html msg
-view model =
-  div []
-    <| List.map viewCat model.cats
+String.split " " tagList
+  |> List.filter notEmpty
 
-viewCat : Html msg
-viewCat cats =
-     p [] [ text cats.name ]
+notEmpty : Bool
+notEmpty =
+  (\str -> str /= "")
 ```

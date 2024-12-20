@@ -8,11 +8,9 @@
 
 ========================================================================== -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Html</span> <span class="fu">msg</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">div</span> []</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;|</span> <span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="fu">viewCat</span> <span class="fu">model</span><span class="op">.</span><span class="fu">cats</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">viewCat</span> : <span class="dt">Html</span> <span class="fu">msg</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">viewCat</span> <span class="fu">cats</span> <span class="op">=</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="fu">p</span> [] [ <span class="fu">text</span> <span class="fu">cats</span><span class="op">.</span><span class="fu">name</span> ]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">String</span><span class="op">.</span><span class="fu">split</span> <span class="st">&quot; &quot;</span> <span class="fu">tagList</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">|&gt;</span> <span class="dt">List</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">notEmpty</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">notEmpty</span> : <span class="dt">Bool</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">notEmpty</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  (\<span class="fu">str</span> <span class="op">-&gt;</span> <span class="fu">str</span> <span class="op">/=</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
