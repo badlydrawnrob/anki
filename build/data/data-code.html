@@ -8,9 +8,29 @@
 
 ========================================================================== -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">String</span><span class="op">.</span><span class="fu">split</span> <span class="st">&quot; &quot;</span> <span class="fu">tagList</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">|&gt;</span> <span class="dt">List</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">notEmpty</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">notEmpty</span> : <span class="dt">Bool</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">notEmpty</span> <span class="op">=</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  (\<span class="fu">str</span> <span class="op">-&gt;</span> <span class="fu">str</span> <span class="op">/=</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span> <span class="op">=</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  [ { <span class="fu">entry</span> <span class="op">=</span> <span class="st">&quot;20&quot;</span> }</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> { <span class="fu">entry</span> <span class="op">=</span> <span class="st">&quot;10&quot;</span> }</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">validated</span> : <span class="dt">List</span> (<span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Int</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">validated</span> <span class="op">=</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">List</span><span class="op">.</span><span class="fu">map</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    (\<span class="fu">a</span> <span class="op">-&gt;</span> <span class="fu">check</span> <span class="fu">a</span><span class="op">.</span><span class="fu">entry</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">check</span> : <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">List</span> (<span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Int</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">check</span> <span class="fu">lst</span> <span class="op">=</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Debug</span><span class="op">.</span><span class="fu">todo</span> <span class="st">&quot;Make the checker function&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">makeClock</span> : <span class="dt">List</span> (<span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Int</span>) <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Clock</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">makeClock</span> <span class="fu">lst</span> <span class="op">=</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">lst</span> <span class="cf">of</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">a</span><span class="op">,</span><span class="fu">b</span>] <span class="op">-&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Result</span><span class="op">.</span><span class="fu">map2</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Clock</span> <span class="fu">a</span> <span class="fu">b</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_</span> <span class="op">-&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Err</span> <span class="st">&quot;Not a Clock&quot;</span></span></code></pre></div>
+<pre class="terminal"><code>&gt; makeClock validated
+Ok (Clock 20 10) : Result String Clock</code></pre>
