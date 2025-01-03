@@ -9,22 +9,10 @@
 ========================================================================== -->
 
 ```elm
-import Username exposing (Username)
-
-type Cred
-  = Cred Username String
-
-username : Cred -> Username
-username (Cred user _) =
-  user
-
-grabUser record =
-  let
-    cred = record.cred
-    -- Changes -------
-    username =
-      (username cred)
-    ------------------
-  in
-    username
+type Msg
+  = Helpful String
+```
+```terminal
+> Helpful
+<function> : String -> Msg
 ```
