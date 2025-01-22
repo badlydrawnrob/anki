@@ -37,19 +37,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What will these two functions produce?</h1>
+<h1>What package is <code>isDigit</code> from, and what does it do?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>List</h2>
+<h2>Filter</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>.map .filter</code></p>
+<p><code>isDigit</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -78,46 +78,46 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isEmpty</span> <span class="op">=</span> <span class="dt">String</span><span class="op">.</span><span class="fu">isEmpty</span></span>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">from</span> <span class="dt">Char</span> <span class="kw">exposing</span> (<span class="fu">isDigit</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">one</span> <span class="op">=</span> <span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="fu">isEmpty</span> [<span class="st">&quot;an&quot;</span><span class="op">,</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="st">&quot;string&quot;</span>]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">two</span> <span class="op">=</span> <span class="dt">List</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">isEmpty</span> [<span class="st">&quot;an&quot;</span><span class="op">,</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="st">&quot;string&quot;</span>]</span></code></pre></div>
-<pre class="terminal"><code>&gt; one
-[False, True, False]
-&gt; two
-[&quot;&quot;]</code></pre>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hasDigit</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hasDigit</span> <span class="op">=</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">String</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">isDigit</span></span></code></pre></div>
+<pre class="terminal"><code>&gt; hasDigit &quot;1 to watch&quot;
+&quot;1&quot;</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Perform <code>isEmpty</code> on each <code>String</code> and …</p>
 <table>
 <thead>
 <tr>
-<th><code>List.map</code></th>
-<th><code>List.filter</code></th>
+<th>Function</th>
+<th>Signature</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Return each result</td>
-<td>Return ONLY if <code>True</code></td>
+<td><code>isDigit</code></td>
+<td>(Char -&gt; Bool)</td>
 </tr>
 </tbody>
 </table>
-<p><code>.map</code> returns all <code>String</code>s after passing
-through the function, whereas <code>.filter</code> strips the list of
-every <code>String</code> that doesn’t meet the criteria (where the
-function returns <code>False</code>).</p>
+<p><code>isDigit</code> checks if a <code>Char</code> is a number from
+<code>0—9</code>!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>There’s lots of other <a
-href="https://package.elm-lang.org/packages/elm/core/latest/List"><code>List</code>
-functions</a> you can familiarise yourself with.</p>
+<p><code>String.filter</code> is very handy to check strings to see if
+they contain a certain character. Or perhaps you want to create your own
+<code>isOneOf</code> function:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isOneOf</span> <span class="op">=</span> (\<span class="fu">c</span> <span class="op">-&gt;</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;d&#39;</span> <span class="op">||</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;o&#39;</span> <span class="op">||</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;g&#39;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">String</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">isOneOf</span> <span class="st">&quot;This return a dog evend if not tgether&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- &quot;dogdog&quot;</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What is the disadvantage of using nested state?
+# Here is a simple Python function. Compared to Elm, point out 3 problems with this code!
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Nested records
+## Python
 
 
 <!-- -------------------------------------------------------------------------
@@ -70,22 +70,16 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```elm
-type Dressing
-  = Caesar
-  | OliveOil
+```python
+todo_list =
+    [{"id": 1}, {"id": 2}]
 
-type DressingMsg
-  = SetDressing Dressing
-
-type Msg
-  = DressingMsg DressingMsg
-
-type alias Salad =
-  { dressing : Dressing }
-
-init =
-  { salad = { dressing = Caesar } }
+def does_id_exist(todo_list, id):
+  for todo in todo_list:
+    if todo.id == id:
+      return True
+    else:
+      return "False"
 ```
 
 
@@ -103,21 +97,21 @@ init =
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```elm
-updateDressing : DressingMsg -> Salad -> Salad
-updateDressing msg salad =
-    case msg of
-        SetDressing dressing ->
-            { salad | dressing = dressing }
+```terminal
+# Wrong types
+>>> todo_exists([{"id": 1}], "1")
+False
+>>> todo_exists([{"id": "1"}], 1)
+False
+>>> todo_exists([1, 2, 3], 1)
+TypeError: 'int' object is not subscriptable
 
-update : Msg -> Model -> Model
-update msg model =
-  case msg of
-    DressingMsg dressingMsg ->
-      { model
-        | salad =
-          updateDressing dressingMsg model.salad
-      }
+# Empty lists (returns `None`)
+>>> todo_exists([], 1)
+
+# Wrong (or missing) key names
+>>> todo_exists([{"ids": 1}], 1)
+KeyError: 'id'
 ```
 
 
@@ -126,7 +120,11 @@ update msg model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-We've got to create a _nested function_ to update our _nested record_ which **can get quite complicated and ugly** if you go more than one level deep. @rtfeldman uses [a simple `model.form` record](https://github.com/rtfeldman/elm-spa-example/blob/cb32acd73c3d346d0064e7923049867d8ce67193/src/Page/Login.elm#L27) and an anonymous function to update it.
+1. Wrong types are not caught (generally),
+2. Errors don't give me enough information to fix them?
+3. Returning different values is allowed,
+4. Duplicate variable name (even if it's scoped),
+5. `None` especially seems like a potential headache!
 
 
 <!-- -------------------------------------------------------------------------
@@ -134,7 +132,17 @@ We've got to create a _nested function_ to update our _nested record_ which **ca
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-You can also use [extensible records](https://discourse.elm-lang.org/t/extensible-records-seems-to-be-pruning-fields-and-failing-to-compile/8078/7) to narrow the types, which doesn't require nesting records.
+ Elm gives us plenty of guarantees, with less testing. Although it might be harder to read for beginners (there's easier ways I'm sure) all of these problems go away when you're using Elm — even without type annotations, e.g:
+
+```elm
+-- Must be a `List { b | id : a }`
+-- Must be a `number`
+does_id_exist lst id =
+  case lst of
+    [] -> False -- Return a value for empty list
+    first::rest -> first.id == id |> (||) -- OR
+            (does_id_exist rest id) -- Recursion
+```
 
 
 <!-- -------------------------------------------------------------------------

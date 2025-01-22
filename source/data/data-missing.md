@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What will these two functions produce?
+# What package is `isDigit` from, and what does it do?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## List
+## Filter
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`.map .filter`
+`isDigit`
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,16 +86,15 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-isEmpty = String.isEmpty
+from Char exposing (isDigit)
 
-one = List.map isEmpty ["an", "", "string"]
-two = List.filter isEmpty ["an", "", "string"]
+hasDigit : String -> String
+hasDigit =
+  String.filter isDigit
 ```
 ```terminal
-> one
-[False, True, False]
-> two
-[""]
+> hasDigit "1 to watch"
+"1"
 ```
 
 
@@ -104,13 +103,11 @@ two = List.filter isEmpty ["an", "", "string"]
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Perform `isEmpty` on each `String` and ...
+| Function | Signature |
+|----------|-----------|
+| `isDigit` | (Char -> Bool) |
 
-| `List.map` | `List.filter` |
-|------------|--------------|
-| Return each result | Return ONLY if `True` |
-
-`.map` returns all `String`s after passing through the function, whereas `.filter` strips the list of every `String` that doesn't meet the criteria (where the function returns `False`).
+`isDigit` checks if a `Char` is a number from `0—9`!
 
 
 <!-- -------------------------------------------------------------------------
@@ -118,7 +115,13 @@ Perform `isEmpty` on each `String` and ...
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-There's lots of other [`List` functions](https://package.elm-lang.org/packages/elm/core/latest/List) you can familiarise yourself with.
+`String.filter` is very handy to check strings to see if they contain a certain character. Or perhaps you want to create your own `isOneOf` function:
+
+```elm
+isOneOf = (\c -> c == 'd' || c == 'o' || c == 'g')
+String.filter isOneOf "This return a dog evend if not tgether"
+-- "dogdog"
+```
 
 
 <!-- -------------------------------------------------------------------------
