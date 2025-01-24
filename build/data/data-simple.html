@@ -39,8 +39,8 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>Here is a simple Python function. Compared to Elm, point out 3
-problems with this code!</h1>
+<h1>What is an alternative way of writing this <code>else</code>
+expression?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
@@ -52,7 +52,7 @@ problems with this code!</h1>
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p>``</p>
+<p><code>else</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -64,15 +64,13 @@ problems with this code!</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>todo_list <span class="op">=</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    [{<span class="st">&quot;id&quot;</span>: <span class="dv">1</span>}, {<span class="st">&quot;id&quot;</span>: <span class="dv">2</span>}]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> does_id_exist(todo_list, <span class="bu">id</span>):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> todo <span class="kw">in</span> todo_list:</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> todo.<span class="bu">id</span> <span class="op">==</span> <span class="bu">id</span>:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="st">&quot;False&quot;</span></span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> old_enough(num: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> age <span class="op">&lt;=</span> <span class="dv">20</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;You&#39;re old enough&quot;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;You&#39;re too old&quot;</span></span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -84,49 +82,29 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<pre class="terminal"><code># Wrong types
-&gt;&gt;&gt; todo_exists([{&quot;id&quot;: 1}], &quot;1&quot;)
-False
-&gt;&gt;&gt; todo_exists([{&quot;id&quot;: &quot;1&quot;}], 1)
-False
-&gt;&gt;&gt; todo_exists([1, 2, 3], 1)
-TypeError: &#39;int&#39; object is not subscriptable
-
-# Empty lists (returns `None`)
-&gt;&gt;&gt; todo_exists([], 1)
-
-# Wrong (or missing) key names
-&gt;&gt;&gt; todo_exists([{&quot;ids&quot;: 1}], 1)
-KeyError: &#39;id&#39;</code></pre>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> age <span class="op">&lt;=</span> <span class="dv">20</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="st">&quot;You&#39;re old enough&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the `else`</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="st">&quot;You&#39;re too old&quot;</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<ol type="1">
-<li>Wrong types are not caught (generally),</li>
-<li>Errors don’t give me enough information to fix them?</li>
-<li>Returning different values is allowed,</li>
-<li>Duplicate variable name (even if it’s scoped),</li>
-<li><code>None</code> especially seems like a potential headache!</li>
-</ol>
+<p>In Python there’s no need to explicitly use the <code>else</code>
+keyword (even with <code>for</code> loops) and you can safely
+<code>return</code> the value. This will run <code>if</code> age is not
+<code>&lt;= 20</code> (the failure case).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Elm gives us plenty of guarantees, with less testing. Although it
-might be harder to read for beginners (there’s easier ways I’m sure) all
-of these problems go away when you’re using Elm — even without type
-annotations, e.g:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Must be a `List { b | id : a }`</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Must be a `number`</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">does_id_exist</span> <span class="fu">lst</span> <span class="fu">id</span> <span class="op">=</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">lst</span> <span class="cf">of</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    [] <span class="op">-&gt;</span> <span class="dt">False</span> <span class="co">-- Return a value for empty list</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">first</span><span class="op">::</span><span class="fu">rest</span> <span class="op">-&gt;</span> <span class="fu">first</span><span class="op">.</span><span class="fu">id</span> <span class="op">==</span> <span class="fu">id</span> <span class="op">|&gt;</span> (<span class="op">||</span>) <span class="co">-- OR</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            (<span class="fu">does_id_exist</span> <span class="fu">rest</span> <span class="fu">id</span>) <span class="co">-- Recursion</span></span></code></pre></div>
+<p>It’s <a href="https://stackoverflow.com/a/9191474">debatable</a> as
+to which version is better. You could also use a ternary operator syntax
+such as <code>return "Passed" if age &lt;= 20 else "Failed"</code>. Try
+to be consistent.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

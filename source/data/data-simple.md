@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Here is a simple Python function. Compared to Elm, point out 3 problems with this code!
+# What is an alternative way of writing this `else` expression?
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-``
+`else`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,15 +71,13 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```python
-todo_list =
-    [{"id": 1}, {"id": 2}]
+age = 20
 
-def does_id_exist(todo_list, id):
-  for todo in todo_list:
-    if todo.id == id:
-      return True
-    else:
-      return "False"
+def old_enough(num: int) -> str:
+  if age <= 20:
+    return "You're old enough"
+  else:
+    return "You're too old"
 ```
 
 
@@ -97,21 +95,11 @@ def does_id_exist(todo_list, id):
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```terminal
-# Wrong types
->>> todo_exists([{"id": 1}], "1")
-False
->>> todo_exists([{"id": "1"}], 1)
-False
->>> todo_exists([1, 2, 3], 1)
-TypeError: 'int' object is not subscriptable
-
-# Empty lists (returns `None`)
->>> todo_exists([], 1)
-
-# Wrong (or missing) key names
->>> todo_exists([{"ids": 1}], 1)
-KeyError: 'id'
+```python
+if age <= 20:
+  return "You're old enough"
+# Remove the `else`
+return "You're too old"
 ```
 
 
@@ -120,11 +108,7 @@ KeyError: 'id'
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-1. Wrong types are not caught (generally),
-2. Errors don't give me enough information to fix them?
-3. Returning different values is allowed,
-4. Duplicate variable name (even if it's scoped),
-5. `None` especially seems like a potential headache!
+In Python there's no need to explicitly use the `else` keyword (even with `for` loops) and you can safely `return` the value. This will run `if` age is not `<= 20` (the failure case).
 
 
 <!-- -------------------------------------------------------------------------
@@ -132,17 +116,7 @@ KeyError: 'id'
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
- Elm gives us plenty of guarantees, with less testing. Although it might be harder to read for beginners (there's easier ways I'm sure) all of these problems go away when you're using Elm — even without type annotations, e.g:
-
-```elm
--- Must be a `List { b | id : a }`
--- Must be a `number`
-does_id_exist lst id =
-  case lst of
-    [] -> False -- Return a value for empty list
-    first::rest -> first.id == id |> (||) -- OR
-            (does_id_exist rest id) -- Recursion
-```
+It's [debatable](https://stackoverflow.com/a/9191474) as to which version is better. You could also use a ternary operator syntax such as `return "Passed" if age <= 20 else "Failed"`. Try to be consistent.
 
 
 <!-- -------------------------------------------------------------------------
