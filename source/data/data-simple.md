@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What is an alternative way of writing this `else` expression?
+# What will this produce?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Python
+## List types
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`else`
+`::`
 
 
 <!-- -------------------------------------------------------------------------
@@ -70,14 +70,8 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```python
-age = 20
-
-def old_enough(num: int) -> str:
-  if age <= 20:
-    return "You're old enough"
-  else:
-    return "You're too old"
+```terminal
+> 1 :: 2 :: [] :: 3 :: 4 :: []
 ```
 
 
@@ -95,11 +89,18 @@ def old_enough(num: int) -> str:
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```python
-if age <= 20:
-  return "You're old enough"
-# Remove the `else`
-return "You're too old"
+```terminal
+I am having trouble with this (::) operator:
+
+1|   1 :: 2 :: [] :: 3 :: 4 :: []
+                ^^^^^^^^^^^^^^^^^^
+The left side of (::) is:
+
+    List a
+
+But you are trying to put that into a list filled with:
+
+    number
 ```
 
 
@@ -108,7 +109,21 @@ return "You're too old"
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-In Python there's no need to explicitly use the `else` keyword (even with `for` loops) and you can safely `return` the value. This will run `if` age is not `<= 20` (the failure case).
+ We're trying to append an `[]` empty list onto a `List Int`. **This will only work if the empty list is the last item!** Otherwise we're mixing types, which is not allowed in Elm! As soon as you add something to a `List any` it becomes a typed list. The following examples _will_ work, however:
+
+```elm
+-- List Int
+1 :: 2 :: [] ++ []
+
+-- List (List Int)
+[1] :: [2,3] :: [] :: [4] :: []
+
+-- List (List number)
+[1,2,3] :: []
+
+-- List Int (flatten)
+List.concat [[1], [2], [3,4], []]
+```
 
 
 <!-- -------------------------------------------------------------------------
@@ -116,7 +131,7 @@ In Python there's no need to explicitly use the `else` keyword (even with `for` 
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-It's [debatable](https://stackoverflow.com/a/9191474) as to which version is better. You could also use a ternary operator syntax such as `return "Passed" if age <= 20 else "Failed"`. Try to be consistent.
+Elm has a **strict** typing system. Sometimes it feels TOO strict! It can be incredibly annoying, as languages like Python allow `[1, 2, 3, 2, 'London', []]` almost anything! I stumbled on this problem trying to recursively join a `[]` with a `[1,2,3]` using the `::` operator.
 
 
 <!-- -------------------------------------------------------------------------

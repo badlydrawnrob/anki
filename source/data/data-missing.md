@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What package is `isDigit` from, and what does it do?
+# What's wrong with our current data flow?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Filter
+## Update
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`isDigit`
+`Maybe String`
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,15 +86,48 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-from Char exposing (isDigit)
+type alias Model
+    = { base64 : Maybe String }
 
-hasDigit : String -> String
-hasDigit =
-  String.filter isDigit
-```
-```terminal
-> hasDigit "1 to watch"
-"1"
+viewImage : Model -> Html Msg
+viewImage model =
+    case model.base64 of
+        Nothing ->
+            button [ onClick ImageRequested ]
+                   [ text "Upload an image" ]
+
+        Just url ->
+            -- button [ onClick SendToServer ]
+            button [ onClick (SendToServer url) ]
+                   [ text "Send to the server" ]
+
+{- Currently we "lift" the `Maybe String`-}
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        ImageRequested ->
+            ...
+
+        ImageSelected ->
+            ...
+
+        ImageLoaded base64 ->
+            ( { model | base64 = Just base64 }
+            , Cmd.none
+            )
+
+        -- SendToServer ->
+        --     ( model
+        --     , postImage
+        --         "" ""
+        --         (lift model.image)
+        --     )
+
+        SendToServer base64 ->
+            ( model
+            , postImage
+                "" "" base64
+            )
 ```
 
 
@@ -103,11 +136,8 @@ hasDigit =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-| Function | Signature |
-|----------|-----------|
-| `isDigit` | (Char -> Bool) |
-
-`isDigit` checks if a `Char` is a number from `0—9`!
+Instead of unpacking the `Maybe String` _yet again_, we can unpack it once in the `Just url` branch of `viewImage` and pass it along to our `SendToServer String`
+message. This way we lift it once, and once only!
 
 
 <!-- -------------------------------------------------------------------------
@@ -115,13 +145,7 @@ hasDigit =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-`String.filter` is very handy to check strings to see if they contain a certain character. Or perhaps you want to create your own `isOneOf` function:
-
-```elm
-isOneOf = (\c -> c == 'd' || c == 'o' || c == 'g')
-String.filter isOneOf "This return a dog evend if not tgether"
--- "dogdog"
-```
+It's always a good idea to sketch out the user flow, and your data structures, to figure out the best way to organise your `update` and `view` logic. We could improve this code further by _[narrowing the types](https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/8)_ in `viewImage` (accept a `Maybe String` instead of a full `Model`).
 
 
 <!-- -------------------------------------------------------------------------

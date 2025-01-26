@@ -37,19 +37,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What package is <code>isDigit</code> from, and what does it do?</h1>
+<h1>What’s wrong with our current data flow?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Filter</h2>
+<h2>Update</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>isDigit</code></p>
+<p><code>Maybe String</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -78,46 +78,70 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">from</span> <span class="dt">Char</span> <span class="kw">exposing</span> (<span class="fu">isDigit</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hasDigit</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hasDigit</span> <span class="op">=</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">String</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">isDigit</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; hasDigit &quot;1 to watch&quot;
-&quot;1&quot;</code></pre>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> { <span class="fu">base64</span> : <span class="dt">Maybe</span> <span class="dt">String</span> }</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viewImage</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viewImage</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">base64</span> <span class="cf">of</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Nothing</span> <span class="op">-&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">button</span> [ <span class="fu">onClick</span> <span class="dt">ImageRequested</span> ]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                   [ <span class="fu">text</span> <span class="st">&quot;Upload an image&quot;</span> ]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Just</span> <span class="fu">url</span> <span class="op">-&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="co">-- button [ onClick SendToServer ]</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">button</span> [ <span class="fu">onClick</span> (<span class="dt">SendToServer</span> <span class="fu">url</span>) ]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                   [ <span class="fu">text</span> <span class="st">&quot;Send to the server&quot;</span> ]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">{- Currently we &quot;lift&quot; the `Maybe String`-}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> ( <span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span> )</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageRequested</span> <span class="op">-&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="op">...</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageSelected</span> <span class="op">-&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">...</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageLoaded</span> <span class="fu">base64</span> <span class="op">-&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            ( { <span class="fu">model</span> <span class="op">|</span> <span class="fu">base64</span> <span class="op">=</span> <span class="dt">Just</span> <span class="fu">base64</span> }</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- SendToServer -&gt;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     ( model</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     , postImage</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">--         &quot;&quot; &quot;&quot;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">--         (lift model.image)</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     )</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="dt">SendToServer</span> <span class="fu">base64</span> <span class="op">-&gt;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            ( <span class="fu">model</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            <span class="op">,</span> <span class="fu">postImage</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;&quot;</span> <span class="st">&quot;&quot;</span> <span class="fu">base64</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Signature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>isDigit</code></td>
-<td>(Char -&gt; Bool)</td>
-</tr>
-</tbody>
-</table>
-<p><code>isDigit</code> checks if a <code>Char</code> is a number from
-<code>0—9</code>!</p>
+<p>Instead of unpacking the <code>Maybe String</code> <em>yet
+again</em>, we can unpack it once in the <code>Just url</code> branch of
+<code>viewImage</code> and pass it along to our
+<code>SendToServer String</code> message. This way we lift it once, and
+once only!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><code>String.filter</code> is very handy to check strings to see if
-they contain a certain character. Or perhaps you want to create your own
-<code>isOneOf</code> function:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isOneOf</span> <span class="op">=</span> (\<span class="fu">c</span> <span class="op">-&gt;</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;d&#39;</span> <span class="op">||</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;o&#39;</span> <span class="op">||</span> <span class="fu">c</span> <span class="op">==</span> <span class="ch">&#39;g&#39;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">String</span><span class="op">.</span><span class="fu">filter</span> <span class="fu">isOneOf</span> <span class="st">&quot;This return a dog evend if not tgether&quot;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- &quot;dogdog&quot;</span></span></code></pre></div>
+<p>It’s always a good idea to sketch out the user flow, and your data
+structures, to figure out the best way to organise your
+<code>update</code> and <code>view</code> logic. We could improve this
+code further by <em><a
+href="https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/8">narrowing
+the types</a></em> in <code>viewImage</code> (accept a
+<code>Maybe String</code> instead of a full <code>Model</code>).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
