@@ -29,7 +29,7 @@ Each `data-*` file will be updated when you run this command. There's also a spe
 ## The professional way to create your own CSS theme
 
 > I'm keeping this dead simple, for beginners to intermediates.
-> We're only interested in colours and typography for customisations. Apologies if this is slightly convoluted right now.
+> We're only interested in colours and typography for customisations. Apologies if this is slightly convoluted right now. It'll take a little playing around to find the right match of colours. **Have fun, and please do share your themes!**
 
 ```text
 source
@@ -64,8 +64,10 @@ build
 > `custom-theme.less` holds all the colours you'll need to create your own theme. We're using CSS variables (e.g: `var(--color-code-dark-*)`) and compiling them with [Less CSS](https://lesscss.org/).
 
 - You'll mainly be editing the `variables/custom-theme.less` colours ...
-- You can reference the `--color-code-*` variables from `breezedark.less`, which holds all the variables you'll need.
-- You can also reference Pandoc's Skylighting themes (see below) for colours, but there's better themes out in the wild!
+- You can reference the `--color-code-*` variables from `breezedark.less`:
+    - This holds all the variables you'll need.
+- You can also reference Pandoc's Skylighting themes (see below) for colours ...
+    - But there's [better](https://draculatheme.com/) themes out in the wild!
 
 If you'd like to also change the typography, such as `--font-*` variables, you'll can find this in `typography.less` and other files. You can edit in-place or create `custom-*.less` files and add them to `.gitignore` so you don't have to keep making changes when the repo updates.
 
@@ -120,7 +122,7 @@ If you want to check out all of Pandoc's highlighting themes to get inspiration,
 It'll take a little playing around to find the right match of colours. Have fun, and please do share your themes!
 
 
-### Adding your new theme to the Anki desktop app
+## Adding your new theme to the Anki desktop app
 
 > Now your brand new theme has been built, we're ready to add it to Anki!
 
@@ -144,14 +146,14 @@ Every time this repo the updates it's CSS with a [new release](https://github.co
 If you have any problems, [create an issue](https://github.com/badlydrawnrob/anki/issues) in this repo.
 
 
-## A couple of notes
+## A couple of notes on `/demo` and Less CSS
 
 The `/themes/demo/*` files are just for demo purposes. These can be previewed with your new CSS changes, but should be left alone. Our repository should be up-to-date with all the correct `devDependencies`, but if anything goes wrong, send me an issue.[^1] The `/data/*html` files are for viewing in your code editor only.[^2].
 
 Finally, just a quick note on Less CSS and those `.less` files. **I'm only using this to nicely order the CSS files** for quick viewing and compiling. I don't advocate using preprocessors anymore.[^3]
 
 
-## Build your own custom Anki cards from scratch
+## Build your own custom Anki cards from scratch (deprecated)
 
 > This is now out of scope for this repo.
 
