@@ -107,6 +107,21 @@ Once you've compiled your `custom-theme.less` go to `/build/custom/custom-theme.
 If you _really_ wanted, you could create a new light theme as well as a new dark theme, but I'd probably advise against that. Keep things simple.
 
 
+## Adding your new theme to the Anki desktop app
+
+> Now your brand new theme has been built, we're ready to add it to Anki!
+
+Open the Anki desktop app and:
+
+2. Go to `Tools > Manage Note Types`.
+3. Select the `Anki flashcards: ...` Note Type.
+4. Select the `Cards` button.
+5. Select the `Styling` option.
+6. Delete the CSS
+7. Add your custom CSS from the compiled `main.css` file.
+7. Repeat for each Card Type you'd like to edit.
+
+
 ## Pandoc's Skylighting (under the hood)
 
 > Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18)
@@ -130,21 +145,6 @@ There's a known bug in Pandoc [that I've noted here](https://github.com/badlydra
 Another thing to mention is [dependency hell](https://github.com/badlydrawnrob/anki/blob/master/source/docs/error/index.md), and I feel I've made the best of the available options for highlighting (for long-term support).
 
 
-## Adding your new theme to the Anki desktop app
-
-> Now your brand new theme has been built, we're ready to add it to Anki!
-
-Open the Anki desktop app and:
-
-2. Go to `Tools > Manage Note Types`.
-3. Select the `Anki flashcards: ...` Note Type.
-4. Select the `Cards` button.
-5. Select the `Styling` option.
-6. Delete the CSS
-7. Add your custom CSS from the compiled `main.css` file.
-7. Repeat for each Card Type you'd like to edit.
-
-
 ## Keeping your custom theme up-to-date
 
 > Take care to keep your repository up-to-date, so that whenever [Anki Programming Flashcards](https://github.com/badlydrawnrob/anki) update, you don't lose your changes.
@@ -156,7 +156,7 @@ If you have any problems, [create an issue](https://github.com/badlydrawnrob/ank
 
 ## A couple of notes on `/demo` and Less CSS
 
-The `/themes/demo/*` files are just for demo purposes. These can be previewed with your new CSS changes, but should be left alone. Our repository should be up-to-date with all the correct `devDependencies`, but if anything goes wrong, send me an issue.[^1] The `/data/*html` files are for viewing in your code editor only.[^2].
+The `/themes/demo/*` files are just for demo purposes. These can be previewed with your new CSS changes, but should be left alone. Our repository should be up-to-date with all the correct `devDependencies`, but if anything goes wrong, send me an issue.[^1] The `/data/*html` files are for viewing in your code editor only.[^2]
 
 Finally, just a quick note on Less CSS and those `.less` files. **I'm only using this to nicely order the CSS files** for quick viewing and compiling. I don't advocate using preprocessors anymore.[^3]
 
