@@ -29,7 +29,9 @@ Each `data-*` file will be updated when you run this command. There's also a spe
 ## The professional way to create your own CSS theme
 
 > I'm keeping this dead simple, for beginners to intermediates.
-> We're only interested in colours and typography for customisations. Apologies if this is slightly convoluted right now. It'll take a little playing around to find the right match of colours. **Have fun, and please do share your themes!**
+> We're only interested in colours and typography for customisations. Apologies if this is slightly convoluted right now. It'll take a little playing around to find the right match of colours.
+>
+> 🧑‍🎨 **Have fun, and please do share your themes!** 🎨
 
 ```text
 source
