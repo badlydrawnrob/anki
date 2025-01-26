@@ -113,13 +113,21 @@ If you _really_ wanted, you could create a new light theme as well as a new dark
 
 Open the Anki desktop app and:
 
-2. Go to `Tools > Manage Note Types`.
-3. Select the `Anki flashcards: ...` Note Type.
-4. Select the `Cards` button.
-5. Select the `Styling` option.
-6. Delete the CSS
-7. Add your custom CSS from the compiled `main.css` file.
+1. Go to `Tools > Manage Note Types`.
+2. Select the `Anki flashcards: ...` Note Type.
+3. Select the `Cards` button.
+4. Select the `Styling` option.
+5. Delete the CSS
+6. Add your custom CSS from the compiled `main.css` file.
 7. Repeat for each Card Type you'd like to edit.
+
+### Keeping your custom theme up-to-date
+
+> Take care to keep your repository up-to-date, so that whenever [Anki Programming Flashcards](https://github.com/badlydrawnrob/anki) update, you don't lose your changes.
+
+Every time this repo the updates it's CSS with a [new release](https://github.com/badlydrawnrob/anki/releases), make sure your clone or fork is up-to-date. Upload the `.apkg` deck to the Anki desktop app first, then manually override your CSS.
+
+If you have any problems, [create an issue](https://github.com/badlydrawnrob/anki/issues) in this repo.
 
 
 ## Pandoc's Skylighting (under the hood)
@@ -143,15 +151,6 @@ It'll take a little playing around to find the right match of colours. Have fun,
 There's a known bug in Pandoc [that I've noted here](https://github.com/badlydrawnrob/anki/issues/152) — currently some (all?) languages have limited "tokens", meaning our Markdown code blocks don't always render as well as other highlighting scripts. No matter how you arrange your colours, there's going to be trade-offs (which colours work best for each token?).
 
 Another thing to mention is [dependency hell](https://github.com/badlydrawnrob/anki/blob/master/source/docs/error/index.md), and I feel I've made the best of the available options for highlighting (for long-term support).
-
-
-## Keeping your custom theme up-to-date
-
-> Take care to keep your repository up-to-date, so that whenever [Anki Programming Flashcards](https://github.com/badlydrawnrob/anki) update, you don't lose your changes.
-
-Every time this repo the updates it's CSS with a [new release](https://github.com/badlydrawnrob/anki/releases), make sure your clone or fork is up-to-date. Upload the `.apkg` deck to the Anki desktop app first, then manually override your CSS.
-
-If you have any problems, [create an issue](https://github.com/badlydrawnrob/anki/issues) in this repo.
 
 
 ## A couple of notes on `/demo` and Less CSS
