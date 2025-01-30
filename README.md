@@ -59,7 +59,7 @@ Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) 
 
 > 🎨 Life is better in full colour!
 
-They say code is an art form. Anki flashcard's CSS themes come with a light and dark colour palette; it's also good for `dark mode` if that's your thing.
+They say code is an art form. Anki flashcard's CSS themes come with a light and dark colour palette; it's also good for [`dark mode`](#dark-mode) if that's your thing.
 
 - 👨🏻‍🎨 **Starter themes**
     - 🥷🏻 Monochrome
@@ -182,9 +182,7 @@ If you're having formatting problems, make sure you're **[following the guide](#
 
 <details>
 <summary>
-<strong>
-    ###### 5. How do I use dark mode in Anki?
-</strong>
+<strong><span id="dark-mode">5. How do I use dark/night mode in Anki?</strong>
 </summary>
 
 The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
