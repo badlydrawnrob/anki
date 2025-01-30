@@ -180,6 +180,16 @@ scroll horizontally. You can change the settings, [see issue #118](https://githu
 If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy->paste` text, or add junk to the html. **TL;DR** [paste as plain text](https://forums.ankiweb.net/t/paste-plain-text/4326) to avoid formatting issues.
 </details>
 
+<details>
+<summary>
+<strong><span id="#dark-mode">5. How do I use dark mode in Anki?</span></strong>
+</summary>
+
+The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
+
+If you want to force the display mode, in Anki desktop select the toolbar `Anki -> Preferences -> Appearance -> Theme`, and select light or dark. For the mobile app, you can select the gear icon `Preferences -> Theme -> Night Mode ...` and "Force on/off".
+</details>
+
 
 ## License and inspiration
 
