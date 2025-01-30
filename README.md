@@ -182,7 +182,9 @@ If you're having formatting problems, make sure you're **[following the guide](#
 
 <details>
 <summary>
-<strong><span id="#dark-mode">5. How do I use dark mode in Anki?</span></strong>
+<strong>
+    ###### 5. How do I use dark mode in Anki?
+</strong>
 </summary>
 
 The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
