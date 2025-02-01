@@ -66,7 +66,6 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 ### How to change your theme colours
 
 > If you're a beginner, here's how to change colours.
-> _The [🧑‍🎓 professional guide](../../../README.md#its-more-fun-with-a-compiler-advanced) provides a better way._
 
 1. You'll have the latest [Anki flashcards release](https://github.com/badlydrawnrob/anki/releases).
 2. In the Anki app menu, go to `Manage Note Types`.
@@ -79,11 +78,11 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 
 
 ## A better way to manage our flashcards (and save our changes)
-### Custom themes, `markdown->html` data files, and offline cards
+### Custom themes (that are better), `markdown->html` field data, offline cards
 
 > So far we've learned how to use colours, but every time you update Anki Programming Flashcards (in Anki), you'll lose your changes. We can do better!
 
 Let's do things the professional way, because [🧑‍🎓 it's more fun with a compiler!](../../../README.md#its-more-fun-with-a-compiler-advanced)
 
-Once you've levelled up your programming skills and the words "[clone](https://github.com/git-guides/git-clone)", "[fork](https://docs.github.com/articles/fork-a-repo)", "`npm`" and "[terminal](https://en.wikipedia.org/wiki/Command-line_interface)" don't scare you, you're just about ready to do something interesting: let's keep our themes up-to-date, save our changes, create cards at lightning speed _offline_ with Markdown, all with a few little tools ...
+Once you've levelled up your programming skills and the words "[clone](https://github.com/git-guides/git-clone)", "[fork](https://docs.github.com/articles/fork-a-repo)", "`npm`" and "[terminal](https://en.wikipedia.org/wiki/Command-line_interface)" don't scare you, you're just about ready to do something interesting: let's **keep our custom themes up-to-date**, **save our changes**, create cards at **lightning speed _offline_** with Markdown, all with a few little handy tools ...
 
