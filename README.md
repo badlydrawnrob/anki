@@ -74,7 +74,7 @@ You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inli
 
 **Simple is better.** If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code — as clear as possible. Those 10 cards you wrote with 100 related ideas? Sifting through those will become a chore; 100 cards with one idea is much better!
 
-Imagine you're stupid, writing for your stupid future self; you'll look back on your flashcards and they'll make perfect sense.
+**Imagine you're stupid, writing for your stupid future self;** you'll look back on your flashcards and they'll make perfect sense. Whenever you find yourself struggling to understand or getting overwhelmed (with information), it's time for a rewrite! Follow these rules:
 
 - One idea per card
 - Less is more (trim the fat)
