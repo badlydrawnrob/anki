@@ -50,7 +50,7 @@ There's two types of cards to choose from:
     - A diagram of a small program you have to guess
     - A sketch of a function or program to drill yourself on
 
-Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) to your code. But first, a quick tip on how to keep your Anki deck nice and organised ...
+Next, you'll probably want to [add some pretty colors](#add-color-to-your-code) to your code.
 
 
 ## Add color to your code
@@ -67,6 +67,7 @@ They say code is an art form. Anki flashcard's CSS themes come with a light and 
 
 You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc. Our Breeze Dark theme is a modified version (not the one Pandoc uses).[^2]
 
+Next up, a quick tip on how to keep your Anki deck nice and organised ...
 
 ## Keep it simple, stupid!
 
