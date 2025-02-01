@@ -198,6 +198,8 @@ If you want to force the display mode, in Anki desktop select the toolbar `Anki 
 
 Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^3] iPhone photo by `@svstudioart` on Freepik.
 
+Also noteworthy is **[Kanri](https://www.kanriapp.com/)**, a cool offline-first Kanban organiser for [getting things done](https://hamberg.no/gtd). It's free!
+
 
 [^1]: Meaning, likely to change. I'm [trying a few things out](https://github.com/badlydrawnrob/anki/issues/66) privately and when I have something to share, I'll let you know!
 
