@@ -78,8 +78,8 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 8. Repeat for all Anki flashcard card types
 
 
-## Custom themes, `markdown->html` data files, and offline cards
-### A better way to manage our flashcards (and save our changes)
+## A better way to manage our flashcards (and save our changes)
+### Custom themes, `markdown->html` data files, and offline cards
 
 > So far we've learned how to use colours, but every time you update Anki Programming Flashcards (in Anki), you'll lose your changes. We can do better!
 
