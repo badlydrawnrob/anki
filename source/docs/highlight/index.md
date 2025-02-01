@@ -29,10 +29,11 @@ For regular `string` fields, such as `★ Title` you can highlight a code sectio
 
 > - **View our [default colour themes](../../README.md#syntax-highlighting).**
 > - We use Markdown rendered `code block`s for our pretty colours.
+> - Beginners can use this helpful [online tool](https://tinyurl.com/mr43ydea);
 >
-> For beginners, use this [online tool](https://tinyurl.com/mr43ydea); if you know how to use `npm`, [🧑‍🎓 it's more fun with a compiler](../../README.md#its-more-fun-with-a-compiler-advanced)
+> _If you know how to use `npm`, [🧑‍🎓 it's more fun with a compiler](../../README.md#its-more-fun-with-a-compiler-advanced)_
 
-Basic colours are fine for small lines of code, but you'll probably want to go [full colour](#full-syntax-highlighting) next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Theme provides pretty colours (CSS), and we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/demo/example18f.html). Here's how:
+Basic colours are fine for small lines of code, but you'll probably want to go **full colour** next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Programming Flashcards provide pretty colours (CSS), and we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/demo/example18f.html). Here's how:
 
 1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks),
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea),
@@ -76,16 +77,11 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 7. Add them to the bottom of the `Styling` box, and [edit them](https://github.com/badlydrawnrob/anki/issues/78).
 8. Repeat for all Anki flashcard card types
 
-#### Updates to Anki flashcards
-
-If you edit your colors this way, **changes will be lost every time** you download a new release of Anki Flashcards and import them to Anki. See below for a better way.
-
 
 ## Custom themes, `markdown->html` data files, and offline cards
-### A better way to manage our flashcards
+### A better way to manage our flashcards (and save our changes)
 
-> So far we've learned how to use colours, but we can do better!
-> Every time you update Anki Programming Flashcards, you'll lose changes.
+> So far we've learned how to use colours, but every time you update Anki Programming Flashcards (in Anki), you'll lose your changes. We can do better!
 
 Once you've levelled up your programming skills and the words "[clone](https://github.com/git-guides/git-clone)", "[fork](https://docs.github.com/articles/fork-a-repo)", "`npm`" and "[terminal](https://en.wikipedia.org/wiki/Command-line_interface)" don't scare you, you're just about ready to do something interesting: let's keep our themes up-to-date, save our changes, create cards at lightning speed _offline_ with Markdown, all with a few little tools ...
 
