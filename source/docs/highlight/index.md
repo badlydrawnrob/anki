@@ -27,11 +27,11 @@ For regular `string` fields, such as `★ Title` you can highlight a code sectio
 
 ## Full syntax highlighting
 
-> - **View our [default colour themes](../../README.md#syntax-highlighting).**
+> - **View our [default colour themes](../../../README.md#syntax-highlighting).**
 > - We use Markdown rendered `code block`s for our pretty colours.
 > - Beginners can use this helpful [online tool](https://tinyurl.com/mr43ydea);
 >
-> _If you know how to use `npm`, [🧑‍🎓 it's more fun with a compiler](../../README.md#its-more-fun-with-a-compiler-advanced)_
+> _If you know how to use `npm`, [🧑‍🎓 it's more fun with a compiler](../../../README.md#its-more-fun-with-a-compiler-advanced)_
 
 Basic colours are fine for small lines of code, but you'll probably want to go **full colour** next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Programming Flashcards provide pretty colours (CSS), and we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/demo/example18f.html). Here's how:
 
@@ -83,7 +83,7 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 
 > So far we've learned how to use colours, but every time you update Anki Programming Flashcards (in Anki), you'll lose your changes. We can do better!
 
-Let's do things the professional way, because [🧑‍🎓 it's more fun with a compiler!](its-more-fun-with-a-compiler-advanced)
+Let's do things the professional way, because [🧑‍🎓 it's more fun with a compiler!](../../../README.md#its-more-fun-with-a-compiler-advanced)
 
 Once you've levelled up your programming skills and the words "[clone](https://github.com/git-guides/git-clone)", "[fork](https://docs.github.com/articles/fork-a-repo)", "`npm`" and "[terminal](https://en.wikipedia.org/wiki/Command-line_interface)" don't scare you, you're just about ready to do something interesting: let's keep our themes up-to-date, save our changes, create cards at lightning speed _offline_ with Markdown, all with a few little tools ...
 
