@@ -132,7 +132,7 @@ If you have any problems, [create an issue](https://github.com/badlydrawnrob/ank
 
 ## Pandoc's Skylighting (under the hood)
 
-> Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18)
+> Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18). Here's an overview of [all default themes](https://github.com/badlydrawnrob/anki/issues/142).
 
 Pandoc's Skylighting comes with a bunch of `--list-highlight-styles` and `--print-highlight-style=<theme>` that you can reference when editing your `--color-code-dark-*` variables. I currently work in the following way:
 

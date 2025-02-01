@@ -107,7 +107,7 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 - ⏱️ Want a faster way to create your flashcards?
 - 🤖 I've got you covered with `npm` and `pandoc`.
 
-Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#compiling-your-card-field-data)**. It'll render all your card's data fields for you in a flash!
+Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#first-steps)**. It'll render all your card's data fields for you in a flash!
 
 https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 </details>
