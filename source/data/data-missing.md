@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What's wrong with our current data flow?
+# How would we check if our password doesn't match?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Update
+## Equality
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`Maybe String`
+`!=`
 
 
 <!-- -------------------------------------------------------------------------
@@ -85,49 +85,24 @@
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```elm
-type alias Model
-    = { base64 : Maybe String }
+```python
+from pydantic import BaseModel
 
-viewImage : Model -> Html Msg
-viewImage model =
-    case model.base64 of
-        Nothing ->
-            button [ onClick ImageRequested ]
-                   [ text "Upload an image" ]
+class User(BaseModel):
+  email: str
+  password: str
 
-        Just url ->
-            -- button [ onClick SendToServer ]
-            button [ onClick (SendToServer url) ]
-                   [ text "Send to the server" ]
+bob = User(email="bob@hope.com",password="tidy")
+users = { "bob@hope.com": bob }
 
-{- Currently we "lift" the `Maybe String`-}
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg of
-        ImageRequested ->
-            ...
-
-        ImageSelected ->
-            ...
-
-        ImageLoaded base64 ->
-            ( { model | base64 = Just base64 }
-            , Cmd.none
-            )
-
-        -- SendToServer ->
-        --     ( model
-        --     , postImage
-        --         "" ""
-        --         (lift model.image)
-        --     )
-
-        SendToServer base64 ->
-            ( model
-            , postImage
-                "" "" base64
-            )
+# Check against our stored user bob ...
+def is_not_equal(user: User) -> bool:
+  return True if users[user.email].password != user.password else False
+```
+```terminal
+# 'tid'
+>>> equal_or_not(User(email="bob@hope.com",password="tid",events=[]))
+True
 ```
 
 
@@ -136,8 +111,7 @@ update msg model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Instead of unpacking the `Maybe String` _yet again_, we can unpack it once in the `Just url` branch of `viewImage` and pass it along to our `SendToServer String`
-message. This way we lift it once, and once only!
+Does our password match the given email username? `"tid"` does not! We're accessing our `User` model with dot notation here. Getting used to object oriented style accessors takes some adjustment. With Elm, you'd probably [just use a record](https://elm-lang.org/docs/records#comparison-of-records-and-objects) and the `!=` equality operator.
 
 
 <!-- -------------------------------------------------------------------------
@@ -145,7 +119,7 @@ message. This way we lift it once, and once only!
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-It's always a good idea to sketch out the user flow, and your data structures, to figure out the best way to organise your `update` and `view` logic. We could improve this code further by _[narrowing the types](https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/8)_ in `viewImage` (accept a `Maybe String` instead of a full `Model`).
+We'd also need to check our email is a match, otherwise we get a `KeyError: 'bob@hope.co'` which we'd need to fix.
 
 
 <!-- -------------------------------------------------------------------------

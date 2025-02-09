@@ -37,19 +37,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What’s wrong with our current data flow?</h1>
+<h1>How would we check if our password doesn’t match?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Update</h2>
+<h2>Equality</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>Maybe String</code></p>
+<p><code>!=</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -78,70 +78,39 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> { <span class="fu">base64</span> : <span class="dt">Maybe</span> <span class="dt">String</span> }</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viewImage</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viewImage</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">base64</span> <span class="cf">of</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Nothing</span> <span class="op">-&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">button</span> [ <span class="fu">onClick</span> <span class="dt">ImageRequested</span> ]</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                   [ <span class="fu">text</span> <span class="st">&quot;Upload an image&quot;</span> ]</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Just</span> <span class="fu">url</span> <span class="op">-&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="co">-- button [ onClick SendToServer ]</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">button</span> [ <span class="fu">onClick</span> (<span class="dt">SendToServer</span> <span class="fu">url</span>) ]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                   [ <span class="fu">text</span> <span class="st">&quot;Send to the server&quot;</span> ]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">{- Currently we &quot;lift&quot; the `Maybe String`-}</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> ( <span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span> )</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageRequested</span> <span class="op">-&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="op">...</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageSelected</span> <span class="op">-&gt;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">...</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ImageLoaded</span> <span class="fu">base64</span> <span class="op">-&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            ( { <span class="fu">model</span> <span class="op">|</span> <span class="fu">base64</span> <span class="op">=</span> <span class="dt">Just</span> <span class="fu">base64</span> }</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">-- SendToServer -&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     ( model</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     , postImage</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">--         &quot;&quot; &quot;&quot;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">--         (lift model.image)</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">--     )</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="dt">SendToServer</span> <span class="fu">base64</span> <span class="op">-&gt;</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            ( <span class="fu">model</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            <span class="op">,</span> <span class="fu">postImage</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;&quot;</span> <span class="st">&quot;&quot;</span> <span class="fu">base64</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> User(BaseModel):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  email: <span class="bu">str</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  password: <span class="bu">str</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>bob <span class="op">=</span> User(email<span class="op">=</span><span class="st">&quot;bob@hope.com&quot;</span>,password<span class="op">=</span><span class="st">&quot;tidy&quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>users <span class="op">=</span> { <span class="st">&quot;bob@hope.com&quot;</span>: bob }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check against our stored user bob ...</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_not_equal(user: User) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">True</span> <span class="cf">if</span> users[user.email].password <span class="op">!=</span> user.password <span class="cf">else</span> <span class="va">False</span></span></code></pre></div>
+<pre class="terminal"><code># &#39;tid&#39;
+&gt;&gt;&gt; equal_or_not(User(email=&quot;bob@hope.com&quot;,password=&quot;tid&quot;,events=[]))
+True</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Instead of unpacking the <code>Maybe String</code> <em>yet
-again</em>, we can unpack it once in the <code>Just url</code> branch of
-<code>viewImage</code> and pass it along to our
-<code>SendToServer String</code> message. This way we lift it once, and
-once only!</p>
+<p>Does our password match the given email username? <code>"tid"</code>
+does not! We’re accessing our <code>User</code> model with dot notation
+here. Getting used to object oriented style accessors takes some
+adjustment. With Elm, you’d probably <a
+href="https://elm-lang.org/docs/records#comparison-of-records-and-objects">just
+use a record</a> and the <code>!=</code> equality operator.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>It’s always a good idea to sketch out the user flow, and your data
-structures, to figure out the best way to organise your
-<code>update</code> and <code>view</code> logic. We could improve this
-code further by <em><a
-href="https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/8">narrowing
-the types</a></em> in <code>viewImage</code> (accept a
-<code>Maybe String</code> instead of a full <code>Model</code>).</p>
+<p>We’d also need to check our email is a match, otherwise we get a
+<code>KeyError: 'bob@hope.co'</code> which we’d need to fix.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
