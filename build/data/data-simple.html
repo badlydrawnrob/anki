@@ -39,19 +39,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What will this produce?</h1>
+<h1>Explain why password says <code>"wow"</code>!</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>List types</h2>
+<h2>Anonymous functions</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>::</code></p>
+<p><code>(\f -&gt; f + 1)</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -62,7 +62,11 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-<pre class="terminal"><code>&gt; 1 :: 2 :: [] :: 3 :: 4 :: []</code></pre>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">speak1</span> <span class="op">=</span> <span class="st">&quot;wow!&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">transform</span> <span class="op">=</span> (\<span class="fu">r</span> <span class="op">-&gt;</span> { <span class="fu">r</span> <span class="op">|</span> <span class="fu">speak2</span> <span class="op">=</span> <span class="fu">speak1</span> })</span></code></pre></div>
+<pre class="terminal"><code>&gt; transform { speak2 = &quot;how do I look?&quot; }
+{ speak = &quot;wow!&quot; }</code></pre>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -74,50 +78,27 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<pre class="terminal"><code>I am having trouble with this (::) operator:
-
-1|   1 :: 2 :: [] :: 3 :: 4 :: []
-                ^^^^^^^^^^^^^^^^^^
-The left side of (::) is:
-
-    List a
-
-But you are trying to put that into a list filled with:
-
-    number</code></pre>
+<pre class="terminal"><code></code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>We’re trying to append an <code>[]</code> empty list onto a
-<code>List Int</code>. <strong>This will only work if the empty list is
-the last item!</strong> Otherwise we’re mixing types, which is not
-allowed in Elm! As soon as you add something to a <code>List any</code>
-it becomes a typed list. The following examples <em>will</em> work,
-however:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- List Int</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">::</span> <span class="dv">2</span> <span class="op">::</span> [] <span class="op">++</span> []</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- List (List Int)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="op">::</span> [<span class="dv">2</span><span class="op">,</span><span class="dv">3</span>] <span class="op">::</span> [] <span class="op">::</span> [<span class="dv">4</span>] <span class="op">::</span> []</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">-- List (List number)</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span>] <span class="op">::</span> []</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- List Int (flatten)</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">concat</span> [[<span class="dv">1</span>]<span class="op">,</span> [<span class="dv">2</span>]<span class="op">,</span> [<span class="dv">3</span><span class="op">,</span><span class="dv">4</span>]<span class="op">,</span> []]</span></code></pre></div>
+<ol type="1">
+<li><code>speak1</code> gets assigned to <code>speak2</code> (even
+though it’s an extensible record)</li>
+<li>When the <code>transform</code> function runs it uses the
+<code>speak1</code> variable …</li>
+<li>So our output now says <code>"wow!"</code></li>
+</ol>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Elm has a <strong>strict</strong> typing system. Sometimes it feels
-TOO strict! It can be incredibly annoying, as languages like Python
-allow <code>[1, 2, 3, 2, 'London', []]</code> almost anything! I
-stumbled on this problem trying to recursively join a <code>[]</code>
-with a <code>[1,2,3]</code> using the <code>::</code> operator.</p>
+<p>The syntax <code>{ r | ... }</code> is how to change a record’s
+fields, so all we’re doing is storing the variable <code>speak1</code>
+inside <code>speak2</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

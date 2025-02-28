@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What will this produce?
+# Explain why password says `"wow"`!
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## List types
+## Anonymous functions
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`::`
+`(\f -> f + 1)`
 
 
 <!-- -------------------------------------------------------------------------
@@ -70,8 +70,13 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
+```elm
+speak1 = "wow!"
+transform = (\r -> { r | speak2 = speak1 })
+```
 ```terminal
-> 1 :: 2 :: [] :: 3 :: 4 :: []
+> transform { speak2 = "how do I look?" }
+{ speak = "wow!" }
 ```
 
 
@@ -90,17 +95,6 @@
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```terminal
-I am having trouble with this (::) operator:
-
-1|   1 :: 2 :: [] :: 3 :: 4 :: []
-                ^^^^^^^^^^^^^^^^^^
-The left side of (::) is:
-
-    List a
-
-But you are trying to put that into a list filled with:
-
-    number
 ```
 
 
@@ -109,21 +103,9 @@ But you are trying to put that into a list filled with:
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
- We're trying to append an `[]` empty list onto a `List Int`. **This will only work if the empty list is the last item!** Otherwise we're mixing types, which is not allowed in Elm! As soon as you add something to a `List any` it becomes a typed list. The following examples _will_ work, however:
-
-```elm
--- List Int
-1 :: 2 :: [] ++ []
-
--- List (List Int)
-[1] :: [2,3] :: [] :: [4] :: []
-
--- List (List number)
-[1,2,3] :: []
-
--- List Int (flatten)
-List.concat [[1], [2], [3,4], []]
-```
+1. `speak1` gets assigned to `speak2` (even though it's an extensible record)
+2. When the `transform` function runs it uses the `speak1` variable ...
+3. So our output now says `"wow!"`
 
 
 <!-- -------------------------------------------------------------------------
@@ -131,7 +113,7 @@ List.concat [[1], [2], [3,4], []]
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Elm has a **strict** typing system. Sometimes it feels TOO strict! It can be incredibly annoying, as languages like Python allow `[1, 2, 3, 2, 'London', []]` almost anything! I stumbled on this problem trying to recursively join a `[]` with a `[1,2,3]` using the `::` operator.
+The syntax `{ r | ... }` is how to change a record's fields, so all we're doing is storing the variable `speak1` inside `speak2`.
 
 
 <!-- -------------------------------------------------------------------------
