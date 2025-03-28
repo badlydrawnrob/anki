@@ -32,7 +32,7 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 2. Open the [Anki](https://apps.ankiweb.net) desktop app.
 3. `File > Import ...` the deck,
 4. Add a new card,
-5. Select the `APF` type (Anki Programming Flashcards),
+5. Select the `Anki Programming Flashcards (APF)` card type
 6. Get creative with your cards!
 
 
@@ -107,7 +107,7 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 - ⏱️ Want a faster way to create your flashcards?
 - 🤖 I've got you covered with `npm` and `pandoc`.
 
-Once you've got the basics of Anki flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#first-steps)**. It'll render all your card's data fields for you in a flash!
+Once you've got the basics of Anki programming flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#first-steps)**. It'll render all your card's data fields for you in a flash!
 
 https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 </details>
@@ -125,11 +125,11 @@ https://github.com/user-attachments/assets/4769a61f-0843-41d6-a3a3-6f3c93a2d8e7
 
 I'd advise beginners to start by writing great cards, before moving on to use the compiler. I know when I was starting out using terminal and compilers took some getting used to!
 
-## Why Anki flashcards instead of an add-on?
+## Why Anki programming flashcards instead of an add-on?
 
 I've spent a lot of time so you can:
 
-- Use Anki flashcards as they are — or create your own colors/typography,
+- Use the flashcards as they are — or create your own colors/typography,
 - Use the excellent `markdown->html` workflow  ... online or locally.
 
 The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app, no add-ons required (which tend to go out-of-date); it's stable software, with very light dependencies (Node and Pandoc) and a very simple setup.
@@ -194,9 +194,9 @@ If you want to force the display mode, in Anki desktop select the toolbar `Anki 
 
 ## License and inspiration
 
-> Anki flashcards are licensed under the [MIT Open Source License](./license.md)
+> Anki programming flashcards (APF) are licensed under the [MIT Open Source License](./license.md)
 
-Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^3] iPhone photo by `@svstudioart` on Freepik.
+Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki programming flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^3] iPhone photo by `@svstudioart` on Freepik.
 
 Also noteworthy is **[Kanri](https://www.kanriapp.com/)**: a cool Kanban organiser for [getting things done](https://hamberg.no/gtd). Works offline and is free!
 

@@ -114,7 +114,7 @@ If you _really_ wanted, you could create a new light theme as well as a new dark
 Open the Anki desktop app and:
 
 1. Go to `Tools > Manage Note Types`.
-2. Select the `Anki flashcards: ...` Note Type.
+2. Select the `APF: ...` Note Type.
 3. Select the `Cards` button.
 4. Select the `Styling` option.
 5. Delete the CSS
