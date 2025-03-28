@@ -72,7 +72,7 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 3. Select the `Anki flashcards: ...` Note Type.
 4. Select the `Cards` button.
 5. Select the `Styling` option.
-6. Copy our `--color-code` variables from [`breeze.dark.less`](../../style/base/variables/breezedark.less).
+6. Copy our `--color-code` variables from [`breezedark.less`](../../style/base/variables/breezedark.less).
 7. Add them to the bottom of the `Styling` box, and [edit them](https://github.com/badlydrawnrob/anki/issues/78).
 8. Repeat for all Anki flashcard card types
 
