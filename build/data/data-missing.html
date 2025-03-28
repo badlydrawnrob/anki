@@ -37,19 +37,19 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How would we check if our password doesn’t match?</h1>
+<h1>Which function allows us to calculate this sum?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Equality</h2>
+<h2>Maybe</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>!=</code></p>
+<p><code>Just 100 : Maybe number</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -78,39 +78,36 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> User(BaseModel):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  email: <span class="bu">str</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  password: <span class="bu">str</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>bob <span class="op">=</span> User(email<span class="op">=</span><span class="st">&quot;bob@hope.com&quot;</span>,password<span class="op">=</span><span class="st">&quot;tidy&quot;</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>users <span class="op">=</span> { <span class="st">&quot;bob@hope.com&quot;</span>: bob }</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Check against our stored user bob ...</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_not_equal(user: User) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">True</span> <span class="cf">if</span> users[user.email].password <span class="op">!=</span> user.password <span class="cf">else</span> <span class="va">False</span></span></code></pre></div>
-<pre class="terminal"><code># &#39;tid&#39;
-&gt;&gt;&gt; equal_or_not(User(email=&quot;bob@hope.com&quot;,password=&quot;tid&quot;,events=[]))
-True</code></pre>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">num1</span> <span class="op">=</span> <span class="dt">Just</span> <span class="dv">100</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">num2</span> <span class="op">=</span> <span class="dt">Just</span> <span class="dv">50</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">empty</span> <span class="op">=</span> <span class="dt">Nothing</span></span></code></pre></div>
+<pre class="terminal"><code>&gt; Maybe.map2 (/) num1 num2
+Just 2
+&gt; Maybe.map2 (/) num1 empty
+Nothing</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Does our password match the given email username? <code>"tid"</code>
-does not! We’re accessing our <code>User</code> model with dot notation
-here. Getting used to object oriented style accessors takes some
-adjustment. With Elm, you’d probably <a
-href="https://elm-lang.org/docs/records#comparison-of-records-and-objects">just
-use a record</a> and the <code>!=</code> equality operator.</p>
+<p><code>Maybe.map</code> “lifts” the value from it’s <code>Maybe</code>
+type, and <code>.map2</code> takes a function for two values.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>We’d also need to check our email is a match, otherwise we get a
-<code>KeyError: 'bob@hope.co'</code> which we’d need to fix.</p>
+<p>This function is very useful when we need a calculation, but don’t
+want to <em>unwrap</em> our <code>Maybe</code> types first. Remember,
+reaching for <code>Maybe.withDefault</code> should be the <em>last</em>
+thing you do. Here’s a more complex example:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">values</span> <span class="op">=</span> [<span class="dt">Just</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">200</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">100</span> ]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">foldl</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">map2</span> (<span class="op">+</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Just</span> <span class="dv">0</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">values</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

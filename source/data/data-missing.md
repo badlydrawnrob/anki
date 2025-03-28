@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How would we check if our password doesn't match?
+# Which function allows us to calculate this sum?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Equality
+## Maybe
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`!=`
+`Just 100 : Maybe number`
 
 
 <!-- -------------------------------------------------------------------------
@@ -85,24 +85,16 @@
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```python
-from pydantic import BaseModel
-
-class User(BaseModel):
-  email: str
-  password: str
-
-bob = User(email="bob@hope.com",password="tidy")
-users = { "bob@hope.com": bob }
-
-# Check against our stored user bob ...
-def is_not_equal(user: User) -> bool:
-  return True if users[user.email].password != user.password else False
+```elm
+num1 = Just 100
+num2 = Just 50
+empty = Nothing
 ```
 ```terminal
-# 'tid'
->>> equal_or_not(User(email="bob@hope.com",password="tid",events=[]))
-True
+> Maybe.map2 (/) num1 num2
+Just 2
+> Maybe.map2 (/) num1 empty
+Nothing
 ```
 
 
@@ -111,7 +103,8 @@ True
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Does our password match the given email username? `"tid"` does not! We're accessing our `User` model with dot notation here. Getting used to object oriented style accessors takes some adjustment. With Elm, you'd probably [just use a record](https://elm-lang.org/docs/records#comparison-of-records-and-objects) and the `!=` equality operator.
+`Maybe.map` "lifts" the value from it's `Maybe` type, and `.map2` takes a
+function for two values.
 
 
 <!-- -------------------------------------------------------------------------
@@ -119,7 +112,16 @@ Does our password match the given email username? `"tid"` does not! We're access
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-We'd also need to check our email is a match, otherwise we get a `KeyError: 'bob@hope.co'` which we'd need to fix.
+This function is very useful when we need a calculation, but don't want to _unwrap_ our `Maybe` types first. Remember, reaching for `Maybe.withDefault` should be the _last_ thing you do. Here's a more complex example:
+
+```elm
+values = [Just 100, Just 200, Just 100 ]
+
+List.foldl
+  (Maybe.map2 (+))
+  (Just 0)
+  values
+```
 
 
 <!-- -------------------------------------------------------------------------
