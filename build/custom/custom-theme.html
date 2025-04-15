@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Make sure to add .gl-CodeBlock for the dark theme" />
+          <meta name="description" content="Make sure to add .gl-CodeBlock for the dark theme" />
+  
   <title>Testing out a custom theme</title>
-  <link rel="stylesheet" href="../style/main.css" />
+
+    <link rel="stylesheet" href="../style/main.css" />
+  
   <style>
     body {
       margin: 0 20px;
@@ -24,26 +27,56 @@
         width: 80%;
       }
     }
+
+    @media screen and (min-width: 800px) {
+      article {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      nav {
+        width: 30%;
+        height: 120px; /* Does sticky really need a height? */
+        position: -webkit-sticky;
+        position: sticky;
+        scroll-padding-top: 40px;
+        top: 25px;
+
+        ul {
+          list-style: decimal;
+        }
+      }
+
+      nav + div { width: 70%; }
+    }
   </style>
-</head>
+
+  </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Testing out a custom theme</h1>
-</header>
-<blockquote>
-<p>This helps us build our new theme. You can test your colours
-here.</p>
-</blockquote>
-<ol type="1">
-<li><a href="#elm-lang">Elm lang</a></li>
-<li><a href="#html">HTML</a></li>
-<li><a href="#css">CSS</a></li>
-<li><a href="#python">Python</a></li>
-<li><a href="#terminal">Terminal</a></li>
-</ol>
-<h2 id="elm-lang">Elm lang</h2>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> <span class="dt">Main</span> <span class="kw">exposing</span> (<span class="op">..</span>)</span>
+  
+    <header id="title-block-header">
+    <h1 class="title">Testing out a custom theme</h1>
+                  </header>
+  
+  <article>
+        <nav id="TOC" role="doc-toc">
+            <ul>
+            <li><a href="#elm-lang" id="toc-elm-lang">Elm lang</a></li>
+            <li><a href="#html" id="toc-html">HTML</a></li>
+            <li><a href="#css" id="toc-css">CSS</a></li>
+            <li><a href="#python" id="toc-python">Python</a></li>
+            <li><a href="#terminal" id="toc-terminal">Terminal</a></li>
+            </ul>
+    </nav>
+    
+    <div>
+      <blockquote>
+      <p>This helps us build our new theme. You can test your colours
+      here.</p>
+      </blockquote>
+      <h2 id="elm-lang">Elm lang</h2>
+      <div class="sourceCode" id="cb1"><pre
+      class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> <span class="dt">Main</span> <span class="kw">exposing</span> (<span class="op">..</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">{-| Here&#39;s a block of &quot;documentation&quot; code</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">That you can use to generate docs in Elm I think -}</span></span>
@@ -101,9 +134,9 @@ class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb1-1
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Small</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Medium</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Large</span></span></code></pre></div>
-<h2 id="html">HTML</h2>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html gl-CodeBlock"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+      <h2 id="html">HTML</h2>
+      <div class="sourceCode" id="cb2"><pre
+      class="sourceCode html gl-CodeBlock"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;utf-8&quot;</span><span class="dt">&gt;</span></span>
@@ -180,9 +213,9 @@ class="sourceCode html gl-CodeBlock"><code class="sourceCode html"><span id="cb2
 <span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
 <span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-<h2 id="css">CSS</h2>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode css gl-CodeBlock"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* -----------------------------------------------------------------------------</span></span>
+      <h2 id="css">CSS</h2>
+      <div class="sourceCode" id="cb3"><pre
+      class="sourceCode css gl-CodeBlock"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* -----------------------------------------------------------------------------</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Card styles</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">// =============================================================================</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Base `.Card` wrapper styles and it&#39;s children elements.</span></span>
@@ -293,9 +326,9 @@ class="sourceCode css gl-CodeBlock"><code class="sourceCode css"><span id="cb3-1
 <span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--color-card-l</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--font-size-m</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="python">Python</h2>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode python gl-CodeBlock"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test python (sample from offlineimap)</span></span>
+      <h2 id="python">Python</h2>
+      <div class="sourceCode" id="cb4"><pre
+      class="sourceCode python gl-CodeBlock"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test python (sample from offlineimap)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>CONSTANT <span class="op">=</span> <span class="st">&quot;this is a string&quot;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -364,13 +397,17 @@ class="sourceCode python gl-CodeBlock"><code class="sourceCode python"><span id=
 <span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="co">        a call to setExitMessage(), or None if there was no such message</span></span>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="co">        set.&quot;&quot;&quot;</span></span>
 <span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.exitmessage</span></code></pre></div>
-<h2 id="terminal">Terminal</h2>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
+      <h2 id="terminal">Terminal</h2>
+      <div class="sourceCode" id="cb5"><pre
+      class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">dieFace</span> : <span class="dt">Int</span> }</span></code></pre></div>
-<pre class="terminal gl-CodeBlock"><code>&gt; Model
+      <pre class="terminal gl-CodeBlock"><code>&gt; Model
 &lt;function&gt; : Int -&gt; Model</code></pre>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Model</span> <span class="dv">1</span>  <span class="co">-- { dieFace = 1 } : Model</span></span></code></pre></div>
-</body>
+      <div class="sourceCode" id="cb7"><pre
+      class="sourceCode elm gl-CodeBlock"><code class="sourceCode elm"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">Model</span> <span class="dv">1</span>  <span class="co">-- { dieFace = 1 } : Model</span></span></code></pre></div>
+    </div>
+
+  </article>
+
+    </body>
 </html>

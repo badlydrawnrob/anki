@@ -11,13 +11,6 @@ notes: >-
 > This helps us build our new theme.
 > You can test your colours here.
 
-1. [Elm lang](#elm-lang)
-2. [HTML](#html)
-3. [CSS](#css)
-4. [Python](#python)
-5. [Terminal](#terminal)
-
-
 ## Elm lang
 
 ```elm {.gl-CodeBlock}

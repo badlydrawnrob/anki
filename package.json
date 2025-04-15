@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run css && npm run demo",
+    "build": "npm run css && npm run demo && npm run custom",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "custom": "pandoc --template=source/themes/custom/template.html -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
+    "custom": "pandoc --template=source/themes/custom/template.html --toc -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
     "data": "npm run data-code && npm run data-code-reverse && npm run data-draw && npm run data-missing && npm run data-simple",
     "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
     "data-code-reverse": "pandoc source/data/data-code.html -o ./build/data/data-code.md",
