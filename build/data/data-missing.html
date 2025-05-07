@@ -37,19 +37,20 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>Which function allows us to calculate this sum?</h1>
+<h1>How do we convert this to use <code>andMap</code> from
+<code>Result.Extra</code> package?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Maybe</h2>
+<h2>Mapping a result</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-<p><code>Just 100 : Maybe number</code></p>
+<p><code>Result.Extra.andMap</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
@@ -78,36 +79,36 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">num1</span> <span class="op">=</span> <span class="dt">Just</span> <span class="dv">100</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">num2</span> <span class="op">=</span> <span class="dt">Just</span> <span class="dv">50</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">empty</span> <span class="op">=</span> <span class="dt">Nothing</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; Maybe.map2 (/) num1 num2
-Just 2
-&gt; Maybe.map2 (/) num1 empty
-Nothing</code></pre>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Result</span><span class="op">.</span><span class="dt">Extra</span> <span class="kw">as</span> <span class="dt">Result</span> <span class="kw">exposing</span> (<span class="fu">andMap</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">validate</span> : <span class="dt">Form</span> <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">String</span> <span class="dt">Song</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">validate</span> { <span class="fu">title</span><span class="op">,</span> <span class="fu">artist</span><span class="op">,</span> <span class="fu">album</span><span class="op">,</span> <span class="op">...</span> } <span class="op">=</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Result</span><span class="op">.</span><span class="dt">Ok</span> <span class="dt">Song</span> <span class="co">-- Instead of `Result.mapX`</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Result</span><span class="op">.</span><span class="fu">andMap</span> (<span class="dt">Ok</span> <span class="st">&quot;Mary on a Cross&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Result</span><span class="op">.</span><span class="fu">andMap</span> (<span class="dt">Ok</span> <span class="st">&quot;Ghost&quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Result</span><span class="op">.</span><span class="fu">andMap</span> (<span class="dt">Ok</span> <span class="st">&quot;Seven Inches of Satanic Panic&quot;</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Result</span><span class="op">.</span><span class="fu">andMap</span> (<span class="dt">Ok</span> <span class="dv">2000</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Result</span><span class="op">.</span><span class="fu">andMap</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        (<span class="dt">Result</span><span class="op">.</span><span class="fu">map2</span> (\<span class="fu">mins</span> <span class="fu">secs</span> <span class="op">-&gt;</span> (<span class="fu">mins</span><span class="op">,</span> <span class="fu">secs</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          (<span class="dt">Ok</span> (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">withDefault</span> <span class="dv">0</span> (<span class="dt">String</span><span class="op">.</span><span class="fu">toInt</span> <span class="st">&quot;20&quot;</span>)))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>          (<span class="dt">Ok</span> (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">withDefault</span> <span class="dv">0</span> (<span class="dt">String</span><span class="op">.</span><span class="fu">toInt</span> <span class="st">&quot;30&quot;</span>))))</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><code>Maybe.map</code> “lifts” the value from it’s <code>Maybe</code>
-type, and <code>.map2</code> takes a function for two values.</p>
+<p>The type signature for <a
+href="https://package.elm-lang.org/packages/elm-community/result-extra/2.2.0/Result-Extra#andMap"><code>andMap</code></a>
+is pretty hard to read, but essentially it works in a similar way to
+<code>Json.Decode.Pipeline</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>This function is very useful when we need a calculation, but don’t
-want to <em>unwrap</em> our <code>Maybe</code> types first. Remember,
-reaching for <code>Maybe.withDefault</code> should be the <em>last</em>
-thing you do. Here’s a more complex example:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">values</span> <span class="op">=</span> [<span class="dt">Just</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">200</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">100</span> ]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">foldl</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">map2</span> (<span class="op">+</span>))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Just</span> <span class="dv">0</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">values</span></span></code></pre></div>
+<p>If you find yourself needing a <code>.mapX</code> but there are too
+many arguments, there’s probably an <code>.Extra</code> package with a
+<code>andMap</code> function you can use.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

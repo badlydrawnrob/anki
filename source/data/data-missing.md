@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Which function allows us to calculate this sum?
+# How do we convert this to use `andMap` from `Result.Extra` package?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Maybe
+## Mapping a result
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`Just 100 : Maybe number`
+`Result.Extra.andMap`
 
 
 <!-- -------------------------------------------------------------------------
@@ -86,15 +86,19 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-num1 = Just 100
-num2 = Just 50
-empty = Nothing
-```
-```terminal
-> Maybe.map2 (/) num1 num2
-Just 2
-> Maybe.map2 (/) num1 empty
-Nothing
+import Result.Extra as Result exposing (andMap)
+
+validate : Form -> Result String Song
+validate { title, artist, album, ... } =
+  Result.Ok Song -- Instead of `Result.mapX`
+    |> Result.andMap (Ok "Mary on a Cross")
+    |> Result.andMap (Ok "Ghost")
+    |> Result.andMap (Ok "Seven Inches of Satanic Panic")
+    |> Result.andMap (Ok 2000)
+    |> Result.andMap
+        (Result.map2 (\mins secs -> (mins, secs))
+          (Ok (Maybe.withDefault 0 (String.toInt "20")))
+          (Ok (Maybe.withDefault 0 (String.toInt "30"))))
 ```
 
 
@@ -103,8 +107,7 @@ Nothing
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-`Maybe.map` "lifts" the value from it's `Maybe` type, and `.map2` takes a
-function for two values.
+The type signature for [`andMap`](https://package.elm-lang.org/packages/elm-community/result-extra/2.2.0/Result-Extra#andMap) is pretty hard to read, but essentially it works in a similar way to `Json.Decode.Pipeline`.
 
 
 <!-- -------------------------------------------------------------------------
@@ -112,16 +115,7 @@ function for two values.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-This function is very useful when we need a calculation, but don't want to _unwrap_ our `Maybe` types first. Remember, reaching for `Maybe.withDefault` should be the _last_ thing you do. Here's a more complex example:
-
-```elm
-values = [Just 100, Just 200, Just 100 ]
-
-List.foldl
-  (Maybe.map2 (+))
-  (Just 0)
-  values
-```
+If you find yourself needing a `.mapX` but there are too many arguments, there's probably an `.Extra` package with a `andMap` function you can use.
 
 
 <!-- -------------------------------------------------------------------------
