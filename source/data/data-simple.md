@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Explain why password says `"wow"`!
+# Our editor gives a (minor) complaint about this code. What is it?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Anonymous functions
+## Maybe
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`(\f -> f + 1)`
+`Maybe User`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,12 +71,13 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-speak1 = "wow!"
-transform = (\r -> { r | speak2 = speak1 })
-```
-```terminal
-> transform { speak2 = "how do I look?" }
-{ speak = "wow!" }
+makeUser : String -> Maybe User
+makeUser str =
+  case String.toInt str of
+    Just value ->
+      Just (User ("Age: " ++ String.fromInt value))
+    Nothing ->
+      Nothing
 ```
 
 
@@ -94,7 +95,19 @@ transform = (\r -> { r | speak2 = speak1 })
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```terminal
+```elm
+type User = User String
+
+makeUser : String -> Maybe User
+makeUser str =
+  String.toInt str
+    |> Maybe.andThen
+        (\maybeInt ->
+            Just (User (makeAge maybeInt)))
+
+makeAge : Int -> String
+makeAge num =
+  "Age: " ++ String.fromInt num
 ```
 
 
@@ -103,9 +116,7 @@ transform = (\r -> { r | speak2 = speak1 })
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-1. `speak1` gets assigned to `speak2` (even though it's an extensible record)
-2. When the `transform` function runs it uses the `speak1` variable ...
-3. So our output now says `"wow!"`
+The code is 100% valid, but our Visual Studio Code (Elm plugin) complains: "You're mapping a `Nothing` to `Nothing`; use `Maybe.map` or `Maybe.andThen` instead."
 
 
 <!-- -------------------------------------------------------------------------
@@ -113,7 +124,7 @@ transform = (\r -> { r | speak2 = speak1 })
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-The syntax `{ r | ... }` is how to change a record's fields, so all we're doing is storing the variable `speak1` inside `speak2`.
+You could leave it as-is, but you'll have a minor error squiggle.
 
 
 <!-- -------------------------------------------------------------------------
