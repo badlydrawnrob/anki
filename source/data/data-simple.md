@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Our editor gives a (minor) complaint about this code. What is it?
+# What's wrong with this `Maybe` case? How could it be improved?
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
 -------------------------------------------------------------------------- -->
-`Maybe User`
+`Film Internals (Maybe (List Review))`
 
 
 <!-- -------------------------------------------------------------------------
@@ -71,13 +71,15 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-makeUser : String -> Maybe User
-makeUser str =
-  case String.toInt str of
-    Just value ->
-      Just (User ("Age: " ++ String.fromInt value))
+addReview : Review -> Film -> Film
+addReview r (Film internals reviews) =
+  case reviews of
+    Just hasReviews ->
+      Film internals (Just (hasReviews ++ [ review ]))
+
     Nothing ->
-      Nothing
+      Film internals reviews
+
 ```
 
 
@@ -96,18 +98,12 @@ makeUser str =
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-type User = User String
-
-makeUser : String -> Maybe User
-makeUser str =
-  String.toInt str
-    |> Maybe.andThen
-        (\maybeInt ->
-            Just (User (makeAge maybeInt)))
-
-makeAge : Int -> String
-makeAge num =
-  "Age: " ++ String.fromInt num
+-- Uses `Maybe.Extra` package!
+Film intervals
+  (Maybe.unwrap
+    [review]
+    (\l -> l ++ [review]) reviews
+      |> Just)
 ```
 
 
@@ -116,7 +112,12 @@ makeAge num =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-The code is 100% valid, but our Visual Studio Code (Elm plugin) complains: "You're mapping a `Nothing` to `Nothing`; use `Maybe.map` or `Maybe.andThen` instead."
+So many errors!
+
+1. The `Nothing` case should be `review`. It currently ignores the change.
+2. We could've used the `Maybe.Extra` package to simplify our code
+3. **Why the fuck are we using a `Maybe` anyway?** See notes below.
+    - Make life easier for yourself and avoid all that unpacking.
 
 
 <!-- -------------------------------------------------------------------------
@@ -124,7 +125,7 @@ The code is 100% valid, but our Visual Studio Code (Elm plugin) complains: "You'
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-You could leave it as-is, but you'll have a minor error squiggle.
+Our `Film Internals (Maybe (List Review))` could just as well use `List Review`. Are we purposefully disallowing an empty list? No? Then we don't need a `Maybe` as `Nothing` isn't semantically different to `[]`!
 
 
 <!-- -------------------------------------------------------------------------
