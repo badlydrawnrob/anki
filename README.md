@@ -38,7 +38,7 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 
 ## Cards
 
-There's two types of cards to choose from:
+There's three types of cards to choose from:
 
 1. 💡 **[Simple](./source/docs/simple/index.md)**
     - What's the answer?
