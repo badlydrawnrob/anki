@@ -27,15 +27,15 @@ For regular `string` fields, such as `★ Title` you can highlight a code sectio
 
 ## Full syntax highlighting
 
-> - **View our [default colour themes](../../../README.md#syntax-highlighting).**
-> - We use Markdown rendered `code block`s for our pretty colours.
-> - Beginners can use this helpful [online tool](https://tinyurl.com/mr43ydea);
->
-> _If you know how to use `npm`, [🧑‍🎓 it's more fun with a compiler](../../../README.md#its-more-fun-with-a-compiler-advanced)_
+> **View our [default colour themes](../../../README.md#syntax-highlighting).** If you're familiar with `npm`, [🧑‍🎓 try out the compiler](../../../README.md#its-more-fun-with-a-compiler-advanced)!
 
-Basic colours are fine for small lines of code, but you'll probably want to go **full colour** next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Programming Flashcards provide pretty colours (CSS), and we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/demo/example18f.html). Here's how:
+- We use Markdown rendered `code block`s to go full colour.
+- Make sure to choose a language, such as <code>```python</code>!
+- Beginners can use this helpful [online tool](https://tinyurl.com/mr43ydea).
 
-1. Write your code as [Markdown fenced code blocks](https://help.github.com/articles/github-flavored-markdown/#fenced-code-blocks),
+Basic colours are fine for small lines of code, but you'll probably want to go **full colour** next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Programming Flashcards provides pretty colours (CSS); we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/). Here's how to do it, step-by-step:
+
+1. Write your code as [Markdown fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting),
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea),
 3. Add a card in Anki,
 4. Choose a [`code block`](../simple/index.md#-sample-code-block) field,
