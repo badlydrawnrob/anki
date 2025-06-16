@@ -65,7 +65,8 @@ The easiest way to change the colors for the `code string` and `code block` fiel
 
 ### How to change your theme colours
 
-> If you're a beginner, here's how to change colours.
+> If you're a beginner, here's how to change colours ...
+> I use VS Code's [colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize) plugin to preview theme colours.
 
 1. You'll have the latest [Anki programming flashcards (APF) release](https://github.com/badlydrawnrob/anki/releases).
 2. In the Anki app menu, go to `Manage Note Types`.
