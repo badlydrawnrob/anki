@@ -12,13 +12,14 @@
 
 > ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
 
-**⚠️ For now this is simply a clone of a simple `question->answer` card;** but with images! We're asking the question something along the lines of: _"what does this code do?"_, or _"how might I sketch this idea out?"_ e.g:
+There's many potential use-cases for the Draw! card. I've listed some initial ideas in [this issue](https://github.com/badlydrawnrob/anki/issues/165). At it's most basic we're asking _"what does this code do?"_, or _"what does this picture represent?"_, or _"what routes could we use to fix this problem?"_, or _"how do we solve this?"_.
 
-- A whiteboard diagram with a small program or function
-    - You have to remember or guess something about it.
-- A function or program that you need to sketch out.
-    - Something you'd like to drill yourself with to rememeber.
-    - Alternatively, you might be at a computer and want to write it out.
+- An animated gif or photograph,
+- A sketch or iPad drawing,
+- A question that you must sketch out,
+- Perhaps even a video!
+
+If the card is not suitable for mobile viewing, I find it helpful tagging it as `desktop`.
 
 | You'll probably want: | It's helpful to add: |
 | --------------------- | ------------------------------ |
@@ -26,11 +27,9 @@
 | A clear question and answer | Supporting notes (bullet points) |
 | Your key learning point | Links to articles, documentation, videos, etc |
 
-In general it's best to make sure `★ Required` fields are filled in. However, for a very simple `question->answer` card, feel free to only use the fields that you need. An example of this might be a picture you want to remember, so you only use the `★ Title`, `★ Key Point (image)`, and `★ Key point notes` fields.
+In general it's best to make sure `★ Required` fields are filled in. However, for a very simple `question->answer` card, feel free to only use the fields that you need. For example, you might want to remember a picture, so you'd use only the `★ Title`, `★ Key Point (image)`, and `★ Key point notes` fields.
 
-<!-- #! Example needed, similar to Simple card -->
-
-The code sample fields asks for an `image`, but it's basically a
+<!-- #! Examples would be helpful here, similar to Simple card (but not CodePen) -->
 
 
 ## ★ Title
@@ -61,15 +60,15 @@ The code sample fields asks for an `image`, but it's basically a
 ## ★ Sample (image)
 
 > ⤷ **`image`**
->    (may require the `markdown->html` compiler in future)
+>    (use the 📎 paperclip button to add your image)
 
 - A sample of the code we're learning
 
 
 ## ★ Key point (image)
 
-> ⤷ **`image`**
->    (may require the `markdown->html` compiler in future)
+> ⤷ **`image | code block`**
+>    (to add an image, toggle the `A𝐴` button and click 📎 paperclip button)[^1]
 
 - The answer or key learning point
 
@@ -105,16 +104,17 @@ For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provide
 
 ## Other helpful Anki stuff
 
-> I decided _not_ to use Anki's image occlusion, so use whatever software you want to edit your images, whether that's simply to reduce it's size, or to hide bits of it for reveal later. I feel it's just as easy to use a Photoshop type tool then mess around with a half-baked one, which Anki's version is.
+> Use your photo software of choice to edit your images; change the size, hide bits of it to reveal, create a fun `.gif` file, add sketches or iPad drawings, so on. It's just as easy to use Photoshop than it is to mess around with a Anki's half-baked image editor.[^2]
 
-1. It could be very useful to add tags to these cards:
-    - `code::stories` and `code::elm` is descriptive
-    - They'll also allow you to create a [filtered deck](https://docs.ankiweb.net/filtered-decks.html) by tags, limiting the cards you're studying.
-2. [Image Occlusion](https://docs.ankiweb.net/editing.html#image-occlusion) is a new(ish) feature in Anki, and was a candidate for Draw! but ...
-    - It's a very rudimentary editor (feels quite clunky),
-    - I use iPhone images with notes _a lot_, so I don't really need it,
-    - It's not helpful for motion images, such as `.gif`s,
-    - It limits us to Anki's way of doing things, which isn't always ideal.
+1. You might want to storify these cards, or add tags:
+    - `code::stories` plus `code::elm` is very descriptive.
+    - Those would be great for content like Ozaria (game) chapters.
+2. Create a [filtered deck](https://docs.ankiweb.net/filtered-decks.html) with tags
+    - Limiting the cards you're viewing for a study session.
+3. Use an app like Ozaria or CodeCombat to make learning fun ...
+    - And create cards that'll rejig your memory for your `hero.commands()`!
 
 
-[^1]: We're asking for an image here, as that's fundamentally what this card is about (more about visual medium than textual). It's basically a `rich html` field, however, so you can pretty much add in what you want here, an `image`, a `code block`, or `rich html`. I can't, however guarantee that it won't change to be wrapped in a [`figure`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) (for instance) — in fact, that's quite a good idea, but I also realise having flexibility could be useful too! Time will tell.
+[^1]: We're asking for an image here, as that's fundamentally what this card is about (more about visual medium than textual). It's basically a `rich html` field though, so you _could_ add pretty much anything you want here: an `image`, a `code block` (perhaps even a video). It all depends on the question you're asking and the ONE idea of the card. This _may_ get changed at a later date: flexibility is great, but living with constraints is sometimes better. I'll see how my experiments with it go, and time will tell.
+
+[^2]: I decided _not_ to use Anki's image occlusion. [Image Occlusion](https://docs.ankiweb.net/editing.html#image-occlusion) is a new(ish) feature in Anki, and was a candidate for Draw! but: it's a very rudimentary editor (feels quite clunky); I use iPhone images with notes _a lot_, so I don't really need it; It's not helpful for motion images, such as `.gif`s; It limits us to Anki's way of doing things, which isn't always ideal.

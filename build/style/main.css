@@ -1201,6 +1201,9 @@ img {
 .gl-CodeBlock .cloze > span {
   filter: brightness(65%) contrast(220%);
 }
+div.sourceCode {
+  width: 100%;
+}
 .gl-CodeBlock .sourceCode .al {
   color: var(--color-code-dark-alert);
   background-color: var(--color-code-dark-alert-background);
@@ -1311,6 +1314,7 @@ img {
 }
 .gl-ImageBlock {
   display: flex;
+  margin-bottom: 0;
 }
 .gl-ImageBlock img {
   margin: 0 auto;

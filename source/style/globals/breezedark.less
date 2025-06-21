@@ -5,46 +5,46 @@
 // - @link: https://github.com/jgm/skylighting
 // - @link: https://stackoverflow.com/a/30884409
 //
-// We can use this file for both the default `breezedark.less` theme and the
-// `breezedark-modified.less` theme. We'll keep styles consistant in this file for
-// ease of switching between the two. Take care to override `print-first-css`
-// monochrome default `font-*` styles, and include the ones we want for
-// Breeze Dark. Better to be explicit and add all the styling that Print First
-// does before you start.
+// File can be used for both the default `breezedark.less` theme as well as the
+// `breezedark-modified.less` theme. Styles will be kept consistant in this file
+// for ease of switching between the two. Be careful to override the default
+// monochrome theme, which is set in `print-first-css`, and any other `font-*`
+// styles we need. Be explicit and add all styling that Print First does before
+// you start.
 //
-// - I've changed the `font-weight: bold` to a very slight bold `500`. It looks
-//   better in my opinion.
-//
-// - "Normal" is simply a non-class span. Don't use.
+// - `font-weight: bold` changed to a very slight bold `500` (looks better)
 // - `--color-code-dark-text-color` set in `.gl-CodeBlock` (base text colour)
-// - A lot of repetition of `sourceCode` class which seems unnecessary? #!
+// - #! Lots of repetition of `.sourceCode` class — seems unnecessary?
 //
 // Notes on number lines
 // ---------------------
-// This is currently not supported, so even if you use ``` {.numberLines} it's
-// not gonna work right now. Sorry!
+// Currently unsupported; even if you use ``` {.numberLines} it's not gonna
+// work right now. Sorry!
 
 
-// div.sourceCode {
-//   // pass
-// }
+div.sourceCode {
+  width: 100%; // #! Ensure `.gl-ImageBlock` (Draw!) doesn't fuck up formatting
+}
 
+// -----------------------------------------------------------------------------
+// Do we dump all this code?
+//
 // pre.sourceCode {
 //   // pass
-
+//
 //   .numberSource {
 //     margin-left: 3em;
 //     padding-left: 4px;
 //     border-left: 1px solid #aaaaaa;
-
+//
 //     code {
 //       counter-reset: source-line 0;
-
+//
 //       > span {
 //         position: relative;
 //         left: -4em;
 //         counter-increment: source-line;
-
+//
 //         > a:first-child::before {
 //           content: counter(source-line);
 //           position: relative;
@@ -56,7 +56,7 @@
 //           text-align: right;
 //           vertical-align: baseline;
 //           border: none;
-
+//
 //           -webkit-touch-callout: none; -webkit-user-select: none;
 //           -khtml-user-select: none; -moz-user-select: none;
 //           -ms-user-select: none; user-select: none;
@@ -65,24 +65,26 @@
 //     }
 //   }
 // }
-
+//
 // code.sourceCode {
 //   // pass
-
+//
 //   & > span {
 //     &:empty {
 //       // #! was a set height
 //     }
-
+//
 //     & > a:first-child::before {
 //       text-decoration: underline;  // #! Dunno what this does
 //     }
 //   }
 // }
+//
+// -----------------------------------------------------------------------------
 
 .sourceCode {
   .gl-CodeBlock & {
-    // Normal (unused)
+    // Normal (non-class span. Don't use)
     // code span { color: var(--color-code-dark-normal); }
 
     // Alert

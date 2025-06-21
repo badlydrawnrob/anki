@@ -1,9 +1,12 @@
 // -----------------------------------------------------------------------------
 // Image Block (for Draw! cards)
 // =============================================================================
+// 1. `display: flex` fucks up `div.sourceCode` width unless it's set to 100%
+//    - See `breezedark.less` for more details
 
 .gl-ImageBlock {
   display: flex;
+  margin-bottom: 0;
 
   img {
     margin: 0 auto;
