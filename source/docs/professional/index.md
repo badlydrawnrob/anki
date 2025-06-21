@@ -150,7 +150,7 @@ It'll take a little playing around to find the right match of colours. Have fun,
 
 There's a known bug in Pandoc [that I've noted here](https://github.com/badlydrawnrob/anki/issues/152) — currently some (all?) languages have limited "tokens", meaning our Markdown code blocks don't always render as well as other highlighting scripts. No matter how you arrange your colours, there's going to be trade-offs (which colours work best for each token?).
 
-Another thing to mention is [dependency hell](https://github.com/badlydrawnrob/anki/blob/master/source/docs/error/index.md), and I feel I've made the best of the available options for highlighting (for long-term support).
+Another thing to mention is [dependency hell](../error/index.md), and I feel I've made the best of the available options for highlighting (for long-term support).
 
 
 ## A couple of notes on `/demo` and Less CSS
