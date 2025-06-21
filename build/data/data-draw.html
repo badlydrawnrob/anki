@@ -47,8 +47,8 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What’s special about the way we’re layering in Racket Lang’s <a
-href="https://docs.racket-lang.org/teachpack/2htdpimage.html">images
+<h1>Why is Racket Lang’s image layering special? (the <a
+href="https://docs.racket-lang.org/teachpack/2htdpimage.html">image
 teachpack</a>?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
@@ -107,39 +107,44 @@ first</figcaption>
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <p>Lisp feels a bit back-to-front and inside-out when you first start!
-Our background is the innermost item, and our rocket the outermost
-(wrapped in <code>place-image</code> function)</p>
-<pre class="racket"><code>(require 2htdp/image)
-
-; Here&#39;s the constants
-
-(define WIDTH 180)
-(define HEIGHT 180)
-(define MIDDLE (/ WIDTH 2))
-
-(define BACKGROUND
-  (rectangle WIDTH HEIGHT &quot;solid&quot; &quot;black&quot;))
-
-(define ROCKET
-  (bitmap/file &quot;rocket.png&quot;))
-
-(define MOON
-  (circle 40 &quot;solid&quot; &quot;white&quot;))
-
-; Let&#39;s make our image!
-
-(place-image
-  MOON 10 10
-    (place-image
-      ROCKET MIDDLE MIDDLE
-        BACKGROUND))</code></pre>
+Our Rocket is the <em>last</em> item to be processed, and our background
+variable the first. <a href="https://htdp.org/">How To Design
+Programs</a> is a great place to learn programming fundamentals.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="kw">require</span> <span class="dv">2</span>htdp/image<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">; Here&#39;s the constants</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> WIDTH </span><span class="dv">180</span><span class="op">)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> HEIGHT </span><span class="dv">180</span><span class="op">)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> MIDDLE </span><span class="op">(/</span> WIDTH <span class="dv">2</span><span class="op">))</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> BACKGROUND</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>rectangle WIDTH HEIGHT <span class="st">&quot;solid&quot;</span> <span class="st">&quot;black&quot;</span><span class="op">))</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> ROCKET</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>bitmap/file <span class="st">&quot;rocket.png&quot;</span><span class="op">))</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> MOON</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>circle <span class="dv">40</span> <span class="st">&quot;solid&quot;</span> <span class="st">&quot;white&quot;</span><span class="op">))</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">; Let&#39;s make our image!</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">(</span>place-image</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  ROCKET MIDDLE MIDDLE</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">(</span>place-image</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      MOON <span class="dv">10</span> <span class="dv">10</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        BACKGROUND<span class="op">))</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Lisp calculates the <em>inner-most</em> function (data or variable)
-FIRST. It then works inside-out to render our <code>ROCKET</code>.</p>
+<p>Racket (Lisp) processes functions from the inside → out. Lisp
+calculates the <em>inner-most</em> function (data or variable) FIRST. It
+then works inside-out to render our <code>ROCKET</code>. That’s very
+maths-like. Try the first two chapters of HTDP, then try <a
+href="https://elm-lang.org/">Elm Lang</a>!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
@@ -154,8 +159,9 @@ FIRST. It then works inside-out to render our <code>ROCKET</code>.</p>
 -------------------------------------------------------------------------- -->
 <p>The original problem has the following note (which isn’t really
 needed now):</p>
-<pre class="racket"><code>; Each object image can be passed as a (render-obj ... img) — for nested img!
-; I think this was using a `define struct` or something.
-(define (render-obj obj img)
-  (place-image obj (posn-x img) (posn-y img)
-    img))</code></pre>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">; Each object image can be passed as a (render-obj ... img) — for nested img!</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">; I think this was using a `define struct` or something.</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>render-obj obj img<span class="op">)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>place-image obj <span class="op">(</span>posn-x img<span class="op">)</span> <span class="op">(</span>posn-y img<span class="op">)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    img<span class="op">))</span></span></code></pre></div>

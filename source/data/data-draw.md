@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What's special about the way we're layering in Racket Lang's [images teachpack](https://docs.racket-lang.org/teachpack/2htdpimage.html)?
+# Why is Racket Lang's image layering special? (the [image teachpack](https://docs.racket-lang.org/teachpack/2htdpimage.html)
 
 
 <!-- -------------------------------------------------------------------------
@@ -64,6 +64,8 @@
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with <p><code> tag)
+
+    This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
 `(require 2htdp/image)`
 
@@ -109,7 +111,7 @@
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Lisp feels a bit back-to-front and inside-out when you first start! Our background is the innermost item, and our rocket the outermost (wrapped in `place-image` function)
+Lisp feels a bit back-to-front and inside-out when you first start! Our Rocket is the _last_ item to be processed, and our background variable the first. [How To Design Programs](https://htdp.org/) is a great place to learn programming fundamentals.
 
 ```racket
 (require 2htdp/image)
@@ -132,9 +134,9 @@ Lisp feels a bit back-to-front and inside-out when you first start! Our backgrou
 ; Let's make our image!
 
 (place-image
-  MOON 10 10
+  ROCKET MIDDLE MIDDLE
     (place-image
-      ROCKET MIDDLE MIDDLE
+      MOON 10 10
         BACKGROUND))
 ```
 
@@ -143,7 +145,7 @@ Lisp feels a bit back-to-front and inside-out when you first start! Our backgrou
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Lisp calculates the _inner-most_ function (data or variable) FIRST. It then works inside-out to render our `ROCKET`.
+Racket (Lisp) processes functions from the inside → out. Lisp calculates the _inner-most_ function (data or variable) FIRST. It then works inside-out to render our `ROCKET`. That's very maths-like. Try the first two chapters of HTDP, then try [Elm Lang](https://elm-lang.org/)!
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
