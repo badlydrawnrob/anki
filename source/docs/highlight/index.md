@@ -33,11 +33,14 @@ For regular `string` fields, such as `★ Title` you can highlight a code sectio
 > - ❎ Any [`rich html`](../simple/index.md#-key-point-notes) field will use the monochrome theme for fenced code blocks.
 > - 👎 The [`code string`](../simple/index.md#-syntax-inline-code) field is for inline `<code>` only!
 
-- We use Markdown rendered `code block`s to go full colour.
-- Make sure to choose a language, such as <code>```python</code>!
+You'll probably want to go **full colour** next, so here's simple tips before we start:
+
+- Wherever you see a `code block` field, we can go full colour with CSS,
+- We use Markdown to render our fenced code blocks, then add them to that field,
+- Make sure to choose your code's language, such as <code>```python</code>,
 - Beginners can use this helpful [online tool](https://tinyurl.com/mr43ydea).
 
-Basic colours are fine for small lines of code, but you'll probably want to go **full colour** next. Wherever you see a **[`code block`](../simple/index.md#-sample-code-block)**, Anki Programming Flashcards provides pretty colours (CSS); we generate your highlighted code using Markdown and [Pandoc](https://pandoc.org/). Here's how to do it, step-by-step:
+Basic colours are fine for small lines of code, but Anki Programming Flashcards provides highlighted CSS styles for our main code; all generated using Markdown and [Pandoc](https://pandoc.org/). Here's how to do it, step-by-step:
 
 1. Write your code as [Markdown fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting),
 2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea),
