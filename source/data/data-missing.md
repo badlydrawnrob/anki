@@ -54,6 +54,8 @@
     ☆ Syntax (inline code)
 
     ⤷ `code string` (auto wrapped with `<p><code>` tag)
+
+    This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
 `Result.Extra.andMap`
 

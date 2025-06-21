@@ -28,6 +28,10 @@ For regular `string` fields, such as `★ Title` you can highlight a code sectio
 ## Full syntax highlighting
 
 > **View our [default colour themes](../../../README.md#syntax-highlighting).** If you're familiar with `npm`, [🧑‍🎓 try out the compiler](../../../README.md#its-more-fun-with-a-compiler-advanced)!
+>
+> - ✅ **Only [`code block`](https://github.com/badlydrawnrob/anki/blob/master/source/docs/simple/index.md#-sample-code-block) fields have full-colour!**
+> - ❎ Any [`rich html`](https://github.com/badlydrawnrob/anki/blob/master/source/docs/simple/index.md#-key-point-notes) field will use the monochrome theme for fenced code blocks.
+> - 👎 The [`code string`](https://github.com/badlydrawnrob/anki/blob/master/source/docs/simple/index.md#-syntax-inline-code) field is for inline `<code>` only!
 
 - We use Markdown rendered `code block`s to go full colour.
 - Make sure to choose a language, such as <code>```python</code>!

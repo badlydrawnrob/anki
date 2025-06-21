@@ -47,7 +47,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 > ⤷ **[`code string`](../highlight/index.md#basic-syntax-highlighting)**
 >    (automatically wrapped with `<p><code>` tag)
 
-- A short line of code
+- A short line of code (_not_ a code block)
 - The actual function or symbol, i.e. `len()`.
 
 
