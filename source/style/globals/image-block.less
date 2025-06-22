@@ -1,14 +1,28 @@
 // -----------------------------------------------------------------------------
 // Image Block (for Draw! cards)
 // =============================================================================
-// 1. `display: flex` fucks up `div.sourceCode` width unless it's set to 100%
-//    - See `breezedark.less` for more details
+// > Some styles can be found in `figure.less`.
+//
+// #! An `.gl-ImageBlock` should (ideally) be ONLY for images, but sometimes
+// it can be handy to have minimal code underneath an image. For that reason,
+// you can add the `.gl-CodeBlock` class to `<figure>`.
+//
+// 1. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
+//    - So use a simpler color instead (add a `--color` var for this?)
+//
 
 .gl-ImageBlock {
-  display: flex;
-  margin-bottom: 0;
+  background: radial-gradient(circle,rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+  .nightMode & {
+    background: radial-gradient(circle,var(--color-nightmode-background-dddd) 0%, var(--color-nightmode-background-dd) 100%);
+  }
+
+  figcaption {
+    border-bottom: 1px solid #E5E4E2; // (1)
+  }
 
   img {
-    margin: 0 auto;
+    box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
   }
 }

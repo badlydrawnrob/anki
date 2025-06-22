@@ -8,6 +8,9 @@
   "☆ Syntax (inline code)": "(require 2htdp/image)",
 
 
+  "☆ Sample (caption or hint)": "Remember the order of processing in Lisp!",
+
+
   "★ Sample (image)": "<img src=\"..\/..\/source\/media\/draw-lisp-rocket-outline.png\"\r\nalt=\"The image will need to be added to Anki first\" \/>",
 
 

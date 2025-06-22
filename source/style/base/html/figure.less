@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// Figure
+// =============================================================================
+// > It's fine to use `<figure>` for both images and code snippets.
+//
+// We're changing the front-page to a `<figure>` instead of a plain `<div>`
+// because I've added a new field for `<figcaption>`. Not only is this useful for
+// images (give a hint), it could be quite useful for extra context when the
+// heading gets too long. It's also used on the `#reverse` card for Draw!
+//
+// There's some minor difference in the cards. Draw! is generally images only.
+// You can find the differences in the files below:
+//
+// - See `image-block.less` for the `.gl-ImageBlock` class
+// - See `code-block.less` for the `.gl-CodeBlock` class.
+//
+// ## Notes
+// 1. `display: flex` fucks up `div.sourceCode` width unless it's set to 100%
+//    - See `breezedark.less` for more details
+// 2. Our `<figcaption>` is a tiny slither of text as a row without this.
+//    - Display caption on top of the image, not to it's side.
+// 3. Why the fuck isn't `position: sticky` working on AnkiMobile?
+//    - It _does_ work, but there's already a sticky footer UI ...
+//    - Which means our sticky footer gets hidden (and looks shit w/ `bottom: 50px`).
+
+figure {
+  display: flex; // (1)
+  flex-direction: column; // (2)
+  margin-bottom: 0;
+
+  figcaption {
+    color: var(--font-color);
+    background: white;
+    font-style: italic;
+    margin: 0;
+    padding: var(--spacing-half);
+    text-align: center;
+
+    .nightMode & {
+      background: var(--color-nightmode-background-ddd);
+      color: var(--color-nightmode-text);
+    }
+  }
+
+  img {
+    margin: 0 auto; // Center the image
+  }
+}

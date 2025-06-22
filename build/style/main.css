@@ -1000,6 +1000,26 @@ pre {
 .nightMode pre {
   background: var(--color-nightmode-background-l);
 }
+figure {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+figure figcaption {
+  color: var(--font-color);
+  background: white;
+  font-style: italic;
+  margin: 0;
+  padding: var(--spacing-half);
+  text-align: center;
+}
+.nightMode figure figcaption {
+  background: var(--color-nightmode-background-ddd);
+  color: var(--color-nightmode-text);
+}
+figure img {
+  margin: 0 auto;
+}
 h1,
 h2,
 h3,
@@ -1072,7 +1092,7 @@ img {
   align-items: baseline;
   background: var(--color-card-lll);
   border: var(--spacing-px) solid var(--color-card-lll);
-  border-bottom: transparent;
+  border-bottom: 1px solid #E5E4E2;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -1313,11 +1333,16 @@ div.sourceCode {
   font-style: italic;
 }
 .gl-ImageBlock {
-  display: flex;
-  margin-bottom: 0;
+  background: radial-gradient(circle, #e1e1e1 0%, #ffffff 100%);
+}
+.nightMode .gl-ImageBlock {
+  background: radial-gradient(circle, var(--color-nightmode-background-dddd) 0%, var(--color-nightmode-background-dd) 100%);
+}
+.gl-ImageBlock figcaption {
+  border-bottom: 1px solid #E5E4E2;
 }
 .gl-ImageBlock img {
-  margin: 0 auto;
+  box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
 }
 #reverse #answer .gl-CodeBlock pre {
   margin-bottom: 0;

@@ -8,7 +8,7 @@
 -->
 
 <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
-  <section class="gl-Card">
+  <section id="draw" class="gl-Card">
     <header>
       <h1>{{{★ Title}}}</h1>
       {{#☆ Subtitle}}
@@ -18,7 +18,10 @@
         <p><code>{{{☆ Syntax (inline code)}}}</code></p>
       {{/☆ Syntax (inline code)}}
     </header>
-    <figure class="gl-ImageBlock">
+    <figure class="gl-ImageBlock gl-CodeBlock">
+    {{#☆ Sample (caption or hint)}}
+      <figcaption>{{{☆ Sample (caption or hint)}}}</figcaption>
+    {{/☆ Sample (caption or hint)}}
       {{{★ Sample (image)}}}
     </figure>
   </section>
