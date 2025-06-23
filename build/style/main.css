@@ -1140,12 +1140,10 @@ img {
   background: var(--color-card-lll);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   font-size: var(--font-size-m);
-  text-align: center;
 }
 .gl-Card_KeyPointNotes ul,
 .gl-Card_KeyPointNotes ol {
   margin-left: var(--spacing-one);
-  text-align: left;
 }
 .gl-Card_KeyPointNotes ul > li,
 .gl-Card_KeyPointNotes ol > li {
@@ -1162,10 +1160,11 @@ img {
   background: var(--color-nightmode-background-d);
 }
 .gl-Card footer {
-  margin-bottom: var(--spacing);
-  padding: 0 var(--spacing-one);
   color: var(--color-card-l);
   font-size: var(--font-size-m);
+  margin-bottom: var(--spacing);
+  padding: 0 var(--spacing-one);
+  text-align: center;
 }
 .gl-Card header code {
   background: transparent;
