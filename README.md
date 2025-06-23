@@ -173,7 +173,16 @@ scroll horizontally. You can change the settings, [see issue #118](https://githu
 
 <details>
 <summary>
-<strong>4. I'm having text formatting problems</strong>, what do I do?
+<strong>4. I can't swipe up or down</strong> to view card on Anki Mobile
+</summary>
+
+The problem in [issue #168](https://github.com/badlydrawnrob/anki/issues/168) shows itself when there's a big `code block` that's overflowing the `viewport` (the width of your mobile). Touching and scrolling up/down immediately (in one swift motion) resolves this problem.
+
+</details>
+
+<details>
+<summary>
+<strong>5. I'm having text formatting problems</strong>, what do I do?
 </summary>&nbsp;
 
 > Paste **raw html** or **plain text** to avoid styling issues.
@@ -183,7 +192,7 @@ If you're having formatting problems, make sure you're **[following the guide](#
 
 <details>
 <summary>
-<strong><span id="dark-mode">5. How do I use dark/night mode in Anki?</strong>
+<strong><span id="dark-mode">6. How do I use dark/night mode in Anki?</strong>
 </summary>
 
 The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
