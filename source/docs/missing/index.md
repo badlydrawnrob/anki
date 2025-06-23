@@ -64,7 +64,7 @@
 > ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
 >    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
 
-Create your code, add one or more [cloze deletion](https://apps.ankiweb.net/docs/manual.html#cloze-deletion) tag to hide a selected word or phrase:
+Create your code, add one or more `{{c1::cloze deletion}}` tags (here's [a tutorial](https://github.com/badlydrawnrob/anki/issues/170)) to hide a selected word or phrase:
 
 - The `{{c1::answer}}` or key learning point
 - You can add a helpful hint: `{{c1::the missing answer::HINT TEXT}}`
