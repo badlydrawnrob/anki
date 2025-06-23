@@ -19,6 +19,10 @@ Moving on from ECSS
 > CSS framework or Ai tool, use purgeCSS to reduce the file size. Ai isn't quite
 > there yet, but for simple things, manual CSSing isn't entirely needed.
 
+1. `rem` units are slightly different sizes on different browsers (iOS / Brave)
+2. caching is a problem sometimes when updating Anki
+3. And many many more treats that I don't want to deal with.
+
 ### `@media` styles CAN'T be nested still, only `.class` names?
 
 With ECSS you write a unique scoped class for each and every item.

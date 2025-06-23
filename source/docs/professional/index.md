@@ -21,9 +21,11 @@
 
 > `npm run data` and you're done. So simple!
 
-The `/data/*` files are a helpful way to quickly write your Anki cards. You can compile them into HTML and use that to add to the card's fields. They're well `<!-- commented -->` so you'll know what to do with each field. **Make sure you've read [each card's documentation](https://github.com/badlydrawnrob/anki#cards) before you use these `data-` files.** They'll make more sense then.
+The `/data/*` files are a helpful way to quickly write your Anki cards. You can compile them into HTML and add the sections to a card's fields. They're well `<!-- commented -->` so you'll know what to do with each field. **Make sure you've read [each card's documentation](https://github.com/badlydrawnrob/anki#cards) before you use these `data-` files.** They'll make more sense then.
 
 Each `data-*` file will be updated when you run this command. There's also a special `data-code.md` and `data-code.html` file that's helpful to compile `code block`s. This can convert from `.md -> .html` and back again.
+
+The `/data/*html` files are for viewing in your code editor only.[^1]
 
 
 ## The professional way to create your own CSS theme
@@ -43,73 +45,75 @@ source
     │   │
     │   └───variables
     │          breezedark.less
-    |          custom-theme.less -- change this!
+    |          custom-theme.less -- create this file!
     │          typography.less
     │
     └───globals
     │     breezedark.less
-    |     custom-theme.less -- to change this :)
+    |     custom-theme.less -- and this one!
     │
     └───themes
         │
         └───custom
-              custom-theme.md -- compile this ...
+              custom-theme.md -- then compile this :)
               template.html
 |
 build
 |
-└───custom -- and preview changes here!
+└───custom -- and preview your changes here!
 ```
 
 ### Let's quickly run through those files:
 
-> `custom-theme.less` holds all the colours you'll need to create your own theme. We're using CSS variables (e.g: `var(--color-code-dark-*)`) and compiling them with [Less CSS](https://lesscss.org/).
+> You'll find a `/custom` folder with a helpful `.md` file that allows you to preview your `custom-theme.less` changes. You can see what each language looks like with your custom theme.
 
-- You'll mainly be editing the `variables/custom-theme.less` colours ...
-- You can reference the `--color-code-*` variables from `breezedark.less`:
-    - This holds all the variables you'll need.
-- You can also reference Pandoc's Skylighting themes (see below) for colours ...
-    - But there's [better](https://draculatheme.com/) themes out in the wild!
+We're using CSS variables (e.g: `var(--color-code-dark-*)`) and compiling them with [Less CSS](https://lesscss.org/). You can find the current theme colours in `/style/base/variables/breezedark.less`. Have a play with them and see what you can create!
 
-If you'd like to also change the typography, such as `--font-*` variables, you'll can find this in `typography.less` and other files. You can edit in-place or create `custom-*.less` files and add them to `.gitignore` so you don't have to keep making changes when the repo updates.
+- You'll mostly be editing your `variables/custom-theme.less` colours ...
+    - You can reference the `--color-code-*` variables in `breezedark.less`
+- You can also view Pandoc's Skylighting theme colours (see below)
+    - They're fine, but there's [much better](https://draculatheme.com/) themes in the wild!
+
+If you'd like to make finer-grain changes to the flashcard styles (e.g: `--font-*` variables), you'll find them in `base/variables/typography.less` and (for basic changes) the `/base/html`  folder. I wouldn't go too crazy with changes, or else you may as well fork this repo and build your own.
+
+It's best to create your own `custom-*.less` files (adding them to a `.gitignore` file), rather than risk losing any changes when this repo updates.
 
 ### Setup is quite straightforward.
 
-> Once you've chosen the colours you want within the `custom-*.less` files, you'll need to `// comment` out the default ones, to override them in `main.less`.
+> Once you've chosen the colours you want within the `custom-*.less` files, you'll need to `// comment` out the defaults to override them in `main.less`.
 
 1. Go to the `main.less` file
 2. Create and `@import` the `base/` files:
-    - `variables/custom-theme.less`
-    - `globals/custom-theme.less`
+    - `variables/custom-theme.less` (color variables)
+    - `globals/custom-theme.less` (Pandoc's Skylighting typography)
 3. **`npm run css` to compile changes**
-
-You may also need to change (or copy) other `base/html/*.less` files for finer-grain changes.
 
 ### Preview changes:
 
 > Just like `/build/demo/*.html` files, we can preview our changes at `/build/custom/*`
 
-Once you've compiled your `custom-theme.less` go to `/build/custom/custom-theme.html`:
+Once you've compiled your `custom-theme.less` go to `/build/custom/custom-theme.html` and preview your changes! You can see how it looks with lots of different programming languages. You could also view the `build/demo/*html` files to see how they've changed too.
 
-- Preview your changes here ...
-- You can see how it looks with different programming languages!
+
+## A couple of notes on `/demo` and Less CSS
+
+> ⚠️ It's not a good idea to edit the `/demo` folder!
+
+The `/themes/demo/*` files are just for demo purposes. These can be previewed with your new CSS changes, but should be left alone. Our repository should be up-to-date with all the correct `devDependencies`, but if anything goes wrong, send me an issue.[^2]
+
+Finally, just a quick note on Less CSS and those `.less` files. **I'm only using this to nicely order the CSS files** for quick viewing and compiling. I don't advocate using preprocessors anymore.[^3]
 
 
 ### A note on our light and dark themes
 
-> You could convert our dark theme to a light theme if you wished. I'd encourage you to just use the `var(--color-code-dark-*)` variables anyway, as it'll take quite a bit of work to do it differently.
+> It's best to stick to dark themes, but you can create a light one too!
 
-1. `.sourceCode .gl-CodeBlock` classes wrap our colour theme classes
-2. I'm only styling a _dark_ theme in this repo, which is used for `(code block)` fields in Anki.
-3. A light theme is inherited from [Print First CSS](https://github.com/badlydrawnrob/print-first-css):
-    - This is used anywhere else you try to use a compiled Markdown code block.
-
-If you _really_ wanted, you could create a new light theme as well as a new dark theme, but I'd probably advise against that. Keep things simple.
+Our main `code block`s use a dark theme. The light theme is only used for notes sections, where needed. For that reason, I'd generally stick with dark themes for your `custom-theme.less`. You _could_ look at how [Print First CSS](https://github.com/badlydrawnrob/print-first-css) manages it's light theme and use those variables if you wish, but I can't guarantee that it won't change in future.
 
 
 ## Adding your new theme to the Anki desktop app
 
-> Now your brand new theme has been built, we're ready to add it to Anki!
+> We're ready to add your brand new theme to Anki!
 
 Open the Anki desktop app and:
 
@@ -118,7 +122,7 @@ Open the Anki desktop app and:
 3. Select the `Cards` button.
 4. Select the `Styling` option.
 5. Delete the CSS
-6. Add your custom CSS from the compiled `main.css` file.
+6. Add your custom CSS from your custom `main.css` file.
 7. Repeat for each Card Type you'd like to edit.
 
 ### Keeping your custom theme up-to-date
@@ -132,17 +136,13 @@ If you have any problems, [create an issue](https://github.com/badlydrawnrob/ank
 
 ## Pandoc's Skylighting (under the hood)
 
-> Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18). Here's an overview of [all default themes](https://github.com/badlydrawnrob/anki/issues/142).
+> Check out Pandoc's [syntax highlighting](https://pandoc.org/chunkedhtml-demo/13-syntax-highlighting.html) and [demos](https://pandoc.org/demos.html) (number 18).
 
-Pandoc's Skylighting comes with a bunch of `--list-highlight-styles` and `--print-highlight-style=<theme>` that you can reference when editing your `--color-code-dark-*` variables. I currently work in the following way:
+Pandoc's Skylighting comes with a bunch of default styles. The `json` names are very similar to the `--color-code-dark-*` variables and `.sourceCode` class names we're using. You can see a visual overview of [all default themes](https://github.com/badlydrawnrob/anki/issues/142).
 
-1. Setup a few programming language `code block`s in `themes/custom/custom-theme.md`,
-2. Start making changes in the `custom-theme.less` files, then `npm run css`,
-3. Compile the `custom/*.md` files to `build/custom/*` and view your changes,
-4. Rinse and repeat until you've got colours you're happy with.
-5. You can also view the `build/demo/*html` files to see how they look, too.
-
-If you want to check out all of Pandoc's highlighting themes to get inspiration, you can use `pandoc -s data-code.md --highlight-style=<theme> -o data-code.html`. You can also output `pandoc --print-highlight-style=breezedark` json (or a different theme) and cross-reference those styles. The `span` classes in the `base/globals/breezedark.less` file matches up with the `json` keys (and our `--color-code-dark-*` variables).
+- `pandoc --list-highlight-styles`
+- `pandoc --print-highlight-style=<theme>`
+- `pandoc -s data-code.md --highlight-style=<theme> -o data-code.html`
 
 It'll take a little playing around to find the right match of colours. Have fun, and please do share your themes!
 
@@ -153,21 +153,14 @@ There's a known bug in Pandoc [that I've noted here](https://github.com/badlydra
 Another thing to mention is [dependency hell](../error/index.md), and I feel I've made the best of the available options for highlighting (for long-term support).
 
 
-## A couple of notes on `/demo` and Less CSS
-
-The `/themes/demo/*` files are just for demo purposes. These can be previewed with your new CSS changes, but should be left alone. Our repository should be up-to-date with all the correct `devDependencies`, but if anything goes wrong, send me an issue.[^1] The `/data/*html` files are for viewing in your code editor only.[^2]
-
-Finally, just a quick note on Less CSS and those `.less` files. **I'm only using this to nicely order the CSS files** for quick viewing and compiling. I don't advocate using preprocessors anymore.[^3]
-
-
 ## Build your own custom Anki cards from scratch (deprecated)
 
 > This is now out of scope for this repo.
 
 
 
-[^1]: There's an issue with `npm update <github-repo-package>` in which [repos don't update properly](https://github.com/badlydrawnrob/anki/issues/65). I'll make sure `print-first-css` is kept up-to-date with each release, but for bleeding-edge versions, you'll need to make sure `devDependencies` are pointing to the correct commit number and `npm install print-first-css`. If you're having error messages with other dependencies, you might have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to remove the errors. Follow the prompts.
+[^1]: Our `/data/*html` files are not supposed to be rendered in the browser. They're just for speedy compiling of data ready for your Anki Flashcard fields.
 
-[^2]: Our `/data/*html` files are not supposed to be rendered in the browser. They're just for speedy compiling of data ready for your Anki Flashcard fields.
+[^2]: There's an issue with `npm update <github-repo-package>` in which [repos don't update properly](https://github.com/badlydrawnrob/anki/issues/65). I'll make sure `print-first-css` is kept up-to-date with each release, but for bleeding-edge versions, you'll need to make sure `devDependencies` are pointing to the correct commit number and `npm install print-first-css`. If you're having error messages with other dependencies, you might have to [`npm audit`](https://docs.npmjs.com/cli/v10/commands/npm-audit) and `npm audit fix` to remove the errors. Follow the prompts.
 
 [^3]: There's plenty of time for preprocessors, fancy frameworks, and whatever else takes your fancy **later in your career**. Find yourself [a good book](https://www.goodreads.com/en/book/show/10361330) and get learning!
