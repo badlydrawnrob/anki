@@ -3,9 +3,16 @@
 // =============================================================================
 // #! I'm not sure if this should live here or in `card.less` ... or if our
 //    links should have their own `html/links.less` file?
+//
+// 1. We must use `slnt` for Recursive font as browsers don't support it properly
+//    - #! @ https://github.com/arrowtype/recursive/issues/56
 
 a {
   .nightMode & {
     color: var(--color-nightmode-link);
   }
+}
+
+i, em {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! For Recursive font only
 }

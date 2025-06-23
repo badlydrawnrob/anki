@@ -24,6 +24,12 @@
 //     - Add your custom `--font-variable` and `@font-face`
 //     - https://www.hacksoft.io/blog/using-multiple-font-files-the-right-way
 //
+// 4. Italics are a bit problematic. Even though there's an italics style
+//    within the Recursive font file, it's not working in AnkiMobile Safari
+//
+//    - `font-variation-settings: 'slnt' 0.5;` is the best current option.
+//    - #! @ https://github.com/arrowtype/recursive/issues/56
+//
 // 4. I'm still not 100% sold on Recursive font. The `MONO` is nice, but having
 //    recursive as the heading/body font can feel hard to read on desktop (it's
 //    _far_ better on mobile) — I could spend forever on typography, so I'll
@@ -52,11 +58,11 @@ body {
   background: transparent;
 }
 
-// 3
+// 3, 4
 @font-face {
   font-family: 'Recursive';
   src: url('_RecursiveVariableFont.woff2') format('woff2-variations');
-  font-style: oblique 0deg 15deg;
+  font-style: oblique 0deg 15deg; // #! (4) This isn't doing much?
   font-weight: 300 1000;
 }
 

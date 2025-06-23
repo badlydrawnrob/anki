@@ -1009,6 +1009,7 @@ figure figcaption {
   color: var(--font-color);
   background: white;
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
   margin: 0;
   padding: var(--spacing-half);
   text-align: center;
@@ -1069,6 +1070,10 @@ tbody td {
 }
 .nightMode a {
   color: var(--color-nightmode-link);
+}
+i,
+em {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 img {
   max-width: 100%;
@@ -1148,6 +1153,7 @@ img {
 }
 .gl-Card_KeyPointNotes small {
   color: var(--color-card-l);
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
   text-align: center;
   display: block;
 }
@@ -1179,6 +1185,7 @@ img {
 .gl-Card header code i,
 .gl-Card header code em {
   color: var(--color-code-italic);
+  font-variation-settings: normal;
 }
 .nightMode .gl-Card header code {
   color: var(--color-nightmode-text);
@@ -1232,6 +1239,7 @@ div.sourceCode {
 .gl-CodeBlock .sourceCode .an {
   color: var(--color-code-dark-annotation);
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-CodeBlock .sourceCode .at {
   color: var(--color-code-dark-attribute);
@@ -1245,10 +1253,12 @@ div.sourceCode {
 .gl-CodeBlock .sourceCode .ch {
   color: var(--color-code-dark-char);
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-CodeBlock .sourceCode .co {
   color: var(--color-code-dark-comment);
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-CodeBlock .sourceCode .cv {
   color: var(--color-code-dark-comment-var);
@@ -1271,6 +1281,7 @@ div.sourceCode {
 .gl-CodeBlock .sourceCode .do {
   color: var(--color-code-dark-documentation);
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-CodeBlock .sourceCode .er {
   color: var(--color-code-dark-error);
@@ -1293,6 +1304,7 @@ div.sourceCode {
 .gl-CodeBlock .sourceCode .in {
   color: var(--color-code-dark-information);
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-CodeBlock .sourceCode .kw {
   color: var(--color-code-dark-keyword);
@@ -1331,6 +1343,7 @@ div.sourceCode {
   color: var(--color-code-dark-warning);
   font-weight: 700;
   font-style: italic;
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 .gl-ImageBlock {
   background: radial-gradient(circle, #e1e1e1 0%, #ffffff 100%);
@@ -1343,6 +1356,24 @@ div.sourceCode {
 }
 .gl-ImageBlock img {
   box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.sourceCode .an {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .co {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .cv {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .do {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .in {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .wa {
+  font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
 #reverse #answer .gl-CodeBlock pre {
   margin-bottom: 0;

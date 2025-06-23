@@ -20,6 +20,13 @@
 // ---------------------
 // Currently unsupported; even if you use ``` {.numberLines} it's not gonna
 // work right now. Sorry!
+//
+// Other notes
+// -----------
+// 1. We must use `slnt` for Recursive font as browsers don't support it properly
+//    - #! @ https://github.com/arrowtype/recursive/issues/56
+//    - `font-style: italic` is now redundant but (might) support older browsers.
+//      It's the browsers approximation of italic, not how the font is designed.
 
 
 div.sourceCode {
@@ -94,7 +101,11 @@ div.sourceCode {
         font-weight: bold;
       }
     // Annotation
-    .an { color: var(--color-code-dark-annotation); font-style: italic; }
+    .an {
+      color: var(--color-code-dark-annotation);
+      font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+    }
     // Attribute
     .at { color: var(--color-code-dark-attribute); }
     // BaseN
@@ -102,9 +113,17 @@ div.sourceCode {
     // BuiltIn
     .bu { color: var(--color-code-dark-built-in); }
     // Char
-    .ch { color: var(--color-code-dark-char); font-style: italic; }
+    .ch {
+      color: var(--color-code-dark-char);
+      font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+    }
     // Comment
-    .co { color: var(--color-code-dark-comment); font-style: italic; }
+    .co {
+      color: var(--color-code-dark-comment);
+      font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+    }
     // CommentVar
     .cv { color: var(--color-code-dark-comment-var); }
     // Constant
@@ -116,7 +135,11 @@ div.sourceCode {
     // DecVal
     .dv { color: var(--color-code-dark-dec-val); }
     // Documentation
-    .do { color: var(--color-code-dark-documentation); font-style: italic; }
+    .do {
+      color: var(--color-code-dark-documentation);
+      font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+    }
     // Error
     .er {
       color: var(--color-code-dark-error);
@@ -132,7 +155,11 @@ div.sourceCode {
     // Import
     .im { color: var(--color-code-dark-import); }
     // Information
-    .in { color: var(--color-code-dark-information); font-style: italic; }
+    .in {
+      color: var(--color-code-dark-information);
+      font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+    }
     // Keyword
     .kw { color: var(--color-code-dark-keyword); font-weight: 500; }
     // Operator
@@ -161,6 +188,7 @@ div.sourceCode {
       color: var(--color-code-dark-warning);
       font-weight: 700;
       font-style: italic;
+      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
     }
   }
 }

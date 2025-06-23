@@ -22,6 +22,7 @@
 // 3. Why the fuck isn't `position: sticky` working on AnkiMobile?
 //    - It _does_ work, but there's already a sticky footer UI ...
 //    - Which means our sticky footer gets hidden (and looks shit w/ `bottom: 50px`).
+// 4. Fix the italics (the best current solution for all browsers)
 
 figure {
   display: flex; // (1)
@@ -32,6 +33,7 @@ figure {
     color: var(--font-color);
     background: white;
     font-style: italic;
+    font-variation-settings: 'CRSV' 1, 'slnt' -6; // (4)
     margin: 0;
     padding: var(--spacing-half);
     text-align: center;

@@ -136,6 +136,7 @@
   // {{Tags}}
   small {
     color: var(--color-card-l);  // #! This feels wrong to use `-card` var here
+    font-variation-settings: 'CRSV' 1, 'slnt' -6; // #!
     text-align: center;
     display: block;
   }
@@ -178,6 +179,7 @@
 
   i, em {
     color: var(--color-code-italic);
+    font-variation-settings: normal; // Overide `slnt` settings
   }
 
   .nightMode & {
@@ -206,10 +208,3 @@
     color: var(--color-bbbb);
   }
 }
-
-// .gl-Card_KeyPointNotes pre,
-// .gl-Card_KeyPointNotes pre code {
-//   .nightMode & {
-//     background: var(--color-ll);
-//   }
-// }
