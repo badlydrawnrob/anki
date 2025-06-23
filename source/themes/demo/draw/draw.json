@@ -2,7 +2,7 @@
   "★ Title": "Why is Racket Lang\u2019s image layering special? (the <a href=\"https:\/\/docs.racket-lang.org\/teachpack\/2htdpimage.html\">image\r\nteachpack<\/a>)",
 
 
-  "☆ Subtitle": "2htdp/image",
+  "☆ Subtitle": "Shapes and complex images",
 
 
   "☆ Syntax (inline code)": "(require 2htdp/image)",

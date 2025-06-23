@@ -43,8 +43,8 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 > ⤷ **`string`** (automatically wrapped with a `H2` tag)
 
-- A helpful tip or guide
-- A group of related cards
+- A short helpful tip or guide
+- Naming a group of related cards
 - The type of `syntax` we're learning
 
 
@@ -55,6 +55,16 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 - A short line of code (_not_ a code block)
 - The actual function or symbol, i.e. `len()`.
+
+
+## ☆ Sample (caption or hint)
+
+> ⤷ **[`string`]** (automatically wrapped with a `figcaption` tag)
+
+- If the heading becomes too long, use this!
+- A caption or hint extending the main question or idea
+- A caption to give the image more context (descriptive)
+- An alternative to comments in the code image
 
 
 ## ★ Sample (image)

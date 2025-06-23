@@ -2,7 +2,7 @@
   "★ Title": "What will each <code>residents[<b>‘key’</b>]</code> print out?",
 
 
-  "☆ Subtitle": "Dictionaries",
+  "☆ Subtitle": "Dictionaries are very useful for storing and retrieving data",
 
 
   "☆ Syntax (inline code)": "d = {<b>‘key’</b>: <i>value</i>}",

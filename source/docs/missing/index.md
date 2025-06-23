@@ -36,8 +36,8 @@
 
 > ⤷ **`string`** (automatically wrapped with a `H2` tag)
 
-- A helpful tip or guide
-- A group of related cards
+- A short helpful tip or guide
+- Naming a group of related cards
 - The type of `syntax` we're learning
 
 
@@ -47,7 +47,16 @@
 >    (automatically wrapped with `<p><code>` tag)
 
 - A short line of code (_not_ a code block)
-- The actual function or symbol, i.e. `len()`.
+- The actual function or symbol, i.e. `len()`
+
+
+## ☆ Key point (caption or hint)
+
+> ⤷ **[`string`]** (automatically wrapped with a `figcaption` tag)
+
+- If the heading becomes too long, use this!
+- A caption or hint extending the main question or idea
+- An alternative to comments in the code block
 
 
 ## ★ Key point (code block)
