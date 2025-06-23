@@ -978,7 +978,7 @@ kbd {
   padding: 0;
   background: var(--color-ll);
   border-color: transparent;
-  padding: var(--spacing-px) var(--spacing-half) var(--spacing-micro);
+  padding: 0 var(--spacing-quarter) var(--spacing-micro);
   font-family: var(--font-family);
   font-size: inherit;
   font-variation-settings: 'MONO' 1, 'CASL' 0;
@@ -1222,7 +1222,7 @@ img {
   color: var(--color-code-cloze);
   font-weight: 700;
   background: var(--color-code-cloze-background);
-  padding: var(--spacing-quarter);
+  padding: var(--spacing-micro) var(--spacing-quarter);
   border-radius: var(--border-radius);
 }
 .gl-CodeBlock .cloze > span {

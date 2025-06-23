@@ -46,17 +46,19 @@
 // Missing! `.cloze` tag styles ------------------------------------------------
 //
 // 1. `.cloze` is an Anki-specific class for cloze deletion types
-// 2. Make the `--code-` colours more "punchy" on the `.cloze` background
+// 2. At padding size `-spacing-quarter` the cloze tags get "clipped" because
+//    of `overflow: auto` of `<pre>` or `<code>` blocks.
+// 3. Make the `--code-` colours more "punchy" on the `.cloze` background
 //    all `.sourceCode` classes are spans (such as `.at`tributes)
 
 .gl-CodeBlock .cloze {
   color: var(--color-code-cloze);
   font-weight: 700;
   background: var(--color-code-cloze-background); // 1
-  padding: var(--spacing-quarter);
+  padding: var(--spacing-micro) var(--spacing-quarter); // 2
   border-radius: var(--border-radius);
 
   > span {
-    filter: brightness(65%) contrast(220%);        // 2 #!
+    filter: brightness(65%) contrast(220%);        // 3
   }
 }
