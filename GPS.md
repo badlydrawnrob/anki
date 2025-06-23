@@ -13,6 +13,12 @@ Moving on from ECSS
 
 ## Summary
 
+> ⚠️ CSS is a bloody chore. There are things that just don't work as they should
+> with the AnkiMobile browser, it's not particularly intuitive to code, and it
+> takes AGES to get right. AVOID, AVOID, AVOID, wherever possible. Choose a decent
+> CSS framework or Ai tool, use purgeCSS to reduce the file size. Ai isn't quite
+> there yet, but for simple things, manual CSSing isn't entirely needed.
+
 ### `@media` styles CAN'T be nested still, only `.class` names?
 
 With ECSS you write a unique scoped class for each and every item.

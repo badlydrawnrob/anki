@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // Code (inline and basic code blocks)
 // =============================================================================
+// > See `variables` folder for colours and themes
+//
 // It seems I'm basically resetting to a default here, and we're doing the
 // heavy lifting of styles elsewhere. Inherited `--color-code-light-*` theme
 // as default, so some styles need to be overriden.
@@ -9,7 +11,8 @@
 //       I feel as much as possible, `code` and `pre` stuff should be set here
 //       for light and dark mode (user settings).
 //
-// 1. See `variables` folder for colours and themes
+// 1. As our `font-size` is smaller than Print-First-CSS, make sure there's a
+//    tiny whitespace gap if inline code overlaps vertically.
 // 2. Inherit `font-size` from parents (setting it here, as it seems like a lot
 //    of extra work to style it on every element individually.
 // 3. Some specific settings for Recursive font (see `typography.less`)
@@ -20,7 +23,7 @@ kbd {
   padding: 0;
   background: var(--color-ll);
   border-color: transparent;
-  padding: var(--spacing-micro) var(--spacing-half);
+  padding: var(--spacing-px) var(--spacing-half) var(--spacing-micro); // 1
 
   font-family: var(--font-family);
   font-size: inherit;                           // 2

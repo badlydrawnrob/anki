@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-flashcards",
-  "version": "3.0.3",
+  "version": "3.2.1",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,6 @@
   "devDependencies": {
     "less": "^4.2.0",
     "mustache": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#d2f15c2"
+    "print-first-css": "github:badlydrawnrob/print-first-css#54493c8"
   }
 }
