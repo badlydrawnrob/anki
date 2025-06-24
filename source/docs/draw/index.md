@@ -59,7 +59,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 ## ☆ Sample (caption or hint)
 
-> ⤷ **[`string`]** (automatically wrapped with a `figcaption` tag)
+> ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
 
 - If the heading becomes too long, use this!
 - A caption or hint extending the main question or idea
