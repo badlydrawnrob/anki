@@ -11,7 +11,7 @@
         - A class with a method that you need to call
 
     - Docs:
-        http://tinyurl.com/anki-simple-card
+        @ http://tinyurl.com/anki-simple-card
 
     - Key:
         ★ Required
@@ -27,11 +27,11 @@
             `★ Title` field:
 
             <h1>What happens is we type <code>Model</code> in the repl?</h1>
-                -------------------------------------------------------
-            xxxx                                                       xxxxx
+            xxxx-------------------------------------------------------xxxxx
 
-        Compiled data is simple meant to speed up the card creation process —
-        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+        Compiled data is simply meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor
+        (such as Visual Studio Code) to copy/paste your Anki card fields.
 
 ========================================================================== -->
 
@@ -60,6 +60,17 @@
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
 `Film Internals (Maybe (List Review))`
+
+
+<!-- -------------------------------------------------------------------------
+    ☆ Sample (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+false
 
 
 <!-- -------------------------------------------------------------------------

@@ -9,7 +9,7 @@
         - A missing input or output to remember
 
     - Docs:
-        http://tinyurl.com/anki-missing-card
+        @ http://tinyurl.com/anki-missing-card
 
     - Key:
         ★ Required
@@ -19,17 +19,17 @@
 
     - Notes:
         Where fields are auto-wrapped with an HTML tag, copy/paste the compiled
-        data _within_ those tags in your Anki fields, otherwise you'll have
+        data _within_ those tags for your Anki fields, otherwise you'll have
         formatting issues. For example:
 
             `★ Title` field:
 
-            <h1>We’ve changed from <code>Browser.sandbox</code> to <code>Browser.element</code>. What’s changed?</h1>
-                ------------------------------------------------------------------------------------------------
-            xxxx                                                                                                xxxxx
+            <h1><code>Browser.sandbox</code> must change to ...?</h1>
+            xxxx------------------------------------------------xxxxx
 
-        Compiled data is simple meant to speed up the card creation process —
-        it's not meant to be viewed in the browser. Best viewed in a text editor (such as Visual Studio Code) to copy/paste your Anki field data.
+        Compiled data is simply meant to speed up the card creation process —
+        it's not meant to be viewed in the browser. Best viewed in a text editor
+        (such as Visual Studio Code) to copy/paste your Anki card fields.
 
 ========================================================================== -->
 
@@ -58,6 +58,17 @@
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
 `Result.Extra.andMap`
+
+
+<!-- -------------------------------------------------------------------------
+    ☆ Key point (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+false
 
 
 <!-- -------------------------------------------------------------------------
