@@ -15,11 +15,11 @@
 
 The Anki app is a great way to learn, revise, and practice your coding skills, but Anki's default cards aren't great for programming. We can do better! These handy flashcards (and CSS themes) help make it fun to learn.
 
-- Suitable for all learning levels,
-- Great for frontend and backend,
-- Popular languages supported,
-- Add color to your code,
-- Create your own custom theme.
+- Suitable for all learning levels
+- Great for frontend and backend
+- Popular languages supported
+- Add color to your code
+- Create your own custom theme
 
 Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **lisp**, **elm**, **R**, **SQL** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
 
@@ -29,9 +29,9 @@ Are you looking to master **html**, **css**, **javascript**, **php**, **python**
 > You can merge notetypes, but be safe and backup!
 
 1. Get the [latest Anki deck (`.apkg`)](https://github.com/badlydrawnrob/anki/releases)
-2. Open the [Anki](https://apps.ankiweb.net) desktop app.
-3. `File > Import ...` the deck,
-4. Add a new card,
+2. Open the [Anki](https://apps.ankiweb.net) desktop app
+3. `File > Import ...` the deck
+4. Add a new card
 5. Select the `Anki Programming Flashcards (APF)` card type
 6. Get creative with your cards!
 
@@ -105,7 +105,7 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 <summary><strong>🎥 Step 1. Write your flashcards quickly and easily (<code>markdown->html</code>)</strong></summary>&nbsp;
 
 - ⏱️ Want a faster way to create your flashcards?
-- 🤖 I've got you covered with `npm` and `pandoc`.
+- 🤖 I've got you covered with `npm` and `pandoc`
 
 Once you've got the basics of Anki programming flashcards down, it's time to get fancy with the **[offline `markdown->html` compiler](./source/docs/professional/index.md#first-steps)**. It'll render all your card's data fields for you in a flash!
 
@@ -116,7 +116,7 @@ https://github.com/user-attachments/assets/99a87801-4a4a-488c-9666-613280f6d0b5
 <summary><strong>🎥 Step 2. Create your own colour theme</strong></summary>&nbsp;
 
 - 🧑‍🎨 Want your own custom colour theme?
-- 🤖 I've got you covered with `npm`, `pandoc` and `less`.
+- 🤖 I've got you covered with `npm`, `pandoc` and `less`
 
 If you're feeling creative, you can also take your code to the next level by **🧑‍🎨 [creating your own colour theme](./source/docs/professional/index.md#the-professional-way-to-create-your-own-css-theme)**, with any syntax highlighting pallette you like for your `code block`s. You can also change the Typography to your favourite `--font`!
 
@@ -129,8 +129,8 @@ I'd advise beginners to start by writing great cards, before moving on to use th
 
 I've spent a lot of time so you can:
 
-- Use the flashcards as they are — or create your own colors/typography,
-- Use the excellent `markdown->html` workflow  ... online or locally.
+- Use the flashcards as they are — or create your own colors/typography
+- Use the excellent `markdown->html` workflow  ... online or locally
 
 The flashcards work on all platforms: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Intel, Silicon) and [Android](https://github.com/ankidroid/Anki-Android). It depends on very little from the Anki app, no add-ons required (which tend to go out-of-date); it's stable software, with very light dependencies (Node and Pandoc) and a very simple setup.
 

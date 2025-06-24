@@ -74,7 +74,7 @@ Create your code, add one or more `{{c1::cloze deletion}}` tags (here's [a tutor
 
 > ⤷ **`rich html`**
 
-- A short explanation of what we're trying to learn.
+- A short explanation of what we're trying to learn
 
 
 ## ✎ Other notes

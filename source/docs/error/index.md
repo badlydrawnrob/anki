@@ -4,10 +4,10 @@
 
 If you're new to programming, let me explain. I previously used [Power Format Pack](https://gitlab.com/neftas/supplementary-buttons-anki/issues/96), [Stylus](http://stylus-lang.com), [Moustache](https://mustache.github.io) and [Highlight.js](https://highlightjs.org/) — all of which are great, until ...
 
-1. One is dead, one dying.
-2. One just doesn't work with Anki.
-3. It happens _all the time_ in tech.
-4. Be extra careful what you depend on.
+1. One is dead, one dying
+2. One just doesn't work with Anki
+3. It happens _all the time_ in tech
+4. Be extra careful what you depend on
 5. This is commonly known as **[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)**
 
 I feel that a tool or a piece of software that's still around in 5 years, without any serious changes, [is a good thing](https://github.com/badlydrawnrob/anki/issues/53).

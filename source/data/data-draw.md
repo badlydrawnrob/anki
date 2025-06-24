@@ -13,10 +13,10 @@
 
         - A whiteboard diagram with a small program or
           function: You have to remember or guess something
-          about it.
+          about it
         - A function or program that you need to sketch
           out. Something you'd like to drill yourself with
-          to rememeber.
+          to rememeber
 
     - Docs:
         @ #! tinyurl link to come later

@@ -117,13 +117,13 @@ Our main `code block`s use a dark theme. The light theme is only used for notes 
 
 Open the Anki desktop app and:
 
-1. Go to `Tools > Manage Note Types`.
-2. Select the `APF: ...` Note Type.
-3. Select the `Cards` button.
-4. Select the `Styling` option.
+1. Go to `Tools > Manage Note Types`
+2. Select the `APF: ...` Note Type
+3. Select the `Cards` button
+4. Select the `Styling` option
 5. Delete the CSS
-6. Add your custom CSS from your custom `main.css` file.
-7. Repeat for each Card Type you'd like to edit.
+6. Add your custom CSS from your custom `main.css` file
+7. Repeat for each Card Type you'd like to edit
 
 ### Keeping your custom theme up-to-date
 

@@ -42,12 +42,12 @@ You'll probably want to go **full colour** next, so here's simple tips before we
 
 Basic colours are fine for small lines of code, but Anki Programming Flashcards provides highlighted CSS styles for our main code; all generated using Markdown and [Pandoc](https://pandoc.org/). Here's how to do it, step-by-step:
 
-1. Write your code as [Markdown fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting),
-2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea),
-3. Add a card in Anki,
-4. Choose a [`code block`](../simple/index.md#-sample-code-block) field,
-5. Add your rendered HTML,
-6. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code,
+1. Write your code as [Markdown fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting)
+2. Convert [Markdown to HTML5 online](https://tinyurl.com/mr43ydea)
+3. Add a card in Anki
+4. Choose a [`code block`](../simple/index.md#-sample-code-block) field
+5. Add your rendered HTML
+6. Press the `A𝐴` button ([`Toggle Visual Editor ⌘⇧X`](https://github.com/badlydrawnrob/anki/issues/62)) to preview your code
 7. Repeat the process — save your card!
 
 That's it. You're done. Simple, right?!

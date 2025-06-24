@@ -6,7 +6,7 @@
         A question with a [missing] word;
 
         - A missing function or expression you have to guess,
-        - A missing input or output to remember.
+        - A missing input or output to remember
 
     - Docs:
         http://tinyurl.com/anki-missing-card
@@ -81,7 +81,7 @@
       they should work fine in Anki. You can also:
 
       1. `Toggle HTML Editor ⌘⇧X` (`‹›`) to enable rich text preview
-      2. Highlight the text that you'd like to convert to a cloze.
+      2. Highlight the text that you'd like to convert to a cloze
       3. Press the `[...]` or `[...]+` button to add the cloze deletion
 
       !# Warning: These buttons may break your code:

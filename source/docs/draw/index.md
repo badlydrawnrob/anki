@@ -14,9 +14,9 @@
 
 There's many potential use-cases for the Draw! card. I've listed some initial ideas in [this issue](https://github.com/badlydrawnrob/anki/issues/165). At it's most basic we're asking _"what does this code do?"_, or _"what does this picture represent?"_, or _"what routes could we use to fix this problem?"_, or _"how do we solve this?"_.
 
-- An animated gif or photograph,
-- A sketch or iPad drawing,
-- A question that you must sketch out,
+- An animated gif or photograph
+- A sketch or iPad drawing
+- A question that you must sketch out
 - Perhaps even a video!
 
 If the card is not suitable for mobile viewing, I find it helpful tagging it as `desktop`.
@@ -36,7 +36,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 > ⤷ **`string`** (automatically wrapped with a `H1` tag)
 
-- The main question, statement or fact.
+- The main question, statement or fact
 
 
 ## ☆ Subtitle
@@ -54,17 +54,16 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 >    (automatically wrapped with `<p><code>` tag)
 
 - A short line of code (_not_ a code block)
-- The actual function or symbol, i.e. `len()`.
+- The actual function or symbol, i.e. `len()`
 
 
 ## ☆ Sample (caption or hint)
 
 > ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
 
-- If the heading becomes too long, use this!
-- A caption or hint extending the main question or idea
-- A caption to give the image more context (descriptive)
-- An alternative to comments in the code image
+- If the heading becomes too long, use this caption!
+- Extend and describe the main question or idea; give the image context
+- An alternative to comments in the image of code
 
 
 ## ★ Sample (image)
@@ -87,7 +86,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 > ⤷ **`rich html`**
 
-- A short explanation of what we're trying to learn.
+- A short explanation of what we're trying to learn
 
 
 ## ✎ Other notes
@@ -117,10 +116,10 @@ For the risk-averse, you can keep `raw text` in the `✎ Markdown` field provide
 > Use your photo software of choice to edit your images; change the size, hide bits of it to reveal, create a fun `.gif` file, add sketches or iPad drawings, so on. It's just as easy to use Photoshop than it is to mess around with a Anki's half-baked image editor.[^2]
 
 1. You might want to storify these cards, or add tags:
-    - `code::stories` plus `code::elm` is very descriptive.
-    - Those would be great for content like Ozaria (game) chapters.
-2. Create a [filtered deck](https://docs.ankiweb.net/filtered-decks.html) with tags
-    - Limiting the cards you're viewing for a study session.
+    - `code::stories` plus `code::elm` is very descriptive
+    - Those would be great for content like Ozaria (game) chapters
+2. Create a [filtered deck](https://docs.ankiweb.net/filtered-decks.html) with tags:
+    - Limiting the cards you're viewing for a study session
 3. Use an app like Ozaria or CodeCombat to make learning fun ...
     - And create cards that'll rejig your memory for your `hero.commands()`!
 

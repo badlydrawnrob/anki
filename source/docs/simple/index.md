@@ -14,8 +14,8 @@
 
 **A simple `question->answer` card;** we're asking the question: _"what does this code do?"_, e.g:
 
-- A function with an output you have to guess.
-- A class with a method that you need to call.
+- A function with an output you have to guess
+- A class with a method that you need to call
 
 | You'll probably want: | It's helpful to add: |
 | --------------------- | ------------------------------ |
@@ -30,7 +30,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 > ⤷ **`string`** (automatically wrapped with a `H1` tag)
 
-- The main question, statement or fact.
+- The main question, statement or fact
 
 
 ## ☆ Subtitle
@@ -48,7 +48,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 >    (automatically wrapped with `<p><code>` tag)
 
 - A short line of code (_not_ a code block)
-- The actual function or symbol, i.e. `len()`.
+- The actual function or symbol, i.e. `len()`
 
 
 ## ☆ Sample (caption or hint)
@@ -80,7 +80,7 @@ In general it's best to make sure `★ Required` fields are filled in. However, 
 
 > ⤷ **`rich html`**
 
-- A short explanation of what we're trying to learn.
+- A short explanation of what we're trying to learn
 
 
 ## ✎ Other notes
