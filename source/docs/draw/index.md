@@ -11,7 +11,6 @@
 ## What's the answer?
 
 > ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
-> [Toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's `<>` code editor and `A𝐴` visual editor at any time!
 
 There's many potential use-cases for the Draw! card. I've listed some initial ideas in [this issue](https://github.com/badlydrawnrob/anki/issues/165). At it's most basic we're asking _"what does this code do?"_, or _"what does this picture represent?"_, or _"what routes could we use to fix this problem?"_, or _"how do we solve this?"_.
 
@@ -29,6 +28,8 @@ If the card is not suitable for mobile viewing, I find it helpful tagging it as 
 | Your key learning point | Links to articles, documentation, videos, etc |
 
 In general it's best to make sure `★ Required` fields are filled in. However, for a very simple `question->answer` card, feel free to only use the fields that you need. For example, you might want to remember a picture, so you'd use only the `★ Title`, `★ Key Point (image)`, and `★ Key point notes` fields.
+
+You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's `<>` code editor and `A𝐴` visual editor at any time!
 
 <!-- #! Examples would be helpful here, similar to Simple card (but not CodePen) -->
 
