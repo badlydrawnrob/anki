@@ -25,6 +25,7 @@
 
 In general it's best to make sure `★ Required` fields are filled in. However, for a very simple `question->answer` card, where you don't need a code example, feel free to just use `★ Title` and `★ Key point notes` fields. [Example here](https://codepen.io/testuser-247585903/pen/yLwgBgp) and [issue](https://github.com/badlydrawnrob/anki/issues/46) here.
 
+You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's `<>` code editor and `A𝐴` visual editor at any time!
 
 ## ★ Title
 

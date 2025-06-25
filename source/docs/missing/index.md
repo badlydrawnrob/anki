@@ -23,6 +23,7 @@
 | A clear question and answer | Supporting notes (bullet points) |
 | Your key learning point | Links to articles or documentation |
 
+You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's `<>` code editor and `A𝐴` visual editor at any time!
 
 
 ## ★ Title
