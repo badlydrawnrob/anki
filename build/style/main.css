@@ -464,7 +464,7 @@ code,
 kbd,
 samp {
   margin: 0;
-  padding: var(--spacing-micro) var(--spacing-quarter) var(--spacing-micro);
+  padding: var(--spacing-micro) var(--spacing-quarter);
   white-space: nowrap;
 }
 @media screen {
@@ -802,7 +802,6 @@ i {
 }
 .sourceCode .dt {
   color: var(--color-code-light-data-type);
-  text-decoration: underline;
 }
 .sourceCode .dv {
   color: var(--color-code-light-dec-val);
@@ -1356,6 +1355,9 @@ div.sourceCode {
 .gl-ImageBlock img {
   box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
 }
+.sourceCode .al {
+  font-weight: 400;
+}
 .sourceCode .an {
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
@@ -1365,11 +1367,23 @@ div.sourceCode {
 .sourceCode .cv {
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
+.sourceCode .cf {
+  font-weight: 400;
+}
 .sourceCode .do {
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
 }
+.sourceCode .er {
+  font-weight: 400;
+}
 .sourceCode .in {
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
+}
+.sourceCode .kw {
+  font-weight: 400;
+}
+.sourceCode .pp {
+  font-weight: 400;
 }
 .sourceCode .wa {
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
