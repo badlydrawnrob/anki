@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What's wrong with this `Maybe` case? How could it be improved?
+# What does an anonymous `List.map` multiply function look like?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Maybe
+## Anonymous functions
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Film Internals (Maybe (List Review))`
+`false`
 
 
 <!-- -------------------------------------------------------------------------
@@ -84,15 +84,7 @@ false
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-addReview : Review -> Film -> Film
-addReview r (Film internals reviews) =
-  case reviews of
-    Just hasReviews ->
-      Film internals (Just (hasReviews ++ [ review ]))
-
-    Nothing ->
-      Film internals reviews
-
+false
 ```
 
 
@@ -111,12 +103,9 @@ addReview r (Film internals reviews) =
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
--- Uses `Maybe.Extra` package!
-Film intervals
-  (Maybe.unwrap
-    [review]
-    (\l -> l ++ [review]) reviews
-      |> Just)
+List.map
+  (\num -> num * num)
+  [1, 2, 3, 4, 5]
 ```
 
 
@@ -125,12 +114,19 @@ Film intervals
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-So many errors!
+When we only need a small function, we don't need to name it! Our example above
+uses lambda style notation: `\_`. In fact, you can think about currying in this
+way, too. We could write a multiply function in a couple of ways:
 
-1. The `Nothing` case should be `review`. It currently ignores the change.
-2. We could've used the `Maybe.Extra` package to simplify our code
-3. **Why the fuck are we using a `Maybe` anyway?** See notes below.
-    - Make life easier for yourself and avoid all that unpacking.
+```elm
+-- Regular style
+multiply x y = x * y
+-- Lambda style
+multiply = \x -> \y -> x * y
+-- Curry either one
+add1 : Int -> Int
+add1 = multiply 1
+```
 
 
 <!-- -------------------------------------------------------------------------
@@ -138,7 +134,7 @@ So many errors!
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Our `Film Internals (Maybe (List Review))` could just as well use `List Review`. Are we purposefully disallowing an empty list? No? Then we don't need a `Maybe` as `Nothing` isn't semantically different to `[]`!
+That's essentially all currying is. Both functions (under the hood) essentially take _one_ argument at a time, returning a function that takes the _next_ argument, and so on!
 
 
 <!-- -------------------------------------------------------------------------

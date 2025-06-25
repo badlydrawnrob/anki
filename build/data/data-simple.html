@@ -39,14 +39,14 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What’s wrong with this <code>Maybe</code> case? How could it be
-improved?</h1>
+<h1>What does an anonymous <code>List.map</code> multiply function look
+like?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Maybe</h2>
+<h2>Anonymous functions</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -54,7 +54,7 @@ improved?</h1>
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>Film Internals (Maybe (List Review))</code></p>
+<p><code>false</code></p>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -75,14 +75,7 @@ improved?</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">addReview</span> : <span class="dt">Review</span> <span class="op">-&gt;</span> <span class="dt">Film</span> <span class="op">-&gt;</span> <span class="dt">Film</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">addReview</span> <span class="fu">r</span> (<span class="dt">Film</span> <span class="fu">internals</span> <span class="fu">reviews</span>) <span class="op">=</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">reviews</span> <span class="cf">of</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Just</span> <span class="fu">hasReviews</span> <span class="op">-&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Film</span> <span class="fu">internals</span> (<span class="dt">Just</span> (<span class="fu">hasReviews</span> <span class="op">++</span> [ <span class="fu">review</span> ]))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Nothing</span> <span class="op">-&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Film</span> <span class="fu">internals</span> <span class="fu">reviews</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">false</span></span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -95,39 +88,34 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Uses `Maybe.Extra` package!</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">Film</span> <span class="fu">intervals</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">unwrap</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">review</span>]</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    (\<span class="fu">l</span> <span class="op">-&gt;</span> <span class="fu">l</span> <span class="op">++</span> [<span class="fu">review</span>]) <span class="fu">reviews</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">|&gt;</span> <span class="dt">Just</span>)</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">map</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  (\<span class="fu">num</span> <span class="op">-&gt;</span> <span class="fu">num</span> <span class="op">*</span> <span class="fu">num</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>So many errors!</p>
-<ol type="1">
-<li>The <code>Nothing</code> case should be <code>review</code>. It
-currently ignores the change.</li>
-<li>We could’ve used the <code>Maybe.Extra</code> package to simplify
-our code</li>
-<li><strong>Why the fuck are we using a <code>Maybe</code>
-anyway?</strong> See notes below.
-<ul>
-<li>Make life easier for yourself and avoid all that unpacking.</li>
-</ul></li>
-</ol>
+<p>When we only need a small function, we don’t need to name it! Our
+example above uses lambda style notation: <code>\_</code>. In fact, you
+can think about currying in this way, too. We could write a multiply
+function in a couple of ways:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Regular style</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span> <span class="fu">x</span> <span class="fu">y</span> <span class="op">=</span> <span class="fu">x</span> <span class="op">*</span> <span class="fu">y</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Lambda style</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span> <span class="op">=</span> \<span class="fu">x</span> <span class="op">-&gt;</span> \<span class="fu">y</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">*</span> <span class="fu">y</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Curry either one</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">add1</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">add1</span> <span class="op">=</span> <span class="fu">multiply</span> <span class="dv">1</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Our <code>Film Internals (Maybe (List Review))</code> could just as
-well use <code>List Review</code>. Are we purposefully disallowing an
-empty list? No? Then we don’t need a <code>Maybe</code> as
-<code>Nothing</code> isn’t semantically different to
-<code>[]</code>!</p>
+<p>That’s essentially all currying is. Both functions (under the hood)
+essentially take <em>one</em> argument at a time, returning a function
+that takes the <em>next</em> argument, and so on!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
