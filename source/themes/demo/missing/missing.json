@@ -5,7 +5,7 @@
   "☆ Subtitle": "Conditions",
 
 
-  "☆ Syntax (inline code)": false,
+  "☆ Syntax (inline code)": "[Int,Int]",
 
 
   "☆ Key point (caption or hint)": "Remember that these are ranges of numbers; a bit like creating guards for numbers input!",

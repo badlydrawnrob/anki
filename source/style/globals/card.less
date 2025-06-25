@@ -119,6 +119,7 @@
   background: var(--color-card-lll);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   font-size: var(--font-size-m);
+  text-align: left;
 
   ul, ol {
     margin-left: var(--spacing-one);
@@ -158,6 +159,12 @@
 //
 // #! Should our code styles be here or someplace else?
 // #! Both `pre` and `code` need to inherit here for some reason.
+//
+// Notes
+// -----
+// 1. #! Should the `header > p > code` have a background?
+//     - `background: var(--color-code-light-background);`
+//     - `padding: var(--spacing-quarter);` (like `.cloze`)
 
 .gl-Card header code {
   background: transparent;

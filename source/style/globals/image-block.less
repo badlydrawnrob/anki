@@ -9,7 +9,6 @@
 //
 // 1. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
 //    - So use a simpler color instead (add a `--color` var for this?)
-//
 
 .gl-ImageBlock {
   background: radial-gradient(circle,rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 1) 100%);
@@ -24,5 +23,9 @@
 
   img {
     box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  pre {
+    margin: 0; // #! Should this be here?
   }
 }

@@ -257,8 +257,8 @@ template {
   --color-code-light-base-n: #000;
   --color-code-light-built-in: #000;
   --color-code-light-char: #000;
-  --color-code-light-comment: #000;
-  --color-code-light-comment-var: #000;
+  --color-code-light-comment: #6E6E6E;
+  --color-code-light-comment-var: #6E6E6E;
   --color-code-light-constant: #000;
   --color-code-light-control-flow: #000;
   --color-code-light-data-type: #000;
@@ -973,7 +973,8 @@ body {
   font-weight: 400;
 }
 code,
-kbd {
+kbd,
+samp {
   padding: 0;
   background: var(--color-ll);
   border-color: transparent;
@@ -983,11 +984,13 @@ kbd {
   font-variation-settings: 'MONO' 1, 'CASL' 0;
 }
 .nightMode code,
-.nightMode kbd {
+.nightMode kbd,
+.nightMode samp {
   background: var(--color-nightmode-background-l);
 }
 code:empty,
-kbd:empty {
+kbd:empty,
+samp:empty {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -1139,6 +1142,7 @@ img {
   background: var(--color-card-lll);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   font-size: var(--font-size-m);
+  text-align: left;
 }
 .gl-Card_KeyPointNotes ul,
 .gl-Card_KeyPointNotes ol {
@@ -1203,6 +1207,7 @@ img {
 }
 .gl-CodeBlock pre {
   margin: 0;
+  padding: calc(var(--spacing) - var(--spacing-micro)) var(--spacing);
 }
 .gl-CodeBlock pre,
 .gl-CodeBlock pre code {
@@ -1210,6 +1215,9 @@ img {
   color: var(--color-code-dark-text-color);
   font-family: var(--font-family-mono);
   background: var(--color-code-dark-background);
+}
+.gl-CodeBlock code {
+  padding: var(--spacing-micro) 0;
 }
 @media (orientation: portrait) {
   .gl-CodeBlock {
@@ -1220,7 +1228,7 @@ img {
   color: var(--color-code-cloze);
   font-weight: 700;
   background: var(--color-code-cloze-background);
-  padding: var(--spacing-micro) var(--spacing-quarter);
+  padding: var(--spacing-quarter) calc(var(--spacing-quarter) + var(--spacing-micro));
   border-radius: var(--border-radius);
 }
 .gl-CodeBlock .cloze > span {
@@ -1354,6 +1362,9 @@ div.sourceCode {
 }
 .gl-ImageBlock img {
   box-shadow: 5px 10px 12px -12px rgba(0, 0, 0, 0.5), -5px 10px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.gl-ImageBlock pre {
+  margin: 0;
 }
 .sourceCode .al {
   font-weight: 400;
