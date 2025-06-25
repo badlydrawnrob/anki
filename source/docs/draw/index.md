@@ -11,6 +11,7 @@
 ## What's the answer?
 
 > ★ Required  &nbsp;&nbsp;&nbsp;☆ ✎ Optional &nbsp;&nbsp;&nbsp;⤷ Field Type
+> [Toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's `<>` code editor and `A𝐴` visual editor at any time!
 
 There's many potential use-cases for the Draw! card. I've listed some initial ideas in [this issue](https://github.com/badlydrawnrob/anki/issues/165). At it's most basic we're asking _"what does this code do?"_, or _"what does this picture represent?"_, or _"what routes could we use to fix this problem?"_, or _"how do we solve this?"_.
 
