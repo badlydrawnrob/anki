@@ -27,12 +27,16 @@
 // ---------------
 // 1. Without `code` padding, our `.cloze` tags get "clipped" as they're a bit
 //    too chunky to fit within the `pre`.
+//     - #! Because AnkiMobile treats `rem` units slightly differently, uglify
+//       this code and add `1px` extra padding to `code` (stop clipping). Just
+//       give the same extra `1px` padding to both top and bottom.
+//     - Compensate the `pre` accordingly (minus `1px`) so balances out.
 
 .gl-CodeBlock {
 
   pre {
     margin: 0;
-    padding: calc(var(--spacing) - var(--spacing-micro)) var(--spacing); // #! 1
+    padding: calc(var(--spacing) - var(--spacing-micro) - var(--spacing-px)) var(--spacing); // #! 1
   }
 
   pre,
@@ -44,7 +48,7 @@
   }
 
   code {
-    padding: var(--spacing-micro) 0; // #! 1
+    padding: calc(var(--spacing-micro) + var(--spacing-px)) 0; // #! 1
   }
 
   @media (orientation: portrait) {

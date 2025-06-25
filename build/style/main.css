@@ -1207,7 +1207,7 @@ img {
 }
 .gl-CodeBlock pre {
   margin: 0;
-  padding: calc(var(--spacing) - var(--spacing-micro)) var(--spacing);
+  padding: calc(var(--spacing) - var(--spacing-micro) - var(--spacing-px)) var(--spacing);
 }
 .gl-CodeBlock pre,
 .gl-CodeBlock pre code {
@@ -1217,7 +1217,7 @@ img {
   background: var(--color-code-dark-background);
 }
 .gl-CodeBlock code {
-  padding: var(--spacing-micro) 0;
+  padding: calc(var(--spacing-micro) + var(--spacing-px)) 0;
 }
 @media (orientation: portrait) {
   .gl-CodeBlock {
