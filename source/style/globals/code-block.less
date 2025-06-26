@@ -25,18 +25,16 @@
 //
 // Some minor bugs
 // ---------------
-// 1. Without `code` padding, our `.cloze` tags get "clipped" as they're a bit
-//    too chunky to fit within the `pre`.
-//     - #! Because AnkiMobile treats `rem` units slightly differently, uglify
-//       this code and add `1px` extra padding to `code` (stop clipping). Just
-//       give the same extra `1px` padding to both top and bottom.
-//     - Compensate the `pre` accordingly (minus `1px`) so balances out.
+// 1. Without `code` padding, `.cloze` tags get "clipped" top/bottom.
+//     - #! AnkiMobile treats `rem` units slightly differently, so uglify
+//       the code to add `1px` extra padding.
+//     - Compensate the `pre` accordingly (minus `1px`) to fit `4px` grid.
 
 .gl-CodeBlock {
 
   pre {
     margin: 0;
-    padding: calc(var(--spacing) - var(--spacing-micro) - var(--spacing-px)) var(--spacing); // #! 1
+    padding: calc(var(--spacing) - var(--spacing-micro)) var(--spacing); // #! 1
   }
 
   pre,
@@ -48,7 +46,7 @@
   }
 
   code {
-    padding: calc(var(--spacing-micro) + var(--spacing-px)) 0; // #! 1
+    padding: var(--spacing-micro) 0; // #! 1
   }
 
   @media (orientation: portrait) {
@@ -60,10 +58,13 @@
 // Missing! `.cloze` tag styles ------------------------------------------------
 //
 // 1. `.cloze` is an Anki-specific class for cloze deletion types
-// 2. Fuck it. I want them big and chunky. Because of that, if you've only got
-//    `pre` padding and no `code` padding, they get "clipped" at the top/bottom.
-//    - #! Add some padding to those elements to fix this problem!
-//    - #! AnkiMobile treats `rem` units slightly differently, 1px extra ...
+// 2. I prefer them a bit more chunky than default `<code>` padding.
+//    - #! AnkiMobile is a f* pain and treats `rem` units slightly different
+//    - #! So we have to reduce the padding by `1px` somehow! (We set padding
+//      in `code.less` for `pre` and `code`; avoids "clipping" top/bottom.
+//    - It's an "inbetweeny" size that's not quite on our `4px` grid, but it's
+//      a tradeoff to get chunky while maintaining legibility for adjacent lines
+//      with our regular `line-height`.
 // 3. Make the `--code-` colours more "punchy" on the `.cloze` background
 //    all `.sourceCode` classes are spans (such as `.at`tributes)
 
@@ -71,7 +72,10 @@
   color: var(--color-code-cloze);
   font-weight: 700;
   background: var(--color-code-cloze-background); // 1
-  padding: var(--spacing-quarter) calc(var(--spacing-quarter) + var(--spacing-micro)); // 2
+  padding:
+    calc(var(--spacing-micro) + var(--spacing-px))
+    calc(var(--spacing-quarter) + var(--spacing-micro))
+    var(--spacing-quarter); // 2
   border-radius: var(--border-radius);
 
   > span {

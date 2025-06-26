@@ -1207,7 +1207,7 @@ img {
 }
 .gl-CodeBlock pre {
   margin: 0;
-  padding: calc(var(--spacing) - var(--spacing-micro) - var(--spacing-px)) var(--spacing);
+  padding: calc(var(--spacing) - var(--spacing-micro)) var(--spacing);
 }
 .gl-CodeBlock pre,
 .gl-CodeBlock pre code {
@@ -1217,7 +1217,7 @@ img {
   background: var(--color-code-dark-background);
 }
 .gl-CodeBlock code {
-  padding: calc(var(--spacing-micro) + var(--spacing-px)) 0;
+  padding: var(--spacing-micro) 0;
 }
 @media (orientation: portrait) {
   .gl-CodeBlock {
@@ -1228,7 +1228,7 @@ img {
   color: var(--color-code-cloze);
   font-weight: 700;
   background: var(--color-code-cloze-background);
-  padding: var(--spacing-quarter) calc(var(--spacing-quarter) + var(--spacing-micro));
+  padding: calc(var(--spacing-micro) + var(--spacing-px)) calc(var(--spacing-quarter) + var(--spacing-micro)) var(--spacing-quarter);
   border-radius: var(--border-radius);
 }
 .gl-CodeBlock .cloze > span {
