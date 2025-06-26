@@ -21,7 +21,7 @@ The Anki app is a great way to learn, revise, and practice your coding skills, b
 - Add color to your code
 - Create your own custom theme
 
-Are you looking to master **html**, **css**, **javascript**, **php**, **python**, **lisp**, **elm**, **R**, **SQL** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
+Are you looking to master  **css**, **c/c#/c++**, **elm**, **go**, **haskell**, **html**, **javascript**, **java**, **lisp**, **ocaml**, **php**, **python**, **r**, **rust**, **sql**, **typescript**, **[your language of choice]** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
 
 ## Quick start
 
