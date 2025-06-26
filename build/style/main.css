@@ -972,6 +972,9 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+blockquote {
+  padding: 0 0 0 var(--spacing-one);
+}
 code,
 kbd,
 samp {
@@ -998,6 +1001,7 @@ samp:empty {
 }
 pre {
   font-size: inherit;
+  padding: var(--spacing-one);
 }
 .nightMode pre {
   background: var(--color-nightmode-background-l);
