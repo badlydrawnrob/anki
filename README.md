@@ -25,9 +25,9 @@ I use Anki to learn **CSS/Html**, **Elm**, **Lisp**, and **Python**; what langua
 
 Are you looking to master  **css**, **c/c#/c++**, **elm**, **go**, **haskell**, **html**, **javascript**, **java**, **lisp**, **ocaml**, **php**, **python**, **r**, **rust**, **sql**, **typescript**, **[your language of choice]** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
 
-<img width="50px;", height="50px;" alt="learn to code CSS3" src="./source/media/icons/icon-css3.svg">
-<img width="50px;", height="50px;" alt="learn to code C, C#, or C++" src="./source/media/icons/icon-c.svg">
-<img width="50px;", height="50px;" alt="learn to code with lispy langs, like Clojure and Racket" src="./source/media/icons/icon-clojure.svg">
+<img width="50px;" height="50px;" alt="learn to code CSS3" src="./source/media/icons/icon-css3.svg">
+<img width="50px;" height="50px;" alt="learn to code C, C#, or C++" src="./source/media/icons/icon-c.svg">
+<img width="50px;" height="50px;" alt="learn to code with lispy langs, like Clojure and Racket" src="./source/media/icons/icon-clojure.svg">
 
 ## Quick start
 
