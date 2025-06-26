@@ -21,7 +21,13 @@ The Anki app is a great way to learn, revise, and practice your coding skills, b
 - Add color to your code
 - Create your own custom theme
 
+I use Anki to learn **CSS/Html**, **Elm**, **Lisp**, and **Python**; what languages are you looking to master? Let this tool help you! If you're just getting started with Anki, ....
+
 Are you looking to master  **css**, **c/c#/c++**, **elm**, **go**, **haskell**, **html**, **javascript**, **java**, **lisp**, **ocaml**, **php**, **python**, **r**, **rust**, **sql**, **typescript**, **[your language of choice]** — or just getting started? If you're new to Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
+
+<img width="50px;", height="50px;" alt="learn to code CSS3" src="./source/media/icons/icon-css3.svg">
+<img width="50px;", height="50px;" alt="learn to code C, C#, or C++" src="./source/media/icons/icon-c.svg">
+<img width="50px;", height="50px;" alt="learn to code with lispy langs, like Clojure and Racket" src="./source/media/icons/icon-clojure.svg">
 
 ## Quick start
 
@@ -205,7 +211,7 @@ If you want to force the display mode, in Anki desktop select the toolbar `Anki 
 
 > Anki programming flashcards (APF) are licensed under the [MIT Open Source License](./license.md)
 
-Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki programming flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^3] iPhone photo by `@svstudioart` on Freepik.
+Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki programming flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^3] iPhone photo by `@svstudioart` on Freepik, icons by [Devicon](https://devicon.dev/) and edited with [DeEditor](https://deeditor.com/)!
 
 Also noteworthy is **[Kanri](https://www.kanriapp.com/)**: a cool Kanban organiser for [getting things done](https://hamberg.no/gtd). Works offline and is free!
 
