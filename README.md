@@ -8,10 +8,6 @@
 
 <img width="100%" height="auto" src="./source/media/preview-30-08-24.png" style="padding-bottom: 20px;">
 
-<div style="opacity: 0.9;">
-<!-- Icon colors: #EBEBEB, #999999, #6E7070, #444444, #000000 -->
-<img width="40px;" height="40px;" alt="learn to code CSS3" src="./source/media/icons/icon-css3.svg"><img width="40px;" height="40px;" alt="learn to code C, C#, or C++" src="./source/media/icons/icon-c.svg"><img width="40px;" height="40px;" alt="learn to code with lispy langs, like Clojure and Racket" src="./source/media/icons/icon-clojure.svg">&nbsp;<img width="60px;" height="36px;" alt="learn to code with Elm Lang, a delightful language with friendly error messages for web applications" src="./source/media/icons/icon-elm-resized.png">&nbsp;<img width="50px;" height="50px;" alt="learn to code with Go Lang" src="./source/media/icons/icon-go.svg"><img width="40px;" height="40px;" alt="learn to code with Haskell" src="./source/media/icons/icon-haskell.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Html5" src="./source/media/icons/icon-html5.svg"><img width="50px;" height="50px;" alt="learn to code with Java" src="./source/media/icons/icon-java-resized.png"><img width="40px;" height="40px;" alt="learn to code with Javascript" src="./source/media/icons/icon-javascript.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Ocaml" src="./source/media/icons/icon-ocaml.svg"><img width="50px;" height="50px;" alt="learn to code with PHP" src="./source/media/icons/icon-php.svg"><img width="50px;" height="50px;" alt="learn to code with Python" src="./source/media/icons/icon-python.svg"><img width="40px;" height="40px;" alt="learn to code with R Lang" src="./source/media/icons/icon-r.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Rust" src="./source/media/icons/icon-rust.svg">&nbsp;<img width="65px;" height="43px;" alt="learn to code with SQL tools, like SQlite and Postgres" src="./source/media/icons/icon-sqlite-resized.png">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Typescript; Javascript with a typed system" src="./source/media/icons/icon-typescript.svg">
-</div>
 
 ## Want to learn how to code? 👨🏻‍💻👩🏻‍💻
 
@@ -25,7 +21,7 @@ The Anki app is a great way to learn, revise, and practice your coding skills, b
 - Add color to your code
 - Create your own custom theme
 
-I'm using Anki to learn **CSS/Html**, **Elm**, **Lisp**, **Python**, **SQlite** (and someday **Ocaml**); what languages are you looking to master? Let this tool help you! If you're just getting started with Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
+I'm using Anki to learn **CSS/Html**, **Elm**, **Lisp**, **Python**, **SQlite** (and someday **Ocaml**); How about you? Whatever [language](#syntax-highlighting) you're looking to master, let this tool help you! We've got you covered. If you're just getting started with Anki, [read these guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
 
 
 ## Quick start
@@ -70,13 +66,19 @@ They say code is an art form. Anki flashcard's CSS themes come with a light and 
     - 🥷🏻 Monochrome
     - ⛵️ Breeze Dark
 
-You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc [`code block`](./source/docs/simple/index.md#-sample-code-block)s. Our Breeze Dark theme is a modified version (not the one Pandoc uses).[^2]
+You can highlight any [`code string`](./source/docs/simple/index.md#-syntax-inline-code) with [basic highlighting](./source/docs/highlight/index.md#basic-syntax-highlighting), or go [full colour](./source/docs/highlight/index.md#full-syntax-highlighting) with Markdown and Pandoc [`code block`](./source/docs/simple/index.md#-sample-code-block)s. We have a monochrome theme for notes, and a modified Breeze Dark theme[^2] for blocks of code: we can bring colour to all your favourite languages:
 
-Next up, a quick tip on how to keep your Anki deck nice and organised ...
+<div id="languages" style="opacity: 0.9;">
+<!-- Icon colors: #EBEBEB, #999999, #6E7070, #444444, #000000 -->
+<img width="40px;" height="40px;" alt="learn to code CSS3" src="./source/media/icons/icon-css3.svg"><img width="40px;" height="40px;" alt="learn to code C, C#, or C++" src="./source/media/icons/icon-c.svg"><img width="40px;" height="40px;" alt="learn to code with lispy langs, like Clojure and Racket" src="./source/media/icons/icon-clojure.svg">&nbsp;<img width="60px;" height="36px;" alt="learn to code with Elm Lang, a delightful language with friendly error messages for web applications" src="./source/media/icons/icon-elm-resized.png">&nbsp;<img width="50px;" height="50px;" alt="learn to code with Go Lang" src="./source/media/icons/icon-go.svg"><img width="40px;" height="40px;" alt="learn to code with Haskell" src="./source/media/icons/icon-haskell.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Html5" src="./source/media/icons/icon-html5.svg"><img width="50px;" height="50px;" alt="learn to code with Java" src="./source/media/icons/icon-java-resized.png"><img width="40px;" height="40px;" alt="learn to code with Javascript" src="./source/media/icons/icon-javascript.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Ocaml" src="./source/media/icons/icon-ocaml.svg"><img width="50px;" height="50px;" alt="learn to code with PHP" src="./source/media/icons/icon-php.svg"><img width="50px;" height="50px;" alt="learn to code with Python" src="./source/media/icons/icon-python.svg"><img width="40px;" height="40px;" alt="learn to code with R Lang" src="./source/media/icons/icon-r.svg">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Rust" src="./source/media/icons/icon-rust.svg">&nbsp;<img width="65px;" height="43px;" alt="learn to code with SQL tools, like SQlite and Postgres" src="./source/media/icons/icon-sqlite-resized.png">&nbsp;<img width="40px;" height="40px;" alt="learn to code with Typescript; Javascript with a typed system" src="./source/media/icons/icon-typescript.svg">
+</div>
+
 
 ## Keep it simple, stupid!
 
 > ☝️ [One idea](https://github.com/badlydrawnrob/anki/issues/41) per card. Just one.
+
+Some quick tips on how to keep your Anki deck nice and organised ...
 
 **Simple is better.** If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code — as clear as possible. Those 10 cards you wrote with 100 related ideas? Sifting through those will become a chore; 100 cards with one idea is much better!
 
