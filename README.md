@@ -11,45 +11,45 @@
 
 ## Want to learn how to code? 👨🏻‍💻👩🏻‍💻
 
-> I'm using Anki to learn **CSS/Html**, **Elm**, **Lisp**, **Python**, **SQlite** (and someday **Ocaml**); How about you? Use this tool and learn how to code in no time!
+> I'm using Anki to learn **Html/CSS**, **Elm**, **Lisp**, **Python**, **SQlite** (and someday **Ocaml**); I'm confident if you utilize this tool, you'll learn how to code in no time! What languages do you want to learn?
 
-Anki helps you remember and lock-in learning quickly. Whatever [language](#syntax-highlighting) you're looking to master, let this tool help you! Backend, frontend, somewhere in-between, we've got you covered. It uses spaced-repetition (a fancy way to say "scheduled learning") and simple flashcards as a great way to learn, revise, and practice your coding skills.
+**Anki helps you remember and lock-in learning quickly.** Whatever [language](#syntax-highlighting) you're looking to master, let this tool help you! Backend, frontend, somewhere-in-between-end, we've got you covered. It uses spaced-repetition (a fancy way to say "scheduled learning") and simple flashcards for a great way to learn, revise, and practice your coding skills.
 
-- Suitable for all learning levels
+- **Suitable for all learning levels**
 - Great for frontend and backend
 - Popular languages supported
 - Add color to your code
 - Create your own custom theme
 
-The Anki app is great, but it's default cards aren't great for programming: we can do better. Beautify your code (with css colour themes) and make coding fun to learn. Make these handy flashcards part of your daily routine!
+The Anki app is great, but it's default cards aren't good for programming: we can do better. Beautify your code (with css colour themes) and make coding fun to learn. Use these handy _Anki Programming Flashcards (APF)_ as part of your daily routine!
 
 ## Quick start
 
-> For updates [check this issue first](https://github.com/badlydrawnrob/anki/issues/156) just to be safe. Always backup your decks first!
+> For updates [check this issue first](https://github.com/badlydrawnrob/anki/issues/156) just to be safe. Always backup your decks!
 
 1. [Download](https://apps.ankiweb.net/) Anki desktop
-2. Get the latest [Anki Programming Flashcards](https://github.com/badlydrawnrob/anki/releases) (APF) `.apkg` deck
-3. Open the Anki desktop app
-4. `File > Import ...` the deck
-5. Add a new card
-6. Select the `Anki Programming Flashcards (APF)` card type
-7. Get creative with your cards!
+2. Get the [latest `.apkg` deck](https://github.com/badlydrawnrob/anki/releases) release
+3. `File > Import ...` the deck in Anki
+4. Add a new card (select the `APF: ...` card type)
+5. Get creative with your cards!
 
-Anki is simple to use, hard to master. Just getting started? Read [these Anki guides first](https://github.com/badlydrawnrob/anki/discussions/123); otherwise ... let's begin!
+Anki is simple to use, but hard to master. If you're just getting started, [these helpful Anki guides](https://github.com/badlydrawnrob/anki/discussions/123) will help you; otherwise ... let's begin!
 
 <details open>
 <summary>🎥 Quick start video</summary>
-Coming soon ...
+<em>Coming soon ...</em>
 </details>
 
-### Next steps
+### Next steps ...
 
 > Once you're happy with your cards, it's wise to backup!
 
-1. Create a [web account](https://apps.ankiweb.net/) to sync [your desktop profile](https://docs.ankiweb.net/profiles.html)[^1]
-2. With the mobile app, click "Synchronize"
-3. Login to your web account
-4. You're all done!
+1. Create a [web account](https://apps.ankiweb.net/) to backup your cards[^1]
+2. With the mobile app, click "Synchronize" [your profile](https://docs.ankiweb.net/profiles.html)
+3. Login to your web account ...
+4. And you're all done!
+
+Get familiar with the cards below, Markdown [`code block` highlighting](#syntax-highlighting), and when you're a little more advanced, try out the [compiler](#its-more-fun-with-a-compiler-advanced).
 
 
 ## Cards
@@ -122,9 +122,6 @@ That's great! But. Keep your questions clear — perhaps split a hard question i
 > **[🧑‍🎓 do things the professional way!](./source/docs/professional/index.md)**, once you've levelled up your programming skills!
 
 
-
-
-
 <details>
 <summary><strong>🎥 Step 1. Write your flashcards quickly and easily (<code>markdown->html</code>)</strong></summary>&nbsp;
 
@@ -153,12 +150,12 @@ I'd advise beginners to start by writing great cards, before moving on to use th
 
 > I've spent a lot of time fine-tuning the flashcards so they're pleasant to use.
 
-The flashcards depend on _very_ little from the Anki app (no add-ons requiredplugins), and they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Silicon: ARM64, Intel: x86_64), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). You can use them how you want:
+The flashcards depend on _very_ little from the Anki app (no add-ons required), and they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net) (Silicon: _ARM64_, Intel: _x86_64_), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). You can use them how you want:
 
 - Use the flashcards as they are; create your own colors/typography
 - Use the excellent `markdown->html` workflow ... online or locally
 
-Add-ons tend to go out-of-date (dependency hell), so I've made sure it [depends](https://github.com/badlydrawnrob/anki/network/dependencies) on little, using stable, well-supported, "boring" technology. It's pretty simple to setup too!
+Add-ons tend to go out-of-date (dependency hell), so I've made sure it [depends](https://github.com/badlydrawnrob/anki/network/dependencies) on little, using stable, well-supported "boring" technology. It's pretty simple to setup too!
 
 ### Dependency hell
 

@@ -1384,6 +1384,7 @@ div.sourceCode {
 }
 .gl-ImageBlock {
   background: radial-gradient(circle, #e1e1e1 0%, #ffffff 100%);
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .gl-ImageBlock {

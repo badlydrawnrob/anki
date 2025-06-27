@@ -7,7 +7,8 @@
 // it can be handy to have minimal code underneath an image. For that reason,
 // you can add the `.gl-CodeBlock` class to `<figure>`.
 //
-// 1. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
+// 1. Otherwise the `box-shadow` will spill over into keypoint notes
+// 2. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
 //    - So use a simpler color instead (add a `--color` var for this?)
 //
 // Anki mobile screen size -> iPad portrait
@@ -16,6 +17,7 @@
 
 .gl-ImageBlock {
   background: radial-gradient(circle,rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  overflow: hidden; // (1)
 
   @media screen and (max-width: 768px) {
     font-size: var(--font-size-m);
@@ -26,7 +28,7 @@
   }
 
   figcaption {
-    border-bottom: 1px solid #E5E4E2; // (1)
+    border-bottom: 1px solid #E5E4E2; // (2)
 
 
   }
