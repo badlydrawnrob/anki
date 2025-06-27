@@ -9,9 +9,17 @@
 //
 // 1. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
 //    - So use a simpler color instead (add a `--color` var for this?)
+//
+// Anki mobile screen size -> iPad portrait
+// ----------------------------------------
+// See `globals/card.less` for more details.
 
 .gl-ImageBlock {
   background: radial-gradient(circle,rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size-m);
+  }
 
   .nightMode & {
     background: radial-gradient(circle,var(--color-nightmode-background-dddd) 0%, var(--color-nightmode-background-dd) 100%);
@@ -19,6 +27,8 @@
 
   figcaption {
     border-bottom: 1px solid #E5E4E2; // (1)
+
+
   }
 
   img {

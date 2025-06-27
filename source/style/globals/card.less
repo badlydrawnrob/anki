@@ -39,6 +39,16 @@
 //    in ECSS/BEM style or is this disallowed?
 //
 //    #! `.gl-Card` -> `_KeyPoint`
+//
+// Anki mobile screen size -> iPad portrait
+// ----------------------------------------
+// > You could use `orientation: portrait` but AnkiMobile is practically useless
+// > in landscape mode (and large text is pain to read in it's "letter box")
+//
+// Legibility with screen size is important, but it's probably easier to just
+// use a `max-width` for every device width up to iPad portrait (768px). I'm
+// also going to do it for ALL text, not just code blocks. Also a slight issue
+// is #118, where the Anki Mobile app defaults to swipe gesture to launch menu.
 
 .gl-Card {
   background: transparent;
@@ -77,6 +87,10 @@
   border-bottom: var(--spacing-px) solid var(--color-card-ll);
   background: var(--color-card-llll);
 
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size-p);
+  }
+
   &:only-child {
     margin-bottom: 0;  // #! I think this is if there's no h2?
   }
@@ -96,6 +110,10 @@
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size);
+  }
+
   .nightMode & {
     color: var(--color-nightmode-text-light);
   }
@@ -103,8 +121,13 @@
 
 // 1
 .gl-Card header p {
+  font-size: var(--font-size-p);
   margin: 0 0 var(--spacing-half) 0;
   padding: 0 var(--spacing-half) var(--spacing-half);
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size);
+  }
 }
 
 // 2
@@ -118,8 +141,11 @@
   padding: var(--spacing) var(--spacing-one);
   background: var(--color-card-lll);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
-  font-size: var(--font-size-m);
   text-align: left;
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size-m);
+  }
 
   ul, ol {
     margin-left: var(--spacing-one);
@@ -145,10 +171,13 @@
 
 .gl-Card footer {
   color: var(--color-card-l);     // #! This feels wrong using `-card` var here
-  font-size: var(--font-size-m);  // #! Should this be in `/partials/`?
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: var(--font-size-m); // #! Should this be in `/partials/`?
+  }
 }
 
 

@@ -480,7 +480,7 @@ pre {
   overflow: auto;
   padding: var(--spacing);
   white-space: pre-wrap;
-  word-wrap: normal;
+  overflow-wrap: normal;
   word-break: normal;
   tab-size: 4;
   hyphens: none;
@@ -617,8 +617,7 @@ img {
 }
 figcaption {
   margin-top: var(--spacing);
-  font-size: var(--font-size-mm);
-  font-style: normal;
+  font-style: italic;
 }
 figcaption > img {
   display: block;
@@ -724,7 +723,7 @@ table,
 td,
 textarea,
 th {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   hyphens: auto;
 }
 abbr,
@@ -1014,11 +1013,15 @@ figure {
 figure figcaption {
   color: var(--font-color);
   background: white;
-  font-style: italic;
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
   margin: 0;
   padding: var(--spacing-half);
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  figure figcaption {
+    font-size: var(--font-size-m);
+  }
 }
 .nightMode figure figcaption {
   background: var(--color-nightmode-background-ddd);
@@ -1037,14 +1040,14 @@ h6 {
 }
 h1 {
   font-weight: 700;
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-pp);
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
 }
 h2 {
   font-weight: normal;
-  font-size: var(--font-size);
+  font-size: var(--font-size-p);
   line-height: var(--line-height);
   text-transform: none;
   letter-spacing: normal;
@@ -1118,6 +1121,11 @@ img {
   border-bottom: var(--spacing-px) solid var(--color-card-ll);
   background: var(--color-card-llll);
 }
+@media screen and (max-width: 768px) {
+  .gl-Card header h1 {
+    font-size: var(--font-size-p);
+  }
+}
 .gl-Card header h1:only-child {
   margin-bottom: 0;
 }
@@ -1133,20 +1141,35 @@ img {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
+@media screen and (max-width: 768px) {
+  .gl-Card header h2 {
+    font-size: var(--font-size);
+  }
+}
 .nightMode .gl-Card header h2 {
   color: var(--color-nightmode-text-light);
 }
 .gl-Card header p {
+  font-size: var(--font-size-p);
   margin: 0 0 var(--spacing-half) 0;
   padding: 0 var(--spacing-half) var(--spacing-half);
+}
+@media screen and (max-width: 768px) {
+  .gl-Card header p {
+    font-size: var(--font-size);
+  }
 }
 .gl-Card_KeyPointNotes {
   margin-bottom: var(--spacing);
   padding: var(--spacing) var(--spacing-one);
   background: var(--color-card-lll);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
-  font-size: var(--font-size-m);
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .gl-Card_KeyPointNotes {
+    font-size: var(--font-size-m);
+  }
 }
 .gl-Card_KeyPointNotes ul,
 .gl-Card_KeyPointNotes ol {
@@ -1168,10 +1191,14 @@ img {
 }
 .gl-Card footer {
   color: var(--color-card-l);
-  font-size: var(--font-size-m);
   margin-bottom: var(--spacing);
   padding: 0 var(--spacing-one);
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .gl-Card footer {
+    font-size: var(--font-size-m);
+  }
 }
 .gl-Card header code {
   background: transparent;
@@ -1223,7 +1250,7 @@ img {
 .gl-CodeBlock code {
   padding: var(--spacing-micro) 0;
 }
-@media (orientation: portrait) {
+@media screen and (max-width: 768px) {
   .gl-CodeBlock {
     font-size: var(--font-size-m);
   }
@@ -1357,6 +1384,11 @@ div.sourceCode {
 }
 .gl-ImageBlock {
   background: radial-gradient(circle, #e1e1e1 0%, #ffffff 100%);
+}
+@media screen and (max-width: 768px) {
+  .gl-ImageBlock {
+    font-size: var(--font-size-m);
+  }
 }
 .nightMode .gl-ImageBlock {
   background: radial-gradient(circle, var(--color-nightmode-background-dddd) 0%, var(--color-nightmode-background-dd) 100%);

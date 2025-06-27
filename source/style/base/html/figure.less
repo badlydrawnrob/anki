@@ -32,11 +32,14 @@ figure {
   figcaption {
     color: var(--font-color);
     background: white;
-    font-style: italic;
     font-variation-settings: 'CRSV' 1, 'slnt' -6; // (4)
     margin: 0;
     padding: var(--spacing-half);
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      font-size: var(--font-size-m);
+    }
 
     .nightMode & {
       background: var(--color-nightmode-background-ddd);

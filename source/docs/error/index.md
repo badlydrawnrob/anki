@@ -10,7 +10,7 @@ If you're new to programming, let me explain. I previously used [Power Format Pa
 4. Be extra careful what you depend on
 5. This is commonly known as **[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)**
 
-I feel that a tool or a piece of software that's still around in 5 years, without any serious changes, [is a good thing](https://github.com/badlydrawnrob/anki/issues/53).
+A tool or a piece of software that's still around in 5 years, without any serious changes, [is a good thing](https://github.com/badlydrawnrob/anki/issues/53). Choose [boring technology](https://mcfunley.com/choose-boring-technology) when stability matters!
 
 
 ## Proceed with caution!

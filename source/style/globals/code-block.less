@@ -12,19 +12,12 @@
 // (a) Simple card is a just basic `pre` code block
 // (b) Missing! card requires a `{{cloze}}` field, but is essentially the same.
 //
-// Anki mobile screen size
-// -----------------------
-// We need to balance legibility with screen size ... if you're viewing in
-// portrait mode (i.e: a mobile phone) we'll reduce the size so you can fit more
-// code on the screen, which makes for more comfortable reviewing.
+// Anki mobile screen size -> iPad portrait
+// ----------------------------------------
+// See `globals/card.less` for more details.
 //
-// #! Anki Mobile app defaults to swipe gesture launching the menu.
-//    This is undesirable. You can change the settings, see issue #118
-//
-//    @ https://shorturl.at/awLnl
-//
-// Some minor bugs
-// ---------------
+// Minor bugs
+// ----------
 // 1. Without `code` padding, `.cloze` tags get "clipped" top/bottom.
 //     - #! AnkiMobile treats `rem` units slightly differently, so uglify
 //       the code to add `1px` extra padding.
@@ -49,7 +42,7 @@
     padding: var(--spacing-micro) 0; // #! 1
   }
 
-  @media (orientation: portrait) {
+  @media screen and (max-width: 768px) {
     font-size: var(--font-size-m);
   }
 }
