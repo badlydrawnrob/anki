@@ -72,32 +72,17 @@ values by looking up a <code>key</code> instead of an index!</p>
 <p>Dictionaries are enclosed in curly braces <code>{ }</code>. You can
 change values (such as a string / number), or generate a brand new
 <code>key</code>/<code>value</code> pair:</p>
-<table>
-<thead>
-<tr>
-<th>Change a value</th>
-<th>Add a new animal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>residents['Burmese Python'] = 79</code></td>
-<td><code>residents['Giraffe'] = 200</code></td>
-</tr>
-</tbody>
-</table>
-<pre class="terminal"><code>&gt; print("Burmese Python: ", residents['Burmese Python'])
-  Burmese Python:  79
-  &gt; print("Giraffe: ", residents['Giraffe'])
-  200</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Change a value</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>residents[<span class="st">'Burmese Python'</span>] <span class="op">=</span> <span class="dv">79</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add an animal</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>residents[<span class="st">'Giraffe'</span>] <span class="op">=</span> <span class="dv">200</span></span></code></pre></div>
                   <small>__apf-3.0.0::python __apf-3.0.0::demo testing</small>
                 </div>
               </div>
                 <footer>
                   <p><strong>Warning:</strong> <a href="https://jeffknupp.com/blog/2015/08/30/python-dictionaries">Never
 search for a value in a dictionary using a for loop!</a> The
-<code>.items()</code> method allows you to iterate over both keys and
-values (a list of <code>(key, value)</code> tuples.</p>
+<code>.items()</code> method allows you to iterate over <code>(key, values)</code> as a tuple list. Unlike Elm Lang, Python values are <i>mutable</i>.</p>
                 </footer>
             </div>
           </section>
