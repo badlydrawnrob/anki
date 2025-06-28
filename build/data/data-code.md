@@ -1,13 +1,19 @@
 ``` sourceCode
-# Our hero's steps
-hero.moveUp(2)
-hero.moveLeft()
-# Open the door
-hero.use("lever")
-hero.moveRight(3)
-hero.use("door")
-# Exit the room
-hero.moveUp(2)
-hero.moveLeft(3)
-hero.moveUp()
+-- Imagine our `pad` function is built already
+padRight : Int -> Char -> String -> String
+padRight = pad True
+
+padFive : Char -> String -> String
+padFive = padRight 5
+
+padC : String -> String
+padC = padFive "c"
+
+padX : String -> String
+padX = padFive "x"
+```
+
+``` terminal
+> padC "hart"
+"ccccchart" : String
 ```
