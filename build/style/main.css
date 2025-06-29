@@ -899,7 +899,7 @@ i {
   --color-nightmode-background-ll: #ccc;
   --color-nightmode-background-lll: #ddd;
   --color-nightmode-text: #fff;
-  --color-nightmode-text-light: #ccc;
+  --color-nightmode-text-light: #eceff1;
   --color-nightmode-text-dark: #333;
   --color-nightmode-border: #ddd;
   --color-nightmode-link: #3daee9;
@@ -974,6 +974,10 @@ body {
 blockquote {
   padding: 0 0 0 var(--spacing-one);
 }
+.nightMode blockquote {
+  color: var(--color-nightmode-text);
+  border-color: var(--color-llll);
+}
 code,
 kbd,
 samp {
@@ -999,6 +1003,7 @@ samp:empty {
   border-color: transparent;
 }
 pre {
+  color: var(--color-bbbb);
   font-size: inherit;
   padding: var(--spacing-one);
 }
@@ -1199,6 +1204,9 @@ img {
   .gl-Card footer {
     font-size: var(--font-size-m);
   }
+}
+.nightMode .gl-Card footer {
+  color: var(--color-card-ll);
 }
 .gl-Card header code {
   background: transparent;
