@@ -39,14 +39,14 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What does an anonymous <code>List.map</code> multiply function look
-like?</h1>
+<h1>When might we use a custom type instead of <code>[]</code> a
+list?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Anonymous functions</h2>
+<h2>Lists</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -54,16 +54,7 @@ like?</h1>
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>false</code></p>
-<!-- -------------------------------------------------------------------------
-    ☆ Sample (caption or hint)
-
-    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
-
-    Helpful for when the header question grows too long, or the Sample
-    requires some context or a hint. Alternative to code comments.
--------------------------------------------------------------------------- -->
-<p>false</p>
+<p><code>[1, 2, 3]</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -75,7 +66,16 @@ like?</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">false</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span> <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]</span></code></pre></div>
+<!-- -------------------------------------------------------------------------
+    ☆ Sample (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+<p>false</p>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -88,34 +88,47 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">map</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  (\<span class="fu">num</span> <span class="op">-&gt;</span> <span class="fu">num</span> <span class="op">*</span> <span class="fu">num</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Refactor to `_ -&gt; Err &quot;Invalid` branch!</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">processList</span> :</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">String</span> (<span class="dt">Int</span><span class="op">,</span> <span class="dt">Int</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">processList</span> <span class="fu">lst</span> <span class="op">=</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">lst</span> <span class="cf">of</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    []    <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">a</span>]   <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">a</span><span class="op">,</span><span class="fu">b</span>] <span class="op">-&gt;</span> <span class="dt">Ok</span> (<span class="fu">a</span><span class="op">,</span> <span class="fu">b</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_</span>     <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>When we only need a small function, we don’t need to name it! Our
-example above uses lambda style notation: <code>\_</code>. In fact, you
-can think about currying in this way, too. We could write a multiply
-function in a couple of ways:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Regular style</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span> <span class="fu">x</span> <span class="fu">y</span> <span class="op">=</span> <span class="fu">x</span> <span class="op">*</span> <span class="fu">y</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">-- Lambda style</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">multiply</span> <span class="op">=</span> \<span class="fu">x</span> <span class="op">-&gt;</span> \<span class="fu">y</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">*</span> <span class="fu">y</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Curry either one</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">add1</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Int</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">add1</span> <span class="op">=</span> <span class="fu">multiply</span> <span class="dv">1</span></span></code></pre></div>
+<blockquote>
+<p><strong>A list can be</strong> <code>empty</code>,
+<code>singleton</code>, or <code>many</code> …</p>
+</blockquote>
+<p>Elm forces you to handle all <code>case</code>s. A custom type can
+<em>sometimes</em> be a better option, but only if there’s a valid
+reason for using it (otherwise, just use a list!):</p>
+<ol type="1">
+<li>A `[“non-empty”] list</li>
+<li>A <code>Success a</code> server response</li>
+<li><a href="https://www.youtube.com/watch?v=IcgmSRJHu_8">Impossible</a>
+states</li>
+</ol>
+<p>Invalid reasons:</p>
+<ol type="1">
+<li><code>Nothing</code> and <code>[]</code> are essentially the
+same!</li>
+</ol>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>That’s essentially all currying is. Both functions (under the hood)
-essentially take <em>one</em> argument at a time, returning a function
-that takes the <em>next</em> argument, and so on!</p>
+<p><a
+href="https://package.elm-lang.org/packages/elm/random/latest/Random#uniform"><code>Random.Uniform</code></a> is
+a good example of a custom type being better than a list: a default
+value for an empty list.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

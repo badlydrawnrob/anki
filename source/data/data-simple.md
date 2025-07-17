@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What does an anonymous `List.map` multiply function look like?
+# When might we use a custom type instead of `[]` a list?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Anonymous functions
+## Lists
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,18 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`false`
-
-
-<!-- -------------------------------------------------------------------------
-    ☆ Sample (caption or hint)
-
-    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
-
-    Helpful for when the header question grows too long, or the Sample
-    requires some context or a hint. Alternative to code comments.
--------------------------------------------------------------------------- -->
-false
+`[1, 2, 3]`
 
 
 <!-- -------------------------------------------------------------------------
@@ -84,9 +73,19 @@ false
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-false
+list = [1, 2, 3]
 ```
 
+
+<!-- -------------------------------------------------------------------------
+    ☆ Sample (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+false
 
 
 <!-- Back of card ======================================================== -->
@@ -103,9 +102,15 @@ false
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-List.map
-  (\num -> num * num)
-  [1, 2, 3, 4, 5]
+-- Refactor to `_ -> Err "Invalid` branch!
+processList :
+    List Int -> Result String (Int, Int)
+processList lst =
+  case lst of
+    []    -> Err "Invalid"
+    [a]   -> Err "Invalid"
+    [a,b] -> Ok (a, b)
+    _     -> Err "Invalid"
 ```
 
 
@@ -114,19 +119,19 @@ List.map
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-When we only need a small function, we don't need to name it! Our example above
-uses lambda style notation: `\_`. In fact, you can think about currying in this
-way, too. We could write a multiply function in a couple of ways:
+> **A list can be** `empty`, `singleton`, or `many` ...
 
-```elm
--- Regular style
-multiply x y = x * y
--- Lambda style
-multiply = \x -> \y -> x * y
--- Curry either one
-add1 : Int -> Int
-add1 = multiply 1
-```
+Elm forces you to handle all `case`s. A custom type can _sometimes_ be a
+better option, but only if there's a valid reason for using it (otherwise,
+just use a list!):
+
+1. A `["non-empty"] list
+2. A `Success a` server response
+3. [Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) states
+
+Invalid reasons:
+
+1. `Nothing` and `[]` are essentially the same!
 
 
 <!-- -------------------------------------------------------------------------
@@ -134,7 +139,8 @@ add1 = multiply 1
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-That's essentially all currying is. Both functions (under the hood) essentially take _one_ argument at a time, returning a function that takes the _next_ argument, and so on!
+[`Random.Uniform`](https://package.elm-lang.org/packages/elm/random/latest/Random#uniform) is
+a good example of a custom type being better than a list: a default value for an empty list.
 
 
 <!-- -------------------------------------------------------------------------

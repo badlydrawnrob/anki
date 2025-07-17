@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/badlydrawnrob/anki#readme",
   "devDependencies": {
-    "less": "^4.2.0",
+    "less": "^4.3.0",
     "mustache": "^4.2.0",
-    "print-first-css": "github:badlydrawnrob/print-first-css#53d574a"
+    "print-first-css": "github:badlydrawnrob/print-first-css#b0a9106"
   }
 }

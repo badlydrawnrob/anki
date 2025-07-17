@@ -14,17 +14,60 @@
 
 ========================================================================== -->
 
-<div class="sourceCode" id="cb2"><pre class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Imagine our `pad` function is built already</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">padRight</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Char</span> <span class="op">-&gt;</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">padRight</span> <span class="op">=</span> <span class="fu">pad</span> <span class="dt">True</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">padFive</span> : <span class="dt">Char</span> <span class="op">-&gt;</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">padFive</span> <span class="op">=</span> <span class="fu">padRight</span> <span class="dv">5</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">padC</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">padC</span> <span class="op">=</span> <span class="fu">padFive</span> <span class="st">"c"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">padX</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">padX</span> <span class="op">=</span> <span class="fu">padFive</span> <span class="st">"x"</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; padC "hart"
-"ccccchart" : String</code></pre>
+We need to render our list in the view. What function could we use to handle <code>Nothing</code>?
+
+
+Maybe
+
+
+Maybe
+
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span> <span class="op">=</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- A possible list</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">songs</span> <span class="op">=</span> <span class="dt">Nothing</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+
+
+False
+
+
+<div class="sourceCode" id="cb2"><pre class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- List or not?</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">renderView</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">songs</span> <span class="cf">of</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Nothing</span> <span class="op">-&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">songlessView</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Just</span> <span class="fu">songs</span> <span class="op">-&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      (<span class="fu">view</span> <span class="fu">songs</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">-- Within the view</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">Maybe</span><span class="op">.</span><span class="fu">withDefault</span> <span class="st">"n/a"</span> <span class="fu">model</span><span class="op">.</span><span class="fu">songs</span></span></code></pre></div>
+
+
+<blockquote>
+  <p><b><code>Maybe.withDefault</code></b> solves our problem here. Remember that we can simply use an empty list here.</p>
+</blockquote><table>
+<thead>
+<tr>
+<th>Use it late …</th>
+<th>You could also ...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>As late as possible (the view)</td>
+<td>Use <code>Maybe.map</code> to lift values</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<p>A list can be <code>empty</code>,
+<code>singleton</code>, or <code>many</code>: you’ve got to handle
+all cases.&nbsp;A custom type
+can <em>sometimes</em> be a better option (&nbsp;<a href="https://package.elm-lang.org/packages/elm/random/latest/Random#uniform"><code>Random.Uniform</code></a>&nbsp;is a good example)&nbsp;but only if it offers a
+distinct improvement on <code style="font-size: 16px;">Maybe</code>. Is it more descriptive? A non-empty list?</p>
+
+

@@ -11,27 +11,21 @@
 //       I feel as much as possible, `code` and `pre` stuff should be set here
 //       for light and dark mode (user settings).
 //
-// 1. As our `font-size` is smaller than Print-First-CSS, make sure there's a
-//    tiny whitespace gap if inline code overlaps vertically.
+// 1. Some specific settings for Recursive font (see `typography.less`)
+// 2. Make sure there's a tiny whitespace gap if inline code overlaps vertically.
 //    - Ugh, each of the browsers treat `rem` units slightly differently ...
 //    - MacOS Safari 17.6 / Brave 1.79.126 are good with `--spacing-micro` bottom ..
 //    - iOS and iPad Safari need `--spacing-px`.
-// 2. Inherit `font-size` from parents (setting it here, as it seems like a lot
-//    of extra work to style it on every element individually.
-// 3. Some specific settings for Recursive font (see `typography.less`)
 
 
 code,
 kbd,
 samp {
-  padding: 0;
   background: var(--color-ll);
   border-color: transparent;
-  padding: 0 var(--spacing-quarter) var(--spacing-micro); // 1
-
   font-family: var(--font-family);
-  font-size: inherit;                           // 2
-  font-variation-settings: 'MONO' 1, 'CASL' 0;  // 3 #!
+  font-variation-settings: 'MONO' 1, 'CASL' 0;  // #! (1)
+  padding: 0 var(--spacing-quarter) var(--spacing-micro); // (2)
 
   .nightMode & {
     background: var(--color-nightmode-background-l);
@@ -46,8 +40,7 @@ samp {
 }
 
 pre {
-  color: var(--color-bbbb);
-  font-size: inherit;
+  color: var(--font-color);
   padding: var(--spacing-one);
 
   .nightMode & {

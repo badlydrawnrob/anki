@@ -233,10 +233,11 @@ template {
   --spacing-pp: 32/16;
   --spacing-p: 24/16;
   --spacing-base: 16/16;
-  --spacing-m: 8/16;
-  --spacing-mm: 4/16;
-  --spacing-mmm: 2/16;
-  --spacing-mmmm: 1/16;
+  --spacing-m: 12/16;
+  --spacing-mm: 8/16;
+  --spacing-mmm: 4/16;
+  --spacing-mmmm: 2/16;
+  --spacing-mmmmm: 1/16;
   --spacing-eight: calc(var(--spacing-pppppppp) * 1rem);
   --spacing-seven: calc(var(--spacing-ppppppp) * 1rem);
   --spacing-six: calc(var(--spacing-pppppp) * 1rem);
@@ -246,10 +247,11 @@ template {
   --spacing-two: calc(var(--spacing-pp) * 1rem);
   --spacing: calc(var(--spacing-p) * 1rem);
   --spacing-one: calc(var(--spacing-base) * 1rem);
-  --spacing-half: calc(var(--spacing-m) * 1rem);
-  --spacing-quarter: calc(var(--spacing-mm) * 1rem);
-  --spacing-micro: calc(var(--spacing-mmm) * 1rem);
-  --spacing-px: calc(var(--spacing-mmmm) * 1rem);
+  --spacing-three-quarters: calc(var(--spacing-m) * 1rem);
+  --spacing-half: calc(var(--spacing-mm) * 1rem);
+  --spacing-quarter: calc(var(--spacing-mmm) * 1rem);
+  --spacing-micro: calc(var(--spacing-mmmm) * 1rem);
+  --spacing-px: calc(var(--spacing-mmmmm) * 1rem);
   --color-code-light-background: var(--color-lll);
   --color-code-light-alert: #000;
   --color-code-light-annotation: #000;
@@ -281,12 +283,12 @@ template {
   --color-code-light-variable: #000;
   --color-code-light-verbatim-string: #000;
   --color-code-light-warning: #000;
-  --system-ui: system-ui,sans-serif;
+  --system-ui: system-ui, sans-serif;
   --system-mono: ui-monospace;
-  --fallback-mono: 'Roboto Mono',monospace,monospace;
+  --fallback-mono: 'Roboto Mono', monospace, monospace;
   --font-color: var(--color-bbbb);
   --font-family: var(--system-ui);
-  --font-family-mono: var(--system-mono),var(--fallback-mono);
+  --font-family-mono: var(--system-mono), var(--fallback-mono);
   --font-size-pppppp: calc((96 / 16) * 1rem);
   --font-size-ppppp: calc((60 / 16) * 1rem);
   --font-size-pppp: calc((48 / 16) * 1rem);
@@ -306,8 +308,8 @@ template {
   --line-height-two: calc(var(--spacing-pp));
   --line-height: calc(var(--spacing-p));
   --line-height-one: calc(var(--spacing-base));
-  --line-height-half: calc(var(--spacing-m));
-  --line-height-quarter: calc(var(--spacing-mm));
+  --line-height-half: calc(var(--spacing-mm));
+  --line-height-quarter: calc(var(--spacing-mmm));
   --border-radius: var(--spacing-micro);
   color: var(--font-color);
   font-family: var(--font-family);
@@ -448,7 +450,7 @@ kbd,
 pre,
 samp {
   font-family: var(--font-family-mono);
-  font-size: var(--font-size);
+  font-size: inherit;
   font-style: normal;
   line-height: var(--line-height);
 }
@@ -476,34 +478,35 @@ samp {
   }
 }
 pre {
-  position: relative;
+  border: var(--spacing-px) solid var(--color-bbb);
+  font-size: inherit;
+  hyphens: none;
+  overflow-wrap: normal;
   overflow: auto;
   padding: var(--spacing);
-  white-space: pre-wrap;
-  overflow-wrap: normal;
-  word-break: normal;
+  position: relative;
   tab-size: 4;
-  hyphens: none;
-  border: var(--spacing-px) solid var(--color-bbb);
+  white-space: pre-wrap;
+  word-break: normal;
 }
 @media screen {
   pre {
-    white-space: pre;
     background: var(--color-code-light-background);
     border-color: transparent;
+    white-space: pre;
   }
 }
 pre code {
+  background: 0 0;
+  border-radius: 0;
+  border: none;
+  color: inherit;
   display: block;
-  overflow: auto;
   height: 100%;
   margin: 0;
+  overflow: auto;
   padding: 0;
   white-space: pre;
-  color: inherit;
-  border: none;
-  border-radius: 0;
-  background: 0 0;
 }
 button,
 input[type=checkbox],
@@ -981,13 +984,11 @@ blockquote {
 code,
 kbd,
 samp {
-  padding: 0;
   background: var(--color-ll);
   border-color: transparent;
-  padding: 0 var(--spacing-quarter) var(--spacing-micro);
   font-family: var(--font-family);
-  font-size: inherit;
   font-variation-settings: 'MONO' 1, 'CASL' 0;
+  padding: 0 var(--spacing-quarter) var(--spacing-micro);
 }
 .nightMode code,
 .nightMode kbd,
@@ -1003,8 +1004,7 @@ samp:empty {
   border-color: transparent;
 }
 pre {
-  color: var(--color-bbbb);
-  font-size: inherit;
+  color: var(--font-color);
   padding: var(--spacing-one);
 }
 .nightMode pre {
@@ -1232,17 +1232,17 @@ img {
   color: var(--color-nightmode-text);
 }
 .gl-Card_KeyPointNotes code {
-  color: var(--color-bbb);
+  color: var(--color-ddd);
 }
 .nightMode .gl-Card_KeyPointNotes code {
-  color: var(--color-bbbb);
+  color: var(--font-color);
 }
 .gl-Card_KeyPointNotes pre code {
   text-align: left;
   background: transparent;
 }
 .nightMode .gl-Card footer code {
-  color: var(--color-bbbb);
+  color: var(--font-color);
 }
 .gl-CodeBlock pre {
   margin: 0;
@@ -1495,7 +1495,7 @@ div.sourceCode {
   outline: 0 none;
 }
 #demo .button:disabled {
-  color: var(--color-bb);
+  color: var(--color-dd);
   cursor: not-allowed;
   pointer-events: none;
   box-shadow: none;

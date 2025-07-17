@@ -9,20 +9,21 @@
 ========================================================================== -->
 
 ```elm
-padRight : Int -> Char -> String -> String
-padRight = pad True
+gotInts : String -> List (Maybe Int)
+gotInts =
+  String.split ":"
+    >> List.map String.toInt
 
-padFive : Char -> String -> String
-padFive = padRight 5
-
-padH : String -> String
-padH = padFive "h"
-
-padI : String -> String
-padI = padFive "i"
+toTuple : List (Maybe Int) -> (Int, Int)
+toTuple l =
+  case l of
+    [Just a, Just b] -> (a, b)
+    _ -> (0, 0) -- This should NEVER happen!
 ```
 
 ```terminal
-> padH "hi"
-"hhhhhhi" : String
+> gotInts "2:00"
+[Just 2, Just 0]
+> toTuple [Just 2, Just 0]
+(2, 0)
 ```
