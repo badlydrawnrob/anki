@@ -1,6 +1,6 @@
 {
   "name": "anki-programming-flashcards",
-  "version": "3.2.3",
+  "version": "3.2.7",
   "description": "Learning to code with Anki",
   "main": "index.js",
   "scripts": {
