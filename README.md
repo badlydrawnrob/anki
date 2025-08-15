@@ -105,7 +105,7 @@ Some quick tips on how to keep your Anki deck nice and organised ...
 - Less is more (trim the fat)
 - Keep it concise and relevant (reduce cognitive load)
 
-**Code is better at [32 characters wide](https://github.com/badlydrawnrob/anki/issues/174) or less,[^4] with 2 space tabs** for mobile view (especially the essential parts of the code needed to answer the question). In my experience for mobile screens it allows for:
+**Code is better at [32 characters wide](https://github.com/badlydrawnrob/anki/issues/174) or less,[^4] with 2 space tabs** for mobile view (especially the essential parts of the code needed to answer the question). In my experience this allows for:
 
 - A comfortable reading width (easy to scan)
 - Key syntax is front and centre
