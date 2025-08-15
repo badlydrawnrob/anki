@@ -107,7 +107,7 @@ We can bring colour to all your favourite languages:
 - Key syntax is front and centre
 - No horizontal scrolling (terse code)
 
-### Write for your stupid future self
+#### Write for your stupid future self
 
 **You'll look back on your flashcards and they'll make perfect sense.** We've all looked at code we've written (our stupid future self) and wondered what on earth is going on, so to avoid struggling to understand our cards, or getting overwhelmed with information, rewrite your cards "as if" we are our future selves. Follow these rules:
 
@@ -115,7 +115,7 @@ We can bring colour to all your favourite languages:
 - Less is more (trim the fat)
 - Keep it concise and relevant (reduce cognitive load)
 
-### Don't overload the brain
+#### Don't overload the brain
 
 **A card stuffed with facts will overload the brain.** Keep your questions concrete and clear. Limit factual information of each card and be super focused: if you find yourself asking two questions, or learning about two unrelated facts in a single card, split them out into 2 cards:
 
@@ -123,15 +123,15 @@ We can bring colour to all your favourite languages:
 - One learning lesson (documentation of an outcome)
 - One particular problem you solved
 
-### Make use of tags, theming, and searc
+#### Make use of tags, theming, and searc
 
 **Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn.
 
-### Do it badly first, then review
+#### Do it badly first, then review
 
 **Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later.
 
-### Simplicity constraints
+#### Simplicity constraints
 
 **Over time writing flashcards will become second nature; muscle-memory.** These simplicity constraints add the responsibility to write better flashcards: if you're spending more than a minute reviewing each card; reduce, reduce, reduce.
 
