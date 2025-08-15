@@ -105,7 +105,13 @@ Some quick tips on how to keep your Anki deck nice and organised ...
 - Less is more (trim the fat)
 - Keep it concise and relevant (reduce cognitive load)
 
-A card stuffed with facts will overload the brain. I imagine you're trying to learn:
+**Code is better at [32 characters wide](https://github.com/badlydrawnrob/anki/issues/174) or less,[^4] with 2 space tabs** for mobile view (especially the essential parts of the code needed to answer the question). In my experience for mobile screens it allows for:
+
+- A comfortable reading width (easy to scan)
+- Key syntax is front and centre
+- No horizontal scrolling (terse code)
+
+**A card stuffed with facts will overload the brain.** I imagine you're trying to learn:
 
 - A theme, or idea
 - A function, or code snippet
@@ -190,7 +196,7 @@ Keep it simple and avoid javascript. Stick to [Common Markdown](https://commonma
 
 The Anki Mobile app defaults to launching the menu with the _swipe left_ gesture.
 This is not desirable, as often our code will have an `overflow` which we want to
-scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix.
+scroll horizontally. You can change the settings, [see issue #118](https://github.com/badlydrawnrob/anki/issues/118) for a fix. You'll also benefit from setting a `32` character limit on the width of the flashcard's code (or the bits essential to the question),[^4] [see issue #174](https://github.com/badlydrawnrob/anki/issues/174)
 
 </details>
 
@@ -228,7 +234,7 @@ If you want to force the display mode, in Anki desktop select the toolbar `Anki 
 
 > Anki programming flashcards (APF) are licensed under the [MIT Open Source License](./license.md)
 
-Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki programming flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^4] iPhone photo by `@svstudioart` on Freepik, icons by [Devicon](https://devicon.dev/) and edited with [DeEditor](https://deeditor.com/)!
+Thanks to Ben Frain for [Enduring CSS](https://tinyurl.com/yc4pnxyr) and Jeff Escalante for [GPS](https://medium.com/@jescalan/bem-is-terrible-f421495d093a), I've borrowed ideas from both for sane stylesheets. Anki programming flashcards are based on [Print First](https://github.com/badlydrawnrob/print-first-css), in turn inspired by [@cbracco](https://github.com/cbracco) (Cardinal CSS) and [Material Design](https://m2.material.io/design/typography/the-type-system.html). Pick [`@mdo`](http://codeguide.co/) or [Google's](https://google.github.io/styleguide/htmlcssguide.html) code guide for orderly code.[^5] iPhone photo by `@svstudioart` on Freepik, icons by [Devicon](https://devicon.dev/) and edited with [DeEditor](https://deeditor.com/)!
 
 Also noteworthy is **[Kanri](https://www.kanriapp.com/)**: a cool Kanban organiser for [getting things done](https://hamberg.no/gtd). Works offline and is free!
 
@@ -239,4 +245,6 @@ Also noteworthy is **[Kanri](https://www.kanriapp.com/)**: a cool Kanban organis
 
 [^3]: This is based on the modified [Breeze Dark theme](https://marketplace.visualstudio.com/items?itemName=AndrewFridley.Breeze-Dark-Theme) for Visual Studio Code by Andrew Fridley. If you'd prefer the [original](https://github.com/badlydrawnrob/anki/issues/142#issuecomment-2227452134) Pandoc version, you can follow the instructions [here](https://github.com/badlydrawnrob/anki/issues/154).
 
-[^4]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
+[^4]: This means sometimes re-evaluating your code and function names to tighten things up. 32 characters might sound short, but when you've got 10 cards to review, no scrolling really speeds things up! Of course, this isn't always practical so see how you go. If you're mostly using desktop Anki, you can ignore this advice.
+
+[^5]: I don't follow these religiously but it's good to have something to aim for. Hopefully my code isn't too sloppy!
