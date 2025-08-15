@@ -95,7 +95,11 @@ We can bring colour to all your favourite languages:
 
 > ☝️ **[One idea](https://github.com/badlydrawnrob/anki/issues/41) per card.** Just one.
 
-**Simple is better.** If you only had 280 characters, what would you say? It's good practice to write your flashcards like you'd write code — as clear as possible. Those 10 cards you wrote with 100 related ideas? Sifting through those will become a chore; 100 cards with one idea is much better!
+### Simple is better
+
+**If you only had 280 characters, what would you say?** It's good practice to write your flashcards like you'd write code — as clear as possible. Those 10 cards you wrote with 100 related ideas? Sifting through those will become a chore; 100 cards with one idea is much better!
+
+### Shorter is better
 
 **Shorter code is better** essential parts of the code (or all code?) should be [32 characters wide](https://github.com/badlydrawnrob/anki/issues/174) or less,[^4] with 2 space tabs. In my experience (with the mobile app) this allows for:
 
@@ -103,11 +107,15 @@ We can bring colour to all your favourite languages:
 - Key syntax is front and centre
 - No horizontal scrolling (terse code)
 
-**Imagine you're stupid, writing for your stupid future self;** you'll look back on your flashcards and they'll make perfect sense. Whenever you find yourself struggling to understand or getting overwhelmed (with information), it's time for a rewrite! Follow these rules:
+### Write for your stupid future self
+
+**You'll look back on your flashcards and they'll make perfect sense.** We've all looked at code we've written (our stupid future self) and wondered what on earth is going on, so to avoid struggling to understand our cards, or getting overwhelmed with information, rewrite your cards "as if" we are our future selves. Follow these rules:
 
 - One idea per card
 - Less is more (trim the fat)
 - Keep it concise and relevant (reduce cognitive load)
+
+### Don't overload the brain
 
 **A card stuffed with facts will overload the brain.** Keep your questions concrete and clear. Limit factual information of each card and be super focused: if you find yourself asking two questions, or learning about two unrelated facts in a single card, split them out into 2 cards:
 
@@ -115,11 +123,17 @@ We can bring colour to all your favourite languages:
 - One learning lesson (documentation of an outcome)
 - One particular problem you solved
 
-**Make use of tags, theming, and search.** Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode, so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn.
+### Make use of tags, theming, and searc
 
-**Do it badly first, then review.** Often I'll create a flashcard and spot problems with it later. Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later.
+**Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn.
 
-Over time writing flashcards will become second nature; muscle-memory. These simplicity constraints add the responsibility to write better flashcards: if you're spending more than a minute reviewing each card; reduce, reduce, reduce.
+### Do it badly first, then review
+
+**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later.
+
+### Simplicity constraints
+
+**Over time writing flashcards will become second nature; muscle-memory.** These simplicity constraints add the responsibility to write better flashcards: if you're spending more than a minute reviewing each card; reduce, reduce, reduce.
 
 
 ## It's more fun with a compiler (advanced)
