@@ -111,7 +111,7 @@ We can bring colour to all your favourite languages:
 
 ### Write for your stupid future self
 
-**You'll look back on your flashcards and they'll make perfect sense.** We've all looked at code we've written (our stupid future self) and wondered what on earth is going on, so to avoid struggling to understand our cards, or getting overwhelmed with information, rewrite your cards "as if" we are our future selves. Follow these rules:
+**You'll look back on your flashcards and they'll make perfect sense.** We've all looked at code we've written (our stupid future self) and wondered what on earth is going on, so avoid struggling to understand your cards, or getting overwhelmed with information, by rewriting your cards "as if" we are our future selves. Follow these rules:
 
 - One idea per card
 - Less is more (trim the fat)
@@ -123,15 +123,15 @@ We can bring colour to all your favourite languages:
 
 - One function, syntax, or code snippet to learn
 - One learning lesson (documentation of an outcome)
-- One particular problem you solved
+- One particular aspect of a problem you solved
 
-### Make use of tags, theming, and searc
+### Make use of tags, theming, and search
 
-**Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn.
+**Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn!
 
 ### Do it badly first, then review
 
-**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later.
+**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later. This makes for a much more pleasant experience in future.
 
 
 ## It's more fun with a compiler (advanced)
