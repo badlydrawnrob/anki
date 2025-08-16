@@ -7,18 +7,9 @@
      3. View the file in `/build/data/data-code.html`
 
 ========================================================================== -->
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gotInts</span> <span class="op">=</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">String</span><span class="op">.</span><span class="fu">split</span> <span class="st">&quot;:&quot;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> <span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="dt">String</span><span class="op">.</span><span class="fu">toInt</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> : <span class="dt">List</span> (<span class="dt">Maybe</span> <span class="dt">Int</span>) <span class="op">-&gt;</span> (<span class="dt">Int</span><span class="op">,</span> <span class="dt">Int</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">toTuple</span> <span class="fu">l</span> <span class="op">=</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">l</span> <span class="cf">of</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    [<span class="dt">Just</span> <span class="fu">a</span><span class="op">,</span> <span class="dt">Just</span> <span class="fu">b</span>] <span class="op">-&gt;</span> (<span class="fu">a</span><span class="op">,</span> <span class="fu">b</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_</span> <span class="op">-&gt;</span> (<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>) <span class="co">-- This should NEVER happen!</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; gotInts &quot;2:00&quot;
-[Just 2, Just 0]
-&gt; toTuple [Just 2, Just 0]
-(2, 0)</code></pre>
+<pre class="terminal"><code>&gt;&gt;&gt; .size1.get(&quot;size&quot;)
+10
+&gt;&gt;&gt; .size2.get(&quot;size&quot;)
+# Returns `None`
+&gt;&gt;&gt; .size2.get(&quot;size&quot;, &quot;Does not exist&quot;)
+&#39;Does not exist&#39;</code></pre>

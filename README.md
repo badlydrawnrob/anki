@@ -131,7 +131,7 @@ We can bring colour to all your favourite languages:
 
 ### Do it badly first, then review
 
-**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later. This makes for a much more pleasant experience in future.
+**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later. This makes for less frustration and a pleasant experience in future.
 
 
 ## It's more fun with a compiler (advanced)

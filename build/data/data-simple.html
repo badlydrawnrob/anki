@@ -39,14 +39,14 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>When might we use a custom type instead of <code>[]</code> a
-list?</h1>
+<h1>We’ve got a BIG chunk of HTML in this view function. Why is that
+bad? How can we fix it?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Lists</h2>
+<h2>Refactoring</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -54,7 +54,7 @@ list?</h1>
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>[1, 2, 3]</code></p>
+<p><code>view</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -66,7 +66,28 @@ list?</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span> <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">div</span> []</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">h1</span> [ <span class="fu">class</span> <span class="st">&quot;header&quot;</span> ]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      [ <span class="fu">text</span> <span class="st">&quot;Saladise - Build a Salad&quot;</span> ]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;content&quot;</span> ]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      [ <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">sending</span> <span class="cf">then</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;sending&quot;</span> ]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>          [ <span class="fu">text</span> <span class="st">&quot;Sending your order&quot;</span> ]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">building</span> <span class="cf">then</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          <span class="co">-- Lots of lines of code ...</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>          <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;building&quot;</span> ]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">a</span> [ <span class="fu">class</span> <span class="st">&quot;action&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>              <span class="op">,</span> <span class="fu">onClick</span> <span class="dt">Build</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>              ]</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>              [ <span class="fu">text</span> <span class="st">&quot;build my order&quot;</span> ]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>          <span class="co">-- Lots of lines of code ...</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>          <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;done&quot;</span> ]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      ]</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -88,47 +109,53 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Refactor to `_ -&gt; Err &quot;Invalid` branch!</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">processList</span> :</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">String</span> (<span class="dt">Int</span><span class="op">,</span> <span class="dt">Int</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">processList</span> <span class="fu">lst</span> <span class="op">=</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">lst</span> <span class="cf">of</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    []    <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">a</span>]   <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    [<span class="fu">a</span><span class="op">,</span><span class="fu">b</span>] <span class="op">-&gt;</span> <span class="dt">Ok</span> (<span class="fu">a</span><span class="op">,</span> <span class="fu">b</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_</span>     <span class="op">-&gt;</span> <span class="dt">Err</span> <span class="st">&quot;Invalid&quot;</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">viewSend</span> : <span class="dt">Html</span> <span class="fu">msg</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">viewBuild</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viewDone</span> : <span class="dt">Html</span> <span class="fu">msg</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">viewStep</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">viewStep</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">sending</span> <span class="cf">then</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">viewSend</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> <span class="fu">model</span><span class="op">.</span><span class="fu">building</span> <span class="cf">then</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">viewBuild</span> <span class="fu">model</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">viewDone</span> <span class="fu">model</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">div</span> []</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">h1</span> [ <span class="fu">class</span> <span class="st">&quot;header&quot;</span> ]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">text</span> <span class="st">&quot;Saladise - Build a Salad&quot;</span> ]</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">div</span> [ <span class="fu">class</span> <span class="st">&quot;content&quot;</span> ]</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">viewStep</span> <span class="fu">model</span> ]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong>A list can be</strong> <code>empty</code>,
-<code>singleton</code>, or <code>many</code> …</p>
+<p><strong>Our code is much easier to read</strong> if we split out our
+<code>view</code> functions and <code>if</code>/<code>else</code>
+conditions!</p>
 </blockquote>
-<p>Elm forces you to handle all <code>case</code>s. A custom type can
-<em>sometimes</em> be a better option, but only if there’s a valid
-reason for using it (otherwise, just use a list!):</p>
 <ol type="1">
-<li>A `[“non-empty”] list</li>
-<li>A <code>Success a</code> server response</li>
-<li><a href="https://www.youtube.com/watch?v=IcgmSRJHu_8">Impossible</a>
-states</li>
-</ol>
-<p>Invalid reasons:</p>
-<ol type="1">
-<li><code>Nothing</code> and <code>[]</code> are essentially the
-same!</li>
+<li><code>viewX</code> functions help isolate and spot bugs</li>
+<li><code>Html msg</code> means there are <em>zero</em> actions and
+messages</li>
+<li><code>Html Msg</code> means there <em>are definitely</em> actions
+and messages</li>
 </ol>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><a
-href="https://package.elm-lang.org/packages/elm/random/latest/Random#uniform"><code>Random.Uniform</code></a> is
-a good example of a custom type being better than a list: a default
-value for an empty list.</p>
+<p><code>Html msg</code> is guaranteed to have ZERO messages and actions
+if used in this way.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

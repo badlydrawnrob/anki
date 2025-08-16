@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# When might we use a custom type instead of `[]` a list?
+# We’ve got a BIG chunk of HTML in this view function. Why is that bad? How can we fix it?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Lists
+## Refactoring
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`[1, 2, 3]`
+`view`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,7 +73,28 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-list = [1, 2, 3]
+view : Model -> Html Msg
+view model =
+  div []
+    [ h1 [ class "header" ]
+      [ text "Saladise - Build a Salad" ]
+    , div [ class "content" ]
+      [ if model.sending then
+        div [ class "sending" ]
+          [ text "Sending your order" ]
+
+        else if model.building then
+          -- Lots of lines of code ...
+          div [ class "building" ]
+            a [ class "action"
+              , onClick Build
+              ]
+              [ text "build my order" ]
+          -- Lots of lines of code ...
+        else
+          div [ class "done" ]
+      ]
+    ]
 ```
 
 
@@ -102,15 +123,29 @@ false
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
--- Refactor to `_ -> Err "Invalid` branch!
-processList :
-    List Int -> Result String (Int, Int)
-processList lst =
-  case lst of
-    []    -> Err "Invalid"
-    [a]   -> Err "Invalid"
-    [a,b] -> Ok (a, b)
-    _     -> Err "Invalid"
+viewSend : Html msg
+
+viewBuild : Model -> Html Msg
+
+viewDone : Html msg
+
+viewStep : Model -> Html Msg
+viewStep model =
+  if model.sending then
+    viewSend
+  else if model.building then
+    viewBuild model
+  else
+    viewDone model
+
+view : Model -> Html Msg
+view model =
+  div []
+    [ h1 [ class "header" ]
+        [ text "Saladise - Build a Salad" ]
+    , div [ class "content" ]
+        [ viewStep model ]
+    ]
 ```
 
 
@@ -119,19 +154,12 @@ processList lst =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **A list can be** `empty`, `singleton`, or `many` ...
 
-Elm forces you to handle all `case`s. A custom type can _sometimes_ be a
-better option, but only if there's a valid reason for using it (otherwise,
-just use a list!):
+> **Our code is much easier to read** if we split out our `view` functions and `if`/`else` conditions!
 
-1. A `["non-empty"] list
-2. A `Success a` server response
-3. [Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) states
-
-Invalid reasons:
-
-1. `Nothing` and `[]` are essentially the same!
+1. `viewX` functions help isolate and spot bugs
+2. `Html msg` means there are _zero_ actions and messages
+3. `Html Msg` means there _are definitely_ actions and messages
 
 
 <!-- -------------------------------------------------------------------------
@@ -139,8 +167,7 @@ Invalid reasons:
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-[`Random.Uniform`](https://package.elm-lang.org/packages/elm/random/latest/Random#uniform) is
-a good example of a custom type being better than a list: a default value for an empty list.
+`Html msg` is guaranteed to have ZERO messages and actions if used in this way.
 
 
 <!-- -------------------------------------------------------------------------

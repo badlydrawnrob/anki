@@ -8,22 +8,11 @@
 
 ========================================================================== -->
 
-```elm
-gotInts : String -> List (Maybe Int)
-gotInts =
-  String.split ":"
-    >> List.map String.toInt
-
-toTuple : List (Maybe Int) -> (Int, Int)
-toTuple l =
-  case l of
-    [Just a, Just b] -> (a, b)
-    _ -> (0, 0) -- This should NEVER happen!
-```
-
 ```terminal
-> gotInts "2:00"
-[Just 2, Just 0]
-> toTuple [Just 2, Just 0]
-(2, 0)
+>>> .size1.get("size")
+10
+>>> .size2.get("size")
+# Returns `None`
+>>> .size2.get("size", "Does not exist")
+'Does not exist'
 ```
