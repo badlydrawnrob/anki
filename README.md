@@ -95,7 +95,7 @@ We can bring colour to all your favourite languages:
 
 > ☝️ [One idea](https://github.com/badlydrawnrob/anki/issues/41) per card. Just one.
 
-**Over time writing flashcards will become second nature; muscle-memory.** These simplicity constraints have worked well for me, and they add the responsibility to write better flashcards: if you're spending more than a minute reviewing each card; reduce, reduce, reduce.
+**Over time writing flashcards will become second nature; muscle-memory.** These simple constraints have worked well for me, and they add the responsibility to write better flashcards: if you're spending more than a minute reviewing each card; reduce, reduce, reduce.
 
 ### Simple is better
 
@@ -127,7 +127,9 @@ We can bring colour to all your favourite languages:
 
 ### Have a clear learning frame
 
-**This simply means the things you will, and won't learn** from the enormity of learning resources we all have at our disposal. It's very helpful to create concrete goals for yourself to keep things on track, not get overwhelmed while you're starting out, managing your time well. Are you looking for a job? A hobby? A budding entrepreneur? Your frame can change over time, and will differ person to person, but if I were to start learning coding from scratch, this is what I'd do. My current learning frame is "prototyping Elm apps with Python and SQLite to teach beginners how to code and validate my digital product ideas". I'm not interested in academic research, and my learning is a little shallow, as I don't code every day. Here's a [more detailed example of a learning frame](https://github.com/badlydrawnrob/elm-playground/tree/master/programming-elm) from the "Programming Elm" book I worked through.
+**This simply means things you will, and won't learn** from the enormity of learning resources we all have at our disposal. Concrete goals keep you on track, a learning frame helps avoid wasted time. Looking for a job? A hobby project? A budding entrepreneur? Frames change over time and differ person to person, but if you're starting from scratch, it really helps guide you (I wish I'd done that starting out).
+
+Mine is "prototyping Elm apps with Python and SQLite to validate my digital product ideas". That means academic research, complex servers, deep learning, huge apps, other languages, and so on, is 100% OUT; I don't code every day so the learning must be light and apps simple. Here's a [more more detailed example of a learning frame](https://github.com/badlydrawnrob/elm-playground/tree/master/programming-elm) from the "Programming Elm" book I worked through.
 
 ### Make use of tags, theming, and search
 
