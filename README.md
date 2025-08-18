@@ -125,6 +125,10 @@ We can bring colour to all your favourite languages:
 - One learning lesson (documentation of an outcome)
 - One particular aspect of a problem you solved
 
+### Have a clear learning frame
+
+**This simply means the things you will, and won't learn** from the enormity of learning resources we all have at our disposal. It's very helpful to create concrete goals for yourself to keep things on track, not get overwhelmed while you're starting out, managing your time well. Are you looking for a job? A hobby? A budding entrepreneur? Your frame can change over time, and will differ person to person, but if I were to start learning coding from scratch, this is what I'd do. My current learning frame is "prototyping Elm apps with Python and SQLite to teach beginners how to code and validate my digital product ideas". I'm not interested in academic research, and my learning is a little shallow, as I don't code every day. Here's a [more detailed example of a learning frame](https://github.com/badlydrawnrob/elm-playground/tree/master/programming-elm) from the "Programming Elm" book I worked through.
+
 ### Make use of tags, theming, and search
 
 **Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn!
