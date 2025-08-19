@@ -7,9 +7,32 @@
      3. View the file in `/build/data/data-code.html`
 
 ========================================================================== -->
-<pre class="terminal"><code>&gt;&gt;&gt; .size1.get(&quot;size&quot;)
-10
-&gt;&gt;&gt; .size2.get(&quot;size&quot;)
-# Returns `None`
-&gt;&gt;&gt; .size2.get(&quot;size&quot;, &quot;Does not exist&quot;)
-&#39;Does not exist&#39;</code></pre>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- [] : List a</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">map</span> []</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">-- [] : List Int</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">map</span> (\<span class="fu">n</span> <span class="op">-&gt;</span> <span class="fu">n</span> <span class="op">*</span> <span class="dv">2</span>) [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">filter</span> (\<span class="fu">n</span> <span class="op">-&gt;</span> <span class="fu">n</span> \<span class="op">=</span> <span class="dv">2</span>) [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">-- [] : List Int</span></span></code></pre></div>
+<pre class="terminal"><code>&gt;&gt; List.map (\n -&gt; n * 2) [&quot;1&quot;, 2]</code></pre>
+<pre class="text"><code>-- TYPE MISMATCH ---------------------------------------------------------- REPL
+
+The 2nd element of this list does not match all the previous elements:
+
+3|   List.map (\n -&gt; n * 2) [&quot;1&quot;, 2]
+                                  ^
+The 2nd element is a number of type:
+
+    number
+
+But all the previous elements in the list are:
+
+    String
+
+Hint: Everything in a list must be the same type of value. This way, we never
+run into unexpected values partway through a List.map, List.foldl, etc. Read
+&lt;https://elm-lang.org/0.19.1/custom-types&gt; to learn how to “mix” types.
+
+Hint: Try using String.fromInt to convert it to a string?</code></pre>
