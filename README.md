@@ -97,7 +97,7 @@ We can bring colour to all your favourite languages:
 
 **This simply means things you will, and won't learn** from the enormity of learning resources we all have at our disposal. Concrete goals keep you on track, a learning frame helps avoid wasted time. Looking for a job? A hobby project? A budding entrepreneur? Frames change over time and differ person to person, but if you're starting from scratch, it really helps guide you (I wish I'd done that starting out).
 
-Mine is "prototyping Elm apps with Python and SQLite to validate my digital product ideas". That means academic research, complex servers, deep learning, huge apps, other languages, and so on, is 100% OUT; I don't code every day so the learning must be light and apps simple. Here's a [more more detailed example of a learning frame](https://github.com/badlydrawnrob/elm-playground/tree/master/programming-elm) from the "Programming Elm" book I worked through.
+Mine is "prototyping Elm apps with Python and SQLite to validate my digital product ideas". That means academic research, complex servers, deep learning, huge apps, other languages, and so on, is 100% OUT; I don't code every day so the learning must be light and apps simple. Here's a [more detailed example of a learning frame](https://github.com/badlydrawnrob/elm-playground/tree/master/programming-elm) from the "Programming Elm" book I worked through.
 
 
 ## Keep it simple, stupid!
@@ -134,15 +134,13 @@ Mine is "prototyping Elm apps with Python and SQLite to validate my digital prod
 - One learning lesson (documentation of an outcome)
 - One particular aspect of a problem you solved
 
+### Do it badly first, then review
 
+**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later. This makes for less frustration and a pleasant experience in future.
 
 ### Make use of tags, theming, and search
 
 **Our brain works in [focus and diffuse](https://barbaraoakley.com/wp-content/uploads/2018/02/10-Top-Ideas-to-Help-Your-Learning-and-10-Pitfalls.pdf) mode,** so try to relate learning in interesting ways. Tag cards to group similar themes (like custom types, loops, or package functions) to drill as a group; theme the cards and learn it in [3 ways](https://github.com/badlydrawnrob/anki/issues/93); Revise a particular card with search. There's so many ways to learn!
-
-### Do it badly first, then review
-
-**Often I'll create a flashcard and spot problems with it later.** Perhaps the question isn't worded well, the code sample is too long, formatting is off, it's too unfocused, a different card type is more suitable, or a difficult question needs splitting into three easy cards. Fix it then and there in the mobile app, or tag it as `edit` for later. This makes for less frustration and a pleasant experience in future.
 
 
 ## It's more fun with a compiler (advanced)
