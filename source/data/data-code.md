@@ -9,38 +9,18 @@
 ========================================================================== -->
 
 ```elm
--- [] : List a
-List.map []
+update : Msg -> Model -> Model
+update msg model =
+  case msg.description of
+    "ClickedPhoto" ->
+      { model
+        | selectedUrl = msg.data
+      }
 
--- [] : List Int
-List.map (\n -> n * 2) [1,2,3]
-List.filter (\n -> n \= 2) [1,2,3]
+    "ClickedSurpriseMe" ->
+      { model
+        | selectedUrl = "2.jpeg"
+      }
 
--- [] : List Int
-
-```
-```terminal
->> List.map (\n -> n * 2) ["1", 2]
-```
-
-```text
--- TYPE MISMATCH ---------------------------------------------------------- REPL
-
-The 2nd element of this list does not match all the previous elements:
-
-3|   List.map (\n -> n * 2) ["1", 2]
-                                  ^
-The 2nd element is a number of type:
-
-    number
-
-But all the previous elements in the list are:
-
-    String
-
-Hint: Everything in a list must be the same type of value. This way, we never
-run into unexpected values partway through a List.map, List.foldl, etc. Read
-<https://elm-lang.org/0.19.1/custom-types> to learn how to “mix” types.
-
-Hint: Try using String.fromInt to convert it to a string?
+    ...
 ```

@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How do we convert this to use `andMap` from `Result.Extra` package?
+# What function do we need to add here? What will it compute?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Mapping a result
+## Anonymous function
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Result.Extra.andMap`
+`...`
 
 
 <!-- -------------------------------------------------------------------------
@@ -99,19 +99,23 @@ false
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-import Result.Extra as Result exposing (andMap)
+type Song =
+  Song String (Int, Int)
 
-validate : Form -> Result String Song
-validate { title, artist, album, ... } =
-  Result.Ok Song -- Instead of `Result.mapX`
-    |> Result.andMap (Ok "Mary on a Cross")
-    |> Result.andMap (Ok "Ghost")
-    |> Result.andMap (Ok "Seven Inches of Satanic Panic")
-    |> Result.andMap (Ok 2000)
-    |> Result.andMap
-        (Result.map2 (\mins secs -> (mins, secs))
-          (Ok (Maybe.withDefault 0 (String.toInt "20")))
-          (Ok (Maybe.withDefault 0 (String.toInt "30"))))
+title = (Ok "Afraid")
+minutes = (Ok 3)
+seconds = (Err "Out of bounds")
+
+validate =
+  Result.map3
+    (\t m s -> Song t (m,s))
+      title
+      minutes
+      seconds
+```
+```terminal
+>> validate
+Err ("Out of bounds") : Result String Song
 ```
 
 
@@ -120,7 +124,7 @@ validate { title, artist, album, ... } =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-The type signature for [`andMap`](https://package.elm-lang.org/packages/elm-community/result-extra/2.2.0/Result-Extra#andMap) is pretty hard to read, but essentially it works in a similar way to `Json.Decode.Pipeline`.
+> We use `Result.map`, which can have up to 5 arguments (`.map5`). We create an anonymous function that takes in our three parameters and spits out a `Song`!
 
 
 <!-- -------------------------------------------------------------------------
@@ -128,7 +132,7 @@ The type signature for [`andMap`](https://package.elm-lang.org/packages/elm-comm
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-If you find yourself needing a `.mapX` but there are too many arguments, there's probably an `.Extra` package with a `andMap` function you can use.
+If you have more than 5 arguments **this [running out of maps](https://thoughtbot.com/blog/running-out-of-maps) article** is a good read.
 
 
 <!-- -------------------------------------------------------------------------

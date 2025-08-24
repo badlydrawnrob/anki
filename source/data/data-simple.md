@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# We’ve got a BIG chunk of HTML in this view function. Why is that bad? How can we fix it?
+# Are these two `Msg` actions the same?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Refactoring
+## Messages
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`view`
+`Msg`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,28 +73,21 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-view : Model -> Html Msg
-view model =
-  div []
-    [ h1 [ class "header" ]
-      [ text "Saladise - Build a Salad" ]
-    , div [ class "content" ]
-      [ if model.sending then
-        div [ class "sending" ]
-          [ text "Sending your order" ]
+-- Our message
+type alias Msg =
+  { description : String, data : String }
 
-        else if model.building then
-          -- Lots of lines of code ...
-          div [ class "building" ]
-            a [ class "action"
-              , onClick Build
-              ]
-              [ text "build my order" ]
-          -- Lots of lines of code ...
-        else
-          div [ class "done" ]
-      ]
-    ]
+-- An image
+onClick
+  { description = "ClickedPhoto"
+  , data = thumb.url
+  }
+
+-- A button
+onClick
+  { description = "ClickedSurpriseMe"
+  , data = ""
+  }
 ```
 
 
@@ -123,29 +116,20 @@ false
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-viewSend : Html msg
+update : Msg -> Model -> Model
+update msg model =
+  case msg.description of
+    "ClickedPhoto" ->
+      { model
+        | selectedUrl = msg.data
+      }
 
-viewBuild : Model -> Html Msg
+    "ClickedSurpriseMe" ->
+      { model
+        | selectedUrl = "2.jpeg"
+      }
 
-viewDone : Html msg
-
-viewStep : Model -> Html Msg
-viewStep model =
-  if model.sending then
-    viewSend
-  else if model.building then
-    viewBuild model
-  else
-    viewDone model
-
-view : Model -> Html Msg
-view model =
-  div []
-    [ h1 [ class "header" ]
-        [ text "Saladise - Build a Salad" ]
-    , div [ class "content" ]
-        [ viewStep model ]
-    ]
+    ...
 ```
 
 
@@ -154,12 +138,9 @@ view model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
+> **These actions look the same, but are ultimately different.** Don't shoehorn two similar messages in one `Msg` as it'll get messy fast: what happens if we add a _third_ action?
 
-> **Our code is much easier to read** if we split out our `view` functions and `if`/`else` conditions!
-
-1. `viewX` functions help isolate and spot bugs
-2. `Html msg` means there are _zero_ actions and messages
-3. `Html Msg` means there _are definitely_ actions and messages
+We use a proper `type Msg` with variants that properly map our messages with correct data. This way we can add as many as we need, and similar but different messages don't get conflated. One event shouldn’t need to know about the other!
 
 
 <!-- -------------------------------------------------------------------------
@@ -167,8 +148,7 @@ view model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-`Html msg` is guaranteed to have ZERO messages and actions if used in this way.
-
+More on [custom types and messages](https://guide.elm-lang.org/types/custom_types#messages)
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
