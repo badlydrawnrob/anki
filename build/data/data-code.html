@@ -8,6 +8,50 @@
 
 ========================================================================== -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>hero.moveUp()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>hero.moveUp()</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>hero.moveUp()</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Dict</span> <span class="kw">exposing</span> (<span class="dt">Dict</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Json</span><span class="op">.</span><span class="dt">Decode</span> <span class="kw">as</span> <span class="dt">D</span> <span class="kw">exposing</span> (<span class="dt">Decoder</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Json</span><span class="op">.</span><span class="dt">Encode</span> <span class="kw">as</span> <span class="dt">E</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">User</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">name</span> : <span class="dt">String</span> }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">decodeUser</span> <span class="op">=</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">D</span><span class="op">.</span><span class="fu">map</span> <span class="dt">User</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    (<span class="dt">D</span><span class="op">.</span><span class="fu">field</span> <span class="st">&quot;name&quot;</span> <span class="dt">D</span><span class="op">.</span><span class="fu">string</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tom</span> <span class="op">=</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">E</span><span class="op">.</span><span class="fu">object</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    [(<span class="st">&quot;name&quot;</span><span class="op">,</span> <span class="dt">E</span><span class="op">.</span><span class="fu">string</span> <span class="st">&quot;Tom&quot;</span>)]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dict</span> <span class="op">=</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Dict</span><span class="op">.</span><span class="fu">singleton</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;person&quot;</span> <span class="fu">tom</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">-- Fix this code</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">getValue1</span> :</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Dict</span> <span class="dt">String</span> <span class="dt">D</span><span class="op">.</span><span class="dt">Value</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">-&gt;</span> <span class="dt">Result</span> <span class="dt">D</span><span class="op">.</span><span class="dt">Error</span> <span class="dt">User</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">getValue1</span> <span class="fu">dict</span> <span class="op">=</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="dt">Dict</span><span class="op">.</span><span class="fu">get</span> <span class="st">&quot;person&quot;</span> <span class="fu">dict</span> <span class="cf">of</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Just</span> <span class="fu">value</span> <span class="op">-&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">D</span><span class="op">.</span><span class="fu">decodeValue</span> <span class="fu">decodeUser</span> <span class="fu">value</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Nothing</span> <span class="op">-&gt;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Debug</span><span class="op">.</span><span class="fu">todo</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;D.Error is ...&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getValue2</span> :</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Dict</span> <span class="dt">String</span> <span class="dt">D</span><span class="op">.</span><span class="dt">Value</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">User</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">getValue2</span> <span class="fu">dictionary</span> <span class="op">=</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- ↓ `Just Value`</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Dict</span><span class="op">.</span><span class="fu">get</span> <span class="st">&quot;person&quot;</span> <span class="fu">dictionary</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">-- ↓ `Just User` or `Nothing`</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">|&gt;</span> <span class="dt">Maybe</span><span class="op">.</span><span class="fu">andThen</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      (\<span class="fu">maybeValue</span> <span class="op">-&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">case</span> <span class="dt">D</span><span class="op">.</span><span class="fu">decodeValue</span> <span class="fu">decodeUser</span> <span class="fu">maybeValue</span> <span class="cf">of</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>          <span class="dt">Ok</span> <span class="fu">user</span> <span class="op">-&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">Just</span> <span class="fu">user</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>          <span class="dt">Err</span> <span class="fu">_</span> <span class="op">-&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            <span class="dt">Nothing</span>)</span></code></pre></div>
