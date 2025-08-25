@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Are these two `Msg` actions the same?
+# What are bugs in coding?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Messages
+## 🐛🐞🪰 Bugs
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Msg`
+`...`
 
 
 <!-- -------------------------------------------------------------------------
@@ -72,22 +72,10 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```elm
--- Our message
-type alias Msg =
-  { description : String, data : String }
-
--- An image
-onClick
-  { description = "ClickedPhoto"
-  , data = thumb.url
-  }
-
--- A button
-onClick
-  { description = "ClickedSurpriseMe"
-  , data = ""
-  }
+```python
+# Can you spot the bugs?
+hero.moveup(2)
+hero.moveright(4)
 ```
 
 
@@ -115,21 +103,9 @@ false
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```elm
-update : Msg -> Model -> Model
-update msg model =
-  case msg.description of
-    "ClickedPhoto" ->
-      { model
-        | selectedUrl = msg.data
-      }
-
-    "ClickedSurpriseMe" ->
-      { model
-        | selectedUrl = "2.jpeg"
-      }
-
-    ...
+```python
+hero.moveUp(2)
+hero.moveRight(4)
 ```
 
 
@@ -138,9 +114,9 @@ update msg model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **These actions look the same, but are ultimately different.** Don't shoehorn two similar messages in one `Msg` as it'll get messy fast: what happens if we add a _third_ action?
+> **Bugs are mistakes we've made in our code!** Did you spot the problems?
 
-We use a proper `type Msg` with variants that properly map our messages with correct data. This way we can add as many as we need, and similar but different messages don't get conflated. One event shouldn’t need to know about the other!
+Our hero's commands must use `camelCase` style writing, which we've fixed in the code above.
 
 
 <!-- -------------------------------------------------------------------------
@@ -148,7 +124,7 @@ We use a proper `type Msg` with variants that properly map our messages with cor
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-More on [custom types and messages](https://guide.elm-lang.org/types/custom_types#messages)
+Remember the writing of our commands should look like the hump of a camel!
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
