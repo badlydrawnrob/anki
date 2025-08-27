@@ -279,6 +279,14 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 
 CONSTANT = "this is a string"
 
+d = {
+  "first_name": "Keanu",
+  "last_name": "Reeves"
+}
+
+for key, value in d.items():
+  print(f"{key} = {value}")
+
 class ExitNotifyThread(Thread):
     """This class is designed to alert a "monitor" to the fact that a thread has
     exited and to provide for the ability for it to find out why."""
