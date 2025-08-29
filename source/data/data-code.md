@@ -9,16 +9,8 @@
 ========================================================================== -->
 
 ```python
-d = {
-  "first_name": "Keanu",
-  "last_name": "Reeves"
-}
-
-for key in d:
-  print(f"{key} = {d[key]}")
-```
-
-```python
-for key, value in d.items():
-  print(f"{key} = {value}")
+helper.moveDown()
+helper.build("rightArrow")
+helper.moveRight(3)
+helper.build("rightArrow")
 ```
