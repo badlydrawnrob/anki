@@ -1187,6 +1187,7 @@ img {
 .gl-Card_KeyPointNotes small {
   color: var(--color-card-l);
   font-variation-settings: 'CRSV' 1, 'slnt' -6;
+  margin-top: var(--spacing);
   text-align: center;
   display: block;
 }
