@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What function do we need to add here? What will it compute?
+# What function can we use here to step and debug our output?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Anonymous function
+## 🐛🐞🪰 Bugs
 
 
 <!-- -------------------------------------------------------------------------
@@ -99,23 +99,14 @@ false
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-type Song =
-  Song String (Int, Int)
+list = [1,2,3,4,5,6]
 
-title = (Ok "Afraid")
-minutes = (Ok 3)
-seconds = (Err "Out of bounds")
-
-validate =
-  Result.map3
-    (\t m s -> Song t (m,s))
-      title
-      minutes
-      seconds
-```
-```terminal
->> validate
-Err ("Out of bounds") : Result String Song
+debug =
+  list
+    |> List.map ((*) 2)
+    |> Debug.log "doubled"
+    |> List.filter (\n -> n > 6)
+    |> Debug.log "filtered"
 ```
 
 
@@ -124,7 +115,7 @@ Err ("Out of bounds") : Result String Song
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> We use `Result.map`, which can have up to 5 arguments (`.map5`). We create an anonymous function that takes in our three parameters and spits out a `Song`!
+We can use `Debug.log` to output to our console to help test code.
 
 
 <!-- -------------------------------------------------------------------------
@@ -132,7 +123,7 @@ Err ("Out of bounds") : Result String Song
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-If you have more than 5 arguments **this [running out of maps](https://thoughtbot.com/blog/running-out-of-maps) article** is a good read.
+false
 
 
 <!-- -------------------------------------------------------------------------

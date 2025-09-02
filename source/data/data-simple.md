@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What are bugs in coding?
+# How could we simplify this `Msg` type?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## 🐛🐞🪰 Bugs
+## Messages
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`...`
+`SaladMsg SaladMsg`
 
 
 <!-- -------------------------------------------------------------------------
@@ -72,10 +72,29 @@
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
-```python
-# Can you spot the bugs?
-hero.moveup(2)
-hero.moveright(4)
+```elm
+type Topping
+    = Tomatoes
+    | Cucumbers
+    | Onions
+
+type SaladMsg
+    = ToggleTopping Topping Bool
+
+type Msg
+    = SaladMsg SaladMsg -- Constructor + SaladType
+
+viewLabel : Set String -> Html Msg
+viewLabel toppings =
+  label [ class "select-option" ]
+    [ input
+        [ type_ "checkbox"
+        , checked (Set.member (toppingToString Onions) toppings)
+        , onCheck (SaladMsg << ToggleTopping Onions)
+        ]
+        []
+    , text "Onions"
+    ]
 ```
 
 
@@ -103,9 +122,21 @@ false
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```python
-hero.moveUp(2)
-hero.moveRight(4)
+```elm
+type Msg
+    = ToggleTopping Topping Bool
+
+viewLabel : Set String -> Html Msg
+viewLabel toppings =
+  label [ class "select-option" ]
+    [ input
+        [ type_ "checkbox"
+        , checked (Set.member (toppingToString Onions) toppings)
+        , onCheck (ToggleTopping Onions)
+        ]
+        []
+    , text "Onions"
+    ]
 ```
 
 
@@ -114,9 +145,9 @@ hero.moveRight(4)
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **Bugs are mistakes we've made in our code!** Did you spot the problems?
+> **Simplify your types wherever possible!** I'd prefer a longer list of `Msg` than being clever and hard to read.
 
-Our hero's commands must use `camelCase` style writing, which we've fixed in the code above.
+The only reason we'd need this heavily nested `Msg` type is if we split our modules around the `SaladMsg` type (which in the book holds 3 different messages). We _really_ don't need to do that — aim for ONE level deep.
 
 
 <!-- -------------------------------------------------------------------------
@@ -124,7 +155,7 @@ Our hero's commands must use `camelCase` style writing, which we've fixed in the
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Remember the writing of our commands should look like the hump of a camel!
+This is from "Programming Elm" book, which you can find in `how-to-elm` in [`/06-build-larger-apps`](https://github.com/badlydrawnrob/elm-playground/blob/517f1cf57ba22afa3ab4c55913fdbbb5faa61fec/programming-elm/06-build-larger-apps/src/SaladBuilder.elm)!
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown

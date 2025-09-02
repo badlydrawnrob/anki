@@ -8,9 +8,18 @@
 
 ========================================================================== -->
 
-```python
-helper.moveDown()
-helper.build("rightArrow")
-helper.moveRight(3)
-helper.build("rightArrow")
+```elm
+viewSection : String -> List (Html msg) -> Html msg
+viewSection heading children =
+  section []
+    (h2 [] [ text "Title" ]
+      :: children)
+
+viewSection : List (Html msg)
+viewSection =
+  [ h2 []
+    [ text "Secondly" ]
+  , span []
+    [ text "Thirdly" ]
+  ]
 ```

@@ -39,13 +39,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What are bugs in coding?</h1>
+<h1>How could we simplify this <code>Msg</code> type?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>🐛🐞🪰 Bugs</h2>
+<h2>Messages</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -53,7 +53,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>...</code></p>
+<p><code>SaladMsg SaladMsg</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -65,9 +65,28 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can you spot the bugs?</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>hero.moveup(<span class="dv">2</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>hero.moveright(<span class="dv">4</span>)</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Topping</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">Tomatoes</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">Cucumbers</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">Onions</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">SaladMsg</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ToggleTopping</span> <span class="dt">Topping</span> <span class="dt">Bool</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">SaladMsg</span> <span class="dt">SaladMsg</span> <span class="co">-- Constructor + SaladType</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> : <span class="dt">Set</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> <span class="fu">toppings</span> <span class="op">=</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">label</span> [ <span class="fu">class</span> <span class="st">&quot;select-option&quot;</span> ]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">input</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">type_</span> <span class="st">&quot;checkbox&quot;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">checked</span> (<span class="dt">Set</span><span class="op">.</span><span class="fu">member</span> (<span class="fu">toppingToString</span> <span class="dt">Onions</span>) <span class="fu">toppings</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">onCheck</span> (<span class="dt">SaladMsg</span> <span class="op">&lt;&lt;</span> <span class="dt">ToggleTopping</span> <span class="dt">Onions</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        []</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">text</span> <span class="st">&quot;Onions&quot;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -89,26 +108,41 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hero.moveUp(<span class="dv">2</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hero.moveRight(<span class="dv">4</span>)</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ToggleTopping</span> <span class="dt">Topping</span> <span class="dt">Bool</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> : <span class="dt">Set</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> <span class="fu">toppings</span> <span class="op">=</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">label</span> [ <span class="fu">class</span> <span class="st">&quot;select-option&quot;</span> ]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">input</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">type_</span> <span class="st">&quot;checkbox&quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">checked</span> (<span class="dt">Set</span><span class="op">.</span><span class="fu">member</span> (<span class="fu">toppingToString</span> <span class="dt">Onions</span>) <span class="fu">toppings</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">onCheck</span> (<span class="dt">ToggleTopping</span> <span class="dt">Onions</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        []</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">text</span> <span class="st">&quot;Onions&quot;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong>Bugs are mistakes we’ve made in our code!</strong> Did you
-spot the problems?</p>
+<p><strong>Simplify your types wherever possible!</strong> I’d prefer a
+longer list of <code>Msg</code> than being clever and hard to read.</p>
 </blockquote>
-<p>Our hero’s commands must use <code>camelCase</code> style writing,
-which we’ve fixed in the code above.</p>
+<p>The only reason we’d need this heavily nested <code>Msg</code> type
+is if we split our modules around the <code>SaladMsg</code> type (which
+in the book holds 3 different messages). We <em>really</em> don’t need
+to do that — aim for ONE level deep.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Remember the writing of our commands should look like the hump of a
-camel!</p>
+<p>This is from “Programming Elm” book, which you can find in
+<code>how-to-elm</code> in <a
+href="https://github.com/badlydrawnrob/elm-playground/blob/517f1cf57ba22afa3ab4c55913fdbbb5faa61fec/programming-elm/06-build-larger-apps/src/SaladBuilder.elm"><code>/06-build-larger-apps</code></a>!</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
