@@ -9,17 +9,28 @@
 ========================================================================== -->
 
 ```elm
-viewSection : String -> List (Html msg) -> Html msg
-viewSection heading children =
-  section []
-    (h2 [] [ text "Title" ]
-      :: children)
+Song = { song : String }
 
-viewSection : List (Html msg)
-viewSection =
-  [ h2 []
-    [ text "Secondly" ]
-  , span []
-    [ text "Thirdly" ]
-  ]
+{-| A bit like `Random.Uniform` -}
+Songs
+    = NoSongs
+    | Songs Song (List Song)
+--          ^^^^       ^^^^
+
+Songs
+  (Song "Afraid")
+  [(Song "Get Back"), (Song "Ship Building")]
+
+model = {
+  songs = NoSongs
+}
+
+{-| Render songs if available! -}
+renderView model =
+  case model.songs of
+    NoSongs ->
+      songlessView
+
+    Songs first rest ->
+      (view first rest)
 ```
