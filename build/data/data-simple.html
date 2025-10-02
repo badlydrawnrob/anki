@@ -39,13 +39,14 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How could we simplify this <code>Msg</code> type?</h1>
+<h1>Why is the <code>Maybe Feed</code> here bad practice? How could it
+be improved?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Messages</h2>
+<h2>Maybe</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -53,7 +54,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>SaladMsg SaladMsg</code></p>
+<p><code>type alias Feed = List Photo</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -65,28 +66,45 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Topping</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">Tomatoes</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">Cucumbers</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">Onions</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">SaladMsg</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ToggleTopping</span> <span class="dt">Topping</span> <span class="dt">Bool</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">SaladMsg</span> <span class="dt">SaladMsg</span> <span class="co">-- Constructor + SaladType</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> : <span class="dt">Set</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> <span class="fu">toppings</span> <span class="op">=</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">label</span> [ <span class="fu">class</span> <span class="st">&quot;select-option&quot;</span> ]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">input</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">type_</span> <span class="st">&quot;checkbox&quot;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">checked</span> (<span class="dt">Set</span><span class="op">.</span><span class="fu">member</span> (<span class="fu">toppingToString</span> <span class="dt">Onions</span>) <span class="fu">toppings</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">onCheck</span> (<span class="dt">SaladMsg</span> <span class="op">&lt;&lt;</span> <span class="dt">ToggleTopping</span> <span class="dt">Onions</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        []</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">text</span> <span class="st">&quot;Onions&quot;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">photo</span> : <span class="dt">Photo</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">photo</span> <span class="op">=</span> <span class="dt">Photo</span> <span class="dv">1</span> <span class="st">&quot;1.jpg&quot;</span> <span class="dt">False</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> : <span class="dt">Model</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> <span class="op">=</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">feed</span> <span class="op">=</span> <span class="dt">Just</span> [ <span class="fu">photo</span> ] }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">toggleLiked</span> : <span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">toggleLiked</span> <span class="fu">photo</span> <span class="op">=</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">photo</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="fu">liked</span> <span class="op">=</span> <span class="fu">not</span> <span class="fu">photo</span><span class="op">.</span><span class="fu">liked</span> }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">updateFeed</span> : (<span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span>) <span class="op">-&gt;</span> <span class="dt">Id</span> <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Feed</span> <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Feed</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">updateFeed</span> <span class="fu">fn</span> <span class="fu">id</span> <span class="fu">maybeFeed</span> <span class="op">=</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Maybe</span><span class="op">.</span><span class="fu">map</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="fu">updatePhotoByID</span> <span class="fu">fn</span> <span class="fu">id</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">maybeFeed</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">updatePhotoByID</span> : (<span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span>) <span class="op">-&gt;</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Feed</span> <span class="op">-&gt;</span> <span class="dt">Feed</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">updatePhotoByID</span> <span class="fu">fn</span> <span class="fu">id</span> <span class="fu">feed</span> <span class="op">=</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">List</span><span class="op">.</span><span class="fu">map</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (\<span class="fu">photo</span> <span class="op">-&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="fu">photo</span><span class="op">.</span><span class="fu">id</span> <span class="op">==</span> <span class="fu">id</span> <span class="cf">then</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">fn</span> <span class="fu">photo</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="fu">photo</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="fu">feed</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Model</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Liked</span> <span class="fu">id</span> <span class="op">-&gt;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      { <span class="fu">model</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> <span class="fu">feed</span> <span class="op">=</span> <span class="fu">updateFeed</span> <span class="fu">toggleLiked</span> <span class="fu">id</span> <span class="fu">model</span><span class="op">.</span><span class="fu">feed</span> }</span></code></pre></div>
+<pre class="terminal"><code>&gt;&gt; update (Liked 1) init
+{ feed = Just [{ id = 1, liked = True, url = &quot;1.jpg&quot; }] }
+&gt;&gt; update (Liked 1) { feed = Nothing }
+{ feed = Nothing }</code></pre>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -95,7 +113,7 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-<p>false</p>
+<p>Our <code>Maybe Feed</code> is pulled in from an external API</p>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -107,42 +125,66 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ToggleTopping</span> <span class="dt">Topping</span> <span class="dt">Bool</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> : <span class="dt">Set</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">viewLabel</span> <span class="fu">toppings</span> <span class="op">=</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">label</span> [ <span class="fu">class</span> <span class="st">&quot;select-option&quot;</span> ]</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    [ <span class="fu">input</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        [ <span class="fu">type_</span> <span class="st">&quot;checkbox&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">checked</span> (<span class="dt">Set</span><span class="op">.</span><span class="fu">member</span> (<span class="fu">toppingToString</span> <span class="dt">Onions</span>) <span class="fu">toppings</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">onCheck</span> (<span class="dt">ToggleTopping</span> <span class="dt">Onions</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        []</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">text</span> <span class="st">&quot;Onions&quot;</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    ]</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Status</span> <span class="fu">a</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Loading</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Loaded</span> <span class="fu">a</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">{- Similar to `Maybe.map` -}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">statusMap</span> : (<span class="fu">a</span> <span class="op">-&gt;</span> <span class="fu">a</span>) <span class="op">-&gt;</span> <span class="dt">Status</span> <span class="fu">a</span> <span class="op">-&gt;</span> <span class="dt">Status</span> <span class="fu">a</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">statusMap</span> <span class="fu">fn</span> <span class="fu">status</span> <span class="op">=</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">status</span> <span class="cf">of</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loaded</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Loaded</span> (<span class="fu">fn</span> <span class="fu">a</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loading</span> <span class="op">-&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Loading</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">{- Use unwrapped value for `Msg` -}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">feed</span> <span class="cf">of</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loading</span> <span class="op">-&gt;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">text</span> <span class="st">&quot;Do nothing&quot;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loaded</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">a</span> [ <span class="fu">onClick</span> (<span class="dt">Lifted</span> <span class="fu">a</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="dt">Attr</span><span class="op">.</span><span class="fu">href</span> <span class="st">&quot;/path&quot;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        [ <span class="st">&quot;🎤 We could be lifted&quot;</span> ]</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">{- Within the `Msg` branch, we can</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">use the value, then re-wrap it! -}</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> (<span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span> <span class="cf">of</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Lifted</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      { <span class="fu">model</span> <span class="op">|</span> <span class="fu">feed</span> <span class="op">=</span> <span class="dt">Loaded</span> <span class="fu">a</span> }</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong>Simplify your types wherever possible!</strong> I’d prefer a
-longer list of <code>Msg</code> than being clever and hard to read.</p>
+<p><strong><code>Maybe Feed</code> doesn’t describe our situation
+well!</strong> With <code>Status a</code> we can tell that (a) it’s an
+API, and (b) has it been loaded yet?</p>
 </blockquote>
-<p>The only reason we’d need this heavily nested <code>Msg</code> type
-is if we split our modules around the <code>SaladMsg</code> type (which
-in the book holds 3 different messages). We <em>really</em> don’t need
-to do that — aim for ONE level deep.</p>
+<p>It’s better to use the <code>Maybe</code> type for <em>optional</em>
+record values (e.g: we’ve got a missing <code>photo.url</code>).
+Remember to never use a <code>Loaded (Maybe List Photo)</code> structure
+as <code>[]</code> can be used instead of <code>Nothing</code>.</p>
+<p>The <code>Maybe.map</code> function is very handy when it’s
+needed.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>This is from “Programming Elm” book, which you can find in
-<code>how-to-elm</code> in <a
-href="https://github.com/badlydrawnrob/elm-playground/blob/517f1cf57ba22afa3ab4c55913fdbbb5faa61fec/programming-elm/06-build-larger-apps/src/SaladBuilder.elm"><code>/06-build-larger-apps</code></a>!</p>
+<p><code>statusLift : Status a -&gt; a</code> (a lifting function) won’t
+work here, because we need to return the same type for each branch (we
+can’t return <code>a</code> for the <code>Loading</code> branch!). A
+<code>Result Error a</code> could potentially work in that scenario.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

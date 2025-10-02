@@ -9,28 +9,16 @@
 ========================================================================== -->
 
 ```elm
-Song = { song : String }
+type Status a
+  = Loading
+  | Loaded a
 
-{-| A bit like `Random.Uniform` -}
-Songs
-    = NoSongs
-    | Songs Song (List Song)
---          ^^^^       ^^^^
+lift : Status a -> a
+lift status =
+  case status of
+    Loaded a ->
+      a
 
-Songs
-  (Song "Afraid")
-  [(Song "Get Back"), (Song "Ship Building")]
-
-model = {
-  songs = NoSongs
-}
-
-{-| Render songs if available! -}
-renderView model =
-  case model.songs of
-    NoSongs ->
-      songlessView
-
-    Songs first rest ->
-      (view first rest)
+    Loaded ->
+      Loaded
 ```

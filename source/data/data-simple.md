@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How could we simplify this `Msg` type?
+# Why is the `Maybe Feed` here bad practice? How could it be improved?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Messages
+## Maybe
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`SaladMsg SaladMsg`
+`type alias Feed = List Photo`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,28 +73,47 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-type Topping
-    = Tomatoes
-    | Cucumbers
-    | Onions
+photo : Photo
+photo = Photo 1 "1.jpg" False
 
-type SaladMsg
-    = ToggleTopping Topping Bool
+init : Model
+init =
+  { feed = Just [ photo ] }
 
-type Msg
-    = SaladMsg SaladMsg -- Constructor + SaladType
+toggleLiked : Photo -> Photo
+toggleLiked photo =
+  { photo
+    | liked = not photo.liked }
 
-viewLabel : Set String -> Html Msg
-viewLabel toppings =
-  label [ class "select-option" ]
-    [ input
-        [ type_ "checkbox"
-        , checked (Set.member (toppingToString Onions) toppings)
-        , onCheck (SaladMsg << ToggleTopping Onions)
-        ]
-        []
-    , text "Onions"
-    ]
+updateFeed : (Photo -> Photo) -> Id -> Maybe Feed -> Maybe Feed
+updateFeed fn id maybeFeed =
+  Maybe.map
+    (updatePhotoByID fn id)
+    maybeFeed
+
+updatePhotoByID : (Photo -> Photo) -> Int -> Feed -> Feed
+updatePhotoByID fn id feed =
+  List.map
+    (\photo ->
+      if photo.id == id then
+        fn photo
+      else
+        photo
+      )
+      feed
+
+update : Msg -> Model -> Model
+update msg model =
+  case msg of
+    Liked id ->
+      { model
+        | feed = updateFeed toggleLiked id model.feed }
+```
+```terminal
+>> update (Liked 1) init
+{ feed = Just [{ id = 1, liked = True, url = "1.jpg" }] }
+>> update (Liked 1) { feed = Nothing }
+{ feed = Nothing }
 ```
 
 
@@ -106,7 +125,7 @@ viewLabel toppings =
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-false
+Our `Maybe Feed` is pulled in from an external API
 
 
 <!-- Back of card ======================================================== -->
@@ -123,20 +142,40 @@ false
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-type Msg
-    = ToggleTopping Topping Bool
+type Status a
+  = Loading
+  | Loaded a
 
-viewLabel : Set String -> Html Msg
-viewLabel toppings =
-  label [ class "select-option" ]
-    [ input
-        [ type_ "checkbox"
-        , checked (Set.member (toppingToString Onions) toppings)
-        , onCheck (ToggleTopping Onions)
+{- Similar to `Maybe.map` -}
+statusMap : (a -> a) -> Status a -> Status a
+statusMap fn status =
+  case status of
+    Loaded a ->
+      Loaded (fn a)
+
+    Loading ->
+      Loading
+
+{- Use unwrapped value for `Msg` -}
+view : Model -> Html Msg
+view model =
+  case model.feed of
+    Loading ->
+      text "Do nothing"
+
+    Loaded a ->
+      a [ onClick (Lifted a)
+        , Attr.href "/path"
         ]
-        []
-    , text "Onions"
-    ]
+        [ "🎤 We could be lifted" ]
+
+{- Within the `Msg` branch, we can
+use the value, then re-wrap it! -}
+update : Msg -> Model -> (Model, Cmd Msg)
+update msg model =
+  case model of
+    Lifted a ->
+      { model | feed = Loaded a }
 ```
 
 
@@ -145,9 +184,14 @@ viewLabel toppings =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **Simplify your types wherever possible!** I'd prefer a longer list of `Msg` than being clever and hard to read.
+> **`Maybe Feed` doesn't describe our situation well!** With `Status a` we can tell
+> that (a) it's an API, and (b) has it been loaded yet?
 
-The only reason we'd need this heavily nested `Msg` type is if we split our modules around the `SaladMsg` type (which in the book holds 3 different messages). We _really_ don't need to do that — aim for ONE level deep.
+It's better to use the `Maybe` type for _optional_ record values (e.g: we've got a
+missing `photo.url`). Remember to never use a `Loaded (Maybe List Photo)` structure as
+`[]` can be used instead of `Nothing`.
+
+The `Maybe.map` function is very handy when it's needed.
 
 
 <!-- -------------------------------------------------------------------------
@@ -155,7 +199,9 @@ The only reason we'd need this heavily nested `Msg` type is if we split our modu
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-This is from "Programming Elm" book, which you can find in `how-to-elm` in [`/06-build-larger-apps`](https://github.com/badlydrawnrob/elm-playground/blob/517f1cf57ba22afa3ab4c55913fdbbb5faa61fec/programming-elm/06-build-larger-apps/src/SaladBuilder.elm)!
+`statusLift : Status a -> a` (a lifting function) won't work here, because we
+need to return the same type for each branch (we can't return `a` for the
+`Loading` branch!). A `Result Error a` could potentially work in that scenario.
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
