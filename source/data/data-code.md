@@ -9,16 +9,12 @@
 ========================================================================== -->
 
 ```elm
-type Status a
-  = Loading
-  | Loaded a
+{-| Alternative with `List` -}
+renderView lst =
+  case lst of
+    [] ->
+      songlessView
 
-lift : Status a -> a
-lift status =
-  case status of
-    Loaded a ->
-      a
-
-    Loaded ->
-      Loaded
+    first::rest ->
+      (view first rest)
 ```

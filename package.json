@@ -10,7 +10,7 @@
     "custom": "pandoc --template=source/themes/custom/template.html --toc -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
     "data": "npm run data-code && npm run data-code-reverse && npm run data-draw && npm run data-missing && npm run data-simple",
     "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
-    "data-code-reverse": "pandoc source/data/data-code.html -t gfm-raw_html -o ./build/data/data-code.md",
+    "data-code-reverse": "pandoc source/data/data-code.html -t gfm -o ./build/data/data-code.md",
     "data-draw": "pandoc --from markdown-auto_identifiers source/data/data-draw.md -o ./build/data/data-draw.html",
     "data-simple": "pandoc --from markdown-auto_identifiers source/data/data-simple.md -o ./build/data/data-simple.html",
     "data-missing": "pandoc --from markdown-auto_identifiers source/data/data-missing.md -o ./build/data/data-missing.html",
