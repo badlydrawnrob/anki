@@ -39,14 +39,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>Why is the <code>Maybe Feed</code> here bad practice? How could it
-be improved?</h1>
+<h1>How are we lifting the <code>Status value</code> here?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Maybe</h2>
+<h2>Types</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -54,7 +53,7 @@ be improved?</h1>
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>type alias Feed = List Photo</code></p>
+<p><code>Loaded (List photo)</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -66,45 +65,60 @@ be improved?</h1>
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">photo</span> : <span class="dt">Photo</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">photo</span> <span class="op">=</span> <span class="dt">Photo</span> <span class="dv">1</span> <span class="st">&quot;1.jpg&quot;</span> <span class="dt">False</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> : <span class="dt">Model</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> <span class="op">=</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">feed</span> <span class="op">=</span> <span class="dt">Just</span> [ <span class="fu">photo</span> ] }</span>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Browser</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span> <span class="kw">exposing</span> (<span class="dt">Html</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Attributes</span> <span class="kw">as</span> <span class="dt">Attr</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Events</span> <span class="kw">as</span> <span class="dt">Events</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span> <span class="kw">exposing</span> (<span class="fu">a</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">toggleLiked</span> : <span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">toggleLiked</span> <span class="fu">photo</span> <span class="op">=</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">photo</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="fu">liked</span> <span class="op">=</span> <span class="fu">not</span> <span class="fu">photo</span><span class="op">.</span><span class="fu">liked</span> }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">updateFeed</span> : (<span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span>) <span class="op">-&gt;</span> <span class="dt">Id</span> <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Feed</span> <span class="op">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">Feed</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">updateFeed</span> <span class="fu">fn</span> <span class="fu">id</span> <span class="fu">maybeFeed</span> <span class="op">=</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Maybe</span><span class="op">.</span><span class="fu">map</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    (<span class="fu">updatePhotoByID</span> <span class="fu">fn</span> <span class="fu">id</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">maybeFeed</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">updatePhotoByID</span> : (<span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Photo</span>) <span class="op">-&gt;</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Feed</span> <span class="op">-&gt;</span> <span class="dt">Feed</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">updatePhotoByID</span> <span class="fu">fn</span> <span class="fu">id</span> <span class="fu">feed</span> <span class="op">=</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">List</span><span class="op">.</span><span class="fu">map</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (\<span class="fu">photo</span> <span class="op">-&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="fu">photo</span><span class="op">.</span><span class="fu">id</span> <span class="op">==</span> <span class="fu">id</span> <span class="cf">then</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">fn</span> <span class="fu">photo</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="fu">photo</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="fu">feed</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Photo</span> <span class="op">=</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">id</span> : <span class="dt">Int</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="fu">url</span> : <span class="dt">String</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="fu">liked</span> : <span class="dt">Bool</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Feed</span> <span class="op">=</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">List</span> <span class="dt">Photo</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Id</span> <span class="op">=</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Int</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Status</span> <span class="fu">a</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Loading</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Loaded</span> <span class="fu">a</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span> <span class="op">=</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">feed</span> : <span class="dt">Status</span> (<span class="dt">List</span> <span class="dt">Photo</span>) }</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">-- Messages --------------------</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Model</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Liked</span> <span class="fu">id</span> <span class="op">-&gt;</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      { <span class="fu">model</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> <span class="fu">feed</span> <span class="op">=</span> <span class="fu">updateFeed</span> <span class="fu">toggleLiked</span> <span class="fu">id</span> <span class="fu">model</span><span class="op">.</span><span class="fu">feed</span> }</span></code></pre></div>
-<pre class="terminal"><code>&gt;&gt; update (Liked 1) init
-{ feed = Just [{ id = 1, liked = True, url = &quot;1.jpg&quot; }] }
-&gt;&gt; update (Liked 1) { feed = Nothing }
-{ feed = Nothing }</code></pre>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span> <span class="op">=</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Lifted</span> <span class="dt">Photo</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">-- Setup -----------------------</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">pic</span> : <span class="dt">Photo</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">pic</span> <span class="op">=</span> <span class="dt">Photo</span> <span class="dv">1</span> <span class="st">&quot;1.jpg&quot;</span> <span class="dt">False</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> : <span class="dt">Model</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span> <span class="op">=</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">feed</span> <span class="op">=</span> <span class="dt">Loaded</span> [ <span class="fu">pic</span> ] }</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co">-- View ------------------------</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">feed</span> <span class="cf">of</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loading</span> <span class="op">-&gt;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Html</span><span class="op">.</span><span class="fu">text</span> <span class="st">&quot;Do nothing&quot;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loaded</span> <span class="fu">photos</span> <span class="op">-&gt;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Html</span><span class="op">.</span><span class="fu">div</span> []</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        (<span class="dt">List</span><span class="op">.</span><span class="fu">map</span> <span class="fu">viewPhoto</span> <span class="fu">photos</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co">-- View code -------------------</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -113,7 +127,7 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-<p>Our <code>Maybe Feed</code> is pulled in from an external API</p>
+<p>Null</p>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -125,66 +139,35 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Status</span> <span class="fu">a</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Loading</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Loaded</span> <span class="fu">a</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">{- Similar to `Maybe.map` -}</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">statusMap</span> : (<span class="fu">a</span> <span class="op">-&gt;</span> <span class="fu">a</span>) <span class="op">-&gt;</span> <span class="dt">Status</span> <span class="fu">a</span> <span class="op">-&gt;</span> <span class="dt">Status</span> <span class="fu">a</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">statusMap</span> <span class="fu">fn</span> <span class="fu">status</span> <span class="op">=</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">status</span> <span class="cf">of</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loaded</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Loaded</span> (<span class="fu">fn</span> <span class="fu">a</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loading</span> <span class="op">-&gt;</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">Loading</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">{- Use unwrapped value for `Msg` -}</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span><span class="op">.</span><span class="fu">feed</span> <span class="cf">of</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loading</span> <span class="op">-&gt;</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">text</span> <span class="st">&quot;Do nothing&quot;</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Loaded</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">a</span> [ <span class="fu">onClick</span> (<span class="dt">Lifted</span> <span class="fu">a</span>)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="dt">Attr</span><span class="op">.</span><span class="fu">href</span> <span class="st">&quot;/path&quot;</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        [ <span class="st">&quot;🎤 We could be lifted&quot;</span> ]</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">{- Within the `Msg` branch, we can</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">use the value, then re-wrap it! -}</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> (<span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">model</span> <span class="cf">of</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Lifted</span> <span class="fu">a</span> <span class="op">-&gt;</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      { <span class="fu">model</span> <span class="op">|</span> <span class="fu">feed</span> <span class="op">=</span> <span class="dt">Loaded</span> <span class="fu">a</span> }</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">viewPhoto</span> : <span class="dt">Photo</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="dt">Msg</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">viewPhoto</span> <span class="fu">photo</span> <span class="op">=</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Html</span><span class="op">.</span><span class="fu">a</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  [ <span class="dt">Events</span><span class="op">.</span><span class="fu">onClick</span> (<span class="dt">Lifted</span> <span class="fu">photo</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="dt">Attr</span><span class="op">.</span><span class="fu">href</span> <span class="st">&quot;#&quot;</span> <span class="co">-- photo.url</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  [ <span class="dt">Html</span><span class="op">.</span><span class="fu">text</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ((<span class="op">++</span>) <span class="st">&quot;🎤 We could be lifted: &quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;|</span> <span class="cf">if</span> <span class="fu">photo</span><span class="op">.</span><span class="fu">liked</span> <span class="cf">then</span> <span class="st">&quot;True&quot;</span> <span class="cf">else</span> <span class="st">&quot;False&quot;</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong><code>Maybe Feed</code> doesn’t describe our situation
-well!</strong> With <code>Status a</code> we can tell that (a) it’s an
-API, and (b) has it been loaded yet?</p>
+<p>We can lift our <code>Loaded value</code> ONCE and ONCE only!</p>
 </blockquote>
-<p>It’s better to use the <code>Maybe</code> type for <em>optional</em>
-record values (e.g: we’ve got a missing <code>photo.url</code>).
-Remember to never use a <code>Loaded (Maybe List Photo)</code> structure
-as <code>[]</code> can be used instead of <code>Nothing</code>.</p>
-<p>The <code>Maybe.map</code> function is very handy when it’s
-needed.</p>
+<p>There’s no need to unwrap a <code>CustomType</code> or
+<code>Maybe</code> more than once in the view. Our <code>onClick</code>
+and <code>Html.Events</code> can <em>all</em> use the naked value.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><code>statusLift : Status a -&gt; a</code> (a lifting function) won’t
-work here, because we need to return the same type for each branch (we
-can’t return <code>a</code> for the <code>Loading</code> branch!). A
-<code>Result Error a</code> could potentially work in that scenario.</p>
+<p>Our <code>Msg</code> type could’ve also been a simpler
+<code>Lifted Int</code> for the <code>photo.id</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Why is the `Maybe Feed` here bad practice? How could it be improved?
+# How are we lifting the `Status value` here?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Maybe
+## Types
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`type alias Feed = List Photo`
+`Loaded (List photo)`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,47 +73,60 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-photo : Photo
-photo = Photo 1 "1.jpg" False
+import Browser
+import Html exposing (Html)
+import Html.Attributes as Attr
+import Html.Events as Events
+import Html exposing (a)
+
+
+type alias Photo =
+  { id : Int
+  , url : String
+  , liked : Bool
+  }
+
+type alias Feed =
+  List Photo
+
+type alias Id =
+  Int
+
+type Status a
+  = Loading
+  | Loaded a
+
+type alias Model =
+  { feed : Status (List Photo) }
+
+
+-- Messages --------------------
+
+type Msg =
+    Lifted Photo
+
+
+-- Setup -----------------------
+pic : Photo
+pic = Photo 1 "1.jpg" False
 
 init : Model
 init =
-  { feed = Just [ photo ] }
+  { feed = Loaded [ pic ] }
 
-toggleLiked : Photo -> Photo
-toggleLiked photo =
-  { photo
-    | liked = not photo.liked }
+-- View ------------------------
 
-updateFeed : (Photo -> Photo) -> Id -> Maybe Feed -> Maybe Feed
-updateFeed fn id maybeFeed =
-  Maybe.map
-    (updatePhotoByID fn id)
-    maybeFeed
+view : Model -> Html Msg
+view model =
+  case model.feed of
+    Loading ->
+      Html.text "Do nothing"
 
-updatePhotoByID : (Photo -> Photo) -> Int -> Feed -> Feed
-updatePhotoByID fn id feed =
-  List.map
-    (\photo ->
-      if photo.id == id then
-        fn photo
-      else
-        photo
-      )
-      feed
+    Loaded photos ->
+      Html.div []
+        (List.map viewPhoto photos)
 
-update : Msg -> Model -> Model
-update msg model =
-  case msg of
-    Liked id ->
-      { model
-        | feed = updateFeed toggleLiked id model.feed }
-```
-```terminal
->> update (Liked 1) init
-{ feed = Just [{ id = 1, liked = True, url = "1.jpg" }] }
->> update (Liked 1) { feed = Nothing }
-{ feed = Nothing }
+-- View code -------------------
 ```
 
 
@@ -125,7 +138,7 @@ update msg model =
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-Our `Maybe Feed` is pulled in from an external API
+Null
 
 
 <!-- Back of card ======================================================== -->
@@ -142,40 +155,16 @@ Our `Maybe Feed` is pulled in from an external API
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-type Status a
-  = Loading
-  | Loaded a
-
-{- Similar to `Maybe.map` -}
-statusMap : (a -> a) -> Status a -> Status a
-statusMap fn status =
-  case status of
-    Loaded a ->
-      Loaded (fn a)
-
-    Loading ->
-      Loading
-
-{- Use unwrapped value for `Msg` -}
-view : Model -> Html Msg
-view model =
-  case model.feed of
-    Loading ->
-      text "Do nothing"
-
-    Loaded a ->
-      a [ onClick (Lifted a)
-        , Attr.href "/path"
-        ]
-        [ "🎤 We could be lifted" ]
-
-{- Within the `Msg` branch, we can
-use the value, then re-wrap it! -}
-update : Msg -> Model -> (Model, Cmd Msg)
-update msg model =
-  case model of
-    Lifted a ->
-      { model | feed = Loaded a }
+viewPhoto : Photo -> Html Msg
+viewPhoto photo =
+  Html.a
+  [ Events.onClick (Lifted photo)
+  , Attr.href "#" -- photo.url
+  ]
+  [ Html.text
+    ((++) "🎤 We could be lifted: "
+    <| if photo.liked then "True" else "False")
+  ]
 ```
 
 
@@ -184,14 +173,10 @@ update msg model =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **`Maybe Feed` doesn't describe our situation well!** With `Status a` we can tell
-> that (a) it's an API, and (b) has it been loaded yet?
+> We can lift our `Loaded value` ONCE and ONCE only!
 
-It's better to use the `Maybe` type for _optional_ record values (e.g: we've got a
-missing `photo.url`). Remember to never use a `Loaded (Maybe List Photo)` structure as
-`[]` can be used instead of `Nothing`.
-
-The `Maybe.map` function is very handy when it's needed.
+There's no need to unwrap a `CustomType` or `Maybe` more than once in the view.
+Our `onClick` and `Html.Events` can _all_ use the naked value.
 
 
 <!-- -------------------------------------------------------------------------
@@ -199,9 +184,7 @@ The `Maybe.map` function is very handy when it's needed.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-`statusLift : Status a -> a` (a lifting function) won't work here, because we
-need to return the same type for each branch (we can't return `a` for the
-`Loading` branch!). A `Result Error a` could potentially work in that scenario.
+Our `Msg` type could've also been a simpler `Lifted Int` for the `photo.id`.
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
