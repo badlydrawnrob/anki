@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What function can we use here to step and debug our output?
+# We’ve changed from `Browser.sandbox` to `Browser.element`. What’s changed?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## 🐛🐞🪰 Bugs
+## Commands
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`...`
+`Cmd`
 
 
 <!-- -------------------------------------------------------------------------
@@ -99,14 +99,41 @@ false
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```elm
-list = [1,2,3,4,5,6]
+import Browser
+import Html exposing (Html, button, div, text, img)
+import Html.Attributes exposing (..)
+import Html.Events exposing (onClick)
+import Random
+import Array exposing (Array)
 
-debug =
-  list
-    |> List.map ((*) 2)
-    |> Debug.log "doubled"
-    |> List.filter (\n -> n > 6)
-    |> Debug.log "filtered"
+{- ... -}
+
+type Msg
+    = ClickedButton
+    | GotSelectedIndex Int
+
+randomPhoto : Random.Generator Int
+randomPhoto =
+  Random.int 0 (Array.length arrayOfPhotos - 1)  -- Returns a random index
+
+update : Msg -> Model -> {{c1::(Model, Cmd Msg)::What goes here}}
+update msg model =
+  case msg of
+    ClickedButton ->  -- Generates a `Cmd` and returns a `Msg`
+      ( model, Random.generate GotSelectedIndex randomPhoto ) -- Gets random Photo
+
+    GotSelectedIndex index ->  -- Updates the model from a `Msg`
+      ( { model | selectedUrl = (getPhoto index) }, Cmd.none ) -- Returns a Photo
+
+
+main : Program () Model Msg
+main =
+  Browser.element
+    { init = \flags -> {{c1::( initialModel, Cmd.none )::What goes here?}}
+    , view = view
+    , update = update
+    , subscriptions = \model -> Sub.none
+  }
 ```
 
 
@@ -115,7 +142,12 @@ debug =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-We can use `Debug.log` to output to our console to help test code.
+> We need a `Model` and a `Cmd` (command) to have an effect the world
+> outside Elm.
+
+1.  `Browser.sandbox` lets us “stay within the world of Elm”
+2.  `Browser.element` allows us to use functions with side-effects, like
+    `Random`.
 
 
 <!-- -------------------------------------------------------------------------
@@ -123,7 +155,7 @@ We can use `Debug.log` to output to our console to help test code.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-false
+`Browser.element` allows us to interact with the outside world by using commands.
 
 
 <!-- -------------------------------------------------------------------------
