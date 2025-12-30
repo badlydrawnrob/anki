@@ -45,13 +45,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How can we replicate this with curried style in Elm Lang?</h1>
+<h1>How can we avoid nested update functions and messages?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>The padding function</h2>
+<h2>Nested records</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>pad</code></p>
+<p><code>...</code></p>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -74,35 +74,32 @@
 
     ⤷ `image`
 
-      | Technically you can put a `code block` here: I'd advise against it,
-      | or at least use in this way sparingly! There's no guarantee for
-      | long-term support for `code block`s here (consider using the `Key Point`
-      | field instead).
+      | Fuse the learning point with some imagery can help lock in learning.
+      | It's better to stick to images, an animated GIF, or video for the Draw!
+      | card's front, instead of a block of code. You could even add a code sample
+      | as a snapshot if you're feeling particularly lazy (although you may as
+      | well just use a Simple! card as it's easy).
 
       An image that asks the question _"what does this code do?"_, or _"what
       does this picture represent?"_, or _"what routes could we use to fix
       this problem?"_, or _"how do we solve this?"_.
 
       Use the 📎 paperclip button to add an image to Anki, or store it in the
-      cloud and use the `<img ...>` tag.
+      cloud and use the `<img ...>` tag. Be aware that duplicate file names could
+      cause you problems with Anki's filesystem.
+
+      Image should be roughly 390px wide (logical width) at a scale of @3x
+      for an iPhone 15. Try to keep file size under 100kb. Ratio should be 4:3
+      or 16:9 for full-width.
+          @ https://www.ios-resolution.com
+          @ https://tinyjpg.com (minimize)
+          @ https://developer.apple.com/design/human-interface-guidelines/images
 -------------------------------------------------------------------------- -->
 <figure>
-<img src="../../source/media/pad-function.png"
-alt="The image will need to be added to Anki first" />
-<figcaption aria-hidden="true">The image will need to be added to Anki
-first</figcaption>
+<img src="../../source/media/draw-nested-function.png"
+alt="An image of a nest" />
+<figcaption aria-hidden="true">An image of a nest</figcaption>
 </figure>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode racket"><code class="sourceCode racket"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">; #f pads left, #t pads right</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>pad bool <span class="kw">length</span> c str<span class="op">)</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span><span class="kw">cond</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">[(</span><span class="kw">and</span> <span class="op">(</span>false? bool<span class="op">)</span> <span class="op">(&gt;</span> <span class="kw">length</span> <span class="dv">0</span><span class="op">))</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="op">(</span><span class="kw">string-append</span> c</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>pad bool <span class="op">(-</span> <span class="kw">length</span> <span class="dv">1</span><span class="op">)</span> c str<span class="op">))]</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">[(</span><span class="kw">and</span> <span class="op">(</span><span class="kw">not</span> <span class="op">(</span>false? bool<span class="op">))</span> <span class="op">(&gt;</span> <span class="kw">length</span> <span class="dv">0</span><span class="op">))</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="op">(</span><span class="kw">string-append</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>pad bool <span class="op">(-</span> <span class="kw">length</span> <span class="dv">1</span><span class="op">)</span> c str<span class="op">)</span> c<span class="op">)]</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="kw">else</span> str<span class="op">]))</span></span></code></pre></div>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (image | code block)
@@ -118,46 +115,64 @@ class="sourceCode racket"><code class="sourceCode racket"><span id="cb1-1"><a hr
       The image will need to be added to Anki first, or you can store it
       in the cloud somewhere, and link to it like this.
 -------------------------------------------------------------------------- -->
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Imagine our `pad` function is built already</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">padRight</span> : <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">Char</span> <span class="op">-&gt;</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">padRight</span> <span class="op">=</span> <span class="fu">pad</span> <span class="dt">True</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">padFive</span> : <span class="dt">Char</span> <span class="op">-&gt;</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">padFive</span> <span class="op">=</span> <span class="fu">padRight</span> <span class="dv">5</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">padC</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">padC</span> <span class="op">=</span> <span class="fu">padFive</span> <span class="st">&quot;c&quot;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">padX</span> : <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">padX</span> <span class="op">=</span> <span class="fu">padFive</span> <span class="st">&quot;x&quot;</span></span></code></pre></div>
-<pre class="terminal"><code>&gt; padC &quot;hart&quot;
-&quot;ccccchart&quot; : String</code></pre>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Dressing</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Caesar</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">OliveOil</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">UpdateDressing</span> <span class="dt">Dressing</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span> <span class="op">=</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">user</span> : <span class="dt">User</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="fu">dressing</span> : <span class="dt">Dressing</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="fu">other</span> : <span class="dt">Other</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">-- An extensible record --------</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Dressing</span> <span class="fu">r</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> { <span class="fu">r</span> <span class="op">|</span> <span class="fu">dressing</span> : <span class="dt">Dressing</span> }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> : <span class="dt">Dressing</span> <span class="fu">r</span> <span class="op">-&gt;</span> <span class="dt">Dressing</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> <span class="fu">record</span> <span class="op">=</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">record</span><span class="op">.</span><span class="fu">dressing</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">-- Extract w/ type signature ---</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> :</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">r</span> <span class="op">|</span> <span class="fu">dressing</span> : <span class="dt">Dressing</span> }</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">-&gt;</span> <span class="dt">Dressing</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> <span class="fu">record</span> <span class="op">=</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">record</span><span class="op">.</span><span class="fu">dressing</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">-- Extract with selector -------</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Dressing</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">dressing</span> <span class="op">=</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">dressing</span> <span class="co">-- helper function</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>In Elm, we can <em>curry</em> a function: reusing a bigger function,
-using helper functions. This allows us to create multiple character
-padders with ease! Many languages don’t have this capability (like our
-example, Racket) and require more work to achieve the same thing. Take
-that <a
-href="https://en.wikipedia.org/wiki/Npm_left-pad_incident">javascript</a>!</p>
+<blockquote>
+<p>We can simplify our <code>Msg</code> and prefer a flatter model</p>
+</blockquote>
+<p>We can also <em>narrow the types</em> for our view functions, to make
+them easier to reason about. Without simplifying our model and messages,
+the code will become a lot harder to read.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Remember you <em>could</em> write a curried function using anonymous
-functions. It’s sometimes helpful to think of curried functions in this
-way: you stack up arguments with <code>\_</code> <a
-href="https://elm-lang.org/docs/syntax#functions">lambda style</a> and
-they combine to create a regular function with a few arguments.
-Arguments that’ll change the least should always come first!</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">add1</span> <span class="op">=</span> \<span class="fu">x</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">adder</span> <span class="op">=</span> \<span class="fu">x</span> <span class="op">-&gt;</span> \<span class="fu">y</span> <span class="op">-&gt;</span> <span class="fu">x</span> <span class="op">+</span> <span class="fu">y</span></span></code></pre></div>
+<p>Use <a
+href="https://discourse.elm-lang.org/t/extensible-records-seems-to-be-pruning-fields-and-failing-to-compile/8078/7">extensible
+records</a> with a flat model to <a
+href="https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/20">narrow
+your types</a> wherever possible, removing the need for nested records!
+Extensible records have downsides, so only use when necessary.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

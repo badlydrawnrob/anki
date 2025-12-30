@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How can we replicate this with curried style in Elm Lang?
+# How can we avoid nested update functions and messages?
 
 
 <!-- -------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## The padding function
+## Nested records
 
 
 <!-- -------------------------------------------------------------------------
@@ -65,7 +65,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`pad`
+`...`
 
 
 <!-- -------------------------------------------------------------------------
@@ -84,32 +84,30 @@ false
 
     ⤷ `image`
 
-      | Technically you can put a `code block` here: I'd advise against it,
-      | or at least use in this way sparingly! There's no guarantee for
-      | long-term support for `code block`s here (consider using the `Key Point`
-      | field instead).
+      | Fuse the learning point with some imagery can help lock in learning.
+      | It's better to stick to images, an animated GIF, or video for the Draw!
+      | card's front, instead of a block of code. You could even add a code sample
+      | as a snapshot if you're feeling particularly lazy (although you may as
+      | well just use a Simple! card as it's easy).
 
       An image that asks the question _"what does this code do?"_, or _"what
       does this picture represent?"_, or _"what routes could we use to fix
       this problem?"_, or _"how do we solve this?"_.
 
       Use the 📎 paperclip button to add an image to Anki, or store it in the
-      cloud and use the `<img ...>` tag.
--------------------------------------------------------------------------- -->
-![The image will need to be added to Anki first](../../source/media/pad-function.png)
+      cloud and use the `<img ...>` tag. Be aware that duplicate file names could
+      cause you problems with Anki's filesystem.
 
-```racket
-; #f pads left, #t pads right
-(define (pad bool length c str)
-  (cond
-    [(and (false? bool) (> length 0))
-     (string-append c
-      (pad bool (- length 1) c str))]
-    [(and (not (false? bool)) (> length 0))
-     (string-append
-      (pad bool (- length 1) c str) c)]
-    [else str]))
-```
+      Image should be roughly 390px wide (logical width) at a scale of @3x
+      for an iPhone 15. Try to keep file size under 100kb. Ratio should be 4:3
+      or 16:9 for full-width.
+          @ https://www.ios-resolution.com
+          @ https://tinyjpg.com (minimize)
+          @ https://developer.apple.com/design/human-interface-guidelines/images
+-------------------------------------------------------------------------- -->
+![An image of a nest](../../source/media/draw-nested-function.png)
+
+
 
 
 <!-- Back of card ======================================================== -->
@@ -130,22 +128,41 @@ false
       in the cloud somewhere, and link to it like this.
 -------------------------------------------------------------------------- -->
 ```elm
--- Imagine our `pad` function is built already
-padRight : Int -> Char -> String -> String
-padRight = pad True
+type Dressing
+  = Caesar
+  | OliveOil
 
-padFive : Char -> String -> String
-padFive = padRight 5
+type Msg
+  = UpdateDressing Dressing
 
-padC : String -> String
-padC = padFive "c"
+type alias Model =
+  { user : User
+  , dressing : Dressing
+  , other : Other
+  }
 
-padX : String -> String
-padX = padFive "x"
-```
-```terminal
-> padC "hart"
-"ccccchart" : String
+-- An extensible record --------
+
+type alias Dressing r
+  = { r | dressing : Dressing }
+
+dressing : Dressing r -> Dressing
+dressing record =
+  record.dressing
+
+-- Extract w/ type signature ---
+
+dressing :
+  { r | dressing : Dressing }
+  -> Dressing
+dressing record =
+  record.dressing
+
+-- Extract with selector -------
+
+dressing : Model -> Dressing
+dressing =
+  .dressing -- helper function
 ```
 
 
@@ -154,7 +171,11 @@ padX = padFive "x"
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-In Elm, we can _curry_ a function: reusing a bigger function, using helper functions. This allows us to create multiple character padders with ease! Many languages don't have this capability (like our example, Racket) and require more work to achieve the same thing. Take that [javascript](https://en.wikipedia.org/wiki/Npm_left-pad_incident)!
+> We can simplify our `Msg` and prefer a flatter model
+
+We can also _narrow the types_ for our view functions, to make them easier to
+reason about. Without simplifying our model and messages, the code will become
+a lot harder to read.
 
 
 <!-- -------------------------------------------------------------------------
@@ -162,12 +183,8 @@ In Elm, we can _curry_ a function: reusing a bigger function, using helper funct
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Remember you _could_ write a curried function using anonymous functions. It's sometimes helpful to think of curried functions in this way: you stack up arguments with `\_` [lambda style](https://elm-lang.org/docs/syntax#functions) and they combine to create a regular function with a few arguments. Arguments that'll change the least should always come first!
-
-```elm
-add1 = \x -> x + 1
-adder = \x -> \y -> x + y
-```
+Use [extensible records](https://discourse.elm-lang.org/t/extensible-records-seems-to-be-pruning-fields-and-failing-to-compile/8078/7) with a flat model to [narrow your types](https://discourse.elm-lang.org/t/domain-driven-type-narrowing/7753/20) wherever possible, removing the need for nested records! Extensible records have
+downsides, so only use when necessary.
 
 
 <!-- -------------------------------------------------------------------------
