@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How are we lifting the `Status value` here?
+# What is a type variable?
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Loaded (List photo)`
+`List any`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,60 +73,7 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-import Browser
-import Html exposing (Html)
-import Html.Attributes as Attr
-import Html.Events as Events
-import Html exposing (a)
-
-
-type alias Photo =
-  { id : Int
-  , url : String
-  , liked : Bool
-  }
-
-type alias Feed =
-  List Photo
-
-type alias Id =
-  Int
-
-type Status a
-  = Loading
-  | Loaded a
-
-type alias Model =
-  { feed : Status (List Photo) }
-
-
--- Messages --------------------
-
-type Msg =
-    Lifted Photo
-
-
--- Setup -----------------------
-pic : Photo
-pic = Photo 1 "1.jpg" False
-
-init : Model
-init =
-  { feed = Loaded [ pic ] }
-
--- View ------------------------
-
-view : Model -> Html Msg
-view model =
-  case model.feed of
-    Loading ->
-      Html.text "Do nothing"
-
-    Loaded photos ->
-      Html.div []
-        (List.map viewPhoto photos)
-
--- View code -------------------
+...
 ```
 
 
@@ -157,16 +104,35 @@ Null
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
-viewPhoto : Photo -> Html Msg
-viewPhoto photo =
-  Html.a
-  [ Events.onClick (Lifted photo)
-  , Attr.href "#" -- photo.url
-  ]
-  [ Html.text
-    ((++) "🎤 We could be lifted: "
-    <| if photo.liked then "True" else "False")
-  ]
+-- Type variables --------------
+
+type Unbound any =
+  Container any
+
+convert : List any -> String
+
+reverse : List any -> List any
+
+view : Model -> Html msg
+
+-- Types -----------------------
+
+record : { a = Unbound Int }
+record = { a = Container 20 }
+
+convert : List String -> String
+convert lst =
+  [] -> "empty"
+  [a] -> "singleton"
+  a::b -> "many"
+
+reverse : List Int -> List Int
+reverse =
+  List.reverse
+
+view : Model -> Html msg
+view =
+  Html.text [] ["no events"]
 ```
 
 
@@ -175,10 +141,14 @@ viewPhoto photo =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> We can lift our `Loaded value` ONCE and ONCE only!
+> **A type variable accepts `any` type value.** Containers with type variables
+> vary depending on the type we choose. Once we decide what `any` is, that’s what
+> it is everywhere!
 
-There's no need to unwrap a `CustomType` or `Maybe` more than once in the view.
-Our `onClick` and `Html.Events` can _all_ use the naked value.
+For example, we couldn't return a list of `String`s with `reverse`, because it
+expects the same return type as it's input. A `msg` means we have no event data
+firing (we aren't using any messages), whereas `Msg` means we have events. Other
+times a container doesn't need to care about the values it's storing (`Status a`).
 
 
 <!-- -------------------------------------------------------------------------
@@ -186,7 +156,8 @@ Our `onClick` and `Html.Events` can _all_ use the naked value.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Our `Msg` type could've also been a simpler `Lifted Int` for the `photo.id`.
+Our type variables could be named anything, so long as they're `lowercase`,
+but **it's probably wise to [use them rarely](https://discourse.elm-lang.org/t/the-use-and-over-use-of-type-variables/2044/4)** and prefer a definite type.
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
