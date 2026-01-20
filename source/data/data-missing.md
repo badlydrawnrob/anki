@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# We’ve changed from `Browser.sandbox` to `Browser.element`. What’s changed?
+# How do we check a list is empty with Python?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Commands
+## Lists
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Cmd`
+`[]`
 
 
 <!-- -------------------------------------------------------------------------
@@ -98,42 +98,11 @@ false
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```elm
-import Browser
-import Html exposing (Html, button, div, text, img)
-import Html.Attributes exposing (..)
-import Html.Events exposing (onClick)
-import Random
-import Array exposing (Array)
+```python
+list = []
 
-{- ... -}
-
-type Msg
-    = ClickedButton
-    | GotSelectedIndex Int
-
-randomPhoto : Random.Generator Int
-randomPhoto =
-  Random.int 0 (Array.length arrayOfPhotos - 1)  -- Returns a random index
-
-update : Msg -> Model -> {{c1::(Model, Cmd Msg)::What goes here}}
-update msg model =
-  case msg of
-    ClickedButton ->  -- Generates a `Cmd` and returns a `Msg`
-      ( model, Random.generate GotSelectedIndex randomPhoto ) -- Gets random Photo
-
-    GotSelectedIndex index ->  -- Updates the model from a `Msg`
-      ( { model | selectedUrl = (getPhoto index) }, Cmd.none ) -- Returns a Photo
-
-
-main : Program () Model Msg
-main =
-  Browser.element
-    { init = \flags -> {{c1::( initialModel, Cmd.none )::What goes here?}}
-    , view = view
-    , update = update
-    , subscriptions = \model -> Sub.none
-  }
+if not list:
+  print("empty")
 ```
 
 
@@ -142,12 +111,10 @@ main =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> We need a `Model` and a `Cmd` (command) to have an effect the world
-> outside Elm.
+> Lists are "truthy" so we can return a boolean if a list is empty (or not)
 
-1.  `Browser.sandbox` lets us “stay within the world of Elm”
-2.  `Browser.element` allows us to use functions with side-effects, like
-    `Random`.
+You can also use `(single,)` which returns a `ValueError` if not `["singleton"]`,
+or use `if len(list) == 1` to check the length of the list.
 
 
 <!-- -------------------------------------------------------------------------
@@ -155,7 +122,7 @@ main =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-`Browser.element` allows us to interact with the outside world by using commands.
+Remember that lists can be empty, a singleton, or many.
 
 
 <!-- -------------------------------------------------------------------------

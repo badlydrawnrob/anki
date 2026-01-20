@@ -37,14 +37,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>We’ve changed from <code>Browser.sandbox</code> to
-<code>Browser.element</code>. What’s changed?</h1>
+<h1>How do we check a list is empty with Python?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Commands</h2>
+<h2>Lists</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -52,7 +51,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>Cmd</code></p>
+<p><code>[]</code></p>
 <!-- -------------------------------------------------------------------------
     ☆ Key point (caption or hint)
 
@@ -90,63 +89,28 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Browser</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span> <span class="kw">exposing</span> (<span class="dt">Html</span><span class="op">,</span> <span class="fu">button</span><span class="op">,</span> <span class="fu">div</span><span class="op">,</span> <span class="fu">text</span><span class="op">,</span> <span class="fu">img</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Attributes</span> <span class="kw">exposing</span> (<span class="op">..</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Html</span><span class="op">.</span><span class="dt">Events</span> <span class="kw">exposing</span> (<span class="fu">onClick</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Random</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="dt">Array</span> <span class="kw">exposing</span> (<span class="dt">Array</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">{- ... -}</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Msg</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">=</span> <span class="dt">ClickedButton</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="dt">GotSelectedIndex</span> <span class="dt">Int</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">randomPhoto</span> : <span class="dt">Random</span><span class="op">.</span><span class="dt">Generator</span> <span class="dt">Int</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">randomPhoto</span> <span class="op">=</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Random</span><span class="op">.</span><span class="fu">int</span> <span class="dv">0</span> (<span class="dt">Array</span><span class="op">.</span><span class="fu">length</span> <span class="fu">arrayOfPhotos</span> <span class="op">-</span> <span class="dv">1</span>)  <span class="co">-- Returns a random index</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> : <span class="dt">Msg</span> <span class="op">-&gt;</span> <span class="dt">Model</span> <span class="op">-&gt;</span> {{<span class="fu">c1</span><span class="op">::</span>(<span class="dt">Model</span><span class="op">,</span> <span class="dt">Cmd</span> <span class="dt">Msg</span>)<span class="op">::</span><span class="dt">What</span> <span class="fu">goes</span> <span class="fu">here</span>}}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">update</span> <span class="fu">msg</span> <span class="fu">model</span> <span class="op">=</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="fu">msg</span> <span class="cf">of</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ClickedButton</span> <span class="op">-&gt;</span>  <span class="co">-- Generates a `Cmd` and returns a `Msg`</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      ( <span class="fu">model</span><span class="op">,</span> <span class="dt">Random</span><span class="op">.</span><span class="fu">generate</span> <span class="dt">GotSelectedIndex</span> <span class="fu">randomPhoto</span> ) <span class="co">-- Gets random Photo</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">GotSelectedIndex</span> <span class="fu">index</span> <span class="op">-&gt;</span>  <span class="co">-- Updates the model from a `Msg`</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      ( { <span class="fu">model</span> <span class="op">|</span> <span class="fu">selectedUrl</span> <span class="op">=</span> (<span class="fu">getPhoto</span> <span class="fu">index</span>) }<span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span> ) <span class="co">-- Returns a Photo</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span> : <span class="dt">Program</span> () <span class="dt">Model</span> <span class="dt">Msg</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">main</span> <span class="op">=</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Browser</span><span class="op">.</span><span class="fu">element</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    { <span class="fu">init</span> <span class="op">=</span> \<span class="fu">flags</span> <span class="op">-&gt;</span> {{<span class="fu">c1</span><span class="op">::</span>( <span class="fu">initialModel</span><span class="op">,</span> <span class="dt">Cmd</span><span class="op">.</span><span class="fu">none</span> )<span class="op">::</span><span class="dt">What</span> <span class="fu">goes</span> <span class="fu">here</span><span class="op">?</span>}}</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">view</span> <span class="op">=</span> <span class="fu">view</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">update</span> <span class="op">=</span> <span class="fu">update</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">subscriptions</span> <span class="op">=</span> \<span class="fu">model</span> <span class="op">-&gt;</span> <span class="dt">Sub</span><span class="op">.</span><span class="fu">none</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span> <span class="op">=</span> []</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> <span class="bu">list</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;empty&quot;</span>)</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p>We need a <code>Model</code> and a <code>Cmd</code> (command) to have
-an effect the world outside Elm.</p>
+<p>Lists are “truthy” so we can return a boolean if a list is empty (or
+not)</p>
 </blockquote>
-<ol type="1">
-<li><code>Browser.sandbox</code> lets us “stay within the world of
-Elm”</li>
-<li><code>Browser.element</code> allows us to use functions with
-side-effects, like <code>Random</code>.</li>
-</ol>
+<p>You can also use <code>(single,)</code> which returns a
+<code>ValueError</code> if not <code>["singleton"]</code>, or use
+<code>if len(list) == 1</code> to check the length of the list.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p><code>Browser.element</code> allows us to interact with the outside
-world by using commands.</p>
+<p>Remember that lists can be empty, a singleton, or many.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 
