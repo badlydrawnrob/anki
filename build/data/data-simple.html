@@ -39,13 +39,13 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What is a type variable?</h1>
+<h1>What happens?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Types</h2>
+<h2>Set</h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -53,7 +53,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>List any</code></p>
+<p><code>Set.fromList</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -65,7 +65,13 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Base</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Onion</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Pepper</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Mushroom</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">Set</span><span class="op">.</span><span class="fu">fromList</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  [<span class="dt">Onion</span><span class="op">,</span> <span class="dt">Pepper</span><span class="op">,</span> <span class="dt">Mushroom</span>]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -87,61 +93,44 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Type variables --------------</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Unbound</span> <span class="fu">any</span> <span class="op">=</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Container</span> <span class="fu">any</span></span>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Class</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> { <span class="fu">class</span> : <span class="dt">String</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">students</span> : <span class="dt">List</span> <span class="dt">Student</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">convert</span> : <span class="dt">List</span> <span class="fu">any</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">reverse</span> : <span class="dt">List</span> <span class="fu">any</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="fu">any</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="fu">msg</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">-- Types -----------------------</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">record</span> : { <span class="fu">a</span> <span class="op">=</span> <span class="dt">Unbound</span> <span class="dt">Int</span> }</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">record</span> <span class="op">=</span> { <span class="fu">a</span> <span class="op">=</span> <span class="dt">Container</span> <span class="dv">20</span> }</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">convert</span> : <span class="dt">List</span> <span class="dt">String</span> <span class="op">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">convert</span> <span class="fu">lst</span> <span class="op">=</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  [] <span class="op">-&gt;</span> <span class="st">&quot;empty&quot;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  [<span class="fu">a</span>] <span class="op">-&gt;</span> <span class="st">&quot;singleton&quot;</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">a</span><span class="op">::</span><span class="fu">b</span> <span class="op">-&gt;</span> <span class="st">&quot;many&quot;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">reverse</span> : <span class="dt">List</span> <span class="dt">Int</span> <span class="op">-&gt;</span> <span class="dt">List</span> <span class="dt">Int</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">reverse</span> <span class="op">=</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="dt">List</span><span class="op">.</span><span class="fu">reverse</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> : <span class="dt">Model</span> <span class="op">-&gt;</span> <span class="dt">Html</span> <span class="fu">msg</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span> <span class="op">=</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Html</span><span class="op">.</span><span class="fu">text</span> [] [<span class="st">&quot;no events&quot;</span>]</span></code></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">trips</span> <span class="op">=</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  [ { <span class="fu">trip</span> <span class="op">=</span> <span class="st">&quot;The Coast&quot;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">students</span> <span class="op">=</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      [ { <span class="fu">student</span> <span class="op">=</span> <span class="st">&quot;R. Feldman&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">going</span> <span class="op">=</span> <span class="dt">True</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      ]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    { <span class="fu">trip</span> <span class="op">=</span> <span class="st">&quot;Hadrian&#39;s Wall&quot;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="op">,</span> <span class="fu">students</span> <span class="op">=</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      [ { <span class="fu">student</span> <span class="op">=</span> <span class="st">&quot;R. Feldman&quot;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">going</span> <span class="op">=</span> <span class="dt">True</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      ]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  ]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong>A type variable accepts <code>any</code> type value.</strong>
-Containers with type variables vary depending on the type we choose.
-Once we decide what <code>any</code> is, that’s what it is
-everywhere!</p>
+<p><strong>You can only use comparables!</strong> Types such as ints,
+floats, chars, strings, and lists/tuples of comparable values.</p>
 </blockquote>
-<p>For example, we couldn’t return a list of <code>String</code>s with
-<code>reverse</code>, because it expects the same return type as it’s
-input. A <code>msg</code> means we have no event data firing (we aren’t
-using any messages), whereas <code>Msg</code> means we have events.
-Other times a container doesn’t need to care about the values it’s
-storing (<code>Status a</code>).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Our type variables could be named anything, so long as they’re
-<code>lowercase</code>, but <strong>it’s probably wise to <a
-href="https://discourse.elm-lang.org/t/the-use-and-over-use-of-type-variables/2044/4">use
-them rarely</a></strong> and prefer a definite type.</p>
+<p>Our <code>Base</code> is not comparable; first need to convert each
+base to a string, such as <code>"onion"</code> (although workarounds are
+available in non-standard packages).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
 

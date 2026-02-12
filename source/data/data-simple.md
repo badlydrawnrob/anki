@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What is a type variable?
+# What happens?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Types
+## Set
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`List any`
+`Set.fromList`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,7 +73,13 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-...
+type Base
+  = Onion
+  | Pepper
+  | Mushroom
+
+Set.fromList
+  [Onion, Pepper, Mushroom]
 ```
 
 
@@ -103,36 +109,27 @@ Null
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```elm
--- Type variables --------------
+```text
+-- TYPE MISMATCH ---------------------------------------------------------- REPL
 
-type Unbound any =
-  Container any
+The 1st argument to `fromList` is not what I expect:
 
-convert : List any -> String
+18|   Set.fromList [Onion, Pepper, Mushroom]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+This argument is a list of type:
 
-reverse : List any -> List any
+    List Base
 
-view : Model -> Html msg
+But `fromList` needs the 1st argument to be:
 
--- Types -----------------------
+    List comparable
 
-record : { a = Unbound Int }
-record = { a = Container 20 }
+Hint: I do not know how to compare `Base` values. I can only compare ints,
+floats, chars, strings, lists of comparable values, and tuples of comparable
+values.
 
-convert : List String -> String
-convert lst =
-  [] -> "empty"
-  [a] -> "singleton"
-  a::b -> "many"
-
-reverse : List Int -> List Int
-reverse =
-  List.reverse
-
-view : Model -> Html msg
-view =
-  Html.text [] ["no events"]
+Check out <https://elm-lang.org/0.19.1/comparing-custom-types> for ideas on how
+to proceed.
 ```
 
 
@@ -141,14 +138,8 @@ view =
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **A type variable accepts `any` type value.** Containers with type variables
-> vary depending on the type we choose. Once we decide what `any` is, that’s what
-> it is everywhere!
-
-For example, we couldn't return a list of `String`s with `reverse`, because it
-expects the same return type as it's input. A `msg` means we have no event data
-firing (we aren't using any messages), whereas `Msg` means we have events. Other
-times a container doesn't need to care about the values it's storing (`Status a`).
+> **You can only use comparables!** Types such as ints, floats, chars, strings,
+> and lists/tuples of comparable values.
 
 
 <!-- -------------------------------------------------------------------------
@@ -156,8 +147,8 @@ times a container doesn't need to care about the values it's storing (`Status a`
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Our type variables could be named anything, so long as they're `lowercase`,
-but **it's probably wise to [use them rarely](https://discourse.elm-lang.org/t/the-use-and-over-use-of-type-variables/2044/4)** and prefer a definite type.
+Our `Base` is not comparable; first need to convert each base to a string,
+such as `"onion"` (although workarounds are available in non-standard packages).
 
 <!-- -------------------------------------------------------------------------
     ✎ Markdown
