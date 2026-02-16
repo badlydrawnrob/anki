@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# What happens?
+# Does `update` always need to know about server state?
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Set.fromList`
+`Status a`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,13 +73,7 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-type Base
-  = Onion
-  | Pepper
-  | Mushroom
-
-Set.fromList
-  [Onion, Pepper, Mushroom]
+...
 ```
 
 
@@ -91,7 +85,7 @@ Set.fromList
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-Null
+This is a big question which will depend on your circumstances
 
 
 
@@ -109,27 +103,16 @@ Null
       A markdown fenced code block that will compile to our highlighted
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
-```text
--- TYPE MISMATCH ---------------------------------------------------------- REPL
+```elm
+-- Aware of server state
+type alias Model
+  { comments : Status (List String) }
 
-The 1st argument to `fromList` is not what I expect:
-
-18|   Set.fromList [Onion, Pepper, Mushroom]
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-This argument is a list of type:
-
-    List Base
-
-But `fromList` needs the 1st argument to be:
-
-    List comparable
-
-Hint: I do not know how to compare `Base` values. I can only compare ints,
-floats, chars, strings, lists of comparable values, and tuples of comparable
-values.
-
-Check out <https://elm-lang.org/0.19.1/comparing-custom-types> for ideas on how
-to proceed.
+-- Unaware of server state
+type alias Model
+  { fruits : Status (List String)
+  , selected : Set String -- or Id
+  }
 ```
 
 
@@ -138,8 +121,12 @@ to proceed.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **You can only use comparables!** Types such as ints, floats, chars, strings,
-> and lists/tuples of comparable values.
+> **It depends on your architecture and UI design!** amongst other things.
+
+- Does server data need updating? (Comments)
+- Does server data not hold state? (Fruits)
+
+Either way, you should rarely hold duplicate data in `Model`! To guarantee impossible states on the server, `Status a` and `Status.map` might be unavoidable, but always design your API to explore which data _must_ sync with the server, and which doesn't. You may even need _more_ than one `Status a` (e.g: article and comments endpoints).
 
 
 <!-- -------------------------------------------------------------------------
@@ -147,11 +134,11 @@ to proceed.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Our `Base` is not comparable; first need to convert each base to a string,
-such as `"onion"` (although workarounds are available in non-standard packages).
+Sometimes (as @lydell says) worrying about impossible states in update (we already know about in view), leads to complex code. The inverse is impossible states do sometimes happen in a state we didn't think about; a message triggers breaking our server code.
+
 
 <!-- -------------------------------------------------------------------------
-    ✎ Markdown
+    ✎ Markdown (DEPRECATED)
 
     ⤷ `raw text`
 

@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How do we check a list is empty with Python?
+# How would we grab each `"word"` with a list comprehension from `lst`?
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`[]`
+`lst = [{"word": "hello"}, ...]`
 
 
 <!-- -------------------------------------------------------------------------
@@ -99,10 +99,7 @@ false
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 ```python
-list = []
-
-if not list:
-  print("empty")
+[{"say": item.get("word", "...") } for item in lst]
 ```
 
 
@@ -111,10 +108,9 @@ if not list:
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> Lists are "truthy" so we can return a boolean if a list is empty (or not)
+> We can use a list comprehension to extract each `["word"]`
 
-You can also use `(single,)` which returns a `ValueError` if not `["singleton"]`,
-or use `if len(list) == 1` to check the length of the list.
+I'm not 100% sure if this is best practice, but it's safer than using `item["word"]` as we get a fallback value `"..."`.
 
 
 <!-- -------------------------------------------------------------------------
@@ -122,11 +118,11 @@ or use `if len(list) == 1` to check the length of the list.
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Remember that lists can be empty, a singleton, or many.
+Always check the pythonic way to do things! A regular loop uses `dictionary.items()` to deconstruct the `key, value`.
 
 
 <!-- -------------------------------------------------------------------------
-    ✎ Markdown
+    ✎ Markdown (DEPRECATED)
 
     ⤷ `raw text`
 

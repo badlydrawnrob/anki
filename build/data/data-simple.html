@@ -39,7 +39,8 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>What happens?</h1>
+<h1>Does <code>update</code> always need to know about server
+state?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
@@ -53,7 +54,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>Set.fromList</code></p>
+<p><code>Status a</code></p>
 <!-- -------------------------------------------------------------------------
     ★ Sample (code block)
 
@@ -65,13 +66,7 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="dt">Base</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> <span class="dt">Onion</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Pepper</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span> <span class="dt">Mushroom</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">Set</span><span class="op">.</span><span class="fu">fromList</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  [<span class="dt">Onion</span><span class="op">,</span> <span class="dt">Pepper</span><span class="op">,</span> <span class="dt">Mushroom</span>]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ☆ Sample (caption or hint)
 
@@ -80,7 +75,7 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-<p>Null</p>
+<p>This is a big question which will depend on your circumstances</p>
 <!-- Back of card ======================================================== -->
 <!-- -------------------------------------------------------------------------
     ★ Key point (code block)
@@ -93,46 +88,46 @@ class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#c
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Class</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">=</span> { <span class="fu">class</span> : <span class="dt">String</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">students</span> : <span class="dt">List</span> <span class="dt">Student</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">trips</span> <span class="op">=</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  [ { <span class="fu">trip</span> <span class="op">=</span> <span class="st">&quot;The Coast&quot;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">,</span> <span class="fu">students</span> <span class="op">=</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      [ { <span class="fu">student</span> <span class="op">=</span> <span class="st">&quot;R. Feldman&quot;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">going</span> <span class="op">=</span> <span class="dt">True</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      ]</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    { <span class="fu">trip</span> <span class="op">=</span> <span class="st">&quot;Hadrian&#39;s Wall&quot;</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="op">,</span> <span class="fu">students</span> <span class="op">=</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      [ { <span class="fu">student</span> <span class="op">=</span> <span class="st">&quot;R. Feldman&quot;</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">,</span> <span class="fu">going</span> <span class="op">=</span> <span class="dt">True</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      ]</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  ]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Aware of server state</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">comments</span> : <span class="dt">Status</span> (<span class="dt">List</span> <span class="dt">String</span>) }</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- Unaware of server state</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">type</span> <span class="kw">alias</span> <span class="dt">Model</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">fruits</span> : <span class="dt">Status</span> (<span class="dt">List</span> <span class="dt">String</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">,</span> <span class="fu">selected</span> : <span class="dt">Set</span> <span class="dt">String</span> <span class="co">-- or Id</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p><strong>You can only use comparables!</strong> Types such as ints,
-floats, chars, strings, and lists/tuples of comparable values.</p>
+<p><strong>It depends on your architecture and UI design!</strong>
+amongst other things.</p>
 </blockquote>
+<ul>
+<li>Does server data need updating? (Comments)</li>
+<li>Does server data not hold state? (Fruits)</li>
+</ul>
+<p>Either way, you should rarely hold duplicate data in
+<code>Model</code>! To guarantee impossible states on the server,
+<code>Status a</code> and <code>Status.map</code> might be unavoidable,
+but always design your API to explore which data <em>must</em> sync with
+the server, and which doesn’t. You may even need <em>more</em> than one
+<code>Status a</code> (e.g: article and comments endpoints).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Our <code>Base</code> is not comparable; first need to convert each
-base to a string, such as <code>"onion"</code> (although workarounds are
-available in non-standard packages).</p>
+<p>Sometimes (as <span class="citation"
+data-cites="lydell">@lydell</span> says) worrying about impossible
+states in update (we already know about in view), leads to complex code.
+The inverse is impossible states do sometimes happen in a state we
+didn’t think about; a message triggers breaking our server code.</p>
 <!-- -------------------------------------------------------------------------
-    ✎ Markdown
+    ✎ Markdown (DEPRECATED)
 
     ⤷ `raw text`
 

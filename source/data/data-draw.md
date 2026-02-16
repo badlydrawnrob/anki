@@ -188,7 +188,7 @@ downsides, so only use when necessary.
 
 
 <!-- -------------------------------------------------------------------------
-    ✎ Markdown
+    ✎ Markdown (DEPRECATED)
 
     ⤷ `raw text`
 

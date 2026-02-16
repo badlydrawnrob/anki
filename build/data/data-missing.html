@@ -37,7 +37,8 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How do we check a list is empty with Python?</h1>
+<h1>How would we grab each <code>"word"</code> with a list comprehension
+from <code>lst</code>?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
@@ -51,7 +52,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>[]</code></p>
+<p><code>lst = [{"word": "hello"}, ...]</code></p>
 <!-- -------------------------------------------------------------------------
     ☆ Key point (caption or hint)
 
@@ -89,30 +90,29 @@
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span> <span class="op">=</span> []</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> <span class="bu">list</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;empty&quot;</span>)</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[{<span class="st">&quot;say&quot;</span>: item.get(<span class="st">&quot;word&quot;</span>, <span class="st">&quot;...&quot;</span>) } <span class="cf">for</span> item <span class="kw">in</span> lst]</span></code></pre></div>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p>Lists are “truthy” so we can return a boolean if a list is empty (or
-not)</p>
+<p>We can use a list comprehension to extract each
+<code>["word"]</code></p>
 </blockquote>
-<p>You can also use <code>(single,)</code> which returns a
-<code>ValueError</code> if not <code>["singleton"]</code>, or use
-<code>if len(list) == 1</code> to check the length of the list.</p>
+<p>I’m not 100% sure if this is best practice, but it’s safer than using
+<code>item["word"]</code> as we get a fallback value
+<code>"..."</code>.</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Remember that lists can be empty, a singleton, or many.</p>
+<p>Always check the pythonic way to do things! A regular loop uses
+<code>dictionary.items()</code> to deconstruct the
+<code>key, value</code>.</p>
 <!-- -------------------------------------------------------------------------
-    ✎ Markdown
+    ✎ Markdown (DEPRECATED)
 
     ⤷ `raw text`
 
