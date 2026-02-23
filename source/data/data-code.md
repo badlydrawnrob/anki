@@ -9,34 +9,26 @@
 ========================================================================== -->
 
 ```elm
-type Dressing
-  = Caesar
-  | OliveOil
+-- View ------------------------
 
-type Msg
-  = UpdateDressing Dressing
+view model =
+  div [ id "thumbnails" ]
+    -- Loop through `List Photo`
+    (List.map
+      -- Apply with one argument
+      (viewThumbnail model.selectedUrl)
+      model.photos
+    )
 
-type alias Model =
-  { user : User
-  , dressing : Dressing
-  , other : Other
-  }
+-- Helper ----------------------
 
--- An extensible record --------
-
-type alias Dressing r
-  = { r | dressing : Dressing }
-
-dressing : Dressing r -> Dressing
-dressing record =
-  record.dressing
-
--- Extract w/ type signature ---
-
-dressing :
-  { r | dressing : Dressing }
-  -> Dressing
-dressing =
-  .dressing
+viewThumbnail selectedUrl photo
+  img [ src (urlPrefix ++ photo.url)
+      , classList
+        [ ("selected"
+          , selectedUrl == thumb.url
+          )
+        ]
+  ] []
 ```
 
