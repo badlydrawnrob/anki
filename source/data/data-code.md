@@ -9,26 +9,13 @@
 ========================================================================== -->
 
 ```elm
--- View ------------------------
-
-view model =
-  div [ id "thumbnails" ]
-    -- Loop through `List Photo`
-    (List.map
-      -- Apply with one argument
-      (viewThumbnail model.selectedUrl)
-      model.photos
+div [ id "thumbnails" ]
+  (List.map
+    (\photo ->
+      viewPhoto
+        model.selected photo
     )
-
--- Helper ----------------------
-
-viewThumbnail selectedUrl photo
-  img [ src (urlPrefix ++ photo.url)
-      , classList
-        [ ("selected"
-          , selectedUrl == thumb.url
-          )
-        ]
-  ] []
+    model.photos
+  )
 ```
 
