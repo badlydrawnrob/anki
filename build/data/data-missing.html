@@ -37,14 +37,14 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-<h1>How would we grab each <code>"word"</code> with a list comprehension
-from <code>lst</code>?</h1>
+<h1>Here’s a more complicated <code>Maybe.map</code> setup. What’s the
+result?</h1>
 <!-- -------------------------------------------------------------------------
     ☆ Subtitle
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-<h2>Lists</h2>
+<h2><code>Maybe.map</code></h2>
 <!-- -------------------------------------------------------------------------
     ☆ Syntax (inline code)
 
@@ -52,7 +52,7 @@ from <code>lst</code>?</h1>
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-<p><code>lst = [{"word": "hello"}, ...]</code></p>
+<p><code>...</code></p>
 <!-- -------------------------------------------------------------------------
     ☆ Key point (caption or hint)
 
@@ -90,27 +90,41 @@ from <code>lst</code>?</h1>
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[{<span class="st">&quot;say&quot;</span>: item.get(<span class="st">&quot;word&quot;</span>, <span class="st">&quot;...&quot;</span>) } <span class="cf">for</span> item <span class="kw">in</span> lst]</span></code></pre></div>
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span> <span class="op">=</span> [<span class="dt">Just</span> <span class="dv">100</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">200</span><span class="op">,</span> <span class="dt">Just</span> <span class="dv">100</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">List</span><span class="op">.</span><span class="fu">foldl</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Maybe</span><span class="op">.</span><span class="fu">map2</span> (<span class="op">+</span>)) <span class="co">-- step</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  (<span class="dt">Just</span> <span class="dv">0</span>)         <span class="co">-- state</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span></span></code></pre></div>
+<pre class="text"><code>Just 400 : Maybe number</code></pre>
 <!-- -------------------------------------------------------------------------
     ★ Key point notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
 <blockquote>
-<p>We can use a list comprehension to extract each
-<code>["word"]</code></p>
+<p>Folding can be read as <code>foldl step state [...]</code> and
+accumulates the value.</p>
 </blockquote>
-<p>I’m not 100% sure if this is best practice, but it’s safer than using
-<code>item["word"]</code> as we get a fallback value
-<code>"..."</code>.</p>
+<ul>
+<li><code>step</code> is the function to be applied to
+<code>values</code></li>
+<li><code>state</code> is piped as the second argument to
+<code>step</code></li>
+<li><code>state</code> is accumulated for each new step!</li>
+</ul>
+<p>A function that uses <code>case</code> instead of
+<code>List.foldl</code> may be easier to read (especially for
+beginners).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-<p>Always check the pythonic way to do things! A regular loop uses
-<code>dictionary.items()</code> to deconstruct the
-<code>key, value</code>.</p>
+<p>To accumulate a list you would use <code>(::)</code> as step and
+<code>[]</code> as state. See also <a
+href="https://hackage.haskell.org/package/foldl-transduce-0.6.0.1/docs/Control-Foldl-Transduce.html">transducers</a>
+(more complicated to understand).</p>
 <!-- -------------------------------------------------------------------------
     ✎ Markdown (DEPRECATED)
 

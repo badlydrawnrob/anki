@@ -39,7 +39,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# How would we grab each `"word"` with a list comprehension from `lst`?
+# Here's a more complicated `Maybe.map` setup. What's the result?
 
 
 <!-- -------------------------------------------------------------------------
@@ -47,7 +47,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Lists
+## `Maybe.map`
 
 
 <!-- -------------------------------------------------------------------------
@@ -57,7 +57,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`lst = [{"word": "hello"}, ...]`
+`...`
 
 
 <!-- -------------------------------------------------------------------------
@@ -98,8 +98,16 @@ false
       !# Warning: These buttons may break your code:
         @ https://github.com/badlydrawnrob/anki/issues/132
 -------------------------------------------------------------------------- -->
-```python
-[{"say": item.get("word", "...") } for item in lst]
+```Elm
+list = [Just 100, Just 200, Just 100]
+
+List.foldl
+  (Maybe.map2 (+)) -- step
+  (Just 0)         -- state
+  list
+```
+```text
+Just 400 : Maybe number
 ```
 
 
@@ -108,9 +116,13 @@ false
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> We can use a list comprehension to extract each `["word"]`
+> Folding can be read as `foldl step state [...]` and accumulates the value.
 
-I'm not 100% sure if this is best practice, but it's safer than using `item["word"]` as we get a fallback value `"..."`.
+- `step` is the function to be applied to `values`
+- `state` is piped as the second argument to `step`
+- `state` is accumulated for each new step!
+
+A function that uses `case` instead of `List.foldl` may be easier to read (especially for beginners).
 
 
 <!-- -------------------------------------------------------------------------
@@ -118,7 +130,7 @@ I'm not 100% sure if this is best practice, but it's safer than using `item["wor
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Always check the pythonic way to do things! A regular loop uses `dictionary.items()` to deconstruct the `key, value`.
+To accumulate a list you would use `(::)` as step and `[]` as state. See also [transducers](https://hackage.haskell.org/package/foldl-transduce-0.6.0.1/docs/Control-Foldl-Transduce.html) (more complicated to understand).
 
 
 <!-- -------------------------------------------------------------------------
