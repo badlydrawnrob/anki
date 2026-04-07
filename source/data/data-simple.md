@@ -41,7 +41,7 @@
 
     ⤷ `string` (auto wrapped with a `H1` tag)
 -------------------------------------------------------------------------- -->
-# Does `update` always need to know about server state?
+# What's an alternative way to solve this problem?
 
 
 <!-- -------------------------------------------------------------------------
@@ -49,7 +49,7 @@
 
     ⤷ `string` (auto wrapped with a `H2` tag)
 -------------------------------------------------------------------------- -->
-## Set
+## ...
 
 
 <!-- -------------------------------------------------------------------------
@@ -59,7 +59,7 @@
 
     This is NOT a `code block` field! It's for short lines of code only.
 -------------------------------------------------------------------------- -->
-`Status a`
+`...`
 
 
 <!-- -------------------------------------------------------------------------
@@ -73,7 +73,19 @@
       code with Pandoc. What does this code do?
 -------------------------------------------------------------------------- -->
 ```elm
-...
+gotInts : String -> List (Maybe Int)
+gotInts =
+  String.split ":"
+    >> List.map String.toInt
+
+toTuple : List (Maybe Int) -> Maybe (Int, Int)
+toTuple l =
+  case l of
+    [Just a, Just b] ->
+      Just (a, b)
+
+    _ ->
+      Nothing
 ```
 
 
@@ -85,7 +97,7 @@
     Helpful for when the header question grows too long, or the Sample
     requires some context or a hint. Alternative to code comments.
 -------------------------------------------------------------------------- -->
-This is a big question which will depend on your circumstances
+Try using a filter type function for list with "wishful thinking"!
 
 
 
@@ -104,15 +116,25 @@ This is a big question which will depend on your circumstances
       code with Pandoc. The output or answer to the above question.
 -------------------------------------------------------------------------- -->
 ```elm
--- Aware of server state
-type alias Model
-  { comments : Status (List String) }
+simpleGotInts : String -> List Int
+simpleGotInts =
+  String.split ":"
+    >> List.filterMap String.toInt
 
--- Unaware of server state
-type alias Model
-  { fruits : Status (List String)
-  , selected : Set String -- or Id
-  }
+toTuple : List Int -> Maybe (Int,Int)
+toTuple l =
+  case l of
+    [a,b] ->
+      Just (a,b)
+
+    _ ->
+      Nothing
+```
+```text
+>> toTuple (simpleGotInts "2:00")
+Just (2,0) : Just ( Int,Int )
+>> toTuple (simpleGotInts "200")
+Nothing
 ```
 
 
@@ -121,20 +143,21 @@ type alias Model
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-> **It depends on your architecture and UI design!** amongst other things.
+> **`List.filterMap` allows us to simplify our types with fewer maybes!**
 
-- Does server data need updating? (Comments)
-- Does server data not hold state? (Fruits)
+- `String.toInt` only returns if `Just Int`
+- `List.filterMap` avoids dealing with `Maybe`
+- `toTuple` only returns `Just` if a 2-list
 
-Either way, you should rarely hold duplicate data in `Model`! To guarantee impossible states on the server, `Status a` and `Status.map` might be unavoidable, but always design your API to explore which data _must_ sync with the server, and which doesn't. You may even need _more_ than one `Status a` (e.g: article and comments endpoints).
-
+Unit testing would be advised here, but user input `"200"`, `"2,00"`,
+`"2:00:00"`, `"two"` is handled.
 
 <!-- -------------------------------------------------------------------------
     ✎ Other notes
 
     ⤷ `rich html`
 -------------------------------------------------------------------------- -->
-Sometimes (as @lydell says) worrying about impossible states in update (we already know about in view), leads to complex code. The inverse is impossible states do sometimes happen in a state we didn't think about; a message triggers breaking our server code.
+A trick I learned from the `"2:00"` problem was simplify your types as much as possible first! Treat type signatures as interfaces with "wishful thinking" and find the nicest types for this problem.
 
 
 <!-- -------------------------------------------------------------------------
