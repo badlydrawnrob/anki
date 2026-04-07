@@ -9,13 +9,18 @@
 ========================================================================== -->
 
 ```elm
-div [ id "thumbnails" ]
-  (List.map
-    (\photo ->
-      viewPhoto
-        model.selected photo
-    )
-    model.photos
-  )
+gotInts : String -> List (Maybe Int)
+gotInts =
+  String.split ":"
+    >> List.map String.toInt
+
+toTuple : List (Maybe Int) -> Maybe (Int, Int)
+toTuple l =
+  case l of
+    [Just a, Just b] ->
+      Just (a, b)
+
+    _ ->
+      Nothing
 ```
 
