@@ -59,6 +59,14 @@ You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's
 - The actual function or symbol, i.e. `len()`
 
 
+## ★ Sample (image)
+
+> ⤷ **`image`**
+>    (use the 📎 paperclip button to add your image)
+
+- A sample of the code we're learning
+
+
 ## ☆ Sample (caption or hint)
 
 > ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
@@ -66,14 +74,6 @@ You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's
 - If the heading becomes too long, use this caption!
 - Extend and describe the main question or idea; give the image context
 - An alternative to comments in the image of code
-
-
-## ★ Sample (image)
-
-> ⤷ **`image`**
->    (use the 📎 paperclip button to add your image)
-
-- A sample of the code we're learning
 
 
 ## ★ Key point (image)

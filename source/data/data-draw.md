@@ -69,17 +69,6 @@
 
 
 <!-- -------------------------------------------------------------------------
-    ☆ Sample (caption or hint)
-
-    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
-
-    Helpful for when the header question grows too long, or the Sample
-    requires some context or a hint. Alternative to code comments.
--------------------------------------------------------------------------- -->
-false
-
-
-<!-- -------------------------------------------------------------------------
     ★ Sample (image)
 
     ⤷ `image`
@@ -107,6 +96,16 @@ false
 -------------------------------------------------------------------------- -->
 ![An image of a nest](../../source/media/draw-nested-function.png)
 
+
+<!-- -------------------------------------------------------------------------
+    ☆ Sample (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+false
 
 
 

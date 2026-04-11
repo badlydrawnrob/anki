@@ -52,6 +52,14 @@ You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's
 - The actual function or symbol, i.e. `len()`
 
 
+## ★ Sample (code block)
+
+> ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
+>    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
+
+- A sample of the code we're learning
+
+
 ## ☆ Sample (caption or hint)
 
 > ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
@@ -59,14 +67,6 @@ You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's
 - If the heading becomes too long, use this!
 - A caption or hint extending the main question or idea
 - An alternative to comments in the code block
-
-
-## ★ Sample (code block)
-
-> ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
->    (requires [`markdown->html`](../highlight/index.md#full-syntax-highlighting) conversion)
-
-- A sample of the code we're learning
 
 
 ## ★ Key point (code block)

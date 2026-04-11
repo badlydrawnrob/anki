@@ -51,15 +51,6 @@ You can [toggle](https://github.com/badlydrawnrob/anki/issues/62) between Anki's
 - The actual function or symbol, i.e. `len()`
 
 
-## ☆ Key point (caption or hint)
-
-> ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
-
-- If the heading becomes too long, use this!
-- A caption or hint extending the main question or idea
-- An alternative to comments in the code block
-
-
 ## ★ Key point (code block)
 
 > ⤷ **[`code block`](../highlight/index.md#full-syntax-highlighting)**
@@ -69,6 +60,15 @@ Create your code, add one or more `{{c1::cloze deletion}}` tags (here's [a tutor
 
 - The `{{c1::answer}}` or key learning point
 - You can add a helpful hint: `{{c1::the missing answer::HINT TEXT}}`
+
+
+## ☆ Key point (caption or hint)
+
+> ⤷ **`string`** (automatically wrapped with a `figcaption` tag)
+
+- If the heading becomes too long, use this!
+- A caption or hint extending the main question or idea
+- An alternative to comments in the code block
 
 
 ## ★ Key point notes

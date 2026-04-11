@@ -61,17 +61,6 @@
 
 
 <!-- -------------------------------------------------------------------------
-    ☆ Key point (caption or hint)
-
-    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
-
-    Helpful for when the header question grows too long, or the Sample
-    requires some context or a hint. Alternative to code comments.
--------------------------------------------------------------------------- -->
-false
-
-
-<!-- -------------------------------------------------------------------------
     ★ Key point (code block)
 
     ⤷ `pre block`
@@ -109,6 +98,17 @@ List.foldl
 ```text
 Just 400 : Maybe number
 ```
+
+
+<!-- -------------------------------------------------------------------------
+    ☆ Key point (caption or hint)
+
+    ⤷ `string` (auto wrapped with a `<figcaption>` tag — doesn't need `<p>` tag)
+
+    Helpful for when the header question grows too long, or the Sample
+    requires some context or a hint. Alternative to code comments.
+-------------------------------------------------------------------------- -->
+false
 
 
 <!-- -------------------------------------------------------------------------
