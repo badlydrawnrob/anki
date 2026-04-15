@@ -35,9 +35,6 @@ onSlide toMsg =
       Json.Decode.map ToMsg detailUserSlidTo
   in
   on "slide" msgDecoder  -- Html.Event
-at [ "detail", "userSlidTo" ] int  -- <internals> : Decoder Int
-    |> Json.Decode.map ToMsg  -- <function> : Decoder Int -> Decoder Msg
-    |> on "slide"  -- <function> : Decoder msg -> Html.Attribute ms
 
 
 -- view --
