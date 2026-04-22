@@ -9,18 +9,18 @@
 ========================================================================== -->
 
 ```elm
-gotInts : String -> List (Maybe Int)
-gotInts =
-  String.split ":"
-    >> List.map String.toInt
+viewSection : String -> List (Html msg) -> Html msg
+viewSection heading children =
+  section []
+    (h2 [] [ text "Title" ]
+      :: viewSiblings)
 
-toTuple : List (Maybe Int) -> Maybe (Int, Int)
-toTuple l =
-  case l of
-    [Just a, Just b] ->
-      Just (a, b)
-
-    _ ->
-      Nothing
+viewSiblings : List (Html msg)
+viewSiblings =
+  [ h2 []
+    [ text "Secondly" ]
+  , span []
+    [ text "Thirdly" ]
+  ]
 ```
 
