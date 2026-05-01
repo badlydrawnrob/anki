@@ -35,7 +35,7 @@ With ECSS you write a unique scoped class for each and every item.
     - Should it be scoped? (to global or page)
 2. GPS aims to reduce bloat that BEM and ECSS bring.
     - Simplifying class names, using raw html elements to style, reducing repetition of code
-3. **Aim to be consistant with your naming conventions**
+3. **Aim to be consistent with your naming conventions**
 4. `#fragments` for links can be safely ignored
 5. **Similar is not the same, have a solution**
     - I don't think `.gl-Class { #page & { ... } }` is a good idea.
@@ -152,7 +152,7 @@ Again, ECSS didn't have this issue as almost EVERYTHING was unique.
     - Raw html should be separate from `.gl-` styles and `#page #section`s
 3. The `/demo/` folder is equivalent to a font specimen or design system.
     - We should have a base `specimen` file, for defaults styles, as well as a design system for our `.gl-` styles.
-    - These should be consistant and the place you go preview any changes.
+    - These should be consistent and the place you go preview any changes.
 4. Make sure there's no `.gl` styles that should be raw `/partials` html and vice-versa.
     - As much as is possible should be styled in raw html (base styles)
     - Styles such as `.gl-Card h1 code b` might best live in `/partials` with our specimen styles. Do we always set `h1 code` as `font-size: inherit;` for instance?
