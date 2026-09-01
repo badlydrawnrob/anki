@@ -1,27 +1,33 @@
 // -----------------------------------------------------------------------------
 // Code block
 // =============================================================================
-// I've split this into it's own file, as it seems a pretty important chunk
-// of CSS that should live on its own. There's a few variations ..
+// > Dedicated file for all things ```fenced code``` block.
 //
-// Slight differences between card types
-// -------------------------------------
-// Neither one of these card types really does much with their wrappers, but
-// a couple things to note:
+// Extends the files `base/html/code`, `base/variables/breezedark-modified`, and
+// `globals/breezedark` (as well as `print-first-css` defaults).
 //
-// (a) Simple card is a just basic `pre` code block
-// (b) Missing! card requires a `{{cloze}}` field, but is essentially the same.
 //
-// Anki mobile screen size -> iPad portrait
-// ----------------------------------------
-// See `globals/card.less` for more details.
-//
-// Minor bugs
+// Card types
 // ----------
-// 1. Without `code` padding, `.cloze` tags get "clipped" top/bottom.
-//     - #! AnkiMobile treats `rem` units slightly differently, so uglify
-//       the code to add `1px` extra padding.
-//     - Compensate the `pre` accordingly (minus `1px`) to fit `4px` grid.
+// 1. Simple! is just a basic fenced code block
+// 2. Missing! requires a cloze field (see `docs/STYLEGUIDE.md`)
+//
+//
+// Screen-size
+// -----------
+// > Generally set up for mobile view only
+// > Helpful to set `editor.rulers` to `"column": 32` in VS Code.
+//
+// But should work on other devices.
+// Better to keep width to `32` characters!
+//
+//
+// Bugs
+// ----
+// 1. Cloze tags get "clipped" without `code` padding.
+//     - Annoyingly AnkiMobile treats `rem` units a bit differently
+//     - Compensated the `pre` to fit the `4px` grid (minus 1)
+
 
 .gl-CodeBlock {
 
@@ -48,18 +54,14 @@
 }
 
 
-// Missing! `.cloze` tag styles ------------------------------------------------
+// Missing! Card ---------------------------------------------------------------
 //
-// 1. `.cloze` is an Anki-specific class for cloze deletion types
-// 2. I prefer them a bit more chunky than default `<code>` padding.
-//    - #! AnkiMobile is a f* pain and treats `rem` units slightly different
-//    - #! So we have to reduce the padding by `1px` somehow! (We set padding
-//      in `code.less` for `pre` and `code`; avoids "clipping" top/bottom.
-//    - It's an "inbetweeny" size that's not quite on our `4px` grid, but it's
-//      a tradeoff to get chunky while maintaining legibility for adjacent lines
-//      with our regular `line-height`.
-// 3. Make the `--code-` colours more "punchy" on the `.cloze` background
-//    all `.sourceCode` classes are spans (such as `.at`tributes)
+// > Cloze deletion tag required (see `docs/STYLEGUIDE.md`)
+//
+// 1. Anki sets a `.cloze` tag on deletions
+// 2. Chunky spacing makes them easier to spot
+// 3. Colours are more punchy with this filter
+//     - All `.sourceCode` classes are spans
 
 .gl-CodeBlock .cloze {
   color: var(--color-code-cloze);

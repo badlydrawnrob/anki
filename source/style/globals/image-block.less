@@ -1,19 +1,33 @@
 // -----------------------------------------------------------------------------
-// Image Block (for Draw! cards)
+// Image Block (Draw! card)
 // =============================================================================
-// > Some styles can be found in `figure.less`.
+// > See `base/html/figure` for other styles.
 //
-// #! An `.gl-ImageBlock` should (ideally) be ONLY for images, but sometimes
-// it can be handy to have minimal code underneath an image. For that reason,
-// you can add the `.gl-CodeBlock` class to `<figure>`.
 //
-// 1. Otherwise the `box-shadow` will spill over into keypoint notes
-// 2. #! `hwb(from green h w b / 0.5)` doesn't work in Anki's browser
-//    - So use a simpler color instead (add a `--color` var for this?)
+// New application
+// ---------------
+// > Will have a full range of media options
 //
-// Anki mobile screen size -> iPad portrait
-// ----------------------------------------
-// See `globals/card.less` for more details.
+// In future, there'll be video, images, and potentially other types, making the
+// Draw! card much more feature-rich and fun.
+//
+// ⚠️ Images only!
+// ---------------
+// > ⚠️ NOT A CODE BLOCK!
+// > ⚠️ Currently only accepts images!
+//
+// This isn't enforced but expected. Will make them much easier to backup and
+// reuse in the new application. Images are way easier to generate now, thanks
+// to Ai and good tooling.
+//
+//
+// Notes
+// -----
+//
+// 1. Stops `box-shadow` spilling over into "Answer" field
+// 2. ⚠️ the `hwb()` function doesn't work in Anki's browser
+//    - @ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb
+//    - Simpler color used instead
 
 .gl-ImageBlock {
   background: radial-gradient(circle,rgba(225, 225, 225, 1) 0%, rgba(255, 255, 255, 1) 100%);
@@ -38,6 +52,6 @@
   }
 
   pre {
-    margin: 0; // #! Should this be here?
+    margin: 0; // ⚠️ Should this be here?
   }
 }

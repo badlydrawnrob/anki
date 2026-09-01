@@ -1,15 +1,11 @@
 // -----------------------------------------------------------------------------
 // Text-level elements
 // =============================================================================
-// #! I'm not sure if this should live here or in `card.less` ... or if our
-//    links should have their own `html/links.less` file?
-//
-// 1. We must use `slnt` for Recursive font as browsers don't support it properly
-//    - #! @ https://github.com/arrowtype/recursive/issues/56
+// > Could also live with `globals/card.less`.
 
 a {
   .nightMode & {
-    color: var(--color-nightmode-link);
+    color: var(--color-nightmode-link); // ⚠️ light-dark() is better
   }
 }
 

@@ -1,54 +1,30 @@
 // -----------------------------------------------------------------------------
 // Card styles
 // =============================================================================
-// Base `.Card` wrapper styles and it's children elements.
+// > ⚠️ TO DO: Update with thema css and write notes.
 //
-// #! HOW MANY LEVELS DEEP SHOULD THE CHILDREN GO?
-//    In GPS he says `.gl-` styles shouldn't be nested? But it seems natural to
-//    give a design system children, and if they're not obvious HTML elements,
-//    such as `<ul><li>` then they'll need a proper class, no?
+// Issue #118 on AnkiMobile is a problem. See FAQs.
 //
-// #! I'm still tempted to use a bastardisation of `ECSS` and `GPS`.
-// -----------------------------------------------------------------
-// There doesn't seem to be a silver bullet on how to do GPS, but it feels quite
-// nice having definite wrappers (makes for flatter css), like `gl-Card` and
-// `gl-Card_KeyPoint`. I removed `.gl-Card_Header` in favor for `.gl-Card header`,
-// and it still feels weird! I guess GPS would frown on this kind of flat style,
-// but in any case it's probably advisable to not nest ECSS style `.gl` classes
-// much deeper than one level.
 //
-//    - Use decent HTML5 tags wherever possible: `aside`, `h1`, `section`, etc
-//    - Where `div`s are used, consider naming after parent, i.e: `.gl-Card_KeyPoint`.
-//      Go ask the guys at GPS and I'm sure they'll tell me I'm doing it wrong!
+// Notes
+// -----
+// 1. Paragraph tag isn't descriptive enough
+//     - Although thema css defaults to raw html
+// 2. If a `.gl-*` class is empty ...
+//     - Remove it! YAGNI
+// 3. See thema css rules on nesting
 //
-//1. A `p` tag isn't very descriptive, which is where `ECSS` would be explicit.
-//   however, the `{{☆ Syntax (inline code)}}` describes things pretty well.
 //
-//   #! How can we be more descriptive? Just have in-place comments?
-//
-// 2. Should there ever be "Placeholder" classes added? For instance, you add
-//    a descriptive wrapper but you don't have any styles for it yet.
-//
-//    - Should empty `.gl-` classes be discarded? The HTML element too?
-//    - Sometimes it's nice to give the children a wrapper, to distinguish that
-//      section. Is this a bad way to work?
-//
-//      #! See `.gl-Card_KeyPoint` wrapper.
-//
-// 3. Should an element that's nested inside it's parent be "flat" but "nested"
-//    in ECSS/BEM style or is this disallowed?
-//
-//    #! `.gl-Card` -> `_KeyPoint`
-//
-// Anki mobile screen size -> iPad portrait
-// ----------------------------------------
-// > You could use `orientation: portrait` but AnkiMobile is practically useless
-// > in landscape mode (and large text is pain to read in it's "letter box")
-//
-// Legibility with screen size is important, but it's probably easier to just
-// use a `max-width` for every device width up to iPad portrait (768px). I'm
-// also going to do it for ALL text, not just code blocks. Also a slight issue
-// is #118, where the Anki Mobile app defaults to swipe gesture to launch menu.
+// Wishlist
+// --------
+// 1. ⚠️ Do you have customers yet?
+//     - ⚠️ Hold off on unnecessary changes until then!
+// 2. Does anyone use this outside of mobile view?
+//     - Could use `orientation: portrait` but `max-width` breakpoints
+//       are good enough for now.
+//     - Landscape view is pretty pointless (hard to read)
+// 3. Nightmode could be handled better
+//     - @ https://css-tricks.com/almanac/functions/l/light-dark/
 
 .gl-Card {
   background: transparent;
@@ -187,6 +163,10 @@
 
 
 // Code styles -----------------------------------------------------------------
+//
+// 1. Removed the colors for "Code Inline"
+//     - Bold can still be used for emphasis
+//
 // We're being a little specific here so that it doesn't fuck up our
 // `.gl-CodeBlock` or Skylighting's `.sourceCode span` classes. Our Key Point Notes
 // remain monochrome.
@@ -199,6 +179,21 @@
 // 1. #! Should the `header > p > code` have a background?
 //     - `background: var(--color-code-light-background);`
 //     - `padding: var(--spacing-quarter);` (like `.cloze`)
+//
+//
+// ⚠️ DEPRECATED
+// -------------
+// > No longer highlighting "Code Inline" field
+//
+// ```
+// b, strong {
+//   color: var(--color-code-bold);
+// }
+//
+// i, em {
+// color: var(--color-code-italic);
+// }
+//```
 
 .gl-Card header code {
   background: transparent;
@@ -211,11 +206,10 @@
   }
 
   b, strong {
-    color: var(--color-code-bold);
+    font-weight: 700; // ⚠️ Could be handled "site wide"
   }
 
   i, em {
-    color: var(--color-code-italic);
     font-variation-settings: normal; // Overide `slnt` settings
   }
 

@@ -1,23 +1,20 @@
 // -----------------------------------------------------------------------------
 // Card back (reverse)
 // =============================================================================
-// We're only naming this as `reverse` because of the natural file order
-// (naming the files `back` would appear before `front` when browsing files.
+// > ⚠️ TO DO: Tree-shake dead code
 //
-// 1. Requires an `#answer` ID on reveal to skip to the right part of the card.
-//
-// 2. When two `pre` blocks are on top of each other, the first one should have
-//    no margin (mainly with Simple card type).
-//
-//    #! Shouldn't this live within the `code-block.less` file? I have in my
-//       GPS article to never use a `#page` to manage styles within a `.gl`
-//       though.
+// 1. Named `reverse` to preserve correct file order
+// 2. Requires `#answer` anchor on reveal
+//     - Skips to the right part of the card.
+// 3. Remove first `pre` block margin if there's two
+//     - ⚠️ May be better within the `code-block` file
 
+// 1
 #reverse {
-  // 1
+  // 2
   #answer {
     .gl-CodeBlock pre {
-      margin-bottom: 0  // 2
+      margin-bottom: 0  // 3
     }
   }
 }

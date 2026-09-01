@@ -1,32 +1,35 @@
 // -----------------------------------------------------------------------------
 // Breeze Dark Theme (Pandoc's Skylighting)
 // =============================================================================
-// Currently using Pandoc's highlighting script:
-// - @link: https://github.com/jgm/skylighting
-// - @link: https://stackoverflow.com/a/30884409
+// > Legacy tool uses Pandoc's Skylighting for fenced code blocks.
 //
-// File can be used for both the default `breezedark.less` theme as well as the
-// `breezedark-modified.less` theme. Styles will be kept consistant in this file
-// for ease of switching between the two. Be careful to override the default
-// monochrome theme, which is set in `print-first-css`, and any other `font-*`
-// styles we need. Be explicit and add all styling that Print First does before
-// you start.
+//     @ https://github.com/jgm/skylighting (the compiler)
+//     @ https://stackoverflow.com/a/30884409 (all available themes)
 //
-// - `font-weight: bold` changed to a very slight bold `500` (looks better)
-// - `--color-code-dark-text-color` set in `.gl-CodeBlock` (base text colour)
-// - #! Lots of repetition of `.sourceCode` class — seems unnecessary?
+// New application
+// ---------------
+// > Limited preview app
 //
-// Notes on number lines
-// ---------------------
-// Currently unsupported; even if you use ``` {.numberLines} it's not gonna
-// work right now. Sorry!
+// Supports more color themes, better language support, and will hold (most)
+// feature updates going forward.
 //
-// Other notes
-// -----------
-// 1. We must use `slnt` for Recursive font as browsers don't support it properly
-//    - #! @ https://github.com/arrowtype/recursive/issues/56
-//    - `font-style: italic` is now redundant but (might) support older browsers.
-//      It's the browsers approximation of italic, not how the font is designed.
+// This file is used with `breezedark-modified.less`, which is now the only color
+// theme available for Anki Programming Flashcards (legacy). Monochrome theme can
+// be found in `print-first-css` and other css files in this repo.
+//
+// Check earlier releases if you'd like to extend or change themes, as they're
+// no longer supported — sorry!
+//
+// Legacy syntax highlighting are unlikely to have any more updates, due to the
+// limitations Pandoc Skylighting has with "tokens" — the things that make your
+// VS Code (or other editor) render your language properly.
+//
+// See issue #152 for more information.
+//
+//
+// Notes
+// -----
+// 1. Number lines are not supported (commented out)
 
 
 div.sourceCode {
@@ -104,7 +107,7 @@ div.sourceCode {
     .an {
       color: var(--color-code-dark-annotation);
       font-style: italic;
-      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+      font-variation-settings: 'CRSV' 1, 'slnt' -6;
     }
     // Attribute
     .at { color: var(--color-code-dark-attribute); }
@@ -116,13 +119,13 @@ div.sourceCode {
     .ch {
       color: var(--color-code-dark-char);
       font-style: italic;
-      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+      font-variation-settings: 'CRSV' 1, 'slnt' -6;
     }
     // Comment
     .co {
       color: var(--color-code-dark-comment);
       font-style: italic;
-      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+      font-variation-settings: 'CRSV' 1, 'slnt' -6;
     }
     // CommentVar
     .cv { color: var(--color-code-dark-comment-var); }
@@ -138,7 +141,7 @@ div.sourceCode {
     .do {
       color: var(--color-code-dark-documentation);
       font-style: italic;
-      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+      font-variation-settings: 'CRSV' 1, 'slnt' -6;
     }
     // Error
     .er {
@@ -188,7 +191,7 @@ div.sourceCode {
       color: var(--color-code-dark-warning);
       font-weight: 700;
       font-style: italic;
-      font-variation-settings: 'CRSV' 1, 'slnt' -6; // #! (1)
+      font-variation-settings: 'CRSV' 1, 'slnt' -6;
     }
   }
 }

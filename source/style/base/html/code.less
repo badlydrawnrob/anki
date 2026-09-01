@@ -1,21 +1,21 @@
 // -----------------------------------------------------------------------------
-// Code (inline and basic code blocks)
+// Code (inline and fenced code blocks)
 // =============================================================================
-// > See `variables` folder for colours and themes
+// > Colors and themes for syntax highlighting in `/variables`.
 //
-// It seems I'm basically resetting to a default here, and we're doing the
-// heavy lifting of styles elsewhere. Inherited `--color-code-light-*` theme
-// as default, so some styles need to be overriden.
+// We inherit `--color-code-light-*` colours from `print-first-css`, so we need
+// to do a few resets to override some styles. That becomes our default theme,
+// "Monochrome" black and white.
 //
-//    #! Should some styles be edited/moved here?
-//       I feel as much as possible, `code` and `pre` stuff should be set here
-//       for light and dark mode (user settings).
+// - Font variations for "Recursive" font
+// - Add some whitespace for inline code that overlaps vertically
 //
-// 1. Some specific settings for Recursive font (see `typography.less`)
-// 2. Make sure there's a tiny whitespace gap if inline code overlaps vertically.
-//    - Ugh, each of the browsers treat `rem` units slightly differently ...
-//    - MacOS Safari 17.6 / Brave 1.79.126 are good with `--spacing-micro` bottom ..
-//    - iOS and iPad Safari need `--spacing-px`.
+//
+// Bugs
+// ----
+// 1. Each browser treats `rem` units slightly differently
+//    - Safari 17.6 / Brave 1.79.126 work with `--spacing-micro` bottom
+//    - iOS and iPad Safari need `--spacing-px` bottom (why? fuck knows)
 
 
 code,

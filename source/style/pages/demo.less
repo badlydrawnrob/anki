@@ -1,31 +1,16 @@
 // -----------------------------------------------------------------------------
 // Demo page (`#demo`)
 // =============================================================================
-// Some simple styles to mock the Anki app
+// > ⚠️ TO DO: integrate thema css and migrate to newer app?
 //
-// #! The `#demo` page is likely to be repeated once or twice for different
-//    card demos. Is this valid in GPS? I feel that each `#pageID` should
-//    be unique?
+// Mocks up the Anki app for previewing.
 //
-// 1. Buttons are a bloomin' arse to code up. This is where a utility framework
-//    comes in handy (either built by me or some other mug, like Pico CSS) ...
-//    in fact, half of those styles aren't really needed.
-//
-//    - The button only shows up once in our HTML, so there's no need to make it
-//      a global element (unless we use it elsewhere.
-//
-// 2. Does a `#section` have to be unique to it's parent and only show up on
-//    one single view in the app?
-//
-//    - This still looks a bit weird to me, using `#id`s instead of ECSS
-//      style `.demo-` scoped classes! I guess it's habit. treat them like
-//      Markdown headings, `#h1` `#h1 #h2` and so on. Two IDs together just
-//      looks a bit ugly :(
-//
-// #! Aim to reduce dead code. Are `#front` and `#reverse` doing anything?
+// 1. Requires JSON in `demo/*` folders
+// 2. Requires MOUSTACHE package
 
 body.nightMode {
-  // background: black;  // #! temporary for testing Night Mode
+  // ⚠️ For testing Night Mode (find a better way)
+  // background: black;
 }
 
 #demo {
@@ -41,7 +26,7 @@ body.nightMode {
   }
 
   .top    { margin-bottom: calc(var(--spacing-eight) * 4); }
-  .bottom {}  // Aim to reduce dead code
+  .bottom {}  // ⚠️ Tree-shake dead code
 }
 
 // 1
@@ -58,7 +43,7 @@ body.nightMode {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: normal;
-  line-height: var(--line-height-half);  // 2
+  line-height: var(--line-height-half);
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
@@ -89,5 +74,5 @@ body.nightMode {
   }
 }
 
-#demo #front   { } // 2
-#demo #reverse { } // 2
+#demo #front   { } // ⚠️ Tree-shake dead code
+#demo #reverse { } // ⚠️ Tree-shake dead code

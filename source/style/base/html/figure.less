@@ -1,28 +1,28 @@
 // -----------------------------------------------------------------------------
 // Figure
 // =============================================================================
-// > It's fine to use `<figure>` for both images and code snippets.
+// > You're allowed to use `<figure>` for images and code.
 //
-// We're changing the front-page to a `<figure>` instead of a plain `<div>`
-// because I've added a new field for `<figcaption>`. Not only is this useful for
-// images (give a hint), it could be quite useful for extra context when the
-// heading gets too long. It's also used on the `#reverse` card for Draw!
+// Better than a plain `<div>` as it allows `<figcaption>` for hints. Also very
+// useful if the heading grows too long.
 //
-// There's some minor difference in the cards. Draw! is generally images only.
-// You can find the differences in the files below:
+// Draw!
+// -----
+// Images only: `image-block.less`
 //
-// - See `image-block.less` for the `.gl-ImageBlock` class
-// - See `code-block.less` for the `.gl-CodeBlock` class.
+// Simple! Missing!
+// ----------------
+// Fenced code blocks: `code-block.less`
 //
-// ## Notes
-// 1. `display: flex` fucks up `div.sourceCode` width unless it's set to 100%
-//    - See `breezedark.less` for more details
-// 2. Our `<figcaption>` is a tiny slither of text as a row without this.
-//    - Display caption on top of the image, not to it's side.
-// 3. Why the fuck isn't `position: sticky` working on AnkiMobile?
-//    - It _does_ work, but there's already a sticky footer UI ...
-//    - Which means our sticky footer gets hidden (and looks shit w/ `bottom: 50px`).
-// 4. Fix the italics (the best current solution for all browsers)
+//
+// Notes
+// -----
+// > AnkiMobile doesn't like `position: sticky` ...
+// > Potentially due the the sticky footer UI there already.
+//
+// 1. If `display: flex` used, `div.sourceCode` must be 100% width
+// 2. The `figcaption` should be one or two lines of text
+//     - Without `column` it's a tiny slither of text (row)
 
 figure {
   display: flex; // (1)
@@ -32,7 +32,7 @@ figure {
   figcaption {
     color: var(--font-color);
     background: white;
-    font-variation-settings: 'CRSV' 1, 'slnt' -6; // (4)
+    font-variation-settings: 'CRSV' 1, 'slnt' -6;
     margin: 0;
     padding: var(--spacing-half);
     text-align: center;

@@ -1,77 +1,56 @@
 // -----------------------------------------------------------------------------
-// Breeze Dark — Modified variables (by Andrew Fridley)
+// Breeze Dark (modified by Andrew Fridley)
 // =============================================================================
-// Using the Breeze Dark Theme, but a variation by Andrew Fridley. This isn't
-// quite as nice as `breezedark.less` for our `build/demo/*` files, but it's
-// definitely better overall, and doesn't feel like Christmas when working with
-// ```html Markdown fenced code blocks. The choice is up to you!
+// > ⚠️ Extends some of `print-first-css` defaults.
 //
-//    @ link: https://tinyurl.com/breeze-dark-theme-vsc
+//     Use the Colorize tool to view colors in real-time
+//     @ http://tinyurl.com/visual-studio-code-colorize
 //
-// Colours really make the code "pop", but choosing the right colour combinations
-// really takes some time and effort.
+// Pandoc's breezedark is not that great, so this version extends it. Depending
+// on the language used it provides a nicer colour palette. Pandoc's looks like
+// Christmas when working with Markdown fenced code blocks!
 //
-//
-// Colour variables notes
-// ----------------------
-//
-// 1. We make some slight changes from our `print-first-css` defaults, and add in
-//    theme-specific styles.
-//
-//   (a) Our basic highlighting styles.
-//
-//       #! If we use a `code block` inside a notes field, you'll see the
-//          monochrome theme _not_ the dark theme. This helps keep things simple
-//          and easier to scan (I think).
-//
-//   (b) Some themes have extra variables for things like `*-background-color`.
-//       Where a theme has extra colours, _add them_ as variables. Where they don't
-//       use these colours, _remove_ them.
-//
-//       - Most of the `--color-code-dark-` variables are used by _all_ themes,
-//         but some are theme specific. Perhaps consider using "tokens" in a
-//         similar way to Material Design?
-//
-//       - Some of the variables are marked `//-` which means they haven't yet
-//         been changed (from the original Breeze Dark theme). They're not often
-//         used in the `custom-theme.md` file's code samples.
-//
-// 2. Here we add a specific variable just for this theme. Our orangy brown colour
-//    works nicely in ```python code blocks, but awful in ```css ones.
+// See a previous release if you'd prefer Pandoc's original.
 //
 //
-// General problems with Pandoc and the theme
-// ------------------------------------------
-// We don't have as many "tokens" or different `span.class` sections as other
-// highlighter tools and editors. This means two things: we must be more careful
-// with our colours, they're shared between more elements; we must put up with a
-// less-than-perfect visual style. This is one of the trade-offs from using
-// Pandoc, which is a brilliant compiler tool. The other option is to install
-// Python (or use the built in MacOs version) and use a different highlighter tool.
-// The downside of this is that we'd lose the nice `markdown->html` process we
-// use in our `data/*.md` files.
-//
-// To see what a theme _should_ look like, try it out in Visual Studio Code.
-// You'll need to find a theme's colour plugin. There's a fair few differences
-// that we can't really capture as it stands with Pandoc right now. We'll just
-// have to do our best!
-//
-//    @ issue link: https://github.com/badlydrawnrob/anki/issues/152
+// Notes
+// -----
+// 1. Only works for `code block` themes
+//     - The "Answer" field renders a "Monochrome" theme only.
+//     - Far easier to scan black+white when reading the answer.
+// 2. Some `--color-code-*` variables may not be strictly necessary
+//     - Depending on the theme used with Pandoc
+// 3. `--color-code-dark-variable-alt` depending on lang
+//     - Works better with Python than CSS
 //
 //
-// Colour pallette
-// ---------------
-// Use the "colorize" Visual Studio Code plugin to preview colours. The colour
-// pallette is quite extensive, so can be a little difficult to change. These are
-// the default colours that Andrew Fridley uses in his Visual Studio Code
-// plugin for Breeze Dark Theme (modified).
-//
-//    #! There's still some leftover styles from the original Breeze Dark Theme
-//       but in my code examples I can't really see them.
-//
-//    @ http://tinyurl.com/visual-studio-code-colorize
+// WISHLIST
+// --------
+// 1. #F58C70 may be a little too pale.
+//     - Fine in Python, little ugly in CSS
+//     - Original was #F67400
+// 2. #f44f4f was too bright for my eyes
+//     - #F25470 feels better
 //
 //
+// Color tokens
+// ------------
+// > @ https://github.com/badlydrawnrob/anki/issues/152
+//
+// - Legacy tool has limited color and highlighting
+// - Fixed in the new application with more tokens supported.
+//
+// VS Code quality isn't possible with Pandoc, even though it's a great compiler.
+// "Tokens" are formed by looking at the language, the type of code, it's position,
+// among other things, to render proper colouring. Pandoc's syntax highlighter just
+// doesn't create enough tokens to match VS Code. It's a tradeoff for Pandoc's
+// simplicity and stability that's not easily possible without the new app.
+//
+// ⚠️ You can see a comparison ...
+//
+//
+// Colour Palette
+// --------------
 // #EFFFFF,
 // #7a7c7d,
 // #A9C1CA,
@@ -92,23 +71,16 @@
 // #83ABFB,
 // #0099ff,
 // #2980b9,
-// #153042,
+// #153042
 //
-// Some stuff to fix?
-// -----------------
 //
-// #F58C70
-// - A little too pale. The original was f67400. Somewhere between the two?
-// - Looks ugly in CSS variables, but fine in Python. Use `-alt` for the langs
-//   you want this browny colour.
+// ⚠️ DEPRECATED COLORS
+// --------------------
+// > You can add these back in if used often.
+// > See previous release for where to add variables.
 //
-// #f44f4f was a tad too bright for my eyes, but #F25470 seems a bit better.
-// this Breeze Dark Theme uses them both. Pandoc uses #da4453 which is bright!
-
-
-// 1a
---color-code-bold: #f12056;
---color-code-italic: #f67400;
+// --color-code-bold: #f12056;
+// --color-code-italic: #f67400;
 
 
 // 1b
