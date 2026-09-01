@@ -1,0 +1,26 @@
+<!-- ⚠️ DEMO ONLY: do not use ==================================================
+
+    Anki has deprecated the use of triple brackets.
+    Moustache requires them `{{{ ... }}}`!
+
+============================================================================ -->
+
+<div id="front">
+  <section class="gl-Card">
+    <header>
+      <h1>{{{★ Question}}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{{☆ Subtitle}}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Code Inline}}
+        <p><code>{{{☆ Code Inline}}}</code></p>
+      {{/☆ Code Inline}}
+    </header>
+    <figure class="gl-CodeBlock">
+    {{#☆ Question Hint}}
+      <figcaption>{{{☆ Question Hint}}}</figcaption>
+    {{/☆ Question Hint}}
+      {{{★ Code Question — cloze front}}}  <!-- Special name for .json only -->
+    </figure>
+  </section>
+</div>

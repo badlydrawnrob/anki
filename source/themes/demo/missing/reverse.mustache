@@ -1,0 +1,30 @@
+<div id="reverse">
+  <div id="answer">  <!-- Missing! `#answer` anchor tag must wrap all `#reverse` -->
+    <section class="gl-Card">
+      <header>
+        <h1>{{{★ Question}}}</h1>
+        {{#☆ Subtitle}}
+          <h2>{{{☆ Subtitle}}}</h2>
+        {{/☆ Subtitle}}
+        {{#☆ Code Inline}}
+          <p><code>{{{☆ Code Inline}}}</code></p>
+        {{/☆ Code Inline}}
+      </header>
+      <!-- Missing! has no `☆ Code Answer` field -->
+      <div class="gl-Card_KeyPoint">
+        <figure class="gl-CodeBlock">
+          {{{★ Code Question — cloze reverse}}} <!-- ... it only needs a question! -->
+        </figure>
+        <div class="gl-Card_KeyPointNotes">
+          {{{★ Answer}}}
+          <small>{{Tags}}</small>
+        </div>
+      </div>
+      {{#☆ Answer Notes}}
+        <footer>
+          {{{☆ Answer Notes}}}
+        </footer>
+      {{/☆ Answer Notes}}
+    </section>
+  </div>
+</div>

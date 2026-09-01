@@ -8,16 +8,14 @@
   <body id="demo">
     <section class="wrapper">
       <div class="top">
-        <!-- Draw! card
-             ==========
+        <!-- ⚠️ DEMO ONLY: do not use ==================================================
 
-            This is a demo file only. See `themes/cards/draw/*.mustache` for
-            card type templates to use in Anki. Our demo requires ``
-            triple brackets which Anki does not support!
+            Anki has deprecated the use of triple brackets.
+            Moustache requires them ``!
 
-        -->
+        ============================================================================ -->
 
-        <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+        <div id="front">
           <section id="draw" class="gl-Card">
             <header>
               <h1>Why is Racket Lang’s image layering special? (the <a href="https://docs.racket-lang.org/teachpack/2htdpimage.html">image
@@ -25,10 +23,9 @@ teachpack</a>)</h1>
                 <h2>Shapes and complex images</h2>
                 <p><code>(require 2htdp/image)</code></p>
             </header>
-            <figure class="gl-ImageBlock gl-CodeBlock">
+            <figure class="gl-ImageBlock">
               <figcaption>Remember the order of processing in Lisp!</figcaption>
-              <img src="../../source/media/draw-lisp-rocket-outline.png"
-alt="The image will need to be added to Anki first" />
+              
             </figure>
           </section>
         </div>
@@ -36,7 +33,7 @@ alt="The image will need to be added to Anki first" />
       </div>
       <div class="bottom">
         <div id="reverse">
-          <section id="draw" class="gl-Card">
+          <section class="gl-Card">
             <header>
               <h1>Why is Racket Lang’s image layering special? (the <a href="https://docs.racket-lang.org/teachpack/2htdpimage.html">image
 teachpack</a>)</h1>
@@ -51,46 +48,50 @@ alt="The image will need to be added to Anki first" />
             <div id="answer">
               <div class="gl-Card_KeyPoint">
                 <figure class="gl-ImageBlock gl-CodeBlock">
-                  <img src="../../source/media/draw-lisp-rocket-compiled.png"
-alt="The image will need to be added to Anki first" />
+                  <div class="sourceCode" id="cb1"><pre
+class="sourceCode elm"><code class="sourceCode elm"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="fu">require</span> <span class="dv">2</span><span class="fu">htdp</span><span class="op">/</span><span class="fu">image</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>; <span class="dt">Here</span>&#39;<span class="fu">s</span> <span class="fu">the</span> <span class="fu">constants</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">WIDTH</span> <span class="dv">180</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">HEIGHT</span> <span class="dv">180</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">MIDDLE</span> (<span class="op">/</span> <span class="dt">WIDTH</span> <span class="dv">2</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">BACKGROUND</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">rectangle</span> <span class="dt">WIDTH</span> <span class="dt">HEIGHT</span> <span class="st">&quot;solid&quot;</span> <span class="st">&quot;black&quot;</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">ROCKET</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">bitmap</span><span class="op">/</span><span class="fu">file</span> <span class="st">&quot;rocket.png&quot;</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>(<span class="fu">define</span> <span class="dt">MOON</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">circle</span> <span class="dv">40</span> <span class="st">&quot;solid&quot;</span> <span class="st">&quot;white&quot;</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>; <span class="dt">Let</span>&#39;<span class="fu">s</span> <span class="fu">make</span> <span class="fu">our</span> <span class="fu">image</span><span class="op">!</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>(<span class="fu">place</span><span class="op">-</span><span class="fu">image</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ROCKET</span> <span class="dt">MIDDLE</span> <span class="dt">MIDDLE</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    (<span class="fu">place</span><span class="op">-</span><span class="fu">image</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">MOON</span> <span class="dv">10</span> <span class="dv">10</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">BACKGROUND</span>))</span></code></pre></div>
                 </figure>
                 <div class="gl-Card_KeyPointNotes">
-                  <p>Lisp feels a bit back-to-front and inside-out when you first start!
-Our Rocket is the <em>last</em> item to be processed, and our background
-variable the first. <a href="https://htdp.org/">How To Design
-Programs</a> is a great place to learn programming fundamentals.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode racket"><code class="sourceCode racket"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="kw">require</span> <span class="dv">2</span>htdp/image<span class="op">)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">; Here's the constants</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> WIDTH </span><span class="dv">180</span><span class="op">)</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> HEIGHT </span><span class="dv">180</span><span class="op">)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> MIDDLE </span><span class="op">(/</span> WIDTH <span class="dv">2</span><span class="op">))</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> BACKGROUND</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>rectangle WIDTH HEIGHT <span class="st">"solid"</span> <span class="st">"black"</span><span class="op">))</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> ROCKET</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>bitmap/file <span class="st">"rocket.png"</span><span class="op">))</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> MOON</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">(</span>circle <span class="dv">40</span> <span class="st">"solid"</span> <span class="st">"white"</span><span class="op">))</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">; Let's make our image!</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">(</span>place-image</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  ROCKET MIDDLE MIDDLE</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">(</span>place-image</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      MOON <span class="dv">10</span> <span class="dv">10</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        BACKGROUND<span class="op">))</span></span></code></pre></div>
+                  <blockquote>
+<p><strong>Lisp feels a bit back-to-front and inside-out</strong> when
+you first start!</p>
+</blockquote>
+<p>Our <code>Rocket</code> is the last item to be processed, and our
+<code>BACKGROUND</code> variable the first. <em>How To Design
+Programs</em> is a great place to learn programming fundamentals.</p>
                   <small>__apf-3.2.7::lisp __apf-3.2.7::demo testing</small>
                 </div>
               </div>
                 <footer>
-                  <p>Racket (Lisp) processes functions from the inside → out. Lisp
-calculates the <em>inner-most</em> function (data or variable) FIRST. It
-then works inside-out to render our <code>ROCKET</code>. That’s very
-maths-like. Try the first two chapters of HTDP, then try <a href="https://elm-lang.org/">Elm Lang</a>!</p>
+                  <p>Racket processes functions from the <em>inside → out</em>.
+Lisp languages calculate the <em>inner-most</em> function (data or variable)
+FIRST. It then works inside-out to render our <code>ROCKET</code>.
+That’s very maths-like. Try the first two chapters of <a
+href="https://htdp.org">HTDP</a>, then try <a
+href="https://elm-lang.org">Elm Lang</a>!</p>
                 </footer>
             </div>
           </section>

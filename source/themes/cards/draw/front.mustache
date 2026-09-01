@@ -1,0 +1,38 @@
+<!-- Draw! card ================================================================
+
+    💡 See "A workout for the brain" for study ideas.
+
+    @ https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain
+    @ https://github.com/badlydrawnrob/anki/README.md#cards
+    @ https://github.com/badlydrawnrob/anki/source/docs/styleguide/index.md
+
+    Fields:
+
+        See `/data/*` files for field content.
+
+    Key:
+
+        ★ = required field
+        ☆ = optional field
+
+============================================================================ -->
+
+<div id="front">
+  <section class="gl-Card">
+    <header>
+      <h1>{{★ Question}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{☆ Subtitle}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Code Inline}}
+        <p><code>{{☆ Code Inline}}</code></p>
+      {{/☆ Code Inline}}
+    </header>
+    <figure class="gl-ImageBlock">
+    {{#☆ Question Hint}}
+      <figcaption>{{☆ Question Hint}}</figcaption>
+    {{/☆ Question Hint}}
+      {{★ Code Question}}
+    </figure>
+  </section>
+</div>

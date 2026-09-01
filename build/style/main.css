@@ -1,56 +1,47 @@
 /* ---------------------------------------------------
-// Anki Programming Flashcards (CSS Programming Themes)
+// Anki Programming Flashcards (CSS for coding)
 // MIT License | https://github.com/badlydrawnrob/anki
+// MIT Licence | https://github.com/badlydrawnrob/print-first-css
 // ===================================================
-// Inherits and extends `print-first-css` and sets up
-// styles for our Anki programming flashcards! This can be
-// used as-is, or perhaps you'd like to use it as a base
-// for another set of Anki cards. Or, you might like to
-// use `print-first-css` for a project. We're not worrying
-// about `.gl-BaselineGrid` here.
-//
-//    @ https://bit.ly/2TpdSaL
+// Extends `print-first-css` and sets up styles for the
+// flashcards template and syntax highlighting w/ Pandoc.
 //
 //
-// GPS, ECSS, and Thema Styles: The Basic Idea
-// -------------------------------------------
-// I haven't found a silver bullet yet, so this is a
-// work in progress!
+// 🗑 DEPRECATED
+// -------------
+// 1. Custom themes
+// 2. Multiple color themes (available in the new app)
+// 3. Markdown field (use `npm run data-code-reverse`)
+// 4. Code Inline highlights (bold still works)
 //
-//    @ link: https://github.com/badlydrawnrob/anki/issues/146 #!
-//
-// Use GPS where appropriate, and reduce verbosity
-// (number of nested levels), which is where I feel the
-// method falls down. Use Thema Styles in these cases.
-// I'm looking for methods to increase speed when
-// checking classnames against their purpose. Be careful
-// of naming clashes in bigger sites; it's unlikely to
-// happen in a tool as small as this.
-//
-// If you are interested in these concepts and have a
-// big team of developers working together, make sure
-// they're well trained on a well-documented and strict
-// style. You can always scope everything under it's
-// `#page` or `#section`, or use a `.pg-` or `.section-`
-// scope like we used to do with ECSS to avoid clashes
-// and inheritance issues.
-//
-// Always try and make use of your plain old HTML
-// styles, and have a specimen file and some form of
-// design-system for your globals. Go as far as you can
-// with raw HTML and very basic styling, before reaching
-// for something more complex.
+// I don't think many people used these anyway; if you
+// know what you're doing, previous release will show
+// you how to re-install these features.
 //
 //
-// Finding what's right for you
-// ----------------------------
-// GPS theory has been well tested, but Thema Styles
-// (although simple) hasn't. There's bound to be stuff I
-// might want to change, or rules to get rid of
-// completely. GPS doesn't automatically solve every
-// problem (one of the reasons I dreamed up Thema styles),
-// so some trial and error is needed to arrive at a
-// working style you prefer to use!
+// ⚠️ WISHLIST
+// -----------
+// 1. Remove dependencies
+//     - Update to newer reset css
+//     - Avoid using `lessc` if possible
+//     - Copy and paste if smallish
+//     - Tree-shake dead code with Purge CSS
+// 2. Integrate Pico CSS (or similar)
+//     - CSS is awful, especially buttons (see `/pages/demo`)
+//     - Font-size is the only problem (override it's defaults)
+//     - Ai-generated CSS will be a big help here (add thema css skill)
+// 3. Make `print-first-css` not required install?
+// 4. Add the README and STYLEGUIDE documents
+// 5. Update to thema css and write a how-to
+// 6. Bold should be handled better (only set in `card.less`)
+//     - Base bold css lives in `print-first-css`?
+// 7. Italic may no longer need `font-variation-settings` fix?
+//     - @ https://github.com/arrowtype/recursive/issues/56
+// 8. More consideration on where to place styles
+//     - text-elements, syntax highlighting, code block, etc
+// 9. Design tokens and colors need re-think
+//     - See `color.less` and others
+//     - Think about `light-dark()` modes UPFRONT. They're standard now.
 */
 /*! --------------------------------------------------
 // Print First CSS | MIT License
@@ -906,8 +897,6 @@ i {
   --color-nightmode-text-dark: #333;
   --color-nightmode-border: #ddd;
   --color-nightmode-link: #3daee9;
-  --color-code-bold: #f12056;
-  --color-code-italic: #f67400;
   --color-code-dark-background: #232629;
   --color-code-dark-text-color: #EFFFFF;
   --color-code-dark-line-number-color: #7a7c7d;
@@ -950,9 +939,6 @@ i {
   --font-family: var(--recursive), var(--system-ui);
   --font-family-header: var(--recursive), var(--system-ui);
   --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
-  --dejavu: "DejaVu Sans";
-  --font-family-old: var(--dejavu);
-  --font-family-header-old: var(--dejavu);
 }
 body {
   color: var(--font-color);
@@ -967,12 +953,6 @@ body {
   src: url('_RecursiveVariableFont.woff2') format('woff2-variations');
   font-style: oblique 0deg 15deg;
   font-weight: 300 1000;
-}
-@font-face {
-  font-family: "DejaVu Sans";
-  src: url("_DejaVuSans.ttf");
-  font-style: normal;
-  font-weight: 400;
 }
 blockquote {
   padding: 0 0 0 var(--spacing-one);
@@ -1222,11 +1202,10 @@ img {
 }
 .gl-Card header code b,
 .gl-Card header code strong {
-  color: var(--color-code-bold);
+  font-weight: 700;
 }
 .gl-Card header code i,
 .gl-Card header code em {
-  color: var(--color-code-italic);
   font-variation-settings: normal;
 }
 .nightMode .gl-Card header code {
@@ -1502,6 +1481,3 @@ div.sourceCode {
   box-shadow: none;
   text-shadow: none;
 }
-/* ---------------------------------------------------
-// Your Custom Theme can go here
-// ------------------------------------------------- */

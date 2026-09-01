@@ -5,19 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run css && npm run demo && npm run custom",
+    "build": "npm run css && npm run demo && npm run data",
     "css": "npx lessc source/style/main.less ./build/style/main.css",
-    "custom": "pandoc --template=source/themes/custom/template.html --toc -s source/themes/custom/custom-theme.md -o build/custom/custom-theme.html",
-    "data": "npm run data-code && npm run data-code-reverse && npm run data-draw && npm run data-missing && npm run data-simple",
-    "data-code": "pandoc source/data/data-code.md -o ./build/data/data-code.html",
-    "data-code-reverse": "pandoc source/data/data-code.html -t gfm -o ./build/data/data-code.md",
-    "data-draw": "pandoc --from markdown-auto_identifiers source/data/data-draw.md -o ./build/data/data-draw.html",
-    "data-simple": "pandoc --from markdown-auto_identifiers source/data/data-simple.md -o ./build/data/data-simple.html",
-    "data-missing": "pandoc --from markdown-auto_identifiers source/data/data-missing.md -o ./build/data/data-missing.html",
+    "data": "npm run data-card && npm run data-code && npm run data-code-reverse",
+    "data-card": "pandoc --from markdown-auto_identifiers source/data/card.md -o ./build/data/card.html",
+    "data-code": "pandoc source/data/code.md -o ./build/data/code.html",
+    "data-code-reverse": "pandoc source/data/code.html -t gfm -o ./build/data/code.md",
     "demo": "npm run demo-draw && npm run demo-simple && npm run demo-missing",
-    "demo-draw": "npx mustache -p source/themes/demo/draw/draw-front.mustache -p source/themes/demo/draw/draw-reverse.mustache source/themes/demo/draw/draw.json source/themes/demo/draw/draw.mustache > build/demo/draw.html",
-    "demo-simple": "npx mustache -p source/themes/demo/simple/simple-front.mustache -p source/themes/demo/simple/simple-reverse.mustache source/themes/demo/simple/simple.json source/themes/demo/simple/simple.mustache > build/demo/simple.html",
-    "demo-missing": "npx mustache -p source/themes/demo/missing/missing-front.mustache -p source/themes/demo/missing/missing-reverse.mustache source/themes/demo/missing/missing.json source/themes/demo/missing/missing.mustache > build/demo/missing.html"
+    "demo-draw": "npx mustache -p source/themes/demo/draw/front.mustache -p source/themes/demo/draw/reverse.mustache source/themes/demo/draw/data.json source/themes/demo/draw/template.mustache > build/demo/draw.html",
+    "demo-simple": "npx mustache -p source/themes/demo/simple/front.mustache -p source/themes/demo/simple/reverse.mustache source/themes/demo/simple/data.json source/themes/demo/simple/template.mustache > build/demo/simple.html",
+    "demo-missing": "npx mustache -p source/themes/demo/missing/front.mustache -p source/themes/demo/missing/reverse.mustache source/themes/demo/missing/data.json source/themes/demo/missing/template.mustache > build/demo/missing.html"
   },
   "repository": {
     "type": "git",

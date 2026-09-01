@@ -1,0 +1,35 @@
+<!-- No `{{FrontSide}}` tag needed here (removed) -->
+
+<div id="reverse">
+  <section class="gl-Card">
+    <header>
+      <h1>{{★ Question}}</h1>
+      {{#☆ Subtitle}}
+        <h2>{{☆ Subtitle}}</h2>
+      {{/☆ Subtitle}}
+      {{#☆ Code Inline}}
+        <p><code>{{☆ Code Inline}}</code></p>
+      {{/☆ Code Inline}}
+    </header>
+    <figure class="gl-CodeBlock">
+      {{★ Code Question}}
+    </figure>
+
+    <div id="answer">
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-CodeBlock">
+          {{☆ Code Answer}}
+        </div>
+        <div class="gl-Card_KeyPointNotes">
+          {{★ Answer}}
+          <small>{{Tags}}</small>
+        </div>
+      </div>
+      {{#☆ Answer Notes}}
+        <footer>
+          {{☆ Answer Notes}}
+        </footer>
+      {{/☆ Answer Notes}}
+    </div>
+  </section>
+</div>

@@ -8,16 +8,14 @@
   <body id="demo">
     <section class="wrapper">
       <div class="top">
-        <!-- Simple card
-             ===========
+        <!-- ⚠️ DEMO ONLY: do not use ==================================================
 
-            This is a demo file only. See `themes/cards/missing/*.mustache` for
-            card type templates to use in Anki. Our demo requires ``
-            triple brackets which Anki does not support!
+            Anki has deprecated the use of triple brackets.
+            Moustache requires them ``!
 
-        -->
+        ============================================================================ -->
 
-        <div id="front">  <!-- We probably need a #CARD-TYPE id somewhere -->
+        <div id="front">
           <section class="gl-Card">
             <header>
               <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
@@ -37,7 +35,9 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
         <a class="button" href="#answer">See answer</a>
       </div>
       <div class="bottom">
-        <div id="reverse">  <!-- We probably need a #CARD-TYPE id somewhere -->
+        <!-- No `` tag needed here (removed) -->
+
+        <div id="reverse">
           <section class="gl-Card">
             <header>
               <h1>What will each <code>residents[<b>‘key’</b>]</code> print out?</h1>
@@ -53,9 +53,6 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(residents[<span class="st">&#39;Burmese Python&#39;</span>])</span></code></pre></div>
             </figure>
 
-            <!-- ANSWER #! previously we had two `<sections>` one for front
-                 and one for `#answer` and `anki-Reverse`. It makes sense for them
-                 to be sections, but there should only be ONE `.gl-Card`. -->
             <div id="answer">
               <div class="gl-Card_KeyPoint">
                 <div class="gl-CodeBlock">
