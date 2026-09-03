@@ -221,7 +221,7 @@ Paragraph or two that supplements the key learning point.
 >
 > 👆 **Toggle HTML and press `[...]`** to add cloze deletion to Anki.
 >
-> 🗑 **`Code Answer` field is not used** for Missing!
+> ⚠️ **`Code Answer` field is not used** for Missing!
 
 - See the [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) section of Anki docs
 
