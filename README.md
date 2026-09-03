@@ -76,7 +76,7 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!IMPORTANT]
 >
-> **[📧 WRITE GREAT FLASHCARDS (a gentle guide)](#)**
+> **[`📧 WRITE GREAT FLASHCARDS (a gentle guide)`](#)**
 >
 > ☝️ Best place to start learning ☝️
 
@@ -86,11 +86,13 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ### I've finished the guide
 
+> [!NOTE]
+>
 > So you're a flashcard poet? Let's start.
-
-| 👋 I'm new to flashcards | 🤘 I already know Anki |
-| ----------------------- | --------------------- |
-| **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
+>
+> | 👋 I'm new to flashcards | 🤘 I already know Anki |
+> | ----------------------- | --------------------- |
+> | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
 
 ¶: <small><strong>See [cards](#cards) next<strong>. <strong>Legacy version uses a compiler<strong> which can be difficult for beginners.[^2] <strong>[Upgrading](#how-do-i-upgrade)</strong> from a previous version?<small>
 
