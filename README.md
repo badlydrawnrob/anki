@@ -78,11 +78,11 @@ Add them near the top with a better `Legacy | New App` photo.
 >
 > **[`📧 WRITE GREAT FLASHCARDS (a gentle guide)`](#)**
 >
-> ☝️ Best place to start learning ☝️
+> ☝️ Best place to start ☝️
 
 **No compiler, no fuss. Brain-training walk through for a strong memory!** It'll show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-**Long-time Anki users also benefit** from the guide. I'm seeking **[`alpha testers`](#)** who've used the tool before to try out the app (alpha). I'd love to chat!
+**Long-time Anki users also benefit from the guide.** I'm seeking **[`alpha testers`](#)** who've used the tool before to try out the app (alpha). I'd love to chat!
 
 ### I've finished the guide
 
@@ -103,7 +103,7 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ## 10 years legacy
 
-> **🕰 Tried and tested over 10+ years!** Flashcards you can trust.
+> **🕰 10+ years, tried and tested!** Flashcards you can trust.
 
 **I've been writing flashcards a long time!** I've taken all that knowledge and experience and distilled it into a tool that will speed up learning and remembering (without all the mistakes I made!).
 
@@ -118,7 +118,8 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!TIP]
 >
-> 📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**\
+> 📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**
+>
 > 💡 **[Workout for the brain](#a-workout-for-the-brain) for learning ideas.**
 
 Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories. Read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
