@@ -98,7 +98,11 @@ Uses a folding function which is a little advanced (you'll get there!)
 <!-- -------------------------------------------------------------------------
     ★ Code Question
 
+    > ⚠️ Important
+    >
     > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+    >
+    > See Draw! and Missing! for special fields.
 
     - Essential code for key learning point (fits the question)
     - See notes below for Draw! and Missing! cards
@@ -116,6 +120,9 @@ Uses a folding function which is a little advanced (you'll get there!)
 
     Cloze:
     @ https://docs.ankiweb.net/editing.html#cloze-deletion
+
+    Images:
+    @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
 
     Bugs:
     @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
@@ -159,10 +166,11 @@ Nothing
     - A table of contents (keep lines short, not part of CommonMark)
 
     ```
-    ⓘ Preferred structure below (list OR table — only one per card!)
+    ⓘ Preferred styleguide below
+    ⓘ List OR table (not both in one card)
 
-    > **Key learning point ...**
-    > With essential detail: it's nice to bold the key part.
+    > **Key answer learning point in bold** with some extra
+    > essential detail (it's nice to bold a few key answer words).
 
     - `function()` optional stepper (1)
     - `variable` with next step (2)

@@ -2,14 +2,15 @@
 
 > [!IMPORTANT]
 >
->  ✍️ **Strict [CommonMark](https://commonmark.org) format.**
+>  ✍️ **Strict [CommonMark](https://commonmark.org)** required**
 >
 > 📧 **Questions?** Get in touch.
 
 No JS. Strict Markdown. Strict HTML.
 
 ```
-ⓘ New app introduces quick-to-read, opinionated, strict styleguide.
+ⓘ New app introduces strict styleguide.
+ⓘ Quick to read, opinionated, standardised.
 
 Sharing becomes easier; reading is predictable and standardised.
 Not enforced in Legacy, but linter arrives in limited preview app.
@@ -41,20 +42,24 @@ npm run data
 npm run data-code-reverse
 ```
 
-The `/data/*` files help you quickly write your flashcards. They contain `<!-- instructions -->` in comments, but read docs below first. View in your code editor — they're not meant for the browser!
+**The `/data/*` files help you quickly write your flashcards.** They contain `<!-- instructions -->` in comments, but read docs below first. View in your code editor — they're not meant for the browser!
 
 ## Writing cards
 
 > [!IMPORTANT]
 >
-> 🧐 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
+> 💡 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
 >
-> 🧐 **Key:** ⤷ = strict markdown | ★ = required | ☆ = optional
+> 🧐 **Key:**
+>
+> - ⤷ = strict markdown
+> - ★ = required
+> - ☆ = optional
 
 1. **Write Markdown** in `/data/*` files and `npm run data`
 2. **Check the `/build` folder** for the compiled HTML (under comments)
 3. **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
-4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3)
+4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3 per field)
 5. **Check this styleguide** for mistakes in your writing!
 
 ```
@@ -71,7 +76,7 @@ will be a big impovement. I'm spending a lot of time on making data entry nicer!
 >
 > **All cards share most fields**
 >
-> **See [Draw!](#draw) and [Missing!](#missing)** for special fields.
+> **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
 
 ### ★ Question
 
@@ -120,7 +125,7 @@ The main question, statement, or fact.
 >
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 >
-> **See [Draw!] and [Missing!]** for special fields.
+> **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
 
 - Essential code for key learning point (fits the question)
 - See notes below for Draw! and Missing! cards
@@ -138,6 +143,9 @@ Add correct content for each card type! (📎 image, `[...]` cloze, `[...]+` clo
 
 Cloze:
 @ https://docs.ankiweb.net/editing.html#cloze-deletion
+
+Images:
+@ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
 
 Bugs:
 @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
@@ -162,10 +170,11 @@ Bugs:
 - A table of contents (keep lines short, not part of CommonMark)
 
 ```
-ⓘ Preferred structure below (list OR table — only one per card!)
+ⓘ Preferred styleguide below
+ⓘ List OR table (not both in one card)
 
-> **Key learning point ...**
-> With essential detail: it's nice to bold the key part.
+> **Key answer learning point in bold** with some extra
+> essential detail (it's nice to bold a few key answer words).
 
 - `function()` optional stepper (1)
 - `variable` with next step (2)
@@ -194,7 +203,7 @@ Paragraph or two that supplements the key learning point.
 
 > [!NOTE]
 >
-> ⤷ `image` (make sure to minify)
+> ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
 >
 > Toggle HTML and press 📎 paperclip button to save to Anki.
 
