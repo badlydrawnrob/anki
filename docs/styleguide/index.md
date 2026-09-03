@@ -125,7 +125,7 @@ The main question, statement, or fact.
 >
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 >
-> **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
+> ✍️ **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
 
 - Essential code for key learning point (fits the question)
 - See notes below for Draw! and Missing! cards
@@ -205,7 +205,7 @@ Paragraph or two that supplements the key learning point.
 >
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
 >
-> Toggle HTML and press 📎 paperclip button to save to Anki.
+> **Toggle HTML and press 📎 paperclip button** to save to Anki.
 
 - A sketch of a program or problem
 - A sample of the code we're learning
@@ -219,9 +219,9 @@ Paragraph or two that supplements the key learning point.
 >
 > ⤷ `code block` (requires a `{{c1::missing word::with optional hint}}`)
 >
-> Toggle HTML and press `[...]` to add cloze deletion to Anki.
-
-`Code Answer` field is not used (uses `Code Question` front and back)
+> **Toggle HTML and press `[...]`** to add cloze deletion to Anki.
+>
+> **`Code Answer` field is not used** for Missing!
 
 - See the [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) section of Anki docs
 
