@@ -47,10 +47,10 @@ Add them near the top with a better `Legacy | New App` photo.
 
 Which one are you?
 
-- 👷🏻 **Builder**?
-- 🤖 **Prompter**?
-- 👩‍🎓 **Student?**
-- 🧑🏽‍💻 **New job-er?**
+1. 👷🏻 **Builder**?
+2. 🤖 **Prompter**?
+3. 👩‍🎓 **Student?**
+4. 🧑🏽‍💻 **New job-er?**
 
 **If so, flashcards are for you!** Everyone knows the best way to learn is by _doing_, but ... practice makes perfect. Muscle-memory takes time to build. Ever struggled to remember a function? A bug fix you made way back when? A great Ai answer you deleted? A tricky problem you solved?
 
