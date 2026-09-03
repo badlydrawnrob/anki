@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 >
->  ✍️ **Strict [CommonMark](https://commonmark.org)** required**
+>  ✍️ **Strict [CommonMark](https://commonmark.org)** required
 >
 > 📧 **Questions?** Get in touch.
 
