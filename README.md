@@ -42,15 +42,16 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!NOTE]
 >
-> * 🎉 **Looking to learn?** My goal is making your journey more fun!
-> * 😎 **Code confident!!** Any learning level, language, skill, or stage of life.
+> 🎉 **Looking to learn?** My goal is making your journey more fun!
+>
+> 😎 **Code confident!!** Any learning level, language, skill, or stage of life.
 
 Which one are you?
 
-1. 👷🏻 **Builder**?
-2. 🤖 **Prompter**?
-3. 👩‍🎓 **Student?**
-4. 🧑🏽‍💻 **New job-er?**
+- 👷🏻 **Builder**?
+- 🤖 **Prompter**?
+- 👩‍🎓 **Student?**
+- 🧑🏽‍💻 **New job-er?**
 
 **If so, flashcards are for you!** Everyone knows the best way to learn is by _doing_, but ... practice makes perfect. Muscle-memory takes time to build. Ever struggled to remember a function? A bug fix you made way back when? A great Ai answer you deleted? A tricky problem you solved?
 
@@ -91,11 +92,11 @@ Which one are you?
 
 > [!NOTE]
 >
-> So you're a flashcard poet? Let's start.
+> You're a flashcard poet?
 >
 > | 👋 I'm new to flashcards | 🤘 I already know Anki |
 > | ----------------------- | --------------------- |
-> | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy<sup>¶</sup> |
+> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](#10-years-legacy)** legacy<sup>¶</sup> |
 
 ```
 ⓘ New app coming soon (limited preview)
@@ -110,7 +111,7 @@ Which one are you?
 
 **I've been writing flashcards a long time!** I've taken all that knowledge and experience and distilled it into a tool that will speed up learning and remembering (without all the mistakes I made!).
 
-**Opensource for 10+ years!** I've seen things come and go, and flashcards have been a constant in my learning. I don't code super often, so they're invaluable to keep my mind working. It's great to be part of the opensource community, even if we disagree sometimes.[^3]
+**Opensource for 10+ years.** I've seen things come and go, and flashcards have been a constant in my learning. I don't code super often, so they're invaluable to keep my mind working. It's great to be part of the opensource community, even if we disagree sometimes.[^3]
 
 ```
 ⓘ New app coming soon (limited preview)
@@ -123,9 +124,9 @@ Which one are you?
 >
 > 📖 **[Styleguide](./docs/styleguide/index.md)** helps you write your cards!
 >
-> 💡 **[Workout for the brain](#a-workout-for-the-brain)** for learning ideas.
+> 💡 **[Workout for the brain](#a-workout-for-the-brain)** for more learning ideas.
 
-**Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories.** It's better to read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
+**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
@@ -154,17 +155,20 @@ Which one are you?
 
 ## Colors
 
-> 👨🏻‍🎨 **Life is better in full colour!**
+> [!NOTE]
+>
+> 👨🏻‍🎨 **Life is much better in full colour!**
+>
+> 🔦 **Light and dark mode** for daytime and evening viewing.
 
-**Code is an art form, but life's bland with no colour!** Anki programming flashcards colors come in light and dark mode: The palettes are great for daytime and evening viewing, and [follow your device](#user-content-dark-mode) defaults. 2 beautiful syntax highlighting colours:
+**Code is an art form, but life's bland with no colour!** Anki programming flashcards have a color palette for any time of the day, saving your eyes for candlelit coding. They [follow your device](#user-content-dark-mode) defaults, and syntax highlighting themes come in 2 flavours:
 
 - 🥷🏻 Monochrome
 - ⛵️ Breeze Dark
 
-Pandoc converts Markdown `code block`s (with backticks) to full-color HTML.
-
 ```
 ⓘ New app will bring more colors and better language support.
+ⓘ Markdown fenced code blocks -> full-color HTML with Pandoc compiler.
 
 Deprecated: multiple colour themes
 Deprecated: inline code color highlight
