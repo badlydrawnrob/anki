@@ -76,7 +76,7 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!IMPORTANT]
 >
-> **[`🚀 WRITE GREAT FLASHCARDS`](#) a gentle guide**
+> **[`WRITE GREAT FLASHCARDS ✍️`](#) a gentle guide**
 >
 > ☝️ Best place to start learning ☝️
 
