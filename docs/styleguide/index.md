@@ -226,9 +226,8 @@ Paragraph or two that supplements the key learning point.
 - See the [code question field](#code-question)!
 - See the [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) section of Anki docs
 
----
 
-## ⚠️ Deprecated
+## 🗑 Deprecated
 
 > [!Note]
 >
