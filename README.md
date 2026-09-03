@@ -40,9 +40,11 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ## Confident coding for any learning level!
 
+> [!NOTE]
+>
 > 🎉 **Looking to learn?** My goal is making your journey more fun!
-
-**Code confident.** Any learning level, language, skill, or stage of life.
+>
+> **Code confident.** Any learning level, language, skill, or stage of life.
 
 - 👷🏻 **Builder**?
 - 🤖 **Prompter**?
@@ -118,11 +120,11 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!TIP]
 >
-> 📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**
+> 📖 [Styleguide](./docs/styleguide/index.md) helps you write your cards!
 >
-> 💡 **[Workout for the brain](#a-workout-for-the-brain) for learning ideas.**
+> 💡 [Workout for the brain](#a-workout-for-the-brain) for learning ideas.
 
-Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories. Read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
+**Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories.** It's better to read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
@@ -147,11 +149,7 @@ Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) ca
 
 `Question » Answer` snapshot or sketch of a program or problem.
 
-```
-ⓘ ⚡️ Compiler converts `Markdown -> Html` with `/data/*` files you can copy
-```
 
----
 
 ## Colors
 
