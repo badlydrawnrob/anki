@@ -1,46 +1,65 @@
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](license.md)
-[![Release](https://img.shields.io/github/release/badlydrawnrob/anki)](https://github.com/badlydrawnrob/anki/releases)
-[![GitHub Repo stars](https://img.shields.io/github/stars/badlydrawnrob/anki?style=social)](https://github.com/badlydrawnrob/anki/stargazers)
-
-
 # Anki Programming Flashcards
 
-## Beginner basics to confident coding: templates and syntax highlighting for any learning level!
+<!-- 💰 SALES FLOW => LEGACY users -> MARKETING emails -> PAID users
 
-<!-- SEO keywords:
-I'm not ranked AT ALL with a VPN Google search
+"Learn. Build. Career." framework and Content Pillars.
+
+1. Onboarding deck -> Sign up?
+2. Alpha testers -> Sponsors?
+3. Beginner free course -> Paid users?
+4. Paid courses -> Sponsor me like this?
+5. ...
 -->
 
-<!-- SEO about section:
-Learning to code with Anki — helping 100s of people (of all learning levels) master your programming language quickly! Flashcard themes adding color to code for more than 10 years!
+<!-- 🔍 SEO keywords: NOT RANKING with VPN GOOGLE SEARCH
+
+1. "Programming flashcards" or similar
+2. "Beginner basics to confident coding" might not speak to INTERMEDIATE+
+3. "Beginner to professional in no time" needs something to back it up
+
+About section:
+
+Learning to code with Anki — flashcards and themes for all learning levels. It's helped 100s of people master their programming language fast! Markdown templates add syntax highlighting to add color to your code!
+
+Used to be below "10 years legacy":
+
+    ⓘ Struggle to remember a function? Too many flashcards to review?
+    Can't answer one? Have no time? Fell down a learning rabbit hole?
+    The guide helps structure your learning; it'll become second-nature!
+
+KEYWORDS and BUY TRIGGERS:
+
+    What's important for my core users?
 -->
 
 <!-- LANG PICTURES:
 Add them near the top with a better `Legacy | New App` photo.
 -->
 
-<!-- LEGACY -> PAID sales flow:
-(a) alpha testers (b) the app newsletter
--->
 
-## Want to learn how to code?
 
-> 🎉 **Looking to code?** My goal is making your journey more fun!
+## Confident coding for any learning level!
 
-**Code confident.** Any learning level, skill, or stage of life.
+> 🎉 **Looking to learn?** My goal is making your journey more fun!
+
+**Code confident.** Any learning level, language, skill, or stage of life.
 
 - 👷🏻 **Builder**?
 - 🤖 **Prompter**?
 - 👩‍🎓 **Student?**
 - 🧑🏽‍💻 **New job-er?**
 
-**If so, flashcards are for you!** Everyone knows the best way to learn is by DOING, but ... practice makes perfect. Muscle-memory takes time to build. Flashcards are a super simple memory aid to lock-in learning quickly; colors make it easier to read.
+**If so, flashcards are for you!** Everyone knows the best way to learn is by _doing_, but ... practice makes perfect. Muscle-memory takes time to build. Ever struggled to remember a function? A bug fix you made way back when? A great Ai answer you deleted? A tricky problem you solved?
+
+**Flashcards are a super simple memory aid** to lock-in learning quickly and commit to memory;[^1] colors make your code easier to read. [Anki](https://apps.ankiweb.net/) doesn't do that as standard; but we can!
 
 ## A workout for the brain
 
-**Flashcards fit right into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)" to build that muscle-memory: it's science!
+**Flashcards fit into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)" to build that muscle-memory: it's science!
 
-**Great because they work with almost everything**, whether you prefer 📚 textbooks, 🎥 YouTube tutorials, 🎓 courses, or 🤖 Ai chats. You don't have to be an academic, and they're easy to use for grammar, syntax, and more. Not just for beginners!
+**Great because they work with almost everything**, whether you prefer 📚 textbooks, 🎥 YouTube tutorials, 🎓 courses, or 🤖 Ai chats. You don't have to be an academic, and they're easy to use for almost any programming problem.
+
+### Not just for beginners!
 
 | What are flashcards for?     | Why should I care?                                     |
 | ---------------------------- | ------------------------------------------------------ |
@@ -53,61 +72,54 @@ Add them near the top with a better `Legacy | New App` photo.
 | Lessons learned              | Hard-won documentation of problems you've faced        |
 | Much, much, more             | If you can dream it up, you can make it happen!        |
 
-## Ready to learn? Quick start!
+## Quick start!
 
-<!-- BEGINNER TO PROFESSIONAL IN NO TIME -->
-
-> <mark>**👇👇 The best place to start is this short course:** 👇👇</mark>
+> [!TIP]
 >
-> 🚀 **[`WRITING GREAT FLASHCARDS (a gentle guide)`](#) for all levels** 🚀
+> <mark>**👇 Best place to start learning** 👇</mark>
+>
+> 🚀 **[`WRITE GREAT FLASHCARDS (a gentle guide)`](#) for all levels** 🚀
 
-**A brain-training walk through to get strong in no time!** Top-tips, good/bad card examples, and how to structure your learning.
+**No compiler, no fuss. Brain-training walk through for a strong memory!** It'll show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-Even if you've used this tool before, it's best to begin reading and writing great flashcards! No compiler, no fuss. Once you're reading and writing good flashcards, a couple of options:
+**Long-time Anki users also benefit** from the guide. I'm seeking **[`alpha testers`](#)** who've used the tool before to try out the app (alpha). I'd love to chat!
 
-| 👋 I'm new to flashcards                                     | 🤘 I already know Anki                             |
-| ------------------------------------------------------------ | -------------------------------------------------- |
-| **[`👩‍🎓 STUDY SOME FREE FLASHCARDS`](#)** for easy practicing | **[`Download`](#10-years-legacy)** APF legacy tool |
-| <!-- Courses available to buy -->                            | Become an **[`Alpha tester`](#)**                  |
+### I've finished the guide
 
-- **Legacy version uses a compiler** which can be difficult for beginners.[^1]
-- **[Upgrading](#how-do-i-upgrade)** from a previous version?
+> So you're a flashcard poet? Let's start.
+
+| 👋 I'm new to flashcards | 🤘 I already know Anki |
+| ----------------------- | --------------------- |
+| **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
+
+¶: <small><strong>See [cards](#cards) next<strong>. <strong>Legacy version uses a compiler<strong> which can be difficult for beginners.[^2] <strong>[Upgrading](#how-do-i-upgrade)</strong> from a previous version?<small>
 
 ```
-ⓘ New app coming soon, and new flashcards added often.
+ⓘ New app coming soon (limited preview)
 
-1. You're a long-time user? I'd love to chat [become an Alpha tester]
-2. Beginner? Build confidence with the free guide and flashcards first!
-3. Know GIT and NPM? You'll be fine with the legacy APF compiler :)
+1. Beginner? Start with the "write great flashcards" guide first!
+2. GIT and NPM installed? Try out the free legacy flashcard compiler :)
 ```
 
 ## 10 years legacy
 
-> **🚀 App coming soon! (limited preview)**<br>
+> **🕰 Tried and tested over 10+ years!** so you can trust it.
 
-**Opensource for 10+ years!** I've been writing flashcards a long time, so I've taken all that knowledge and distilled my experience in an app that speeds up learning and remembering (without all the mistakes I made!).
+**I've been writing flashcards a long timeOpensource for 10+ years!** I've been writing flashcards a long time, so I've taken all that knowledge and distilled my experience in an app that speeds up learning and remembering (without all the mistakes I made!).
 
-**Get the most out of this tool:** whether you know [Anki](https://apps.ankiweb.net/) or not, you'll get much better results by **[reading the guide first](#)**: learn quicker, build faster, and remember easier!
+**Opensource for 10+ years!** I've seen things come and go, and flashcards have been a constant in my learning. I don't code super often, so they're invaluable to keep my mind working. It's great to be part of the opensource community, even if we disagree sometimes.[^3]
 
 ```
-ⓘ Struggle to remember a function? Too many flashcards to review?
-Can't answer one? Have no time? Fell down a learning rabbit hole?
-The guide helps structure your learning; it'll become second-nature!
+ⓘ New app coming soon (limited preview)
 ```
 
-<!-- KEYWORDS and BUY TRIGGERS: what other key problems have users had? -->
 
 ## Cards
 
-<!-- Follow the `learn | build | career` framework (one for each) -->
-<!-- Shared fields and how-to styleguide with advanced compiler is required -->
-<!-- Constraints mean a solid learning frame to work within (like an artist) -->
-<!-- Must have everything about the card types in VERY SIMPLE format (deck acts as onboarding) -->
+> <mark>📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**
+> <mark>💡 **[Workout for the brain](#a-workout-for-the-brain) for learning ideas.**</mark>
 
-> - <mark>💡 **See [workout for the brain](#a-workout-for-the-brain) for learning ideas.**</mark>
-> - <mark>📖 **See [the styleguide](./docs/STYLEGUIDE.md) for how to write your cards.**
-
-Flashcards generally fall into the [workout for the brain](#a-workout-for-the-brain) categories. Here's a few writing tips to get you started, but the [gentle writing guide](#) will give you more structure.
+Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories. Read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
@@ -124,7 +136,7 @@ Flashcards generally fall into the [workout for the brain](#a-workout-for-the-br
 
 > BUILD EXAMPLE
 
-`Question` with a `{{missing}}` word you've got to guess.
+`Question` with a `[missing]` word you've got to guess.
 
 ### Draw!
 
@@ -140,9 +152,6 @@ Flashcards generally fall into the [workout for the brain](#a-workout-for-the-br
 
 ## Colors
 
-<!-- DEPRECATED: zero colour themes (always-on defaults) -->
-<!-- DEPRECATED: `colour string` highlight for now? (use Shiki or slightly diff formatting from subheader) -->
-
 > 👨🏻‍🎨 **Life is better in full colour!**
 
 **Code is an art form, but life's bland with no colour!** Anki programming flashcards colors come in light and dark mode: The palettes are great for daytime and evening viewing, and [follow your device](#user-content-dark-mode) defaults. 2 beautiful syntax highlighting colours:
@@ -153,7 +162,10 @@ Flashcards generally fall into the [workout for the brain](#a-workout-for-the-br
 Pandoc converts Markdown `code block`s (with backticks) to full-color HTML.
 
 ```
-ⓘ The new app brings more colors, and better language support. Currently in [limited preview](#10-years-legacy).
+ⓘ New app will bring more colors and better language support.
+
+Deprecated: multiple colour themes
+Deprecated: inline code color highlight
 ```
 
 ## FAQs
@@ -163,7 +175,11 @@ Pandoc converts Markdown `code block`s (with backticks) to full-color HTML.
 <span id="how-do-i-upgrade"><strong>1. How do I upgrade?</strong> (semantic versioning)</span>
 </summary>
 
-Always backup your deck before upgrading! Versioned with <strong>[major.minor.patch](http://semver.org)</strong> standard: updates shouldn't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones and ``[update to fsrs algorithm]` if you wish.
+> [!CAUTION]
+>
+> Always backup your deck before upgrading!
+
+Versioned with <strong>[major.minor.patch](http://semver.org)</strong> standard: updates shouldn't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones and ``[update to fsrs algorithm]` if you wish.
 
 </details>
 
@@ -224,6 +240,8 @@ If you're having formatting problems, make sure you're **[following the guide](#
 
 </details>
 
-[^1]: Online compile still works [here](https://tinyurl.com/mr43ydea) and [here](https://pandoc.org/app/), but it's a bit clunky, and the compiler `data-*` files contain the styleguide for quick reference. I'm also keen on more users (especially beginners) trying out my limited preview app.
+[^1]: Ai [brain rot](https://time.com/7295195/ai-chatgpt-google-learning-school/) is a growing problem, which I write about in [the guide](#quick-start).
 
-[^2]: For a good number of [reasons](https://github.com/badlydrawnrob/anki/issues/181) I've mentioned before. Some are now fixed (such as installation), but needs have diverged enough for a standalone app to emerge.
+[^2]: Online compile still works [here](https://tinyurl.com/mr43ydea) and [here](https://pandoc.org/app/), but it's a bit clunky, and the compiler `data-*` files contain the styleguide for quick reference. I'm also keen on more users (especially beginners) trying out my limited preview app.
+
+[^3]: I'm building a dedicated app for a good number of [reasons](https://github.com/badlydrawnrob/anki/issues/181) I've mentioned before. Some are now fixed (such as installation), but my coding style and the tool's needs have diverged enough to tentatively go it alone.
