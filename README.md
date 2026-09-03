@@ -43,8 +43,9 @@ Add them near the top with a better `Legacy | New App` photo.
 > [!NOTE]
 >
 > 🎉 **Looking to learn?** My goal is making your journey more fun!
->
-> **Code confident.** Any learning level, language, skill, or stage of life.
+> 😎 **Code confident.** Any learning level, language, skill, or stage of life.
+
+Which one are you?
 
 - 👷🏻 **Builder**?
 - 🤖 **Prompter**?
