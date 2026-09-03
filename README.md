@@ -126,7 +126,7 @@ Which one are you?
 >
 > 💡 **[Workout for the brain](#a-workout-for-the-brain)** for more learning ideas.
 
-**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
+**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) before working with the compiler,[^3] but here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
