@@ -74,11 +74,11 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ## Quick start!
 
-> [!TIP]
->
-> <mark>**👇 Best place to start learning** 👇</mark>
+> [!IMPORTANT]
 >
 > 🚀 **[`WRITE GREAT FLASHCARDS (a gentle guide)`](#) for all levels** 🚀
+>
+> ☝️ Best place to start learning ☝️
 
 **No compiler, no fuss. Brain-training walk through for a strong memory!** It'll show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
