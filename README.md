@@ -103,9 +103,9 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ## 10 years legacy
 
-> **🕰 Tried and tested over 10+ years!** so you can trust it.
+> **🕰 Tried and tested over 10+ years!** Flashcards you can trust.
 
-**I've been writing flashcards a long timeOpensource for 10+ years!** I've been writing flashcards a long time, so I've taken all that knowledge and distilled my experience in an app that speeds up learning and remembering (without all the mistakes I made!).
+**I've been writing flashcards a long time!** I've taken all that knowledge and experience and distilled it into a tool that will speed up learning and remembering (without all the mistakes I made!).
 
 **Opensource for 10+ years!** I've seen things come and go, and flashcards have been a constant in my learning. I don't code super often, so they're invaluable to keep my mind working. It's great to be part of the opensource community, even if we disagree sometimes.[^3]
 
@@ -116,8 +116,10 @@ Add them near the top with a better `Legacy | New App` photo.
 
 ## Cards
 
-> <mark>📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**
-> <mark>💡 **[Workout for the brain](#a-workout-for-the-brain) for learning ideas.**</mark>
+> [!TIP]
+>
+> 📖 **[Styleguide](./docs/STYLEGUIDE.md) helps you write your cards!**\
+> 💡 **[Workout for the brain](#a-workout-for-the-brain) for learning ideas.**
 
 Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories. Read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
 
