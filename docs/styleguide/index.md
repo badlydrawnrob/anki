@@ -16,7 +16,7 @@ What's a linter? @ https://tinyurl.com/linter-for-beginners
 
 ## Installing the compiler
 
-> 📖 **Read this styleguide properly first!**
+> 📖 **Read the styleguide properly first!**
 
 1. Git clone
 2. Install [pandoc](https://pandoc.org/installing.html) (not `.wasm`)
@@ -40,8 +40,11 @@ The `/data/*` files help you quickly write your flashcards. They contain `<!-- i
 
 ## Writing cards
 
-> 🧐 See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain) for study ideas.<br>
-> ⤷ ★ = required field | ☆ = optional field
+> [!IMPORTANT]
+>
+> 🧐 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
+>
+> 🧐 **Key:** ⤷ = strict markdown | ★ = required | ☆ = optional
 
 - **Write Markdown** in `/data/*` files and `npm run data`
 - **Check the `/build` folder** for the compiled HTML (under comments)

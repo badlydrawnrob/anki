@@ -96,7 +96,7 @@ Which one are you?
 >
 > | 👋 I'm new to flashcards | 🤘 I already know Anki |
 > | ----------------------- | --------------------- |
-> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](#10-years-legacy)** legacy<sup>¶</sup> |
+> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy<sup>¶</sup> |
 
 ```
 ⓘ New app coming soon (limited preview)
@@ -163,8 +163,8 @@ Which one are you?
 
 **Code is an art form, but life's bland with no colour!** Anki programming flashcards have a color palette for any time of the day, saving your eyes for candlelit coding. They [follow your device](#user-content-dark-mode) defaults, and syntax highlighting themes come in 2 flavours:
 
-- 🥷🏻 Monochrome
-- ⛵️ Breeze Dark
+- 🥷🏻 **Monochrome**
+- ⛵️ **Breeze Dark**
 
 ```
 ⓘ New app will bring more colors and better language support.
