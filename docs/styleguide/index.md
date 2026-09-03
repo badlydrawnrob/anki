@@ -1,21 +1,26 @@
 # STYLEGUIDE
 
-> ✍️ **Strict [CommonMark](https://commonmark.org) format.**<br>
-> 📧 **Questions?** Get in touch and let me know.
+> [!IMPORTANT]
+>
+>  ✍️ **Strict [CommonMark](https://commonmark.org) format.**
+>
+> 📧 **Questions?** Get in touch.
 
 No JS. Strict Markdown. Strict HTML.
 
 ```
-ⓘ New app will introduce quicker-to-read, opinionated, strict styleguide.
+ⓘ New app introduces quick-to-read, opinionated, strict styleguide.
 
-Sharing becomes easier; reading becomes predictable and standardised (a linter).
-Not enforced in Legacy, but will be in limited preview app.
+Sharing becomes easier; reading is predictable and standardised.
+Not enforced in Legacy, but linter arrives in limited preview app.
 
 What's a linter? @ https://tinyurl.com/linter-for-beginners
 ```
 
 ## Installing the compiler
 
+> [!TIP]
+>
 > 📖 **Read the styleguide properly first!**
 
 1. Git clone
@@ -46,11 +51,11 @@ The `/data/*` files help you quickly write your flashcards. They contain `<!-- i
 >
 > 🧐 **Key:** ⤷ = strict markdown | ★ = required | ☆ = optional
 
-- **Write Markdown** in `/data/*` files and `npm run data`
-- **Check the `/build` folder** for the compiled HTML (under comments)
-- **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
-- **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3)
-- **Check this styleguide** for mistakes in your writing!
+1. **Write Markdown** in `/data/*` files and `npm run data`
+2. **Check the `/build` folder** for the compiled HTML (under comments)
+3. **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
+4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3)
+5. **Check this styleguide** for mistakes in your writing!
 
 ```
 ⓘ New app makes writing much easier.
@@ -60,9 +65,13 @@ The `Markdown -> Html` flow is sub-optimal, but hopefully the limited preview ap
 will be a big impovement. I'm spending a lot of time on making data entry nicer!!
 ```
 
-## Common fields (all cards)
+## Simple! Card
 
-💡 See [a workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain) for study ideas.
+> [!CAUTION]
+>
+> **All cards share most fields**
+>
+> **See [Draw!](#draw) and [Missing!](#missing)** for special fields.
 
 ### ★ Question
 
@@ -107,7 +116,11 @@ The main question, statement, or fact.
 
 ### ★ Code Question
 
+> [!IMPORTANT]
+>
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+>
+> **See [Draw!] and [Missing!]** for special fields.
 
 - Essential code for key learning point (fits the question)
 - See notes below for Draw! and Missing! cards
@@ -175,21 +188,29 @@ Paragraph or two that supplements the key learning point.
 
 ---
 
-## Draw! Missing! Card
+## Draw! Card
 
-> Special fields used for these cards.
+### ★ Code Question
 
-### ★ Code Question (Draw!)
-
-> ⤷ `image` (minify and save to Anki with 📎 paperclip button)
+> [!NOTE]
+>
+> ⤷ `image` (make sure to minify)
+>
+> Toggle HTML and press 📎 paperclip button to save to Anki.
 
 - A sketch of a program or problem
 - A sample of the code we're learning
 - A working app or user-interface
 
-### ★ Code Question (Missing!)
+## Missing! Card
 
+### ★ Code Question
+
+> [!NOTE]
+>
 > ⤷ `code block` (requires a `{{c1::missing word::with optional hint}}`)
+>
+> Toggle HTML and press `[...]` to add cloze deletion to Anki.
 
 `Code Answer` field is not used (uses `Code Question` front and back)
 
@@ -200,11 +221,15 @@ Paragraph or two that supplements the key learning point.
 
 ## ⚠️ Deprecated
 
-> Disagree with any of these changes? Let me know!
+> [!Note]
+>
+> **Disagree with any of these changes?** Get in touch.
 
 1. `Code Inline` field no longer colors **bold** and _italic_ for styling.
 2. `Markdown` field no longer required: `npm run data-code-reverse` if needed.
 
 ```
-ⓘ New app flashcards will edit with raw Markdown and cache HTML where required.
+ⓘ New app features
+
+Flashcards will edit raw Markdown and cache HTML where required.
 ```
