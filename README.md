@@ -42,8 +42,8 @@ Add them near the top with a better `Legacy | New App` photo.
 
 > [!NOTE]
 >
-> 🎉 **Looking to learn?** My goal is making your journey more fun!\
-> 😎 **Code confident.** Any learning level, language, skill, or stage of life.
+> * 🎉 **Looking to learn?** My goal is making your journey more fun!
+> * 😎 **Code confident!!** Any learning level, language, skill, or stage of life.
 
 Which one are you?
 
@@ -64,15 +64,15 @@ Which one are you?
 
 ### Not just for beginners!
 
-| What are flashcards for?     | Why should I care?                                     |
+| What are flashcards for?      | Why should I care?                                     |
 | ---------------------------- | ------------------------------------------------------ |
 | **Add color** to your code   | For artistic fun and ease-of-reading                   |
 | **Any language** grammar     | Learn and store it's functions and syntax to memory    |
 | APIs, architecture, patterns | Learn best practices and your favourite packages       |
-| Discover and solve problems  | That matter to you, adding when they come up           |
+| **Discover and solve problems** | That matter to you, adding when they come up        |
 | Grok your data               | Lock-in data structures, algorithms, and visualisation |
-| Fixing bugs and errors       | Remember that sneaky bug for next time                 |
-| Lessons learned              | Hard-won documentation of problems you've faced        |
+| **Fixing bugs and errors**   | Remember that sneaky bug for next time                 |
+| **Lessons learned**          | Hard-won documentation of problems you've faced        |
 | Much, much, more             | If you can dream it up, you can make it happen!        |
 
 ## Quick start!
@@ -95,11 +95,11 @@ Which one are you?
 >
 > | 👋 I'm new to flashcards | 🤘 I already know Anki |
 > | ----------------------- | --------------------- |
-> | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
+> | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy<sup>¶</sup> |
 
 ```
 ⓘ New app coming soon (limited preview)
-ⓘ Legacy version uses a compiler which can be difficult for beginners.
+ⓘ Legacy flashcards use a compiler which can be difficult for beginners.
 
 ¶: See CARDS section next. Upgrading? See FAQs.
 ```
@@ -121,9 +121,9 @@ Which one are you?
 
 > [!TIP]
 >
-> 📖 [Styleguide](./docs/styleguide/index.md) helps you write your cards!
+> 📖 **[Styleguide](./docs/styleguide/index.md)** helps you write your cards!
 >
-> 💡 [Workout for the brain](#a-workout-for-the-brain) for learning ideas.
+> 💡 **[Workout for the brain](#a-workout-for-the-brain)** for learning ideas.
 
 **Flashcards mostly fall into [workout for the brain](#a-workout-for-the-brain) categories.** It's better to read [the guide](#quick-start) first, but here's some basic writing tips to get you started:
 
