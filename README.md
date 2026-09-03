@@ -94,7 +94,7 @@ Add them near the top with a better `Legacy | New App` photo.
 > | ----------------------- | --------------------- |
 > | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
 
-¶: <small><strong>See [cards](#cards) next<strong>. <strong>Legacy version uses a compiler<strong> which can be difficult for beginners.[^2] <strong>[Upgrading](#how-do-i-upgrade)</strong> from a previous version?<small>
+¶: <small>See [cards](#cards) next. Legacy version uses a compiler which can be difficult for beginners.[^2] [Upgrading](#how-do-i-upgrade) from a previous version?<small>
 
 ```
 ⓘ New app coming soon (limited preview)
