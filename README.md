@@ -94,13 +94,11 @@ Add them near the top with a better `Legacy | New App` photo.
 > | ----------------------- | --------------------- |
 > | **[`👩‍🎓 STUDY FREE FLASHCARDS`](#)** first | **[`Download`](#10-years-legacy)** legacy tool<sup>¶</sup> |
 
-¶: <small>See [cards](#cards) next. Legacy version uses a compiler which can be difficult for beginners.[^2] [Upgrading](#how-do-i-upgrade) from a previous version?<small>
-
 ```
 ⓘ New app coming soon (limited preview)
+ⓘ Legacy version uses a compiler which can be difficult for beginners.
 
-1. Beginner? Start with the "write great flashcards" guide first!
-2. GIT and NPM installed? Try out the free legacy flashcard compiler :)
+¶: See CARDS section next. Upgrading? See FAQs.
 ```
 
 ## 10 years legacy
