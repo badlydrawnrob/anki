@@ -86,11 +86,11 @@ will be a big impovement. I'm spending a lot of time on making data entry nicer!
 
 ### Strict Rich Markdown
 
-> For the `Answer` field only.
+> Currently for the `Answer` field only.
 
 Example that uses a "stepper" to shows what our code does:
 
-````markdown
+````text
 > **Key answer learning point in bold** with the essential detail up top.
 > It's nice to bold a few key answer words so they'll stand out.
 
@@ -108,7 +108,7 @@ someCoolExtra(two, words):
 
 You can also use a Markdown table instead of the list, but keep headings and rows short. Tables are not part of CommonMark, but they come in handy sometimes.
 
-```
+```text
 | What it is            | What it does                  |
 | --------------------- | ----------------------------- |
 | `someCoolShort(code)` | Takes a string and prints it  |
