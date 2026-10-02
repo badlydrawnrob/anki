@@ -3,6 +3,7 @@
 > [!IMPORTANT]
 >
 >  ✍️ **Strict [CommonMark](https://commonmark.org)** required
+> 💡 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
 >
 > 📧 **Questions?** Get in touch.
 
@@ -42,25 +43,33 @@ npm run data
 npm run data-code-reverse
 ```
 
-**The `/data/*` files help you quickly write your flashcards.** They contain `<!-- instructions -->` in comments, but read docs below first. View in your code editor — they're not meant for the browser!
+### Data files
 
-## Writing cards
+> **Help you write your flaschards quicker.**
+> View in your code editor (they're not for the browser!)
 
-> [!IMPORTANT]
->
-> 💡 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
->
-> 🧐 **Key:**
->
-> - ⤷ = strict markdown
-> - ★ = required
-> - ☆ = optional
+Read the styleguide properly first, but there's `<-- instruction` --> in the data files for speed.
 
 1. **Write Markdown** in `/data/*` files and `npm run data`
 2. **Check the `/build` folder** for the compiled HTML (under comments)
 3. **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
 4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3 per field)
 5. **Check this styleguide** for mistakes in your writing!
+
+
+## Quick Markdown lesson
+
+> How to write your flashcards.
+
+| Field | Example Markdown |
+| [★ Question](#-question) | Heading with `inline` code |
+| [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
+| [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
+| [☆ Code Inline](#-code-inline) | someCoolShort("code") |
+| [★ Code Question](#-code-question) | <pre>```\nsomeCoolShort(code):\n&nbsp;&nbsp;print(f"in action {code}")\n```</pre> |
+| [☆ Code Answer](#-code-answer) | ... |
+| [★ Answer](#-answer) | See the "strict rich markdown" guide below |
+| [☆ Answer Notes](#-answer-notes) | Extra information with **strong** notes and optional [link](https://elm-lang.org/examples) |
 
 ```
 ⓘ New app makes writing much easier.
@@ -70,13 +79,54 @@ The `Markdown -> Html` flow is sub-optimal, but hopefully the limited preview ap
 will be a big impovement. I'm spending a lot of time on making data entry nicer!!
 ```
 
-## Simple! Card
+### Strict Rich Markdown
+
+> For the `Answer` field only.
+
+You may use a blockquote, paragraphs, a list or table (not both!), and one code block. Example below, using a "stepper" that shows what our code does:
+
+````markdown
+> **Key answer learning point in bold** with the essential detail up top.
+> It's nice to bold a few key answer words so they'll stand out.
+
+- `someCoolShort("code")` and what the function does
+- `code` is the argument that gets passed to `print()`
+- `print(f"")` with f-string passes string to `{code}`
+
+An extra paragraph where you can write things like _code verbs first_ but make sure you don't stray too much from the **one idea** in this flashcard. Need another code block?
+
+```
+someCoolExtra(two, words):
+  print(f"Putting {two} {words} together!")
+```
+````
+
+You can also use a Markdown table instead of the list, but keep headings and rows short. Tables are not part of CommonMark, but they come in handy sometimes.
+
+```
+| What it is            | What it does                  |
+|-----------------------|-------------------------------|
+| `someCoolShort(code)` | Takes a string and prints it  |
+```
+
+```
+ⓘ New app makes writing much easier.
+
+Strict Markdown and styleguide order will be enforced automatically.
+```
+
+
+## Card fields
 
 > [!CAUTION]
 >
-> **All cards share most fields**
+> **All cards share most fields** and special fields are marked.
 >
-> **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
+> 🧐 **Key:**
+>
+> - ⤷ = strict markdown
+> - ★ = required
+> - ☆ = optional
 
 ### ★ Question
 
@@ -90,7 +140,7 @@ The main question, statement, or fact.
 
 ### ☆ Question Hint
 
-> ⤷ `plain string` (ABC123, basic punctuation)
+> ⤷ `plain string` (ABC, basic punctuation)
 
 - Helpful for when the header question grows too long ...
 - Or the `code block` requires some context or a hint
@@ -110,7 +160,7 @@ The main question, statement, or fact.
 
 ### ☆ Code Inline
 
-> ⤷ `code string` (inline code grammar, any `Char` except `` ` `` or `/n`ewlines)
+> ⤷ `code string` (short inline code grammar with any `Char`, but no `` ` `` or `/n`ewlines)
 
 - A short line of code (not a `code block`)
 - The actual function or symbol, i.e. `len()`
@@ -123,69 +173,137 @@ The main question, statement, or fact.
 
 > [!IMPORTANT]
 >
-> ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+> **This is a special field** and depends on the card.
 >
-> ✍️ **See [Draw!](#draw-card) and [Missing!](#missing-card)** for special fields.
+> **Make sure you add correct content** for each card type!
+
+<details open>
+<summary>
+<span id="simple-front"><strong>1. Simple card</strong></span>
+</summary>
+
+> ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
 - Essential code for key learning point (fits the question)
-- See notes below for Draw! and Missing! cards
+
+</details>
+
+<details>
+<summary>
+<span id="draw-front"><strong>2. Draw card</strong></span>
+</summary>
+
+> ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
+>
+> 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
+
+- A sketch of a program or problem
+- A sample of the code we're learning
+- A working app or user-interface
 
 ```
-ⓘ ⚠️ Draw! card requires an image:
-  (toggle HTML » press 📎 paperclip button)
+ⓘ Image size:
+  @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
 
-ⓘ ⚠️ Missing! card requires a cloze field:
-  `{{c1::missing word::optional hint}}` (toggle HTML » press `[...]`)
-
-It's best to press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for these cards.
-Rich text preview is enabled, where you add content by using buttons in top-right.
-Add correct content for each card type! (📎 image, `[...]` cloze, `[...]+` cloze).
-
-Cloze:
-@ https://docs.ankiweb.net/editing.html#cloze-deletion
-
-Images:
-@ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
-
-Bugs:
-@ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
+You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
+enable "Rich text preview", where you can add an image using buttons in the menu.
 ```
+
+</details>
+
+<details>
+<summary>
+<span id="missing-front"><strong>3. Missing card</strong></span>
+</summary>
+
+> ⤷ `code block` (requires a cloze: `{{c1::missing word::with optional hint}}`)
+>
+> 👆 **Toggle HTML and press `[...]`** to add cloze deletion to Anki.
+
+- Essential code for key learning point (fits the question)
+- See [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) in Anki docs
+
+```
+ⓘ Image size:
+  @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
+
+ⓘ Bug:
+  @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
+
+It can be easier to press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this
+card, to enable "Rich text preview", where you can add press the `[...]` button
+in the menu.
+```
+
+</details>
+
 
 ### ☆ Code Answer
 
+> [!IMPORTANT]
+>
+> **This is a special field** and depends on the card.
+>
+> **Make sure you add correct content** for each card type!
+
+<details open>
+<summary>
+<span id="simple-back"><strong>1. Simple card</strong></span>
+</summary>
+
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
-- Essential code for key learning point (describes the answer)
+- Essential code for key learning point (fits the question)
+
+</details>
+
+<details>
+<summary>
+<span id="draw-back"><strong>2. Draw card</strong></span>
+</summary>
+
+> ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
+>
+> 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
+
+- A sketch of a program or problem
+- A sample of the code we're learning
+- A working app or user-interface
 
 ```
-ⓘ Missing! card does not have this field.
+ⓘ Image size:
+  @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
+
+You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
+enable "Rich text preview", where you can add an image using buttons in the menu.
 ```
+
+</details>
+
+<details>
+<summary>
+<span id="missing-back"><strong>3. Missing card (not used)</strong></span>
+</summary>
+
+> [!IMPORTANT]
+>
+> **Missing card does not use this field** — only the `Code Question` field.
+
+</details>
+
 
 ### ★ Answer
 
-> ⤷ `strict rich markdown` (blockquote, paragraph, lists, table, `code block`)
+> [!IMPORTANT]
+>
+> **See Quick Markdown Lesson** for how to write strict rich markdown.
+>
+> ⤷ [`strict rich markdown`](#strict-rich-markdown) (see above)
 
 - A short explanation of what we're trying to learn
-- A stepper to walk through the `code block` (code `verbs()` go first)
+- A stepper to walk through the `code block`
 - A table of contents (keep lines short, not part of CommonMark)
 
-```
-ⓘ Preferred styleguide below
-ⓘ List OR table (not both in one card)
-
-> **Key answer learning point in bold** with some extra
-> essential detail (it's nice to bold a few key answer words).
-
-- `function()` optional stepper (1)
-- `variable` with next step (2)
-- `finally` the last step (3)
-
-| What it is | What it does |
-|------------|--------------|
-| Optional   | Table        |
-
-Paragraph or two that supplements the key learning point.
-```
 
 ### ☆ Answer Notes
 
@@ -196,34 +314,6 @@ Paragraph or two that supplements the key learning point.
 - A common link or story between cards
 
 ---
-
-## Draw! Card
-
-### ★ Code Question
-
-> [!NOTE]
->
-> ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
->
-> 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
-
-- A sketch of a program or problem
-- A sample of the code we're learning
-- A working app or user-interface
-
-## Missing! Card
-
-### ★ Code Question
-
-> [!NOTE]
->
-> ⤷ `code block` (requires a `{{c1::missing word::with optional hint}}`)
->
-> 👆 **Toggle HTML and press `[...]`** to add cloze deletion to Anki.
->
-> ⚠️ **`Code Answer` field is not used** for Missing!
-
-- See the [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) section of Anki docs
 
 
 ## 🗑 Deprecated
