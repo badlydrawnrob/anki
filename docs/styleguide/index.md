@@ -63,11 +63,11 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 
 | Field | Example Markdown |
 | ----- | ---------------- |
-| [★ Question](#-question) | Heading with &grave;inline`` code |
+| [★ Question](#-question) | Heading with &grave;inline&grave; code |
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question) | <pre>```<br> someCoolShort(code): <br>  print(f"in action {code}") <br>```</pre> |
+| [★ Code Question](#-code-question) | &grave;&grave;&grave;<br> someCoolShort(code): <br>  print(f"in action {code}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer) | See the "strict rich markdown" guide below |
 | [☆ Answer Notes](#-answer-notes) | Extra information with **strong** notes and optional [link](https://elm-lang.org/examples) |
