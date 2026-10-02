@@ -43,10 +43,7 @@ npm run data
 npm run data-code-reverse
 ```
 
-### Using the `/data/*` files
-
-> **Help you write your flaschards quicker.**
-> View in your code editor (they're not for the browser!)
+### Using the `/data/*` files for speed
 
 Read the styleguide properly first, but there's `<-- instruction` --> in the data files for speed.
 
@@ -56,11 +53,17 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3 per field)
 5. **Check this styleguide** for mistakes in your writing!
 
+```
+ⓘ View in your code editor (they're not for the browser!)
+   <-- instruction --> comments in the data files for a quick-lookup.
+```
+
 
 ## Quick Markdown lesson
 
-> How to write your flashcards.
-> Some fields don't require Markdown tags.
+> How to write your flashcards with Markdown.
+
+Not every field requires Markdown.
 
 | Field | Example Markdown |
 | ----- | ---------------- |
@@ -85,7 +88,7 @@ will be a big impovement. I'm spending a lot of time on making data entry nicer!
 
 > For the `Answer` field only.
 
-You may use a blockquote, paragraphs, a list or table (not both!), and one code block. Example below, using a "stepper" that shows what our code does:
+Example that uses a "stepper" to shows what our code does:
 
 ````markdown
 > **Key answer learning point in bold** with the essential detail up top.
@@ -305,6 +308,13 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 - A short explanation of what we're trying to learn
 - A stepper to walk through the `code block`
 - A table of contents (keep lines short, not part of CommonMark)
+
+```
+ⓘ Markdown tips:
+  One blockquote, paragraphs, one list OR table (not both!), one code block.
+  List stepper should put `codeVerb()` first on each line for readability, and
+  table content should be short and sweet. Strictness makes reading reliable.
+```
 
 
 ### ☆ Answer Notes
