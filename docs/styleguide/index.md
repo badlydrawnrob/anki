@@ -57,20 +57,17 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 5. **Check this styleguide** for mistakes in your writing!
 
 
-## Quick Markdown lesson
+## Quick Markdown lesson
 
 > How to write your flashcards.
 
 | Field | Example Markdown |
 | ----- | ---------------- |
-| [★ Question](#-question) | Heading with `inline` code |
+| [★ Question](#-question) | Heading with ```inline``` code |
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question) | <pre>```
-someCoolShort(code):
-  print(f"in action {code}")
-```</pre> |
+| [★ Code Question](#-code-question) | <pre>```\nsomeCoolShort(code):\n&nbsp;&nbsp;print(f"in action {code}")\n```</pre> |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer) | See the "strict rich markdown" guide below |
 | [☆ Answer Notes](#-answer-notes) | Extra information with **strong** notes and optional [link](https://elm-lang.org/examples) |
