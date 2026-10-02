@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 >
->  ✍️ **Strict [CommonMark](https://commonmark.org)** required
+>  ✍️ **Strict [CommonMark](https://commonmark.org)** required\
 > 💡 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
 >
 > 📧 **Questions?** Get in touch.
@@ -62,6 +62,7 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 > How to write your flashcards.
 
 | Field | Example Markdown |
+| ----- | ---------------- |
 | [★ Question](#-question) | Heading with `inline` code |
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
@@ -105,7 +106,7 @@ You can also use a Markdown table instead of the list, but keep headings and row
 
 ```
 | What it is            | What it does                  |
-|-----------------------|-------------------------------|
+| --------------------- | ----------------------------- |
 | `someCoolShort(code)` | Takes a string and prints it  |
 ```
 
