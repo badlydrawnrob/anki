@@ -106,13 +106,13 @@ someCoolExtra(two, words):
 ```
 ````
 
-You can also use a Markdown table instead of the list, but keep headings and rows short. Tables are not part of CommonMark, but they come in handy sometimes.
-
 ```text
 | What it is            | What it does                  |
 | --------------------- | ----------------------------- |
 | `someCoolShort(code)` | Takes a string and prints it  |
 ```
+
+You can also use a Markdown table (above) instead of the list, but keep headings and rows short. Tables are not part of CommonMark, but they come in handy sometimes.
 
 ```
 ⓘ New app makes writing much easier.
@@ -135,7 +135,7 @@ Strict Markdown and styleguide order will be enforced automatically.
 
 ### ★ Question
 
-> ⤷ `plain string` (ABC123, `inlineCode()`, basic punctuation)
+> ⤷ `plain string` (ABC123, &grave;inlineCode()&grave;, basic punctuation)
 
 The main question, statement, or fact.
 
@@ -165,7 +165,7 @@ The main question, statement, or fact.
 
 ### ☆ Code Inline
 
-> ⤷ `code string` (short inline code grammar with any `Char`, but no `` ` `` or `/n`ewlines)
+> ⤷ `code string` (any inline code character, but no `` ` `` or `/n`ewlines)
 
 - A short line of code (not a `code block`)
 - The actual function or symbol, i.e. `len()`
