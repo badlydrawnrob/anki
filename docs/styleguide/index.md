@@ -60,6 +60,7 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 ## Quick Markdown lesson
 
 > How to write your flashcards.
+> Some fields don't require Markdown tags.
 
 | Field | Example Markdown |
 | ----- | ---------------- |
@@ -67,10 +68,10 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question) | &grave;&grave;&grave;<br> someCoolShort(code): <br>&nbsp;&nbsp;&nprint(f"in action {code}") <br>&grave;&grave;&grave; |
+| [★ Code Question](#-code-question) | &grave;&grave;&grave;<br> def someCoolShort(code): <br>&nbsp;&nbsp;&nbsp;print(f"in action {code}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
-| [★ Answer](#-answer) | See the "strict rich markdown" guide below |
-| [☆ Answer Notes](#-answer-notes) | Extra information with **strong** notes and optional [link](https://elm-lang.org/examples) |
+| [★ Answer](#-answer) | See the [strict rich markdown](#strict-rich-markdown) guide below |
+| [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#42;link&#42;&#42;https://elm-lang.org/examples&#42; |
 
 ```
 ⓘ New app makes writing much easier.
