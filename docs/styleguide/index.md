@@ -63,7 +63,7 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 
 | Field | Example Markdown |
 | ----- | ---------------- |
-| [★ Question](#-question) | Heading with ``inline`` code |
+| [★ Question](#-question) | Heading with &grave;inline`` code |
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
