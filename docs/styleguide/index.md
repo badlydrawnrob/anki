@@ -74,7 +74,7 @@ Not every field requires Markdown.
 | [★ Code Question](#-code-question) | &grave;&grave;&grave;<br> def someCoolShort(code): <br>&nbsp;&nbsp;&nbsp;print(f"in action {code}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer) | See the [strict rich markdown](#strict-rich-markdown) guide below |
-| [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#91link&#93&#40;https://elm-lang.org/examples&#41; |
+| [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#91;link&#93;&#40;https://elm-lang.org/examples&nbsp;&#41; |
 
 ```
 ⓘ New app makes writing much easier.
