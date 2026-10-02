@@ -43,14 +43,14 @@ npm run data
 npm run data-code-reverse
 ```
 
-### Data files
+### Using the `/data/*` files
 
 > **Help you write your flaschards quicker.**
 > View in your code editor (they're not for the browser!)
 
 Read the styleguide properly first, but there's `<-- instruction` --> in the data files for speed.
 
-1. **Write Markdown** in `/data/*` files and `npm run data`
+1. **Write Markdown** in data files and `npm run data`
 2. **Check the `/build` folder** for the compiled HTML (under comments)
 3. **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
 4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3 per field)
@@ -67,7 +67,10 @@ Read the styleguide properly first, but there's `<-- instruction` --> in the dat
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question) | <pre>```\nsomeCoolShort(code):\n&nbsp;&nbsp;print(f"in action {code}")\n```</pre> |
+| [★ Code Question](#-code-question) | <pre>```
+someCoolShort(code):
+  print(f"in action {code}")
+```</pre> |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer) | See the "strict rich markdown" guide below |
 | [☆ Answer Notes](#-answer-notes) | Extra information with **strong** notes and optional [link](https://elm-lang.org/examples) |
