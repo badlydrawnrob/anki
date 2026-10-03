@@ -328,10 +328,12 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 ---
 
 
-<details open>
+<details>
 <summary>
 <span id="simple-back"><strong>🗑 Deprecated</strong></span>
 </summary>
+
+<br>
 
 1. `Code Inline` field no longer colors **bold** and _italic_ for styling.
 2. `Markdown` field no longer required: `npm run data-code-reverse` if needed.
