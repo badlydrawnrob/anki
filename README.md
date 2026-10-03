@@ -92,8 +92,6 @@ Which one are you?
 
 ### 👩‍🏫 I'm using Anki already
 
-> **Long-time Anki users also benefit from [the guide](#)** so try that before you download the legacy tool.
-
 **[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards,<sup>¶</sup> then read [Guide](#), [Cards](#cards), and [Styleguide](./docs/styleguide/index.md) docs.** I'm seeking **[`alpha testers`](#)** who've used the legacy tool already. If you'd like to try out the new (alpha) application, I'd love to chat to you!
 
 ```
