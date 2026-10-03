@@ -266,7 +266,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 <br>
 
-> ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
+> ⤷ `code block | image` (minify and roughly `600`—`~1170` pixels wide)
 
 Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the
 "Rich text preview", then add an image using the 📎 paperclip button.
@@ -300,7 +300,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 > [!NOTE]
 >
-> **See [Quick Markdown Lesson](#quick-markdown-lesson)** for writing strict rich markdown.
+> ✍️ **See [Quick Markdown Lesson](#quick-markdown-lesson)** for writing strict rich markdown.
 >
 > ⤷ `strict rich markdown`
 
