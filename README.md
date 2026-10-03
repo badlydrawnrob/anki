@@ -90,7 +90,7 @@ Which one are you?
 
 **No compiler, no fuss for beginners. Brain-training walk through for a strong memory!** The newsletter shows you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-### 🏎 I already know Anki
+### 👩‍🏫 I already know Anki
 
 **Long-time Anki users also benefit from [the guide](#)** so try that before you download the legacy tool.
 
