@@ -54,11 +54,11 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 
 > [!NOTE]
 >
-> Writing your flashcards with Markdown.
+> **Writing your flashcards with Markdown.**
 >
 > 🧐 **Key:**
 >
-> - &#95;italic&#95; &#42;&#42;bold&#42;&#42; &grave;inlineCode()&grave; &#91;link&#93;&#40;()
+> - &#95;italic&#95; | &#42;&#42;bold&#42;&#42; | &grave;inlineCode()&grave; | &#91;link&#93;()
 
 | Card field | Example Markdown |
 | --------- | ---------------- |
@@ -79,8 +79,8 @@ Not every field requires Markdown (requires deleting `🗑️ tags` in `/data/*`
 §: Rich Strict Markdown used for `★ Answer` field, which looks like this:
 
 
-> **Answers one key point should be in bold** with the essential detail up top.
-> This makes the answer stand out and read quickly, when reviewing the flashcard.
+> **Answers one key point should be in bold** with the essential detail up top,
+> inside a blockquote. Makes the answer stand out and read quickly, for reviewing!
 
 - `fencedCode("block")` steps through it's code
 - `block` is the argument which passes to `print()`
@@ -279,6 +279,8 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 <span id="missing-back"><strong>Missing card (not used)</strong></span>
 </summary>
 
+<br>
+
 > [!IMPORTANT]
 >
 > **Missing card does not use this field** — only the `Code Question` field.
@@ -319,9 +321,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 ## 🗑 Deprecated
 
-> [!Note]
->
-> **Disagree with any of these changes?** Get in touch.
+> 📧 **Disagree with any of these changes?** Get in touch.
 
 1. `Code Inline` field no longer colors **bold** and _italic_ for styling.
 2. `Markdown` field no longer required: `npm run data-code-reverse` if needed.
