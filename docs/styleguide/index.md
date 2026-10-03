@@ -193,6 +193,9 @@ The main question, statement, or fact.
 >
 > 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
 
+You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
+enable "Rich text preview", where you can add an image using buttons in the menu.
+
 - A sketch of a program or problem
 - A sample of the code we're learning
 - A working app or user-interface
@@ -200,9 +203,6 @@ The main question, statement, or fact.
 ```
 ⓘ Image size:
   @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
-
-You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
-enable "Rich text preview", where you can add an image using buttons in the menu.
 ```
 
 </details>
