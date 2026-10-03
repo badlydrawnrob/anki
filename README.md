@@ -92,7 +92,11 @@ Which one are you?
 
 ### 👩‍🏫 I'm using Anki already
 
-**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards,<sup>¶</sup> then read [Guide](#), [Cards](#cards), and [Styleguide](./docs/styleguide/index.md) docs.** I'm seeking **[`alpha testers`](#)** who've used the legacy tool already. If you'd like to try out the new (alpha) application, I'd love to chat to you!
+**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards<sup>¶</sup>.** Have you used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
+
+1. Next read the [Guide](#)
+2. Then read the [Cards](#cards), and [Styleguide](./docs/styleguide/index.md) docs
+3. Become an [alpha tester](#) for the new app
 
 ```
 ⓘ New app coming soon (limited preview)
