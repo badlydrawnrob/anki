@@ -47,21 +47,21 @@ npm run data
 npm run data-code-reverse
 ```
 
-Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a [fenced code block](https://commonmark.org/help/tutorial/09-code.html) in your editor (not the browser).
+Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a [fenced code block](https://commonmark.org/help/tutorial/09-code.html)) in your editor — not the browser.
 
 
 ## Quick Markdown lesson
 
 > [!NOTE]
 >
-> **Writing your flashcards with Markdown.**
+> ✍️ **Writing your flashcards with Markdown.**
 >
 > 🧐 **Key:**
 >
-> - &#95;italic&#95;
-> - &#42;&#42;bold&#42;&#42;
-> - &grave;inlineCode()&grave;
-> - &#91;link&#93;(http://link.com)
+> - _italic_ = &#95;italic&#95;
+> - **bold** = &#42;&#42;bold&#42;&#42;
+> - `inline()` = &grave;inline()&grave;
+> - [link](https://elm-lang.org/) = (&#91;link&#93;(https://elm-lang.org/)
 
 | Card field | Example Markdown |
 | --------- | ---------------- |
