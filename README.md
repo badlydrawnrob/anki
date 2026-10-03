@@ -90,11 +90,11 @@ Which one are you?
 
 **No compiler, no fuss for beginners. Brain-training walk through for a strong memory!** The newsletter shows you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-### 👩‍🏫 I already know Anki
+### 👩‍🏫 I use Anki already
 
 > **Long-time Anki users also benefit from [the guide](#)** so try that before you download the legacy tool.
 
-****[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy flashcards** and read the [Cards](#cards)<sup>¶</sup> docs. I'm seeking **[`alpha testers`](#)** who've used the legacy tool already. If you'd like to try out the new (alpha) application, I'd love to chat to you!
+**[`Download`](https://github.com/badlydrawnrob/anki/releases/latest) legacy flashcards**,<sup>¶</sup> then read the [Cards](#cards) docs. I'm seeking **[`alpha testers`](#)** who've used the legacy tool already. If you'd like to try out the new (alpha) application, I'd love to chat to you!
 
 ```
 ⓘ New app coming soon (limited preview)
