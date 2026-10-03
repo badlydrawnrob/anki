@@ -58,10 +58,10 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 >
 > 🧐 **Key:**
 >
-> - ⤷ = &#95;italic&#95; &#42;&#42;bold&#42;&#42; &grave;inlineCode()&grave;
+> - &#95;italic&#95; &#42;&#42;bold&#42;&#42; &grave;inlineCode()&grave; &#91;link&#93;&#40;()
 
-| Field | Example Markdown |
-| ----- | ---------------- |
+| Card field | Example Markdown |
+| --------- | ---------------- |
 | [★ Question](#-question) | How do you write &grave;fencedCode&grave; blocks? |
 | [☆ Question Hint](#-question-hint) | Uses CommonMark characters<sup>¶</sup>  |
 | [☆ Subtitle](#-subtitle) | Finger exercises<sup>¶</sup> |
