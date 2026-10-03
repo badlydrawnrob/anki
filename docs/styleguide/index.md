@@ -191,8 +191,8 @@ The main question, statement, or fact.
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
 
-You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
-enable "Rich text preview", where you can add an image using 📎 paperclip button.
+Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the
+"Rich text preview", then add an image using the 📎 paperclip button.
 
 - A sketch of a program or problem
 - A sample of the code we're learning
