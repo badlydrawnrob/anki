@@ -37,7 +37,7 @@ npm install
 npm run build
 ```
 
-You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the html `🗑️ tags` from `/build/data/*` before adding your data to Anki flashcards (see [quick markdown lesson](#-quick-markdown-lesson)).
+You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the html `🗑️ tags` from `/build/data/*` before adding your data to Anki flashcards (see [quick markdown lesson](#quick-markdown-lesson)).
 
 ```
 # Markdown -> Html

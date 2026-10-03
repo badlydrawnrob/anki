@@ -59,7 +59,7 @@ Which one are you?
 
 ## A workout for the brain
 
-**Flashcards fit into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)"[^2] to build that muscle-memory: it's science!
+**Flashcards fit into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)" to build that muscle-memory: it's science!
 
 **Great because they work with almost everything**, whether you prefer 📚 textbooks, 🎥 YouTube tutorials, 🎓 courses, or 🤖 Ai chats. You don't have to be an academic, and they're easy to use for almost any programming problem.
 
@@ -92,7 +92,7 @@ Which one are you?
 
 ### 👩‍🏫 I'm using Anki already
 
-**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> Have you used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
+**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> Used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
 
 1. First, read the [Guide](#)
 2. Then the [Cards](#cards) and [Styleguide](./docs/styleguide/index.md) docs
@@ -238,7 +238,7 @@ Problems [#174](https://github.com/badlydrawnrob/anki/issues/174) and [#168](htt
 
 <details>
 <summary>
-<strong>5. I'm having text formatting problems</strong>, what do I do?
+<strong>6. I'm having text formatting problems</strong>, what do I do?
 </summary>
 
 > Paste **raw html** or **plain text** to avoid styling issues.
