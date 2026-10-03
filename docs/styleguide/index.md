@@ -82,8 +82,8 @@ Not every field requires Markdown (requires deleting html `🗑️ tags` from `/
 §: Rich Strict Markdown used for `★ Answer` field, which looks like this:
 
 
-> **Answers one key point should be in bold** with the essential detail up top,
-> inside a blockquote. Makes the answer stand out and read quickly, for reviewing!
+> **Answers one key point in bold text** with the essential detail up top, in a
+> handy blockquote. Makes the answer stand out and read quickly, for reviewing!
 
 - `fencedCode("block")` steps through it's code
 - `block` is the argument which passes to `print()`
@@ -94,7 +94,7 @@ but make sure you're not straying too far from the **one idea** in this flashcar
 
 ```
 def oneExtra(code, block):
-  print(f"If an extra {code} {block} helps finish the answer!")
+  print(f"If an extra {code} {block} helps to finish the answer!")
 ```
 ````
 
@@ -113,7 +113,7 @@ will be a big impovement. I'm spending a lot of time on making data entry nicer!
 
 > [!CAUTION]
 >
-> **All cards share most fields** and special fields are marked.
+> **All cards share most fields** and special fields are `▶ marked`.
 >
 > 🧐 **Key:**
 >
