@@ -56,18 +56,19 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 
 | Field | Example Markdown |
 | ----- | ---------------- |
-| [★ Question](#-question) | Heading with &grave;inline&grave; code |
-| [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
-| [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
-| [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question)<sup>¶</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the [fenced code](https://commonmark.org/help/tutorial/09-code.html) {block}") <br>&grave;&grave;&grave; |
+| [★ Question](#-question) | How do you write &grave;fencedCode&grave; blocks? |
+| [☆ Question Hint](#-question-hint) | Uses CommonMark characters<sup>∆</sup>  |
+| [☆ Subtitle](#-subtitle) | Finger exercises<sup>∆</sup> |
+| [☆ Code Inline](#-code-inline) | fencedCode("block") |
+| [★ Code Question](#-code-question)<sup>¶</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the fenced code {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
-| [★ Answer](#-answer)<sup>§</sup> | See "rich strict markdown" notes below |
-| [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#91;link&#93;&#40;https://elm-lang.org/examples) |
+| [★ Answer](#-answer)<sup>§</sup> | See `§: rich strict markdown` notes below |
+| [☆ Answer Notes](#-answer-notes) | Extra information for &#42;&#42;fenced code blocks&#42;&#42; can be found &#91;here&#93;&#40;https://commonmark.org/help/tutorial/09-code.html) |
 
 Not every field requires Markdown (remove `🗑️ tags` in `/data/*` files).
 
 ````text
+∆: Field has limited characters (see card fields)
 ¶: Example of a fenced code block (see CommonMark docs)
 §: Answer requires "strict rich markdown", which looks like this:
 
