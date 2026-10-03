@@ -47,14 +47,12 @@ npm run data
 npm run data-code-reverse
 ```
 
-Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a [fenced code block](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting]) in your editor (not the browser).
+Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a [fenced code block](https://commonmark.org/help/tutorial/09-code.html) in your editor (not the browser).
 
 
 ## Quick Markdown lesson
 
-> How to write your flashcards with Markdown.
-
-Not every field requires Markdown (remove `🗑️ tags` in `/data/*` files).
+> Writing your flashcards with Markdown.
 
 | Field | Example Markdown |
 | ----- | ---------------- |
@@ -62,12 +60,12 @@ Not every field requires Markdown (remove `🗑️ tags` in `/data/*` files).
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question)<sup>¶</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the {block}") <br>&grave;&grave;&grave; |
+| [★ Code Question](#-code-question)<sup>¶</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the [fenced code](https://commonmark.org/help/tutorial/09-code.html) {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer)<sup>§</sup> | See "rich strict markdown" notes below |
 | [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#91;link&#93;&#40;https://elm-lang.org/examples) |
 
-`★ Answer` field requires "strict rich markdown", which looks like this:
+Not every field requires Markdown (remove `🗑️ tags` in `/data/*` files).
 
 ````text
 ¶: Example of a fenced code block (see CommonMark docs)
