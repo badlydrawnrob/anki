@@ -19,7 +19,7 @@ Not enforced in Legacy, but linter arrives in limited preview app.
 What's a linter? @ https://tinyurl.com/linter-for-beginners
 ```
 
-## Installing the compiler
+## Installing the Legacy compiler
 
 > [!TIP]
 >
@@ -125,7 +125,7 @@ will be a big impovement. I'm spending a lot of time on making data entry nicer!
 
 > ⤷ `plain string` (ABC123, &grave;inlineCode()&grave;, basic punctuation)
 
-The main question, statement, or fact.
+The main question, statement, idea, or fact; a key learning outcome.
 
 ```
 ⓘ 🗑️ remove the `<h1>` tags (automatically wrapped)
@@ -179,7 +179,8 @@ The main question, statement, or fact.
 
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
-- Essential code for key learning point (fits the question)
+- A sample of the code we're learning (essential code only)
+- A code sample that fits our one learning outcome (essential code only)
 
 </details>
 
@@ -223,7 +224,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 "Rich text preview", then add a [cloze deletion tag](https://docs.ankiweb.net/editing.html#cloze-deletion) using the `[...]` button.
 
 - A missing word or phrase you've got to remember
-- Essential code for key learning point (fits the question)
+- A code sample that fits our one learning outcome (essential code only)
 
 ```
 ⓘ Bug:
@@ -250,7 +251,9 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
-- Essential code for key learning point (fits the question)
+- The answer or key learning point
+- The essential code that fits the question
+- The lesson you've learned
 
 </details>
 
@@ -268,9 +271,9 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the
 "Rich text preview", then add an image using the 📎 paperclip button.
 
-- A sketch of a program or problem
-- A sample of the code we're learning
-- A working app or user-interface
+- The answer or key learning point
+- The essential code that fits the question
+- The sketch of the solution or answer
 
 ```
 ⓘ Image size:
@@ -288,7 +291,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 <br>
 
-⚠️ **Missing card does not use this field** — only the `Code Question` field!
+⚠️ **Field is not used for this card type** — only the `Code Question` field!
 
 </details>
 
@@ -318,14 +321,17 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 > ⤷ `strict markdown` (bold, italic, links)
 
-- Links to documentation
+- Links to documentation (no more than 3)
 - Supplementary notes (or similar functions)
 - A common link or story between cards
 
 ---
 
 
-## 🗑 Deprecated
+<details open>
+<summary>
+<span id="simple-back"><strong>🗑 Deprecated</strong></span>
+</summary>
 
 1. `Code Inline` field no longer colors **bold** and _italic_ for styling.
 2. `Markdown` field no longer required: `npm run data-code-reverse` if needed.
@@ -335,3 +341,5 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 Flashcards will edit raw Markdown and cache HTML where required.
 ```
+
+</details>

@@ -14,9 +14,11 @@
 
     Fields:
 
-        ✍️ All cards share most fields.
-        ⚠️ Check `ⓘ` for Draw! ("Code Question" field)
-        ⚠️ Check `ⓘ` for Missing! ("Code Question" field)
+        ✍️ All cards share most fields and special fields are `▶ marked`.
+
+    Special fields:
+
+        ▶ = `★ Code Question` and `☆ Code Answer` (see styleguide link)
 
     Key:
 
@@ -43,7 +45,7 @@
 
     > ⤷ `plain string` (ABC123, `inlineCode()`, basic punctuation)
 
-    The main question, statement, or fact.
+    The main question, statement, idea, or fact; a key learning outcome.
 
     ```
     ⓘ 🗑️ remove the `<h1>` tags (automatically wrapped)
@@ -55,7 +57,7 @@
 <!-- -------------------------------------------------------------------------
     ☆ Question Hint
 
-    > ⤷ `plain string` (ABC123, basic punctuation)
+    > ⤷ `plain string` (ABC, basic punctuation)
 
     - Helpful for when the header question grows too long ...
     - Or the `code block` requires some context or a hint
@@ -83,7 +85,7 @@ Uses a folding function which is a little advanced (you'll get there!)
 <!-- -------------------------------------------------------------------------
     ☆ Code Inline
 
-    > ⤷ `code string` (inline code grammar, any `Char` except `backticks or `/n`ewlines)
+    > ⤷ `code string` (any inline code character, but no `backticks or `/n`ewlines)
 
     - A short line of code (not a `code block`)
     - The actual function or symbol, i.e. `len()`
@@ -100,33 +102,50 @@ Uses a folding function which is a little advanced (you'll get there!)
 
     > ⚠️ Important
     >
-    > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+    > Special field and depends on the card.
     >
-    > See Draw! and Missing! for special fields.
+    > Check your content is correct for the card type.
 
-    - Essential code for key learning point (fits the question)
-    - See notes below for Draw! and Missing! cards
 
-    ```
-    ⓘ ⚠️ Draw! card requires an image:
-      (toggle HTML » press 📎 paperclip button)
+    ▶ Simple card ------------------------------------------------------------
 
-    ⓘ ⚠️ Missing! card requires a cloze field:
-      `{{c1::missing word::optional hint}}` (toggle HTML » press `[...]`)
+        > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
-    It's best to press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for these cards.
-    Rich text preview is enabled, where you add content by using buttons in top-right.
-    Add correct content for each card type! (📎 image, `[...]` cloze, `[...]+` cloze).
 
-    Cloze:
-    @ https://docs.ankiweb.net/editing.html#cloze-deletion
+        - A sample of the code we're learning (essential code only)
+        - A code sample that fits our one learning outcome (essential code only)
 
-    Images:
-    @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
 
-    Bugs:
-    @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
-    ```
+    ▶ Draw card ---------------------------------------------------------------
+
+        > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
+
+        Press the ‹› button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable
+        the "Rich text preview", then add an image using the 📎 paperclip button.
+
+        - A sketch of a program or problem
+        - A sample of the code we're learning
+        - A working app or user-interface
+
+        ```
+        ⓘ Image size:
+          @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
+        ```
+
+    ▶ Missing card ------------------------------------------------------------
+
+        > ⤷ `code block` (requires a cloze: `{{c1::missing word::with optional hint}}`)
+
+        Press the ‹› button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable
+        the "Rich text preview", then add a cloze deletion tag using the `[...]` button.
+
+        - A missing word or phrase you've got to remember
+        - A code sample that fits our one learning outcome (essential code only)
+
+        ```
+        ⓘ Bug:
+          @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
+        ```
 -------------------------------------------------------------------------- -->
 
 ```Elm
@@ -145,13 +164,40 @@ Just 400 : Maybe number
 <!-- -------------------------------------------------------------------------
     ☆ Code Answer
 
-    > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+    > ⚠️ IMPORTANT
+    >
+    > Special field and depends on the card.
+    >
+    > Check your content is correct for the card type.
 
-    - Essential code for key learning point (describes the answer)
 
-    ```
-    ⓘ Missing! card does not have this field.
-    ```
+    ▶ Simple card ------------------------------------------------------------
+
+        > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
+
+        - The answer or key learning point
+        - The essential code that fits the question
+        - The lesson you've learned
+
+    ▶ Draw card ---------------------------------------------------------------
+
+        ⤷ `code block | image` (minify and roughly `600`—`~1170` pixels wide)
+
+        Press the ‹› button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the "Rich text preview", then add an image using the 📎 paperclip button.
+
+        - The answer or key learning point
+        - The essential code that fits the question
+        - The sketch of the solution or answer
+
+        ```
+        ⓘ Image size:
+          @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
+        ```
+
+    ▶ Missing card (not used) -------------------------------------------------
+
+        ⚠️ Field is not used for this card type — only the `Code Question` field!
+
 -------------------------------------------------------------------------- -->
 
 Nothing
@@ -159,32 +205,28 @@ Nothing
 <!-- -------------------------------------------------------------------------
     ★ Answer
 
-    > ⤷ `strict rich markdown` (blockquote, paragraph, lists, table, `code block`)
+    > ⚠️ NOTE
+    >
+    > @ https://github.com/badlydrawnrob/anki/source/docs/styleguide/index.md
+    >
+    > See "Quick Markdown Lesson" link above to write Strict Rich Markdown.
+    >
+    > ⤷ `strict rich markdown`
 
     - A short explanation of what we're trying to learn
-    - A stepper to walk through the `code block` (code `verbs()` go first)
-    - A table of contents (keep lines short, not part of CommonMark)
+    - A stepper to walk through the code block (or a useful list)
+    - A table of contents (not part of CommonMark)
 
     ```
-    ⓘ Preferred styleguide below
-    ⓘ List OR table (not both in one card)
+    ⓘ Blockquote:
+      If there's only a single paragraph in `★ Answer`, no need for a blockquote.
 
-    > **Key answer learning point in bold** with some extra
-    > essential detail (it's nice to bold a few key answer words).
-
-    - `function()` optional stepper (1)
-    - `variable` with next step (2)
-    - `finally` the last step (3)
-
-    | What it is | What it does |
-    |------------|--------------|
-    | Optional   | Table        |
-
-    Paragraph or two that supplements the key learning point.
+    ⓘ Tables and lists:
+      Only one table OR a list (not both), and `codeVerbs()` always go first!
     ```
 -------------------------------------------------------------------------- -->
 
-> Folding can be read as `foldl step state [...]` and accumulates the value.
+> **Folding can be read as `foldl step state [...]`** and accumulates the value.
 
 - `step` is the function to be applied to `values`
 - `state` is piped as the second argument to `step`
@@ -197,7 +239,7 @@ A function that uses `case` instead of `List.foldl` may be easier to read (espec
 
     > ⤷ `strict markdown` (bold, italic, links)
 
-    - Links to documentation
+    - Links to documentation (no more than 3)
     - Supplementary notes (or similar functions)
     - A common link or story between cards
 -------------------------------------------------------------------------- -->

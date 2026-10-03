@@ -96,13 +96,13 @@ Which one are you?
 >
 > | 👋 I'm new to flashcards | 🤘 I already know Anki |
 > | ----------------------- | --------------------- |
-> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy<sup>¶</sup> |
+> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy and read [Cards](#cards)<sup>¶</sup> |
 
 ```
 ⓘ New app coming soon (limited preview)
 ⓘ Legacy flashcards use a compiler which can be difficult for beginners.
 
-¶: See CARDS section next. Upgrading? See FAQs.
+¶: Upgrading? See FAQs.
 ```
 
 ## 10 years legacy
