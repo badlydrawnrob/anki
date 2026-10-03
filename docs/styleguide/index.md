@@ -37,7 +37,7 @@ npm install
 npm run build
 ```
 
-You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the `🗑️ tags` before adding your card field data to Anki (see [quick markdown lesson](#-quick-markdown-lesson)).
+You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the html `🗑️ tags` from `/build/data/*` before adding your data to Anki flashcards (see [quick markdown lesson](#-quick-markdown-lesson)).
 
 ```
 # Markdown -> Html
@@ -58,23 +58,23 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 >
 > 🧐 **Key:**
 >
-> - _italic_ = &#95;italic&#95;
-> - **bold** = &#42;&#42;bold&#42;&#42;
-> - `inline()` = &grave;inline()&grave;
-> - [link](https://elm-lang.org/) = (&#91;link&#93;(https://elm-lang.org/)
+> - &#95;italic&#95;
+> - &#42;&#42;bold&#42;&#42;
+> - &grave;inlineCode()&grave;
+> - &#91;link&#93;(https://elm-lang.org/)
 
 | Card field | Example Markdown |
 | --------- | ---------------- |
 | [★ Question](#-question) | How do you write &grave;fencedCode&grave; blocks? |
-| [☆ Question Hint](#-question-hint) | Uses CommonMark characters<sup>¶</sup>  |
+| [☆ Question Hint](#-question-hint) | Remember your CommonMark characters<sup>¶</sup>  |
 | [☆ Subtitle](#-subtitle) | Finger exercises<sup>¶</sup> |
 | [☆ Code Inline](#-code-inline) | fencedCode("block") |
 | [★ Code Question](#-code-question)<sup>∆</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the fenced code {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
-| [★ Answer](#-answer) <sup>§</sup> | See `§: rich strict markdown` notes below |
+| [★ Answer](#-answer) <sup>§</sup> | See &grave;§: rich strict markdown&grave; notes below |
 | [☆ Answer Notes](#-answer-notes) | Extra information for &#95;fenced code blocks&#95; can be found &#91;here&#93;&#40;https://commonmark.org/help/tutorial/09-code.html) |
 
-Not every field requires Markdown (requires deleting `🗑️ tags` in `/data/*` files).
+Not every field requires Markdown (requires deleting html `🗑️ tags` from `/build/data/*`).
 
 ````text
 ¶: Field has limited characters (see card fields)
@@ -288,9 +288,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 <br>
 
-> [!IMPORTANT]
->
-> **Missing card does not use this field** — only the `Code Question` field.
+⚠️ **Missing card does not use this field** — only the `Code Question` field!
 
 </details>
 
@@ -304,14 +302,15 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 > ⤷ `strict rich markdown`
 
 - A short explanation of what we're trying to learn
-- A stepper to walk through the `code block`
-- A table of contents (keep lines short, not part of CommonMark)
+- A stepper to walk through the `code block` (or a useful list)
+- A table of contents (not part of CommonMark)
 
 ```
-ⓘ Markdown tips:
-  One blockquote, paragraphs, one list OR table (not both!), one code block.
-  List stepper should put `codeVerb()` first on each line for readability, and
-  table content should be short and sweet. Strictness makes reading reliable.
+ⓘ Blockquote:
+   If there's only a single paragraph in `★ Answer`, no need for a blockquote.
+
+ⓘ Tables and lists:
+   Only one table OR a list (not both), and `codeVerbs()` always go first!
 ```
 
 
