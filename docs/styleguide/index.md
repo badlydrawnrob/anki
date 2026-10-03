@@ -35,35 +35,26 @@ npm install
 
 # Build
 npm run build
+```
 
-# Data
+You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the `🗑️ tags` before adding your card field data to Anki (see [quick markdown lesson](#-quick-markdown-lesson)).
+
+```
+# Markdown -> Html
 npm run data
 
 # Html -> Markdown
 npm run data-code-reverse
 ```
 
-### Using the `/data/*` files for speed
-
-Read the styleguide properly first, but there's `<-- instruction` --> in the data files for speed.
-
-1. **Write Markdown** in data files and `npm run data`
-2. **Check the `/build` folder** for the compiled HTML (under comments)
-3. **Remove the `🗑️ tags`** before adding to your card's fields (in Anki)
-4. **Write [fenced code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting$0)** for `code block` fields (up to 3 per field)
-5. **Check this styleguide** for mistakes in your writing!
-
-```
-ⓘ View in your code editor (they're not for the browser!)
-   <-- instruction --> comments in the data files for a quick-lookup.
-```
+Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a [fenced code block](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting]) in your editor (not the browser).
 
 
 ## Quick Markdown lesson
 
 > How to write your flashcards with Markdown.
 
-Not every field requires Markdown.
+Not every field requires Markdown (remove `🗑️ tags` in `/data/*` files).
 
 | Field | Example Markdown |
 | ----- | ---------------- |
@@ -71,10 +62,34 @@ Not every field requires Markdown.
 | [☆ Question Hint](#-question-hint) | Only plain characters allowed (no numbers!) |
 | [☆ Subtitle](#-subtitle) | Short header (no punctuation) |
 | [☆ Code Inline](#-code-inline) | someCoolShort("code") |
-| [★ Code Question](#-code-question) | &grave;&grave;&grave;<br> def someCoolShort(code): <br>&nbsp;&nbsp;&nbsp;print(f"in action {code}") <br>&grave;&grave;&grave; |
+| [★ Code Question](#-code-question)<sup>¶</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
-| [★ Answer](#-answer) | See the [strict rich markdown](#strict-rich-markdown) guide below |
+| [★ Answer](#-answer)<sup>§</sup> | See "rich strict markdown" notes below |
 | [☆ Answer Notes](#-answer-notes) | Extra information with &#42;&#42;strong&#42;&#42; notes and optional &#91;link&#93;&#40;https://elm-lang.org/examples) |
+
+`★ Answer` field requires "strict rich markdown", which looks like this:
+
+````text
+¶: Example of a fenced code block (see CommonMark docs)
+§: Answer requires "strict rich markdown", which looks like this:
+
+> **Answer one key point should be in bold** with the essential detail up top.
+> This makes the answer stand out and read quickly.
+
+- `fencedCode("block")` steps through it's code
+- `block` is the argument which passes to `print()`
+- `print(f"")` allows us to use the argument in the body
+
+Perhaps you'll have an extra paragraph to write things like `_code verbs go first_
+but make sure you're not straying too far from the **one idea** in this flashcard!
+
+```
+def oneExtra(code, block):
+  print(f"If an extra {code} {block} helps finish the answer!")
+```
+````
+
+If you prefer, you can use [a 2-column table](https://tools.timodenk.com/markdown-table-to-html) instead of the list and copy that as HTML. Headers and rows should be short and sweet!
 
 ```
 ⓘ New app makes writing much easier.
@@ -82,42 +97,6 @@ Not every field requires Markdown.
 Anki data entry is not great, I admit. Without an add-on this the best you'll get.
 The `Markdown -> Html` flow is sub-optimal, but hopefully the limited preview app
 will be a big impovement. I'm spending a lot of time on making data entry nicer!!
-```
-
-### Strict Rich Markdown
-
-> Currently for the `Answer` field only.
-
-Example that uses a "stepper" to shows what our code does:
-
-````text
-> **Key answer learning point in bold** with the essential detail up top.
-> It's nice to bold a few key answer words so they'll stand out.
-
-- `someCoolShort("code")` and what the function does
-- `code` is the argument that gets passed to `print()`
-- `print(f"")` with f-string passes string to `{code}`
-
-An extra paragraph where you can write things like _code verbs first_ but make sure you don't stray too much from the **one idea** in this flashcard. Need another code block?
-
-```
-someCoolExtra(two, words):
-  print(f"Putting {two} {words} together!")
-```
-````
-
-```text
-| What it is            | What it does                  |
-| --------------------- | ----------------------------- |
-| `someCoolShort(code)` | Takes a string and prints it  |
-```
-
-You can also use a Markdown table (above) instead of the list, but keep headings and rows short. Tables are not part of CommonMark, but they come in handy sometimes.
-
-```
-ⓘ New app makes writing much easier.
-
-Strict Markdown and styleguide order will be enforced automatically.
 ```
 
 
@@ -193,6 +172,8 @@ The main question, statement, or fact.
 
 </details>
 
+<hr>
+
 <details>
 <summary>
 <span id="draw-front"><strong>2. Draw card</strong></span>
@@ -215,6 +196,8 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 ```
 
 </details>
+
+<hr>
 
 <details>
 <summary>
