@@ -215,22 +215,16 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 <br>
 
 > ⤷ `code block` (requires a cloze: `{{c1::missing word::with optional hint}}`)
->
-> 👆 **Toggle HTML and press `[...]`** to add cloze deletion to Anki.
 
+Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the
+"Rich text preview", then add a [cloze deletion tag](https://docs.ankiweb.net/editing.html#cloze-deletion) using the `[...]` button.
+
+- A missing word or phrase you've got to remember
 - Essential code for key learning point (fits the question)
-- See [cloze deletion](https://docs.ankiweb.net/editing.html#cloze-deletion) in Anki docs
 
 ```
-ⓘ Image size:
-  @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
-
 ⓘ Bug:
   @ https://github.com/badlydrawnrob/anki/issues/132 (may break `code block`)
-
-It can be easier to press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this
-card, to enable "Rich text preview", where you can add press the `[...]` button
-in the menu.
 ```
 
 </details>
@@ -265,8 +259,9 @@ in the menu.
 <br>
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
->
-> 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
+
+Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to enable the
+"Rich text preview", then add an image using the 📎 paperclip button.
 
 - A sketch of a program or problem
 - A sample of the code we're learning
@@ -275,9 +270,6 @@ in the menu.
 ```
 ⓘ Image size:
   @ https://community.adobe.com/questions-621/best-image-size-for-mobile-devices-643936
-
-You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
-enable "Rich text preview", where you can add an image using buttons in the menu.
 ```
 
 </details>
