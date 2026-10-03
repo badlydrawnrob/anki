@@ -95,7 +95,7 @@ Which one are you?
 **[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> Have you used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
 
 1. First, read the [Guide](#)
-2. Next you can read the [Cards](#cards) and [Styleguide](./docs/styleguide/index.md) docs
+2. Then the [Cards](#cards) and [Styleguide](./docs/styleguide/index.md) docs
 
 ```
 ⓘ New app coming soon (limited preview)
