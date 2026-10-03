@@ -254,6 +254,8 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 </details>
 
+<hr>
+
 <details>
 <summary>
 <span id="draw-back"><strong>Draw card</strong></span>
@@ -276,6 +278,8 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 ```
 
 </details>
+
+<hr>
 
 <details>
 <summary>
