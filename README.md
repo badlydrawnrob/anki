@@ -92,11 +92,10 @@ Which one are you?
 
 ### 👩‍🏫 I'm using Anki already
 
-**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards<sup>¶</sup>.** Have you used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
+**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> Have you used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
 
-1. Next read the [Guide](#)
-2. Then read the [Cards](#cards), and [Styleguide](./docs/styleguide/index.md) docs
-3. Become an [alpha tester](#) for the new app
+1. First, read the [Guide](#)
+2. Next you can read the [Cards](#cards) and [Styleguide](./docs/styleguide/index.md) docs
 
 ```
 ⓘ New app coming soon (limited preview)
@@ -128,7 +127,7 @@ Which one are you?
 >
 > 💡 **[Workout for the brain](#a-workout-for-the-brain)** for more learning ideas.
 
-**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) before working with the compiler, then read the [styleguide](./docs/styleguide/index.md) for filling in flashcards. Here's some basic writing tips to get you started:
+**Flashcards mostly fall into _workout for the brain_ category.** It's better to read [the guide](#quick-start) before working with the compiler, then read the [styleguide](./docs/styleguide/index.md) for filling in flashcards. Here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
