@@ -172,6 +172,8 @@ The main question, statement, or fact.
 <span id="simple-front"><strong>Simple card</strong></span>
 </summary>
 
+<br>
+
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
 - Essential code for key learning point (fits the question)
@@ -184,6 +186,8 @@ The main question, statement, or fact.
 <summary>
 <span id="draw-front"><strong>Draw card</strong></span>
 </summary>
+
+<br>
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
 >
@@ -209,6 +213,8 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 <summary>
 <span id="missing-front"><strong>Missing card</strong></span>
 </summary>
+
+<br>
 
 > ⤷ `code block` (requires a cloze: `{{c1::missing word::with optional hint}}`)
 >
@@ -244,6 +250,8 @@ in the menu.
 <summary>
 <span id="simple-back"><strong>Simple card</strong></span>
 </summary>
+
+<br>
 
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
 
