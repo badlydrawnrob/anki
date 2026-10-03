@@ -58,7 +58,10 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 >
 > 🧐 **Key:**
 >
-> - &#95;italic&#95; | &#42;&#42;bold&#42;&#42; | &grave;inlineCode()&grave; | &#91;link&#93;()
+> - &#95;italic&#95;
+> - &#42;&#42;bold&#42;&#42;
+> - &grave;inlineCode()&grave;
+> - &#91;link&#93;(http://link.com)
 
 | Card field | Example Markdown |
 | --------- | ---------------- |
@@ -320,8 +323,6 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 
 ## 🗑 Deprecated
-
-> 📧 **Disagree with any of these changes?** Get in touch.
 
 1. `Code Inline` field no longer colors **bold** and _italic_ for styling.
 2. `Markdown` field no longer required: `npm run data-code-reverse` if needed.
