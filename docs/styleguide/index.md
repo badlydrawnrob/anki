@@ -62,7 +62,7 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 | [☆ Code Inline](#-code-inline) | fencedCode("block") |
 | [★ Code Question](#-code-question)<sup>∆</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the fenced code {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
-| [★ Answer](#-answer)<sup>§</sup> | See `§: rich strict markdown` notes below |
+| [★ Answer](#-answer) <sup>§</sup> | See `§: rich strict markdown` notes below |
 | [☆ Answer Notes](#-answer-notes) | Extra information for &#42;&#42;fenced code blocks&#42;&#42; can be found &#91;here&#93;&#40;https://commonmark.org/help/tutorial/09-code.html) |
 
 Not every field requires Markdown (requires deleting `🗑️ tags` in `/data/*` files).
@@ -70,9 +70,9 @@ Not every field requires Markdown (requires deleting `🗑️ tags` in `/data/*`
 ````text
 ¶: Field has limited characters (see card fields)
 ∆: Example of a fenced code block (see CommonMark docs)
-§: Rich Strict Markdown used for `★ Answer` field.
+§: Rich Strict Markdown used for `★ Answer` field, which looks like this:
 
------ ★ Answer field writing order:
+
 > **Answers one key point should be in bold** with the essential detail up top.
 > This makes the answer stand out and read quickly, when reviewing the flashcard.
 
@@ -87,7 +87,6 @@ but make sure you're not straying too far from the **one idea** in this flashcar
 def oneExtra(code, block):
   print(f"If an extra {code} {block} helps finish the answer!")
 ```
------
 ````
 
 If you prefer, you can use [a 2-column table](https://tools.timodenk.com/markdown-table-to-html) instead of the list and copy that as HTML. Headers and rows should be short and sweet!
@@ -95,7 +94,7 @@ If you prefer, you can use [a 2-column table](https://tools.timodenk.com/markdow
 ```
 ⓘ New app makes writing much easier.
 
-Anki data entry is not great, I admit. Without an add-on this the best you'll get.
+Anki data entry is not great, I admit; without an add-on this the best you'll get.
 The `Markdown -> Html` flow is sub-optimal, but hopefully the limited preview app
 will be a big impovement. I'm spending a lot of time on making data entry nicer!!
 ```
