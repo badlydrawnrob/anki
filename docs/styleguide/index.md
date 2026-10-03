@@ -190,11 +190,9 @@ The main question, statement, or fact.
 <br>
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
->
-> 👆 **Toggle HTML and press 📎 paperclip button** to save to Anki.
 
 You must press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to
-enable "Rich text preview", where you can add an image using buttons in the menu.
+enable "Rich text preview", where you can add an image using 📎 paperclip button.
 
 - A sketch of a program or problem
 - A sample of the code we're learning
