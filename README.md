@@ -82,9 +82,9 @@ Which one are you?
 
 > [!IMPORTANT]
 >
-> **[`📧 READING & WRITING GREAT FLASHCARDS (a gentle guide)`](#)**
+> ▶ **[`📧 READING & WRITING GREAT FLASHCARDS (a gentle guide)`](#)**
 >
-> **[`👩‍🎓 STUDY A FREE FLASHCARD DECK (for beginners)`](#)**
+> ▶ **[`👩‍🎓 STUDY A FREE FLASHCARD DECK (for beginners)`](#)**
 >
 > ☝️ Best place to start ☝️
 
