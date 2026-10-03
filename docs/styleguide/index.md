@@ -330,7 +330,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 <details>
 <summary>
-<span id="simple-back"><strong>🗑 Deprecated</strong></span>
+<span id="simple-back"><strong>🗑 Deprecated (will be removed)</strong></span>
 </summary>
 
 <br>
