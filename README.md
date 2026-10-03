@@ -48,8 +48,8 @@ Add them near the top with a better `Legacy | New App` photo.
 
 Which one are you?
 
+- 🤖 **Ai coder**?
 - 👷🏻 **Builder**?
-- 🤖 **Prompter**?
 - 👩‍🎓 **Student?**
 - 🧑🏽‍💻 **New job-er?**
 
