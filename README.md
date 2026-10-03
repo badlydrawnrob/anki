@@ -59,7 +59,7 @@ Which one are you?
 
 ## A workout for the brain
 
-**Flashcards fit into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)" to build that muscle-memory: it's science!
+**Flashcards fit into your daily life.** It's "going to gym" for the brain — learn and remember anything with "[spaced reps](#science)"[^2] to build that muscle-memory: it's science!
 
 **Great because they work with almost everything**, whether you prefer 📚 textbooks, 🎥 YouTube tutorials, 🎓 courses, or 🤖 Ai chats. You don't have to be an academic, and they're easy to use for almost any programming problem.
 
@@ -78,25 +78,23 @@ Which one are you?
 
 ## Quick start!
 
+### 🚀 I'm new to flashcards
+
 > [!IMPORTANT]
 >
-> **[`📧 WRITE GREAT FLASHCARDS (a gentle guide)`](#)**
+> **[`📧 READING & WRITING GREAT FLASHCARDS (a gentle guide)`](#)**
+>
+> **[`👩‍🎓 STUDY A FREE FLASHCARD DECK (for beginners)`](#)**
 >
 > ☝️ Best place to start ☝️
 
-**No compiler, no fuss. Brain-training walk through for a strong memory!** It'll show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
+**No compiler, no fuss for beginners. Brain-training walk through for a strong memory!** The newsletter will show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-**Long-time Anki users also benefit from the guide.** I'm seeking **[`alpha testers`](#)** who've used the tool before to try out the app (alpha). I'd love to chat!
+### 🤘 I already know Anki
 
-### I've finished the guide
+**Long-time Anki users also benefit from [the guide](#)** so try that before you download the legacy tool.
 
-> [!NOTE]
->
-> You're a flashcard poet?
->
-> | 👋 I'm new to flashcards | 🤘 I already know Anki |
-> | ----------------------- | --------------------- |
-> | **[`👩‍🎓 FREE FLASHCARDS`](#)** to start | **[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy and read [Cards](#cards)<sup>¶</sup> |
+****[`Download`](https://github.com/badlydrawnrob/anki/releases/latest)** legacy flashcards** and read the [Cards](#cards)<sup>¶</sup> docs. I'm seeking **[`alpha testers`](#)** who've used the legacy tool already. If you'd like to try out the new (alpha) application, I'd love to chat to you!
 
 ```
 ⓘ New app coming soon (limited preview)
@@ -104,6 +102,7 @@ Which one are you?
 
 ¶: Upgrading? See FAQs.
 ```
+
 
 ## 10 years legacy
 
@@ -126,7 +125,7 @@ Which one are you?
 >
 > 💡 **[Workout for the brain](#a-workout-for-the-brain)** for more learning ideas.
 
-**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) before working with the compiler,[^3] but here's some basic writing tips to get you started:
+**Flashcards mostly fall into [a workout for the brain](#a-workout-for-the-brain) category.** It's better to read [the guide](#quick-start) before working with the compiler, then read the [styleguide](./docs/styleguide/index.md) for filling in flashcards. Here's some basic writing tips to get you started:
 
 1. **One idea** per card (not two unrelated questions)
 2. **10 seconds** or less (review time, where possible)
