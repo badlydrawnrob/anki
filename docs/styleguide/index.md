@@ -52,7 +52,13 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 
 ## Quick Markdown lesson
 
+> [!NOTE]
+>
 > Writing your flashcards with Markdown.
+>
+> 🧐 **Key:**
+>
+> - ⤷ = &#95;italic&#95; &#42;&#42;bold&#42;&#42; &grave;inlineCode()&grave;
 
 | Field | Example Markdown |
 | ----- | ---------------- |
@@ -63,7 +69,7 @@ Check the `/build/data` folder for `card.html` (card fields) and `code.html` (a 
 | [★ Code Question](#-code-question)<sup>∆</sup> | &grave;&grave;&grave;<br> def fencedCode(block): <br>&nbsp;&nbsp;&nbsp;print(f"renders the fenced code {block}") <br>&grave;&grave;&grave; |
 | [☆ Code Answer](#-code-answer) | ... |
 | [★ Answer](#-answer) <sup>§</sup> | See `§: rich strict markdown` notes below |
-| [☆ Answer Notes](#-answer-notes) | Extra information for &#42;&#42;fenced code blocks&#42;&#42; can be found &#91;here&#93;&#40;https://commonmark.org/help/tutorial/09-code.html) |
+| [☆ Answer Notes](#-answer-notes) | Extra information for &#95;fenced code blocks&#95; can be found &#91;here&#93;&#40;https://commonmark.org/help/tutorial/09-code.html) |
 
 Not every field requires Markdown (requires deleting `🗑️ tags` in `/data/*` files).
 
