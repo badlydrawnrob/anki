@@ -86,11 +86,11 @@ Which one are you?
 >
 > ▶ **[`👩‍🎓 STUDY A FREE FLASHCARD DECK (for beginners)`](#)**
 >
-> ☝️ Best place to start ☝️
+> &nbsp;&nbsp;&nbsp;☝️ Best place to start ☝️
 
-**No compiler, no fuss for beginners. Brain-training walk through for a strong memory!** The newsletter will show you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
+**No compiler, no fuss for beginners. Brain-training walk through for a strong memory!** The newsletter shows you how to: learn quicker, remember easier, read and write successful flashcards, spot good/bad flashcards, build faster, as well as top-tips on structuring your learning.
 
-### 🤘 I already know Anki
+### 🏎 I already know Anki
 
 **Long-time Anki users also benefit from [the guide](#)** so try that before you download the legacy tool.
 
