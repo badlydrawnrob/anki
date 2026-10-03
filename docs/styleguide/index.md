@@ -163,13 +163,13 @@ The main question, statement, or fact.
 
 > [!IMPORTANT]
 >
-> **This is a special field** and depends on the card.
+> **Special field** and depends on the card.
 >
-> **Make sure you add correct content** for each card type!
+> Check your content is correct for the card type.
 
 <details open>
 <summary>
-<span id="simple-front"><strong>1. Simple card</strong></span>
+<span id="simple-front"><strong>Simple card</strong></span>
 </summary>
 
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
@@ -182,7 +182,7 @@ The main question, statement, or fact.
 
 <details>
 <summary>
-<span id="draw-front"><strong>2. Draw card</strong></span>
+<span id="draw-front"><strong>Draw card</strong></span>
 </summary>
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
@@ -207,7 +207,7 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 
 <details>
 <summary>
-<span id="missing-front"><strong>3. Missing card</strong></span>
+<span id="missing-front"><strong>Missing card</strong></span>
 </summary>
 
 > ⤷ `code block` (requires a cloze: `{{c1::missing word::with optional hint}}`)
@@ -236,13 +236,13 @@ in the menu.
 
 > [!IMPORTANT]
 >
-> **This is a special field** and depends on the card.
+> **Special field** and depends on the card.
 >
 > **Make sure you add correct content** for each card type!
 
 <details open>
 <summary>
-<span id="simple-back"><strong>1. Simple card</strong></span>
+<span id="simple-back"><strong>Simple card</strong></span>
 </summary>
 
 > ⤷ `code block` (up to 3 fenced code blocks, `32` chars wide)
@@ -253,8 +253,10 @@ in the menu.
 
 <details>
 <summary>
-<span id="draw-back"><strong>2. Draw card</strong></span>
+<span id="draw-back"><strong>Draw card</strong></span>
 </summary>
+
+<br>
 
 > ⤷ `image` (minify and roughly `600`—`~1170` pixels wide)
 >
@@ -276,7 +278,7 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 
 <details>
 <summary>
-<span id="missing-back"><strong>3. Missing card (not used)</strong></span>
+<span id="missing-back"><strong>Missing card (not used)</strong></span>
 </summary>
 
 > [!IMPORTANT]
@@ -288,11 +290,11 @@ enable "Rich text preview", where you can add an image using buttons in the menu
 
 ### ★ Answer
 
-> [!IMPORTANT]
+> [!NOTE]
 >
-> **See Quick Markdown Lesson** for how to write strict rich markdown.
+> **See [Quick Markdown Lesson](#quick-markdown-lesson)** for writing strict rich markdown.
 >
-> ⤷ [`strict rich markdown`](#strict-rich-markdown) (see above)
+> ⤷ `strict rich markdown`
 
 - A short explanation of what we're trying to learn
 - A stepper to walk through the `code block`
