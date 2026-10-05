@@ -243,7 +243,7 @@ Problems [#174](https://github.com/badlydrawnrob/anki/issues/174) and [#168](htt
 
 > Paste **raw html** or **plain text** to avoid styling issues.
 
-If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy-&gt;paste` text, or [add junk](https://forums.ankiweb.net/t/paste-plain-text/) to the html.
+If you're having formatting problems, make sure you're **[following the guide](#cards)** and clicking `Toggle HTML Editor ⌘⇧X` (`‹›`) in the editor to copy/paste your HTML or raw text. For more information, see [this issue](https://github.com/badlydrawnrob/anki/issues/62). Many [editors](https://en.wikipedia.org/wiki/WYSIWYG) break formatting when you `copy -> paste` text, or [add junk](https://forums.ankiweb.net/t/paste-plain-text/) to the html.
 
 </details>
 
