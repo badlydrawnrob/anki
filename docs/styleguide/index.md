@@ -2,7 +2,8 @@
 
 > [!IMPORTANT]
 >
-> ✍️ **Strict [CommonMark](https://commonmark.org)** required\
+> ✍️ **Strict [CommonMark](https://commonmark.org)** required
+>
 > 💡 **See [workout for the brain](../../README.md#a-workout-for-the-brain)** for study ideas.
 >
 > 📧 **Questions?** Get in touch.
