@@ -68,7 +68,7 @@ Which one are you?
 | What are flashcards for?      | Why should I care?                                     |
 | ---------------------------- | ------------------------------------------------------ |
 | **Add color** to your code   | For artistic fun and ease-of-reading                   |
-| **Any language** grammar     | Learn and store it's functions and syntax to memory    |
+| **Any language** grammar     | Learn and store its functions and syntax to memory    |
 | APIs, architecture, patterns | Learn best practices and your favourite packages       |
 | **Discover and solve problems** | That matter to you, adding when they come up        |
 | Grok your data               | Lock-in data structures, algorithms, and visualisation |
@@ -92,7 +92,7 @@ Which one are you?
 
 ### 👩‍🏫 I'm using Anki already
 
-**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> Used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
+**[Download](https://github.com/badlydrawnrob/anki/releases/latest) the legacy flashcards.**<sup>¶</sup> You'll need to be familiar with compilers.[^2] Used the legacy tool before? I'm seeking [`alpha testers`](#) and would love to chat!
 
 1. First, read the [Guide](#)
 2. Then the [Cards](#cards) and [Styleguide](./docs/styleguide/index.md) docs
@@ -186,7 +186,7 @@ Deprecated: inline code color highlight
 >
 > Always backup your deck before upgrading!
 
-Versioned with <strong>[major.minor.patch](http://semver.org)</strong> standard: updates shouldn't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones and ``[update to fsrs algorithm]` if you wish.
+Versioned with <strong>[major.minor.patch](http://semver.org)</strong> standard: updates shouldn't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones and `[update to fsrs algorithm]` if you wish.
 
 </details>
 
@@ -206,7 +206,7 @@ Stands for "spaced repetition" and is backed by neuroscience: over minutes, days
 
 > I've spent a lot of time fine-tuning the flashcards so they're pleasant to use.
 
-Anki programming flashcards depend on _very_ little from the Anki app (no add-ons required), and provides an upgrade path the the new app. Right now, they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). The compiler provides an easy(ish) `markdown -> html` workflow locally.
+Anki programming flashcards depend on _very_ little from the Anki app (no add-ons required), and provides an upgrade path the new app. Right now, they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). The compiler provides an easy(ish) `markdown -> html` workflow locally.
 
 Add-ons become out-of-date easily, so I've made sure it [depends](https://github.com/badlydrawnrob/anki/network/dependencies) on very little, using "boring" stable, well-supported technology.
 
@@ -221,7 +221,7 @@ It's called "dependency hell", which you can read in my guide (@email signup abo
 
 The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
 
-If you want to force the display mode, in Anki desktop select the toolbar `Anki -&gt; Preferences -&gt; Appearance -&gt; Theme`, and select light or dark. For the mobile app, you can select the gear icon `Preferences -&gt; Theme -&gt; Night Mode ...` and "Force on/off".
+If you want to force the display mode, in Anki desktop select the toolbar `Anki -> Preferences -> Appearance -> Theme`, and select light or dark. For the mobile app, you can select the gear icon `Preferences -> Theme -> Night Mode ...` and "Force on/off".
 
 </details>
 

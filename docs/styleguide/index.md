@@ -2,8 +2,8 @@
 
 > [!IMPORTANT]
 >
->  ✍️ **Strict [CommonMark](https://commonmark.org)** required\
-> 💡 **See [workout for the brain](https://github.com/badlydrawnrob/anki/README.md#a-workout-for-the-brain)** for study ideas.
+> ✍️ **Strict [CommonMark](https://commonmark.org)** required\
+> 💡 **See [workout for the brain](../../README.md#a-workout-for-the-brain)** for study ideas.
 >
 > 📧 **Questions?** Get in touch.
 
@@ -37,7 +37,7 @@ npm install
 npm run build
 ```
 
-You can use the `/data/*` files for speedy writing, which have `<-- instruction -->` comments. Some fields require deleting the html `🗑️ tags` from `/build/data/*` before adding your data to Anki flashcards (see [quick markdown lesson](#quick-markdown-lesson)).
+You can use the `/data/*` files for speedy writing, which have `<!-- instruction -->` comments. Some fields require deleting the html `🗑️ tags` from `/build/data/*` before adding your data to Anki flashcards (see [quick markdown lesson](#quick-markdown-lesson)).
 
 ```
 # Markdown -> Html
@@ -85,11 +85,11 @@ Not every field requires Markdown (requires deleting html `🗑️ tags` from `/
 > **Answers one key point in bold text** with the essential detail up top, in a
 > handy blockquote. Makes the answer stand out and read quickly, for reviewing!
 
-- `fencedCode("block")` steps through it's code
+- `fencedCode("block")` steps through its code
 - `block` is the argument which passes to `print()`
 - `print(f"")` allows us to use the argument in the body
 
-Perhaps you'll have an extra paragraph to write things like `_code verbs go first_
+Perhaps you'll have an extra paragraph to write things like _code verbs go first_
 but make sure you're not straying too far from the **one idea** in this flashcard!
 
 ```
@@ -103,9 +103,9 @@ If you prefer, you can use [a 2-column table](https://tools.timodenk.com/markdow
 ```
 ⓘ New app makes writing much easier.
 
-Anki data entry is not great, I admit; without an add-on this the best you'll get.
+Anki data entry isn't great, I admit; without add-ons this is the best you'll get.
 The `Markdown -> Html` flow is sub-optimal, but hopefully the limited preview app
-will be a big impovement. I'm spending a lot of time on making data entry nicer!!
+will be a big improvement. I'm spending a lot of time on making data entry nicer!!
 ```
 
 
@@ -330,7 +330,7 @@ Press the `‹›` button to "Toggle HTML Editor (⌘⇧X)" for this card, to en
 
 <details>
 <summary>
-<span id="simple-back"><strong>🗑 Deprecated (will be removed)</strong></span>
+<strong>🗑 Deprecated (will be removed)</strong>
 </summary>
 
 <br>
