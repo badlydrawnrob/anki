@@ -206,7 +206,7 @@ Stands for "spaced repetition" and is backed by neuroscience: over minutes, days
 
 > I've spent a lot of time fine-tuning the flashcards so they're pleasant to use.
 
-Anki programming flashcards depend on _very_ little from the Anki app (no add-ons required), and provides an upgrade path the new app. Right now, they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). The compiler provides an easy(ish) `markdown -> html` workflow locally.
+Anki programming flashcards depend on _very_ little from the Anki app (no add-ons required), and provides an upgrade path to the new app. Right now, they'll work on ANY platform: [AnkiMobile](http://ankisrs.net/docs/AnkiMobile.html), [MacOS](https://apps.ankiweb.net), [Android](https://github.com/ankidroid/Anki-Android), and [Windows/Linux](https://apps.ankiweb.net/). The compiler provides an easy(ish) `markdown -> html` workflow locally.
 
 Add-ons become out-of-date easily, so I've made sure it [depends](https://github.com/badlydrawnrob/anki/network/dependencies) on very little, using "boring" stable, well-supported technology.
 
