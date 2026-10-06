@@ -1,36 +1,5 @@
 # Anki Programming Flashcards
 
-<!-- 💰 SALES FLOW => LEGACY users -> MARKETING emails -> PAID users
-
-"Learn. Build. Career." framework and Content Pillars.
-
-1. Onboarding deck -> Sign up?
-2. Alpha testers -> Sponsors?
-3. Beginner free course -> Paid users?
-4. Paid courses -> Sponsor me like this?
-5. ...
--->
-
-<!-- 🔍 SEO keywords: NOT RANKING with VPN GOOGLE SEARCH
-
-1. "Programming flashcards" or similar
-2. "Beginner basics to confident coding" might not speak to INTERMEDIATE+
-3. "Beginner to professional in no time" needs something to back it up
-
-About section:
-
-Learning to code with Anki — flashcards and themes for all learning levels. It's helped 100s of people master their programming language fast! Markdown templates add syntax highlighting to add color to your code!
-
-Used to be below "10 years legacy":
-
-    ⓘ Struggle to remember a function? Too many flashcards to review?
-    Can't answer one? Have no time? Fell down a learning rabbit hole?
-    The guide helps structure your learning; it'll become second-nature!
-
-KEYWORDS and BUY TRIGGERS:
-
-    What's important for my core users?
--->
 
 <!-- LANG PICTURES:
 Add them near the top with a better `Legacy | New App` photo.
