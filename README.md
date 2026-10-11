@@ -151,6 +151,8 @@ Deprecated: inline code color highlight
 <span id="how-do-i-upgrade"><strong>1. How do I upgrade?</strong> (semantic versioning)</span>
 </summary>
 
+<br>
+
 > [!CAUTION]
 >
 > **Always backup your deck** before upgrading!
@@ -170,6 +172,8 @@ Legacy is versioned with the <strong>[major.minor.patch](http://semver.org)</str
 <span id="science"><strong>2. What's the science behind spaced reps?</strong></span>
 </summary>
 
+<br>
+
 Stands for "spaced repetition" and is backed by neuroscience: over minutes, days, weeks, and months, you revise the same flashcards until they stick and are easy to recall. More in the excellent [Learning To Learn](https://barbaraoakley.com/books/learning-how-to-learn/) book by Barbara Oakley, or the [Coursera](https://www.coursera.org/learn/learning-how-to-learn) course if you'd prefer.
 
 </details>
@@ -178,6 +182,8 @@ Stands for "spaced repetition" and is backed by neuroscience: over minutes, days
 <summary>
 <span id="why-not-add-ons"><strong>3. Why these flashcards instead of an Anki add-on?</strong></span>
 </summary>
+
+<br>
 
 > I've spent a lot of time fine-tuning the flashcards so they're pleasant to use.
 
@@ -194,6 +200,8 @@ It's called "dependency hell", which you can read in my guide (@email signup abo
 <span id="user-content-dark-mode"><strong>4. How do I use dark/night mode in Anki?</strong></span>
 </summary>
 
+<br>
+
 The app should follow your preferences, for example, on a Mac or iPhone search for the "Appearance" or "Display and Brightness" settings and set to Light or Dark.
 
 If you want to force the display mode, in Anki desktop select the toolbar `Anki -> Preferences -> Appearance -> Theme`, and select light or dark. For the mobile app, you can select the gear icon `Preferences -> Theme -> Night Mode ...` and "Force on/off".
@@ -205,6 +213,8 @@ If you want to force the display mode, in Anki desktop select the toolbar `Anki 
 <strong>5. I'm having trouble viewing code (mobile app)</strong>
 </summary>
 
+<br>
+
 <!-- ADD MORE CONTEXT TO THESE ISSUES -->
 
 Problems [#174](https://github.com/badlydrawnrob/anki/issues/174) and [#168](https://github.com/badlydrawnrob/anki/issues/168) happen when you try to swipe up/left, due to viewport issues. You'll benefit from setting a `32` character limit and reducing vertical code length, by adding only the essential code to answer the question. Tapping and swiping quickly should fix #174, and changing the settings in #168 will stop it launching the menu.
@@ -215,6 +225,8 @@ Problems [#174](https://github.com/badlydrawnrob/anki/issues/174) and [#168](htt
 <summary>
 <strong>6. I'm having text formatting problems</strong>, what do I do?
 </summary>
+
+<br>
 
 > Paste **raw html** or **plain text** to avoid styling issues.
 
