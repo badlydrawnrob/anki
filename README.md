@@ -155,13 +155,13 @@ Deprecated: inline code color highlight
 >
 > **Always backup your deck** before upgrading!
 >
-> **Major updates will duplicate note types** with the latest version.
+> **Major updates will now duplicate note types** with the latest version number.[^4]
 
-I now use [FSRS](https://docs.ankiweb.net/manual/deck-options#fsrs) for my decks (the new spaced repetition algorithm) which results in fewer reviews with "Desired retention" set to 88% or lower. For some reason this can only be enabled globally, so importing the APF demo deck will still show SM-2 (the old algorithm).
+I now use [FSRS](https://github.com/badlydrawnrob/anki/issues/185) for my decks (the new spaced repetition algorithm) which results in fewer reviews when "Desired retention" is set to `88%` or lower. For some reason this can only be enabled globally, so importing the APF demo deck will still show SM-2 (the old algorithm).
 
-Legacy is versioned with the <strong>[major.minor.patch](http://semver.org)</strong> standard. Minor and patch updates shouldn't break existing flashcards and [note types](https://docs.ankiweb.net/manual/getting-started#note-types), but Anki does a shitty job of migrating data for [`major`] versioned updates (in my experience). Setting "Update notes" and "Update note types" to `if newer` _seems_ to be safe for `[minor.patch]` versions, but always back up your data first.
+Legacy is versioned with the <strong>[major.minor.patch](http://semver.org)</strong> standard and you can [safely import](https://github.com/badlydrawnrob/anki/issues/184) legacy changes. Minor and patch updates shouldn't break existing flashcards and [note types](https://docs.ankiweb.net/manual/getting-started#note-types), but Anki does a shitty job of migrating data for [`major`] versioned updates (in my experience).
 
-**Never `merge note types [ •]` for `[major]` versions.** That setting should always be off, and if you've customised them directly (other than CSS changes) you're on your own. For example, merging can lead to data loss if field names are reordered or renamed. It's worked in the past, but `4.0.0` broke badly. You can use the old flashcards with previous version of the tool.
+**Never `merge note types [ •]` for `major` versions.** Use that setting at your own risk, so if you've customised flashcard note types directly, you'll need to manage updates on your own if they break. For example, merging can lead to data loss if field names are reordered or renamed, it's worked in the past, but `4.0.0` broke badly, so it's easier to create new note types and use the old ones for older flashcards (or perhaps some [add-on](https://ankiweb.net/shared/info/196373966) would work).
 
 </details>
 
