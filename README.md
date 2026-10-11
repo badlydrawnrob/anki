@@ -153,9 +153,15 @@ Deprecated: inline code color highlight
 
 > [!CAUTION]
 >
-> Always backup your deck before upgrading!
+> **Always backup your deck** before upgrading!
+>
+> **Major updates will duplicate note types** with the latest version.
 
-Versioned with <strong>[major.minor.patch](http://semver.org)</strong> standard: updates shouldn't break existing cards. Anki makes this tricky, so view commits for any major changes to the theme. You can [merge your old cards](https://github.com/badlydrawnrob/anki/issues/156) with the new ones and `[update to fsrs algorithm]` if you wish.
+I now use [FSRS](https://docs.ankiweb.net/manual/deck-options#fsrs) for my decks (the new spaced repetition algorithm) which results in fewer reviews with "Desired retention" set to 88% or lower. For some reason this can only be enabled globally, so importing the APF demo deck will still show SM-2 (the old algorithm).
+
+Legacy is versioned with the <strong>[major.minor.patch](http://semver.org)</strong> standard. Minor and patch updates shouldn't break existing flashcards and [note types](https://docs.ankiweb.net/manual/getting-started#note-types), but Anki does a shitty job of migrating data for [`major`] versioned updates (in my experience). Setting "Update notes" and "Update note types" to `if newer` _seems_ to be safe for `[minor.patch]` versions, but always back up your data first.
+
+**Never `merge note types [ •]` for `[major]` versions.** That setting should always be off, and if you've customised them directly (other than CSS changes) you're on your own. For example, merging can lead to data loss if field names are reordered or renamed. It's worked in the past, but `4.0.0` broke badly. You can use the old flashcards with previous version of the tool.
 
 </details>
 
